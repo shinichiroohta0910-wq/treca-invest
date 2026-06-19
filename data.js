@@ -4,8 +4,8 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床{店舗名・買取価格}/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-19T17:56:55+09:00",
-  "updatedBy": "OP11ナミ(rate10 80.65%/edge+58k)追加＋新規採用カードにeBay sold遡及付与(DON熊本/青眼25th/ルフィWSJ・全てJP promoで国内優位)・2026-06-19",
+  "updatedAt": "2026-06-19T18:16:18+09:00",
+  "updatedBy": "eBay需要を全58枚に完備(OPCD-098補完=58/58)。買取床/オリパは公開ソース無く該当時のみ・2026-06-19",
   "games": [
     {
       "id": "onepiece",
@@ -2892,7 +2892,17 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 20173,
+          "soldMedianUSD": null,
+          "n": 54,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(同一originフェッチ) 対スニダン-74%=国内優位(JP DON premium)"
+        }
+      }
     },
     {
       "id": "db-dbsc-tcg-fb01-139-190309",

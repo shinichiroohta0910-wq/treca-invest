@@ -1,11 +1,11 @@
 // トレカ投資アプリ — 相場レイヤー（正本）
 // 公開可能な市場相場情報のみ。Shin個人の仕入額・損益は一切含めない（守秘）。
 // null=未取得（表示「—」・計算は0扱い＝保守モデル）／0=実際にゼロ
-// signals: 出口需要シグナル（buyback=ショップ買取床/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
+// signals: 出口需要シグナル（buyback=ショップ買取床{店舗名・買取価格}/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-19T17:39:26+09:00",
-  "updatedBy": "treca-scout深掘り(3ゲーム各100位): 青眼25th(TD02)+ルフィ#001週刊Jump を追加（cert実測rate10で確定）・2026-06-19",
+  "updatedAt": "2026-06-19T17:56:55+09:00",
+  "updatedBy": "OP11ナミ(rate10 80.65%/edge+58k)追加＋新規採用カードにeBay sold遡及付与(DON熊本/青眼25th/ルフィWSJ・全てJP promoで国内優位)・2026-06-19",
   "games": [
     {
       "id": "onepiece",
@@ -3313,7 +3313,16 @@ const TRECA_DATA = {
           "alert": null
         }
       ],
-      "signals": {}
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 44505,
+          "soldMedianUSD": null,
+          "n": 50,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(同一originフェッチ) 対スニダン-75%=国内優位(JP promo premium)"
+        }
+      }
     },
     {
       "id": "yg-ygo-td02-jp001-185263",
@@ -3347,7 +3356,16 @@ const TRECA_DATA = {
           "alert": null
         }
       ],
-      "signals": {}
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 72621,
+          "soldMedianUSD": null,
+          "n": 14,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(同一originフェッチ) 対スニダン-44%=国内優位(JP promo premium)"
+        }
+      }
     },
     {
       "id": "op-p001-wsj-171995",
@@ -3381,7 +3399,59 @@ const TRECA_DATA = {
           "alert": null
         }
       ],
-      "signals": {}
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 64552,
+          "soldMedianUSD": null,
+          "n": 60,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(同一originフェッチ) 対スニダン-50%=国内優位(JP promo premium)"
+        }
+      }
+    },
+    {
+      "id": "op-op11-041-743994",
+      "game": "onepiece",
+      "name": "ナミ L [OP11-041] (Promotion)",
+      "number": "OP11-041",
+      "variant": "Official Playmat Promo (Leader)",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/OPC-TCG-OP11-041-of.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/743994/used",
+        "psaPop": "https://www.psacard.com/pop/tcg-cards/2025/one-piece-japanese-promos/291941"
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-06-19T17:56:55+09:00",
+          "p10": 145000,
+          "p9": null,
+          "rawA": 37500,
+          "rawB": null,
+          "pop10": 100,
+          "popTotal": 124,
+          "rate10": 80.65,
+          "currency": "JPY",
+          "src": "treca-scout深掘り: スニダン約定(PSA10直近3中央値¥145k[130/145/160k] n17/素体A¥37.5k n40) / rate10=cert方式(#041 Official Playmat 100/124) / 鑑定edge約+¥58k",
+          "stale": false,
+          "alert": null
+        }
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 28968,
+          "soldMedianUSD": null,
+          "n": 37,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(同一originフェッチ) 対スニダン-80%=国内優位(JP promo premium・海外裁定なし)"
+        }
+      }
     }
   ]
 };

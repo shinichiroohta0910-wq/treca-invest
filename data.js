@@ -4,8 +4,8 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-19T16:57:14+09:00",
-  "updatedBy": "treca-scout: メガリザードンXex MA(M2a-223)を投資候補に追加（rate10 90.49%・両流動性◎・eBay需要n60。#1人気ミミッキュはrate10 54%でEVゲート落ち除外）・2026-06-19",
+  "updatedAt": "2026-06-19T17:13:35+09:00",
+  "updatedBy": "treca-scout(OP/DBFW/遊戯王): 孫悟空R FB05-053を投資候補に追加（rate10 97.46%・p10¥60k/素体¥12.7k・鑑定edge約+¥30k/枚。3ゲーム横断の本命）・2026-06-19",
   "games": [
     {
       "id": "onepiece",
@@ -3235,6 +3235,49 @@ const TRECA_DATA = {
           "days": 90,
           "at": "2026-06-19",
           "src": "eBay sold(同一originfetch・対スニダン+18%)"
+        }
+      }
+    },
+    {
+      "id": "db-dbsc-tcg-fb05-053-595511",
+      "game": "dbfw",
+      "name": "Son Goku R [FB05-053]",
+      "number": "DBSC-TCG-FB05-053",
+      "variant": "1st Complete Card Collection",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250518061905-0.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/595511/used",
+        "psaPop": "https://www.psacard.com/pop/tcg-cards/2025/dragon-ball-super-card-game-fusion-world-japanese-1st-complete-collection/297045"
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-06-19T17:13:35+09:00",
+          "p10": 60000,
+          "p9": null,
+          "rawA": 12700,
+          "rawB": null,
+          "pop10": 1303,
+          "popTotal": 1337,
+          "rate10": 97.46,
+          "currency": "JPY",
+          "src": "treca-scout: スニダン約定(直近3中央値 PSA10 n19/素体A n30・apparels/595511) / rate10=PSA POP cert方式(FB05-053 g10=1303/1337) / 鑑定edge約+¥30k",
+          "stale": false,
+          "alert": null
+        }
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 36919,
+          "soldMedianUSD": null,
+          "n": 34,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(同一originfetch・対スニダン-38%=国内優位)"
         }
       }
     }

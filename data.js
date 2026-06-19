@@ -1,10 +1,11 @@
 // トレカ投資アプリ — 相場レイヤー（正本）
 // 公開可能な市場相場情報のみ。Shin個人の仕入額・損益は一切含めない（守秘）。
 // null=未取得（表示「—」・計算は0扱い＝保守モデル）／0=実際にゼロ
+// signals: 出口需要シグナル（buyback=ショップ買取床/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-19T13:29:00+09:00",
-  "updatedBy": "treca-discovery拡張（投資候補+5枚: 緩和ゲート通過[PSA10約定n≥4・素体は薄くても可(注記)]・2026-06-19）",
+  "updatedAt": "2026-06-19T16:12:01+09:00",
+  "updatedBy": "eBay需要シグナル 51/52枚に付与完了（同一originfetch・OPCD DONのみeBay曖昧で未取得・2026-06-19）",
   "games": [
     {
       "id": "onepiece",
@@ -119,7 +120,17 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 69862,
+          "soldMedianUSD": null,
+          "n": 60,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "id": "op-op01-016-hanafuda-nami",
@@ -207,7 +218,17 @@ const TRECA_DATA = {
           "stale": false,
           "alert": "+24% 急騰"
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 84132,
+          "soldMedianUSD": null,
+          "n": 48,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "id": "op-st01-013-zoro",
@@ -295,7 +316,17 @@ const TRECA_DATA = {
           "stale": false,
           "alert": "-45% 急落"
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 76655,
+          "soldMedianUSD": null,
+          "n": 48,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "id": "op-st09-012-yamato",
@@ -383,7 +414,17 @@ const TRECA_DATA = {
           "stale": false,
           "alert": "-44% 急落"
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 15492,
+          "soldMedianUSD": null,
+          "n": 30,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "id": "pk-blacky-gx",
@@ -443,7 +484,17 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 168358,
+          "soldMedianUSD": null,
+          "n": 8,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "id": "pk-tohoku-pikachu",
@@ -503,7 +554,17 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 72621,
+          "soldMedianUSD": null,
+          "n": 60,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "id": "pk-lilie-kesshin-sar",
@@ -563,7 +624,17 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 78797,
+          "soldMedianUSD": null,
+          "n": 58,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "id": "pk-m2a-246-mega-kairyu-sar",
@@ -623,7 +694,17 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 80527,
+          "soldMedianUSD": null,
+          "n": 56,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "id": "pk-sv8a-212-nymphia-sar",
@@ -683,7 +764,17 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 48412,
+          "soldMedianUSD": null,
+          "n": 47,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "game": "pokemon",
@@ -743,7 +834,17 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 28401,
+          "soldMedianUSD": null,
+          "n": 53,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "game": "pokemon",
@@ -803,7 +904,17 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 29518,
+          "soldMedianUSD": null,
+          "n": 58,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "game": "pokemon",
@@ -863,7 +974,17 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 32276,
+          "soldMedianUSD": null,
+          "n": 15,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "game": "pokemon",
@@ -923,7 +1044,17 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 90858,
+          "soldMedianUSD": null,
+          "n": 40,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "game": "pokemon",
@@ -983,7 +1114,17 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 161380,
+          "soldMedianUSD": null,
+          "n": 44,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "game": "pokemon",
@@ -1043,7 +1184,17 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 12787,
+          "soldMedianUSD": null,
+          "n": 47,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "game": "pokemon",
@@ -1103,7 +1254,17 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 9588,
+          "soldMedianUSD": null,
+          "n": 22,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "game": "pokemon",
@@ -1163,7 +1324,17 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 9198,
+          "soldMedianUSD": null,
+          "n": 30,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "game": "pokemon",
@@ -1223,7 +1394,17 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 19163,
+          "soldMedianUSD": null,
+          "n": 60,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "game": "pokemon",
@@ -1283,7 +1464,17 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 17307,
+          "soldMedianUSD": null,
+          "n": 60,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "game": "pokemon",
@@ -1343,7 +1534,17 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 6213,
+          "soldMedianUSD": null,
+          "n": 60,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "game": "pokemon",
@@ -1403,7 +1604,17 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 15977,
+          "soldMedianUSD": null,
+          "n": 5,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "game": "onepiece",
@@ -1463,7 +1674,17 @@ const TRECA_DATA = {
           "stale": false,
           "alert": "-29% 急落"
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 26628,
+          "soldMedianUSD": null,
+          "n": 19,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "game": "onepiece",
@@ -1523,7 +1744,17 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 48414,
+          "soldMedianUSD": null,
+          "n": 60,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "game": "onepiece",
@@ -1569,7 +1800,17 @@ const TRECA_DATA = {
           "stale": true,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 14803,
+          "soldMedianUSD": null,
+          "n": 54,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "game": "onepiece",
@@ -1629,7 +1870,17 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 34616,
+          "soldMedianUSD": null,
+          "n": 48,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "game": "onepiece",
@@ -1689,7 +1940,17 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 52448,
+          "soldMedianUSD": null,
+          "n": 60,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "game": "onepiece",
@@ -1749,7 +2010,17 @@ const TRECA_DATA = {
           "stale": false,
           "alert": "+25% 急騰"
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 56535,
+          "soldMedianUSD": null,
+          "n": 44,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "id": "pk-svp289-fukuoka-pikachu",
@@ -1809,7 +2080,17 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 77462,
+          "soldMedianUSD": null,
+          "n": 60,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "id": "op-p033-luffy",
@@ -1869,7 +2150,17 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 116745,
+          "soldMedianUSD": null,
+          "n": 60,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "id": "op-pp001-luffy-25th",
@@ -1929,7 +2220,17 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 55288,
+          "soldMedianUSD": null,
+          "n": 47,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "id": "yg-nyc1-blueeyes-25th",
@@ -1989,7 +2290,17 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 64552,
+          "soldMedianUSD": null,
+          "n": 47,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "id": "db-dbsc-tcg-fb06-119-722695",
@@ -2014,15 +2325,25 @@ const TRECA_DATA = {
           "p9": null,
           "rawA": 36000,
           "rawB": 49500,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": 80,
+          "pop10": 160,
+          "popTotal": 167,
+          "rate10": 95.81,
           "currency": "JPY",
-          "src": "価格=スニダン直近3約定中央値(素体n41/PSA10n31・最新06-19・最安出品P10 ¥200,000・ask不使用) / PSA POP未取得→想定80%(要取得) / 投資候補(treca-discovery 2026-06-19)",
+          "src": "価格=スニダン直近3約定中央値(素体n41/PSA10n31・最新06-19・最安出品P10 ¥200,000・ask不使用) / PSA POP実測 95.81% (g10=160/total=167・cert経由DBS FW Manga Booster02) / 投資候補(treca-discovery 2026-06-19)",
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 69367,
+          "soldMedianUSD": null,
+          "n": 48,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "id": "db-dbsc-tcg-fb06-119-569552",
@@ -2047,15 +2368,25 @@ const TRECA_DATA = {
           "p9": null,
           "rawA": 25000,
           "rawB": null,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": 80,
+          "pop10": 160,
+          "popTotal": 167,
+          "rate10": 95.81,
           "currency": "JPY",
-          "src": "価格=スニダン直近3約定中央値(素体n8/PSA10n31・最新06-19・最安出品P10 ¥148,000・ask不使用) / PSA POP未取得→想定80%(要取得) / 投資候補(treca-discovery 2026-06-19)",
+          "src": "価格=スニダン直近3約定中央値(素体n8/PSA10n31・最新06-19・最安出品P10 ¥148,000・ask不使用) / PSA POP実測 95.81% (g10=160/total=167・同FB06-119(Manga Booster02)) / 投資候補(treca-discovery 2026-06-19)",
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 69367,
+          "soldMedianUSD": null,
+          "n": 48,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "id": "op-st10-006-315324",
@@ -2080,15 +2411,25 @@ const TRECA_DATA = {
           "p9": 39800,
           "rawA": 48000,
           "rawB": 25000,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": 80,
+          "pop10": 3914,
+          "popTotal": 5512,
+          "rate10": 71.01,
           "currency": "JPY",
-          "src": "価格=スニダン直近3約定中央値(素体n8/PSA10n36・最新06-19・最安出品P10 ¥118,499・ask不使用) / PSA POP未取得→想定80%(要取得) / 投資候補(treca-discovery 2026-06-19)",
+          "src": "価格=スニダン直近3約定中央値(素体n8/PSA10n36・最新06-19・最安出品P10 ¥118,499・ask不使用) / PSA POP実測 71.01% (g10=3914/total=5512・One Piece Day24) / 投資候補(treca-discovery 2026-06-19)",
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 149276,
+          "soldMedianUSD": null,
+          "n": 36,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "id": "op-st21-015-635880",
@@ -2113,15 +2454,25 @@ const TRECA_DATA = {
           "p9": null,
           "rawA": 39800,
           "rawB": 27900,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": 80,
+          "pop10": 3843,
+          "popTotal": 4245,
+          "rate10": 90.53,
           "currency": "JPY",
-          "src": "価格=スニダン直近3約定中央値(素体n15/PSA10n26・最新06-19・最安出品P10 ¥78,999・ask不使用) / PSA POP未取得→想定80%(要取得) / 投資候補(treca-discovery 2026-06-19)",
+          "src": "価格=スニダン直近3約定中央値(素体n15/PSA10n26・最新06-19・最安出品P10 ¥78,999・ask不使用) / PSA POP実測 90.53% (g10=3843/total=4245・Official Event Prize) / 投資候補(treca-discovery 2026-06-19)",
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 32518,
+          "soldMedianUSD": null,
+          "n": 31,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "id": "op-eb02-017-838503",
@@ -2146,15 +2497,25 @@ const TRECA_DATA = {
           "p9": null,
           "rawA": 6650,
           "rawB": null,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": 80,
+          "pop10": 299,
+          "popTotal": 357,
+          "rate10": 83.75,
           "currency": "JPY",
-          "src": "価格=スニダン直近3約定中央値(素体n43/PSA10n13・最新06-19・最安出品P10 ¥49,800・ask不使用) / PSA POP未取得→想定80%(要取得) / 投資候補(treca-discovery 2026-06-19)",
+          "src": "価格=スニダン直近3約定中央値(素体n43/PSA10n13・最新06-19・最安出品P10 ¥49,800・ask不使用) / PSA POP実測 83.75% (g10=299/total=357・OP 3rd Anv Complete Guide) / 投資候補(treca-discovery 2026-06-19)",
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 24207,
+          "soldMedianUSD": null,
+          "n": 38,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "id": "pk-pkmn-tcg-m3-115-753274",
@@ -2179,15 +2540,25 @@ const TRECA_DATA = {
           "p9": 16999,
           "rawA": 18800,
           "rawB": 16000,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": 80,
+          "pop10": 2515,
+          "popTotal": 4683,
+          "rate10": 53.7,
           "currency": "JPY",
-          "src": "価格=スニダン直近3約定中央値(素体n7/PSA10n38・最新06-19・最安出品P10 ¥61,999・ask不使用) / PSA POP未取得→想定80%(要取得) / 投資候補(treca-discovery 2026-06-19)",
+          "src": "価格=スニダン直近3約定中央値(素体n7/PSA10n38・最新06-19・最安出品P10 ¥61,999・ask不使用) / PSA POP実測 53.7% (g10=2515/total=4683・M3 Nullifying Zero・新弾センタリング難) / 投資候補(treca-discovery 2026-06-19)",
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 71894,
+          "soldMedianUSD": null,
+          "n": 76,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "id": "op-op02-059-102461",
@@ -2212,15 +2583,25 @@ const TRECA_DATA = {
           "p9": null,
           "rawA": 4500,
           "rawB": 2000,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": 80,
+          "pop10": 1571,
+          "popTotal": 1737,
+          "rate10": 90.44,
           "currency": "JPY",
-          "src": "価格=スニダン直近3約定中央値(素体n26/PSA10n8・最新06-18・最安出品P10 ¥42,999・ask不使用) / PSA POP未取得→想定80%(要取得) / 投資候補(treca-discovery 2026-06-19)",
+          "src": "価格=スニダン直近3約定中央値(素体n26/PSA10n8・最新06-18・最安出品P10 ¥42,999・ask不使用) / PSA POP実測 90.44% (g10=1571/total=1737・OP02 Box Topper) / 投資候補(treca-discovery 2026-06-19)",
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 30661,
+          "soldMedianUSD": null,
+          "n": 42,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "id": "pk-pkmn-tcg-m2a-240-724996",
@@ -2253,7 +2634,17 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 166418,
+          "soldMedianUSD": null,
+          "n": 57,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "id": "db-dbsc-tcg-e01-01-203863",
@@ -2278,15 +2669,25 @@ const TRECA_DATA = {
           "p9": null,
           "rawA": 25000,
           "rawB": null,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": 80,
+          "pop10": 54,
+          "popTotal": 58,
+          "rate10": 93.1,
           "currency": "JPY",
-          "src": "価格=スニダン直近3約定中央値(素体n7/PSA10n56・最新06-19・最安出品P10 ¥64,000・ask不使用) / PSA POP未取得→想定80%(要取得) / 投資候補(treca-discovery 2026-06-19)",
+          "src": "価格=スニダン直近3約定中央値(素体n7/PSA10n56・最新06-19・最安出品P10 ¥64,000・ask不使用) / PSA POP実測 93.1% (g10=54/total=58・Energy Marker Pack01) / 投資候補(treca-discovery 2026-06-19)",
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 32654,
+          "soldMedianUSD": null,
+          "n": 60,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "id": "op-p-110-686000",
@@ -2311,15 +2712,25 @@ const TRECA_DATA = {
           "p9": null,
           "rawA": 29500,
           "rawB": 23999,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": 80,
+          "pop10": 13799,
+          "popTotal": 14658,
+          "rate10": 94.14,
           "currency": "JPY",
-          "src": "価格=スニダン直近3約定中央値(素体n3/PSA10n48・最新06-19・最安出品P10 ¥70,500・ask不使用) / PSA POP未取得→想定80%(要取得) / 投資候補(treca-discovery 2026-06-19)",
+          "src": "価格=スニダン直近3約定中央値(素体n3/PSA10n48・最新06-19・最安出品P10 ¥70,500・ask不使用) / PSA POP実測 94.14% (g10=13799/total=14658・OP PCC Day25) / 投資候補(treca-discovery 2026-06-19)",
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 58286,
+          "soldMedianUSD": null,
+          "n": 59,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "id": "op-op-p-041-134163",
@@ -2346,13 +2757,23 @@ const TRECA_DATA = {
           "rawB": null,
           "pop10": null,
           "popTotal": null,
-          "rate10": 80,
+          "rate10": 88.94,
           "currency": "JPY",
-          "src": "価格=スニダン直近3約定中央値(素体n33/PSA10n6・最新06-19・最安出品P10 ¥35,000・ask不使用) / PSA POP未取得→想定80%(要取得) / 投資候補(treca-discovery 2026-06-19)",
+          "src": "価格=スニダン直近3約定中央値(素体n33/PSA10n6・最新06-19・最安出品P10 ¥35,000・ask不使用) / PSA POP実測 88.94%(one-piece-promos 7-Eleven版) / 投資候補(treca-discovery 2026-06-19)",
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 62938,
+          "soldMedianUSD": null,
+          "n": 21,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・海外セラー円建て)"
+        }
+      }
     },
     {
       "id": "pk-pkmn-tcg-m2a-234-730956",
@@ -2385,7 +2806,17 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 105211,
+          "soldMedianUSD": null,
+          "n": 62,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "id": "pk-pkmn-tcg-sv2a-201-128117",
@@ -2410,15 +2841,25 @@ const TRECA_DATA = {
           "p9": 64500,
           "rawA": 79000,
           "rawB": 65000,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": 80,
+          "pop10": 36145,
+          "popTotal": 42711,
+          "rate10": 84.63,
           "currency": "JPY",
-          "src": "価格=スニダン直近3約定中央値(素体n4/PSA10n41・最新06-19・最安出品P10 ¥117,000・ask不使用) / PSA POP未取得→想定80%(要取得) / 投資候補(treca-discovery 2026-06-19)",
+          "src": "価格=スニダン直近3約定中央値(素体n4/PSA10n41・最新06-19・最安出品P10 ¥117,000・ask不使用) / PSA POP実測 84.63% (g10=36145/total=42711) / 投資候補(treca-discovery 2026-06-19)",
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 126997,
+          "soldMedianUSD": null,
+          "n": 6,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・海外セラー円建て)"
+        }
+      }
     },
     {
       "id": "op-opcd-098-712256",
@@ -2443,11 +2884,11 @@ const TRECA_DATA = {
           "p9": null,
           "rawA": 45000,
           "rawB": 40000,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": 80,
+          "pop10": 1682,
+          "popTotal": 1812,
+          "rate10": 92.83,
           "currency": "JPY",
-          "src": "価格=スニダン直近3約定中央値(素体n13/PSA10n40・最新06-19・最安出品P10 ¥109,900・ask不使用) / PSA POP未取得→想定80%(要取得) / 投資候補(treca-discovery 2026-06-19)",
+          "src": "価格=スニダン直近3約定中央値(素体n13/PSA10n40・最新06-19・最安出品P10 ¥109,900・ask不使用) / PSA POP実測 92.83% (g10=1682/total=1812・OP Heroines SP Set-Gold) / 投資候補(treca-discovery 2026-06-19)",
           "stale": false,
           "alert": null
         }
@@ -2476,15 +2917,25 @@ const TRECA_DATA = {
           "p9": 15800,
           "rawA": 13000,
           "rawB": null,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": 80,
+          "pop10": 385,
+          "popTotal": 399,
+          "rate10": 96.49,
           "currency": "JPY",
-          "src": "価格=スニダン直近3約定中央値(素体n21/PSA10n44・最新06-19・最安出品P10 ¥64,400・ask不使用) / PSA POP未取得→想定80%(要取得) / 投資候補(treca-discovery 2026-06-19)",
+          "src": "価格=スニダン直近3約定中央値(素体n21/PSA10n44・最新06-19・最安出品P10 ¥64,400・ask不使用) / PSA POP実測 96.49% (g10=385/total=399・Awakened Pulse) / 投資候補(treca-discovery 2026-06-19)",
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 52020,
+          "soldMedianUSD": null,
+          "n": 46,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "id": "op-st21-014-706813",
@@ -2509,15 +2960,25 @@ const TRECA_DATA = {
           "p9": 23800,
           "rawA": 25999,
           "rawB": 19000,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": 80,
+          "pop10": 34269,
+          "popTotal": 37494,
+          "rate10": 91.4,
           "currency": "JPY",
-          "src": "価格=スニダン直近3約定中央値(素体n8/PSA10n46・最新06-19・最安出品P10 ¥55,555・ask不使用) / PSA POP未取得→想定80%(要取得) / 投資候補(treca-discovery 2026-06-19)",
+          "src": "価格=スニダン直近3約定中央値(素体n8/PSA10n46・最新06-19・最安出品P10 ¥55,555・ask不使用) / PSA POP実測 91.4% (g10=34269/total=37494・OP magazine Vol.20) / 投資候補(treca-discovery 2026-06-19)",
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 50431,
+          "soldMedianUSD": null,
+          "n": 78,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "id": "pk-pkmn-tcg-m4-114-776365",
@@ -2542,15 +3003,25 @@ const TRECA_DATA = {
           "p9": null,
           "rawA": 37500,
           "rawB": null,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": 80,
+          "pop10": 6882,
+          "popTotal": 7270,
+          "rate10": 94.66,
           "currency": "JPY",
-          "src": "価格=スニダン直近3約定中央値(素体n1/PSA10n62・最新06-19・最安出品P10 ¥71,299・ask不使用) / PSA POP未取得→想定80%(要取得) / 素体約定が薄い(n1)＝買い集め注意 / 投資候補(treca-discovery拡張 2026-06-19)",
+          "src": "価格=スニダン直近3約定中央値(素体n1/PSA10n62・最新06-19・最安出品P10 ¥71,299・ask不使用) / PSA POP実測 94.66% (g10=6882/total=7270・M4 Ninja Spinner) / 素体約定が薄い(n1)＝買い集め注意 / 投資候補(treca-discovery拡張 2026-06-19)",
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 50835,
+          "soldMedianUSD": null,
+          "n": 49,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "id": "pk-pkmn-tcg-sv10-125-568902",
@@ -2575,15 +3046,25 @@ const TRECA_DATA = {
           "p9": null,
           "rawA": 62500,
           "rawB": 55000,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": 80,
+          "pop10": 11052,
+          "popTotal": 13294,
+          "rate10": 83.14,
           "currency": "JPY",
-          "src": "価格=スニダン直近3約定中央値(素体n2/PSA10n45・最新06-19・最安出品P10 ¥106,800・ask不使用) / PSA POP未取得→想定80%(要取得) / 素体約定が薄い(n2)＝買い集め注意 / 投資候補(treca-discovery拡張 2026-06-19)",
+          "src": "価格=スニダン直近3約定中央値(素体n2/PSA10n45・最新06-19・最安出品P10 ¥106,800・ask不使用) / PSA POP実測 83.14% (g10=11052/total=13294・SV10 Glory of Team Rocket) / 素体約定が薄い(n2)＝買い集め注意 / 投資候補(treca-discovery拡張 2026-06-19)",
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 109093,
+          "soldMedianUSD": null,
+          "n": 54,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "id": "pk-pkmn-tcg-sv8a-217-455596",
@@ -2608,15 +3089,25 @@ const TRECA_DATA = {
           "p9": null,
           "rawA": 67000,
           "rawB": 57000,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": 80,
+          "pop10": 74331,
+          "popTotal": 85328,
+          "rate10": 87.11,
           "currency": "JPY",
-          "src": "価格=スニダン直近3約定中央値(素体n1/PSA10n52・最新06-19・最安出品P10 ¥102,000・ask不使用) / PSA POP未取得→想定80%(要取得) / 素体約定が薄い(n1)＝買い集め注意 / 投資候補(treca-discovery拡張 2026-06-19)",
+          "src": "価格=スニダン直近3約定中央値(素体n1/PSA10n52・最新06-19・最安出品P10 ¥102,000・ask不使用) / PSA POP実測 87.11% (g10=74331/total=85328) / 素体約定が薄い(n1)＝買い集め注意 / 投資候補(treca-discovery拡張 2026-06-19)",
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 121842,
+          "soldMedianUSD": null,
+          "n": 46,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "id": "yg-ygo-ocg-tcg-qcac-jp019-532226",
@@ -2641,15 +3132,25 @@ const TRECA_DATA = {
           "p9": null,
           "rawA": 10500,
           "rawB": 7000,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": 80,
+          "pop10": 493,
+          "popTotal": 570,
+          "rate10": 86.49,
           "currency": "JPY",
-          "src": "価格=スニダン直近3約定中央値(素体n5/PSA10n15・最新06-18・最安出品P10 ¥44,900・ask不使用) / PSA POP未取得→想定80%(要取得) / 投資候補(treca-discovery拡張 2026-06-19)",
+          "src": "価格=スニダン直近3約定中央値(素体n5/PSA10n15・最新06-18・最安出品P10 ¥44,900・ask不使用) / PSA POP実測 86.49% (g10=493/total=570・YG QCAC 6th TCG Artwork QCSCR) / 投資候補(treca-discovery拡張 2026-06-19)",
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 15264,
+          "soldMedianUSD": null,
+          "n": 22,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     },
     {
       "id": "yg-ygo-ocg-tcg-nkc1-en002-692556",
@@ -2674,18 +3175,27 @@ const TRECA_DATA = {
           "p9": 60000,
           "rawA": 98000,
           "rawB": 71250,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": 80,
+          "pop10": 559,
+          "popTotal": 698,
+          "rate10": 80.09,
           "currency": "JPY",
-          "src": "価格=スニダン直近3約定中央値(素体n46/PSA10n29・最新06-19・最安出品P10 ¥264,000・ask不使用) / PSA POP未取得→想定80%(要取得) / 投資候補(treca-discovery拡張 2026-06-19)",
+          "src": "価格=スニダン直近3約定中央値(素体n46/PSA10n29・最新06-19・最安出品P10 ¥264,000・ask不使用) / PSA POP実測 80.09% (g10=559/total=698・YG Nikeコラボ NKC1-EN002) / 投資候補(treca-discovery拡張 2026-06-19)",
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 104895,
+          "soldMedianUSD": null,
+          "n": 7,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
     }
   ]
 };
-
 if (typeof window !== "undefined") window.TRECA_DATA = TRECA_DATA;
 if (typeof module !== "undefined") module.exports = TRECA_DATA;

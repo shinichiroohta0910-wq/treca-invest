@@ -447,7 +447,7 @@ function evalCard(card, d, feePctOverride, gradeCostOverride){
   const dec = 1 - (d||0);
   if(!snap){
     return {hasData:false, netGrade:0, netRaw:0, best:0, route:"raw", rate:0,
-            p10:0, p9:0, rawA:0, rawB:0, gradeCost};
+            p10:0, p9:0, rawA:0, rawB:0, gradeCost, floor10:null, floorNet:null, buybackPct:null};
   }
   const r   = num(snap.rate10)/100;
   const p10 = num(snap.p10), p9 = num(snap.p9), rawA = num(snap.rawA), rawB = num(snap.rawB);
@@ -455,8 +455,14 @@ function evalCard(card, d, feePctOverride, gradeCostOverride){
   const netGrade = revGrade - gradeCost;
   const netRaw   = rawA * dec * f;
   const route = netGrade >= netRaw ? "grade" : "raw";
+  // ショップ買取床（signals.buyback）: 鑑定後にショップへ確実売却できる下限（買取は手数料なし想定）
+  // floorNet = rate10×買取床PSA10 − 鑑定費（非PSA10分は保守的に0計上＝下振れ側に安全）
+  const sig = (card && card.signals) ? card.signals : {};
+  const floor10 = (sig.buyback && sig.buyback.p10JPY!=null) ? num(sig.buyback.p10JPY) : null;
+  const floorNet = (floor10!=null) ? (r*floor10*dec - gradeCost) : null;
+  const buybackPct = (floor10!=null && p10>0) ? floor10/p10 : null; // 買取率: ショップが相場の何%で買うか
   return {hasData:true, netGrade, netRaw, route, best:Math.max(netGrade,netRaw),
-          rate:num(snap.rate10), p10, p9, rawA, rawB, gradeCost, snap};
+          rate:num(snap.rate10), p10, p9, rawA, rawB, gradeCost, snap, floor10, floorNet, buybackPct};
 }
 // 損益分岐反落率（純額がゼロを下回る最小の反落・1%刻み）
 function breakEvenDecay(card){
@@ -556,6 +562,16 @@ function renderWatch(){
     metaBits.push(mi("9", snap&&snap.p9!=null? yen(e.p9):"—"));
     metaBits.push(mi("素A", snap&&snap.rawA!=null? yen(e.rawA):"—"));
     if(snap && snap.rawB!=null) metaBits.push(mi("素B", yen(e.rawB)));
+    // 需要・出口シグナル（買取床/eBay/オリパ）バッジ
+    const sg = c.signals || {};
+    const sigBadges = [];
+    if(e.buybackPct!=null){
+      const pct=Math.round(e.buybackPct*100);
+      const col = pct>=70? "#39d98a" : pct>=50? "#ffb454" : "#9aa3ab";
+      sigBadges.push(`<span class="bdg" style="background:${hexA(col,.16)};color:${col}" title="ショップ買取床=相場の${pct}%（下値の堅さ・出口の太さ）">床${pct}%</span>`);
+    }
+    if(sg.ebay && sg.ebay.n!=null) sigBadges.push(`<span class="bdg" style="background:rgba(74,168,255,.16);color:#4aa8ff" title="eBay直近sold ${sg.ebay.n}件（海外需要）">🌐${sg.ebay.n}</span>`);
+    if(sg.oripa && sg.oripa.seen) sigBadges.push(`<span class="bdg" style="background:rgba(180,120,255,.18);color:#b478ff" title="オリパ景品採用（回転の証拠）">🎰</span>`);
     return `
       <div class="crow" onclick="showDetail('${escAttr(c.id)}')">
         <div class="crow-top">
@@ -567,6 +583,7 @@ function renderWatch(){
             <div class="badges">
               ${routeBadge}
               <span class="bdg ${fr.cls}">${escHtml(fr.label)}</span>
+              ${sigBadges.join("")}
             </div>
           </div>
           <div class="cright">
@@ -603,6 +620,34 @@ function renderDetail(){
   const linkBits = [];
   if(links.snkrdunk) linkBits.push(`<a href="${escAttr(links.snkrdunk)}" target="_blank" rel="noopener">スニダン 売買履歴 ↗</a>`);
   if(links.psaPop)   linkBits.push(`<a href="${escAttr(links.psaPop)}" target="_blank" rel="noopener">PSA POPレポート ↗</a>`);
+  if(links.ebay)     linkBits.push(`<a href="${escAttr(links.ebay)}" target="_blank" rel="noopener">eBay sold ↗</a>`);
+
+  // 需要・出口シグナル（買取床/eBay/オリパ）
+  const sig = c.signals || {};
+  const fmtD = iso => { if(!iso) return ""; const dt=new Date(iso); return isNaN(dt)?"":(dt.getFullYear()+"/"+(dt.getMonth()+1)+"/"+dt.getDate()); };
+  const demandRows = [];
+  if(sig.buyback && sig.buyback.p10JPY!=null){
+    const bp = num(sig.buyback.p10JPY);
+    const pct = e.p10>0 ? Math.round(bp/e.p10*100) : null;
+    demandRows.push(`<div class="kv"><span class="k">ショップ買取床(PSA10)</span><span class="v">${yen(bp)}${pct!=null?` <span class="sub">相場の${pct}%</span>`:""}</span></div>`);
+    if(sig.buyback.shop) demandRows.push(`<div class="kv"><span class="k">買取元</span><span class="v sub">${escHtml(sig.buyback.shop)}${sig.buyback.at?` ・ ${fmtD(sig.buyback.at)}`:""}</span></div>`);
+  }
+  if(sig.ebay && (sig.ebay.soldMedianJPY!=null || sig.ebay.n!=null)){
+    const ej = sig.ebay.soldMedianJPY!=null? num(sig.ebay.soldMedianJPY):null;
+    const spread = (ej!=null && e.p10>0)? Math.round((ej/e.p10-1)*100) : null;
+    const arrow = spread==null?"":(spread>0?`🔺海外+${spread}%`:`🔻海外${spread}%`);
+    demandRows.push(`<div class="kv"><span class="k">eBay sold(海外)</span><span class="v">${ej!=null?yen(ej):"—"}${sig.ebay.n!=null?` <span class="sub">×${sig.ebay.n}件${sig.ebay.days?`/${sig.ebay.days}日`:""}</span>`:""}</span></div>`);
+    if(spread!=null) demandRows.push(`<div class="kv"><span class="k">内外価格差</span><span class="v">${arrow} <span class="sub">(対スニダンPSA10)</span></span></div>`);
+  }
+  if(sig.oripa && sig.oripa.seen){
+    demandRows.push(`<div class="kv"><span class="k">オリパ景品</span><span class="v">🎰 採用 <span class="sub">${sig.oripa.at?fmtD(sig.oripa.at):""}</span></span></div>`);
+  }
+  const demandHTML = demandRows.length ? `
+    <div class="card panel">
+      <h3>需要・出口シグナル</h3>
+      ${demandRows.join("")}
+      <div class="hint">買取床＝ショップが必ず買う下限（下値の堅さ）。eBay＝海外需要と内外価格差（出口の太さ・裁定余地）。オリパ採用＝景品需要で回転している証拠。価格の正本はスニダン約定で不変。</div>
+    </div>` : "";
 
   // 4シナリオ（現状/▲20/▲40/▲60）
   const scns = [{l:"現状",d:0},{l:"▲20%",d:.2},{l:"▲40%",d:.4},{l:"▲60%",d:.6}];
@@ -649,9 +694,11 @@ function renderDetail(){
       <div class="kv"><span class="k">鑑定純額/枚</span><span class="v ${e.netGrade>=e.netRaw?'good':''}">${e.hasData?yen(e.netGrade):"—"}</span></div>
       <div class="kv"><span class="k">素体純額/枚</span><span class="v ${e.netRaw>e.netGrade?'blue':''}">${e.hasData?yen(e.netRaw):"—"}</span></div>
       <div class="kv"><span class="k">採用ルート</span><span class="v">${e.hasData? (e.route==="grade"?"🟢 鑑定で出す":"🔵 素体で売る") : "—"}</span></div>
+      ${e.floorNet!=null?`<div class="kv"><span class="k">ショップ買取床(下限保証)</span><span class="v" style="color:#b478ff">${yen(e.floorNet)}${e.buybackPct!=null?` <span class="sub">買取率${Math.round(e.buybackPct*100)}%</span>`:""}</span></div>`:""}
       <div style="margin-top:12px"><div class="sub" style="margin-bottom:6px">反落シナリオ（期待値/枚）</div>${scnHTML}</div>
       <div class="kv" style="margin-top:12px"><span class="k">損益分岐 反落率</span><span class="v">${be===null? "—（現状で赤字）" : (be>=99?"▲99%超でも黒字":"▲"+be+"% まで黒字")}</span></div>
     </div>
+    ${demandHTML}
 
     <div class="card panel">
       <h3>仕入上限の逆算</h3>

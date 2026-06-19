@@ -630,7 +630,7 @@ function renderDetail(){
     const bp = num(sig.buyback.p10JPY);
     const pct = e.p10>0 ? Math.round(bp/e.p10*100) : null;
     demandRows.push(`<div class="kv"><span class="k">ショップ買取床(PSA10)</span><span class="v">${yen(bp)}${pct!=null?` <span class="sub">相場の${pct}%</span>`:""}</span></div>`);
-    if(sig.buyback.shop) demandRows.push(`<div class="kv"><span class="k">買取元</span><span class="v sub">${escHtml(sig.buyback.shop)}${sig.buyback.at?` ・ ${fmtD(sig.buyback.at)}`:""}</span></div>`);
+    if(sig.buyback.shop) demandRows.push(`<div class="kv"><span class="k">買取店舗</span><span class="v sub">${escHtml(sig.buyback.shop)}${sig.buyback.demand!=null?` ・ ${sig.buyback.demand}点募集`:""}${sig.buyback.at?` ・ ${fmtD(sig.buyback.at)}`:""}</span></div>`);
   }
   if(sig.ebay && (sig.ebay.soldMedianJPY!=null || sig.ebay.n!=null)){
     const ej = sig.ebay.soldMedianJPY!=null? num(sig.ebay.soldMedianJPY):null;

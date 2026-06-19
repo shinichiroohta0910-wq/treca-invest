@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#111315">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="トレカ投資">
+<link rel="manifest" href="manifest.json">
+<title>トレカ投資アプリ</title>
+<style>
+  /* ===== ダークCSS変数体系（損益シミュレーター踏襲） ===== */
+  :root{
+    --bg:#111315; --panel:#1b1e21; --panel2:#23272b; --line:#33383d;
+    --txt:#f2f4f6; --muted:#9aa3ab; --accent:#39d98a; --accent2:#4aa8ff;
+    --warn:#ffb454; --bad:#ff6b6b; --gold:#f5c518;
+    --tabbar:74px;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  body{margin:0;background:var(--bg);color:var(--txt);
+    font-family:-apple-system,"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",sans-serif;
+    line-height:1.5;-webkit-font-smoothing:antialiased;
+    max-width:560px;margin:0 auto;
+    padding:14px 14px calc(var(--tabbar) + env(safe-area-inset-bottom) + 14px);}
+  h1{font-size:1.15rem;margin:0 0 2px;display:flex;align-items:center;gap:8px}
+  .sub{color:var(--muted);font-size:.78rem}
+  h2{font-size:.92rem;margin:18px 0 10px;color:var(--muted);letter-spacing:.04em}
+  /* ===== カード/パネル ===== */
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:12px}
+  .panel h3{font-size:.72rem;margin:0 0 10px;color:var(--muted);letter-spacing:.05em;text-transform:uppercase}
+  select,input,button,textarea{font-family:inherit}
+  select,input[type=text],input[type=number],input[type=date]{background:var(--panel2);border:1px solid var(--line);
+    color:var(--txt);border-radius:8px;padding:8px 9px;font-size:.88rem;width:100%}
+  input[type=number]{text-align:right}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent2)}
+  button{background:var(--panel2);color:var(--txt);border:1px solid var(--line);border-radius:8px;
+    padding:8px 13px;font-size:.83rem;cursor:pointer}
+  button:hover{border-color:var(--accent2)}
+  button.primary{background:var(--accent2);border-color:var(--accent2);color:#06243f;font-weight:700}
+  button.danger:hover{border-color:var(--bad);color:var(--bad)}
+  button.danger.solid{background:rgba(255,107,107,.14);border-color:var(--bad);color:var(--bad)}
+  a{color:var(--accent2)}
+  /* ===== 警告バナー ===== */
+  .banner{background:rgba(255,180,84,.12);border:1px solid var(--warn);color:var(--warn);
+    border-radius:10px;padding:10px 12px;font-size:.8rem;margin-bottom:12px;line-height:1.5}
+  /* ===== 反落スライダー（ヘッダ） ===== */
+  .decaybar{display:flex;align-items:center;gap:12px;margin:6px 0 14px;background:var(--panel);
+    border:1px solid var(--line);border-radius:12px;padding:10px 14px}
+  .decaybar .lbl{font-size:.74rem;color:var(--muted);min-width:64px}
+  input[type=range]{flex:1;accent-color:var(--warn);min-width:60px}
+  .decaybar .val{font-size:1.05rem;font-weight:700;color:var(--warn);min-width:54px;text-align:right}
+  /* ===== ゲームフィルタチップ ===== */
+  .chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:12px}
+  .chip{background:var(--panel2);border:1.5px solid var(--line);border-radius:20px;padding:6px 13px;
+    font-size:.78rem;cursor:pointer;user-select:none;transition:.15s;color:var(--muted)}
+  .chip.on{color:var(--txt)}
+  /* ===== ウォッチ カード ===== */
+  .crow{background:var(--panel);border:1px solid var(--line);border-radius:13px;
+    padding:11px 12px;margin-bottom:9px;cursor:pointer;transition:border-color .12s,background .12s}
+  .crow:hover{border-color:var(--accent2)}
+  .crow:active{background:var(--panel2)}
+  .crow-top{display:flex;gap:11px;align-items:flex-start}
+  .thumb{width:46px;height:64px;border-radius:7px;flex-shrink:0;object-fit:cover;background:var(--panel2)}
+  .thumb-ph{width:46px;height:64px;border-radius:7px;flex-shrink:0;display:flex;align-items:center;
+    justify-content:center;font-weight:800;font-size:1.15rem;color:#0c0e10}
+  .cmain{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
+  .cname{font-size:.9rem;font-weight:600;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .cvar{font-size:.72rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .cmeta{display:flex;flex-wrap:wrap;gap:2px 10px;font-size:.72rem;color:var(--muted);margin-top:2px}
+  .cmeta .mi{white-space:nowrap}
+  .cmeta b{color:var(--txt);font-weight:600}
+  .badges{display:flex;gap:5px;flex-wrap:wrap;margin-top:5px}
+  .bdg{font-size:.62rem;padding:2px 8px;border-radius:6px;font-weight:700;white-space:nowrap;line-height:1.5}
+  .bdg.grade{background:rgba(57,217,138,.16);color:var(--accent)}
+  .bdg.raw{background:rgba(74,168,255,.16);color:var(--accent2)}
+  .bdg.fresh-new{background:rgba(57,217,138,.16);color:var(--accent)}
+  .bdg.fresh-mid{background:rgba(255,180,84,.16);color:var(--warn)}
+  .bdg.fresh-old{background:rgba(255,107,107,.16);color:var(--bad)}
+  .cright{flex-shrink:0;text-align:right;padding-left:6px}
+  .cev{font-size:1.02rem;font-weight:700;color:var(--accent);white-space:nowrap;line-height:1.2}
+  .cev.na{color:var(--muted)}
+  .cevlbl{font-size:.62rem;color:var(--muted);margin-top:1px;white-space:nowrap}
+  .calert{display:flex;gap:7px;align-items:flex-start;font-size:.7rem;line-height:1.5;margin-top:10px;
+    background:rgba(245,197,24,.09);border:1px solid rgba(245,197,24,.26);color:var(--gold);
+    border-radius:8px;padding:7px 9px}
+  .calert .ai{flex-shrink:0;font-weight:700}
+  .calert.up{background:rgba(57,217,138,.09);border-color:rgba(57,217,138,.28);color:var(--accent)}
+  .calert.down{background:rgba(255,107,107,.09);border-color:rgba(255,107,107,.28);color:var(--bad)}
+  .empty{text-align:center;color:var(--muted);font-size:.85rem;padding:34px 16px;line-height:1.7}
+  /* ===== 詳細 ===== */
+  .backbtn{margin-bottom:12px}
+  .detail-hero{display:flex;gap:14px;margin-bottom:14px}
+  .detail-img{width:120px;height:168px;border-radius:10px;flex-shrink:0;object-fit:cover;background:var(--panel2)}
+  .detail-img-ph{width:120px;height:168px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;
+    justify-content:center;font-weight:800;font-size:2.4rem;color:#0c0e10}
+  .detail-h .dname{font-size:1.05rem;font-weight:700;line-height:1.3}
+  .detail-h .dvar{font-size:.78rem;color:var(--muted);margin-top:2px}
+  .detail-h .dlinks{margin-top:10px;display:flex;flex-direction:column;gap:5px;font-size:.8rem}
+  canvas{width:100%;height:150px;display:block}
+  .kv{display:flex;justify-content:space-between;font-size:.84rem;padding:6px 0;border-bottom:1px solid var(--line)}
+  .kv:last-child{border-bottom:none}
+  .kv .k{color:var(--muted)}
+  .kv .v{font-weight:600}
+  .scn-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:6px}
+  .scn{background:var(--panel2);border:1px solid var(--line);border-radius:9px;padding:9px 6px;text-align:center}
+  .scn .l{font-size:.66rem;color:var(--muted)}
+  .scn .p{font-size:.9rem;font-weight:700;margin-top:3px}
+  .good{color:var(--accent)} .bad{color:var(--bad)} .warn{color:var(--warn)} .blue{color:var(--accent2)}
+  /* ===== ポートフォリオ パイプライン ===== */
+  .pipe-row{margin-bottom:10px}
+  .pipe-head{display:flex;justify-content:space-between;font-size:.8rem;margin-bottom:3px}
+  .pipe-head .cnt{color:var(--muted)}
+  .pipe-bar-wrap{background:var(--panel2);border-radius:6px;height:13px;overflow:hidden}
+  .pipe-bar{height:100%;border-radius:6px;transition:width .4s}
+  .stat-grid{display:flex;gap:10px;margin-bottom:14px}
+  .stat{flex:1;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px;text-align:center}
+  .stat .n{font-size:1.25rem;font-weight:700;line-height:1.15}
+  .stat .s{font-size:.68rem;color:var(--muted);margin-top:3px}
+  /* ===== ポジション一覧 ===== */
+  .pos{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:11px;margin-bottom:8px}
+  .pos-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+  .pos-name{font-size:.86rem;font-weight:600}
+  .pos-meta{font-size:.72rem;color:var(--muted);margin-top:3px;line-height:1.6}
+  .pos-actions{display:flex;gap:6px;flex-shrink:0}
+  .pos-actions button{padding:4px 9px;font-size:.74rem}
+  .st-tag{font-size:.64rem;padding:2px 7px;border-radius:6px;font-weight:700}
+  /* ステータス色 */
+  .st-raw{background:rgba(154,163,171,.18);color:var(--muted)}
+  .st-grading{background:rgba(255,180,84,.16);color:var(--warn)}
+  .st-graded{background:rgba(74,168,255,.16);color:var(--accent2)}
+  .st-listed{background:rgba(245,197,24,.18);color:var(--gold)}
+  .st-sold{background:rgba(57,217,138,.16);color:var(--accent)}
+  /* ===== フォーム ===== */
+  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+  .fld{display:flex;flex-direction:column;gap:4px}
+  .fld.full{grid-column:1/-1}
+  .fld label{font-size:.72rem;color:var(--muted)}
+  /* ===== 台帳 ===== */
+  table{width:100%;border-collapse:collapse;font-size:.78rem}
+  th,td{padding:7px 6px;border-bottom:1px solid var(--line);text-align:right}
+  th{color:var(--muted);font-weight:600;font-size:.7rem}
+  th:first-child,td:first-child{text-align:left}
+  .pnl-pos{color:var(--accent)} .pnl-neg{color:var(--bad)}
+  /* ===== 設定 ===== */
+  .set-row{display:flex;gap:8px;align-items:center;margin-bottom:8px}
+  .set-row label{flex:1;font-size:.82rem}
+  .set-row input{width:96px}
+  .btn-col{display:flex;flex-direction:column;gap:8px}
+  .btn-row{display:flex;gap:8px;flex-wrap:wrap}
+  .btn-row button{flex:1;min-width:120px}
+  .hint{font-size:.72rem;color:var(--muted);margin-top:8px;line-height:1.7}
+  /* ===== トースト ===== */
+  .toast{position:fixed;left:50%;bottom:calc(var(--tabbar) + env(safe-area-inset-bottom) + 16px);
+    transform:translateX(-50%);background:var(--accent2);color:#06243f;padding:10px 18px;border-radius:11px;
+    font-size:.82rem;font-weight:700;opacity:0;transition:opacity .25s;pointer-events:none;z-index:99;
+    max-width:88%;text-align:center}
+  .toast.show{opacity:1}
+  /* ===== 下部タブバー ===== */
+  .tabbar{position:fixed;left:0;right:0;bottom:0;z-index:90;background:rgba(18,20,22,.96);
+    border-top:1px solid var(--line);backdrop-filter:blur(10px);
+    display:flex;max-width:560px;margin:0 auto;
+    padding-bottom:env(safe-area-inset-bottom)}
+  .tab{flex:1;border:none;background:none;color:var(--muted);font-size:.62rem;padding:9px 2px 7px;
+    display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer}
+  .tab .ico{font-size:1.25rem;line-height:1}
+  .tab.on{color:var(--accent2)}
+  .view{display:none}
+  .view.on{display:block}
+  .foot{margin-top:20px;color:#5a6571;font-size:.68rem;text-align:center;line-height:1.6}
+</style>
+</head>
+<body>
+
+<div id="banner" class="banner" style="display:none"></div>
+
+<!-- ============ ウォッチ ============ -->
+<section id="view-watch" class="view on">
+  <h1>📊 トレカ投資 <span class="sub" style="font-weight:400" id="updatedAt"></span></h1>
+  <div class="sub">相場（data.js）× 自分のポジション（端末内）。鑑定 vs 素体を自動判定。</div>
+  <div class="decaybar">
+    <span class="lbl">相場反落</span>
+    <input type="range" id="decay" min="0" max="80" value="0" step="1">
+    <span class="val" id="decayVal">0%</span>
+  </div>
+  <div class="chips" id="gameChips"></div>
+  <div id="watchList"></div>
+</section>
+
+<!-- ============ 詳細 ============ -->
+<section id="view-detail" class="view">
+  <button class="backbtn" onclick="showTab('watch')">‹ ウォッチに戻る</button>
+  <div id="detailBody"></div>
+</section>
+
+<!-- ============ ポートフォリオ ============ -->
+<section id="view-portfolio" class="view">
+  <h1>💼 ポートフォリオ</h1>
+  <div class="sub">在庫の投下資本と含み益（最新相場×状態で評価）。</div>
+  <div class="stat-grid" style="margin-top:14px">
+    <div class="stat"><div class="n" id="pfInvest">—</div><div class="s">投下資本（売却除く）</div></div>
+    <div class="stat"><div class="n" id="pfUnreal">—</div><div class="s">含み益（推定）</div></div>
+  </div>
+  <div class="card panel">
+    <h3>ステータス パイプライン</h3>
+    <div id="pipeline"></div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:center;margin:18px 0 8px">
+    <h2 style="margin:0">保有ポジション</h2>
+    <button class="primary" onclick="openPosForm()">＋追加</button>
+  </div>
+  <div id="posList"></div>
+</section>
+
+<!-- ============ 台帳 ============ -->
+<section id="view-ledger" class="view">
+  <h1>📒 売却台帳</h1>
+  <div class="sub">売却済（status: sold）の純利益と月次集計。</div>
+  <div class="card panel" style="margin-top:14px">
+    <h3>当月 仕入予算</h3>
+    <div class="pipe-bar-wrap" style="height:16px"><div class="pipe-bar" id="budgetBar"></div></div>
+    <div class="sub" id="budgetLbl" style="margin-top:6px"></div>
+  </div>
+  <div class="card panel">
+    <h3>月次集計</h3>
+    <div id="monthlyTable"></div>
+  </div>
+  <h2>売却明細</h2>
+  <div id="ledgerList"></div>
+</section>
+
+<!-- ============ 設定 ============ -->
+<section id="view-settings" class="view">
+  <h1>⚙️ 設定</h1>
+  <div class="card panel" style="margin-top:14px">
+    <h3>チャネル別 手数料率（%）</h3>
+    <div id="channelSettings"></div>
+    <button onclick="addChannel()" style="margin-top:8px">＋チャネル追加</button>
+  </div>
+  <div class="card panel">
+    <h3>鑑定費プラン（円/枚）</h3>
+    <div id="gradingSettings"></div>
+    <button onclick="addGradingPlan()" style="margin-top:8px">＋プラン追加</button>
+  </div>
+  <div class="card panel">
+    <h3>取引・予算</h3>
+    <div class="set-row"><label>月間仕入予算（円）</label><input type="number" id="setBudget" step="10000"></div>
+    <div class="set-row"><label>既定チャネル</label><select id="setDefaultChannel" style="width:auto;flex:0 0 auto"></select></div>
+  </div>
+  <div class="card panel">
+    <h3>データ入出力</h3>
+    <div class="btn-col">
+      <div class="btn-row">
+        <button onclick="exportJSON()">💾 JSON書出</button>
+        <button onclick="document.getElementById('impFile').click()">📂 取込（ファイル）</button>
+      </div>
+      <div class="btn-row">
+        <button onclick="copyJSON()">📋 コピー</button>
+        <button onclick="pasteJSON()">📥 貼付取込</button>
+      </div>
+      <button class="danger solid" onclick="resetData()">🗑 データ初期化</button>
+    </div>
+    <input type="file" id="impFile" accept=".json" style="display:none" onchange="importFile(event)">
+    <div class="hint">取込はマージ方式（ポジションはid一致=上書き・新規=追加。既存は消えません）。端末間の移送はこのコピー／貼付で。</div>
+  </div>
+  <div class="foot">© Shin経営システム ／ CFO・CTO共有ツール。相場は data.js（Claudeが更新）、ポジションはこの端末内のみ。判定は意思決定補助であり結果を保証しない。</div>
+</section>
+
+<!-- ============ ポジション フォーム（モーダル風オーバーレイ） ============ -->
+<section id="view-posform" class="view">
+  <button class="backbtn" onclick="closePosForm()">‹ 戻る</button>
+  <h1 id="posFormTitle">ポジション追加</h1>
+  <div class="card">
+    <div class="form-grid">
+      <div class="fld full"><label>カード（リストから選択）</label><select id="pfCard"></select></div>
+      <div class="fld full" id="pfFreeWrap" style="display:none"><label>カード名（リスト外）</label><input type="text" id="pfFree" placeholder="手入力カード名"></div>
+      <div class="fld"><label>仕入日</label><input type="date" id="pfBuyDate"></div>
+      <div class="fld"><label>仕入額（円）</label><input type="number" id="pfBuyPrice" step="100"></div>
+      <div class="fld"><label>枚数</label><input type="number" id="pfQty" step="1" value="1"></div>
+      <div class="fld"><label>ステータス</label><select id="pfStatus">
+        <option value="raw">素体</option><option value="grading">鑑定中</option>
+        <option value="graded">グレード済</option><option value="listed">出品中</option>
+        <option value="sold">売却済</option></select></div>
+      <div class="fld"><label>グレード</label><select id="pfGrade">
+        <option value="">未定</option><option value="PSA10">PSA10</option>
+        <option value="PSA9">PSA9</option><option value="other">その他</option></select></div>
+      <div class="fld"><label>鑑定費（円/枚）</label><input type="number" id="pfGradeCost" step="100"></div>
+      <div class="fld"><label>チャネル</label><select id="pfChannel"></select></div>
+      <div class="fld"><label>販売手数料（%・空=チャネル既定）</label><input type="number" id="pfFeePct" step="0.1" placeholder="自動"></div>
+      <div class="fld"><label>売却日</label><input type="date" id="pfSoldDate"></div>
+      <div class="fld"><label>売却額（円）</label><input type="number" id="pfSoldPrice" step="100"></div>
+      <div class="fld"><label>送料（円）</label><input type="number" id="pfShipCost" step="50" value="0"></div>
+      <div class="fld full"><label>メモ</label><input type="text" id="pfNote" placeholder="任意"></div>
+    </div>
+    <div class="btn-row" style="margin-top:14px">
+      <button class="primary" onclick="savePosForm()">保存</button>
+      <button class="danger" id="pfDeleteBtn" onclick="deletePosFromForm()" style="display:none">削除</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 下部タブバー ============ -->
+<nav class="tabbar">
+  <button class="tab on" data-tab="watch" onclick="showTab('watch')"><span class="ico">📊</span>ウォッチ</button>
+  <button class="tab" data-tab="portfolio" onclick="showTab('portfolio')"><span class="ico">💼</span>在庫</button>
+  <button class="tab" data-tab="ledger" onclick="showTab('ledger')"><span class="ico">📒</span>台帳</button>
+  <button class="tab" data-tab="settings" onclick="showTab('settings')"><span class="ico">⚙️</span>設定</button>
+</nav>
+
+<div class="toast" id="toast"></div>
+
+<!-- 相場レイヤー（Claudeが treca-market-update スキルで更新）。読めなくても本体は手入力モードで動作継続する。 -->
+<script src="data.js"></script>
+<script src="seed_positions.js"></script>
+<script>
+/* =====================================================================
+   トレカ投資アプリ — 本体スクリプト
+   data.js（window.TRECA_DATA）= 相場レイヤー（Claude更新・読むだけ）
+   localStorage "trecaInvest_v1" = 個人レイヤー（ポジション・設定）
+   期待値エンジンは損益シミュレーターと同一式・同一丸め
+   ===================================================================== */
+"use strict";
+
+/* ---------- ショートカット ---------- */
+const $ = id => document.getElementById(id);
+const yen = n => "¥" + Math.round(n||0).toLocaleString("ja-JP");
+const signYen = n => (n>=0?"+":"") + yen(n);
+let toastT;
+function toast(m){ const e=$("toast"); if(!e)return; e.textContent=m; e.classList.add("show");
+  clearTimeout(toastT); toastT=setTimeout(()=>e.classList.remove("show"),2400); }
+
+/* ---------- 相場レイヤー（data.js）の安全な読み込み ---------- */
+const DATA = (typeof window!=="undefined" && window.TRECA_DATA) ? window.TRECA_DATA : null;
+const HAS_DATA = !!(DATA && Array.isArray(DATA.cards));
+const GAMES = HAS_DATA && Array.isArray(DATA.games) ? DATA.games : [];
+const CARDS = HAS_DATA ? DATA.cards : [];
+const CARD_BY_ID = {};
+CARDS.forEach(c => { CARD_BY_ID[c.id] = c; });
+function gameById(id){ return GAMES.find(g=>g.id===id) || {id:id,name:id||"その他",color:"#9aa3ab"}; }
+
+if(!HAS_DATA){
+  const b=$("banner");
+  b.style.display="block";
+  b.textContent="⚠️ data.js が読めません。相場なし・手入力モードで動作中（ポジションの追加・台帳・設定は通常どおり使えます）。";
+}
+
+/* ---------- 最新スナップショット取得 ---------- */
+function latestSnap(card){
+  if(!card || !Array.isArray(card.snapshots) || card.snapshots.length===0) return null;
+  return card.snapshots[card.snapshots.length - 1];
+}
+// nullは0扱い（保守モデル）。実数はそのまま。
+const num = v => (v==null || isNaN(v)) ? 0 : Number(v);
+
+/* =====================================================================
+   個人レイヤー（localStorage）
+   ===================================================================== */
+const LS_KEY = "trecaInvest_v1";
+function defaultStore(){
+  return {
+    schemaVersion: 1,
+    settings: {
+      channels: [
+        {id:"snkrdunk", name:"スニダン", feePct:8.0},
+        {id:"ebay",     name:"eBay",     feePct:15.4},
+        {id:"mercari",  name:"メルカリ",  feePct:10.0},
+        {id:"psavault", name:"PSA Vault", feePct:12.0, note:"要実費確認"}
+      ],
+      gradingPlans: [ {id:"psa-regular", name:"PSAレギュラー", costPerCard:11990} ],
+      monthlyBudget: 200000,
+      defaultChannel: "snkrdunk",
+      decayDefault: 0
+    },
+    positions: []
+  };
+}
+let store = loadStore();
+function loadStore(){
+  try{
+    const s = JSON.parse(localStorage.getItem(LS_KEY));
+    if(s && s.settings && Array.isArray(s.positions)) return migrate(s);
+  }catch(e){}
+  return defaultStore();
+}
+// 旧スキーマ/欠落フィールドの保険
+function migrate(s){
+  const d = defaultStore();
+  s.schemaVersion = s.schemaVersion || 1;
+  s.settings = Object.assign({}, d.settings, s.settings||{});
+  if(!Array.isArray(s.settings.channels) || !s.settings.channels.length) s.settings.channels = d.settings.channels;
+  if(!Array.isArray(s.settings.gradingPlans) || !s.settings.gradingPlans.length) s.settings.gradingPlans = d.settings.gradingPlans;
+  if(!Array.isArray(s.positions)) s.positions = [];
+  return s;
+}
+function persist(){ try{ localStorage.setItem(LS_KEY, JSON.stringify(store)); }catch(e){ console.warn("save failed", e); } }
+function saveAndToast(msg){ persist(); if(msg) toast(msg); }
+
+/* =====================================================================
+   自動取込シード（seed_positions.js・Drive限定・公開リポジトリには無い）
+   起動時、seedVersion が未適用の時だけ id 一致でポジションをマージ適用する。
+   手動「取込」を不要にする（file:// でも確実に動く<script>方式）。
+   公開デプロイ時は seed_positions.js が存在せず window.__TRECA_SEED__ が undefined
+   → 何もしない（既存の手動取込にフォールバック）。
+   ===================================================================== */
+(function applySeedIfNewer(){
+  try{
+    var seed = (typeof window!=="undefined") ? window.__TRECA_SEED__ : null;
+    if(!seed || !Array.isArray(seed.positions)) return;
+    var ver = String(seed.seedVersion || "0");
+    if(store.settings && store.settings.appliedSeedVersion === ver) return; // この版は適用済み
+    var byId = {};
+    store.positions.forEach(function(p){ if(p && p.id) byId[p.id] = p; });
+    seed.positions.forEach(function(p){ if(p && p.id) byId[p.id] = p; }); // id一致=上書き・新規=追加
+    store.positions = Object.values(byId);
+    if(!store.settings) store.settings = {};
+    store.settings.appliedSeedVersion = ver;
+    persist();
+  }catch(e){ console.warn("seed apply skipped:", e); }
+})();
+
+/* settings ヘルパ */
+function settings(){ return store.settings; }
+function channels(){ return settings().channels || []; }
+function channelById(id){ return channels().find(c=>c.id===id) || null; }
+function defaultChannel(){ return channelById(settings().defaultChannel) || channels()[0] || {feePct:0,name:"—"}; }
+function defaultFeePct(){ return num(defaultChannel().feePct); }
+function defaultGradeCost(){ const p=(settings().gradingPlans||[])[0]; return p ? num(p.costPerCard) : 0; }
+function decay(){ return (parseFloat($("decay").value)||0)/100; }
+
+/* =====================================================================
+   期待値エンジン（損益シミュレーター cardNetPerUnit と同一式・同一丸め）
+   鑑定純額/枚 = [率×p10 + (1−率)×p9] × (1−手数料) − 鑑定費
+   素体純額/枚 = rawA × (1−手数料)
+   高い方を採用。反落 d は全相場価格に (1−d) を一律乗算。
+   手数料は settings.defaultChannel の feePct。
+   ===================================================================== */
+// 鑑定費の優先順位: 明示override > カード固有 gradingCostDefault(data.js) > settings.gradingPlans[0]
+function cardGradeCost(card){
+  if(card && card.gradingCostDefault!=null && !isNaN(card.gradingCostDefault)) return num(card.gradingCostDefault);
+  return defaultGradeCost();
+}
+function evalCard(card, d, feePctOverride, gradeCostOverride){
+  const snap = latestSnap(card);
+  const feePct = (feePctOverride!=null) ? feePctOverride : defaultFeePct();
+  const gradeCost = (gradeCostOverride!=null) ? gradeCostOverride : cardGradeCost(card);
+  const f = 1 - feePct/100;
+  const dec = 1 - (d||0);
+  if(!snap){
+    return {hasData:false, netGrade:0, netRaw:0, best:0, route:"raw", rate:0,
+            p10:0, p9:0, rawA:0, rawB:0, gradeCost};
+  }
+  const r   = num(snap.rate10)/100;
+  const p10 = num(snap.p10), p9 = num(snap.p9), rawA = num(snap.rawA), rawB = num(snap.rawB);
+  const revGrade = (r*p10*dec + (1-r)*p9*dec) * f;
+  const netGrade = revGrade - gradeCost;
+  const netRaw   = rawA * dec * f;
+  const route = netGrade >= netRaw ? "grade" : "raw";
+  return {hasData:true, netGrade, netRaw, route, best:Math.max(netGrade,netRaw),
+          rate:num(snap.rate10), p10, p9, rawA, rawB, gradeCost, snap};
+}
+// 損益分岐反落率（純額がゼロを下回る最小の反落・1%刻み）
+function breakEvenDecay(card){
+  const base = evalCard(card, 0).best;
+  if(base <= 0) return null;
+  for(let d=0; d<=0.99; d+=0.01){
+    if(evalCard(card, d).best < 0) return Math.round(d*100);
+  }
+  return 99;
+}
+
+/* =====================================================================
+   鮮度バッジ（最新snapshot.at から: 72h内=新/7日内=◯日前/超過orstale=赤）
+   ===================================================================== */
+function freshness(card){
+  const snap = latestSnap(card);
+  if(!snap || !snap.at) return {cls:"fresh-old", label:"未取得"};
+  if(snap.stale) return {cls:"fresh-old", label:"旧値"};
+  const ms = Date.now() - new Date(snap.at).getTime();
+  if(isNaN(ms)) return {cls:"fresh-old", label:"不明"};
+  const hours = ms/36e5, days = ms/864e5;
+  if(hours <= 72) return {cls:"fresh-new", label:"新"};
+  if(days <= 7)   return {cls:"fresh-mid", label:Math.round(days)+"日前"};
+  return {cls:"fresh-old", label:Math.round(days)+"日前"};
+}
+
+/* =====================================================================
+   表示名・画像プレースホルダ
+   ===================================================================== */
+function cardDisplayName(card){ return card ? (card.name || "(無名)") : ""; }
+// onerror で色＋頭文字プレースホルダに差し替え
+function thumbHTML(card, big){
+  const g = gameById(card.game);
+  const cls = big ? "detail-img" : "thumb";
+  const phcls = big ? "detail-img-ph" : "thumb-ph";
+  const initial = (card.name||"?").trim().charAt(0);
+  const ph = `<div class="${phcls}" style="background:${g.color}">${initial}</div>`;
+  if(card.image){
+    return `<img class="${cls}" src="${escAttr(card.image)}" alt=""
+            onerror="this.outerHTML=this.dataset.ph" data-ph="${escAttr(ph)}">`;
+  }
+  return ph;
+}
+function escAttr(s){ return String(s==null?"":s).replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+function escHtml(s){ return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+
+/* =====================================================================
+   ウォッチ画面
+   ===================================================================== */
+let gameFilter = "all";
+function renderGameChips(){
+  const wrap = $("gameChips");
+  const chips = [{id:"all", name:"全部", color:"var(--accent2)"}].concat(GAMES);
+  wrap.innerHTML = chips.map(g=>{
+    const on = (g.id===gameFilter);
+    const style = on ? `border-color:${g.color};background:${hexA(g.color,0.16)};color:var(--txt)` : "";
+    return `<span class="chip ${on?"on":""}" style="${style}" onclick="setGameFilter('${g.id}')">${escHtml(g.name)}</span>`;
+  }).join("");
+}
+function setGameFilter(id){ gameFilter=id; renderGameChips(); renderWatch(); }
+// hex(#rrggbb) → rgba 文字列（CSS変数はそのまま返す）
+function hexA(hex, a){
+  if(typeof hex!=="string" || hex[0]!=="#" || hex.length<7) return hex;
+  const r=parseInt(hex.slice(1,3),16), g=parseInt(hex.slice(3,5),16), b=parseInt(hex.slice(5,7),16);
+  return `rgba(${r},${g},${b},${a})`;
+}
+
+function renderWatch(){
+  const d = decay();
+  $("decayVal").textContent = Math.round(d*100)+"%";
+  const list = $("watchList");
+  let cards = CARDS.filter(c => c.watch !== false);
+  if(gameFilter !== "all") cards = cards.filter(c => c.game === gameFilter);
+
+  if(!HAS_DATA){
+    list.innerHTML = `<div class="empty">相場データ（data.js）がありません。<br>「在庫」タブからポジションを追加して台帳・含み益だけ使えます。</div>`;
+    return;
+  }
+  if(cards.length===0){
+    list.innerHTML = `<div class="empty">このゲームのウォッチ対象カードがありません。</div>`;
+    return;
+  }
+  // 期待値の高い順
+  cards = cards.slice().sort((a,b)=> evalCard(b,d).best - evalCard(a,d).best);
+  list.innerHTML = cards.map(c=>{
+    const e = evalCard(c, d);
+    const fr = freshness(c);
+    const snap = latestSnap(c);
+    const alert = snap && snap.alert ? snap.alert : null;
+    const alertCls = alert ? (alert.indexOf("急騰")>=0?"up":alert.indexOf("急落")>=0?"down":"") : "";
+    const routeBadge = e.hasData
+      ? `<span class="bdg ${e.route}">${e.route==="grade"?"鑑定":"素体"}</span>` : "";
+    const mi = (label,val)=>`<span class="mi">${label} <b>${val}</b></span>`;
+    const metaBits = [];
+    metaBits.push(mi("PSA10率", e.hasData? e.rate.toFixed(1)+"%" : "—"));
+    metaBits.push(mi("10", e.p10? yen(e.p10):"—"));
+    metaBits.push(mi("9", snap&&snap.p9!=null? yen(e.p9):"—"));
+    metaBits.push(mi("素A", snap&&snap.rawA!=null? yen(e.rawA):"—"));
+    if(snap && snap.rawB!=null) metaBits.push(mi("素B", yen(e.rawB)));
+    return `
+      <div class="crow" onclick="showDetail('${escAttr(c.id)}')">
+        <div class="crow-top">
+          ${thumbHTML(c,false)}
+          <div class="cmain">
+            <div class="cname">${escHtml(c.name)}</div>
+            <div class="cvar">${escHtml(c.variant||c.number||"")}</div>
+            <div class="cmeta">${metaBits.join("")}</div>
+            <div class="badges">
+              ${routeBadge}
+              <span class="bdg ${fr.cls}">${escHtml(fr.label)}</span>
+            </div>
+          </div>
+          <div class="cright">
+            <div class="cev ${e.hasData?"":"na"}">${e.hasData? yen(e.best) : "—"}</div>
+            <div class="cevlbl">期待値/枚</div>
+          </div>
+        </div>
+        ${alert? `<div class="calert ${alertCls}"><span class="ai">⚠</span><span>${escHtml(alert)}</span></div>`:""}
+      </div>`;
+  }).join("");
+}
+
+/* =====================================================================
+   詳細画面
+   ===================================================================== */
+let detailCardId = null;
+function showDetail(id){
+  detailCardId = id;
+  renderDetail();
+  showTab("detail", true);
+}
+function renderDetail(){
+  const c = CARD_BY_ID[detailCardId];
+  const body = $("detailBody");
+  if(!c){ body.innerHTML = `<div class="empty">カードが見つかりません。</div>`; return; }
+  const d = decay();
+  const e = evalCard(c, d);
+  const snap = latestSnap(c);
+  const g = gameById(c.game);
+  const be = breakEvenDecay(c);
+
+  // 出典リンク
+  const links = c.links || {};
+  const linkBits = [];
+  if(links.snkrdunk) linkBits.push(`<a href="${escAttr(links.snkrdunk)}" target="_blank" rel="noopener">スニダン 売買履歴 ↗</a>`);
+  if(links.psaPop)   linkBits.push(`<a href="${escAttr(links.psaPop)}" target="_blank" rel="noopener">PSA POPレポート ↗</a>`);
+
+  // 4シナリオ（現状/▲20/▲40/▲60）
+  const scns = [{l:"現状",d:0},{l:"▲20%",d:.2},{l:"▲40%",d:.4},{l:"▲60%",d:.6}];
+  const scnHTML = scns.map(s=>{
+    const ev = evalCard(c, s.d);
+    const cls = ev.best>0?"good":ev.best<0?"bad":"warn";
+    return `<div class="scn"><div class="l">${s.l}</div><div class="p ${cls}">${ev.hasData?yen(ev.best):"—"}</div></div>`;
+  }).join("");
+
+  // POP推移
+  const pop10 = snap && snap.pop10!=null ? snap.pop10 : null;
+  const popTotal = snap && snap.popTotal!=null ? snap.popTotal : null;
+
+  // 仕入上限の逆算（損益分岐＝期待値純額、推奨＝その80%）
+  const cap = e.best;
+  const recommend = cap>0 ? cap*0.8 : 0;
+
+  body.innerHTML = `
+    <div class="detail-hero">
+      ${thumbHTML(c,true)}
+      <div class="detail-h">
+        <div class="dname">${escHtml(c.name)}</div>
+        <div class="dvar">${escHtml(c.variant||"")}${c.number?` ・ ${escHtml(c.number)}`:""}</div>
+        <div class="dvar" style="margin-top:4px"><span class="bdg" style="background:${hexA(g.color,.18)};color:${g.color}">${escHtml(g.name)}</span></div>
+        <div class="dlinks">${linkBits.length?linkBits.join(""):'<span class="sub">出典リンクなし</span>'}</div>
+      </div>
+    </div>
+
+    <div class="card panel">
+      <h3>価格履歴</h3>
+      <div class="sub" style="margin-bottom:4px">PSA10実売（緑）／素体A実売（青）</div>
+      <canvas id="sparkPrice"></canvas>
+    </div>
+
+    <div class="card panel">
+      <h3>POP（鑑定枚数）推移</h3>
+      <div class="kv"><span class="k">PSA10 枚数</span><span class="v">${pop10!=null? pop10.toLocaleString("ja-JP") : "未取得"}</span></div>
+      <div class="kv"><span class="k">総鑑定枚数</span><span class="v">${popTotal!=null? popTotal.toLocaleString("ja-JP") : "未取得"}</span></div>
+      <div class="kv"><span class="k">PSA10 取得率</span><span class="v">${e.hasData? e.rate.toFixed(2)+"%" : "—"}</span></div>
+    </div>
+
+    <div class="card panel">
+      <h3>期待値内訳（手数料 ${defaultFeePct().toFixed(1)}% ・ 鑑定費 ${yen(e.gradeCost)} ・ 反落 ${Math.round(d*100)}%）</h3>
+      <div class="kv"><span class="k">鑑定純額/枚</span><span class="v ${e.netGrade>=e.netRaw?'good':''}">${e.hasData?yen(e.netGrade):"—"}</span></div>
+      <div class="kv"><span class="k">素体純額/枚</span><span class="v ${e.netRaw>e.netGrade?'blue':''}">${e.hasData?yen(e.netRaw):"—"}</span></div>
+      <div class="kv"><span class="k">採用ルート</span><span class="v">${e.hasData? (e.route==="grade"?"🟢 鑑定で出す":"🔵 素体で売る") : "—"}</span></div>
+      <div style="margin-top:12px"><div class="sub" style="margin-bottom:6px">反落シナリオ（期待値/枚）</div>${scnHTML}</div>
+      <div class="kv" style="margin-top:12px"><span class="k">損益分岐 反落率</span><span class="v">${be===null? "—（現状で赤字）" : (be>=99?"▲99%超でも黒字":"▲"+be+"% まで黒字")}</span></div>
+    </div>
+
+    <div class="card panel">
+      <h3>仕入上限の逆算</h3>
+      <div class="kv"><span class="k">損益分岐 仕入値（期待値純額）</span><span class="v">${cap>0?yen(cap):"—"}</span></div>
+      <div class="kv"><span class="k">推奨上限（80%）</span><span class="v good">${recommend>0?yen(recommend):"—"}</span></div>
+      <div class="hint">この値以下で仕入れれば、現在の相場・反落 ${Math.round(d*100)}% でも期待値プラス。推奨は安全マージン20%を引いた水準。</div>
+    </div>
+
+    <div style="margin:10px 0 4px">
+      <button class="primary" style="width:100%" onclick="openPosFormForCard('${escAttr(c.id)}')">＋ このカードをポジションに追加</button>
+    </div>
+  `;
+  // スパークライン描画（Canvas）
+  drawSparkline(c, d);
+}
+
+/* 価格履歴スパークライン（p10=緑・rawA=青の2系列・snapshots時系列） */
+function drawSparkline(card, d){
+  const cv = $("sparkPrice");
+  if(!cv) return;
+  const dpr = window.devicePixelRatio||1;
+  const w = cv.clientWidth||320, h=150;
+  cv.width=w*dpr; cv.height=h*dpr;
+  const ctx = cv.getContext("2d"); ctx.scale(dpr,dpr);
+  ctx.clearRect(0,0,w,h);
+  const snaps = Array.isArray(card.snapshots)? card.snapshots : [];
+  const dec = 1-(d||0);
+  const s10 = snaps.map(s=>({date:s.at, v: s.p10!=null? num(s.p10)*dec : null}));
+  const sRaw= snaps.map(s=>({date:s.at, v: s.rawA!=null? num(s.rawA)*dec : null}));
+  const all = s10.map(p=>p.v).concat(sRaw.map(p=>p.v)).filter(v=>v!=null);
+  if(all.length===0){ ctx.fillStyle="#5a6571"; ctx.font="12px sans-serif"; ctx.fillText("価格履歴がまだありません",10,76); return; }
+  let mn=Math.min(...all), mx=Math.max(...all);
+  if(mn===mx){ mn=mn*0.9; mx=mx*1.1||1; }
+  const pad=(mx-mn)*0.12||1; mn-=pad; mx+=pad; if(mn<0)mn=0;
+  const PL=46,PR=10,PT=12,PB=20, cw=w-PL-PR, ch=h-PT-PB;
+  const n=Math.max(s10.length, sRaw.length);
+  const X=i=> PL + (n<=1? cw/2 : cw*i/(n-1));
+  const Y=v=> PT + ch*(1-(v-mn)/(mx-mn));
+  // grid + y labels
+  ctx.strokeStyle="#2a3441"; ctx.fillStyle="#5a6571"; ctx.font="9px sans-serif"; ctx.lineWidth=1;
+  for(let gx=0; gx<=3; gx++){
+    const v=mn+(mx-mn)*gx/3, y=Y(v);
+    ctx.beginPath(); ctx.moveTo(PL,y); ctx.lineTo(w-PR,y); ctx.stroke();
+    ctx.fillText("¥"+Math.round(v/1000)+"k", 2, y+3);
+  }
+  function line(series, color){
+    const pts = series.map((p,i)=>({i,v:p.v})).filter(p=>p.v!=null);
+    if(pts.length===0) return;
+    ctx.strokeStyle=color; ctx.lineWidth=2; ctx.beginPath();
+    pts.forEach((p,k)=>{ const x=X(p.i), y=Y(p.v); k?ctx.lineTo(x,y):ctx.moveTo(x,y); });
+    ctx.stroke();
+    ctx.fillStyle=color;
+    pts.forEach(p=>{ const x=X(p.i), y=Y(p.v); ctx.beginPath(); ctx.arc(x,y,2.5,0,7); ctx.fill(); });
+  }
+  line(s10, "#39d98a");
+  line(sRaw, "#4aa8ff");
+  // x labels (最初と最後)
+  ctx.fillStyle="#5a6571"; ctx.font="9px sans-serif";
+  if(n>=1){
+    const fmt = iso => { const dt=new Date(iso); return isNaN(dt)? "" : (dt.getMonth()+1)+"/"+dt.getDate(); };
+    if(snaps[0]) ctx.fillText(fmt(snaps[0].at), PL-6, h-6);
+    if(snaps[n-1] && n>1){ const t=fmt(snaps[n-1].at); ctx.fillText(t, w-PR-22, h-6); }
+  }
+}
+
+/* =====================================================================
+   ポジション評価（含み益）
+   ===================================================================== */
+function posCard(p){ return p.cardId ? CARD_BY_ID[p.cardId] : null; }
+function posName(p){
+  if(p.freeName) return p.freeName;
+  const c = posCard(p);
+  return c ? c.name : "(リスト外カード)";
+}
+// 1枚あたりの推定時価（状態別評価）
+function posValuePerUnit(p){
+  const c = posCard(p);
+  const feePct = (p.feePct!=null) ? num(p.feePct) : defaultFeePct();
+  const f = 1 - feePct/100;
+  const snap = c ? latestSnap(c) : null;
+  // 相場が無いカード/リスト外は「素体扱い」だが時価不明 → 0（投下資本のみ）
+  if(!snap){
+    // gradingは期待値式が使えないので0、それ以外も時価不明=0
+    return 0;
+  }
+  const p10=num(snap.p10), p9=num(snap.p9), rawA=num(snap.rawA);
+  switch(p.status){
+    case "graded":
+    case "listed":
+      if(p.grade==="PSA10") return p10*f;
+      if(p.grade==="PSA9")  return p9*f;
+      return rawA*f; // その他/不明 → 素体扱い
+    case "grading": {
+      const gradeCost = (p.gradeCost!=null)? num(p.gradeCost) : defaultGradeCost();
+      const e = evalCard(c, 0, feePct, gradeCost);
+      // 期待値式（鑑定純額は既に鑑定費控除後＝gradeCostを足し戻して「時価」に）
+      return e.best + (e.route==="grade"? gradeCost : 0);
+    }
+    case "raw":
+    default:
+      return rawA*f;
+  }
+}
+// ポジションの含み益（時価 − (仕入＋鑑定費)）× 枚数。soldは除外。
+function posUnrealized(p){
+  if(p.status==="sold") return 0;
+  const qty = num(p.qty)||1;
+  const value = posValuePerUnit(p) * qty;
+  const cost = (num(p.buyPrice) + num(p.gradeCost)) * qty;
+  return value - cost;
+}
+function posInvested(p){
+  if(p.status==="sold") return 0;
+  const qty = num(p.qty)||1;
+  return (num(p.buyPrice) + num(p.gradeCost)) * qty;
+}
+// 売却純利益（台帳）
+function posNetProfit(p){
+  const qty = num(p.qty)||1;
+  const feePct = (p.feePct!=null)? num(p.feePct) : defaultFeePct();
+  const gross = num(p.soldPrice) * (1 - feePct/100);
+  return (gross - num(p.shipCost) - num(p.buyPrice) - num(p.gradeCost)) * qty;
+}
+
+/* =====================================================================
+   ポートフォリオ画面
+   ===================================================================== */
+const STATUS_ORDER = ["raw","grading","graded","listed","sold"];
+const STATUS_LABEL = {raw:"素体", grading:"鑑定中", graded:"グレード済", listed:"出品中", sold:"売却済"};
+const STATUS_COLOR = {raw:"#9aa3ab", grading:"#ffb454", graded:"#4aa8ff", listed:"#f5c518", sold:"#39d98a"};
+
+function renderPortfolio(){
+  const positions = store.positions;
+  // パイプライン（件数＋投下資本横棒）
+  const byStatus = {};
+  STATUS_ORDER.forEach(s=>byStatus[s]={count:0, capital:0});
+  let totalInvest=0, totalUnreal=0;
+  positions.forEach(p=>{
+    const s = STATUS_ORDER.includes(p.status)? p.status : "raw";
+    const qty = num(p.qty)||1;
+    byStatus[s].count += qty;
+    byStatus[s].capital += (num(p.buyPrice)+num(p.gradeCost))*qty;
+    totalInvest += posInvested(p);
+    totalUnreal += posUnrealized(p);
+  });
+  const maxCap = Math.max(1, ...STATUS_ORDER.map(s=>byStatus[s].capital));
+  $("pipeline").innerHTML = STATUS_ORDER.map(s=>{
+    const b=byStatus[s];
+    const pct = Math.round(b.capital/maxCap*100);
+    return `<div class="pipe-row">
+      <div class="pipe-head"><span><span class="st-tag st-${s}">${STATUS_LABEL[s]}</span> <span class="cnt">${b.count}枚</span></span><span class="cnt">${yen(b.capital)}</span></div>
+      <div class="pipe-bar-wrap"><div class="pipe-bar" style="width:${pct}%;background:${STATUS_COLOR[s]}"></div></div>
+    </div>`;
+  }).join("");
+
+  $("pfInvest").textContent = yen(totalInvest);
+  const ue = $("pfUnreal");
+  ue.textContent = HAS_DATA ? signYen(totalUnreal) : "—";
+  ue.className = "n " + (totalUnreal>0?"good":totalUnreal<0?"bad":"");
+  if(!HAS_DATA){ ue.className="n"; }
+
+  // ポジション一覧（売却以外を上、売却は下・新しい順）
+  if(positions.length===0){
+    $("posList").innerHTML = `<div class="empty">ポジションを追加してください。<br>右上の「＋追加」、または ウォッチ→詳細 から登録できます。</div>`;
+    return;
+  }
+  const active = positions.filter(p=>p.status!=="sold");
+  const sold = positions.filter(p=>p.status==="sold");
+  const ordered = active.concat(sold);
+  $("posList").innerHTML = ordered.map(p=>{
+    const c = posCard(p);
+    const ue = posUnrealized(p);
+    const qty = num(p.qty)||1;
+    const ch = channelById(p.channel);
+    const metaBits = [];
+    metaBits.push(`${qty}枚`);
+    if(p.buyPrice!=null) metaBits.push(`仕入 ${yen(p.buyPrice)}`);
+    if(p.grade) metaBits.push(p.grade);
+    if(p.gradeCost) metaBits.push(`鑑定 ${yen(p.gradeCost)}`);
+    if(p.buyDate) metaBits.push(p.buyDate);
+    if(ch) metaBits.push(ch.name||ch.id);
+    const valLine = p.status==="sold"
+      ? `<div class="cev ${posNetProfit(p)>=0?'good':'bad'}">${signYen(posNetProfit(p))}</div><div class="cevlbl">純利益</div>`
+      : (HAS_DATA && c ? `<div class="cev ${ue>=0?'good':'bad'}">${signYen(ue)}</div><div class="cevlbl">含み益</div>` : "");
+    return `<div class="pos">
+      <div class="pos-top">
+        <div style="min-width:0">
+          <div class="pos-name">${escHtml(posName(p))} <span class="st-tag st-${p.status}">${STATUS_LABEL[p.status]||p.status}</span></div>
+          <div class="pos-meta">${metaBits.map(escHtml).join(" ・ ")}${p.note?`<br>${escHtml(p.note)}`:""}</div>
+        </div>
+        <div style="text-align:right;flex-shrink:0">
+          ${valLine}
+        </div>
+      </div>
+      <div class="pos-actions" style="margin-top:9px;justify-content:flex-end">
+        <button onclick="openPosForm('${escAttr(p.id)}')">編集</button>
+      </div>
+    </div>`;
+  }).join("");
+}
+
+/* =====================================================================
+   台帳画面
+   ===================================================================== */
+function ymOf(dateStr){ return dateStr ? String(dateStr).slice(0,7) : "不明"; }
+function renderLedger(){
+  // 当月予算バー（当月buyDateのΣbuyPrice ÷ monthlyBudget）
+  const now = new Date();
+  const ym = now.getFullYear()+"-"+String(now.getMonth()+1).padStart(2,"0");
+  let spent = 0;
+  store.positions.forEach(p=>{
+    if(p.buyDate && ymOf(p.buyDate)===ym) spent += num(p.buyPrice)*(num(p.qty)||1);
+  });
+  const budget = num(settings().monthlyBudget)||0;
+  const pct = budget>0 ? Math.min(200, Math.round(spent/budget*100)) : 0;
+  const over = budget>0 && spent>budget;
+  const bar = $("budgetBar");
+  bar.style.width = Math.min(100,pct)+"%";
+  bar.style.background = over ? "var(--bad)" : "linear-gradient(90deg,var(--accent),var(--accent2))";
+  $("budgetLbl").innerHTML = `${ym}：${yen(spent)} / ${yen(budget)}　<b style="color:${over?'var(--bad)':'var(--txt)'}">${pct}%</b>${over?' ⚠️ 予算超過':''}`;
+
+  // 売却明細（日付降順）
+  const sold = store.positions.filter(p=>p.status==="sold")
+    .slice().sort((a,b)=> String(b.soldDate||"").localeCompare(String(a.soldDate||"")));
+  if(sold.length===0){
+    $("ledgerList").innerHTML = `<div class="empty">売却済みのポジションがありません。<br>ポジションのステータスを「売却済」にすると、ここに純利益が集計されます。</div>`;
+    $("monthlyTable").innerHTML = `<div class="sub">売却データなし</div>`;
+    return;
+  }
+  $("ledgerList").innerHTML = sold.map(p=>{
+    const np = posNetProfit(p);
+    const ch = channelById(p.channel);
+    return `<div class="pos">
+      <div class="pos-top">
+        <div style="min-width:0">
+          <div class="pos-name">${escHtml(posName(p))}</div>
+          <div class="pos-meta">${escHtml(p.soldDate||"日付なし")} ・ ${escHtml(ch?(ch.name||ch.id):"チャネル未設定")} ・ 売 ${yen(p.soldPrice)} ・ 仕 ${yen(p.buyPrice)}${p.gradeCost?` ・ 鑑 ${yen(p.gradeCost)}`:""}</div>
+        </div>
+        <div style="text-align:right;flex-shrink:0">
+          <div class="cev ${np>=0?'good':'bad'}">${signYen(np)}</div>
+          <div class="cevlbl">純利益</div>
+        </div>
+      </div>
+    </div>`;
+  }).join("");
+
+  // 月次集計
+  const byMonth = {};
+  sold.forEach(p=>{
+    const m = ymOf(p.soldDate);
+    if(!byMonth[m]) byMonth[m]={profit:0, count:0};
+    byMonth[m].profit += posNetProfit(p);
+    byMonth[m].count += (num(p.qty)||1);
+  });
+  const months = Object.keys(byMonth).sort().reverse();
+  $("monthlyTable").innerHTML = `<table>
+    <tr><th>月</th><th>件数</th><th>純利益</th></tr>
+    ${months.map(m=>{
+      const r=byMonth[m];
+      return `<tr><td>${escHtml(m)}</td><td>${r.count}</td><td class="${r.profit>=0?'pnl-pos':'pnl-neg'}">${signYen(r.profit)}</td></tr>`;
+    }).join("")}
+  </table>`;
+}
+
+/* =====================================================================
+   設定画面
+   ===================================================================== */
+function renderSettings(){
+  // チャネル
+  $("channelSettings").innerHTML = channels().map((c,i)=>`
+    <div class="set-row">
+      <input type="text" value="${escAttr(c.name||c.id)}" style="flex:1" onchange="updateChannelName(${i}, this.value)">
+      <input type="number" step="0.1" value="${num(c.feePct)}" onchange="updateChannelFee(${i}, this.value)">
+      <button class="danger" onclick="removeChannel(${i})">✕</button>
+    </div>`).join("");
+  // 鑑定費プラン
+  $("gradingSettings").innerHTML = (settings().gradingPlans||[]).map((p,i)=>`
+    <div class="set-row">
+      <input type="text" value="${escAttr(p.name||p.id)}" style="flex:1" onchange="updateGradingName(${i}, this.value)">
+      <input type="number" step="100" value="${num(p.costPerCard)}" onchange="updateGradingCost(${i}, this.value)">
+      <button class="danger" onclick="removeGradingPlan(${i})">✕</button>
+    </div>`).join("");
+  // 予算・既定チャネル
+  $("setBudget").value = num(settings().monthlyBudget);
+  const sel = $("setDefaultChannel");
+  sel.innerHTML = channels().map(c=>`<option value="${escAttr(c.id)}" ${c.id===settings().defaultChannel?"selected":""}>${escHtml(c.name||c.id)}</option>`).join("");
+}
+function updateChannelName(i,v){ channels()[i].name=v; persist(); refreshAll(); }
+function updateChannelFee(i,v){ channels()[i].feePct=parseFloat(v)||0; persist(); refreshAll(); }
+function removeChannel(i){ if(channels().length<=1){toast("最後の1チャネルは消せません");return;} channels().splice(i,1); persist(); renderSettings(); refreshAll(); }
+function addChannel(){ const id="ch"+Date.now().toString(36); channels().push({id, name:"新チャネル", feePct:10}); persist(); renderSettings(); }
+function updateGradingName(i,v){ settings().gradingPlans[i].name=v; persist(); }
+function updateGradingCost(i,v){ settings().gradingPlans[i].costPerCard=parseFloat(v)||0; persist(); refreshAll(); }
+function removeGradingPlan(i){ const g=settings().gradingPlans; if(g.length<=1){toast("最後の1プランは消せません");return;} g.splice(i,1); persist(); renderSettings(); refreshAll(); }
+function addGradingPlan(){ settings().gradingPlans.push({id:"gp"+Date.now().toString(36), name:"新プラン", costPerCard:11990}); persist(); renderSettings(); }
+$("setBudget").addEventListener("change", e=>{ settings().monthlyBudget=parseFloat(e.target.value)||0; persist(); });
+$("setDefaultChannel").addEventListener("change", e=>{ settings().defaultChannel=e.target.value; persist(); refreshAll(); });
+
+/* =====================================================================
+   ポジション フォーム（追加・編集・削除）
+   ===================================================================== */
+let editingPosId = null;
+function fillCardSelect(selectedId){
+  const sel = $("pfCard");
+  const opts = [`<option value="">（リスト外カード）</option>`].concat(
+    CARDS.map(c=>{
+      const g = gameById(c.game);
+      const label = `${g.name}：${c.name}${c.variant?" ("+c.variant+")":""}`;
+      return `<option value="${escAttr(c.id)}" ${c.id===selectedId?"selected":""}>${escHtml(label)}</option>`;
+    })
+  );
+  sel.innerHTML = opts.join("");
+  // チャネルセレクト
+  $("pfChannel").innerHTML = `<option value="">未設定</option>` +
+    channels().map(c=>`<option value="${escAttr(c.id)}">${escHtml(c.name||c.id)}</option>`).join("");
+  toggleFreeName();
+}
+$("pfCard") && $("pfCard").addEventListener("change", toggleFreeName);
+function toggleFreeName(){
+  const isFree = $("pfCard").value==="";
+  $("pfFreeWrap").style.display = isFree ? "block" : "none";
+}
+function openPosForm(id){
+  editingPosId = id || null;
+  const isEdit = !!id;
+  $("posFormTitle").textContent = isEdit ? "ポジション編集" : "ポジション追加";
+  $("pfDeleteBtn").style.display = isEdit ? "inline-block" : "none";
+  let p;
+  if(isEdit){
+    p = store.positions.find(x=>x.id===id) || {};
+  } else {
+    p = {buyDate: todayISO(), qty:1, status:"raw", shipCost:0,
+         gradeCost: defaultGradeCost(), channel: settings().defaultChannel};
+  }
+  fillCardSelect(p.cardId||"");
+  $("pfFree").value = p.freeName||"";
+  $("pfBuyDate").value = p.buyDate||"";
+  $("pfBuyPrice").value = p.buyPrice!=null? p.buyPrice : "";
+  $("pfQty").value = p.qty!=null? p.qty : 1;
+  $("pfStatus").value = p.status||"raw";
+  $("pfGrade").value = p.grade||"";
+  $("pfGradeCost").value = p.gradeCost!=null? p.gradeCost : "";
+  $("pfChannel").value = p.channel||"";
+  $("pfFeePct").value = p.feePct!=null? p.feePct : "";
+  $("pfSoldDate").value = p.soldDate||"";
+  $("pfSoldPrice").value = p.soldPrice!=null? p.soldPrice : "";
+  $("pfShipCost").value = p.shipCost!=null? p.shipCost : 0;
+  $("pfNote").value = p.note||"";
+  toggleFreeName();
+  showTab("posform", true);
+}
+function openPosFormForCard(cardId){
+  openPosForm(null);
+  $("pfCard").value = cardId;
+  toggleFreeName();
+}
+function closePosForm(){
+  // 詳細から来たら詳細へ、それ以外は在庫へ
+  showTab(detailCardId && lastTabBeforeForm==="detail" ? "detail" : "portfolio", true);
+}
+function savePosForm(){
+  const cardId = $("pfCard").value || null;
+  const freeName = cardId ? null : ($("pfFree").value.trim()||null);
+  if(!cardId && !freeName){ toast("カードを選ぶか、リスト外カード名を入力してください"); return; }
+  const valNum = id => { const v=$(id).value; return v===""? null : (parseFloat(v)); };
+  const rec = {
+    id: editingPosId || ("pos-"+Date.now().toString(36)+Math.random().toString(36).slice(2,6)),
+    cardId, freeName,
+    buyDate: $("pfBuyDate").value||null,
+    buyPrice: valNum("pfBuyPrice"),
+    qty: valNum("pfQty") || 1,
+    status: $("pfStatus").value,
+    grade: $("pfGrade").value||null,
+    gradeCost: valNum("pfGradeCost"),
+    channel: $("pfChannel").value||null,
+    soldDate: $("pfSoldDate").value||null,
+    soldPrice: valNum("pfSoldPrice"),
+    feePct: valNum("pfFeePct"),
+    shipCost: valNum("pfShipCost") || 0,
+    note: $("pfNote").value.trim()||null
+  };
+  if(editingPosId){
+    const idx = store.positions.findIndex(x=>x.id===editingPosId);
+    if(idx>=0) store.positions[idx]=rec; else store.positions.push(rec);
+  } else {
+    store.positions.push(rec);
+  }
+  saveAndToast("保存しました");
+  refreshAll();
+  showTab("portfolio", true);
+}
+function deletePosFromForm(){
+  if(!editingPosId) return;
+  if(!confirm("このポジションを削除しますか？")) return;
+  store.positions = store.positions.filter(x=>x.id!==editingPosId);
+  saveAndToast("削除しました");
+  refreshAll();
+  showTab("portfolio", true);
+}
+function todayISO(){ const d=new Date(); return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); }
+
+/* =====================================================================
+   データ入出力（マージ方式・損益シミュレーター applyImport 流儀）
+   ===================================================================== */
+function applyImport(o){
+  if(!o || typeof o!=="object") throw new Error("対応していない形式です");
+  // settings はオブジェクトが存在する場合のみ上書き（深くマージ）
+  if(o.settings && typeof o.settings==="object"){
+    store.settings = Object.assign({}, store.settings, o.settings);
+  }
+  // positions は id 一致=上書き・新規=追加（既存を消さない）
+  if(Array.isArray(o.positions)){
+    const byId = {};
+    store.positions.forEach(p=>{ byId[p.id]=p; });
+    o.positions.forEach(p=>{ if(p && p.id) byId[p.id]=p; else if(p) byId["pos-"+Date.now().toString(36)+Math.random().toString(36).slice(2,6)]=p; });
+    store.positions = Object.values(byId);
+  }
+  if(!o.settings && !Array.isArray(o.positions)) throw new Error("settings も positions も含まれていません");
+  persist();
+  refreshAll();
+}
+function exportJSON(){
+  const blob = new Blob([JSON.stringify(store,null,2)], {type:"application/json"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "trecaInvest_"+todayISO()+".json";
+  a.click();
+  toast("JSONを書き出しました");
+}
+function importFile(e){
+  const f = e.target.files[0]; if(!f) return;
+  const r = new FileReader();
+  r.onload = ()=>{ try{ applyImport(JSON.parse(r.result)); toast("ファイルから取込みました（マージ）"); }
+    catch(err){ alert("読み込み失敗: "+err.message); } };
+  r.readAsText(f);
+  e.target.value = "";
+}
+async function copyJSON(){
+  const txt = JSON.stringify(store);
+  try{ await navigator.clipboard.writeText(txt); }
+  catch(e){ const ta=document.createElement("textarea"); ta.value=txt; document.body.appendChild(ta);
+    ta.select(); try{document.execCommand("copy");}catch(x){} ta.remove(); }
+  toast("コピーしました。別端末で『貼付取込』");
+}
+async function pasteJSON(){
+  let txt="";
+  try{ txt=await navigator.clipboard.readText(); }catch(e){}
+  if(!txt){ txt=prompt("コピーしたJSONを貼り付けてください")||""; }
+  if(!txt) return;
+  try{ applyImport(JSON.parse(txt)); toast("クリップボードから取込みました（マージ）"); }
+  catch(err){ alert("JSON解析に失敗: "+err.message); }
+}
+function resetData(){
+  if(!confirm("この端末のポジション・設定をすべて初期化します。よろしいですか？（書き出しでバックアップ推奨）")) return;
+  store = defaultStore();
+  persist();
+  refreshAll();
+  toast("初期化しました");
+}
+
+/* =====================================================================
+   タブ切替・初期化
+   ===================================================================== */
+let lastTabBeforeForm = "portfolio";
+function showTab(tab, fromAction){
+  // フォーム/詳細は遷移元を覚える
+  if(tab==="posform") lastTabBeforeForm = currentMainTab;
+  const map = {watch:"view-watch", detail:"view-detail", portfolio:"view-portfolio",
+               ledger:"view-ledger", settings:"view-settings", posform:"view-posform"};
+  Object.values(map).forEach(id=>{ const el=$(id); if(el) el.classList.remove("on"); });
+  const target = $(map[tab]); if(target) target.classList.add("on");
+  // タブバーのハイライト（メインタブのみ）
+  const mainTab = (tab==="detail") ? "watch" : (tab==="posform") ? null : tab;
+  if(mainTab) currentMainTab = mainTab;
+  document.querySelectorAll(".tab").forEach(b=>b.classList.toggle("on", b.dataset.tab===currentMainTab));
+  // 各画面の描画
+  if(tab==="watch") renderWatch();
+  else if(tab==="detail") renderDetail();
+  else if(tab==="portfolio") renderPortfolio();
+  else if(tab==="ledger") renderLedger();
+  else if(tab==="settings") renderSettings();
+  window.scrollTo(0,0);
+}
+let currentMainTab = "watch";
+
+function refreshAll(){
+  // 現在表示中のタブを再描画
+  if($("view-watch").classList.contains("on")) renderWatch();
+  if($("view-detail").classList.contains("on")) renderDetail();
+  if($("view-portfolio").classList.contains("on")) renderPortfolio();
+  if($("view-ledger").classList.contains("on")) renderLedger();
+  if($("view-settings").classList.contains("on")) renderSettings();
+}
+
+/* 反落スライダー → ウォッチ＆詳細を再計算 */
+$("decay").addEventListener("input", ()=>{
+  $("decayVal").textContent = Math.round(decay()*100)+"%";
+  if($("view-watch").classList.contains("on")) renderWatch();
+  if($("view-detail").classList.contains("on")) renderDetail();
+});
+
+/* 初期 updatedAt 表示 */
+if(HAS_DATA && DATA.updatedAt){
+  try{
+    const dt = new Date(DATA.updatedAt);
+    if(!isNaN(dt)){
+      $("updatedAt").textContent = "相場: "+(dt.getMonth()+1)+"/"+dt.getDate()+" 更新";
+    }
+  }catch(e){}
+}
+
+/* 反落の初期値（settings.decayDefault） */
+if(settings().decayDefault){ $("decay").value = settings().decayDefault; }
+
+/* 初回描画 */
+renderGameChips();
+renderWatch();
+window.addEventListener("resize", ()=>{
+  if($("view-detail").classList.contains("on")) drawSparkline(CARD_BY_ID[detailCardId], decay());
+});
+
+/* =====================================================================
+   Service Worker（オフライン化・file://では失敗を握りつぶす）
+   ===================================================================== */
+if("serviceWorker" in navigator){
+  navigator.serviceWorker.register("sw.js").catch(()=>{});
+}
+</script>
+</body>
+</html>

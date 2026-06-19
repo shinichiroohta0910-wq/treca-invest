@@ -1,0 +1,19 @@
+{
+  "name": "トレカ投資",
+  "short_name": "トレカ投資",
+  "description": "トレカ転売の在庫・期待値・売買台帳を一画面で。PSA10取得率×売価から鑑定/素体を判定し、反落シナリオまで試算",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#111315",
+  "theme_color": "#111315",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='512' height='512'%3E%3Crect width='512' height='512' rx='110' fill='%23111315'/%3E%3Ctext x='256' y='350' font-size='300' text-anchor='middle'%3E%F0%9F%93%88%3C/text%3E%3C/svg%3E",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

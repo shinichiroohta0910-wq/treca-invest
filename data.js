@@ -4,8 +4,8 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-19T17:13:35+09:00",
-  "updatedBy": "treca-scout(OP/DBFW/遊戯王): 孫悟空R FB05-053を投資候補に追加（rate10 97.46%・p10¥60k/素体¥12.7k・鑑定edge約+¥30k/枚。3ゲーム横断の本命）・2026-06-19",
+  "updatedAt": "2026-06-19T17:35:48+09:00",
+  "updatedBy": "treca-scout深掘り(3ゲーム各100位): DON熊本ルフィ(OPCD-104)を追加。p10¥175k/素体¥38k/edge+79k(保守)。BマジシャンLOCHはrate10 0%(新弾)でcert除外・2026-06-19",
   "games": [
     {
       "id": "onepiece",
@@ -3280,6 +3280,40 @@ const TRECA_DATA = {
           "src": "eBay sold(同一originfetch・対スニダン-38%=国内優位)"
         }
       }
+    },
+    {
+      "id": "op-opcd-104-755878",
+      "game": "onepiece",
+      "name": "DON!! Card 熊本/ルフィ (PCC)",
+      "number": "OPCD-104",
+      "variant": "Premium Card Collection 熊本県Special",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/OPC-TCG-2026-01-27-002-of.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/755878/used",
+        "psaPop": "https://www.psacard.com/pop/tcg-cards/2026/one-piece-japanese-premium-card-collection-kumamoto-prefecture-special/332902"
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-06-19T17:35:48+09:00",
+          "p10": 175000,
+          "p9": null,
+          "rawA": 38000,
+          "rawB": null,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": 80,
+          "currency": "JPY",
+          "src": "treca-scout(深掘り): スニダン約定(PSA10 n13中央値¥175k/素体A n43中央値¥38k・apparels/755878) / rate10=cert方式・DON複数版でset内実測70-90%→保守80%採用 / 鑑定edge約+¥79k(保守)",
+          "stale": false,
+          "alert": null
+        }
+      ],
+      "signals": {}
     }
   ]
 };

@@ -4,8 +4,8 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床{店舗名・買取価格}/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-19T18:16:18+09:00",
-  "updatedBy": "eBay需要を全58枚に完備(OPCD-098補完=58/58)。買取床/オリパは公開ソース無く該当時のみ・2026-06-19",
+  "updatedAt": "2026-06-19T18:51:27+09:00",
+  "updatedBy": "旧ウォッチ枠rate10を全数cert実測化(残5枚=ピチュー/ルフィOP05/ハンコックPRB02/クワッス/ピカMcD)。OP16ヤマト・ST17ハンコックはPSA10約定なしで取得不可・2026-06-19",
   "games": [
     {
       "id": "onepiece",
@@ -437,7 +437,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/91299",
-        "psaPop": null
+        "psaPop": "https://www.psacard.com/pop/tcg-cards/2018/pokemon-japanese-sun-moon-ultra-shiny-gx/162323"
       },
       "watch": true,
       "gradingCostDefault": 11980,
@@ -476,11 +476,11 @@ const TRECA_DATA = {
           "p9": 75250,
           "rawA": null,
           "rawB": null,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": null,
+          "pop10": 1967,
+          "popTotal": 2797,
+          "rate10": 70.33,
           "currency": "JPY",
-          "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19)",
+          "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19) / rate10=PSA POP cert方式実測(SM UltraShinyGX #229 1967/2797)",
           "stale": false,
           "alert": null
         }
@@ -756,11 +756,11 @@ const TRECA_DATA = {
           "p9": 19000,
           "rawA": 20000,
           "rawB": 17500,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": null,
+          "pop10": 47631,
+          "popTotal": 53297,
+          "rate10": 89.37,
           "currency": "JPY",
-          "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19)",
+          "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19) / rate10=PSA POP cert方式実測(SV8a #212 47631/53297)",
           "stale": false,
           "alert": null
         }
@@ -896,11 +896,11 @@ const TRECA_DATA = {
           "p9": 9800,
           "rawA": 11000,
           "rawB": 6950,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": null,
+          "pop10": 37573,
+          "popTotal": 43023,
+          "rate10": 87.33,
           "currency": "JPY",
-          "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19)",
+          "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19) / rate10=PSA POP cert方式実測(SV8a #211 37573/43023)",
           "stale": false,
           "alert": null
         }
@@ -1106,11 +1106,11 @@ const TRECA_DATA = {
           "p9": 69900,
           "rawA": 86000,
           "rawB": 65000,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": null,
+          "pop10": 25209,
+          "popTotal": 29855,
+          "rate10": 84.44,
           "currency": "JPY",
-          "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19)",
+          "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19) / rate10=PSA POP cert方式実測(SV4a #347 25209/29855)",
           "stale": false,
           "alert": null
         }
@@ -1349,7 +1349,7 @@ const TRECA_DATA = {
       "variant": "プロモ",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/111868",
-        "psaPop": null
+        "psaPop": "https://www.psacard.com/pop/tcg-cards/2022/pokemon-japanese-s-promo/206522"
       },
       "snapshots": [
         {
@@ -1386,11 +1386,11 @@ const TRECA_DATA = {
           "p9": 5300,
           "rawA": 4850,
           "rawB": 2700,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": null,
+          "pop10": 13255,
+          "popTotal": 16384,
+          "rate10": 80.9,
           "currency": "JPY",
-          "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19)",
+          "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19) / rate10=PSA POP cert方式(S-P #214 13255/16384)",
           "stale": false,
           "alert": null
         }
@@ -1419,7 +1419,7 @@ const TRECA_DATA = {
       "variant": "マクドナルド2025プロモ",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/671486",
-        "psaPop": null
+        "psaPop": "https://www.psacard.com/pop/tcg-cards/2025/pokemon-japanese-m-p-promo/312898"
       },
       "snapshots": [
         {
@@ -1456,11 +1456,11 @@ const TRECA_DATA = {
           "p9": 6000,
           "rawA": 3900,
           "rawB": 3200,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": null,
+          "pop10": 271623,
+          "popTotal": 310115,
+          "rate10": 87.59,
           "currency": "JPY",
-          "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19)",
+          "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19) / rate10=PSA POP cert方式(M-P #020 McD 271623/310115)",
           "stale": false,
           "alert": null
         }
@@ -1489,7 +1489,7 @@ const TRECA_DATA = {
       "variant": "マクドナルド2025プロモ",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/671485",
-        "psaPop": null
+        "psaPop": "https://www.psacard.com/pop/tcg-cards/2025/pokemon-japanese-m-p-promo/312898"
       },
       "snapshots": [
         {
@@ -1526,11 +1526,11 @@ const TRECA_DATA = {
           "p9": 2200,
           "rawA": 1000,
           "rawB": null,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": null,
+          "pop10": 8386,
+          "popTotal": 9704,
+          "rate10": 86.42,
           "currency": "JPY",
-          "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19)",
+          "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19) / rate10=PSA POP cert方式(M-P #019 McD 8386/9704)",
           "stale": false,
           "alert": null
         }
@@ -1559,7 +1559,7 @@ const TRECA_DATA = {
       "variant": "スカイレジェンド SR",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/104606",
-        "psaPop": null
+        "psaPop": "https://www.psacard.com/pop/tcg-cards/2019/pokemon-japanese-sun-moon-sky-legend/166859"
       },
       "snapshots": [
         {
@@ -1596,11 +1596,11 @@ const TRECA_DATA = {
           "p9": 12250,
           "rawA": 14000,
           "rawB": 8499,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": null,
+          "pop10": 480,
+          "popTotal": 1000,
+          "rate10": 48,
           "currency": "JPY",
-          "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19)",
+          "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19) / rate10=PSA POP cert方式(Sky Legend #059 480/1000)",
           "stale": false,
           "alert": null
         }
@@ -1629,7 +1629,7 @@ const TRECA_DATA = {
       "variant": "THE BEST vol.2 SR-P",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/656346",
-        "psaPop": null
+        "psaPop": "https://www.psacard.com/pop/tcg-cards/2025/one-piece-japanese-prb02-premium-booster-card-best-vol-2/311514"
       },
       "snapshots": [
         {
@@ -1666,11 +1666,11 @@ const TRECA_DATA = {
           "p9": null,
           "rawA": 8000,
           "rawB": 5000,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": null,
+          "pop10": 221,
+          "popTotal": 241,
+          "rate10": 91.7,
           "currency": "JPY",
-          "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19)",
+          "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19) / rate10=PSA POP cert方式(PRB02-017 SR-P 221/241)",
           "stale": false,
           "alert": "-29% 急落"
         }
@@ -1796,7 +1796,7 @@ const TRECA_DATA = {
           "popTotal": null,
           "rate10": null,
           "currency": "JPY",
-          "src": "約定皆無(スニダン中古に取引成立なし)→stale維持・POP=未取得",
+          "src": "約定皆無(スニダン中古に取引成立なし)→stale維持・POP=未取得 / PSA10約定なし=鑑定実績薄でrate10取得不可(2026-06-19確認)",
           "stale": true,
           "alert": null
         }
@@ -1825,7 +1825,7 @@ const TRECA_DATA = {
       "variant": "新時代の主役 L-P",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/135420",
-        "psaPop": null
+        "psaPop": "https://www.psacard.com/pop/tcg-cards/2023/one-piece-japanese-op05-awakening-new-era/247085"
       },
       "snapshots": [
         {
@@ -1862,11 +1862,11 @@ const TRECA_DATA = {
           "p9": null,
           "rawA": 11950,
           "rawB": 4800,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": null,
+          "pop10": 2285,
+          "popTotal": 2588,
+          "rate10": 88.29,
           "currency": "JPY",
-          "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19)",
+          "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19) / rate10=PSA POP cert方式(OP05-060 AltArt 2285/2588)",
           "stale": false,
           "alert": null
         }
@@ -1936,7 +1936,7 @@ const TRECA_DATA = {
           "popTotal": null,
           "rate10": null,
           "currency": "JPY",
-          "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19)",
+          "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19) / PSA10約定なし=鑑定実績薄でrate10取得不可(2026-06-19確認)",
           "stale": false,
           "alert": null
         }
@@ -1965,7 +1965,7 @@ const TRECA_DATA = {
       "variant": "プロモセット2 UC",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/157936",
-        "psaPop": null
+        "psaPop": "https://www.psacard.com/pop/tcg-cards/2022/one-piece-japanese-op02-paramount-war/223860"
       },
       "snapshots": [
         {
@@ -2002,11 +2002,11 @@ const TRECA_DATA = {
           "p9": null,
           "rawA": 29000,
           "rawB": 17000,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": null,
+          "pop10": 13,
+          "popTotal": 17,
+          "rate10": 76.47,
           "currency": "JPY",
-          "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19)",
+          "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19) / rate10=PSA POP cert方式実測(OP02-059 UC 13/17)",
           "stale": false,
           "alert": "+25% 急騰"
         }
@@ -2173,7 +2173,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/94909",
-        "psaPop": null
+        "psaPop": "https://www.psacard.com/pop/tcg-cards/2022/one-piece-japanese-25th-anniversary-premium-card-collection/266218"
       },
       "watch": true,
       "gradingCostDefault": 12770,
@@ -2212,11 +2212,11 @@ const TRECA_DATA = {
           "p9": 8888,
           "rawA": 7300,
           "rawB": 6000,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": null,
+          "pop10": 4026,
+          "popTotal": 4554,
+          "rate10": 88.41,
           "currency": "JPY",
-          "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19)",
+          "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19) / rate10=PSA POP cert方式(25th Prem #001 4026/4554)",
           "stale": false,
           "alert": null
         }

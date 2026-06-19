@@ -4,8 +4,8 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床{店舗名・買取価格}/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-19T18:51:27+09:00",
-  "updatedBy": "旧ウォッチ枠rate10を全数cert実測化(残5枚=ピチュー/ルフィOP05/ハンコックPRB02/クワッス/ピカMcD)。OP16ヤマト・ST17ハンコックはPSA10約定なしで取得不可・2026-06-19",
+  "updatedAt": "2026-06-20T07:33:06+09:00",
+  "updatedBy": "価格レイヤー全58枚をスニダン約定値で再取得(med3・実売ask不使用)。POP/rate10・signals.ebayは前回(6/19)継承。買取床(signals.buyback)はスニダン非提供で未取得。treca-market-update 2026-06-20",
   "games": [
     {
       "id": "onepiece",
@@ -119,6 +119,20 @@ const TRECA_DATA = {
           "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=PSA(846/979→rate10 86.41%) (treca-market-update 2026-06-19)",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 215000,
+          "p9": null,
+          "rawA": 72000,
+          "rawB": 52000,
+          "pop10": 846,
+          "popTotal": 979,
+          "rate10": 86.41,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n8)直近215000。rawA med3(n11)72000/rawB 52000｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
+          "stale": false,
+          "alert": null
         }
       ],
       "signals": {
@@ -217,6 +231,20 @@ const TRECA_DATA = {
           "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=PSA(1280/1336→rate10 95.81%) (treca-market-update 2026-06-19)",
           "stale": false,
           "alert": "+24% 急騰"
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 89000,
+          "p9": null,
+          "rawA": 24000,
+          "rawB": 13000,
+          "pop10": 1280,
+          "popTotal": 1336,
+          "rate10": 95.81,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n4)直近89000=110500から▲19.5%軟化。rawA 24000/rawB 13000｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
+          "stale": false,
+          "alert": "▲19% 軟化"
         }
       ],
       "signals": {
@@ -315,6 +343,20 @@ const TRECA_DATA = {
           "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=PSA(455/517→rate10 88.01%) (treca-market-update 2026-06-19)",
           "stale": false,
           "alert": "-45% 急落"
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 67000,
+          "p9": null,
+          "rawA": 8500,
+          "rawB": 3150,
+          "pop10": 455,
+          "popTotal": 517,
+          "rate10": 88.01,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 n=4・160000は外れ値除外しクリーン約定66-77kの中央値67000(前回55400・薄商い)。rawA 8500/rawB 3150｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
+          "stale": false,
+          "alert": "薄商い"
         }
       ],
       "signals": {
@@ -413,6 +455,20 @@ const TRECA_DATA = {
           "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=PSA(735/751→rate10 97.87%) (treca-market-update 2026-06-19)",
           "stale": false,
           "alert": "-44% 急落"
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 35000,
+          "p9": null,
+          "rawA": 4500,
+          "rawB": 1000,
+          "pop10": 735,
+          "popTotal": 751,
+          "rate10": 97.87,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 29k-53k分散大・最新6/11→5件中央値35000(前回27000・薄商い要注視)。rawA 4500(32500外れ除外)/rawB 1000｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
+          "stale": false,
+          "alert": "薄商い"
         }
       ],
       "signals": {
@@ -481,6 +537,20 @@ const TRECA_DATA = {
           "rate10": 70.33,
           "currency": "JPY",
           "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19) / rate10=PSA POP cert方式実測(SM UltraShinyGX #229 1967/2797)",
+          "stale": false,
+          "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 217000,
+          "p9": 85000,
+          "rawA": null,
+          "rawB": null,
+          "pop10": 1967,
+          "popTotal": 2797,
+          "rate10": 70.33,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n18) 直近209980,18万~22万。P9薄1件85000(05/18)。raw約定なし｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
           "stale": false,
           "alert": null
         }
@@ -553,6 +623,20 @@ const TRECA_DATA = {
           "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=旧値据置(登録URLがbase-setのみ等) (treca-market-update 2026-06-19)",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 56500,
+          "p9": 13800,
+          "rawA": 16000,
+          "rawB": null,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": 60,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n14)56500横ばい高流動。P9 13800/rawA 16000｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
+          "stale": false,
+          "alert": null
         }
       ],
       "signals": {
@@ -621,6 +705,20 @@ const TRECA_DATA = {
           "rate10": 49.87,
           "currency": "JPY",
           "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=PSA(17777/35646→rate10 49.87%) (treca-market-update 2026-06-19)",
+          "stale": false,
+          "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 77100,
+          "p9": 46600,
+          "rawA": 33000,
+          "rawB": 24000,
+          "pop10": 17777,
+          "popTotal": 35646,
+          "rate10": 49.87,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n9)77100 横ばい。P9分散24000-46666 med3 46600。rawA 33000/rawB 24000｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
           "stale": false,
           "alert": null
         }
@@ -693,6 +791,20 @@ const TRECA_DATA = {
           "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=PSA(16477/18234→rate10 90.36%) (treca-market-update 2026-06-19)",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 60800,
+          "p9": null,
+          "rawA": 33500,
+          "rawB": 27000,
+          "pop10": 16477,
+          "popTotal": 18234,
+          "rate10": 90.36,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n15)60800(▲5%)高流動。rawA 33500/rawB 27000｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
+          "stale": false,
+          "alert": null
         }
       ],
       "signals": {
@@ -761,6 +873,20 @@ const TRECA_DATA = {
           "rate10": 89.37,
           "currency": "JPY",
           "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19) / rate10=PSA POP cert方式実測(SV8a #212 47631/53297)",
+          "stale": false,
+          "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 36500,
+          "p9": 19000,
+          "rawA": 20000,
+          "rawB": 17999,
+          "pop10": 47631,
+          "popTotal": 53297,
+          "rate10": 89.37,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n19)36500横ばい高流動。rawB 17999(rawA約定なし)｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
           "stale": false,
           "alert": null
         }
@@ -833,6 +959,20 @@ const TRECA_DATA = {
           "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=PSA(5232/5950→rate10 87.93%) (treca-market-update 2026-06-19)",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 20700,
+          "p9": 9000,
+          "rawA": 8500,
+          "rawB": 6500,
+          "pop10": 5232,
+          "popTotal": 5950,
+          "rate10": 87.93,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n12)20700横ばい高流動。rawA 8500/rawB 6500｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
+          "stale": false,
+          "alert": null
         }
       ],
       "signals": {
@@ -901,6 +1041,20 @@ const TRECA_DATA = {
           "rate10": 87.33,
           "currency": "JPY",
           "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19) / rate10=PSA POP cert方式実測(SV8a #211 37573/43023)",
+          "stale": false,
+          "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 22999,
+          "p9": 9800,
+          "rawA": 12000,
+          "rawB": 6950,
+          "pop10": 37573,
+          "popTotal": 43023,
+          "rate10": 87.33,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n13)22999横ばい。P9 9800/rawA 12000｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
           "stale": false,
           "alert": null
         }
@@ -973,6 +1127,20 @@ const TRECA_DATA = {
           "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=PSA(2739/4427→rate10 61.87%) (treca-market-update 2026-06-19)",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 16900,
+          "p9": 4200,
+          "rawA": 3800,
+          "rawB": 3750,
+          "pop10": 2739,
+          "popTotal": 4427,
+          "rate10": 61.87,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n9)16900横ばい。P9 4200/rawA 3800/rawB 3750｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
+          "stale": false,
+          "alert": null
         }
       ],
       "signals": {
@@ -1041,6 +1209,20 @@ const TRECA_DATA = {
           "rate10": 84.11,
           "currency": "JPY",
           "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=PSA(17091/20321→rate10 84.11%) (treca-market-update 2026-06-19)",
+          "stale": false,
+          "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 98500,
+          "p9": 40000,
+          "rawA": 56999,
+          "rawB": null,
+          "pop10": 17091,
+          "popTotal": 20321,
+          "rate10": 84.11,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n14)98500 横ばい。rawA 56999｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
           "stale": false,
           "alert": null
         }
@@ -1113,6 +1295,20 @@ const TRECA_DATA = {
           "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19) / rate10=PSA POP cert方式実測(SV4a #347 25209/29855)",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 140000,
+          "p9": 71500,
+          "rawA": 88000,
+          "rawB": 66000,
+          "pop10": 25209,
+          "popTotal": 29855,
+          "rate10": 84.44,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n15)直近140000。P9 71500/rawA 88000/rawB 66000｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
+          "stale": false,
+          "alert": null
         }
       ],
       "signals": {
@@ -1181,6 +1377,20 @@ const TRECA_DATA = {
           "rate10": 91.86,
           "currency": "JPY",
           "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=PSA(9077/9881→rate10 91.86%) (treca-market-update 2026-06-19)",
+          "stale": false,
+          "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 12000,
+          "p9": 4500,
+          "rawA": 1200,
+          "rawB": 1000,
+          "pop10": 9077,
+          "popTotal": 9881,
+          "rate10": 91.86,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n13)12000(▲11%)。P9 4500/rawA 1200｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
           "stale": false,
           "alert": null
         }
@@ -1253,6 +1463,20 @@ const TRECA_DATA = {
           "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=PSA(7906/8660→rate10 91.29%) (treca-market-update 2026-06-19)",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 9300,
+          "p9": null,
+          "rawA": 1000,
+          "rawB": 1000,
+          "pop10": 7906,
+          "popTotal": 8660,
+          "rate10": 91.29,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n18)9300(▲8%)(66000外れ除外)。rawA/B 1000｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
+          "stale": false,
+          "alert": null
         }
       ],
       "signals": {
@@ -1321,6 +1545,20 @@ const TRECA_DATA = {
           "rate10": 91.06,
           "currency": "JPY",
           "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=PSA(6337/6959→rate10 91.06%) (treca-market-update 2026-06-19)",
+          "stale": false,
+          "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 7299,
+          "p9": null,
+          "rawA": 1000,
+          "rawB": 2000,
+          "pop10": 6337,
+          "popTotal": 6959,
+          "rate10": 91.06,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n19)7299(▲6%)高流動。rawA 1000｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
           "stale": false,
           "alert": null
         }
@@ -1393,6 +1631,20 @@ const TRECA_DATA = {
           "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19) / rate10=PSA POP cert方式(S-P #214 13255/16384)",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 16000,
+          "p9": 5300,
+          "rawA": 4999,
+          "rawB": 2700,
+          "pop10": 13255,
+          "popTotal": 16384,
+          "rate10": 80.9,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n6)16000横ばい(61480外れ除外)。P9 5300/rawA 4999/rawB 2700｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
+          "stale": false,
+          "alert": null
         }
       ],
       "signals": {
@@ -1461,6 +1713,20 @@ const TRECA_DATA = {
           "rate10": 87.59,
           "currency": "JPY",
           "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19) / rate10=PSA POP cert方式(M-P #020 McD 271623/310115)",
+          "stale": false,
+          "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 14800,
+          "p9": 6000,
+          "rawA": 3500,
+          "rawB": 3200,
+          "pop10": 271623,
+          "popTotal": 310115,
+          "rate10": 87.59,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n18)14800横ばい(28999/153000外れ除外)。rawA 3500(n1薄)｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
           "stale": false,
           "alert": null
         }
@@ -1533,6 +1799,20 @@ const TRECA_DATA = {
           "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19) / rate10=PSA POP cert方式(M-P #019 McD 8386/9704)",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 7000,
+          "p9": 2999,
+          "rawA": 1000,
+          "rawB": null,
+          "pop10": 8386,
+          "popTotal": 9704,
+          "rate10": 86.42,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n18)7000(+17%)高流動。P9 2999/rawA 1000｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
+          "stale": false,
+          "alert": "+17% 上昇"
         }
       ],
       "signals": {
@@ -1601,6 +1881,20 @@ const TRECA_DATA = {
           "rate10": 48,
           "currency": "JPY",
           "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19) / rate10=PSA POP cert方式(Sky Legend #059 480/1000)",
+          "stale": false,
+          "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 62000,
+          "p9": 11000,
+          "rawA": 15000,
+          "rawB": 11000,
+          "pop10": 480,
+          "popTotal": 1000,
+          "rate10": 48,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n11)62000(▲6%)・最新約定6/12で薄商い。P9 11000(n5新鮮)｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
           "stale": false,
           "alert": null
         }
@@ -1673,6 +1967,20 @@ const TRECA_DATA = {
           "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19) / rate10=PSA POP cert方式(PRB02-017 SR-P 221/241)",
           "stale": false,
           "alert": "-29% 急落"
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 75000,
+          "p9": null,
+          "rawA": 11111,
+          "rawB": 5800,
+          "pop10": 221,
+          "popTotal": 241,
+          "rate10": 91.7,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 n=2のみ[85000(1日前),65000]→中央値75000(前回60000・薄商い低信頼)。rawA 11111(n16)/rawB 5800｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
+          "stale": false,
+          "alert": "薄商い"
         }
       ],
       "signals": {
@@ -1741,6 +2049,20 @@ const TRECA_DATA = {
           "rate10": 85.39,
           "currency": "JPY",
           "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=PSA(12088/14156→rate10 85.39%) (treca-market-update 2026-06-19)",
+          "stale": false,
+          "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 49800,
+          "p9": null,
+          "rawA": 14700,
+          "rawB": 7999,
+          "pop10": 12088,
+          "popTotal": 14156,
+          "rate10": 85.39,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n6)49800(▲8%)高流動。rawA 14700/rawB 7999｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
           "stale": false,
           "alert": null
         }
@@ -1869,6 +2191,20 @@ const TRECA_DATA = {
           "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19) / rate10=PSA POP cert方式(OP05-060 AltArt 2285/2588)",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 42500,
+          "p9": null,
+          "rawA": 12000,
+          "rawB": 4700,
+          "pop10": 2285,
+          "popTotal": 2588,
+          "rate10": 88.29,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n3)42500(▲12%)。rawA 12000/rawB 4700｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
+          "stale": false,
+          "alert": null
         }
       ],
       "signals": {
@@ -1937,6 +2273,20 @@ const TRECA_DATA = {
           "rate10": null,
           "currency": "JPY",
           "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19) / PSA10約定なし=鑑定実績薄でrate10取得不可(2026-06-19確認)",
+          "stale": false,
+          "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": null,
+          "p9": null,
+          "rawA": 1000,
+          "rawB": null,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": null,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): PSA10約定なし継続。rawA 1000(n3・最新5/25)。グレード非適格・素体安｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
           "stale": false,
           "alert": null
         }
@@ -2009,6 +2359,20 @@ const TRECA_DATA = {
           "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19) / rate10=PSA POP cert方式実測(OP02-059 UC 13/17)",
           "stale": false,
           "alert": "+25% 急騰"
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 76800,
+          "p9": null,
+          "rawA": 28000,
+          "rawB": 17000,
+          "pop10": 13,
+          "popTotal": 17,
+          "rate10": 76.47,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 直近2件75000/76800(2日前)一致→med3 76800=94900から▲19%。やや前は12-13万で分散大・軟化局面。rawA 28000｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
+          "stale": false,
+          "alert": "▲19% 軟化"
         }
       ],
       "signals": {
@@ -2077,6 +2441,20 @@ const TRECA_DATA = {
           "rate10": 83.5,
           "currency": "JPY",
           "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=旧値据置(登録URLがbase-setのみ等) (treca-market-update 2026-06-19)",
+          "stale": false,
+          "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 50500,
+          "p9": 18000,
+          "rawA": 17500,
+          "rawB": null,
+          "pop10": 20747,
+          "popTotal": 24850,
+          "rate10": 83.5,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n18)50500横ばい高流動。rawA 17500｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
           "stale": false,
           "alert": null
         }
@@ -2149,6 +2527,20 @@ const TRECA_DATA = {
           "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=PSA(6353/8416→rate10 75.49%) (treca-market-update 2026-06-19)",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 75000,
+          "p9": 21750,
+          "rawA": 21000,
+          "rawB": 9500,
+          "pop10": 6353,
+          "popTotal": 8416,
+          "rate10": 75.49,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n7)75000(▲3%)。P9 21750/rawA 21000｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
+          "stale": false,
+          "alert": null
         }
       ],
       "signals": {
@@ -2217,6 +2609,20 @@ const TRECA_DATA = {
           "rate10": 88.41,
           "currency": "JPY",
           "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=未取得 (treca-market-update 2026-06-19) / rate10=PSA POP cert方式(25th Prem #001 4026/4554)",
+          "stale": false,
+          "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 39000,
+          "p9": 8888,
+          "rawA": 9999,
+          "rawB": 6000,
+          "pop10": 4026,
+          "popTotal": 4554,
+          "rate10": 88.41,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n14)39000横ばい(156000外れ除外)。rawA 9999｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
           "stale": false,
           "alert": null
         }
@@ -2289,6 +2695,20 @@ const TRECA_DATA = {
           "src": "価格=スニダン約定値の直近トリム中央値(外れ値・グレード誤登録除外/ask不使用) / POP=PSA(4705/5462→rate10 86.14%) (treca-market-update 2026-06-19)",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 105000,
+          "p9": 29750,
+          "rawA": 41000,
+          "rawB": 35900,
+          "pop10": 4705,
+          "popTotal": 5462,
+          "rate10": 86.14,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n13)105000(+2%)高流動。P9 29750/rawA 41000/rawB 35900｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
+          "stale": false,
+          "alert": null
         }
       ],
       "signals": {
@@ -2330,6 +2750,20 @@ const TRECA_DATA = {
           "rate10": 95.81,
           "currency": "JPY",
           "src": "価格=スニダン直近3約定中央値(素体n41/PSA10n31・最新06-19・最安出品P10 ¥200,000・ask不使用) / PSA POP実測 95.81% (g10=160/total=167・cert経由DBS FW Manga Booster02) / 投資候補(treca-discovery 2026-06-19)",
+          "stale": false,
+          "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 198000,
+          "p9": null,
+          "rawA": 63000,
+          "rawB": 39000,
+          "pop10": 160,
+          "popTotal": 167,
+          "rate10": 95.81,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n3)198000(+4%)(250000外れ除外)。rawA 63000/rawB 39000｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
           "stale": false,
           "alert": null
         }
@@ -2375,6 +2809,20 @@ const TRECA_DATA = {
           "src": "価格=スニダン直近3約定中央値(素体n8/PSA10n31・最新06-19・最安出品P10 ¥148,000・ask不使用) / PSA POP実測 95.81% (g10=160/total=167・同FB06-119(Manga Booster02)) / 投資候補(treca-discovery 2026-06-19)",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 110000,
+          "p9": null,
+          "rawA": 48000,
+          "rawB": null,
+          "pop10": 160,
+          "popTotal": 167,
+          "rate10": 95.81,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n19)110000横ばい高流動。rawA 48000｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
+          "stale": false,
+          "alert": null
         }
       ],
       "signals": {
@@ -2416,6 +2864,20 @@ const TRECA_DATA = {
           "rate10": 71.01,
           "currency": "JPY",
           "src": "価格=スニダン直近3約定中央値(素体n8/PSA10n36・最新06-19・最安出品P10 ¥118,499・ask不使用) / PSA POP実測 71.01% (g10=3914/total=5512・One Piece Day24) / 投資候補(treca-discovery 2026-06-19)",
+          "stale": false,
+          "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 115000,
+          "p9": 38300,
+          "rawA": 64700,
+          "rawB": 25000,
+          "pop10": 3914,
+          "popTotal": 5512,
+          "rate10": 71.01,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n15)115000(+5%)高流動。P9 38300/rawA 64700｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
           "stale": false,
           "alert": null
         }
@@ -2461,6 +2923,20 @@ const TRECA_DATA = {
           "src": "価格=スニダン直近3約定中央値(素体n15/PSA10n26・最新06-19・最安出品P10 ¥78,999・ask不使用) / PSA POP実測 90.53% (g10=3843/total=4245・Official Event Prize) / 投資候補(treca-discovery 2026-06-19)",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 76500,
+          "p9": null,
+          "rawA": 38800,
+          "rawB": 28000,
+          "pop10": 3843,
+          "popTotal": 4245,
+          "rate10": 90.53,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n15)76500=前回90000から▲15%・直近約定76-77kで一貫。rawA 38800/rawB 28000｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
+          "stale": false,
+          "alert": "▲15% 軟化"
         }
       ],
       "signals": {
@@ -2502,6 +2978,20 @@ const TRECA_DATA = {
           "rate10": 83.75,
           "currency": "JPY",
           "src": "価格=スニダン直近3約定中央値(素体n43/PSA10n13・最新06-19・最安出品P10 ¥49,800・ask不使用) / PSA POP実測 83.75% (g10=299/total=357・OP 3rd Anv Complete Guide) / 投資候補(treca-discovery 2026-06-19)",
+          "stale": false,
+          "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 49000,
+          "p9": null,
+          "rawA": 6000,
+          "rawB": null,
+          "pop10": 299,
+          "popTotal": 357,
+          "rate10": 83.75,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n6)49000(▲7%)。rawA 6000(n13)｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
           "stale": false,
           "alert": null
         }
@@ -2547,6 +3037,20 @@ const TRECA_DATA = {
           "src": "価格=スニダン直近3約定中央値(素体n7/PSA10n38・最新06-19・最安出品P10 ¥61,999・ask不使用) / PSA POP実測 53.7% (g10=2515/total=4683・M3 Nullifying Zero・新弾センタリング難) / 投資候補(treca-discovery 2026-06-19)",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 60999,
+          "p9": 16000,
+          "rawA": 15000,
+          "rawB": 16000,
+          "pop10": 2515,
+          "popTotal": 4683,
+          "rate10": 53.7,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n14)60999横ばい。P9 16000/rawA 15000｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
+          "stale": false,
+          "alert": null
         }
       ],
       "signals": {
@@ -2588,6 +3092,20 @@ const TRECA_DATA = {
           "rate10": 90.44,
           "currency": "JPY",
           "src": "価格=スニダン直近3約定中央値(素体n26/PSA10n8・最新06-18・最安出品P10 ¥42,999・ask不使用) / PSA POP実測 90.44% (g10=1571/total=1737・OP02 Box Topper) / 投資候補(treca-discovery 2026-06-19)",
+          "stale": false,
+          "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 42000,
+          "p9": null,
+          "rawA": 4400,
+          "rawB": 1980,
+          "pop10": 1571,
+          "popTotal": 1737,
+          "rate10": 90.44,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n7)42000(▲6%)。rawA 4400/rawB 1980｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
           "stale": false,
           "alert": null
         }
@@ -2633,6 +3151,20 @@ const TRECA_DATA = {
           "src": "価格=スニダン直近3約定中央値(素体n3/PSA10n51・最新06-19・最安出品P10 ¥107,500・ask不使用) / PSA POP実測 88.6% / 投資候補(treca-discovery 2026-06-19)",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 107000,
+          "p9": 54222,
+          "rawA": 60000,
+          "rawB": 45000,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": 88.6,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n14)107000横ばい高流動。rawA 60000｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
+          "stale": false,
+          "alert": null
         }
       ],
       "signals": {
@@ -2674,6 +3206,20 @@ const TRECA_DATA = {
           "rate10": 93.1,
           "currency": "JPY",
           "src": "価格=スニダン直近3約定中央値(素体n7/PSA10n56・最新06-19・最安出品P10 ¥64,000・ask不使用) / PSA POP実測 93.1% (g10=54/total=58・Energy Marker Pack01) / 投資候補(treca-discovery 2026-06-19)",
+          "stale": false,
+          "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 62500,
+          "p9": null,
+          "rawA": 25000,
+          "rawB": null,
+          "pop10": 54,
+          "popTotal": 58,
+          "rate10": 93.1,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n16)62500(▲5%)高流動。rawA 25000｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
           "stale": false,
           "alert": null
         }
@@ -2719,6 +3265,20 @@ const TRECA_DATA = {
           "src": "価格=スニダン直近3約定中央値(素体n3/PSA10n48・最新06-19・最安出品P10 ¥70,500・ask不使用) / PSA POP実測 94.14% (g10=13799/total=14658・OP PCC Day25) / 投資候補(treca-discovery 2026-06-19)",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 74500,
+          "p9": null,
+          "rawA": 29500,
+          "rawB": 23999,
+          "pop10": 13799,
+          "popTotal": 14658,
+          "rate10": 94.14,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n18)74500(+6%)高流動。raw約定なし｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
+          "stale": false,
+          "alert": null
         }
       ],
       "signals": {
@@ -2760,6 +3320,20 @@ const TRECA_DATA = {
           "rate10": 88.94,
           "currency": "JPY",
           "src": "価格=スニダン直近3約定中央値(素体n33/PSA10n6・最新06-19・最安出品P10 ¥35,000・ask不使用) / PSA POP実測 88.94%(one-piece-promos 7-Eleven版) / 投資候補(treca-discovery 2026-06-19)",
+          "stale": false,
+          "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 39000,
+          "p9": null,
+          "rawA": 3200,
+          "rawB": null,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": 88.94,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 直近クリーン2件38000/39999(4100外れ除外)→39000横ばい。rawA 3200｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
           "stale": false,
           "alert": null
         }
@@ -2805,6 +3379,20 @@ const TRECA_DATA = {
           "src": "価格=スニダン直近3約定中央値(素体n10/PSA10n29・最新06-19・最安出品P10 ¥93,799・ask不使用) / PSA POP実測 86.4% / 投資候補(treca-discovery 2026-06-19)",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 93000,
+          "p9": 40000,
+          "rawA": 55000,
+          "rawB": null,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": 86.4,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n16)93000横ばい高流動(直近17分前)。rawA 55000｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
+          "stale": false,
+          "alert": null
         }
       ],
       "signals": {
@@ -2846,6 +3434,20 @@ const TRECA_DATA = {
           "rate10": 84.63,
           "currency": "JPY",
           "src": "価格=スニダン直近3約定中央値(素体n4/PSA10n41・最新06-19・最安出品P10 ¥117,000・ask不使用) / PSA POP実測 84.63% (g10=36145/total=42711) / 投資候補(treca-discovery 2026-06-19)",
+          "stale": false,
+          "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 120000,
+          "p9": 64250,
+          "rawA": 79000,
+          "rawB": 65000,
+          "pop10": 36145,
+          "popTotal": 42711,
+          "rate10": 84.63,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n17)120000横ばい高流動。P9 64250。raw約定なし(151リザは皆グレード)｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
           "stale": false,
           "alert": null
         }
@@ -2891,6 +3493,20 @@ const TRECA_DATA = {
           "src": "価格=スニダン直近3約定中央値(素体n13/PSA10n40・最新06-19・最安出品P10 ¥109,900・ask不使用) / PSA POP実測 92.83% (g10=1682/total=1812・OP Heroines SP Set-Gold) / 投資候補(treca-discovery 2026-06-19)",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 98000,
+          "p9": 35000,
+          "rawA": 45000,
+          "rawB": 40000,
+          "pop10": 1682,
+          "popTotal": 1812,
+          "rate10": 92.83,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n16)98000=前回79000から+24%・直近約定92-98kで一貫。rawA 45000｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
+          "stale": false,
+          "alert": "+24% 上昇"
         }
       ],
       "signals": {
@@ -2934,6 +3550,20 @@ const TRECA_DATA = {
           "src": "価格=スニダン直近3約定中央値(素体n21/PSA10n44・最新06-19・最安出品P10 ¥64,400・ask不使用) / PSA POP実測 96.49% (g10=385/total=399・Awakened Pulse) / 投資候補(treca-discovery 2026-06-19)",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 65000,
+          "p9": 15800,
+          "rawA": 10000,
+          "rawB": null,
+          "pop10": 385,
+          "popTotal": 399,
+          "rate10": 96.49,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n6)65000=前回40000から+63%・直近約定63999-65000で一貫。rawA 10000｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
+          "stale": false,
+          "alert": "⚠️+63% 要確認"
         }
       ],
       "signals": {
@@ -2975,6 +3605,20 @@ const TRECA_DATA = {
           "rate10": 91.4,
           "currency": "JPY",
           "src": "価格=スニダン直近3約定中央値(素体n8/PSA10n46・最新06-19・最安出品P10 ¥55,555・ask不使用) / PSA POP実測 91.4% (g10=34269/total=37494・OP magazine Vol.20) / 投資候補(treca-discovery 2026-06-19)",
+          "stale": false,
+          "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 55000,
+          "p9": 23800,
+          "rawA": 25999,
+          "rawB": 19000,
+          "pop10": 34269,
+          "popTotal": 37494,
+          "rate10": 91.4,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n19)55000横ばい高流動(全約定55000で極安定)。rawA約定124444は外れ値で不採用｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
           "stale": false,
           "alert": null
         }
@@ -3020,6 +3664,20 @@ const TRECA_DATA = {
           "src": "価格=スニダン直近3約定中央値(素体n1/PSA10n62・最新06-19・最安出品P10 ¥71,299・ask不使用) / PSA POP実測 94.66% (g10=6882/total=7270・M4 Ninja Spinner) / 素体約定が薄い(n1)＝買い集め注意 / 投資候補(treca-discovery拡張 2026-06-19)",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 70500,
+          "p9": null,
+          "rawA": 41000,
+          "rawB": 29999,
+          "pop10": 6882,
+          "popTotal": 7270,
+          "rate10": 94.66,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n14)70500横ばい高流動。rawA 41000/rawB 29999｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
+          "stale": false,
+          "alert": null
         }
       ],
       "signals": {
@@ -3061,6 +3719,20 @@ const TRECA_DATA = {
           "rate10": 83.14,
           "currency": "JPY",
           "src": "価格=スニダン直近3約定中央値(素体n2/PSA10n45・最新06-19・最安出品P10 ¥106,800・ask不使用) / PSA POP実測 83.14% (g10=11052/total=13294・SV10 Glory of Team Rocket) / 素体約定が薄い(n2)＝買い集め注意 / 投資候補(treca-discovery拡張 2026-06-19)",
+          "stale": false,
+          "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 106900,
+          "p9": 59800,
+          "rawA": 69999,
+          "rawB": 57000,
+          "pop10": 11052,
+          "popTotal": 13294,
+          "rate10": 83.14,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n14)106900横ばい。P9 59800/rawA 69999/rawB 57000｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
           "stale": false,
           "alert": null
         }
@@ -3106,6 +3778,20 @@ const TRECA_DATA = {
           "src": "価格=スニダン直近3約定中央値(素体n1/PSA10n52・最新06-19・最安出品P10 ¥102,000・ask不使用) / PSA POP実測 87.11% (g10=74331/total=85328) / 素体約定が薄い(n1)＝買い集め注意 / 投資候補(treca-discovery拡張 2026-06-19)",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 102000,
+          "p9": null,
+          "rawA": 67000,
+          "rawB": 57000,
+          "pop10": 74331,
+          "popTotal": 85328,
+          "rate10": 87.11,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n20)102000横ばい高流動。raw約定なし｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
+          "stale": false,
+          "alert": null
         }
       ],
       "signals": {
@@ -3147,6 +3833,20 @@ const TRECA_DATA = {
           "rate10": 86.49,
           "currency": "JPY",
           "src": "価格=スニダン直近3約定中央値(素体n5/PSA10n15・最新06-18・最安出品P10 ¥44,900・ask不使用) / PSA POP実測 86.49% (g10=493/total=570・YG QCAC 6th TCG Artwork QCSCR) / 投資候補(treca-discovery拡張 2026-06-19)",
+          "stale": false,
+          "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 39000,
+          "p9": null,
+          "rawA": 8750,
+          "rawB": 7000,
+          "pop10": 493,
+          "popTotal": 570,
+          "rate10": 86.49,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n16)39000横ばい高流動。rawA 8750｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
           "stale": false,
           "alert": null
         }
@@ -3192,6 +3892,20 @@ const TRECA_DATA = {
           "src": "価格=スニダン直近3約定中央値(素体n46/PSA10n29・最新06-19・最安出品P10 ¥264,000・ask不使用) / PSA POP実測 80.09% (g10=559/total=698・YG Nikeコラボ NKC1-EN002) / 投資候補(treca-discovery拡張 2026-06-19)",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 269800,
+          "p9": 84000,
+          "rawA": 145000,
+          "rawB": 87500,
+          "pop10": 559,
+          "popTotal": 698,
+          "rate10": 80.09,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n10)269800=前回175000から+54%。直近約定254k-273kで一貫(n10)＝前回値が低すぎた可能性。rawA 145000｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
+          "stale": false,
+          "alert": "⚠️+54% 要確認"
         }
       ],
       "signals": {
@@ -3233,6 +3947,20 @@ const TRECA_DATA = {
           "rate10": 90.49,
           "currency": "JPY",
           "src": "treca-scout: スニダン約定(直近3中央値 PSA10 n27/素体A n12・apparels/722239) / rate10=PSA POP cert方式(M2a #223 main g10=30977/34231)",
+          "stale": false,
+          "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 24800,
+          "p9": null,
+          "rawA": 7250,
+          "rawB": 5100,
+          "pop10": 30977,
+          "popTotal": 34231,
+          "rate10": 90.49,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n15)24800(▲5%)高流動。rawA 7250/rawB 5100｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
           "stale": false,
           "alert": null
         }
@@ -3278,6 +4006,20 @@ const TRECA_DATA = {
           "src": "treca-scout: スニダン約定(直近3中央値 PSA10 n19/素体A n30・apparels/595511) / rate10=PSA POP cert方式(FB05-053 g10=1303/1337) / 鑑定edge約+¥30k",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 58000,
+          "p9": null,
+          "rawA": 13000,
+          "rawB": null,
+          "pop10": 1303,
+          "popTotal": 1337,
+          "rate10": 97.46,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n8)58000(▲3%)。rawA 13000(n12)｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
+          "stale": false,
+          "alert": null
         }
       ],
       "signals": {
@@ -3319,6 +4061,20 @@ const TRECA_DATA = {
           "rate10": 80,
           "currency": "JPY",
           "src": "treca-scout(深掘り): スニダン約定(PSA10 n13中央値¥175k/素体A n43中央値¥38k・apparels/755878) / rate10=cert方式・DON複数版でset内実測70-90%→保守80%採用 / 鑑定edge約+¥79k(保守)",
+          "stale": false,
+          "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 175000,
+          "p9": null,
+          "rawA": 38000,
+          "rawB": null,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": 80,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n3)175000横ばい(200000外れ除外)。rawA 38000(n16高流動)｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
           "stale": false,
           "alert": null
         }
@@ -3364,6 +4120,20 @@ const TRECA_DATA = {
           "src": "treca-scout深掘り: スニダン約定(PSA10 n57/素体A n22) / rate10=cert方式(TD02-JP001 1129/1395) / 鑑定edge約+¥34k",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 130000,
+          "p9": null,
+          "rawA": 50000,
+          "rawB": 35000,
+          "pop10": 1129,
+          "popTotal": 1395,
+          "rate10": 80.93,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n8)130000横ばい。rawA 50000/rawB 35000｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
+          "stale": false,
+          "alert": null
         }
       ],
       "signals": {
@@ -3407,6 +4177,20 @@ const TRECA_DATA = {
           "src": "treca-scout深掘り: スニダン約定(PSA10 n34/素体A n8) / rate10=cert方式(2023 OP promo #001 Weekly Shonen Jump 1971/2262) / 鑑定edge約+¥38k",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 128000,
+          "p9": null,
+          "rawA": 53000,
+          "rawB": null,
+          "pop10": 1971,
+          "popTotal": 2262,
+          "rate10": 87.14,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n15)128000横ばい高流動。rawA 53000｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
+          "stale": false,
+          "alert": null
         }
       ],
       "signals": {
@@ -3448,6 +4232,20 @@ const TRECA_DATA = {
           "rate10": 80.65,
           "currency": "JPY",
           "src": "treca-scout深掘り: スニダン約定(PSA10直近3中央値¥145k[130/145/160k] n17/素体A¥37.5k n40) / rate10=cert方式(#041 Official Playmat 100/124) / 鑑定edge約+¥58k",
+          "stale": false,
+          "alert": null
+        },
+        {
+          "at": "2026-06-20T07:33:06+09:00",
+          "p10": 130000,
+          "p9": null,
+          "rawA": 32000,
+          "rawB": 20000,
+          "pop10": 100,
+          "popTotal": 124,
+          "rate10": 80.65,
+          "currency": "JPY",
+          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n7)130000(▲10%)・最新6/14で薄商い。rawA 32000｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
           "stale": false,
           "alert": null
         }

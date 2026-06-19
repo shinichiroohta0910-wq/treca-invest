@@ -4,8 +4,8 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-19T16:12:01+09:00",
-  "updatedBy": "eBay需要シグナル 51/52枚に付与完了（同一originfetch・OPCD DONのみeBay曖昧で未取得・2026-06-19）",
+  "updatedAt": "2026-06-19T16:57:14+09:00",
+  "updatedBy": "treca-scout: メガリザードンXex MA(M2a-223)を投資候補に追加（rate10 90.49%・両流動性◎・eBay需要n60。#1人気ミミッキュはrate10 54%でEVゲート落ち除外）・2026-06-19",
   "games": [
     {
       "id": "onepiece",
@@ -3192,6 +3192,49 @@ const TRECA_DATA = {
           "days": 90,
           "at": "2026-06-19",
           "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        }
+      }
+    },
+    {
+      "id": "pk-pkmn-tcg-m2a-223-722239",
+      "game": "pokemon",
+      "name": "MEGA Charizard X ex MA",
+      "number": "pkmn-tcg-M2a-223",
+      "variant": "MEGA ATTACK RARE",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/20251128023141-0.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/722239/used",
+        "psaPop": "https://www.psacard.com/pop/tcg-cards/2025/pokemon-japanese-m2a-mega-dream-ex/323965"
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-06-19T16:57:14+09:00",
+          "p10": 25999,
+          "p9": null,
+          "rawA": 7000,
+          "rawB": null,
+          "pop10": 30977,
+          "popTotal": 34231,
+          "rate10": 90.49,
+          "currency": "JPY",
+          "src": "treca-scout: スニダン約定(直近3中央値 PSA10 n27/素体A n12・apparels/722239) / rate10=PSA POP cert方式(M2a #223 main g10=30977/34231)",
+          "stale": false,
+          "alert": null
+        }
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 30663,
+          "soldMedianUSD": null,
+          "n": 60,
+          "days": 90,
+          "at": "2026-06-19",
+          "src": "eBay sold(同一originfetch・対スニダン+18%)"
         }
       }
     }

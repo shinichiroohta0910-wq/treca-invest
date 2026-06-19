@@ -4,8 +4,8 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-19T17:35:48+09:00",
-  "updatedBy": "treca-scout深掘り(3ゲーム各100位): DON熊本ルフィ(OPCD-104)を追加。p10¥175k/素体¥38k/edge+79k(保守)。BマジシャンLOCHはrate10 0%(新弾)でcert除外・2026-06-19",
+  "updatedAt": "2026-06-19T17:39:26+09:00",
+  "updatedBy": "treca-scout深掘り(3ゲーム各100位): 青眼25th(TD02)+ルフィ#001週刊Jump を追加（cert実測rate10で確定）・2026-06-19",
   "games": [
     {
       "id": "onepiece",
@@ -3309,6 +3309,74 @@ const TRECA_DATA = {
           "rate10": 80,
           "currency": "JPY",
           "src": "treca-scout(深掘り): スニダン約定(PSA10 n13中央値¥175k/素体A n43中央値¥38k・apparels/755878) / rate10=cert方式・DON複数版でset内実測70-90%→保守80%採用 / 鑑定edge約+¥79k(保守)",
+          "stale": false,
+          "alert": null
+        }
+      ],
+      "signals": {}
+    },
+    {
+      "id": "yg-ygo-td02-jp001-185263",
+      "game": "yugioh",
+      "name": "青眼の白龍 QCSR (TD02 東京ドームGreen)",
+      "number": "TD02-JP001",
+      "variant": "QCSR Tokyo Dome Green Ver",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250430094904-0.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/185263/used",
+        "psaPop": "https://www.psacard.com/pop/tcg-cards/2024/yu-gi-oh-japanese-td02-duel-monsters-legend-duelist-quarter-century-day-2-attenda/261026"
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-06-19T17:39:26+09:00",
+          "p10": 128800,
+          "p9": null,
+          "rawA": 50000,
+          "rawB": null,
+          "pop10": 1129,
+          "popTotal": 1395,
+          "rate10": 80.93,
+          "currency": "JPY",
+          "src": "treca-scout深掘り: スニダン約定(PSA10 n57/素体A n22) / rate10=cert方式(TD02-JP001 1129/1395) / 鑑定edge約+¥34k",
+          "stale": false,
+          "alert": null
+        }
+      ],
+      "signals": {}
+    },
+    {
+      "id": "op-p001-wsj-171995",
+      "game": "onepiece",
+      "name": "モンキー・D・ルフィ #001 (週刊少年ジャンプpromo)",
+      "number": "P-001(WSJ)",
+      "variant": "Weekly Shonen Jump Promo",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/TCG-OPC-ST01-001.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/171995/used",
+        "psaPop": "https://www.psacard.com/pop/tcg-cards/2023/one-piece-japanese-promos/229483"
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-06-19T17:39:26+09:00",
+          "p10": 128000,
+          "p9": null,
+          "rawA": 53000,
+          "rawB": null,
+          "pop10": 1971,
+          "popTotal": 2262,
+          "rate10": 87.14,
+          "currency": "JPY",
+          "src": "treca-scout深掘り: スニダン約定(PSA10 n34/素体A n8) / rate10=cert方式(2023 OP promo #001 Weekly Shonen Jump 1971/2262) / 鑑定edge約+¥38k",
           "stale": false,
           "alert": null
         }

@@ -174,6 +174,9 @@
   .sbtns{display:flex;gap:8px;margin:10px 0 4px}
   .sbtns button{flex:1}
   .scatter{width:100%;height:150px;display:block;margin:6px 0 4px;background:var(--panel);border:1px solid var(--line);border-radius:12px}
+  .slegend{display:flex;flex-wrap:wrap;gap:9px 12px;font-size:.64rem;color:var(--muted);margin:0 2px 10px}
+  .slegend span{display:flex;align-items:center;gap:4px}
+  .slegend i{width:9px;height:9px;border-radius:50%;display:inline-block;flex:none}
   .srow{display:flex;align-items:center;gap:9px;padding:9px 11px;border:1px solid var(--line);border-radius:12px;margin-bottom:6px;cursor:pointer;background:var(--panel)}
   .srow.sel{border-color:var(--accent2);background:rgba(74,168,255,.10)}
   .srow .schk{font-size:1.2rem;flex:none;width:20px;text-align:center;line-height:1}
@@ -210,6 +213,12 @@
   <h1>🎯 投資スカウト <span class="sub" style="font-weight:400">素体→鑑定EV</span></h1>
   <div class="sub">「素体を買ってPSA10鑑定」の期待値ランキング。手数料・鑑定費・反落（ウォッチのスライダー）を反映。左上ほど少額×高EV。</div>
   <svg id="scoutScatter" class="scatter" viewBox="0 0 320 150" preserveAspectRatio="xMidYMid meet"></svg>
+  <div class="slegend">
+    <span><i style="background:#39d98a"></i>本命（高EV×高率×流動）</span>
+    <span><i style="background:#4aa8ff"></i>妙味</span>
+    <span><i style="background:#ffb454"></i>注意（薄商い/要確認）</span>
+    <span><i style="background:#9aa3ab"></i>素体で売れ（鑑定非推奨）</span>
+  </div>
   <div class="sbasket">
     <div style="display:flex;justify-content:space-between;align-items:baseline">
       <span class="sub">仕入予算バスケット</span>
@@ -615,6 +624,9 @@ function renderWatch(){
     }
     if(sg.ebay && sg.ebay.n!=null) sigBadges.push(`<span class="bdg" style="background:rgba(74,168,255,.16);color:#4aa8ff" title="eBay直近sold ${sg.ebay.n}件（海外需要）">🌐${sg.ebay.n}</span>`);
     if(sg.oripa && sg.oripa.seen) sigBadges.push(`<span class="bdg" style="background:rgba(180,120,255,.18);color:#b478ff" title="オリパ景品採用（回転の証拠）">🎰</span>`);
+    // スカウトのプロット（ティア色＋拾EV）。色は🎯スカウトタブの凡例と共通。
+    const sc = scoutEval(c, d);
+    const scoutBadge = sc ? `<span class="bdg" style="background:${hexA(SCOUT_HEX[sc.tier],.18)};color:${SCOUT_HEX[sc.tier]}" title="スカウト判定：${SCOUT_LABEL[sc.tier]}（素体買→PSA10鑑定の期待値 ${signYen(sc.buyEV)}・ROI${Math.round(sc.roi*100)}%）。緑=本命/青=妙味/橙=注意/灰=素体で売れ">●${SCOUT_LABEL[sc.tier]} 拾${signYen(sc.buyEV)}</span>` : "";
     return `
       <div class="crow" onclick="showDetail('${escAttr(c.id)}')">
         <div class="crow-top">
@@ -624,6 +636,7 @@ function renderWatch(){
             <div class="cvar">${escHtml(c.variant||c.number||"")}</div>
             <div class="cmeta">${metaBits.join("")}</div>
             <div class="badges">
+              ${scoutBadge}
               ${routeBadge}
               <span class="bdg ${fr.cls}">${escHtml(fr.label)}</span>
               ${sigBadges.join("")}
@@ -644,30 +657,33 @@ function renderWatch(){
    buyEV = netGrade(鑑定後手取り−鑑定費) − 素体仕入額。手数料・反落・鑑定費は既存エンジン流用。
    ===================================================================== */
 const scoutBasket = new Set();
-const SCOUT_TIER = {honmei:"var(--accent)", umami:"var(--accent2)", caution:"var(--warn)", skip:"var(--muted)"};
-const SCOUT_HEX  = {honmei:"#39d98a", umami:"#4aa8ff", caution:"#ffb454", skip:"#9aa3ab"};
+const SCOUT_TIER  = {honmei:"var(--accent)", umami:"var(--accent2)", caution:"var(--warn)", skip:"var(--muted)"};
+const SCOUT_HEX   = {honmei:"#39d98a", umami:"#4aa8ff", caution:"#ffb454", skip:"#9aa3ab"};
+const SCOUT_LABEL = {honmei:"本命", umami:"妙味", caution:"注意", skip:"素体"};
 function scoutBudget(){ return num(settings().monthlyBudget) || 200000; }
 
+// 1カードのスカウト評価（ウォッチ・スカウト両画面で共用）。素体が買えPSA10で売れる場合のみオブジェクト、他は null。
+function scoutEval(c, d){
+  const e = evalCard(c, d);
+  const snap = e.snap;
+  if(!e.hasData || !snap || snap.rawA==null || e.rawA<=0 || !e.p10) return null;
+  const buyEV = Math.round(e.netGrade - e.rawA);   // 素体買→鑑定→売却の期待利益
+  const cost  = e.rawA + e.gradeCost;
+  const roi   = cost>0 ? buyEV/cost : 0;
+  const alert = snap.alert || "";
+  const thin  = /薄商い|要確認/.test(alert) || (snap.p10n!=null && snap.p10n<=4);
+  const confirm = /要確認/.test(alert);
+  let tier;
+  if(buyEV<=3000) tier="skip";
+  else if(thin || e.rate<55) tier="caution";
+  else if(buyEV>=20000 && e.rate>=80) tier="honmei";
+  else tier="umami";
+  return {c, e, snap, buyEV, cost, roi, tier, confirm, n:snap.p10n};
+}
 function scoutRows(){
   const d = decay();
   const rows = [];
-  CARDS.filter(c=>c.watch!==false).forEach(c=>{
-    const e = evalCard(c, d);
-    const snap = e.snap;
-    if(!e.hasData || !snap || snap.rawA==null || e.rawA<=0 || !e.p10) return; // 素体を買えてPSA10で売れる前提
-    const buyEV = Math.round(e.netGrade - e.rawA);
-    const cost  = e.rawA + e.gradeCost;
-    const roi   = cost>0 ? buyEV/cost : 0;
-    const alert = snap.alert || "";
-    const thin  = /薄商い|要確認/.test(alert) || (snap.p10n!=null && snap.p10n<=4);
-    const confirm = /要確認/.test(alert);
-    let tier;
-    if(buyEV<=3000) tier="skip";
-    else if(thin || e.rate<55) tier="caution";
-    else if(buyEV>=20000 && e.rate>=80) tier="honmei";
-    else tier="umami";
-    rows.push({c, e, snap, buyEV, cost, roi, tier, confirm, n:snap.p10n});
-  });
+  CARDS.filter(c=>c.watch!==false).forEach(c=>{ const s=scoutEval(c,d); if(s) rows.push(s); });
   rows.sort((a,b)=> b.buyEV - a.buyEV);
   return rows;
 }

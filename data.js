@@ -4,8 +4,8 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床{店舗名・買取価格}/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-20T19:17:08.261+09:00",
-  "updatedBy": "treca-market-update v1.2 2026-06-20: 全64枚の価格をスニダン約定med3で実売リフレッシュ。POP/rate10は前回cert実測値を継承(新6枚はproxy・要cert実測)。",
+  "updatedAt": "2026-06-20T19:29:28.751+09:00",
+  "updatedBy": "treca-market-update v1.2 2026-06-20: 全64枚価格リフレッシュ＋新規6枚のrate10をcert方式で実測(proxy→真POP)。Nagaba74.8%/Gagaga72.8%は格付biasで大幅補正、ガガガガールはinvest昇格。",
   "games": [
     {
       "id": "onepiece",
@@ -5303,7 +5303,7 @@ const TRECA_DATA = {
     {
       "id": "op-p-066-575849",
       "game": "onepiece",
-      "name": "Boa Hancock P [P-066](Promotional Card \"Promotion Pack EX Vol.7\")",
+      "name": "Boa Hancock P [P-066](Promotional Card \"Promotion Pack EX Vol.2\")",
       "number": "P-066",
       "variant": "",
       "lang": "ja",
@@ -5311,7 +5311,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/575849",
-        "psaPop": ""
+        "psaPop": "https://www.psacard.com/pop/tcg-cards/2025/one-piece-japanese-promotion-pack-ex-vol-2/304904"
       },
       "watch": true,
       "invest": true,
@@ -5339,11 +5339,11 @@ const TRECA_DATA = {
           "p9": null,
           "rawA": 35000,
           "rawB": 13500,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": 100,
+          "pop10": 295,
+          "popTotal": 306,
+          "rate10": 96.4,
           "currency": "JPY",
-          "src": "価格=スニダン直近3約定中央値(実売・ask不使用,2026-06-20更新). rate10=スニダン格付proxy(cert未実測・要cert実測)",
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用,2026-06-20). rate10=PSA POP cert実測 96.4% (pop10=295/popTotal=306・variety=\"Boa Hancock\"一致・proxy100%から補正). 出口=国内スニダン約定が厚い(JP promo). eBayはmarkup変更で未取得. cert実測(treca-market-update 2026-06-20)",
           "stale": false,
           "alert": null,
           "p10n": 25,
@@ -5372,7 +5372,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/714196",
-        "psaPop": ""
+        "psaPop": "https://www.psacard.com/pop/tcg-cards/2025/one-piece-japanese-promotion-pack-ex-vol-3/319880"
       },
       "watch": true,
       "invest": true,
@@ -5400,11 +5400,11 @@ const TRECA_DATA = {
           "p9": 29800,
           "rawA": 26999,
           "rawB": 24500,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": 92.9,
+          "pop10": 330,
+          "popTotal": 359,
+          "rate10": 91.9,
           "currency": "JPY",
-          "src": "価格=スニダン直近3約定中央値(実売・ask不使用,2026-06-20更新). rate10=スニダン格付proxy(cert未実測・要cert実測)",
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用,2026-06-20). rate10=PSA POP cert実測 91.9% (pop10=330/popTotal=359・variety=\"Nami\"一致・proxy92.9%から補正). 出口=国内スニダン約定が厚い(JP promo). eBayはmarkup変更で未取得. cert実測(treca-market-update 2026-06-20)",
           "stale": false,
           "alert": null,
           "p10n": 13,
@@ -5433,7 +5433,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/300067",
-        "psaPop": ""
+        "psaPop": "https://www.psacard.com/pop/tcg-cards/2024/one-piece-japanese-2nd-anniversary-set/291377"
       },
       "watch": true,
       "invest": true,
@@ -5461,11 +5461,11 @@ const TRECA_DATA = {
           "p9": 48000,
           "rawA": 54800,
           "rawB": null,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": 97.4,
+          "pop10": 1318,
+          "popTotal": 1435,
+          "rate10": 91.8,
           "currency": "JPY",
-          "src": "価格=スニダン直近3約定中央値(実売・ask不使用,2026-06-20更新). rate10=スニダン格付proxy(cert未実測・要cert実測)",
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用,2026-06-20). rate10=PSA POP cert実測 91.8% (pop10=1318/popTotal=1435・variety=\"Monkey D. Luffy\"一致・proxy97.4%から補正). 出口=国内スニダン約定が厚い(JP promo). eBayはmarkup変更で未取得. cert実測(treca-market-update 2026-06-20)",
           "stale": false,
           "alert": null,
           "p10n": 37,
@@ -5494,7 +5494,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/744321",
-        "psaPop": ""
+        "psaPop": "https://www.psacard.com/pop/tcg-cards/2025/one-piece-japanese-3rd-anniversary-set/326303"
       },
       "watch": true,
       "invest": true,
@@ -5522,11 +5522,11 @@ const TRECA_DATA = {
           "p9": 98000,
           "rawA": 65000,
           "rawB": 44890,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": 97.3,
+          "pop10": 1608,
+          "popTotal": 1672,
+          "rate10": 96.2,
           "currency": "JPY",
-          "src": "価格=スニダン直近3約定中央値(実売・ask不使用,2026-06-20更新). rate10=スニダン格付proxy(cert未実測・要cert実測)",
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用,2026-06-20). rate10=PSA POP cert実測 96.2% (pop10=1608/popTotal=1672・variety=\"Monkey D. Luffy\"一致・proxy97.3%から補正). 出口=国内スニダン約定が厚い(JP promo). eBayはmarkup変更で未取得. cert実測(treca-market-update 2026-06-20)",
           "stale": false,
           "alert": null,
           "p10n": 36,
@@ -5555,7 +5555,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/106796",
-        "psaPop": ""
+        "psaPop": "https://www.psacard.com/pop/tcg-cards/2021/pokemon-japanese-s-promo/189313"
       },
       "watch": true,
       "invest": true,
@@ -5583,11 +5583,11 @@ const TRECA_DATA = {
           "p9": 24800,
           "rawA": 25500,
           "rawB": 18500,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": 95.7,
+          "pop10": 37346,
+          "popTotal": 49957,
+          "rate10": 74.8,
           "currency": "JPY",
-          "src": "価格=スニダン直近3約定中央値(実売・ask不使用,2026-06-20更新). rate10=スニダン格付proxy(cert未実測・要cert実測)",
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用,2026-06-20). rate10=PSA POP cert実測 74.8% (pop10=37346/popTotal=49957・variety=\"Pikachu YU Nagaba\"一致・proxy95.7%から補正). 出口=国内スニダン約定が厚い(JP promo). eBayはmarkup変更で未取得. cert実測(treca-market-update 2026-06-20)",
           "stale": false,
           "alert": null,
           "p10n": 44,
@@ -5616,10 +5616,10 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/769229",
-        "psaPop": ""
+        "psaPop": "https://www.psacard.com/pop/tcg-cards/2026/yu-gi-oh-japanese-loch-limit-over-collection-heroes/332580"
       },
       "watch": true,
-      "invest": false,
+      "invest": true,
       "gradingCostDefault": 11980,
       "snapshots": [
         {
@@ -5644,11 +5644,11 @@ const TRECA_DATA = {
           "p9": 20000,
           "rawA": 22000,
           "rawB": 24500,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": 93.8,
+          "pop10": 91,
+          "popTotal": 125,
+          "rate10": 72.8,
           "currency": "JPY",
-          "src": "価格=スニダン直近3約定中央値(実売・ask不使用,2026-06-20更新). rate10=スニダン格付proxy(cert未実測・要cert実測)",
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用,2026-06-20). rate10=PSA POP cert実測 72.8% (pop10=91/popTotal=125・variety=\"Extended Art-Prismatic Secret Rare\"一致・proxy93.8%から補正). 出口=国内スニダン約定が厚い(JP promo). eBayはmarkup変更で未取得. cert実測(treca-market-update 2026-06-20)",
           "stale": false,
           "alert": null,
           "p10n": 15,

@@ -563,6 +563,12 @@ const TRECA_DATA = {
           "days": 90,
           "at": "2026-06-19",
           "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 197000,
+          "at": "2026-06-04",
+          "src": "トレカバンク店頭買取表(store.torecabank.com/kaitori_list) 2026-06-04時点・型番完全一致／2026-06-20取得"
         }
       }
     },
@@ -731,6 +737,12 @@ const TRECA_DATA = {
           "days": 90,
           "at": "2026-06-19",
           "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 74500,
+          "at": "2026-06-04",
+          "src": "トレカバンク店頭買取表(store.torecabank.com/kaitori_list) 2026-06-04時点・型番完全一致／2026-06-20取得"
         }
       }
     },
@@ -899,6 +911,12 @@ const TRECA_DATA = {
           "days": 90,
           "at": "2026-06-19",
           "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 35000,
+          "at": "2026-06-04",
+          "src": "トレカバンク店頭買取表(store.torecabank.com/kaitori_list) 2026-06-04時点・型番完全一致／2026-06-20取得"
         }
       }
     },
@@ -1067,6 +1085,12 @@ const TRECA_DATA = {
           "days": 90,
           "at": "2026-06-19",
           "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 22000,
+          "at": "2026-06-04",
+          "src": "トレカバンク店頭買取表(store.torecabank.com/kaitori_list) 2026-06-04時点・型番完全一致／2026-06-20取得"
         }
       }
     },
@@ -1235,6 +1259,12 @@ const TRECA_DATA = {
           "days": 90,
           "at": "2026-06-19",
           "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 96000,
+          "at": "2026-06-04",
+          "src": "トレカバンク店頭買取表(store.torecabank.com/kaitori_list) 2026-06-04時点・型番完全一致／2026-06-20取得"
         }
       }
     },
@@ -1319,6 +1349,12 @@ const TRECA_DATA = {
           "days": 90,
           "at": "2026-06-19",
           "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 136000,
+          "at": "2026-06-04",
+          "src": "トレカバンク店頭買取表(store.torecabank.com/kaitori_list) 2026-06-04時点・型番完全一致／2026-06-20取得"
         }
       }
     },
@@ -3460,6 +3496,12 @@ const TRECA_DATA = {
           "days": 90,
           "at": "2026-06-19",
           "src": "eBay sold(完了済・海外セラー円建て)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 107000,
+          "at": "2026-06-04",
+          "src": "トレカバンク店頭買取表(store.torecabank.com/kaitori_list) 2026-06-04時点・型番完全一致／2026-06-20取得"
         }
       }
     },
@@ -3802,6 +3844,12 @@ const TRECA_DATA = {
           "days": 90,
           "at": "2026-06-19",
           "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 101000,
+          "at": "2026-06-04",
+          "src": "トレカバンク店頭買取表(store.torecabank.com/kaitori_list) 2026-06-04時点・型番完全一致／2026-06-20取得"
         }
       }
     },
@@ -3973,6 +4021,12 @@ const TRECA_DATA = {
           "days": 90,
           "at": "2026-06-19",
           "src": "eBay sold(同一originfetch・対スニダン+18%)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 26500,
+          "at": "2026-06-04",
+          "src": "トレカバンク店頭買取表(store.torecabank.com/kaitori_list) 2026-06-04時点・型番完全一致／2026-06-20取得"
         }
       }
     },

@@ -197,6 +197,20 @@
   .sqty .qn{min-width:24px;text-align:center;font-weight:700;font-size:.82rem}
   .smix{display:flex;align-items:center;gap:10px;margin:12px 0 2px}
   .smix input[type=range]{flex:1}
+  .shelp{border:1px solid var(--line);border-radius:12px;background:var(--panel);margin:8px 0 12px;overflow:hidden}
+  .shelp>summary{cursor:pointer;padding:10px 13px;font-size:.8rem;font-weight:600;color:var(--accent2);list-style:none}
+  .shelp>summary::-webkit-details-marker{display:none}
+  .shelp>summary::before{content:"▸ "}
+  .shelp[open]>summary::before{content:"▾ "}
+  .shelp-body{padding:0 14px 12px;font-size:.74rem;color:var(--muted);line-height:1.65}
+  .shelp-body p{margin:7px 0}
+  .shelp-body b{color:var(--txt);font-weight:600}
+  .shelp-body .shh{color:var(--txt);font-weight:600;font-size:.76rem;margin-top:11px;border-top:1px solid var(--line);padding-top:8px}
+  .shelp-body ul,.shelp-body ol{margin:5px 0;padding-left:17px}
+  .shelp-body li{margin:3px 0}
+  .shelp-body .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:3px;vertical-align:1px}
+  .shelp-body .ring{display:inline-block;width:8px;height:8px;border-radius:50%;border:1.5px solid rgba(255,255,255,.8);margin-right:3px;vertical-align:1px}
+  .shelp-body .shnote{font-size:.68rem;margin-top:9px;opacity:.85}
   .foot{margin-top:20px;color:#5a6571;font-size:.68rem;text-align:center;line-height:1.6}
 </style>
 </head>
@@ -221,6 +235,35 @@
 <section id="view-scout" class="view">
   <h1>🎯 投資スカウト <span class="sub" style="font-weight:400">素体→鑑定EV</span></h1>
   <div class="sub">「素体を買ってPSA10鑑定」の期待値ランキング。手数料・鑑定費・反落（ウォッチのスライダー）を反映。左上ほど少額×高EV。</div>
+  <details class="shelp">
+    <summary>📖 各指標の読み方・使い方</summary>
+    <div class="shelp-body">
+      <p>各カードを「<b>素体で買って → PSA10鑑定 → 売却</b>」した場合の<b>1枚あたり期待利益（EV）</b>で並べています。左上＝少額×高EVの妙味。</p>
+      <p class="shh">色（ティア）と散布図</p>
+      <ul>
+        <li><span class="dot" style="background:#39d98a"></span><b>本命</b>＝高EV×高率×流動的。素直に拾える</li>
+        <li><span class="dot" style="background:#4aa8ff"></span><b>妙味</b>＝バランス型</li>
+        <li><span class="dot" style="background:#ffb454"></span><b>注意</b>＝薄商い(n少)か要確認。EVが大きくても出口が不安定＝小さめに</li>
+        <li><span class="dot" style="background:#9aa3ab"></span><b>素体で売れ</b>＝鑑定費負けでEVマイナス。鑑定せず素体売り</li>
+        <li><span class="ring"></span><b>白フチ</b>＝買取床あり＝ショップが確実に買う下限つき（下値が堅い）</li>
+      </ul>
+      <p class="shh">行の指標</p>
+      <ul>
+        <li><b>EV</b>＝期待利益/枚　<b>ROI</b>＝投下資本に対する効率（%）</li>
+        <li><b>確</b>＝確実性スコア（勝率の代理・0〜100）＝率45%＋流動20%＋買取床20%＋反落耐性15%。<b style="color:#39d98a">緑70+</b>鉄板／<b style="color:#ffb454">橙</b>中庸／<b style="color:#ff6b6b">赤</b>博打寄り</li>
+        <li><b>耐</b>＝損益分岐反落%。相場が何%下げてもEVが残るか（硬さ）</li>
+        <li><b>率</b>＝PSA10取得率　<b>n</b>＝直近PSA10約定数（流動性・少ないほど薄い）　<b>床</b>＝買取床価格</li>
+      </ul>
+      <p class="shh">使い方</p>
+      <ol>
+        <li><b>バランススライダー</b>で「勝率枠（確実性≥60）」と「ドカン枠（EV最大・薄商い可）」に予算配分 → <b>⚡自動構成</b>で予算内に組む</li>
+        <li><b>−／＋</b>で枚数調整。安い高率・高流動札は複数枚で分散が消える／薄商いの大物は1〜2枚に</li>
+        <li><b>平均確実性</b>がバスケット全体の勝率姿勢。緑寄りに保つと手堅い</li>
+        <li>行をタップでカード詳細へ</li>
+      </ol>
+      <p class="shnote">※相場＝スニダン約定・率＝PSA POP実測。判断補助であり結果を保証しない。PSA鑑定は約3ヶ月＝現金化は先。</p>
+    </div>
+  </details>
   <svg id="scoutScatter" class="scatter" viewBox="0 0 320 150" preserveAspectRatio="xMidYMid meet"></svg>
   <div class="slegend">
     <span><i style="background:#39d98a"></i>本命（高EV×高率×流動）</span>

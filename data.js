@@ -4,8 +4,8 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床{店舗名・買取価格}/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-20T07:33:06+09:00",
-  "updatedBy": "価格レイヤー全58枚をスニダン約定値で再取得(med3・実売ask不使用)。POP/rate10・signals.ebayは前回(6/19)継承。買取床(signals.buyback)はスニダン非提供で未取得。treca-market-update 2026-06-20",
+  "updatedAt": "2026-06-20T18:55:33.936+09:00",
+  "updatedBy": "treca-scout 2026-06-20: スニダン4ゲーム各〜100位をpage法で走査(299候補)→BOX/保有/予算外除外→約定edge→EV事前ゲート→proxy rate10(格付分布)で6枚発掘。invest5枚追加(OPプロモ4・ポケNagaba1)+watch1(ガガガガールLOCH=cert実測待ち)。eBayはmarkup変更で取得不可。",
   "games": [
     {
       "id": "onepiece",
@@ -4369,6 +4369,276 @@ const TRECA_DATA = {
           "days": 90,
           "at": "2026-06-19",
           "src": "eBay sold(同一originフェッチ) 対スニダン-80%=国内優位(JP promo premium・海外裁定なし)"
+        }
+      }
+    },
+    {
+      "id": "op-p-066-575849",
+      "game": "onepiece",
+      "name": "Boa Hancock P [P-066](Promotional Card \"Promotion Pack EX Vol.7\")",
+      "number": "P-066",
+      "variant": "",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/OPC-TCG-P-066-20250424-of.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/575849",
+        "psaPop": ""
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-06-20T18:55:33.936+09:00",
+          "p10": 120000,
+          "p9": null,
+          "rawA": 35000,
+          "rawB": 13500,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": 100,
+          "currency": "JPY",
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用): P10 med3(n25) 120000 / 素体A med3(n37) 35000 / 素体B 13500. rate10=100%=スニダン格付分布proxy(PSA10 25/全PSA 25約定・cert実測POP未取得→次回treca-market-update). 出口=国内スニダンPSA10約定n25が直近数日内で厚い(JP promo=国内優位). eBay=今回markup変更(SPA)で取得不可. 新規発掘(treca-scout 2026-06-20)",
+          "stale": false,
+          "alert": null,
+          "p10n": 25,
+          "rawAn": 37
+        }
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": null,
+          "soldMedianUSD": null,
+          "n": null,
+          "days": 90,
+          "at": "2026-06-20",
+          "src": "eBay markup変更(SPA s-card)で今回取得不可。JP promo=国内優位想定。次回「需要更新して」で再取得"
+        }
+      }
+    },
+    {
+      "id": "op-op08-106-714196",
+      "game": "onepiece",
+      "name": "Nami SR [OP08-106](Promotional Card \"Promotion Pack EX Vol.3\")",
+      "number": "OP08-106",
+      "variant": "",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/OPC-TCG-2025-10-20-04-of.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/714196",
+        "psaPop": ""
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-06-20T18:55:33.936+09:00",
+          "p10": 85000,
+          "p9": null,
+          "rawA": 26999,
+          "rawB": 24500,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": 92.9,
+          "currency": "JPY",
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用): P10 med3(n13) 85000 / 素体A med3(n48) 26999 / 素体B 24500. rate10=92.9%=スニダン格付分布proxy(PSA10 13/全PSA 14約定・cert実測POP未取得→次回treca-market-update). 出口=国内スニダンPSA10約定n13が直近数日内で厚い(JP promo=国内優位). eBay=今回markup変更(SPA)で取得不可. 新規発掘(treca-scout 2026-06-20)",
+          "stale": false,
+          "alert": null,
+          "p10n": 13,
+          "rawAn": 48
+        }
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": null,
+          "soldMedianUSD": null,
+          "n": null,
+          "days": 90,
+          "at": "2026-06-20",
+          "src": "eBay markup変更(SPA s-card)で今回取得不可。JP promo=国内優位想定。次回「需要更新して」で再取得"
+        }
+      }
+    },
+    {
+      "id": "op-st13-015-300067",
+      "game": "onepiece",
+      "name": "Monkey.D.Luffy SR [ST13-015](Special Goods Set \"2nd ANNIVERSARY SET\")",
+      "number": "ST13-015",
+      "variant": "",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/20240621064823-0.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/300067",
+        "psaPop": ""
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-06-20T18:55:33.936+09:00",
+          "p10": 114000,
+          "p9": null,
+          "rawA": 54800,
+          "rawB": null,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": 97.4,
+          "currency": "JPY",
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用): P10 med3(n37) 114000 / 素体A med3(n16) 54800. rate10=97.4%=スニダン格付分布proxy(PSA10 37/全PSA 38約定・cert実測POP未取得→次回treca-market-update). 出口=国内スニダンPSA10約定n37が直近数日内で厚い(JP promo=国内優位). eBay=今回markup変更(SPA)で取得不可. 新規発掘(treca-scout 2026-06-20)",
+          "stale": false,
+          "alert": null,
+          "p10n": 37,
+          "rawAn": 16
+        }
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": null,
+          "soldMedianUSD": null,
+          "n": null,
+          "days": 90,
+          "at": "2026-06-20",
+          "src": "eBay markup変更(SPA s-card)で今回取得不可。JP promo=国内優位想定。次回「需要更新して」で再取得"
+        }
+      }
+    },
+    {
+      "id": "op-op09-119-744321",
+      "game": "onepiece",
+      "name": "Monkey.D.Luffy SEC [OP09-119](Promotional Card \"3rd ANNIVERSARY SET\")",
+      "number": "OP09-119",
+      "variant": "",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/OPC-TCG-3AS-010-of.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/744321",
+        "psaPop": ""
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-06-20T18:55:33.936+09:00",
+          "p10": 110000,
+          "p9": null,
+          "rawA": 65000,
+          "rawB": 44890,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": 97.3,
+          "currency": "JPY",
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用): P10 med3(n36) 110000 / 素体A med3(n10) 65000 / 素体B 44890. rate10=97.3%=スニダン格付分布proxy(PSA10 36/全PSA 37約定・cert実測POP未取得→次回treca-market-update). 出口=国内スニダンPSA10約定n36が直近数日内で厚い(JP promo=国内優位). eBay=今回markup変更(SPA)で取得不可. 新規発掘(treca-scout 2026-06-20)",
+          "stale": false,
+          "alert": null,
+          "p10n": 36,
+          "rawAn": 10
+        }
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": null,
+          "soldMedianUSD": null,
+          "n": null,
+          "days": 90,
+          "at": "2026-06-20",
+          "src": "eBay markup変更(SPA s-card)で今回取得不可。JP promo=国内優位想定。次回「需要更新して」で再取得"
+        }
+      }
+    },
+    {
+      "id": "pk-pkmn-tcg-s-p-208-106796",
+      "game": "pokemon",
+      "name": "Pikachu: PROMO[S-P 208](S-P Promotional cards YU NAGABA x Pokemon Card Game)",
+      "number": "S-P 208",
+      "variant": "",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250223012350-0.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/106796",
+        "psaPop": ""
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-06-20T18:55:33.936+09:00",
+          "p10": 61500,
+          "p9": null,
+          "rawA": 25500,
+          "rawB": null,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": 95.7,
+          "currency": "JPY",
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用): P10 med3(n44) 61500 / 素体A med3(n10) 25500. rate10=95.7%=スニダン格付分布proxy(PSA10 44/全PSA 46約定・cert実測POP未取得→次回treca-market-update). 出口=国内スニダンPSA10約定n44が直近数日内で厚い(JP promo=国内優位). eBay=今回markup変更(SPA)で取得不可. 新規発掘(treca-scout 2026-06-20)",
+          "stale": false,
+          "alert": null,
+          "p10n": 44,
+          "rawAn": 10
+        }
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": null,
+          "soldMedianUSD": null,
+          "n": null,
+          "days": 90,
+          "at": "2026-06-20",
+          "src": "eBay markup変更(SPA s-card)で今回取得不可。JP promo=国内優位想定。次回「需要更新して」で再取得"
+        }
+      }
+    },
+    {
+      "id": "yg-loch-jp012-769229",
+      "game": "yugioh",
+      "name": "Gagaga Girl - Cell Phone Subtraction PSE :Over Flame [LOCH-JP012](LIMIT OVER COLLECTION -THE HEROES-)",
+      "number": "LOCH-JP012",
+      "variant": "",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/20260302022516-0.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/769229",
+        "psaPop": ""
+      },
+      "watch": true,
+      "invest": false,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-06-20T18:55:33.936+09:00",
+          "p10": 78000,
+          "p9": null,
+          "rawA": 22000,
+          "rawB": 24500,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": 93.8,
+          "currency": "JPY",
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用): P10 med3(n15) 78000 / 素体A med3(n26) 22000 / 素体B 24500. rate10=93.8%=スニダン格付分布proxy(PSA10 15/全PSA 16約定・cert実測POP未取得→次回treca-market-update). 出口=国内スニダンPSA10約定n15が直近数日内で厚い(JP promo=国内優位). eBay=今回markup変更(SPA)で取得不可. ⚠LOCH 2026新弾・rate10はproxy(格付bias可能)・買う前にcert実測必須(SKILL地雷ログ:新弾SARは下振れ)＝watch止まり. 新規発掘(treca-scout 2026-06-20)",
+          "stale": false,
+          "alert": null,
+          "p10n": 15,
+          "rawAn": 26
+        }
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": null,
+          "soldMedianUSD": null,
+          "n": null,
+          "days": 90,
+          "at": "2026-06-20",
+          "src": "eBay markup変更(SPA s-card)で今回取得不可。JP promo=国内優位想定。次回「需要更新して」で再取得"
         }
       }
     }

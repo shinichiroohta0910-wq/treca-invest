@@ -188,6 +188,13 @@
   .srow .sev{font-size:.84rem;font-weight:700;color:var(--accent)}
   .srow .sroi{font-size:.64rem;color:var(--muted)}
   .stag{font-size:.58rem;padding:1px 5px;border-radius:5px;margin-left:5px;vertical-align:1px}
+  .srow .thumb,.srow .thumb-ph{width:34px;height:48px;border-radius:6px;font-size:.95rem}
+  .srow .tdot{width:8px;height:8px;border-radius:50%;display:inline-block;flex:none;margin-right:1px;vertical-align:1px}
+  .sqty{display:flex;align-items:center;gap:0;flex:none;border:1px solid var(--line);border-radius:9px;overflow:hidden}
+  .sqty button{width:28px;height:28px;padding:0;border:none;background:var(--panel2);color:var(--txt);font-size:1rem;line-height:1;cursor:pointer}
+  .sqty button:disabled{color:var(--line);cursor:default}
+  .sqty button:active{background:var(--accent2);color:#0c0e10}
+  .sqty .qn{min-width:24px;text-align:center;font-weight:700;font-size:.82rem}
   .foot{margin-top:20px;color:#5a6571;font-size:.68rem;text-align:center;line-height:1.6}
 </style>
 </head>
@@ -656,7 +663,7 @@ function renderWatch(){
    投資スカウト（素体→PSA10鑑定の期待値ランキング＋仕入予算バスケット）
    buyEV = netGrade(鑑定後手取り−鑑定費) − 素体仕入額。手数料・反落・鑑定費は既存エンジン流用。
    ===================================================================== */
-const scoutBasket = new Set();
+const scoutBasket = new Map(); // cardId → 枚数（qty）
 const SCOUT_TIER  = {honmei:"var(--accent)", umami:"var(--accent2)", caution:"var(--warn)", skip:"var(--muted)"};
 const SCOUT_HEX   = {honmei:"#39d98a", umami:"#4aa8ff", caution:"#ffb454", skip:"#9aa3ab"};
 const SCOUT_LABEL = {honmei:"本命", umami:"妙味", caution:"注意", skip:"素体"};
@@ -692,28 +699,34 @@ function renderScout(){
   if(!HAS_DATA){ $("scoutList").innerHTML = `<div class="empty">相場データ（data.js）がありません。</div>`; drawScoutScatter([]); updateScoutBasket([]); return; }
   const rows = scoutRows();
   const ids = new Set(rows.map(r=>r.c.id));
-  [...scoutBasket].forEach(id=>{ if(!ids.has(id)) scoutBasket.delete(id); });
+  [...scoutBasket.keys()].forEach(id=>{ if(!ids.has(id)) scoutBasket.delete(id); });
 
   $("scoutList").innerHTML = rows.map(r=>{
-    const on = scoutBasket.has(r.c.id);
-    const col = SCOUT_TIER[r.tier];
+    const qty = scoutBasket.get(r.c.id) || 0;
+    const on  = qty > 0;
+    const col = SCOUT_HEX[r.tier];
     const flags = [];
     if(r.confirm) flags.push(`<span class="stag" style="background:rgba(255,180,84,.18);color:var(--warn)">要確認</span>`);
     else if(r.tier==="caution" && r.n!=null && r.n<=4) flags.push(`<span class="stag" style="background:rgba(255,180,84,.18);color:var(--warn)">薄商い</span>`);
     if(r.tier==="skip") flags.push(`<span class="stag" style="background:rgba(154,163,171,.18);color:var(--muted)">素体で売れ</span>`);
     const bb = (r.e.floor10!=null) ? `<span class="stag" style="background:rgba(57,217,138,.16);color:var(--accent)">床${yen(r.e.floor10)}</span>` : "";
     const nlbl = r.n!=null ? `・n${r.n}${r.n<=4?"⚠":""}` : "";
+    const id = escAttr(r.c.id);
     return `
-      <div class="srow ${on?"sel":""}" onclick="scoutToggle('${escAttr(r.c.id)}')">
-        <span class="schk" style="color:${col}">${on?"☑":"＋"}</span>
-        <span class="sdot" style="background:${col}"></span>
+      <div class="srow ${on?"sel":""}" onclick="showDetail('${id}')">
+        ${thumbHTML(r.c,false)}
         <div class="smain">
-          <div class="sname">${escHtml(r.c.name)} <span style="font-size:.62rem;color:var(--muted);font-weight:400">${escHtml(gameById(r.c.game).name)}</span>${flags.join("")}</div>
+          <div class="sname"><span class="tdot" style="background:${col}" title="${SCOUT_LABEL[r.tier]}"></span>${escHtml(r.c.name)} <span style="font-size:.62rem;color:var(--muted);font-weight:400">${escHtml(gameById(r.c.game).name)}</span>${flags.join("")}</div>
           <div class="ssub">素体${yen(r.e.rawA)}→${yen(r.e.p10)}・率${r.e.rate.toFixed(0)}%${nlbl} ${bb}</div>
         </div>
         <div class="sright">
           <div class="sev" style="color:${r.buyEV>=0?"var(--accent)":"var(--bad)"}">EV${signYen(r.buyEV)}</div>
           <div class="sroi">ROI ${Math.round(r.roi*100)}%</div>
+        </div>
+        <div class="sqty" onclick="event.stopPropagation()">
+          <button onclick="scoutQty('${id}',-1)" ${on?"":"disabled"} aria-label="減らす">−</button>
+          <span class="qn">${qty}</span>
+          <button onclick="scoutQty('${id}',1)" aria-label="増やす">＋</button>
         </div>
       </div>`;
   }).join("") || `<div class="empty">鑑定候補（素体が買えるカード）がありません。</div>`;
@@ -725,7 +738,7 @@ function renderScout(){
 function updateScoutBasket(rows){
   const byId = {}; rows.forEach(r=>byId[r.c.id]=r);
   let cap=0, ev=0, cnt=0;
-  scoutBasket.forEach(id=>{ const r=byId[id]; if(r){ cap+=r.cost; ev+=r.buyEV; cnt++; } });
+  scoutBasket.forEach((qty,id)=>{ const r=byId[id]; if(r){ cap+=r.cost*qty; ev+=r.buyEV*qty; cnt+=qty; } });
   const budget = scoutBudget();
   $("sBudget").textContent = yen(budget);
   $("sCap").textContent = yen(cap);
@@ -738,7 +751,11 @@ function updateScoutBasket(rows){
   $("sROI").textContent = cap>0 ? Math.round(ev/cap*100)+"%" : "—";
 }
 
-function scoutToggle(id){ scoutBasket.has(id)?scoutBasket.delete(id):scoutBasket.add(id); renderScout(); }
+function scoutQty(id, delta){
+  const q = (scoutBasket.get(id)||0) + delta;
+  if(q<=0) scoutBasket.delete(id); else scoutBasket.set(id, q);
+  renderScout();
+}
 function scoutClear(){ scoutBasket.clear(); renderScout(); }
 function scoutAuto(){
   scoutBasket.clear();
@@ -746,7 +763,7 @@ function scoutAuto(){
   const cand = scoutRows().filter(r=> r.buyEV>0 && (r.tier==="honmei"||r.tier==="umami"))
     .sort((a,b)=> (b.buyEV/b.cost) - (a.buyEV/a.cost));
   let cap=0;
-  cand.forEach(r=>{ if(cap + r.cost <= budget){ scoutBasket.add(r.c.id); cap+=r.cost; } });
+  cand.forEach(r=>{ if(cap + r.cost <= budget){ scoutBasket.set(r.c.id, 1); cap+=r.cost; } });
   renderScout();
   toast("予算内・本命/妙味から "+scoutBasket.size+"枚 を構成（薄商い/要確認は手動で）");
 }

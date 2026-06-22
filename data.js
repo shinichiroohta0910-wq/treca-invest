@@ -4,8 +4,8 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床{店舗名・買取価格}/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-22T10:40:32.044+09:00",
-  "updatedBy": "treca-market-update 2026-06-22: eBay需要シグナルを英名+型番で再取得(58枚走査・書込ゲート0.5〜3×p10)。43枚更新/15枚carry(版混在・薄商い)。同番異版7枚(P-001×3/OP02-059×2/FB06-119×2)は走査対象外。価格(snapshots)は不変。",
+  "updatedAt": "2026-06-22T16:37:52.327+09:00",
+  "updatedBy": "treca-scout 2026-06-22: 4ゲーム計296枚走査→事前EV3枚→新規追加。invest1=エナジーマーカーE-100(edge+¥77k堅牢)・watch2=メガカイリューMUR/名探偵ピカチュウ(rate10感応or薄edge=cert保留)。rate10はproxy(cert要実測)。",
   "games": [
     {
       "id": "onepiece",
@@ -6731,6 +6731,141 @@ const TRECA_DATA = {
           "days": 90,
           "at": "2026-06-22",
           "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
+        }
+      }
+    },
+    {
+      "id": "db-e100-energy-marker",
+      "game": "dbfw",
+      "name": "エナジーマーカー E-100",
+      "number": "E-100",
+      "variant": "Official Playmat & Card Set Limited Edition 01",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/FW-DBSC-2026-0302-MT-002-of.webp",
+      "imageNote": "DBFWエナジーマーカーE-100(プレイマット&カードセット限定01)。スニダン商品画像(apparels/771370)。",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/trading-cards/apparels/771370",
+        "psaPop": ""
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-06-22T16:37:52.327+09:00",
+          "p10": 210000,
+          "p9": null,
+          "rawA": 75000,
+          "rawB": null,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": 100,
+          "currency": "JPY",
+          "src": "【scout発掘2026-06-22】価格=スニダン直近3約定中央値(実売). rate10=proxy格付率100%(PSA10:15/PSA9:0・全PSA約定中PSA10割合・cert未実測だがマーカーは状態難なし＝proxy信頼度高). edge=0.85p10で+¥77k・70%でも+¥48k＝rate10非感応で堅牢→invest. p9/raw n少は保守null.",
+          "stale": false,
+          "alert": null,
+          "p10n": 15,
+          "rawAn": 12
+        }
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": null,
+          "soldMedianUSD": null,
+          "n": 60,
+          "days": 90,
+          "at": "2026-06-22",
+          "src": "eBay該当薄=別物混在(中央値0.19×p10)・JP限定マーカーで国内優位＝海外裁定なし(需要シグナルとしては国内集中)"
+        }
+      }
+    },
+    {
+      "id": "pk-m2a-250-mega-kairyu-mur",
+      "game": "pokemon",
+      "name": "メガカイリューex MUR",
+      "number": "M2a 250/193",
+      "variant": "High Class Pack「MEGAドリームex」MUR",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/20251127022852-0.webp",
+      "imageNote": "メガカイリューex MUR(MEGAドリームex・M2a 250)。スニダン商品画像(apparels/730968)。既存pk-m2a-246はSAR(別レアリティ)。",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/trading-cards/apparels/730968",
+        "psaPop": ""
+      },
+      "watch": true,
+      "invest": false,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-06-22T16:37:52.327+09:00",
+          "p10": 92990,
+          "p9": null,
+          "rawA": 47000,
+          "rawB": null,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": 77.8,
+          "currency": "JPY",
+          "src": "【scout発掘2026-06-22】価格=スニダン直近3約定中央値(実売). rate10=proxy格付率77.8%(PSA10:28/PSA9:8・cert未実測・MURは格付bias上振れ傾向). edge=proxyで+¥7.6kだが真70%だと+¥0.9k＝rate10感応＝cert実測まで watch止め(invest保留). p9 n8は保守null.",
+          "stale": false,
+          "alert": null,
+          "p10n": 28,
+          "rawAn": 5
+        }
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 129040,
+          "soldMedianUSD": null,
+          "n": 13,
+          "days": 90,
+          "at": "2026-06-22",
+          "src": "eBay sold(英名+型番250一致・1.39×=海外需要厚い・裁定余地)"
+        }
+      }
+    },
+    {
+      "id": "pk-svp-098-detective-pikachu",
+      "game": "pokemon",
+      "name": "名探偵ピカチュウ",
+      "number": "SV-P 098",
+      "variant": "SV-Pプロモ",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/20230823022422-0.webp",
+      "imageNote": "名探偵ピカチュウ プロモ(SV-P 098)。スニダン商品画像(apparels/135232)。",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/trading-cards/apparels/135232",
+        "psaPop": ""
+      },
+      "watch": true,
+      "invest": false,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-06-22T16:37:52.327+09:00",
+          "p10": 61800,
+          "p9": null,
+          "rawA": 33800,
+          "rawB": null,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": 86.1,
+          "currency": "JPY",
+          "src": "【scout発掘2026-06-22】価格=スニダン直近3約定中央値(実売). rate10=proxy格付率86.1%(PSA10:31/PSA9:5・旧定番プロモでproxy信頼度中〜高). edge=proxyで+¥3.2k＝薄い→watch止め(invest保留). p9 n5は保守null.",
+          "stale": false,
+          "alert": null,
+          "p10n": 31,
+          "rawAn": 16
+        }
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 76618,
+          "soldMedianUSD": null,
+          "n": 60,
+          "days": 90,
+          "at": "2026-06-22",
+          "src": "eBay sold(Detective一致・1.24×)"
         }
       }
     }

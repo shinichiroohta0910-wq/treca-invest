@@ -241,7 +241,7 @@
     <summary>📖 各指標の読み方・使い方</summary>
     <div class="shelp-body">
       <p>各カードを「<b>素体で買って → PSA10鑑定 → 売却</b>」した場合の<b>1枚あたり期待利益（EV）</b>で並べています。左上＝少額×高EVの妙味。</p>
-      <p class="shh">色（ティア）と散布図 ・ <b style="color:var(--accent)">点をタップで詳細へ</b></p>
+      <p class="shh">色（ティア）と散布図 ・ <b style="color:var(--accent)">点をタップで仕入れ候補に追加</b></p>
       <ul>
         <li><span class="dot" style="background:#39d98a"></span><b>本命</b>＝高EV×高率×流動的。素直に拾える</li>
         <li><span class="dot" style="background:#4aa8ff"></span><b>妙味</b>＝バランス型</li>
@@ -273,7 +273,7 @@
     </div>
   </details>
   <svg id="scoutScatter" class="scatter" viewBox="0 0 320 150" preserveAspectRatio="xMidYMid meet"></svg>
-  <p class="shh" style="text-align:center;margin:-2px 0 6px;color:var(--accent)">● 点をタップでそのカードの詳細へ（左上ほど妙味）</p>
+  <p class="shh" style="text-align:center;margin:-2px 0 6px;color:var(--accent)">● 点をタップで仕入れ候補に＋1（左上ほど妙味／詳細は下のリストから）</p>
   <div class="slegend">
     <span><i style="background:#39d98a"></i>本命（高EV×高率×流動）</span>
     <span><i style="background:#4aa8ff"></i>妙味</span>
@@ -887,7 +887,7 @@ function drawScoutScatter(rows){
     const on = scoutBasket.has(r.c.id);
     const stroke = on ? '#ffffff' : (r.hasFloor ? 'rgba(255,255,255,.75)' : 'none');
     const sw = on ? 1.6 : (r.hasFloor ? 1.2 : 0);
-    s += `<circle cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="${rad.toFixed(1)}" fill="${SCOUT_HEX[r.tier]}" fill-opacity="${on?0.95:0.5}" stroke="${stroke}" stroke-width="${sw}" class="spt" style="cursor:pointer" onclick="showDetail('${escAttr(r.c.id)}')"><title>${escHtml(r.c.name)}：EV${signYen(r.buyEV)} / ROI${Math.round(r.roi*100)}% / 確実性${r.rel!=null?r.rel:'?'} / 投下${yen(r.cost)}${r.hasFloor?' / 買取床あり':''}</title></circle>`;
+    s += `<circle cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="${rad.toFixed(1)}" fill="${SCOUT_HEX[r.tier]}" fill-opacity="${on?0.95:0.5}" stroke="${stroke}" stroke-width="${sw}" class="spt" style="cursor:pointer" onclick="scoutQty('${escAttr(r.c.id)}',1)"><title>${escHtml(r.c.name)}：EV${signYen(r.buyEV)} / ROI${Math.round(r.roi*100)}% / 確実性${r.rel!=null?r.rel:'?'} / 投下${yen(r.cost)}${r.hasFloor?' / 買取床あり':''}</title></circle>`;
   });
   svg.innerHTML = s;
 }

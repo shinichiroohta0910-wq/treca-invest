@@ -4,8 +4,8 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床{店舗名・買取価格}/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-22T09:03:10.774+09:00",
-  "updatedBy": "treca-market-update v1.2 2026-06-22: 全64枚スニダン価格リフレッシュ(直近3約定中央値). ヤマトST09▲27%・ルフィG5は4100ゴミ約定除外で39999安定・フクオカP+は同apparel異版440k群を除外し識別子一致47k採用. POP/rate10は6/20cert実測継承(緩変動)・eBay需要は6/19継承.",
+  "updatedAt": "2026-06-22T10:18:38.740+09:00",
+  "updatedBy": "treca-market-update 2026-06-22: ゴッホ展ピカチュウ(SVP-EN 085/apparels146897)を新規追加(PSA10¥514k/PSA9¥155k/素体A¥228k・n10:22/n9:14). Shin保有はPSA9=¥155k。無印PSA判定シートからの取り込み。",
   "games": [
     {
       "id": "onepiece",
@@ -6689,6 +6689,41 @@ const TRECA_DATA = {
           "src": "eBay markup変更(SPA s-card)で今回取得不可。JP promo=国内優位想定。次回「需要更新して」で再取得"
         }
       }
+    },
+    {
+      "id": "pk-svp-en-085-goho-pikachu",
+      "game": "pokemon",
+      "name": "ピカチュウ（ゴッホ展）",
+      "number": "SVP-EN 085",
+      "variant": "ゴッホ美術館プロモ(Pikachu with Grey Felt Hat)",
+      "lang": "ja",
+      "image": null,
+      "imageNote": "ゴッホ展/Van Gogh Museumピカチュウ。画像API未収録→スニダン商品画像URL手貼り可",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/trading-cards/apparels/146897",
+        "psaPop": ""
+      },
+      "watch": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-06-22T10:18:38.740+09:00",
+          "p10": 514000,
+          "p9": 155000,
+          "rawA": 228000,
+          "rawB": 119000,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": null,
+          "currency": "JPY",
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用,2026-06-22,apparels/146897). PSA9 n14は¥152-158kに密集し堅い. 素体A(n4)>PSA9はPSA10上振れ期待のプレミアム(本札PSA10¥514k). rate10未測(保有はPSA9確定のため任意).",
+          "stale": false,
+          "alert": null,
+          "p10n": 22,
+          "rawAn": 4
+        }
+      ],
+      "signals": {}
     }
   ]
 };

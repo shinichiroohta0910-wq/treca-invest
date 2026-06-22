@@ -6697,8 +6697,8 @@ const TRECA_DATA = {
       "number": "SVP-EN 085",
       "variant": "ゴッホ美術館プロモ(Pikachu with Grey Felt Hat)",
       "lang": "ja",
-      "image": null,
-      "imageNote": "ゴッホ展/Van Gogh Museumピカチュウ。画像API未収録→スニダン商品画像URL手貼り可",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/20240221105626-0.webp",
+      "imageNote": "ゴッホ展/Van Gogh Museumピカチュウ。スニダン商品画像(apparels/146897・背景除去)。",
       "links": {
         "snkrdunk": "https://snkrdunk.com/trading-cards/apparels/146897",
         "psaPop": ""

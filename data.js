@@ -4,8 +4,8 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床{店舗名・買取価格}/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-22T10:18:38.740+09:00",
-  "updatedBy": "treca-market-update 2026-06-22: ゴッホ展ピカチュウ(SVP-EN 085/apparels146897)を新規追加(PSA10¥514k/PSA9¥155k/素体A¥228k・n10:22/n9:14). Shin保有はPSA9=¥155k。無印PSA判定シートからの取り込み。",
+  "updatedAt": "2026-06-22T10:40:32.044+09:00",
+  "updatedBy": "treca-market-update 2026-06-22: eBay需要シグナルを英名+型番で再取得(58枚走査・書込ゲート0.5〜3×p10)。43枚更新/15枚carry(版混在・薄商い)。同番異版7枚(P-001×3/OP02-059×2/FB06-119×2)は走査対象外。価格(snapshots)は不変。",
   "games": [
     {
       "id": "onepiece",
@@ -722,12 +722,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 168358,
+          "soldMedianJPY": 163888,
           "soldMedianUSD": null,
-          "n": 8,
+          "n": 10,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         },
         "buyback": {
           "shop": "トレカバンク",
@@ -845,12 +845,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 72621,
+          "soldMedianJPY": 65327,
           "soldMedianUSD": null,
-          "n": 60,
+          "n": 59,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         }
       }
     },
@@ -962,12 +962,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 78797,
+          "soldMedianJPY": 80650,
           "soldMedianUSD": null,
-          "n": 58,
+          "n": 57,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         },
         "buyback": {
           "shop": "トレカバンク",
@@ -1085,12 +1085,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 80527,
+          "soldMedianJPY": 98393,
           "soldMedianUSD": null,
-          "n": 56,
+          "n": 51,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         }
       }
     },
@@ -1202,12 +1202,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 48412,
+          "soldMedianJPY": 45606,
           "soldMedianUSD": null,
-          "n": 47,
+          "n": 58,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         },
         "buyback": {
           "shop": "トレカバンク",
@@ -1325,12 +1325,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 28401,
+          "soldMedianJPY": 27824,
           "soldMedianUSD": null,
-          "n": 53,
+          "n": 43,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         }
       }
     },
@@ -1442,12 +1442,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 29518,
+          "soldMedianJPY": 28387,
           "soldMedianUSD": null,
-          "n": 58,
+          "n": 53,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         },
         "buyback": {
           "shop": "トレカバンク",
@@ -1565,12 +1565,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 32276,
+          "soldMedianJPY": 22580,
           "soldMedianUSD": null,
-          "n": 15,
+          "n": 17,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         }
       }
     },
@@ -1682,12 +1682,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 90858,
+          "soldMedianJPY": 92630,
           "soldMedianUSD": null,
-          "n": 40,
+          "n": 52,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         },
         "buyback": {
           "shop": "トレカバンク",
@@ -1805,12 +1805,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 161380,
+          "soldMedianJPY": 186500,
           "soldMedianUSD": null,
-          "n": 44,
+          "n": 10,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         },
         "buyback": {
           "shop": "トレカバンク",
@@ -1928,12 +1928,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 12787,
+          "soldMedianJPY": 12164,
           "soldMedianUSD": null,
-          "n": 47,
+          "n": 31,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         }
       }
     },
@@ -2045,12 +2045,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 9588,
+          "soldMedianJPY": 8872,
           "soldMedianUSD": null,
-          "n": 22,
+          "n": 47,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         }
       }
     },
@@ -2162,12 +2162,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 9198,
+          "soldMedianJPY": 8872,
           "soldMedianUSD": null,
-          "n": 30,
+          "n": 18,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         }
       }
     },
@@ -2279,12 +2279,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 19163,
+          "soldMedianJPY": 20163,
           "soldMedianUSD": null,
-          "n": 60,
+          "n": 37,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         }
       }
     },
@@ -2396,12 +2396,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 17307,
+          "soldMedianJPY": 15485,
           "soldMedianUSD": null,
           "n": 60,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         }
       }
     },
@@ -2513,12 +2513,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 6213,
+          "soldMedianJPY": 6371,
           "soldMedianUSD": null,
           "n": 60,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         }
       }
     },
@@ -2864,12 +2864,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 48414,
+          "soldMedianJPY": 41938,
           "soldMedianUSD": null,
           "n": 60,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         }
       }
     },
@@ -2952,12 +2952,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 14803,
+          "soldMedianJPY": 15324,
           "soldMedianUSD": null,
-          "n": 54,
+          "n": 36,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         }
       }
     },
@@ -3069,12 +3069,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 34616,
+          "soldMedianJPY": 39519,
           "soldMedianUSD": null,
-          "n": 48,
+          "n": 59,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         }
       }
     },
@@ -3186,12 +3186,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 52448,
+          "soldMedianJPY": 52099,
           "soldMedianUSD": null,
           "n": 60,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         }
       }
     },
@@ -3420,12 +3420,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 77462,
+          "soldMedianJPY": 64601,
           "soldMedianUSD": null,
           "n": 60,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         }
       }
     },
@@ -3537,12 +3537,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 116745,
+          "soldMedianJPY": 116679,
           "soldMedianUSD": null,
           "n": 60,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         }
       }
     },
@@ -3771,12 +3771,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 64552,
+          "soldMedianJPY": 62504,
           "soldMedianUSD": null,
-          "n": 47,
+          "n": 48,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         }
       }
     },
@@ -4131,12 +4131,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 32518,
+          "soldMedianJPY": 57821,
           "soldMedianUSD": null,
-          "n": 31,
+          "n": 60,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         }
       }
     },
@@ -4221,12 +4221,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 24207,
+          "soldMedianJPY": 33469,
           "soldMedianUSD": null,
-          "n": 38,
+          "n": 30,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         }
       }
     },
@@ -4491,12 +4491,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 166418,
+          "soldMedianJPY": 161783,
           "soldMedianUSD": null,
-          "n": 57,
+          "n": 60,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         }
       }
     },
@@ -4581,12 +4581,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 32654,
+          "soldMedianJPY": 32664,
           "soldMedianUSD": null,
-          "n": 60,
+          "n": 34,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         }
       }
     },
@@ -4671,12 +4671,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 58286,
+          "soldMedianJPY": 80167,
           "soldMedianUSD": null,
-          "n": 59,
+          "n": 60,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         }
       }
     },
@@ -4761,12 +4761,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 62938,
+          "soldMedianJPY": 28227,
           "soldMedianUSD": null,
-          "n": 21,
+          "n": 36,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(完了済・海外セラー円建て)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         }
       }
     },
@@ -4851,12 +4851,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 105211,
+          "soldMedianJPY": 106458,
           "soldMedianUSD": null,
-          "n": 62,
+          "n": 41,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         }
       }
     },
@@ -4941,12 +4941,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 126997,
+          "soldMedianJPY": 140406,
           "soldMedianUSD": null,
-          "n": 6,
+          "n": 60,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(完了済・海外セラー円建て)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         },
         "buyback": {
           "shop": "トレカバンク",
@@ -5127,12 +5127,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 52020,
+          "soldMedianJPY": 41132,
           "soldMedianUSD": null,
-          "n": 46,
+          "n": 33,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         }
       }
     },
@@ -5217,12 +5217,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 50431,
+          "soldMedianJPY": 63110,
           "soldMedianUSD": null,
-          "n": 78,
+          "n": 58,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         }
       }
     },
@@ -5307,12 +5307,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 50835,
+          "soldMedianJPY": 48390,
           "soldMedianUSD": null,
-          "n": 49,
+          "n": 44,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         }
       }
     },
@@ -5397,12 +5397,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 109093,
+          "soldMedianJPY": 116298,
           "soldMedianUSD": null,
-          "n": 54,
+          "n": 60,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         }
       }
     },
@@ -5487,12 +5487,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 121842,
+          "soldMedianJPY": 119766,
           "soldMedianUSD": null,
-          "n": 46,
+          "n": 38,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         },
         "buyback": {
           "shop": "トレカバンク",
@@ -5673,12 +5673,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 104895,
+          "soldMedianJPY": 141056,
           "soldMedianUSD": null,
-          "n": 7,
+          "n": 4,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(完了済・同一originfetch・型番一致中央値)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         }
       }
     },
@@ -5763,12 +5763,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 30663,
+          "soldMedianJPY": 27784,
           "soldMedianUSD": null,
-          "n": 60,
+          "n": 54,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(同一originfetch・対スニダン+18%)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         },
         "buyback": {
           "shop": "トレカバンク",
@@ -5859,12 +5859,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": 36919,
+          "soldMedianJPY": 33708,
           "soldMedianUSD": null,
-          "n": 34,
+          "n": 30,
           "days": 90,
-          "at": "2026-06-19",
-          "src": "eBay sold(同一originfetch・対スニダン-38%=国内優位)"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         }
       }
     },
@@ -6373,12 +6373,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": null,
+          "soldMedianJPY": 54036,
           "soldMedianUSD": null,
-          "n": null,
+          "n": 43,
           "days": 90,
-          "at": "2026-06-20",
-          "src": "eBay markup変更(SPA s-card)で今回取得不可。JP promo=国内優位想定。次回「需要更新して」で再取得"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         }
       }
     },
@@ -6450,12 +6450,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": null,
+          "soldMedianJPY": 80648,
           "soldMedianUSD": null,
-          "n": null,
+          "n": 59,
           "days": 90,
-          "at": "2026-06-20",
-          "src": "eBay markup変更(SPA s-card)で今回取得不可。JP promo=国内優位想定。次回「需要更新して」で再取得"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         }
       }
     },
@@ -6604,12 +6604,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "soldMedianJPY": null,
+          "soldMedianJPY": 76618,
           "soldMedianUSD": null,
-          "n": null,
+          "n": 60,
           "days": 90,
-          "at": "2026-06-20",
-          "src": "eBay markup変更(SPA s-card)で今回取得不可。JP promo=国内優位想定。次回「需要更新して」で再取得"
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
         }
       }
     },
@@ -6723,7 +6723,16 @@ const TRECA_DATA = {
           "rawAn": 4
         }
       ],
-      "signals": {}
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 473670,
+          "soldMedianUSD": null,
+          "n": 43,
+          "days": 90,
+          "at": "2026-06-22",
+          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
+        }
+      }
     }
   ]
 };

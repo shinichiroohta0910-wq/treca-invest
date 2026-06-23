@@ -214,6 +214,27 @@
   .shelp-body .ring{display:inline-block;width:8px;height:8px;border-radius:50%;border:1.5px solid rgba(255,255,255,.8);margin-right:3px;vertical-align:1px}
   .shelp-body .shnote{font-size:.68rem;margin-top:9px;opacity:.85}
   .foot{margin-top:20px;color:#5a6571;font-size:.68rem;text-align:center;line-height:1.6}
+  /* ===== 🩺 戦略タブ ===== */
+  .t-up{color:var(--accent)} .t-down{color:var(--bad)} .t-whip{color:var(--warn)} .t-flat{color:var(--muted)} .t-raw{color:#5a6571}
+  .strat-alert{display:flex;gap:9px;align-items:flex-start;padding:10px 12px;border-radius:11px;margin-bottom:8px;border:1px solid var(--line);background:var(--panel)}
+  .strat-alert .sa-ic{font-size:1.1rem;flex:none;line-height:1.35}
+  .strat-alert .sa-tt{font-size:.84rem;font-weight:700;margin-bottom:2px;line-height:1.3}
+  .strat-alert .sa-bd{font-size:.74rem;color:var(--muted);line-height:1.55}
+  .strat-alert.up{border-color:rgba(57,217,138,.32);background:rgba(57,217,138,.07)}
+  .strat-alert.down{border-color:rgba(255,107,107,.32);background:rgba(255,107,107,.07)}
+  .gcap-row{display:flex;align-items:center;gap:8px;margin-bottom:7px;font-size:.78rem}
+  .gc-bar-wrap{flex:1;background:var(--panel2);border-radius:5px;height:10px;overflow:hidden}
+  .gc-bar{height:100%;border-radius:5px;transition:width .4s}
+  .mover{display:flex;align-items:center;gap:10px;padding:8px 11px;border:1px solid var(--line);border-radius:11px;margin-bottom:6px;cursor:pointer;background:var(--panel)}
+  .mover:hover{border-color:var(--accent2)}
+  .mover .mv-main{flex:1;min-width:0}
+  .mover .mv-name{font-size:.8rem;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .mover .mv-sub{font-size:.66rem;color:var(--muted);margin-top:1px}
+  .mover .mspark{width:96px;height:30px;flex:none}
+  .mover .mv-net{font-size:.86rem;font-weight:700;flex:none;text-align:right;min-width:50px}
+  .tl-row{display:flex;gap:10px;font-size:.8rem;padding:7px 0;border-bottom:1px solid var(--line);line-height:1.5}
+  .tl-row:last-child{border-bottom:none}
+  .tl-row .tl-d{color:var(--txt);font-weight:600;flex:none;min-width:92px}
 </style>
 </head>
 <body>
@@ -386,6 +407,13 @@
   <div class="foot">© Shin経営システム ／ CFO・CTO共有ツール。相場は data.js（Claudeが更新）、ポジションはこの端末内のみ。判定は意思決定補助であり結果を保証しない。</div>
 </section>
 
+<!-- ============ 🩺 戦略（ポートフォリオ・ドクター） ============ -->
+<section id="view-strategy" class="view">
+  <h1>🩺 戦略 <span class="sub" style="font-weight:400">ポートフォリオ・ドクター</span></h1>
+  <div class="sub">保有在庫を一望して「次の一手」を提示。相場モメンタム × 含み損益 × 買取床 × 鑑定スケジュール。</div>
+  <div id="strategyBody" style="margin-top:14px"></div>
+</section>
+
 <!-- ============ ポジション フォーム（モーダル風オーバーレイ） ============ -->
 <section id="view-posform" class="view">
   <button class="backbtn" onclick="closePosForm()">‹ 戻る</button>
@@ -424,6 +452,7 @@
   <button class="tab on" data-tab="watch" onclick="showTab('watch')"><span class="ico">📊</span>ウォッチ</button>
   <button class="tab" data-tab="scout" onclick="showTab('scout')"><span class="ico">🎯</span>スカウト</button>
   <button class="tab" data-tab="portfolio" onclick="showTab('portfolio')"><span class="ico">💼</span>在庫</button>
+  <button class="tab" data-tab="strategy" onclick="showTab('strategy')"><span class="ico">🩺</span>戦略</button>
   <button class="tab" data-tab="ledger" onclick="showTab('ledger')"><span class="ico">📒</span>台帳</button>
   <button class="tab" data-tab="settings" onclick="showTab('settings')"><span class="ico">⚙️</span>設定</button>
 </nav>
@@ -893,6 +922,91 @@ function drawScoutScatter(rows){
 }
 
 /* =====================================================================
+   相場モメンタム・エンジン（🩺 戦略タブの下敷き）
+   「価格推移ダッシュボード_20260622」の net/range/dc/trend を本体化したもの。
+   snapshots の p10/rawA を生系列（同日複数約定も各1点＝ダッシュボードと同一基準）で扱い、
+   純変化率 net・値幅 range(=(max−min)/平均)・方向反転回数 dc を出し、
+   トレンド（上昇/下落/乱高下/安定/素体プレイ）と急騰急落・希薄化を判定する。
+   ===================================================================== */
+function seriesStats(arr){
+  const n = arr.length;
+  if(n < 2) return {n, net:0, range:0, dc:0, first:(n?arr[0]:null), last:(n?arr[0]:null)};
+  const first=arr[0], last=arr[n-1];
+  const mn=Math.min(...arr), mx=Math.max(...arr);
+  const mean=arr.reduce((s,v)=>s+v,0)/n;
+  const net   = first>0 ? (last-first)/first*100 : 0;
+  const range = mean>0 ? (mx-mn)/mean*100 : 0;
+  let dc=0, prev=0;
+  for(let i=1;i<n;i++){
+    const diff=arr[i]-arr[i-1];
+    if(diff===0) continue;
+    const sgn = diff>0 ? 1 : -1;
+    if(prev!==0 && sgn!==prev) dc++;
+    prev=sgn;
+  }
+  return {n, net, range, dc, first, last};
+}
+function cardSeries(card){
+  const snaps = Array.isArray(card && card.snapshots) ? card.snapshots : [];
+  const pick = key => snaps.map(s=> (s && s[key]!=null && !isNaN(s[key])) ? Number(s[key]) : null).filter(v=>v!=null);
+  const p10arr=pick("p10"), rawarr=pick("rawA"), ratearr=pick("rate10");
+  const p=seriesStats(p10arr), r=seriesStats(rawarr);
+  return {
+    p10n:p.n, rawAn:r.n, p10series:p10arr, rawAseries:rawarr,
+    net:p.net, range:p.range, dc:p.dc, p10First:p.first, p10Last:p.last,
+    rawNet:r.net, rawFirst:r.first, rawLast:r.last,
+    rate10First: ratearr.length?ratearr[0]:null,
+    rate10Last:  ratearr.length?ratearr[ratearr.length-1]:null,
+    rate10Delta: ratearr.length>=2 ? (ratearr[ratearr.length-1]-ratearr[0]) : 0,
+    enough: p.n>=3
+  };
+}
+const TREND_HEX = {down:"#ff6b6b", whip:"#ffb454", up:"#39d98a", flat:"#9aa3ab", raw:"#5a6571"};
+const TREND_CLS = {down:"t-down", whip:"t-whip", up:"t-up", flat:"t-flat", raw:"t-raw"};
+// トレンド分類。閾値は価格推移ダッシュボード trend() に準拠。
+// dc は素直な反転回数（同ツールのdc定義は最初の振れを除外＝本体比-1のため、whipのdc閾値は 3 で等価）。
+function cardTrend(card){
+  const s = cardSeries(card);
+  const snap = latestSnap(card);
+  if(s.p10n < 2 || (snap && snap.stale)) return {k:"raw", label:"素体プレイ"};
+  const net=s.net, range=s.range, dc=s.dc;
+  if(net<=-15) return {k:"down", label:"下落"};
+  if(net>= 15) return {k:"up",   label:"上昇"};
+  if(range>=30 && dc>=3) return {k:"whip", label:"乱高下"};
+  if(range>=40)          return {k:"whip", label:"乱高下"};
+  if(net<=-6) return {k:"down", label:"じり安"};
+  if(net>= 6) return {k:"up",   label:"じり高"};
+  return {k:"flat", label:"安定"};
+}
+function cardSignals(card){
+  const s = cardSeries(card);
+  const snap = latestSnap(card);
+  const t = cardTrend(card);
+  const alert = (snap && snap.alert) ? String(snap.alert) : "";
+  let spike=null;
+  if(alert.indexOf("急騰")>=0) spike="up";
+  else if(alert.indexOf("急落")>=0) spike="down";
+  else if(s.enough && s.net>=15) spike="up";
+  else if(s.enough && s.net<=-15) spike="down";
+  // 希薄化＝PSA10率が時系列で3pt以上低下（POP増で希少性が薄れる）
+  const dilution = (s.rate10First!=null && s.rate10Last!=null && s.rate10Delta<=-3);
+  return {trend:t, k:t.k, spike, dilution, enough:s.enough,
+          net:s.net, rawNet:s.rawNet, rate10Delta:s.rate10Delta,
+          series:s.p10series, n:s.p10n, alert};
+}
+// 小型インラインSVGスパーク（モメンタムボード用・spark()移植・依存ゼロ）
+function miniSpark(series, hex, w, h){
+  w=w||108; h=h||30;
+  const vs=(series||[]).filter(v=>v!=null);
+  if(vs.length<2) return `<svg class="mspark" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none"></svg>`;
+  const n=vs.length, mn=Math.min(...vs), mx=Math.max(...vs), pad=3;
+  const sx=i=> (pad+(n<=1?0:i/(n-1))*(w-2*pad));
+  const sy=v=>{ const r=mx===mn?.5:(v-mn)/(mx-mn); return h-pad-r*(h-2*pad); };
+  const path=vs.map((v,k)=>(k?"L":"M")+sx(k).toFixed(1)+" "+sy(v).toFixed(1)).join(" ");
+  return `<svg class="mspark" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none"><path d="${path}" fill="none" stroke="${hex}" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="${sx(n-1).toFixed(1)}" cy="${sy(vs[n-1]).toFixed(1)}" r="2.2" fill="${hex}"/></svg>`;
+}
+
+/* =====================================================================
    詳細画面
    ===================================================================== */
 let detailCardId = null;
@@ -1290,6 +1404,204 @@ function updateGradingName(i,v){ settings().gradingPlans[i].name=v; persist(); }
 function updateGradingCost(i,v){ settings().gradingPlans[i].costPerCard=parseFloat(v)||0; persist(); refreshAll(); }
 function removeGradingPlan(i){ const g=settings().gradingPlans; if(g.length<=1){toast("最後の1プランは消せません");return;} g.splice(i,1); persist(); renderSettings(); refreshAll(); }
 function addGradingPlan(){ settings().gradingPlans.push({id:"gp"+Date.now().toString(36), name:"新プラン", costPerCard:11990}); persist(); renderSettings(); }
+
+/* =====================================================================
+   🩺 戦略タブ（ポートフォリオ・ドクター）
+   保有在庫を一望し「次の一手」を提示する。相場モメンタム（cardSignals）×
+   含み損益（pos*）×買取床（evalCard）×鑑定スケジュール（note）を横断。
+   既存の評価関数を呼ぶので、サマリーは在庫・台帳タブと数値が一致する。
+   ===================================================================== */
+function parseSubmitDate(note){
+  if(!note) return null;
+  const m=String(note).match(/(\d{1,2})\s*\/\s*(\d{1,2})\s*(?:提出|送付|発送)/);
+  if(!m) return null;
+  const mm=+m[1], dd=+m[2];
+  const now=new Date(); let y=now.getFullYear();
+  if(mm > now.getMonth()+1) y-=1;             // 指定月が未来＝昨年の提出とみなす保険
+  const dt=new Date(y, mm-1, dd);
+  return isNaN(dt)?null:dt;
+}
+// 戦略タブの表示名（同名カードを variant/number で区別）
+function posLabel(p){
+  const c = posCard(p);
+  const sub = c ? (c.variant || c.number) : null;
+  return posName(p) + (sub?`（${String(sub).slice(0,16)}）`:"");
+}
+function cardLabel(c){
+  const sub = c ? (c.variant || c.number) : null;
+  return (c?c.name:"") + (sub?`（${String(sub).slice(0,16)}）`:"");
+}
+function renderStrategy(){
+  const bodyEl = $("strategyBody");
+  if(!bodyEl) return;
+  const positions = store.positions || [];
+  const active = positions.filter(p=>p.status && p.status!=="sold");
+  const sold   = positions.filter(p=>p.status==="sold");
+
+  /* ---------- サマリー（既存pos関数で算出＝在庫/台帳と一致） ---------- */
+  let totalInvest=0, totalUnreal=0, realized=0, unrealKnown=false;
+  active.forEach(p=>{
+    totalInvest += posInvested(p);
+    const c=posCard(p);
+    if(HAS_DATA && c && latestSnap(c)){ totalUnreal += posUnrealized(p); unrealKnown=true; }
+  });
+  sold.forEach(p=>{ realized += posNetProfit(p); });
+
+  // ゲーム別の資本集中
+  const gameCap={};
+  active.forEach(p=>{ const c=posCard(p); const gid=c?c.game:"_other"; gameCap[gid]=(gameCap[gid]||0)+posInvested(p); });
+  const gameRows=Object.entries(gameCap).sort((a,b)=>b[1]-a[1]);
+  const maxGameCap=gameRows.length?gameRows[0][1]:1;
+  // 単一カードの最大集中
+  const cardCap={};
+  active.forEach(p=>{ const k=posName(p); cardCap[k]=(cardCap[k]||0)+posInvested(p); });
+  const topCard=Object.entries(cardCap).sort((a,b)=>b[1]-a[1])[0]||null;
+  const topCardShare=totalInvest>0&&topCard?Math.round(topCard[1]/totalInvest*100):0;
+
+  const summaryHTML = `
+    <div class="stat-grid">
+      <div class="stat"><div class="n">${yen(totalInvest)}</div><div class="s">投下資本（在庫）</div></div>
+      <div class="stat"><div class="n ${unrealKnown?(totalUnreal>0?'good':totalUnreal<0?'bad':''):''}">${unrealKnown?signYen(totalUnreal):"—"}</div><div class="s">含み損益（推定）</div></div>
+      <div class="stat"><div class="n ${realized>0?'good':realized<0?'bad':''}">${signYen(realized)}</div><div class="s">実現損益（累計）</div></div>
+    </div>
+    <div class="card panel">
+      <h3>資本の偏り（ゲーム別）</h3>
+      ${gameRows.length? gameRows.map(([gid,cap])=>{
+        const g=gameById(gid==="_other"?"":gid);
+        const pct=totalInvest>0?Math.round(cap/totalInvest*100):0;
+        const w=maxGameCap>0?Math.round(cap/maxGameCap*100):0;
+        const nm=gid==="_other"?"その他/リスト外":g.name, col=gid==="_other"?"#9aa3ab":g.color;
+        return `<div class="gcap-row"><span style="min-width:72px">${escHtml(nm)}</span><span class="gc-bar-wrap"><span class="gc-bar" style="width:${w}%;background:${col}"></span></span><span style="min-width:92px;text-align:right">${yen(cap)} <span class="sub">${pct}%</span></span></div>`;
+      }).join("") : `<div class="sub">在庫なし</div>`}
+      ${topCard?`<div class="hint">最大の単一集中：<b style="color:var(--txt)">${escHtml(topCard[0])}</b>（投下の${topCardShare}%）。${topCardShare>=30?"⚠️ 1枚に資本が寄っている＝値崩れ時の影響大。":"分散は概ね健全。"}</div>`:""}
+    </div>`;
+
+  /* ---------- 次の一手（アラート） ---------- */
+  const alerts=[];
+  // 1) 含み損の放置（graded で時価<原価）
+  active.filter(p=>p.status==="graded").forEach(p=>{
+    const c=posCard(p); if(!(HAS_DATA&&c&&latestSnap(c)))return;
+    const ue=posUnrealized(p);
+    if(ue<-1000) alerts.push({sev:3e6+(-ue), cls:"down", icon:"📉",
+      title:`${posLabel(p)}：含み損 ${signYen(ue)}`,
+      body:"グレード済みで時価が原価を下回って滞留中。損切りラインか保有方針を再判断。"});
+  });
+  // 2) 急騰・急落（カード単位で1回・同カードの保有ポジは含み益を合算）
+  const sumUnrealById = id => active.filter(q=>{const qc=posCard(q);return qc&&qc.id===id;}).reduce((s,q)=>s+posUnrealized(q),0);
+  const seenSpike=new Set();
+  active.forEach(p=>{
+    const c=posCard(p); if(!(HAS_DATA&&c&&latestSnap(c)))return;
+    if(seenSpike.has(c.id))return;
+    const sig=cardSignals(c);
+    if(!sig.spike)return;
+    seenSpike.add(c.id);
+    const ueAll=sumUnrealById(c.id);
+    if(sig.spike==="up"){
+      alerts.push({sev:2.5e6+Math.abs(sig.net)*1e3, cls:"up", icon:"🚀",
+        title:`${cardLabel(c)}：急騰 ${sig.net>0?"+":""}${sig.net.toFixed(0)}%`,
+        body:`${sig.alert?escHtml(sig.alert)+"。":""}${unrealKnown&&ueAll>0?`含み益 ${signYen(ueAll)} の利確好機。`:"利確タイミングを意識。"}`});
+    } else {
+      alerts.push({sev:2.4e6+Math.abs(sig.net)*1e3, cls:"down", icon:"⚠️",
+        title:`${cardLabel(c)}：急落 ${sig.net.toFixed(0)}%`,
+        body:`${sig.alert?escHtml(sig.alert)+"。":""}早めの出口か、底値圏での方針確認を。`});
+    }
+  });
+  // 3) 売り時シグナル（含み益＋買取床が太い・カード単位）
+  const seenSell=new Set();
+  active.filter(p=>p.status==="graded"||p.status==="listed").forEach(p=>{
+    const c=posCard(p); if(!(HAS_DATA&&c&&latestSnap(c)))return;
+    if(seenSell.has(c.id))return; seenSell.add(c.id);
+    const e=evalCard(c,0);
+    const ueAll=active.filter(q=>{const qc=posCard(q);return qc&&qc.id===c.id&&(q.status==="graded"||q.status==="listed");}).reduce((s,q)=>s+posUnrealized(q),0);
+    if(ueAll>0 && e.buybackPct!=null && e.buybackPct>=0.7){
+      alerts.push({sev:2e6+ueAll, cls:"", icon:"💰",
+        title:`${cardLabel(c)}：売り時（買取床${Math.round(e.buybackPct*100)}%）`,
+        body:`含み益 ${signYen(ueAll)}。ショップ買取が相場の${Math.round(e.buybackPct*100)}%＝出口が太い。利確の有力候補。`});
+    }
+  });
+  // 4) PSA10率の希薄化（graded/grading・カード単位）
+  const seenDil=new Set();
+  active.filter(p=>p.status==="graded"||p.status==="grading").forEach(p=>{
+    const c=posCard(p); if(!(HAS_DATA&&c&&latestSnap(c)))return;
+    if(seenDil.has(c.id))return; seenDil.add(c.id);
+    const sig=cardSignals(c);
+    if(sig.dilution) alerts.push({sev:1e6+Math.abs(sig.rate10Delta)*1e3, cls:"", icon:"🧊",
+      title:`${cardLabel(c)}：PSA10率が低下 ${sig.rate10Delta.toFixed(0)}pt`,
+      body:"POP増加でPSA10の希少性が薄れつつある。鑑定中なら早期出口、保有なら様子見。"});
+  });
+  alerts.sort((a,b)=>b.sev-a.sev);
+  const topAlerts=alerts.slice(0,6);
+  const alertsHTML = `
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin:18px 0 8px">
+      <h2 style="margin:0">🚩 次の一手</h2>
+      <span class="sub">${alerts.length}件検出${alerts.length>6?"・上位6件":""}</span>
+    </div>
+    ${topAlerts.length? topAlerts.map(a=>`
+      <div class="strat-alert ${a.cls}">
+        <span class="sa-ic">${a.icon}</span>
+        <div style="min-width:0"><div class="sa-tt">${escHtml(a.title)}</div><div class="sa-bd">${a.body}</div></div>
+      </div>`).join("")
+      : `<div class="empty">いま緊急の一手はなし。${unrealKnown?"":"（相場データがないため含み損益の検出はスキップ）"}保有を温存しつつ、下のモメンタムで地合いを確認。</div>`}`;
+
+  /* ---------- 鑑定パイプライン（タイムライン） ---------- */
+  const LEAD_GRADING_DAYS=60;   // PSAバリュー目安（必要なら調整）
+  const gradingPs=active.filter(p=>p.status==="grading");
+  let timelineHTML="";
+  if(gradingPs.length){
+    const lots={};
+    gradingPs.forEach(p=>{
+      const sd=parseSubmitDate(p.note);
+      const key=sd? (sd.getMonth()+1)+"/"+sd.getDate()+" 提出" : "提出日不明";
+      if(!lots[key]) lots[key]={count:0, invest:0, submit:sd};
+      lots[key].count+=num(p.qty)||1; lots[key].invest+=posInvested(p);
+    });
+    const fmtMD=dt=> dt? (dt.getMonth()+1)+"/"+dt.getDate() : "—";
+    const rows=Object.entries(lots).sort((a,b)=>{
+      const ta=a[1].submit?a[1].submit.getTime():Infinity, tb=b[1].submit?b[1].submit.getTime():Infinity; return ta-tb;
+    }).map(([key,v])=>{
+      let eta="—", sell="—";
+      if(v.submit){ const r=new Date(v.submit.getTime()+LEAD_GRADING_DAYS*864e5); const s=new Date(r.getTime()+14*864e5); eta=fmtMD(r); sell=fmtMD(s); }
+      return `<div class="tl-row"><span class="tl-d">${escHtml(key)}</span><span>${v.count}枚・投下${yen(v.invest)}<br><span class="sub">結果見込み ${eta} → 売却見込み ${sell}頃</span></span></div>`;
+    }).join("");
+    const totalGradingInvest=gradingPs.reduce((s,p)=>s+posInvested(p),0);
+    const totalGradingQty=gradingPs.reduce((s,p)=>s+(num(p.qty)||1),0);
+    timelineHTML = `
+      <div class="card panel" style="margin-top:16px">
+        <h3>鑑定パイプライン（${totalGradingQty}枚・結果待ち）</h3>
+        ${rows}
+        <div class="hint">投下 ${yen(totalGradingInvest)} が鑑定中。リードタイムは目安${LEAD_GRADING_DAYS}日＋売却2週で試算（グレード未確定＝金額は結果後に確定）。独立月(9月)の運転資金タイミングの目安に。</div>
+      </div>`;
+  }
+
+  /* ---------- モメンタムボード（今週動いたカード） ---------- */
+  const moverMap=new Map();
+  active.forEach(p=>{ const c=posCard(p); if(c&&!moverMap.has(c.id)) moverMap.set(c.id,{c,held:true}); });
+  if(HAS_DATA) CARDS.filter(c=>c.watch!==false).forEach(c=>{ if(!moverMap.has(c.id)) moverMap.set(c.id,{c,held:false}); });
+  const movers=[];
+  moverMap.forEach(({c,held})=>{ const sig=cardSignals(c); if(sig.enough && Math.abs(sig.net)>=6) movers.push({c,held,sig}); });
+  movers.sort((a,b)=>b.sig.net-a.sig.net);
+  const moverRow=m=>{
+    const t=m.sig.trend, hex=TREND_HEX[t.k];
+    return `<div class="mover" onclick="showDetail('${escAttr(m.c.id)}')">
+      <div class="mv-main"><div class="mv-name">${m.held?'<span title="保有中" style="color:var(--accent2)">◆</span> ':""}${escHtml(cardLabel(m.c))}</div>
+        <div class="mv-sub">${escHtml(gameById(m.c.game).name)} ・ ${t.label}${m.sig.dilution?" ・ 🧊率低下":""}</div></div>
+      ${miniSpark(m.sig.series,hex,96,30)}
+      <div class="mv-net ${TREND_CLS[t.k]}">${m.sig.net>0?"+":""}${m.sig.net.toFixed(0)}%</div>
+    </div>`;
+  };
+  const ups=movers.filter(m=>m.sig.net>0), downs=movers.filter(m=>m.sig.net<0);
+  const momentumHTML = HAS_DATA ? `
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin:18px 0 8px">
+      <h2 style="margin:0">📈 今週動いたカード</h2>
+      <span class="sub">±6%超 ・ ◆=保有</span>
+    </div>
+    ${movers.length? `
+      ${ups.length?`<div class="sub" style="margin:4px 0 6px;color:var(--accent)">▲ 上昇 ${ups.length}枚</div>${ups.map(moverRow).join("")}`:""}
+      ${downs.length?`<div class="sub" style="margin:12px 0 6px;color:var(--bad)">▼ 下落 ${downs.length}枚</div>${downs.map(moverRow).join("")}`:""}`
+      : `<div class="empty">±6%超の値動きはなし。相場は膠着気味。</div>`}` : "";
+
+  bodyEl.innerHTML = summaryHTML + alertsHTML + timelineHTML + momentumHTML;
+}
 $("setBudget").addEventListener("change", e=>{ settings().monthlyBudget=parseFloat(e.target.value)||0; persist(); });
 $("setDefaultChannel").addEventListener("change", e=>{ settings().defaultChannel=e.target.value; persist(); refreshAll(); });
 
@@ -1463,7 +1775,7 @@ function showTab(tab, fromAction){
   // フォーム/詳細は遷移元を覚える
   if(tab==="posform") lastTabBeforeForm = currentMainTab;
   const map = {watch:"view-watch", scout:"view-scout", detail:"view-detail", portfolio:"view-portfolio",
-               ledger:"view-ledger", settings:"view-settings", posform:"view-posform"};
+               strategy:"view-strategy", ledger:"view-ledger", settings:"view-settings", posform:"view-posform"};
   Object.values(map).forEach(id=>{ const el=$(id); if(el) el.classList.remove("on"); });
   const target = $(map[tab]); if(target) target.classList.add("on");
   // タブバーのハイライト（メインタブのみ）
@@ -1475,6 +1787,7 @@ function showTab(tab, fromAction){
   else if(tab==="scout") renderScout();
   else if(tab==="detail") renderDetail();
   else if(tab==="portfolio") renderPortfolio();
+  else if(tab==="strategy") renderStrategy();
   else if(tab==="ledger") renderLedger();
   else if(tab==="settings") renderSettings();
   window.scrollTo(0,0);
@@ -1487,6 +1800,7 @@ function refreshAll(){
   if($("view-scout").classList.contains("on")) renderScout();
   if($("view-detail").classList.contains("on")) renderDetail();
   if($("view-portfolio").classList.contains("on")) renderPortfolio();
+  if($("view-strategy").classList.contains("on")) renderStrategy();
   if($("view-ledger").classList.contains("on")) renderLedger();
   if($("view-settings").classList.contains("on")) renderSettings();
 }

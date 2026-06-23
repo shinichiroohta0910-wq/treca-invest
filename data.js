@@ -4,8 +4,8 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床{店舗名・買取価格}/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-22T16:37:52.327+09:00",
-  "updatedBy": "treca-scout 2026-06-22: 4ゲーム計296枚走査→事前EV3枚→新規追加。invest1=エナジーマーカーE-100(edge+¥77k堅牢)・watch2=メガカイリューMUR/名探偵ピカチュウ(rate10感応or薄edge=cert保留)。rate10はproxy(cert要実測)。",
+  "updatedAt": "2026-06-23T10:28:26.217+09:00",
+  "updatedBy": "treca-market-update 2026-06-23: スカウト整理(削除3=MEGA Charizard X MA[edge≈0]/Umbreon ex SAR テラフェス[p10↓でedgeマイナス]/名探偵ピカチュウ[現物売却済・微小]・いずれも非保有)＋材料変化2件価格更新(Gear5ルフィP-041 PSA10 -27%/Energy Marker E-100 素体+25%). 4ゲームbrand掃出しで新規in-budget候補なし(主要チェイス既収録・リスト成熟). cards 68→65.",
   "games": [
     {
       "id": "onepiece",
@@ -4757,6 +4757,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 7,
           "rawAn": 35
+        },
+        {
+          "at": "2026-06-23T10:28:26.217+09:00",
+          "p10": 28999,
+          "p9": null,
+          "rawA": 3000,
+          "rawB": null,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": 88.94,
+          "currency": "JPY",
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用,2026-06-23). PSA10が¥39,999→¥28,999(-27%急落)・素体¥3,000据置で鑑定益は維持(edge>¥8k). rate10=6/20cert継承.",
+          "stale": false,
+          "alert": "急落 -27%",
+          "p10n": 9,
+          "rawAn": 39
         }
       ],
       "signals": {
@@ -5407,102 +5423,6 @@ const TRECA_DATA = {
       }
     },
     {
-      "id": "pk-pkmn-tcg-sv8a-217-455596",
-      "game": "pokemon",
-      "name": "Umbreon ex SAR [SV8a 217/187](High Class Pack \"Terastal Festival ex\")",
-      "number": "pkmn-tcg-SV8a-217",
-      "variant": "",
-      "lang": "ja",
-      "image": "https://cdn.snkrdunk.com/upload_bg_removed/20241205122342-4.webp",
-      "imageNote": "",
-      "links": {
-        "snkrdunk": "https://snkrdunk.com/apparels/455596",
-        "psaPop": ""
-      },
-      "watch": true,
-      "invest": true,
-      "gradingCostDefault": 11980,
-      "snapshots": [
-        {
-          "at": "2026-06-19T13:29:00+09:00",
-          "p10": 102900,
-          "p9": null,
-          "rawA": 67000,
-          "rawB": 57000,
-          "pop10": 74331,
-          "popTotal": 85328,
-          "rate10": 87.11,
-          "currency": "JPY",
-          "src": "価格=スニダン直近3約定中央値(素体n1/PSA10n52・最新06-19・最安出品P10 ¥102,000・ask不使用) / PSA POP実測 87.11% (g10=74331/total=85328) / 素体約定が薄い(n1)＝買い集め注意 / 投資候補(treca-discovery拡張 2026-06-19)",
-          "stale": false,
-          "alert": null
-        },
-        {
-          "at": "2026-06-20T07:33:06+09:00",
-          "p10": 102000,
-          "p9": null,
-          "rawA": 67000,
-          "rawB": 57000,
-          "pop10": 74331,
-          "popTotal": 85328,
-          "rate10": 87.11,
-          "currency": "JPY",
-          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n20)102000横ばい高流動。raw約定なし｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
-          "stale": false,
-          "alert": null,
-          "p10n": 20
-        },
-        {
-          "at": "2026-06-20T19:17:08.261+09:00",
-          "p10": 100000,
-          "p9": null,
-          "rawA": 67000,
-          "rawB": 57000,
-          "pop10": 74331,
-          "popTotal": 85328,
-          "rate10": 87.11,
-          "currency": "JPY",
-          "src": "価格=スニダン直近3約定中央値(実売・ask不使用,2026-06-20更新). POP/rate10=前回cert実測値を継承(緩変動)",
-          "stale": false,
-          "alert": null,
-          "p10n": 45,
-          "rawAn": 0
-        },
-        {
-          "at": "2026-06-22T09:03:10.774+09:00",
-          "p10": 93500,
-          "p9": 58750,
-          "rawA": 67500,
-          "rawB": 57000,
-          "pop10": 74331,
-          "popTotal": 85328,
-          "rate10": 87.11,
-          "currency": "JPY",
-          "src": "価格=スニダン直近3約定中央値(実売・ask不使用,2026-06-22,apparels/455596). p9/raw=新約定なき項目は前回実約定を継承. POP/rate10=6/20cert実測を継承(緩変動)",
-          "stale": false,
-          "alert": null,
-          "p10n": 31,
-          "rawAn": 0
-        }
-      ],
-      "signals": {
-        "ebay": {
-          "soldMedianJPY": 119766,
-          "soldMedianUSD": null,
-          "n": 38,
-          "days": 90,
-          "at": "2026-06-22",
-          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
-        },
-        "buyback": {
-          "shop": "トレカバンク",
-          "p10JPY": 101000,
-          "at": "2026-06-04",
-          "src": "トレカバンク店頭買取表(store.torecabank.com/kaitori_list) 2026-06-04時点・型番完全一致／2026-06-20取得"
-        }
-      }
-    },
-    {
       "id": "yg-ygo-ocg-tcg-qcac-jp019-532226",
       "game": "yugioh",
       "name": "Dark Magician Girl 25th SE [QCAC-JP019](QUARTER CENTURY ART COLLECTION)",
@@ -5679,102 +5599,6 @@ const TRECA_DATA = {
           "days": 90,
           "at": "2026-06-22",
           "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
-        }
-      }
-    },
-    {
-      "id": "pk-pkmn-tcg-m2a-223-722239",
-      "game": "pokemon",
-      "name": "MEGA Charizard X ex MA",
-      "number": "pkmn-tcg-M2a-223",
-      "variant": "MEGA ATTACK RARE",
-      "lang": "ja",
-      "image": "https://cdn.snkrdunk.com/upload_bg_removed/20251128023141-0.webp",
-      "imageNote": "",
-      "links": {
-        "snkrdunk": "https://snkrdunk.com/apparels/722239/used",
-        "psaPop": "https://www.psacard.com/pop/tcg-cards/2025/pokemon-japanese-m2a-mega-dream-ex/323965"
-      },
-      "watch": true,
-      "invest": true,
-      "gradingCostDefault": 11980,
-      "snapshots": [
-        {
-          "at": "2026-06-19T16:57:14+09:00",
-          "p10": 25999,
-          "p9": null,
-          "rawA": 7000,
-          "rawB": null,
-          "pop10": 30977,
-          "popTotal": 34231,
-          "rate10": 90.49,
-          "currency": "JPY",
-          "src": "treca-scout: スニダン約定(直近3中央値 PSA10 n27/素体A n12・apparels/722239) / rate10=PSA POP cert方式(M2a #223 main g10=30977/34231)",
-          "stale": false,
-          "alert": null
-        },
-        {
-          "at": "2026-06-20T07:33:06+09:00",
-          "p10": 24800,
-          "p9": null,
-          "rawA": 7250,
-          "rawB": 5100,
-          "pop10": 30977,
-          "popTotal": 34231,
-          "rate10": 90.49,
-          "currency": "JPY",
-          "src": "価格=スニダン約定値の直近トリム中央値(実売・ask不使用): P10 med3(n15)24800(▲5%)高流動。rawA 7250/rawB 5100｜POP/rate10=前回(2026-06-19)cert実測値を継承(緩変動) (treca-market-update 2026-06-20)",
-          "stale": false,
-          "alert": null,
-          "p10n": 15
-        },
-        {
-          "at": "2026-06-20T19:17:08.261+09:00",
-          "p10": 24900,
-          "p9": null,
-          "rawA": 6700,
-          "rawB": 5000,
-          "pop10": 30977,
-          "popTotal": 34231,
-          "rate10": 90.49,
-          "currency": "JPY",
-          "src": "価格=スニダン直近3約定中央値(実売・ask不使用,2026-06-20更新). POP/rate10=前回cert実測値を継承(緩変動)",
-          "stale": false,
-          "alert": null,
-          "p10n": 38,
-          "rawAn": 3
-        },
-        {
-          "at": "2026-06-22T09:03:10.774+09:00",
-          "p10": 23800,
-          "p9": null,
-          "rawA": 7500,
-          "rawB": 5800,
-          "pop10": 30977,
-          "popTotal": 34231,
-          "rate10": 90.49,
-          "currency": "JPY",
-          "src": "価格=スニダン直近3約定中央値(実売・ask不使用,2026-06-22,apparels/722239). p9/raw=新約定なき項目は前回実約定を継承. POP/rate10=6/20cert実測を継承(緩変動)",
-          "stale": false,
-          "alert": null,
-          "p10n": 43,
-          "rawAn": 3
-        }
-      ],
-      "signals": {
-        "ebay": {
-          "soldMedianJPY": 27784,
-          "soldMedianUSD": null,
-          "n": 54,
-          "days": 90,
-          "at": "2026-06-22",
-          "src": "eBay sold(完了済・同一originfetch・英名+型番一致中央値・2026-06-22). ゲート0.5〜3×p10通過"
-        },
-        "buyback": {
-          "shop": "トレカバンク",
-          "p10JPY": 26500,
-          "at": "2026-06-04",
-          "src": "トレカバンク店頭買取表(store.torecabank.com/kaitori_list) 2026-06-04時点・型番完全一致／2026-06-20取得"
         }
       }
     },
@@ -6766,6 +6590,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 15,
           "rawAn": 12
+        },
+        {
+          "at": "2026-06-23T10:28:26.217+09:00",
+          "p10": 210000,
+          "p9": null,
+          "rawA": 94000,
+          "rawB": null,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": 100,
+          "currency": "JPY",
+          "src": "価格=スニダン直近3約定中央値(実売,2026-06-23). 素体A¥75,000→¥94,000(+25%)上昇でPSA10¥210,000に接近＝鑑定益圧縮. ⚠素体¥94kはShin単価上限¥80k超で実行性低. rate10=proxy100%(cert未実測).",
+          "stale": false,
+          "alert": null,
+          "p10n": 16,
+          "rawAn": 13
         }
       ],
       "signals": {
@@ -6821,51 +6661,6 @@ const TRECA_DATA = {
           "days": 90,
           "at": "2026-06-22",
           "src": "eBay sold(英名+型番250一致・1.39×=海外需要厚い・裁定余地)"
-        }
-      }
-    },
-    {
-      "id": "pk-svp-098-detective-pikachu",
-      "game": "pokemon",
-      "name": "名探偵ピカチュウ",
-      "number": "SV-P 098",
-      "variant": "SV-Pプロモ",
-      "lang": "ja",
-      "image": "https://cdn.snkrdunk.com/upload_bg_removed/20230823022422-0.webp",
-      "imageNote": "名探偵ピカチュウ プロモ(SV-P 098)。スニダン商品画像(apparels/135232)。",
-      "links": {
-        "snkrdunk": "https://snkrdunk.com/trading-cards/apparels/135232",
-        "psaPop": ""
-      },
-      "watch": true,
-      "invest": false,
-      "gradingCostDefault": 11980,
-      "snapshots": [
-        {
-          "at": "2026-06-22T16:37:52.327+09:00",
-          "p10": 61800,
-          "p9": null,
-          "rawA": 33800,
-          "rawB": null,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": 86.1,
-          "currency": "JPY",
-          "src": "【scout発掘2026-06-22】価格=スニダン直近3約定中央値(実売). rate10=proxy格付率86.1%(PSA10:31/PSA9:5・旧定番プロモでproxy信頼度中〜高). edge=proxyで+¥3.2k＝薄い→watch止め(invest保留). p9 n5は保守null.",
-          "stale": false,
-          "alert": null,
-          "p10n": 31,
-          "rawAn": 16
-        }
-      ],
-      "signals": {
-        "ebay": {
-          "soldMedianJPY": 76618,
-          "soldMedianUSD": null,
-          "n": 60,
-          "days": 90,
-          "at": "2026-06-22",
-          "src": "eBay sold(Detective一致・1.24×)"
         }
       }
     }

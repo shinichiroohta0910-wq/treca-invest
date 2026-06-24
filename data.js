@@ -3987,9 +3987,10 @@ const TRECA_DATA = {
       "id": "op-op16-079-yamato",
       "name": "ヤマト",
       "number": "OP16-079",
-      "variant": "決戦の刻 L",
+      "variant": "決戦の刻 L-P（リーダーパラレル）",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/424ae3b7-7e93-45c6-8a47-f9a2d0525d9f.webp",
       "links": {
-        "snkrdunk": "https://snkrdunk.com/apparels/828148",
+        "snkrdunk": "https://snkrdunk.com/apparels/822605",
         "psaPop": null
       },
       "snapshots": [
@@ -4089,17 +4090,17 @@ const TRECA_DATA = {
           "at": "2026-06-24T07:38:48.134+09:00",
           "p10": null,
           "p9": null,
-          "rawA": null,
+          "rawA": 10000,
           "rawB": null,
           "pop10": null,
           "popTotal": null,
           "rate10": null,
           "currency": "JPY",
-          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-06-24・PSA10約定n0/proxy率-%・rate10は前回cert継承",
-          "stale": true,
+          "src": "リーダーパラレル(L-P)へ差し替え apparels/822605・スニダン実約定 素体A n55=直近3中央値¥10,000採用(B n7=¥11,200は薄商いでA<B逆転のため不採用)・PSA鑑定約定なし=素体プレイ 2026-06-24",
+          "stale": false,
           "alert": null,
           "p10n": 0,
-          "rawAn": 0
+          "rawAn": 55
         }
       ],
       "signals": {

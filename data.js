@@ -4,8 +4,8 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床{店舗名・買取価格}/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-25T09:12:12.522+09:00",
-  "updatedBy": "treca-scout 2026-06-25: 新規invest追加 メガダークライex SAR(M5 Abyss Eye 114/081・apparel826553). cert実測rate10=97.98%(PSA POP g10=97/total=99手読み)・edge≒+¥109k/枚・eBay sold n51. 計66枚",
+  "updatedAt": "2026-06-25T15:48:13+09:00",
+  "updatedBy": "box-add 2026-06-25: 未開封BOX13製品をboxesレイヤーに新設(スニダンsales-history実約定・単箱size=1個・直近3約定中央値). 投資アプリをBOX対応に拡張",
   "games": [
     {
       "id": "onepiece",
@@ -11909,6 +11909,21 @@ const TRECA_DATA = {
         }
       }
     }
+  ],
+  "boxes": [
+    { "id": "box-pk-megadream-ex", "game": "pokemon", "name": "メガドリームEX BOX", "kind": "拡張BOX", "msrp": 5500, "status": "reprint", "links": { "snkrdunk": "https://snkrdunk.com/trading-cards/apparels/721913" }, "snapshots": [ { "at": "2026-06-25T15:48:00+09:00", "box": 14900, "n": 14, "src": "スニダン約定 sales-history apparels/721913 単箱(size=1個)直近3中央値", "stale": false } ] },
+    { "id": "box-pk-battlecollection", "game": "pokemon", "name": "スタートデッキ100 バトルコレクション", "kind": "構築デッキ", "msrp": 891, "status": "reprint", "links": { "snkrdunk": "https://snkrdunk.com/trading-cards/apparels/724998" }, "snapshots": [ { "at": "2026-06-25T15:48:00+09:00", "box": 2450, "n": 4, "src": "スニダン約定 sales-history apparels/724998 単箱(size=1個)直近3中央値", "stale": false } ] },
+    { "id": "box-pk-battle-corochao", "game": "pokemon", "name": "バトルコレクション コロちゃおVer.", "kind": "雑誌付録デッキ", "msrp": 1280, "status": "oop", "links": { "snkrdunk": "https://snkrdunk.com/trading-cards/apparels/735757" }, "snapshots": [ { "at": "2026-06-25T15:48:00+09:00", "box": 1599, "n": 6, "src": "スニダン約定 sales-history apparels/735757 単箱(size=1個)直近3中央値", "stale": false } ] },
+    { "id": "box-pk-inferno-x", "game": "pokemon", "name": "インフェルノX BOX", "kind": "拡張BOX(M2)", "msrp": 5400, "status": "reprint", "links": { "snkrdunk": "https://snkrdunk.com/trading-cards/apparels/687430" }, "snapshots": [ { "at": "2026-06-25T15:48:00+09:00", "box": 21500, "n": 13, "src": "スニダン約定 sales-history apparels/687430 単箱(size=1個)直近3中央値", "stale": false } ] },
+    { "id": "box-pk-ninja-spinner", "game": "pokemon", "name": "ニンジャスピナー BOX", "kind": "拡張BOX(M4)", "msrp": 5400, "status": "reprint", "links": { "snkrdunk": "https://snkrdunk.com/trading-cards/apparels/762693" }, "snapshots": [ { "at": "2026-06-25T15:48:00+09:00", "box": 10600, "n": 6, "src": "スニダン約定 sales-history apparels/762693 単箱(size=1個)直近3中央値", "stale": false } ] },
+    { "id": "box-pk-abyss-eye", "game": "pokemon", "name": "アビスアイ BOX", "kind": "拡張BOX(M5)", "msrp": 6000, "status": "reprint", "note": "シュリンクなし約定", "links": { "snkrdunk": "https://snkrdunk.com/trading-cards/apparels/806644" }, "snapshots": [ { "at": "2026-06-25T15:48:00+09:00", "box": 10800, "n": 3, "src": "スニダン約定 sales-history apparels/806644 単箱(size=1個)直近3中央値・シュリンクなし", "stale": false } ] },
+    { "id": "box-pk-sp-tohoku", "game": "pokemon", "name": "スペシャルBOX トウホク", "kind": "限定BOX", "msrp": 2090, "status": "reprint", "note": "公式が継続増産を明言", "links": { "snkrdunk": "https://snkrdunk.com/trading-cards/apparels/618442" }, "snapshots": [ { "at": "2026-06-25T15:48:00+09:00", "box": 17700, "n": 15, "src": "スニダン約定 sales-history apparels/618442 単箱(size=1個)直近3中央値", "stale": false } ] },
+    { "id": "box-pk-sp-fukuoka", "game": "pokemon", "name": "スペシャルBOX フクオカ", "kind": "限定BOX", "msrp": 2090, "status": "reprint", "note": "2回再販済(2025/9・2026/3)", "links": { "snkrdunk": "https://snkrdunk.com/trading-cards/apparels/618444" }, "snapshots": [ { "at": "2026-06-25T15:48:00+09:00", "box": 19500, "n": 10, "src": "スニダン約定 sales-history apparels/618444 単箱(size=1個)直近3中央値", "stale": false } ] },
+    { "id": "box-op-3rd-anniv", "game": "onepiece", "name": "3rd ANNIVERSARY SET", "kind": "限定セット", "msrp": 19800, "status": "oop", "note": "プレバン限定・実質絶版・急騰過熱", "links": { "snkrdunk": "https://snkrdunk.com/trading-cards/apparels/691481" }, "snapshots": [ { "at": "2026-06-25T15:48:00+09:00", "box": 128000, "n": 20, "src": "スニダン約定 sales-history apparels/691481 単箱(size=1個)直近3中央値", "stale": false } ] },
+    { "id": "box-pk-precious-collector", "game": "pokemon", "name": "プレシャスコレクターボックス S&S", "kind": "受注限定BOX", "msrp": 17600, "status": "oop", "note": "受注生産・実質絶版・直近下落中(82k→68k)", "links": { "snkrdunk": "https://snkrdunk.com/trading-cards/apparels/105218" }, "snapshots": [ { "at": "2026-06-25T15:48:00+09:00", "box": 67999, "n": 20, "src": "スニダン約定 sales-history apparels/105218 単箱(size=1個)直近3中央値・下落局面", "stale": false } ] },
+    { "id": "box-op-kessen", "game": "onepiece", "name": "決戦の刻 OP-16 BOX", "kind": "拡張BOX", "msrp": 5280, "status": "reprint", "note": "2026/5最新弾・再販ラッシュ中", "links": { "snkrdunk": "https://snkrdunk.com/trading-cards/apparels/816932" }, "snapshots": [ { "at": "2026-06-25T15:48:00+09:00", "box": 15200, "n": 14, "src": "スニダン約定 sales-history apparels/816932 単箱(size=1個)直近3中央値", "stale": false } ] },
+    { "id": "box-yg-sangenshin-stainless", "game": "yugioh", "name": "三幻神 ステンレスセット", "kind": "受注限定セット", "msrp": 55000, "status": "oop", "note": "受注25000限定・絶版。定価近辺まで回復", "links": { "snkrdunk": "https://snkrdunk.com/trading-cards/apparels/169047" }, "snapshots": [ { "at": "2026-06-25T15:48:00+09:00", "box": 56500, "n": 20, "src": "スニダン約定 sales-history apparels/169047 単箱(size=1個)直近3中央値", "stale": false } ] },
+    { "id": "box-yg-qcdb", "game": "yugioh", "name": "クォーターセンチュリー デュエリストボックス", "kind": "一般BOX", "msrp": 4950, "status": "midbox", "note": "箱では伸びにくい・価値は中身。直近薄商い(地合い約4300)", "links": { "snkrdunk": "https://snkrdunk.com/trading-cards/apparels/163625" }, "snapshots": [ { "at": "2026-06-25T15:48:00+09:00", "box": 5300, "n": 19, "src": "スニダン約定 sales-history apparels/163625 単箱(size=1個)直近3中央値・薄商い", "stale": false } ] }
   ]
 };
 if (typeof window !== "undefined") window.TRECA_DATA = TRECA_DATA;

@@ -1,5 +1,5 @@
 // トレカ投資アプリ — Service Worker（オフライン化）
-const CACHE = 'treca-invest-v1';
+const CACHE = 'treca-invest-v2';
 const ASSETS = ['./', './index.html', './manifest.json', './data.js'];
 
 self.addEventListener('install', (e) => {

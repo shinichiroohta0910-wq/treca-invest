@@ -107,6 +107,21 @@
   .scn .l{font-size:.66rem;color:var(--muted)}
   .scn .p{font-size:.9rem;font-weight:700;margin-top:3px}
   .good{color:var(--accent)} .bad{color:var(--bad)} .warn{color:var(--warn)} .blue{color:var(--accent2)}
+  /* ===== 📦 BOX ===== */
+  .box-grp{display:flex;align-items:baseline;gap:8px;padding:9px 11px;margin:15px 0 6px;
+    background:var(--panel2);border-radius:9px}
+  .box-grp-h{font-weight:800;font-size:.82rem}
+  .box-grp-why{color:var(--muted);font-size:.65rem;flex:1;min-width:0}
+  .box-grp-sum{font-weight:700;font-size:.8rem;white-space:nowrap}
+  .box-row{display:flex;justify-content:space-between;align-items:center;gap:10px;
+    padding:11px 12px;border:1px solid var(--line);border-radius:11px;margin-bottom:7px;background:var(--panel)}
+  .box-row-l{min-width:0}
+  .box-nm{font-weight:650;font-size:.9rem;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+  .box-nm a{text-decoration:none;color:var(--txt)}
+  .box-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;display:inline-block}
+  .box-fr{font-size:.58rem;color:var(--muted);border:1px solid var(--line);border-radius:5px;padding:1px 5px}
+  .box-meta{color:var(--muted);font-size:.72rem;margin-top:3px}
+  .box-row-r{font-weight:750;font-size:1rem;white-space:nowrap;flex-shrink:0}
   /* ===== ポートフォリオ パイプライン ===== */
   .pipe-row{margin-bottom:10px}
   .pipe-head{display:flex;justify-content:space-between;font-size:.8rem;margin-bottom:3px}
@@ -414,6 +429,19 @@
   <div id="strategyBody" style="margin-top:14px"></div>
 </section>
 
+<!-- ============ 📦 未開封BOX ============ -->
+<section id="view-box" class="view">
+  <h1>📦 未開封BOX <span class="sub" style="font-weight:400">寝かせる？ 売る？</span></h1>
+  <div class="sub">定価仕入のシールドBOX。箱相場×手数料で含み損益と出口を判定（鑑定/素体の概念がないので期待値エンジンの対象外）。</div>
+  <div class="stat-grid" style="margin-top:14px">
+    <div class="stat"><div class="n" id="boxInvest">—</div><div class="s">投下（定価×数）</div></div>
+    <div class="stat"><div class="n" id="boxVal">—</div><div class="s">評価額（箱相場）</div></div>
+    <div class="stat"><div class="n" id="boxUnreal">—</div><div class="s">含み益（手取り）</div></div>
+  </div>
+  <div id="boxList" style="margin-top:6px"></div>
+  <div class="foot" id="boxFoot"></div>
+</section>
+
 <!-- ============ ポジション フォーム（モーダル風オーバーレイ） ============ -->
 <section id="view-posform" class="view">
   <button class="backbtn" onclick="closePosForm()">‹ 戻る</button>
@@ -452,6 +480,7 @@
   <button class="tab on" data-tab="watch" onclick="showTab('watch')"><span class="ico">📊</span>ウォッチ</button>
   <button class="tab" data-tab="scout" onclick="showTab('scout')"><span class="ico">🎯</span>スカウト</button>
   <button class="tab" data-tab="portfolio" onclick="showTab('portfolio')"><span class="ico">💼</span>在庫</button>
+  <button class="tab" data-tab="box" onclick="showTab('box')"><span class="ico">📦</span>BOX</button>
   <button class="tab" data-tab="strategy" onclick="showTab('strategy')"><span class="ico">🩺</span>戦略</button>
   <button class="tab" data-tab="ledger" onclick="showTab('ledger')"><span class="ico">📒</span>台帳</button>
   <button class="tab" data-tab="settings" onclick="showTab('settings')"><span class="ico">⚙️</span>設定</button>
@@ -486,6 +515,11 @@ const GAMES = HAS_DATA && Array.isArray(DATA.games) ? DATA.games : [];
 const CARDS = HAS_DATA ? DATA.cards : [];
 const CARD_BY_ID = {};
 CARDS.forEach(c => { CARD_BY_ID[c.id] = c; });
+// 未開封BOXレイヤー（相場のみ。cardsとは別配列＝鑑定/素体エンジンを汚さない）
+const BOXES = (DATA && Array.isArray(DATA.boxes)) ? DATA.boxes : [];
+const BOX_BY_ID = {};
+BOXES.forEach(b => { BOX_BY_ID[b.id] = b; });
+const HAS_BOXES = BOXES.length > 0;
 function gameById(id){ return GAMES.find(g=>g.id===id) || {id:id,name:id||"その他",color:"#9aa3ab"}; }
 
 if(!HAS_DATA){
@@ -521,7 +555,8 @@ function defaultStore(){
       defaultChannel: "snkrdunk",
       decayDefault: 0
     },
-    positions: []
+    positions: [],
+    boxHoldings: []
   };
 }
 let store = loadStore();
@@ -540,6 +575,7 @@ function migrate(s){
   if(!Array.isArray(s.settings.channels) || !s.settings.channels.length) s.settings.channels = d.settings.channels;
   if(!Array.isArray(s.settings.gradingPlans) || !s.settings.gradingPlans.length) s.settings.gradingPlans = d.settings.gradingPlans;
   if(!Array.isArray(s.positions)) s.positions = [];
+  if(!Array.isArray(s.boxHoldings)) s.boxHoldings = [];
   return s;
 }
 function persist(){ try{ localStorage.setItem(LS_KEY, JSON.stringify(store)); }catch(e){ console.warn("save failed", e); } }
@@ -562,6 +598,14 @@ function saveAndToast(msg){ persist(); if(msg) toast(msg); }
     store.positions.forEach(function(p){ if(p && p.id) byId[p.id] = p; });
     seed.positions.forEach(function(p){ if(p && p.id) byId[p.id] = p; }); // id一致=上書き・新規=追加
     store.positions = Object.values(byId);
+    // BOX保有（boxHoldings）も boxId 一致でマージ（守秘＝保有はseed/localStorageのみ・data.jsには載せない）
+    if(Array.isArray(seed.boxHoldings)){
+      if(!Array.isArray(store.boxHoldings)) store.boxHoldings = [];
+      var bById = {};
+      store.boxHoldings.forEach(function(h){ if(h && h.boxId) bById[h.boxId] = h; });
+      seed.boxHoldings.forEach(function(h){ if(h && h.boxId) bById[h.boxId] = h; });
+      store.boxHoldings = Object.values(bById);
+    }
     if(!store.settings) store.settings = {};
     store.settings.appliedSeedVersion = ver;
     persist();
@@ -1724,7 +1768,15 @@ function applyImport(o){
     o.positions.forEach(p=>{ if(p && p.id) byId[p.id]=p; else if(p) byId["pos-"+Date.now().toString(36)+Math.random().toString(36).slice(2,6)]=p; });
     store.positions = Object.values(byId);
   }
-  if(!o.settings && !Array.isArray(o.positions)) throw new Error("settings も positions も含まれていません");
+  // boxHoldings（未開封BOX保有）も boxId 一致=上書き・新規=追加
+  if(Array.isArray(o.boxHoldings)){
+    if(!Array.isArray(store.boxHoldings)) store.boxHoldings = [];
+    const bById = {};
+    store.boxHoldings.forEach(h=>{ if(h&&h.boxId) bById[h.boxId]=h; });
+    o.boxHoldings.forEach(h=>{ if(h && h.boxId) bById[h.boxId]=h; });
+    store.boxHoldings = Object.values(bById);
+  }
+  if(!o.settings && !Array.isArray(o.positions) && !Array.isArray(o.boxHoldings)) throw new Error("settings も positions も boxHoldings も含まれていません");
   persist();
   refreshAll();
 }
@@ -1770,12 +1822,85 @@ function resetData(){
 /* =====================================================================
    タブ切替・初期化
    ===================================================================== */
+/* =====================================================================
+   📦 未開封BOX（相場=data.boxes / 保有=boxHoldings）
+   カードと評価軸が違う（PSA10率・素体なし）ため専用ロジック。鑑定エンジンは不使用。
+   含み損益 = 箱相場 ×(1−手数料) − 取得（定価）。出口は 再販/絶版 × 損益 で判定。
+   ===================================================================== */
+function boxFeePct(){ const ch=channelById("snkrdunk"); return ch?num(ch.feePct):8; }
+function boxLatest(b){ return (b&&Array.isArray(b.snapshots)&&b.snapshots.length)?b.snapshots[b.snapshots.length-1]:null; }
+function boxHoldingOf(id){ return (store.boxHoldings||[]).find(h=>h&&h.boxId===id)||null; }
+const BOX_EXIT = {
+  reprint:  {label:"今が出しどき", color:"var(--warn)",   why:"再販継続中＝天井あり・高い今に現金化"},
+  oop_gain: {label:"寝かせOK",     color:"var(--accent)",  why:"絶版・供給枯れ＝右肩上がり余地"},
+  oop_loss: {label:"回復待ち",     color:"var(--muted)",   why:"絶版だが現状は含み損・売り急がない"},
+  midbox:   {label:"中身狙い",     color:"var(--accent2)", why:"箱では伸びにくい・価値は中身カード"}
+};
+function boxExitKey(b, netTotal){
+  if(b.status==="midbox") return "midbox";
+  if(b.status==="oop")    return netTotal>=0 ? "oop_gain" : "oop_loss";
+  return "reprint"; // reprint / limited 等は「出しどき」側
+}
+function evalBox(b){
+  const h = boxHoldingOf(b.id);
+  const snap = boxLatest(b);
+  const qty = h ? (num(h.qty)||0) : 0;
+  const cost = (h && h.buyPrice!=null) ? num(h.buyPrice) : num(b.msrp); // 取得/箱（定価仕入なら msrp）
+  const box = snap ? num(snap.box) : 0;
+  const f = 1 - boxFeePct()/100;
+  const netUnit = snap ? (box*f - cost) : 0;
+  return {h,snap,qty,cost,box,hasData:!!snap,
+          netTotal:netUnit*qty, investTotal:cost*qty, valTotal:box*qty};
+}
+function renderBox(){
+  const held = BOXES.filter(b=>{ const h=boxHoldingOf(b.id); return h && (num(h.qty)||0)>0; });
+  if(held.length===0){
+    $("boxList").innerHTML = `<div class="empty">未開封BOXの保有がありません。<br>seed_positions の boxHoldings に追加すると、ここに棚卸しが出ます。</div>`;
+    $("boxInvest").textContent="—"; $("boxVal").textContent="—"; $("boxUnreal").textContent="—"; $("boxFoot").textContent="";
+    return;
+  }
+  let invest=0, val=0, net=0;
+  const rows = held.map(b=>{ const e=evalBox(b); invest+=e.investTotal; val+=e.valTotal; net+=e.netTotal; return {b,e}; });
+  $("boxInvest").textContent = yen(invest);
+  $("boxVal").textContent = yen(val);
+  const ue=$("boxUnreal"); ue.textContent=signYen(net); ue.className="n "+(net>0?"good":net<0?"bad":"");
+  const order=["reprint","oop_gain","oop_loss","midbox"];
+  const groups={}; order.forEach(k=>groups[k]=[]);
+  rows.forEach(r=>{ const k=boxExitKey(r.b, r.e.netTotal); (groups[k]||groups.reprint).push(r); });
+  let html="";
+  order.forEach(k=>{
+    const list=groups[k]; if(!list.length) return;
+    list.sort((a,b)=>b.e.netTotal-a.e.netTotal);
+    const ex=BOX_EXIT[k];
+    const sub=list.reduce((s,r)=>s+r.e.netTotal,0);
+    html+=`<div class="box-grp" style="border-left:3px solid ${ex.color}">
+      <span class="box-grp-h" style="color:${ex.color}">${ex.label}</span>
+      <span class="box-grp-why">${escHtml(ex.why)}</span>
+      <span class="box-grp-sum ${sub>=0?'good':'bad'}">${signYen(sub)}</span></div>`;
+    html+=list.map(r=>{
+      const b=r.b, e=r.e, g=gameById(b.game), fr=freshness(b);
+      const link=(b.links&&b.links.snkrdunk)?b.links.snkrdunk:null;
+      const nm = link?`<a href="${escAttr(link)}" target="_blank" rel="noopener">${escHtml(b.name)}</a>`:escHtml(b.name);
+      return `<div class="box-row">
+        <div class="box-row-l">
+          <div class="box-nm"><span class="box-dot" style="background:${g.color}"></span>${nm}
+            <span class="box-fr">${escHtml(fr.label)}</span></div>
+          <div class="box-meta">${escHtml(b.kind||"BOX")} ・ ${e.qty}箱 ・ 取得 ${yen(e.cost)} → 相場 ${e.hasData?yen(e.box):"—"}</div>
+        </div>
+        <div class="box-row-r ${e.netTotal>=0?'good':'bad'}">${e.hasData?signYen(e.netTotal):"—"}</div>
+      </div>`;
+    }).join("");
+  });
+  $("boxList").innerHTML=html;
+  $("boxFoot").innerHTML = `含み益は <b>箱相場 ×(1−手数料${boxFeePct()}%) − 取得</b> の手取りベース。相場の正本はスニダン約定（ask不使用）。`;
+}
+
 let lastTabBeforeForm = "portfolio";
 function showTab(tab, fromAction){
   // フォーム/詳細は遷移元を覚える
   if(tab==="posform") lastTabBeforeForm = currentMainTab;
   const map = {watch:"view-watch", scout:"view-scout", detail:"view-detail", portfolio:"view-portfolio",
-               strategy:"view-strategy", ledger:"view-ledger", settings:"view-settings", posform:"view-posform"};
+               box:"view-box", strategy:"view-strategy", ledger:"view-ledger", settings:"view-settings", posform:"view-posform"};
   Object.values(map).forEach(id=>{ const el=$(id); if(el) el.classList.remove("on"); });
   const target = $(map[tab]); if(target) target.classList.add("on");
   // タブバーのハイライト（メインタブのみ）
@@ -1787,6 +1912,7 @@ function showTab(tab, fromAction){
   else if(tab==="scout") renderScout();
   else if(tab==="detail") renderDetail();
   else if(tab==="portfolio") renderPortfolio();
+  else if(tab==="box") renderBox();
   else if(tab==="strategy") renderStrategy();
   else if(tab==="ledger") renderLedger();
   else if(tab==="settings") renderSettings();
@@ -1800,6 +1926,7 @@ function refreshAll(){
   if($("view-scout").classList.contains("on")) renderScout();
   if($("view-detail").classList.contains("on")) renderDetail();
   if($("view-portfolio").classList.contains("on")) renderPortfolio();
+  if($("view-box").classList.contains("on")) renderBox();
   if($("view-strategy").classList.contains("on")) renderStrategy();
   if($("view-ledger").classList.contains("on")) renderLedger();
   if($("view-settings").classList.contains("on")) renderSettings();

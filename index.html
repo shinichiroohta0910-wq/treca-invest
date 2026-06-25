@@ -122,6 +122,9 @@
   .box-fr{font-size:.58rem;color:var(--muted);border:1px solid var(--line);border-radius:5px;padding:1px 5px}
   .box-meta{color:var(--muted);font-size:.72rem;margin-top:3px}
   .box-row-r{font-weight:750;font-size:1rem;white-space:nowrap;flex-shrink:0}
+  .box-strat-row{display:flex;justify-content:space-between;align-items:center;font-size:12.5px;padding:6px 0;border-bottom:1px solid var(--line)}
+  .box-strat-row:last-of-type{border-bottom:none}
+  .bs-tag{font-weight:700}
   /* ===== ポートフォリオ パイプライン ===== */
   .pipe-row{margin-bottom:10px}
   .pipe-head{display:flex;justify-content:space-between;font-size:.8rem;margin-bottom:3px}
@@ -1644,7 +1647,34 @@ function renderStrategy(){
       ${downs.length?`<div class="sub" style="margin:12px 0 6px;color:var(--bad)">▼ 下落 ${downs.length}枚</div>${downs.map(moverRow).join("")}`:""}`
       : `<div class="empty">±6%超の値動きはなし。相場は膠着気味。</div>`}` : "";
 
-  bodyEl.innerHTML = summaryHTML + alertsHTML + timelineHTML + momentumHTML;
+  /* ---------- 📦 未開封BOX 統合（トレカ資産全体＋BOX出口） ---------- */
+  let boxStratHTML = "";
+  const heldBoxes = BOXES.filter(b=>{const h=boxHoldingOf(b.id);return h&&(num(h.qty)||0)>0;});
+  if(heldBoxes.length){
+    let bInv=0,bUe=0; const ex={reprint:{n:0,ue:0},oop_gain:{n:0,ue:0},oop_loss:{n:0,ue:0},midbox:{n:0,ue:0}};
+    heldBoxes.forEach(b=>{const e=evalBox(b); bInv+=e.investTotal;bUe+=e.netTotal; const k=boxExitKey(b,e.netTotal); (ex[k]||ex.reprint).n++; (ex[k]||ex.reprint).ue+=e.netTotal;});
+    const allInv=totalInvest+bInv, allUe=(unrealKnown?totalUnreal:0)+bUe;
+    boxStratHTML = `
+    <div class="card panel">
+      <h3>トレカ資産全体（カード ＋ 未開封BOX）</h3>
+      <div class="stat-grid" style="margin-bottom:8px">
+        <div class="stat"><div class="n">${yen(allInv)}</div><div class="s">投下 合計</div></div>
+        <div class="stat"><div class="n ${allUe>0?'good':allUe<0?'bad':''}">${signYen(allUe)}</div><div class="s">含み損益 合計</div></div>
+        <div class="stat"><div class="n">${yen(allInv+allUe)}</div><div class="s">評価額 合計</div></div>
+      </div>
+      <div class="hint">内訳：カード ${yen(totalInvest)}（含み ${unrealKnown?signYen(totalUnreal):"—"}）／BOX ${yen(bInv)}（含み ${signYen(bUe)}）。含み益のうち鑑定中は期待値＝確定益と分けて見る。</div>
+    </div>
+    <div class="card panel">
+      <h3>📦 未開封BOX の出口</h3>
+      <div class="box-strat-row"><span class="bs-tag" style="color:var(--warn)">🟠 今が出しどき</span><span>${ex.reprint.n}製品 ・ 含み ${signYen(ex.reprint.ue)}</span></div>
+      <div class="box-strat-row"><span class="bs-tag" style="color:var(--accent)">🟢 寝かせOK</span><span>${ex.oop_gain.n}製品 ・ 含み ${signYen(ex.oop_gain.ue)}</span></div>
+      ${ex.oop_loss.n?`<div class="box-strat-row"><span class="bs-tag" style="color:var(--muted)">🩶 回復待ち</span><span>${ex.oop_loss.n}製品 ・ ${signYen(ex.oop_loss.ue)}</span></div>`:""}
+      ${ex.midbox.n?`<div class="box-strat-row"><span class="bs-tag" style="color:var(--accent2)">🔵 中身狙い</span><span>${ex.midbox.n}製品 ・ ${signYen(ex.midbox.ue)}</span></div>`:""}
+      ${ex.reprint.n?`<div class="hint"><b style="color:var(--warn)">現行 ${ex.reprint.n}製品は再販で天井あり＝今が利確好機（含み ${signYen(ex.reprint.ue)}）。</b>絶版品は温存。詳細は 📦BOX タブへ。</div>`:`<div class="hint">詳細は 📦BOX タブへ。</div>`}
+    </div>`;
+  }
+
+  bodyEl.innerHTML = summaryHTML + boxStratHTML + alertsHTML + timelineHTML + momentumHTML;
 }
 $("setBudget").addEventListener("change", e=>{ settings().monthlyBudget=parseFloat(e.target.value)||0; persist(); });
 $("setDefaultChannel").addEventListener("change", e=>{ settings().defaultChannel=e.target.value; persist(); refreshAll(); });

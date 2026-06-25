@@ -4,8 +4,8 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床{店舗名・買取価格}/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-25T08:02:52.233+09:00",
-  "updatedBy": "daily_market_refresh 2026-06-25: 全65枚の価格を実約定で更新(OK 65/stale 0/alert 0). rate10は前回cert値継承(価格のみ日次更新).",
+  "updatedAt": "2026-06-25T09:12:12.522+09:00",
+  "updatedBy": "treca-scout 2026-06-25: 新規invest追加 メガダークライex SAR(M5 Abyss Eye 114/081・apparel826553). cert実測rate10=97.98%(PSA POP g10=97/total=99手読み)・edge≒+¥109k/枚・eBay sold n51. 計66枚",
   "games": [
     {
       "id": "onepiece",
@@ -11861,6 +11861,51 @@ const TRECA_DATA = {
           "days": 90,
           "at": "2026-06-22",
           "src": "eBay sold(英名+型番250一致・1.39×=海外需要厚い・裁定余地)"
+        }
+      }
+    },
+    {
+      "id": "pk-m5-114-mega-darkrai-sar",
+      "game": "pokemon",
+      "name": "メガダークライex SAR [M5 114/081](アビスアイ \"Abyss Eye\")",
+      "number": "114/081",
+      "variant": "SAR",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/aa140a49-418a-4b9b-b8ca-e7d1b72d0307.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/826553",
+        "psaPop": ""
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-06-25T09:12:12.522+09:00",
+          "p10": 182000,
+          "p9": null,
+          "rawA": 42900,
+          "rawB": 42000,
+          "pop10": 97,
+          "popTotal": 99,
+          "rate10": 97.98,
+          "currency": "JPY",
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用・apparels/826553): P10 ¥182,000(n5・¥179-183k密集) / 素体A ¥42,900(n29) / 素体B ¥42,000(n7) / PSA9約定なし(p9=null). POP=PSA POPページ手読み実測 97.98%(g10=97/total=99・M5 Abyss Eye #114 SAR行・2026-06-25). 新弾SARだが実Gem率98%・損益分岐rate10=33%で安全余裕大. treca-scout発掘(2026-06-25)",
+          "stale": false,
+          "alert": null,
+          "p10n": 5,
+          "rawAn": 29
+        }
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianJPY": 140600,
+          "soldMedianUSD": 950,
+          "n": 51,
+          "days": 90,
+          "at": "2026-06-25",
+          "src": "eBay sold(完了済・firecrawl・型番114/081一致): graded(PSA10等)n5 med$950≈¥140,600 / 素体n46 med$385≈¥56,980(@¥148/USD). 国内(スニダンP10¥182k)>eBay graded＝国内優位・海外裁定なし. 90日で53件成約＝需要厚い"
         }
       }
     }

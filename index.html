@@ -98,6 +98,13 @@
   .detail-h .dvar{font-size:.78rem;color:var(--muted);margin-top:2px}
   .detail-h .dlinks{margin-top:10px;display:flex;flex-direction:column;gap:5px;font-size:.8rem}
   canvas{width:100%;height:150px;display:block}
+  #sparkWrap{position:relative}
+  .sparktip{position:absolute;transform:translate(-50%,-100%);pointer-events:none;
+    background:#0c0e10;border:1px solid var(--line);border-radius:8px;
+    padding:5px 9px;font-size:.74rem;line-height:1.35;color:#e6edf3;
+    white-space:nowrap;box-shadow:0 4px 14px rgba(0,0,0,.45);z-index:5}
+  .sparktip .st-amt{font-weight:800;font-size:.9rem}
+  .sparktip .st-meta{color:var(--muted);font-size:.68rem}
   .kv{display:flex;justify-content:space-between;font-size:.84rem;padding:6px 0;border-bottom:1px solid var(--line)}
   .kv:last-child{border-bottom:none}
   .kv .k{color:var(--muted)}
@@ -1135,8 +1142,11 @@ function renderDetail(){
 
     <div class="card panel">
       <h3>価格履歴</h3>
-      <div class="sub" style="margin-bottom:4px">PSA10実売（緑）／素体A実売（青）</div>
-      <canvas id="sparkPrice"></canvas>
+      <div class="sub" style="margin-bottom:4px">PSA10実売（緑）／素体A実売（青）・点をタップで金額表示</div>
+      <div id="sparkWrap">
+        <canvas id="sparkPrice"></canvas>
+        <div id="sparkTip" class="sparktip" style="display:none"></div>
+      </div>
     </div>
 
     <div class="card panel">
@@ -1173,9 +1183,13 @@ function renderDetail(){
 }
 
 /* 価格履歴スパークライン（p10=緑・rawA=青の2系列・snapshots時系列） */
+let SPARK_POINTS = [];          // 描画した各ドットの座標と値（タップ用ヒットテスト）
+function hideSparkTip(){ const t=$("sparkTip"); if(t) t.style.display="none"; }
 function drawSparkline(card, d){
   const cv = $("sparkPrice");
   if(!cv) return;
+  SPARK_POINTS = [];            // 再描画のたびにクリア
+  hideSparkTip();               // 反落スライダー等での再描画時は吹き出しを一旦閉じる
   const dpr = window.devicePixelRatio||1;
   const w = cv.clientWidth||320, h=150;
   cv.width=w*dpr; cv.height=h*dpr;
@@ -1201,17 +1215,18 @@ function drawSparkline(card, d){
     ctx.beginPath(); ctx.moveTo(PL,y); ctx.lineTo(w-PR,y); ctx.stroke();
     ctx.fillText("¥"+Math.round(v/1000)+"k", 2, y+3);
   }
-  function line(series, color){
-    const pts = series.map((p,i)=>({i,v:p.v})).filter(p=>p.v!=null);
+  function line(series, color, label){
+    const pts = series.map((p,i)=>({i,v:p.v,at:p.date})).filter(p=>p.v!=null);
     if(pts.length===0) return;
     ctx.strokeStyle=color; ctx.lineWidth=2; ctx.beginPath();
     pts.forEach((p,k)=>{ const x=X(p.i), y=Y(p.v); k?ctx.lineTo(x,y):ctx.moveTo(x,y); });
     ctx.stroke();
     ctx.fillStyle=color;
-    pts.forEach(p=>{ const x=X(p.i), y=Y(p.v); ctx.beginPath(); ctx.arc(x,y,2.5,0,7); ctx.fill(); });
+    pts.forEach(p=>{ const x=X(p.i), y=Y(p.v); ctx.beginPath(); ctx.arc(x,y,2.5,0,7); ctx.fill();
+      SPARK_POINTS.push({x, y, v:p.v, at:p.at, label, color}); });
   }
-  line(s10, "#39d98a");
-  line(sRaw, "#4aa8ff");
+  line(s10, "#39d98a", "PSA10");
+  line(sRaw, "#4aa8ff", "素体A");
   // x labels (最初と最後)
   ctx.fillStyle="#5a6571"; ctx.font="9px sans-serif";
   if(n>=1){
@@ -1219,6 +1234,23 @@ function drawSparkline(card, d){
     if(snaps[0]) ctx.fillText(fmt(snaps[0].at), PL-6, h-6);
     if(snaps[n-1] && n>1){ const t=fmt(snaps[n-1].at); ctx.fillText(t, w-PR-22, h-6); }
   }
+  // 点タップ → 金額ツールチップ。canvasは再描画(renderDetail)のたびに作り直されるので
+  // onclick代入で毎回その時点のcanvasに束ね直す（addEventListener+一度きりフラグだと孤児化する）。
+  cv.onclick = (e)=>{
+    const tip = $("sparkTip"); if(!tip) return;
+    const rect = cv.getBoundingClientRect();
+    const px = e.clientX - rect.left, py = e.clientY - rect.top;
+    let best=null, bestD=Infinity;
+    SPARK_POINTS.forEach(p=>{ const dx=p.x-px, dy=p.y-py, dd=dx*dx+dy*dy; if(dd<bestD){ bestD=dd; best=p; } });
+    if(!best || bestD > 18*18){ tip.style.display="none"; return; }
+    const dt = new Date(best.at);
+    const md = isNaN(dt)? "" : (dt.getMonth()+1)+"/"+dt.getDate();
+    tip.innerHTML = `<div class="st-amt" style="color:${best.color}">${yen(best.v)}</div>`+
+                    `<div class="st-meta">${best.label}${md?" ・ "+md:""}</div>`;
+    tip.style.left = best.x + "px";
+    tip.style.top  = Math.max(best.y - 8, 4) + "px";
+    tip.style.display = "block";
+  };
 }
 
 /* =====================================================================

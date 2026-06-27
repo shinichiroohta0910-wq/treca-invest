@@ -4,8 +4,8 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床{店舗名・買取価格}/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-27T11:59:22.506+09:00",
-  "updatedBy": "prune_negative_ev 2026-06-27: 非保有EVマイナス1枚削除(yg-ygo-ocg-tcg-nkc1-en002-692556). 66→65枚.",
+  "updatedAt": "2026-06-27T13:04:10.054+09:00",
+  "updatedBy": "treca-scout 2026-06-27: 深掘り(10ページ法)発掘の cert保留候補3枚を invest:false watch登録(ゾロWSJ/闇魔術師25th/メガルカリオMUR・proxy率85%・要cert実測). 68枚.",
   "games": [
     {
       "id": "onepiece",
@@ -14858,6 +14858,117 @@ const TRECA_DATA = {
           "src": "eBay sold(完了済・firecrawl・型番114/081一致): graded(PSA10等)n5 med$950≈¥140,600 / 素体n46 med$385≈¥56,980(@¥148/USD). 国内(スニダンP10¥182k)>eBay graded＝国内優位・海外裁定なし. 90日で53件成約＝需要厚い"
         }
       }
+    },
+    {
+      "id": "op-op01-001-zoro-wsj",
+      "game": "onepiece",
+      "name": "ロロノア・ゾロ L",
+      "number": "OP01-001",
+      "variant": "WSJ2024年3号 全プレ(応募者サービス・Refig)",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/20251111103048-0.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/171996",
+        "psaPop": null
+      },
+      "watch": true,
+      "invest": false,
+      "certPending": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-06-27T13:04:10.054+09:00",
+          "p10": 144000,
+          "p9": 33000,
+          "rawA": 55000,
+          "rawB": 36500,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": 85,
+          "currency": "JPY",
+          "src": "【cert保留】rate10=proxy85%仮定(psacard未許可ドメインでcert未実測・要cert実測で確定) / p10・p9・rawA・rawB=スニダン直近3約定中央値(実売・ask不使用,2026-06-27,apparels/171996) / treca-scout深掘り(10ページ法)で発掘",
+          "stale": false,
+          "alert": "cert保留(proxy率85%・要実測)",
+          "p10n": 33,
+          "rawAn": 38,
+          "certPending": true
+        }
+      ]
+    },
+    {
+      "id": "yg-td01-jp001-dark-magician-25th",
+      "game": "yugioh",
+      "name": "ブラック・マジシャン 25th SE",
+      "number": "TD01-JP001",
+      "variant": "TOKYO DOME GREEN 25th Ver.",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250430094904-1.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/185262",
+        "psaPop": null
+      },
+      "watch": true,
+      "invest": false,
+      "certPending": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-06-27T13:04:10.054+09:00",
+          "p10": 89780,
+          "p9": null,
+          "rawA": 29800,
+          "rawB": 16000,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": 85,
+          "currency": "JPY",
+          "src": "【cert保留】rate10=proxy85%仮定(psacard未許可ドメインでcert未実測・要cert実測で確定) / p10・p9・rawA・rawB=スニダン直近3約定中央値(実売・ask不使用,2026-06-27,apparels/185262) / treca-scout深掘り(10ページ法)で発掘",
+          "stale": false,
+          "alert": "cert保留(proxy率85%・要実測)",
+          "p10n": 20,
+          "rawAn": 64,
+          "certPending": true
+        }
+      ]
+    },
+    {
+      "id": "pk-m1l-092-mega-lucario-ex-mur",
+      "game": "pokemon",
+      "name": "メガルカリオex MUR",
+      "number": "M1L 092/063",
+      "variant": "拡張パック メガブレイブ(MUR)",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250801010657-0.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/663638",
+        "psaPop": null
+      },
+      "watch": true,
+      "invest": false,
+      "certPending": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-06-27T13:04:10.054+09:00",
+          "p10": 118000,
+          "p9": null,
+          "rawA": 54000,
+          "rawB": null,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": 85,
+          "currency": "JPY",
+          "src": "【cert保留】rate10=proxy85%仮定(psacard未許可ドメインでcert未実測・要cert実測で確定) / p10・p9・rawA・rawB=スニダン直近3約定中央値(実売・ask不使用,2026-06-27,apparels/663638) / treca-scout深掘り(10ページ法)で発掘",
+          "stale": false,
+          "alert": "cert保留(proxy率85%・要実測)",
+          "p10n": 25,
+          "rawAn": 8,
+          "certPending": true
+        }
+      ]
     }
   ],
   "boxes": [

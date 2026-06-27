@@ -4,8 +4,8 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床{店舗名・買取価格}/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-27T13:04:10.054+09:00",
-  "updatedBy": "treca-scout 2026-06-27: 深掘り(10ページ法)発掘の cert保留候補3枚を invest:false watch登録(ゾロWSJ/闇魔術師25th/メガルカリオMUR・proxy率85%・要cert実測). 68枚.",
+  "updatedAt": "2026-06-27T13:29:00.260+09:00",
+  "updatedBy": "treca-scout cert実測確定 2026-06-27: ゾロWSJ(93.81%)/闇魔術師25th(83.69%)/メガルカリオMUR(55.10%) のPSA POPをcert実測→rate10確定・invest:true昇格・certPending解除. 68枚.",
   "games": [
     {
       "id": "onepiece",
@@ -14870,11 +14870,11 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/171996",
-        "psaPop": null
+        "psaPop": "https://www.psacard.com/cert/147456655"
       },
       "watch": true,
-      "invest": false,
-      "certPending": true,
+      "invest": true,
+      "certPending": false,
       "gradingCostDefault": 11980,
       "snapshots": [
         {
@@ -14893,6 +14893,22 @@ const TRECA_DATA = {
           "p10n": 33,
           "rawAn": 38,
           "certPending": true
+        },
+        {
+          "at": "2026-06-27T13:29:00.260+09:00",
+          "p10": 144000,
+          "p9": 33000,
+          "rawA": 55000,
+          "rawB": 36500,
+          "pop10": 1380,
+          "popTotal": 1471,
+          "rate10": 93.81,
+          "currency": "JPY",
+          "src": "【cert実測確定】PSA POP=1380/1471→rate10 93.81%(cert#147456655・2024 ONE PIECE JP / RORONOA ZORO / Weekly Shonen Jump-January #001・2026-06-27画像OCRでcert特定→ShinログインChromeでPOP読取). p10/p9/rawA/rawB=スニダン直近3約定中央値(実売・ask不使用,apparels/171996). proxy85%→実測93.81%へ確定・invest昇格",
+          "stale": false,
+          "alert": "cert実測 rate10=93.81%(POP 1380/1471)",
+          "p10n": 33,
+          "rawAn": 38
         }
       ]
     },
@@ -14907,11 +14923,11 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/185262",
-        "psaPop": null
+        "psaPop": "https://www.psacard.com/cert/151158544"
       },
       "watch": true,
-      "invest": false,
-      "certPending": true,
+      "invest": true,
+      "certPending": false,
       "gradingCostDefault": 11980,
       "snapshots": [
         {
@@ -14930,6 +14946,22 @@ const TRECA_DATA = {
           "p10n": 20,
           "rawAn": 64,
           "certPending": true
+        },
+        {
+          "at": "2026-06-27T13:29:00.260+09:00",
+          "p10": 89780,
+          "p9": null,
+          "rawA": 29800,
+          "rawB": 16000,
+          "pop10": 739,
+          "popTotal": 883,
+          "rate10": 83.69,
+          "currency": "JPY",
+          "src": "【cert実測確定】PSA POP=739/883→rate10 83.69%(cert#151158544・2024 YU-GI-OH! TD01 / Dark Magician / QCSR Tokyo Dome Green Ver. #JP001・2026-06-27画像OCRでcert特定→ShinログインChromeでPOP読取). p10/p9/rawA/rawB=スニダン直近3約定中央値(実売・ask不使用,apparels/185262). proxy85%→実測83.69%へ確定・invest昇格",
+          "stale": false,
+          "alert": "cert実測 rate10=83.69%(POP 739/883)",
+          "p10n": 20,
+          "rawAn": 64
         }
       ]
     },
@@ -14944,11 +14976,11 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/663638",
-        "psaPop": null
+        "psaPop": "https://www.psacard.com/cert/157883614"
       },
       "watch": true,
-      "invest": false,
-      "certPending": true,
+      "invest": true,
+      "certPending": false,
       "gradingCostDefault": 11980,
       "snapshots": [
         {
@@ -14967,6 +14999,22 @@ const TRECA_DATA = {
           "p10n": 25,
           "rawAn": 8,
           "certPending": true
+        },
+        {
+          "at": "2026-06-27T13:29:00.260+09:00",
+          "p10": 118000,
+          "p9": 47800,
+          "rawA": 54000,
+          "rawB": null,
+          "pop10": 3301,
+          "popTotal": 5991,
+          "rate10": 55.1,
+          "currency": "JPY",
+          "src": "【cert実測確定】PSA POP=3301/5991→rate10 55.1%(cert#157883614・2025 POKEMON M1L JP / Mega Lucario ex / Mega Ultra Rare #092・2026-06-27画像OCRでcert特定→ShinログインChromeでPOP読取). p10/p9/rawA/rawB=スニダン直近3約定中央値(実売・ask不使用,apparels/663638). proxy85%→実測55.1%へ確定・invest昇格",
+          "stale": false,
+          "alert": "cert実測 rate10=55.1%(POP 3301/5991)",
+          "p10n": 25,
+          "rawAn": 8
         }
       ]
     }

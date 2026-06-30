@@ -4,8 +4,8 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床{店舗名・買取価格}/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-30T09:11:52.896+09:00",
-  "updatedBy": "daily_market_refresh 2026-06-30: cards67枚(OK 67/stale 0) + boxes13件(OK 13/stale 0) 価格実約定更新(alert 0). rate10は前回cert値継承.",
+  "updatedAt": "2026-06-30T11:01:23.625+09:00",
+  "updatedBy": "treca-scout 2026-06-30 (新規4枚cert実測追加: ルフィP-075 79.67%・ルフィST01-012 83.70%・ナミP-112 81.83%・メガゲッコウガMUR 51.47%)",
   "games": [
     {
       "id": "onepiece",
@@ -16905,7 +16905,8 @@ const TRECA_DATA = {
       "imageNote": "ゴッホ展/Van Gogh Museumピカチュウ。スニダン商品画像(apparels/146897・背景除去)。",
       "links": {
         "snkrdunk": "https://snkrdunk.com/trading-cards/apparels/146897",
-        "psaPop": ""
+        "psaPop": "https://www.psacard.com/cert/122462895",
+        "psaPopNote": "ルース085 Pikachu With Grey Felt Hat のPOPを使用(Shin保有=開封済みPSA9)。cert 122462895はcello pack(別物・参照のみ)"
       },
       "watch": true,
       "gradingCostDefault": 11980,
@@ -17092,11 +17093,11 @@ const TRECA_DATA = {
           "p9": 150000,
           "rawA": 200000,
           "rawB": 138000,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": null,
+          "pop10": 49112,
+          "popTotal": 113370,
+          "rate10": 43.33,
           "currency": "JPY",
-          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-06-30・PSA10約定n33/proxy率86.8%・rate10は前回cert継承",
+          "src": "価格=daily auto(スニダン直近3約定中央値・実売/ask不使用) 2026-06-30 / rate10=PSA POP cert実測 2026-06-30(cert 122462895→085 Pikachu With Grey Felt Hat ルース・grade10=49112/total=113370=43.33%・proxy86.8%は上振れで真値43.33%に下方修正)",
           "stale": false,
           "alert": null,
           "p10n": 33,
@@ -17125,7 +17126,7 @@ const TRECA_DATA = {
       "imageNote": "DBFWエナジーマーカーE-100(プレイマット&カードセット限定01)。スニダン商品画像(apparels/771370)。",
       "links": {
         "snkrdunk": "https://snkrdunk.com/trading-cards/apparels/771370",
-        "psaPop": ""
+        "psaPop": "https://www.psacard.com/cert/161355803"
       },
       "watch": true,
       "invest": true,
@@ -17329,11 +17330,11 @@ const TRECA_DATA = {
           "p9": null,
           "rawA": 94000,
           "rawB": null,
-          "pop10": null,
-          "popTotal": null,
-          "rate10": 100,
+          "pop10": 53,
+          "popTotal": 59,
+          "rate10": 89.83,
           "currency": "JPY",
-          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-06-30・PSA10約定n16/proxy率100%・rate10は前回cert継承",
+          "src": "価格=daily auto(スニダン直近3約定中央値・実売/ask不使用) 2026-06-30 / rate10=PSA POP cert実測 2026-06-30(cert 161355803→E-100 Energy Marker・grade10=53/total=59=89.83%・proxy100%は上振れで真値89.83%に下方修正)",
           "stale": false,
           "alert": null,
           "p10n": 16,
@@ -18015,6 +18016,150 @@ const TRECA_DATA = {
           "rawAn": 6
         }
       ]
+    },
+    {
+      "id": "op-p075-aisa-luffy",
+      "game": "onepiece",
+      "name": "Monkey.D.Luffy P [P-075] [Aisa ver.](ミニ缶パックセットVOL.1)",
+      "number": "P-075",
+      "variant": "Aisa ver.",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/20241218020554-2.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/481269",
+        "psaPop": ""
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-06-30T11:20:00+09:00",
+          "p10": 198000,
+          "p9": 58000,
+          "rawA": 55000,
+          "rawB": 39999,
+          "pop10": 196,
+          "popTotal": 246,
+          "rate10": 79.67,
+          "currency": "JPY",
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用,素体n33/PSA10n13/PSA9n4) / PSA POP実測 79.67%(g10=196/total=246・Pop Report 2026-06-30) / 投資候補(treca-scout 2026-06-30・EV+¥89k・損益分岐rate36.8%)",
+          "stale": false,
+          "alert": null,
+          "p10n": 13,
+          "rawAn": 33
+        }
+      ],
+      "signals": {}
+    },
+    {
+      "id": "op-st01-012-luffy-wsj",
+      "game": "onepiece",
+      "name": "Monkey.D.Luffy SR [ST01-012](週刊少年ジャンプ2025年19号応募者全員サービス)",
+      "number": "ST01-012",
+      "variant": "",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250416033914-0.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/568241",
+        "psaPop": ""
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-06-30T11:20:00+09:00",
+          "p10": 80000,
+          "p9": 39000,
+          "rawA": 32000,
+          "rawB": null,
+          "pop10": 1186,
+          "popTotal": 1417,
+          "rate10": 83.70,
+          "currency": "JPY",
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用,素体n11/PSA10n60/PSA9n1) / PSA POP実測 83.70%(g10=1186/total=1417・Pop Report 2026-06-30) / 投資候補(treca-scout 2026-06-30・EV+¥23.5k・損益分岐rate59.8%)",
+          "stale": false,
+          "alert": null,
+          "p10n": 60,
+          "rawAn": 11
+        }
+      ],
+      "signals": {}
+    },
+    {
+      "id": "op-p112-aisa-nami",
+      "game": "onepiece",
+      "name": "Nami P [P-112] [Aisa ver.](ミニ缶パックセットvol.2)",
+      "number": "P-112",
+      "variant": "Aisa ver.",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/OPC-TCG-2025-10-06-02-of.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/708622",
+        "psaPop": ""
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-06-30T11:20:00+09:00",
+          "p10": 72050,
+          "p9": null,
+          "rawA": 28500,
+          "rawB": 22000,
+          "pop10": 1198,
+          "popTotal": 1464,
+          "rate10": 81.83,
+          "currency": "JPY",
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用,素体n16/PSA10n38/PSA9約定なし) / PSA POP実測 81.83%(g10=1198/total=1464・Pop Report 2026-06-30) / 投資候補(treca-scout 2026-06-30・EV+¥13.7k(p9保守=0)・損益分岐rate61.1%)",
+          "stale": false,
+          "alert": null,
+          "p10n": 38,
+          "rawAn": 16
+        }
+      ],
+      "signals": {}
+    },
+    {
+      "id": "pk-m4-120-mega-greninja",
+      "game": "pokemon",
+      "name": "MEGA Greninja ex MUR [M4 120/083](拡張パック「忍ノ螺旋」)",
+      "number": "120/083",
+      "variant": "MUR",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/3e8531d4-fcd7-428a-b4ac-bfdf47c55230.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/776371",
+        "psaPop": ""
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-06-30T11:20:00+09:00",
+          "p10": 175000,
+          "p9": 72999,
+          "rawA": 80000,
+          "rawB": 69990,
+          "pop10": 1350,
+          "popTotal": 2623,
+          "rate10": 51.47,
+          "currency": "JPY",
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用,素体n6薄/PSA10n38/PSA9n5) / PSA POP実測 51.47%(g10=1350/total=2623・Pop Report 2026-06-30) / 投資候補(treca-scout 2026-06-30・EV+¥23.5kだが高分散)",
+          "stale": false,
+          "alert": "⚠️高分散・capital重: rate10=51%でPSA9落ち時はp9床¥73k<素体¥80kで実損。素体¥80k=月予算40%・nA=6薄。EV+はp10/p9倍率(2.4x)頼み",
+          "p10n": 38,
+          "rawAn": 6
+        }
+      ],
+      "signals": {}
     }
   ],
   "boxes": [

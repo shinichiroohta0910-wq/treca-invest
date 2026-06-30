@@ -4,7 +4,7 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床{店舗名・買取価格}/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-06-30T11:01:23.625+09:00",
+  "updatedAt": "2026-06-30T17:45:30.673+09:00",
   "updatedBy": "treca-scout 2026-06-30 (新規4枚cert実測追加: ルフィP-075 79.67%・ルフィST01-012 83.70%・ナミP-112 81.83%・メガゲッコウガMUR 51.47%)",
   "games": [
     {

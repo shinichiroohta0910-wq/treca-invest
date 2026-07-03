@@ -4,7 +4,7 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床{店舗名・買取価格}/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-07-04T07:39:08.951+09:00",
+  "updatedAt": "2026-07-04T08:20:02.276+09:00",
   "updatedBy": "daily_market_refresh 2026-07-04: cards71枚(OK 71/stale 0) + boxes13件(OK 13/stale 0) 価格実約定更新(alert 0). rate10は前回cert値継承.",
   "games": [
     {
@@ -422,6 +422,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 20,
           "rawAn": 36
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 198000,
+          "p9": 45000,
+          "rawA": 66000,
+          "rawB": 52000,
+          "pop10": 846,
+          "popTotal": 979,
+          "rate10": 86.41,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n20/proxy率95.2%・rate10は前回cert継承・rawB±>50%保留(新¥22800/旧¥52000)",
+          "stale": false,
+          "alert": null,
+          "p10n": 20,
+          "rawAn": 36
         }
       ],
       "signals": {
@@ -810,6 +826,22 @@ const TRECA_DATA = {
         },
         {
           "at": "2026-07-04T07:39:08.951+09:00",
+          "p10": 89800,
+          "p9": null,
+          "rawA": 19999,
+          "rawB": 15000,
+          "pop10": 1280,
+          "popTotal": 1336,
+          "rate10": 95.81,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n12/proxy率100%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 12,
+          "rawAn": 43
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
           "p10": 89800,
           "p9": null,
           "rawA": 19999,
@@ -1224,6 +1256,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 22,
           "rawAn": 27
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 77000,
+          "p9": null,
+          "rawA": 7500,
+          "rawB": 3150,
+          "pop10": 455,
+          "popTotal": 517,
+          "rate10": 88.01,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n22/proxy率100%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 22,
+          "rawAn": 27
         }
       ],
       "signals": {
@@ -1625,6 +1673,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 45,
           "rawAn": 22
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 35000,
+          "p9": null,
+          "rawA": 3500,
+          "rawB": 1000,
+          "pop10": 735,
+          "popTotal": 751,
+          "rate10": 97.87,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n45/proxy率100%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 45,
+          "rawAn": 22
         }
       ],
       "signals": {
@@ -1985,6 +2049,22 @@ const TRECA_DATA = {
         },
         {
           "at": "2026-07-04T07:39:08.951+09:00",
+          "p10": 170000,
+          "p9": 85000,
+          "rawA": null,
+          "rawB": null,
+          "pop10": 1967,
+          "popTotal": 2797,
+          "rate10": 70.33,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n60/proxy率98.4%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 60,
+          "rawAn": 0
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
           "p10": 170000,
           "p9": 85000,
           "rawA": null,
@@ -2377,6 +2457,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 18,
           "rawAn": 5
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 49500,
+          "p9": 12800,
+          "rawA": 15000,
+          "rawB": 12000,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": 60,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n18/proxy率64.3%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 18,
+          "rawAn": 5
         }
       ],
       "signals": {
@@ -2737,6 +2833,22 @@ const TRECA_DATA = {
         },
         {
           "at": "2026-07-04T07:39:08.951+09:00",
+          "p10": 68900,
+          "p9": 27500,
+          "rawA": 27000,
+          "rawB": 22000,
+          "pop10": 17777,
+          "popTotal": 35646,
+          "rate10": 49.87,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n47/proxy率82.5%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 47,
+          "rawAn": 6
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
           "p10": 68900,
           "p9": 27500,
           "rawA": 27000,
@@ -3129,6 +3241,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 61,
           "rawAn": 3
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 51785,
+          "p9": 25800,
+          "rawA": 26000,
+          "rawB": 23750,
+          "pop10": 16477,
+          "popTotal": 18234,
+          "rate10": 90.36,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n61/proxy率98.4%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 61,
+          "rawAn": 3
         }
       ],
       "signals": {
@@ -3489,6 +3617,22 @@ const TRECA_DATA = {
         },
         {
           "at": "2026-07-04T07:39:08.951+09:00",
+          "p10": 31800,
+          "p9": 18000,
+          "rawA": 21000,
+          "rawB": 16300,
+          "pop10": 47631,
+          "popTotal": 53297,
+          "rate10": 89.37,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n53/proxy率100%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 53,
+          "rawAn": 3
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
           "p10": 31800,
           "p9": 18000,
           "rawA": 21000,
@@ -3881,6 +4025,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 57,
           "rawAn": 12
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 17500,
+          "p9": 7799,
+          "rawA": 6500,
+          "rawB": 6500,
+          "pop10": 5232,
+          "popTotal": 5950,
+          "rate10": 87.93,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n58/proxy率98.3%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 58,
+          "rawAn": 12
         }
       ],
       "signals": {
@@ -4241,6 +4401,22 @@ const TRECA_DATA = {
         },
         {
           "at": "2026-07-04T07:39:08.951+09:00",
+          "p10": 20980,
+          "p9": 8899,
+          "rawA": 9500,
+          "rawB": 6950,
+          "pop10": 37573,
+          "popTotal": 43023,
+          "rate10": 87.33,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n61/proxy率95.3%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 61,
+          "rawAn": 5
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
           "p10": 20980,
           "p9": 8899,
           "rawA": 9500,
@@ -4633,6 +4809,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 42,
           "rawAn": 12
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 13350,
+          "p9": 3500,
+          "rawA": 4000,
+          "rawB": 3500,
+          "pop10": 2739,
+          "popTotal": 4427,
+          "rate10": 61.87,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n42/proxy率77.8%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 42,
+          "rawAn": 12
         }
       ],
       "signals": {
@@ -5006,6 +5198,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 53,
           "rawAn": 3
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 82000,
+          "p9": 36000,
+          "rawA": 56999,
+          "rawB": null,
+          "pop10": 17091,
+          "popTotal": 20321,
+          "rate10": 84.11,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n54/proxy率94.7%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 54,
+          "rawAn": 3
         }
       ],
       "signals": {
@@ -5372,6 +5580,22 @@ const TRECA_DATA = {
         },
         {
           "at": "2026-07-04T07:39:08.951+09:00",
+          "p10": 133499,
+          "p9": 63000,
+          "rawA": 70000,
+          "rawB": 66000,
+          "pop10": 25209,
+          "popTotal": 29855,
+          "rate10": 84.44,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n58/proxy率86.6%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 58,
+          "rawAn": 3
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
           "p10": 133499,
           "p9": 63000,
           "rawA": 70000,
@@ -5764,6 +5988,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 71,
           "rawAn": 0
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 13998,
+          "p9": 3000,
+          "rawA": 1500,
+          "rawB": 1000,
+          "pop10": 9077,
+          "popTotal": 9881,
+          "rate10": 91.86,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n71/proxy率100%・rate10は前回cert継承・rawB±>50%保留(新¥1900/旧¥1000)",
+          "stale": false,
+          "alert": null,
+          "p10n": 71,
+          "rawAn": 0
         }
       ],
       "signals": {
@@ -6124,6 +6364,22 @@ const TRECA_DATA = {
         },
         {
           "at": "2026-07-04T07:39:08.951+09:00",
+          "p10": 6400,
+          "p9": null,
+          "rawA": 1000,
+          "rawB": 1000,
+          "pop10": 7906,
+          "popTotal": 8660,
+          "rate10": 91.29,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n63/proxy率98.4%・rate10は前回cert継承・rawB±>50%保留(新¥2100/旧¥1000)",
+          "stale": false,
+          "alert": null,
+          "p10n": 63,
+          "rawAn": 0
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
           "p10": 6400,
           "p9": null,
           "rawA": 1000,
@@ -6510,6 +6766,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 76,
           "rawAn": 1
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 5800,
+          "p9": null,
+          "rawA": 1000,
+          "rawB": 2000,
+          "pop10": 6337,
+          "popTotal": 6959,
+          "rate10": 91.06,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n76/proxy率100%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 76,
+          "rawAn": 1
         }
       ],
       "signals": {
@@ -6870,6 +7142,22 @@ const TRECA_DATA = {
         },
         {
           "at": "2026-07-04T07:39:08.951+09:00",
+          "p10": 15000,
+          "p9": 4000,
+          "rawA": 4200,
+          "rawB": 2700,
+          "pop10": 13255,
+          "popTotal": 16384,
+          "rate10": 80.9,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n44/proxy率89.8%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 44,
+          "rawAn": 11
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
           "p10": 15000,
           "p9": 4000,
           "rawA": 4200,
@@ -7256,6 +7544,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 55,
           "rawAn": 2
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 12800,
+          "p9": 3990,
+          "rawA": 3150,
+          "rawB": 2600,
+          "pop10": 271623,
+          "popTotal": 310115,
+          "rate10": 87.59,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n53/proxy率98.1%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 53,
+          "rawAn": 2
         }
       ],
       "signals": {
@@ -7616,6 +7920,22 @@ const TRECA_DATA = {
         },
         {
           "at": "2026-07-04T07:39:08.951+09:00",
+          "p10": 6280,
+          "p9": 2499,
+          "rawA": 1000,
+          "rawB": null,
+          "pop10": 8386,
+          "popTotal": 9704,
+          "rate10": 86.42,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n64/proxy率95.5%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 64,
+          "rawAn": 0
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
           "p10": 6280,
           "p9": 2499,
           "rawA": 1000,
@@ -8002,6 +8322,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 46,
           "rawAn": 9
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 64000,
+          "p9": 10800,
+          "rawA": 12000,
+          "rawB": 8499,
+          "pop10": 480,
+          "popTotal": 1000,
+          "rate10": 48,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n46/proxy率73%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 46,
+          "rawAn": 9
         }
       ],
       "signals": {
@@ -8362,6 +8698,22 @@ const TRECA_DATA = {
         },
         {
           "at": "2026-07-04T07:39:08.951+09:00",
+          "p10": 65000,
+          "p9": null,
+          "rawA": 7200,
+          "rawB": 5000,
+          "pop10": 221,
+          "popTotal": 241,
+          "rate10": 91.7,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n8/proxy率100%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 8,
+          "rawAn": 47
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
           "p10": 65000,
           "p9": null,
           "rawA": 7200,
@@ -8748,6 +9100,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 35,
           "rawAn": 18
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 41500,
+          "p9": 14900,
+          "rawA": 15000,
+          "rawB": 6333,
+          "pop10": 12088,
+          "popTotal": 14156,
+          "rate10": 85.39,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n35/proxy率94.6%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 35,
+          "rawAn": 18
         }
       ],
       "signals": {
@@ -9079,6 +9447,22 @@ const TRECA_DATA = {
         },
         {
           "at": "2026-07-04T07:39:08.951+09:00",
+          "p10": null,
+          "p9": null,
+          "rawA": 8500,
+          "rawB": 9500,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": null,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n0/proxy率-%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 0,
+          "rawAn": 58
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
           "p10": null,
           "p9": null,
           "rawA": 8500,
@@ -9465,6 +9849,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 27,
           "rawAn": 27
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 42800,
+          "p9": null,
+          "rawA": 11500,
+          "rawB": 4800,
+          "pop10": 2285,
+          "popTotal": 2588,
+          "rate10": 88.29,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n27/proxy率96.4%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 27,
+          "rawAn": 27
         }
       ],
       "signals": {
@@ -9825,6 +10225,22 @@ const TRECA_DATA = {
         },
         {
           "at": "2026-07-04T07:39:08.951+09:00",
+          "p10": null,
+          "p9": null,
+          "rawA": 1000,
+          "rawB": null,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": null,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n0/proxy率-%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 0,
+          "rawAn": 3
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
           "p10": null,
           "p9": null,
           "rawA": 1000,
@@ -10211,6 +10627,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 28,
           "rawAn": 36
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 76800,
+          "p9": null,
+          "rawA": 22999,
+          "rawB": 17000,
+          "pop10": 13,
+          "popTotal": 17,
+          "rate10": 76.47,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n28/proxy率100%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 28,
+          "rawAn": 36
         }
       ],
       "signals": {
@@ -10583,6 +11015,22 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 47,
+          "rawAn": 4
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 40900,
+          "p9": 13900,
+          "rawA": 20000,
+          "rawB": 4000,
+          "pop10": 20747,
+          "popTotal": 24850,
+          "rate10": 83.5,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n50/proxy率78.1%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 50,
           "rawAn": 4
         }
       ],
@@ -10957,6 +11405,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 31,
           "rawAn": 26
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 62000,
+          "p9": 24750,
+          "rawA": 22000,
+          "rawB": 7800,
+          "pop10": 6353,
+          "popTotal": 8416,
+          "rate10": 75.49,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n31/proxy率96.9%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 31,
+          "rawAn": 27
         }
       ],
       "signals": {
@@ -11317,6 +11781,22 @@ const TRECA_DATA = {
         },
         {
           "at": "2026-07-04T07:39:08.951+09:00",
+          "p10": 39000,
+          "p9": 8888,
+          "rawA": 9000,
+          "rawB": 5999,
+          "pop10": 4026,
+          "popTotal": 4554,
+          "rate10": 88.41,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n39/proxy率100%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 39,
+          "rawAn": 5
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
           "p10": 39000,
           "p9": 8888,
           "rawA": 9000,
@@ -11703,6 +12183,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 34,
           "rawAn": 6
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 84500,
+          "p9": 29150,
+          "rawA": 45000,
+          "rawB": 35000,
+          "pop10": 4705,
+          "popTotal": 5462,
+          "rate10": 86.14,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n34/proxy率94.4%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 34,
+          "rawAn": 6
         }
       ],
       "signals": {
@@ -12036,6 +12532,22 @@ const TRECA_DATA = {
         },
         {
           "at": "2026-07-04T07:39:08.951+09:00",
+          "p10": 159000,
+          "p9": null,
+          "rawA": 52000,
+          "rawB": 39000,
+          "pop10": 160,
+          "popTotal": 167,
+          "rate10": 95.81,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n27/proxy率100%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 27,
+          "rawAn": 47
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
           "p10": 159000,
           "p9": null,
           "rawA": 52000,
@@ -12395,6 +12907,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 31,
           "rawAn": 11
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 110000,
+          "p9": null,
+          "rawA": 37000,
+          "rawB": null,
+          "pop10": 160,
+          "popTotal": 167,
+          "rate10": 95.81,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n31/proxy率100%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 31,
+          "rawAn": 11
         }
       ],
       "signals": {
@@ -12728,6 +13256,22 @@ const TRECA_DATA = {
         },
         {
           "at": "2026-07-04T07:39:08.951+09:00",
+          "p10": 120000,
+          "p9": 38000,
+          "rawA": 42999,
+          "rawB": 25000,
+          "pop10": 3914,
+          "popTotal": 5512,
+          "rate10": 71.01,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n33/proxy率91.7%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 33,
+          "rawAn": 26
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
           "p10": 120000,
           "p9": 38000,
           "rawA": 42999,
@@ -13087,6 +13631,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 31,
           "rawAn": 24
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 94000,
+          "p9": 28000,
+          "rawA": 40000,
+          "rawB": 24000,
+          "pop10": 3843,
+          "popTotal": 4245,
+          "rate10": 90.53,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n31/proxy率96.9%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 31,
+          "rawAn": 24
         }
       ],
       "signals": {
@@ -13433,6 +13993,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 19,
           "rawAn": 29
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 44000,
+          "p9": null,
+          "rawA": 6500,
+          "rawB": 3800,
+          "pop10": 299,
+          "popTotal": 357,
+          "rate10": 83.75,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n19/proxy率100%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 19,
+          "rawAn": 28
         }
       ],
       "signals": {
@@ -13766,6 +14342,22 @@ const TRECA_DATA = {
         },
         {
           "at": "2026-07-04T07:39:08.951+09:00",
+          "p10": 46000,
+          "p9": 12500,
+          "rawA": 14800,
+          "rawB": 13000,
+          "pop10": 2515,
+          "popTotal": 4683,
+          "rate10": 53.7,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n43/proxy率79.6%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 43,
+          "rawAn": 6
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
           "p10": 46000,
           "p9": 12500,
           "rawA": 14800,
@@ -14125,6 +14717,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 10,
           "rawAn": 19
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 39800,
+          "p9": null,
+          "rawA": 3300,
+          "rawB": 1000,
+          "pop10": 1571,
+          "popTotal": 1737,
+          "rate10": 90.44,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n10/proxy率100%・rate10は前回cert継承・rawB±>50%保留(新¥2000/旧¥1000)",
+          "stale": false,
+          "alert": null,
+          "p10n": 10,
+          "rawAn": 19
         }
       ],
       "signals": {
@@ -14470,6 +15078,22 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 37,
+          "rawAn": 7
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 95555,
+          "p9": 53300,
+          "rawA": 58000,
+          "rawB": 42200,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": 88.6,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n40/proxy率97.6%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 40,
           "rawAn": 7
         }
       ],
@@ -14817,6 +15441,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 47,
           "rawAn": 7
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 62500,
+          "p9": null,
+          "rawA": 25000,
+          "rawB": null,
+          "pop10": 54,
+          "popTotal": 58,
+          "rate10": 93.1,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n47/proxy率100%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 47,
+          "rawAn": 7
         }
       ],
       "signals": {
@@ -15150,6 +15790,22 @@ const TRECA_DATA = {
         },
         {
           "at": "2026-07-04T07:39:08.951+09:00",
+          "p10": 59777,
+          "p9": 30000,
+          "rawA": 29999,
+          "rawB": 26000,
+          "pop10": 13799,
+          "popTotal": 14658,
+          "rate10": 94.14,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n25/proxy率100%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 25,
+          "rawAn": 9
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
           "p10": 59777,
           "p9": 30000,
           "rawA": 29999,
@@ -15525,6 +16181,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 9,
           "rawAn": 38
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 25000,
+          "p9": null,
+          "rawA": 3100,
+          "rawB": null,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": 88.94,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n9/proxy率90%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 9,
+          "rawAn": 38
         }
       ],
       "signals": {
@@ -15871,6 +16543,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 51,
           "rawAn": 9
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 82999,
+          "p9": 36000,
+          "rawA": 44444,
+          "rawB": 40000,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": 86.4,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n50/proxy率92.6%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 50,
+          "rawAn": 9
         }
       ],
       "signals": {
@@ -16204,6 +16892,22 @@ const TRECA_DATA = {
         },
         {
           "at": "2026-07-04T07:39:08.951+09:00",
+          "p10": 109700,
+          "p9": 59500,
+          "rawA": 80000,
+          "rawB": 67500,
+          "pop10": 36145,
+          "popTotal": 42711,
+          "rate10": 84.63,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n60/proxy率93.8%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 60,
+          "rawAn": 4
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
           "p10": 109700,
           "p9": 59500,
           "rawA": 80000,
@@ -16569,6 +17273,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 39,
           "rawAn": 16
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 86666,
+          "p9": 34400,
+          "rawA": 46000,
+          "rawB": 19000,
+          "pop10": 1682,
+          "popTotal": 1812,
+          "rate10": 92.83,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n39/proxy率97.5%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 39,
+          "rawAn": 16
         }
       ],
       "signals": {
@@ -16902,6 +17622,22 @@ const TRECA_DATA = {
         },
         {
           "at": "2026-07-04T07:39:08.951+09:00",
+          "p10": 69800,
+          "p9": 15800,
+          "rawA": 8222,
+          "rawB": 5500,
+          "pop10": 385,
+          "popTotal": 399,
+          "rate10": 96.49,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n41/proxy率100%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 41,
+          "rawAn": 31
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
           "p10": 69800,
           "p9": 15800,
           "rawA": 8222,
@@ -17261,6 +17997,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 35,
           "rawAn": 8
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 50000,
+          "p9": 25000,
+          "rawA": 24500,
+          "rawB": 18500,
+          "pop10": 34269,
+          "popTotal": 37494,
+          "rate10": 91.4,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n35/proxy率100%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 35,
+          "rawAn": 8
         }
       ],
       "signals": {
@@ -17594,6 +18346,22 @@ const TRECA_DATA = {
         },
         {
           "at": "2026-07-04T07:39:08.951+09:00",
+          "p10": 58000,
+          "p9": 30000,
+          "rawA": 30999,
+          "rawB": 25000,
+          "pop10": 6882,
+          "popTotal": 7270,
+          "rate10": 94.66,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n58/proxy率96.7%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 58,
+          "rawAn": 5
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
           "p10": 58000,
           "p9": 30000,
           "rawA": 30999,
@@ -17953,6 +18721,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 20,
           "rawAn": 5
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 40000,
+          "p9": null,
+          "rawA": 10500,
+          "rawB": 7000,
+          "pop10": 493,
+          "popTotal": 570,
+          "rate10": 86.49,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n20/proxy率100%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 20,
+          "rawAn": 5
         }
       ],
       "signals": {
@@ -18286,6 +19070,22 @@ const TRECA_DATA = {
         },
         {
           "at": "2026-07-04T07:39:08.951+09:00",
+          "p10": 36000,
+          "p9": null,
+          "rawA": 9000,
+          "rawB": null,
+          "pop10": 1303,
+          "popTotal": 1337,
+          "rate10": 97.46,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n11/proxy率100%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 11,
+          "rawAn": 32
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
           "p10": 36000,
           "p9": null,
           "rawA": 9000,
@@ -18645,6 +19445,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 14,
           "rawAn": 58
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 132999,
+          "p9": 38000,
+          "rawA": 40000,
+          "rawB": 22000,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": 80,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n14/proxy率100%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 14,
+          "rawAn": 58
         }
       ],
       "signals": {
@@ -18978,6 +19794,22 @@ const TRECA_DATA = {
         },
         {
           "at": "2026-07-04T07:39:08.951+09:00",
+          "p10": 117800,
+          "p9": 20000,
+          "rawA": 54000,
+          "rawB": 42800,
+          "pop10": 1129,
+          "popTotal": 1395,
+          "rate10": 80.93,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n51/proxy率98.1%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 51,
+          "rawAn": 19
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
           "p10": 117800,
           "p9": 20000,
           "rawA": 54000,
@@ -19337,6 +20169,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 36,
           "rawAn": 12
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 100000,
+          "p9": 33800,
+          "rawA": 50000,
+          "rawB": 43000,
+          "pop10": 1971,
+          "popTotal": 2262,
+          "rate10": 87.14,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n36/proxy率94.7%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 36,
+          "rawAn": 12
         }
       ],
       "signals": {
@@ -19683,6 +20531,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 16,
           "rawAn": 43
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 103000,
+          "p9": 25000,
+          "rawA": 27000,
+          "rawB": 20000,
+          "pop10": 100,
+          "popTotal": 124,
+          "rate10": 80.65,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n16/proxy率88.9%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 16,
+          "rawAn": 43
         }
       ],
       "signals": {
@@ -20003,6 +20867,22 @@ const TRECA_DATA = {
         },
         {
           "at": "2026-07-04T07:39:08.951+09:00",
+          "p10": 109500,
+          "p9": null,
+          "rawA": 28900,
+          "rawB": 12500,
+          "pop10": 295,
+          "popTotal": 306,
+          "rate10": 96.4,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n18/proxy率100%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 18,
+          "rawAn": 39
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
           "p10": 109500,
           "p9": null,
           "rawA": 28900,
@@ -20349,6 +21229,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 16,
           "rawAn": 49
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 79800,
+          "p9": 29800,
+          "rawA": 26500,
+          "rawB": 24500,
+          "pop10": 330,
+          "popTotal": 359,
+          "rate10": 91.9,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n16/proxy率100%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 16,
+          "rawAn": 49
         }
       ],
       "signals": {
@@ -20682,6 +21578,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 37,
           "rawAn": 20
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 100000,
+          "p9": 48000,
+          "rawA": 65000,
+          "rawB": 40000,
+          "pop10": 1318,
+          "popTotal": 1435,
+          "rate10": 91.8,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n37/proxy率97.4%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 37,
+          "rawAn": 19
         }
       ],
       "signals": {
@@ -21002,6 +21914,22 @@ const TRECA_DATA = {
         },
         {
           "at": "2026-07-04T07:39:08.951+09:00",
+          "p10": 100000,
+          "p9": 47500,
+          "rawA": 65000,
+          "rawB": 38500,
+          "pop10": 1608,
+          "popTotal": 1672,
+          "rate10": 96.2,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n37/proxy率94.9%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 37,
+          "rawAn": 10
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
           "p10": 100000,
           "p9": 47500,
           "rawA": 65000,
@@ -21348,6 +22276,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 57,
           "rawAn": 14
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 52900,
+          "p9": 20800,
+          "rawA": 28000,
+          "rawB": 20800,
+          "pop10": 37346,
+          "popTotal": 49957,
+          "rate10": 74.8,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n57/proxy率98.3%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 57,
+          "rawAn": 14
         }
       ],
       "signals": {
@@ -21681,6 +22625,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 16,
           "rawAn": 29
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 78000,
+          "p9": 20000,
+          "rawA": 23000,
+          "rawB": 24500,
+          "pop10": 91,
+          "popTotal": 125,
+          "rate10": 72.8,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n16/proxy率94.1%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 16,
+          "rawAn": 29
         }
       ],
       "signals": {
@@ -21969,6 +22929,22 @@ const TRECA_DATA = {
         },
         {
           "at": "2026-07-04T07:39:08.951+09:00",
+          "p10": 498000,
+          "p9": 142200,
+          "rawA": 200000,
+          "rawB": 129000,
+          "pop10": 49112,
+          "popTotal": 113370,
+          "rate10": 43.33,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n38/proxy率88.4%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 38,
+          "rawAn": 10
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
           "p10": 498000,
           "p9": 142200,
           "rawA": 200000,
@@ -22299,6 +23275,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 16,
           "rawAn": 13
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 210000,
+          "p9": null,
+          "rawA": 94000,
+          "rawB": null,
+          "pop10": 53,
+          "popTotal": 59,
+          "rate10": 89.83,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n16/proxy率100%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 16,
+          "rawAn": 13
         }
       ],
       "signals": {
@@ -22600,6 +23592,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 27,
           "rawAn": 6
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 83900,
+          "p9": 29500,
+          "rawA": 34999,
+          "rawB": 27500,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": 77.8,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n28/proxy率80%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 28,
+          "rawAn": 6
         }
       ],
       "signals": {
@@ -22821,6 +23829,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 7,
           "rawAn": 33
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 105000,
+          "p9": null,
+          "rawA": 42000,
+          "rawB": 34500,
+          "pop10": 97,
+          "popTotal": 99,
+          "rate10": 97.98,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n7/proxy率100%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 7,
+          "rawAn": 33
         }
       ],
       "signals": {
@@ -22999,6 +24023,22 @@ const TRECA_DATA = {
         },
         {
           "at": "2026-07-04T07:39:08.951+09:00",
+          "p10": 123333,
+          "p9": 36500,
+          "rawA": 62999,
+          "rawB": 45500,
+          "pop10": 1380,
+          "popTotal": 1471,
+          "rate10": 93.81,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n30/proxy率93.8%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 30,
+          "rawAn": 36
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
           "p10": 123333,
           "p9": 36500,
           "rawA": 62999,
@@ -23193,6 +24233,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 22,
           "rawAn": 60
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 67000,
+          "p9": null,
+          "rawA": 29000,
+          "rawB": 16000,
+          "pop10": 739,
+          "popTotal": 883,
+          "rate10": 83.69,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n22/proxy率100%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 22,
+          "rawAn": 60
         }
       ]
     },
@@ -23374,6 +24430,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 38,
           "rawAn": 7
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 117700,
+          "p9": 43000,
+          "rawA": 55000,
+          "rawB": 47500,
+          "pop10": 3301,
+          "popTotal": 5991,
+          "rate10": 55.1,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n38/proxy率80.9%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 38,
+          "rawAn": 7
         }
       ]
     },
@@ -23476,6 +24548,22 @@ const TRECA_DATA = {
         },
         {
           "at": "2026-07-04T07:39:08.951+09:00",
+          "p10": 198000,
+          "p9": 58000,
+          "rawA": 55000,
+          "rawB": 37777,
+          "pop10": 196,
+          "popTotal": 246,
+          "rate10": 79.67,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n14/proxy率77.8%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 14,
+          "rawAn": 33
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
           "p10": 198000,
           "p9": 58000,
           "rawA": 55000,
@@ -23605,6 +24693,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 56,
           "rawAn": 10
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 79800,
+          "p9": 39000,
+          "rawA": 30000,
+          "rawB": null,
+          "pop10": 1186,
+          "popTotal": 1417,
+          "rate10": 83.7,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n56/proxy率98.2%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 56,
+          "rawAn": 10
         }
       ],
       "signals": {}
@@ -23708,6 +24812,22 @@ const TRECA_DATA = {
         },
         {
           "at": "2026-07-04T07:39:08.951+09:00",
+          "p10": 60000,
+          "p9": null,
+          "rawA": 28500,
+          "rawB": 22000,
+          "pop10": 1198,
+          "popTotal": 1464,
+          "rate10": 81.83,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n39/proxy率100%・rate10は前回cert継承・rawA±>50%保留(新¥44999/旧¥28500)",
+          "stale": false,
+          "alert": null,
+          "p10n": 39,
+          "rawAn": 17
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
           "p10": 60000,
           "p9": null,
           "rawA": 28500,
@@ -23837,6 +24957,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 28,
           "rawAn": 9
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "p10": 168000,
+          "p9": 67000,
+          "rawA": 90000,
+          "rawB": 69990,
+          "pop10": 1350,
+          "popTotal": 2623,
+          "rate10": 51.47,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-04・PSA10約定n28/proxy率80%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 28,
+          "rawAn": 9
         }
       ],
       "signals": {}
@@ -23943,6 +25079,14 @@ const TRECA_DATA = {
         },
         {
           "at": "2026-07-04T07:39:08.951+09:00",
+          "box": 13999,
+          "n": 3,
+          "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-07-04・約定20行",
+          "stale": false,
+          "alert": null
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
           "box": 13999,
           "n": 3,
           "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-07-04・約定20行",
@@ -24056,6 +25200,14 @@ const TRECA_DATA = {
           "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-07-04・約定20行",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "box": 1980,
+          "n": 3,
+          "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-07-04・約定20行",
+          "stale": false,
+          "alert": null
         }
       ]
     },
@@ -24159,6 +25311,14 @@ const TRECA_DATA = {
         },
         {
           "at": "2026-07-04T07:39:08.951+09:00",
+          "box": 1800,
+          "n": 3,
+          "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-07-04・約定20行",
+          "stale": false,
+          "alert": null
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
           "box": 1800,
           "n": 3,
           "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-07-04・約定20行",
@@ -24272,6 +25432,14 @@ const TRECA_DATA = {
           "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-07-04・約定20行",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "box": 21399,
+          "n": 3,
+          "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-07-04・約定20行",
+          "stale": false,
+          "alert": null
         }
       ]
     },
@@ -24375,6 +25543,14 @@ const TRECA_DATA = {
         },
         {
           "at": "2026-07-04T07:39:08.951+09:00",
+          "box": 9700,
+          "n": 3,
+          "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-07-04・約定20行",
+          "stale": false,
+          "alert": null
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
           "box": 9700,
           "n": 3,
           "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-07-04・約定20行",
@@ -24489,6 +25665,14 @@ const TRECA_DATA = {
           "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-07-04・約定20行",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "box": 10000,
+          "n": 3,
+          "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-07-04・約定20行",
+          "stale": false,
+          "alert": null
         }
       ]
     },
@@ -24593,6 +25777,14 @@ const TRECA_DATA = {
         },
         {
           "at": "2026-07-04T07:39:08.951+09:00",
+          "box": 17500,
+          "n": 3,
+          "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-07-04・約定20行",
+          "stale": false,
+          "alert": null
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
           "box": 17500,
           "n": 3,
           "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-07-04・約定20行",
@@ -24707,6 +25899,14 @@ const TRECA_DATA = {
           "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-07-04・約定20行",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "box": 19444,
+          "n": 3,
+          "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-07-04・約定20行",
+          "stale": false,
+          "alert": null
         }
       ]
     },
@@ -24811,6 +26011,14 @@ const TRECA_DATA = {
         },
         {
           "at": "2026-07-04T07:39:08.951+09:00",
+          "box": 123000,
+          "n": 3,
+          "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-07-04・約定20行",
+          "stale": false,
+          "alert": null
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
           "box": 123000,
           "n": 3,
           "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-07-04・約定20行",
@@ -24925,6 +26133,14 @@ const TRECA_DATA = {
           "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-07-04・約定20行",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "box": 74790,
+          "n": 3,
+          "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-07-04・約定20行",
+          "stale": false,
+          "alert": null
         }
       ]
     },
@@ -25029,6 +26245,14 @@ const TRECA_DATA = {
         },
         {
           "at": "2026-07-04T07:39:08.951+09:00",
+          "box": 13800,
+          "n": 3,
+          "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-07-04・約定20行",
+          "stale": false,
+          "alert": null
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
           "box": 13800,
           "n": 3,
           "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-07-04・約定20行",
@@ -25143,6 +26367,14 @@ const TRECA_DATA = {
           "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-07-04・約定20行",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
+          "box": 55555,
+          "n": 3,
+          "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-07-04・約定20行",
+          "stale": false,
+          "alert": null
         }
       ]
     },
@@ -25247,6 +26479,14 @@ const TRECA_DATA = {
         },
         {
           "at": "2026-07-04T07:39:08.951+09:00",
+          "box": 5300,
+          "n": 3,
+          "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-07-04・約定20行",
+          "stale": false,
+          "alert": null
+        },
+        {
+          "at": "2026-07-04T08:20:02.276+09:00",
           "box": 5300,
           "n": 3,
           "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-07-04・約定20行",

@@ -4,8 +4,8 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床{店舗名・買取価格}/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-07-04T08:20:02.276+09:00",
-  "updatedBy": "daily_market_refresh 2026-07-04: cards71枚(OK 71/stale 0) + boxes13件(OK 13/stale 0) 価格実約定更新(alert 0). rate10は前回cert値継承.",
+  "updatedAt": "2026-07-04T09:40:00+09:00",
+  "updatedBy": "treca-scout 2026-07-04: cert実測4枚 本採用(invest:true)追加 — チョッパーST01-006/ゾロL OP12-020/ゾロSEC OP06-118/漫才ピカSM-P407. rate10はPSA Pop Report cert実測(Shin提供OCR).",
   "games": [
     {
       "id": "onepiece",
@@ -24972,6 +24972,150 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 28,
+          "rawAn": 9
+        }
+      ],
+      "signals": {}
+    },
+    {
+      "id": "op-op12-020-zoro-l-710532",
+      "game": "onepiece",
+      "name": "Roronoa Zoro L [OP12-020](Promotional Card \"Official Playmat Limited Edition vol.4\")",
+      "number": "OP12-020",
+      "variant": "オフィシャルプレイマット リミテッドエディション vol.4",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/OPC-TCG-2025-10-10-OPM-vol4-of.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/710532",
+        "psaPop": "https://www.psacard.com/cert/154705396"
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-07-04T09:40:00+09:00",
+          "p10": 89000,
+          "p9": 35000,
+          "rawA": 28888,
+          "rawB": null,
+          "pop10": 441,
+          "popTotal": 547,
+          "rate10": 80.62,
+          "currency": "JPY",
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用,2026-07-04,apparels/710532). PSA POP=cert実測(Shin提供PopReport OCR) g10=441/total=547=rate10 80.62% (cert 154705396). 本採用(treca-scout 2026-07-04・正式式edge+¥31,374/枚). eBay/買取床signalは本環境で未許可ドメイン→次回需要更新で付与.",
+          "stale": false,
+          "alert": null,
+          "p10n": 36,
+          "rawAn": 26
+        }
+      ],
+      "signals": {}
+    },
+    {
+      "id": "op-op06-118-zoro-sec-300064",
+      "game": "onepiece",
+      "name": "Roronoa Zoro SEC [OP06-118](Special Goods Set \"2nd ANNIVERSARY SET\")",
+      "number": "OP06-118",
+      "variant": "2nd ANNIVERSARY SET",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/OPC-TCG-OP06-118-20240621-ot.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/300064",
+        "psaPop": "https://www.psacard.com/cert/110217009"
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-07-04T09:40:00+09:00",
+          "p10": 62000,
+          "p9": 16000,
+          "rawA": 16500,
+          "rawB": null,
+          "pop10": 893,
+          "popTotal": 972,
+          "rate10": 91.87,
+          "currency": "JPY",
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用,2026-07-04,apparels/300064). PSA POP=cert実測(Shin提供PopReport OCR) g10=893/total=972=rate10 91.87% (cert 110217009). 本採用(treca-scout 2026-07-04・正式式edge+¥25,132/枚). eBay/買取床signalは本環境で未許可ドメイン→次回需要更新で付与.",
+          "stale": false,
+          "alert": null,
+          "p10n": 41,
+          "rawAn": 19
+        }
+      ],
+      "signals": {}
+    },
+    {
+      "id": "op-st01-006-chopper-157937",
+      "game": "onepiece",
+      "name": "Tony Tony Chopper C [ST01-006] (Promotion Card Set 3)",
+      "number": "ST01-006",
+      "variant": "プロモーションカードセット3",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/44c362cd-a34a-4a68-8c2a-d8836f52f7d8.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/157937",
+        "psaPop": "https://www.psacard.com/cert/89086295"
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-07-04T09:40:00+09:00",
+          "p10": 155000,
+          "p9": null,
+          "rawA": 39499,
+          "rawB": null,
+          "pop10": 668,
+          "popTotal": 691,
+          "rate10": 96.67,
+          "currency": "JPY",
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用,2026-07-04,apparels/157937). PSA POP=cert実測(Shin提供PopReport OCR) g10=668/total=691=rate10 96.67% (cert 89086295). 本採用(treca-scout 2026-07-04・正式式edge+¥86,372/枚・最有力). eBay/買取床signalは本環境で未許可ドメイン→次回需要更新で付与.",
+          "stale": false,
+          "alert": null,
+          "p10n": 13,
+          "rawAn": 58
+        }
+      ],
+      "signals": {}
+    },
+    {
+      "id": "pk-smp-407-manzai-pikachu-127035",
+      "game": "pokemon",
+      "name": "Manzai play Pikachu: PROMO[SM-P 407](S-P Promotional cards)",
+      "number": "SM-P 407",
+      "variant": "ポケモンセンターオオサカDX オープン記念",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/20230606070017-0.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/127035",
+        "psaPop": "https://www.psacard.com/cert/159798216"
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-07-04T09:40:00+09:00",
+          "p10": 138000,
+          "p9": 45000,
+          "rawA": 53500,
+          "rawB": null,
+          "pop10": 7060,
+          "popTotal": 11973,
+          "rate10": 58.97,
+          "currency": "JPY",
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用,2026-07-04,apparels/127035). PSA POP=cert実測(Shin提供PopReport OCR) g10=7060/total=11973=rate10 58.97% (cert 159798216). 本採用(treca-scout 2026-07-04・正式式edge+¥26,375/枚・p9¥45k床厚い). eBay/買取床signalは本環境で未許可ドメイン→次回需要更新で付与.",
+          "stale": false,
+          "alert": null,
+          "p10n": 31,
           "rawAn": 9
         }
       ],

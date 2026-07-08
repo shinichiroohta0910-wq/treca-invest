@@ -4,8 +4,8 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床{店舗名・買取価格}/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-07-08T11:17:52.065+09:00",
-  "updatedBy": "treca-scout 2026-07-08: cert実測でedge>0の5枚をinvest:true本採用(pk-m1s-092-mega-gardevoir-mur-663661, yg-loch-jp001-dark-magician-pse-769218, pk-m5-118-mega-darkrai-mur-826556, pk-s8ap-007-birthday-pikachu-93015, pk-sv2a-205-mew-ex-sar-128121). 74→79枚.",
+  "updatedAt": "2026-07-08T11:35:55.669+09:00",
+  "updatedBy": "treca-scout 2026-07-08: cert実測でedge>0の2枚を追加採用(db-fb07-104-son-goku-top-prize-838293, op-op02-013-ace-2nd-anniv-300060). 79→81枚.",
   "games": [
     {
       "id": "onepiece",
@@ -30845,6 +30845,80 @@ const TRECA_DATA = {
           "p9n": 6,
           "rawAn": 7,
           "rawBn": 1
+        }
+      ]
+    },
+    {
+      "id": "db-fb07-104-son-goku-top-prize-838293",
+      "game": "dbfw",
+      "name": "孫悟空 SR [FB07-104](ULTIMATE BATTLE Top Prize)",
+      "number": "FB07-104",
+      "variant": "SR Top Prize (FUSION WORLD / ULTIMATE BATTLE 上位賞)",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/2026-06-10-002-of.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/838293",
+        "psaPop": "https://www.psacard.com/cert/154327957"
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-07-08T11:35:55.669+09:00",
+          "p10": 119000,
+          "p9": null,
+          "rawA": 70000,
+          "rawB": null,
+          "pop10": 540,
+          "popTotal": 550,
+          "rate10": 98.18,
+          "currency": "JPY",
+          "src": "価格=スニダン約定(実売・ask不使用, 2026-07-08・p10は直近8件中央値の保守値) / PSA POP cert実測 rate10=98.18% (g10=540/total=550・cert 154327957) / 需要シグナル=未取得(eBay/psacard/X 遮断ドメイン・捏造せず) / treca-scout 2026-07-08 本採用",
+          "stale": false,
+          "alert": "rate10実測98.18%(540/550・大会上位賞=厚紙で高グレード率)。⚠p10は保守採用: 直近3中央値なら¥155,555だが直近8件は¥109,999〜¥160,000でばらつく(¥160,000@07-08・¥155,555@07-07は上昇初動か外れ値か未確定)。中央値¥119,000で評価しEV+¥25,507。¥155,555なら+¥58,526＝上振れ余地。PSA9約定ゼロのためp9=0保守。",
+          "p10n": 58,
+          "p9n": 0,
+          "rawAn": 12,
+          "rawBn": 0
+        }
+      ]
+    },
+    {
+      "id": "op-op02-013-ace-2nd-anniv-300060",
+      "game": "onepiece",
+      "name": "ポートガス・D・エース SR [OP02-013](2nd Anniversary Set)",
+      "number": "OP02-013",
+      "variant": "SR (2nd Anniversary Set)",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/OPC-TCG-OP02-013-20240621-ot.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/300060",
+        "psaPop": "https://www.psacard.com/cert/151235283"
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-07-08T11:35:55.669+09:00",
+          "p10": 52000,
+          "p9": 25000,
+          "rawA": 22222,
+          "rawB": null,
+          "pop10": 1076,
+          "popTotal": 1161,
+          "rate10": 92.68,
+          "currency": "JPY",
+          "src": "価格=スニダン約定(実売・ask不使用, 2026-07-08・直近3約定中央値) / PSA POP cert実測 rate10=92.68% (g10=1076/total=1161・cert 151235283) / 需要シグナル=未取得(eBay/psacard/X 遮断ドメイン・捏造せず) / treca-scout 2026-07-08 本採用",
+          "stale": false,
+          "alert": "rate10実測92.68%(1076/1161)。⚠p9=¥25,000は約定n=1・2026-06-16(22日前)＝床の信頼度低い。p9=0で保守評価してもEV+¥10,136で黒。素体A¥22,222と安く回転向き(5枚中もっとも資金効率が良い)。",
+          "p10n": 36,
+          "p9n": 1,
+          "rawAn": 13,
+          "rawBn": 0
         }
       ]
     }

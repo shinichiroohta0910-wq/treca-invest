@@ -4,8 +4,8 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床{店舗名・買取価格}/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-07-08T10:31:54.636+09:00",
-  "updatedBy": "prune_negative_ev 2026-07-08: 非保有EVマイナス1枚削除(op-op-p-041-134163). 75→74枚.",
+  "updatedAt": "2026-07-08T11:17:52.065+09:00",
+  "updatedBy": "treca-scout 2026-07-08: cert実測でedge>0の5枚をinvest:true本採用(pk-m1s-092-mega-gardevoir-mur-663661, yg-loch-jp001-dark-magician-pse-769218, pk-m5-118-mega-darkrai-mur-826556, pk-s8ap-007-birthday-pikachu-93015, pk-sv2a-205-mew-ex-sar-128121). 74→79枚.",
   "games": [
     {
       "id": "onepiece",
@@ -30662,6 +30662,191 @@ const TRECA_DATA = {
         }
       ],
       "signals": {}
+    },
+    {
+      "id": "pk-m1s-092-mega-gardevoir-mur-663661",
+      "game": "pokemon",
+      "name": "メガサーナイトex MUR [M1S 092/063]",
+      "number": "092/063",
+      "variant": "MUR (MEGA ULTRA RARE)",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250730092000-5.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/663661",
+        "psaPop": "https://www.psacard.com/cert/155121802"
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-07-08T11:17:52.065+09:00",
+          "p10": 120000,
+          "p9": 37500,
+          "rawA": 44000,
+          "rawB": 46999,
+          "pop10": 2350,
+          "popTotal": 4946,
+          "rate10": 47.51,
+          "currency": "JPY",
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用, 2026-07-08) / PSA POP cert実測 rate10=47.51% (g10=2350/total=4946・cert 155121802・variety突合済) / 需要シグナル=未取得(eBay/psacard/X が遮断ドメイン・捏造せず) / treca-scout 2026-07-08 本採用",
+          "stale": false,
+          "alert": "rate10実測47.51%＝MUR特有のセンタリング難(proxy85%から-37pt)。EVプラスはp9床¥37,500に依存。p9が崩れると即マイナス。",
+          "p10n": 41,
+          "p9n": 15,
+          "rawAn": 6,
+          "rawBn": 1
+        }
+      ]
+    },
+    {
+      "id": "yg-loch-jp001-dark-magician-pse-769218",
+      "game": "yugioh",
+      "name": "王のしもべ-ブラック・マジシャン PSE オーバーフレーム [LOCH-JP001]",
+      "number": "LOCH-JP001",
+      "variant": "PSE Extended Art-Prismatic Secret Rare (リミットオーバーコレクション ザ ヒーローズ)",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/20260302022334-0.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/769218",
+        "psaPop": "https://www.psacard.com/cert/161358062"
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-07-08T11:17:52.065+09:00",
+          "p10": 125000,
+          "p9": null,
+          "rawA": 58000,
+          "rawB": 23350,
+          "pop10": 317,
+          "popTotal": 358,
+          "rate10": 88.55,
+          "currency": "JPY",
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用, 2026-07-08) / PSA POP cert実測 rate10=88.55% (g10=317/total=358・cert 161358062・variety突合済) / 需要シグナル=未取得(eBay/psacard/X が遮断ドメイン・捏造せず) / treca-scout 2026-07-08 本採用",
+          "stale": false,
+          "alert": "2026新弾(LOCH)＝POP母数358で成長中・rate10は今後変動しうる。PSA9約定ゼロのためp9=0保守評価(実EVは上振れ余地)。同番3行(無印/Extended Art/Ext-Prismatic SCR)のうちExt-Prismatic SCR行で突合済。",
+          "p10n": 46,
+          "p9n": 0,
+          "rawAn": 41,
+          "rawBn": 2
+        }
+      ]
+    },
+    {
+      "id": "pk-m5-118-mega-darkrai-mur-826556",
+      "game": "pokemon",
+      "name": "メガダークライex MUR [M5 118/081](アビスアイ Abyss Eye)",
+      "number": "118/081",
+      "variant": "MUR (MEGA ULTRA RARE)",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/87be8e00-ffce-4c60-8ac9-7d3afa5e0095.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/826556",
+        "psaPop": "https://www.psacard.com/cert/164715787"
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-07-08T11:17:52.065+09:00",
+          "p10": 234567,
+          "p9": null,
+          "rawA": 75500,
+          "rawB": 65000,
+          "pop10": 90,
+          "popTotal": 121,
+          "rate10": 74.38,
+          "currency": "JPY",
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用, 2026-07-08) / PSA POP cert実測 rate10=74.38% (g10=90/total=121・cert 164715787・variety突合済) / 需要シグナル=未取得(eBay/psacard/X が遮断ドメイン・捏造せず) / treca-scout 2026-07-08 本採用",
+          "stale": false,
+          "alert": "⚠最要注意: p10=¥234,567はPSA10約定n=8の薄い裏付け。POP母数121(2026新弾)でrate10 74.38%は今後下振れしうる。EV+¥73kはクッション大だがp10調整で急減する。素体A¥75,500は予算上限¥80,000に近い。",
+          "p10n": 8,
+          "p9n": 0,
+          "rawAn": 40,
+          "rawBn": 5
+        }
+      ]
+    },
+    {
+      "id": "pk-s8ap-007-birthday-pikachu-93015",
+      "game": "pokemon",
+      "name": "おたんじょうびピカチュウ [S8a-P 007/025](PCP 25th Anniversary Ed.)",
+      "number": "007/025",
+      "variant": "PROMO (Birthday Pikachu-Holo)",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250927034333-0.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/93015",
+        "psaPop": "https://www.psacard.com/cert/139447322"
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-07-08T11:17:52.065+09:00",
+          "p10": 122500,
+          "p9": 44000,
+          "rawA": 69800,
+          "rawB": 40000,
+          "pop10": 25781,
+          "popTotal": 30194,
+          "rate10": 85.38,
+          "currency": "JPY",
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用, 2026-07-08) / PSA POP cert実測 rate10=85.38% (g10=25781/total=30194・cert 139447322・variety突合済) / 需要シグナル=未取得(eBay/psacard/X が遮断ドメイン・捏造せず) / treca-scout 2026-07-08 本採用",
+          "stale": false,
+          "alert": "POP母数30,194＝rate10 85.38%は極めて安定(2021年札)。ただし素体A約定n=5は流動性ゲート下限＝仕入れ機会が薄い。",
+          "p10n": 47,
+          "p9n": 3,
+          "rawAn": 5,
+          "rawBn": 1
+        }
+      ]
+    },
+    {
+      "id": "pk-sv2a-205-mew-ex-sar-128121",
+      "game": "pokemon",
+      "name": "ミュウex SAR [SV2a 205/165](ポケモンカード151)",
+      "number": "205/165",
+      "variant": "SAR (Special Art Rare)",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/20230621022900-0.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/128121",
+        "psaPop": "https://www.psacard.com/cert/161485367"
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-07-08T11:17:52.065+09:00",
+          "p10": 86888,
+          "p9": 37000,
+          "rawA": 49000,
+          "rawB": 35000,
+          "pop10": 21134,
+          "popTotal": 25862,
+          "rate10": 81.72,
+          "currency": "JPY",
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用, 2026-07-08) / PSA POP cert実測 rate10=81.72% (g10=21134/total=25862・cert 161485367・variety突合済) / 需要シグナル=未取得(eBay/psacard/X が遮断ドメイン・捏造せず) / treca-scout 2026-07-08 本採用",
+          "stale": false,
+          "alert": "POP母数25,862＝rate10 81.72%は安定。EV+¥10,566は5枚中最小＝素体Aが¥49,000超で仕入れると赤転しやすい。",
+          "p10n": 54,
+          "p9n": 6,
+          "rawAn": 7,
+          "rawBn": 1
+        }
+      ]
     }
   ],
   "boxes": [

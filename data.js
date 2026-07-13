@@ -4,8 +4,8 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床{店舗名・買取価格}/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-07-13T15:05:05.815+09:00",
-  "updatedBy": "daily_market_refresh 2026-07-13: cards81枚(OK 81/stale 0) + boxes13件(OK 13/stale 0) 価格実約定更新(alert 0). rate10は前回cert値継承.",
+  "updatedAt": "2026-07-13T15:55:17.116+09:00",
+  "updatedBy": "treca-scout 2026-07-13: cert実測でinvest新規4枚追加(レックウザ黒41.39%/ルフィLP81.27%/ナミGirlsEd90.24%/ルフィChamp89.46%)・全edge>0. + daily refresh継承",
   "games": [
     {
       "id": "onepiece",
@@ -41289,6 +41289,159 @@ const TRECA_DATA = {
           "rawAn": 13
         }
       ]
+    },
+    {
+      "id": "pk-bwp144-rayquaza-black-91570",
+      "game": "pokemon",
+      "name": "レックウザ (黒・色違い) [144/BW-P] (ポケモン+ノブナガの野望)",
+      "number": "144/BW-P",
+      "variant": "黒レックウザ・ホロ (PM+ノブナガの野望 / NBNGS AMBITION)",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/20240419072532-0.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/91570",
+        "psaPop": "https://www.psacard.com/cert/147971797"
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-07-13T15:55:17.116+09:00",
+          "currency": "JPY",
+          "stale": false,
+          "alert": null,
+          "p10": 219000,
+          "p9": 45000,
+          "rawA": 60000,
+          "rawB": 44444,
+          "pop10": 1267,
+          "popTotal": 3061,
+          "rate10": 41.39,
+          "p10n": 21,
+          "rawAn": 20,
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用): p10 219000(n21)/p9 45000(n9)/素体A 60000(n20). PSA POP実測 rate10=41.39%(g10=1267/total=3061・cert#147971797経由・2012 B&W Promo #144 PM+NBNG). buyEV約+35,700(素体¥60k=資本重・回転遅). 投資採用(treca-scout 2026-07-13 cert実測)"
+        }
+      ],
+      "signals": {
+        "ebay": {
+          "soldMedianUSD": 1439,
+          "soldMedianJPY": 215850,
+          "n": 5,
+          "days": 12,
+          "at": "2026-07-13",
+          "src": "PSA cert公開の類似PSA10直近sold(eBay Auction)中央値・$1263〜1706(06/28〜07/07)"
+        }
+      }
+    },
+    {
+      "id": "op-st13-003-luffy-lp-412058",
+      "game": "onepiece",
+      "name": "モンキー・D・ルフィ L-P [ST13-003] (プレミアムカードコレクション「リーダーコレクション」)",
+      "number": "ST13-003",
+      "variant": "リーダーパラレル",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/OPC-TCG-PC-LC-ST13-003-of.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/412058",
+        "psaPop": ""
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-07-13T15:55:17.116+09:00",
+          "currency": "JPY",
+          "stale": false,
+          "alert": null,
+          "p10": 75000,
+          "p9": 22000,
+          "rawA": 24900,
+          "rawB": 9999,
+          "pop10": 243,
+          "popTotal": 299,
+          "rate10": 81.27,
+          "p10n": 40,
+          "rawAn": 26,
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用): p10 75000(n40)/p9 22000(n1)/素体A 24900(n26). PSA POP実測 rate10=81.27%(g10=243/total=299・2024 One Piece #003 Premium Card Coll -Leader). cert番号はスニダン出品のDOPA透かしで秘匿だがPop Report実測済. buyEV約+23,000. 出口=スニダンPSA10約定n40厚. 投資採用(treca-scout 2026-07-13 cert実測)"
+        }
+      ],
+      "signals": {}
+    },
+    {
+      "id": "op-op01-016-nami-girlsed-129630",
+      "game": "onepiece",
+      "name": "ナミ [OP01-016] (プレミアムカードコレクション -ガールズエディション-)",
+      "number": "OP01-016",
+      "variant": "Girls Edition パラレル",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/20230929090824-4.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/129630",
+        "psaPop": "https://www.psacard.com/cert/87884101"
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-07-13T15:55:17.116+09:00",
+          "currency": "JPY",
+          "stale": false,
+          "alert": null,
+          "p10": 78000,
+          "p9": 28717,
+          "rawA": 39700,
+          "rawB": 22000,
+          "pop10": 1785,
+          "popTotal": 1978,
+          "rate10": 90.24,
+          "p10n": 24,
+          "rawAn": 42,
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用): p10 78000(n24)/p9 28717(n1)/素体A 39700(n42). PSA POP実測 rate10=90.24%(g10=1785/total=1978・cert#87884101・2023 One Piece #016 Premium Card Coll -Girls Ed). buyEV約+15,700. 保有ナミ花札版(apparel129616)とは別カード確定. 投資採用(treca-scout 2026-07-13 cert実測)"
+        }
+      ],
+      "signals": {}
+    },
+    {
+      "id": "op-p001-luffy-champ-95888",
+      "game": "onepiece",
+      "name": "モンキー・D・ルフィ [P-001] (チャンピオンシップセット2022購入特典)",
+      "number": "P-001",
+      "variant": "Championship Set 2022 Purchase Bonus",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/20220909043606-1.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/95888",
+        "psaPop": "https://www.psacard.com/cert/97910772"
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-07-13T15:55:17.116+09:00",
+          "currency": "JPY",
+          "stale": false,
+          "alert": null,
+          "p10": 44999,
+          "p9": 16000,
+          "rawA": 11800,
+          "rawB": null,
+          "pop10": 3886,
+          "popTotal": 4344,
+          "rate10": 89.46,
+          "p10n": 33,
+          "rawAn": 14,
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用): p10 44999(n33)/p9 16000(n1)/素体A 11800(n14). PSA POP実測 rate10=89.46%(g10=3886/total=4344・cert#97910772・2022 One Piece #001 Champ Set購入特典). buyEV約+14,800(素体¥11.8k=資本効率◎). 保有ルフィ花札版(apparel157931)とは別カード確定. 投資採用(treca-scout 2026-07-13 cert実測)"
+        }
+      ],
+      "signals": {}
     }
   ],
   "boxes": [

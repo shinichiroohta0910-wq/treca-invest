@@ -4,8 +4,8 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床{店舗名・買取価格}/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-07-13T15:55:17.116+09:00",
-  "updatedBy": "treca-scout 2026-07-13: cert実測でinvest新規4枚追加(レックウザ黒41.39%/ルフィLP81.27%/ナミGirlsEd90.24%/ルフィChamp89.46%)・全edge>0. + daily refresh継承",
+  "updatedAt": "2026-07-13T16:10:12.018+09:00",
+  "updatedBy": "treca-scout 2026-07-13(2): cert実測でinvest新規3枚追加(Zekrom80.17%/Reshiram82.47%/Magikarp91.08%)・全edge>0. Chaos Token見送り(流動性n6<8). 本日計7枚採用",
   "games": [
     {
       "id": "onepiece",
@@ -41439,6 +41439,114 @@ const TRECA_DATA = {
           "p10n": 33,
           "rawAn": 14,
           "src": "価格=スニダン直近3約定中央値(実売・ask不使用): p10 44999(n33)/p9 16000(n1)/素体A 11800(n14). PSA POP実測 rate10=89.46%(g10=3886/total=4344・cert#97910772・2022 One Piece #001 Champ Set購入特典). buyEV約+14,800(素体¥11.8k=資本効率◎). 保有ルフィ花札版(apparel157931)とは別カード確定. 投資採用(treca-scout 2026-07-13 cert実測)"
+        }
+      ],
+      "signals": {}
+    },
+    {
+      "id": "pk-sv11b-174-zekrom-ex-bwr-585213",
+      "game": "pokemon",
+      "name": "ゼクロムex BWR [SV11B 174/086] (拡張パック「ブラックボルト」)",
+      "number": "174/086 (SV11B)",
+      "variant": "BW Rare (BWR)",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250605090147-0.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/585213",
+        "psaPop": "https://www.psacard.com/cert/145628531"
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-07-13T16:10:12.018+09:00",
+          "currency": "JPY",
+          "stale": false,
+          "alert": null,
+          "p10": 114799,
+          "p9": 57800,
+          "rawA": 70500,
+          "rawB": 47000,
+          "pop10": 12533,
+          "popTotal": 15633,
+          "rate10": 80.17,
+          "p10n": 61,
+          "rawAn": 5,
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用): p10 114799(n61)/p9 57800(n5)/素体A 70500(n5). PSA POP実測 rate10=80.17%(g10=12533/total=15633・cert#145628531・2025 SV11B #174 BW RARE). buyEV約+12,700(素体¥70.5k=資本重・素体約定薄n5). 投資採用(treca-scout 2026-07-13 cert実測)"
+        }
+      ],
+      "signals": {}
+    },
+    {
+      "id": "pk-sv11w-174-reshiram-ex-bwr-585221",
+      "game": "pokemon",
+      "name": "レシラムex BWR [SV11W 174/086] (拡張パック「ホワイトフレア」)",
+      "number": "174/086 (SV11W)",
+      "variant": "BW Rare (BWR)",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250606023326-0.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/585221",
+        "psaPop": "https://www.psacard.com/cert/144122238"
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-07-13T16:10:12.018+09:00",
+          "currency": "JPY",
+          "stale": false,
+          "alert": null,
+          "p10": 110000,
+          "p9": 55500,
+          "rawA": 72000,
+          "rawB": null,
+          "pop10": 12519,
+          "popTotal": 15180,
+          "rate10": 82.47,
+          "p10n": 65,
+          "rawAn": 6,
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用): p10 110000(n65)/p9 55500(n2)/素体A 72000(n6). PSA POP実測 rate10=82.47%(g10=12519/total=15180・cert#144122238・2025 SV11W #174 BW RARE). buyEV約+8,400(素体¥72k=資本重・edge薄め). 投資採用(treca-scout 2026-07-13 cert実測)"
+        }
+      ],
+      "signals": {}
+    },
+    {
+      "id": "pk-sv1a-080-magikarp-ar-116069",
+      "game": "pokemon",
+      "name": "コイキング AR [SV1a 080/073] (トリプレットビート)",
+      "number": "080/073 (SV1a)",
+      "variant": "Art Rare (AR)",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/20250310104659-0.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/116069",
+        "psaPop": "https://www.psacard.com/cert/79984910"
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-07-13T16:10:12.018+09:00",
+          "currency": "JPY",
+          "stale": false,
+          "alert": null,
+          "p10": 50000,
+          "p9": 23950,
+          "rawA": 24000,
+          "rawB": 19000,
+          "pop10": 55892,
+          "popTotal": 61364,
+          "rate10": 91.08,
+          "p10n": 54,
+          "rawAn": 5,
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用): p10 50000(n54)/p9 23950(n2)/素体A 24000(n5). PSA POP実測 rate10=91.08%(g10=55892/total=61364・cert#79984910・2023 SV1a #080 Art Rare Triplet Beat・pop6万で信頼度高). buyEV約+7,900(素体¥24k=資本効率良). 投資採用(treca-scout 2026-07-13 cert実測)"
         }
       ],
       "signals": {}

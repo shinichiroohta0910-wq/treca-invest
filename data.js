@@ -4,8 +4,8 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床{店舗名・買取価格}/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-07-23T11:49:00.999+09:00",
-  "updatedBy": "treca-scout 2026-07-23 第2バッチ: cert実測済み4枚追加(pk-svp-067-122059, op-op11-054-744313, pk-svp-098-135232, pk-s8ap-012-91160). 90→94枚.",
+  "updatedAt": "2026-07-23T12:27:38.595+09:00",
+  "updatedBy": "treca-scout 2026-07-23: rate10 全数洗い替え(PSA公式GEM RATE実測 83枚・価格据え置き). EV符号反転0枚.",
   "games": [
     {
       "id": "onepiece",
@@ -45,7 +45,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/157931",
-        "psaPop": null
+        "psaPop": "https://www.psacard.com/spec/psa/9929757"
       },
       "watch": true,
       "gradingCostDefault": 11980,
@@ -838,6 +838,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 18,
           "rawAn": 48
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 159000,
+          "p9": 42500,
+          "rawA": 68000,
+          "rawB": 52000,
+          "pop10": 940,
+          "popTotal": 1111,
+          "rate10": 84.61,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 84.61% (g10=940/total=1111・cert#153925438・spec9929757) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 86.41% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 18,
+          "rawAn": 48
         }
       ],
       "signals": {
@@ -862,7 +878,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/129616",
-        "psaPop": null
+        "psaPop": "https://www.psacard.com/spec/psa/9929764"
       },
       "watch": true,
       "gradingCostDefault": 11980,
@@ -1655,6 +1671,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 11,
           "rawAn": 52
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 52000,
+          "p9": null,
+          "rawA": 18000,
+          "rawB": 14000,
+          "pop10": 1372,
+          "popTotal": 1428,
+          "rate10": 96.08,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 96.08% (g10=1372/total=1428・cert#163744612・spec9929764) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 95.81% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 11,
+          "rawAn": 52
         }
       ],
       "signals": {
@@ -1679,7 +1711,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/157930",
-        "psaPop": null
+        "psaPop": "https://www.psacard.com/spec/psa/9929778"
       },
       "watch": true,
       "gradingCostDefault": 12100,
@@ -2472,6 +2504,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 25,
           "rawAn": 36
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 77000,
+          "p9": null,
+          "rawA": 4000,
+          "rawB": 3150,
+          "pop10": 508,
+          "popTotal": 586,
+          "rate10": 86.69,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 86.69% (g10=508/total=586・cert#150895086・spec9929778) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 88.01% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 25,
+          "rawAn": 36
         }
       ],
       "signals": {
@@ -2496,7 +2544,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/157932",
-        "psaPop": null
+        "psaPop": "https://www.psacard.com/spec/psa/9929769"
       },
       "watch": true,
       "gradingCostDefault": 11980,
@@ -3285,6 +3333,22 @@ const TRECA_DATA = {
           "rate10": 97.87,
           "currency": "JPY",
           "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-23・PSA10約定n34/proxy率97.1%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 34,
+          "rawAn": 25
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 18000,
+          "p9": 11000,
+          "rawA": 3290,
+          "rawB": 1000,
+          "pop10": 802,
+          "popTotal": 818,
+          "rate10": 98.04,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 98.04% (g10=802/total=818・cert#87237519・spec9929769) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 97.87% から変更 (treca-scout 全数再計測 2026-07-23)",
           "stale": false,
           "alert": null,
           "p10n": 34,
@@ -4078,6 +4142,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 71,
           "rawAn": 0
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 180900,
+          "p9": 85000,
+          "rawA": null,
+          "rawB": null,
+          "pop10": 2006,
+          "popTotal": 2857,
+          "rate10": 70.21,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 70.21% (g10=2006/total=2857・cert#98797327・spec2676664) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 70.33% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 71,
+          "rawAn": 0
         }
       ],
       "signals": {
@@ -4108,7 +4188,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/618445",
-        "psaPop": null
+        "psaPop": "https://www.psacard.com/spec/psa/14269733"
       },
       "watch": true,
       "gradingCostDefault": 11980,
@@ -4869,6 +4949,22 @@ const TRECA_DATA = {
           "rate10": 60,
           "currency": "JPY",
           "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-23・PSA10約定n24/proxy率85.7%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 24,
+          "rawAn": 0
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 39380,
+          "p9": 11600,
+          "rawA": 13400,
+          "rawB": 22222,
+          "pop10": 22072,
+          "popTotal": 37016,
+          "rate10": 59.63,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 59.63% (g10=22072/total=37016・cert#167244021・spec14269733) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 60% から変更 (treca-scout 全数再計測 2026-07-23)",
           "stale": false,
           "alert": null,
           "p10n": 24,
@@ -5658,6 +5754,22 @@ const TRECA_DATA = {
           "rate10": 49.87,
           "currency": "JPY",
           "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-23・PSA10約定n27/proxy率79.4%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 27,
+          "rawAn": 15
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 72500,
+          "p9": 21800,
+          "rawA": 30500,
+          "rawB": 20900,
+          "pop10": 19428,
+          "popTotal": 38768,
+          "rate10": 50.11,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 50.11% (g10=19428/total=38768・cert#161989248・spec14158330) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 49.87% から変更 (treca-scout 全数再計測 2026-07-23)",
           "stale": false,
           "alert": null,
           "p10n": 27,
@@ -6457,6 +6569,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 37,
           "rawAn": 4
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 50000,
+          "p9": 28000,
+          "rawA": 30000,
+          "rawB": 23456,
+          "pop10": 22817,
+          "popTotal": 25166,
+          "rate10": 90.67,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 90.67% (g10=22817/total=25166・cert#161989252・spec14955493) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 90.36% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 37,
+          "rawAn": 4
         }
       ],
       "signals": {
@@ -7242,6 +7370,22 @@ const TRECA_DATA = {
           "rate10": 89.37,
           "currency": "JPY",
           "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-23・PSA10約定n50/proxy率92.6%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 50,
+          "rawAn": 1
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 33999,
+          "p9": 16300,
+          "rawA": 19500,
+          "rawB": 13000,
+          "pop10": 49755,
+          "popTotal": 55695,
+          "rate10": 89.33,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 89.33% (g10=49755/total=55695・cert#166893660・spec12376820) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 89.37% から変更 (treca-scout 全数再計測 2026-07-23)",
           "stale": false,
           "alert": null,
           "p10n": 50,
@@ -8041,6 +8185,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 54,
           "rawAn": 10
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 16360,
+          "p9": 7650,
+          "rawA": 6500,
+          "rawB": 5500,
+          "pop10": 7957,
+          "popTotal": 8916,
+          "rate10": 89.24,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 89.24% (g10=7957/total=8916・cert#166934113・spec14955489) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 87.93% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 54,
+          "rawAn": 10
         }
       ],
       "signals": {
@@ -8826,6 +8986,22 @@ const TRECA_DATA = {
           "rate10": 87.33,
           "currency": "JPY",
           "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-23・PSA10約定n61/proxy率98.4%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 61,
+          "rawAn": 3
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 23899,
+          "p9": 9000,
+          "rawA": 8500,
+          "rawB": 7000,
+          "pop10": 39120,
+          "popTotal": 44772,
+          "rate10": 87.38,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 87.38% (g10=39120/total=44772・cert#152908082・spec12376819) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 87.33% から変更 (treca-scout 全数再計測 2026-07-23)",
           "stale": false,
           "alert": null,
           "p10n": 61,
@@ -9625,6 +9801,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 56,
           "rawAn": 4
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 15000,
+          "p9": 3999,
+          "rawA": 3299,
+          "rawB": 4000,
+          "pop10": 3989,
+          "popTotal": 6389,
+          "rate10": 62.44,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 62.44% (g10=3989/total=6389・cert#153640404・spec14955495) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 61.87% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 56,
+          "rawAn": 4
         }
       ],
       "signals": {
@@ -10410,6 +10602,22 @@ const TRECA_DATA = {
           "rate10": 84.11,
           "currency": "JPY",
           "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-23・PSA10約定n50/proxy率98%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 50,
+          "rawAn": 2
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 93800,
+          "p9": 38800,
+          "rawA": 48750,
+          "rawB": 31999,
+          "pop10": 17543,
+          "popTotal": 20899,
+          "rate10": 83.94,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 83.94% (g10=17543/total=20899・cert#155276830・spec7917436) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 84.11% から変更 (treca-scout 全数再計測 2026-07-23)",
           "stale": false,
           "alert": null,
           "p10n": 50,
@@ -11209,6 +11417,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 56,
           "rawAn": 2
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 151900,
+          "p9": 69800,
+          "rawA": 89900,
+          "rawB": 52000,
+          "pop10": 25918,
+          "popTotal": 30742,
+          "rate10": 84.31,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 84.31% (g10=25918/total=30742・cert#163336140・spec10041062) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 84.44% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 56,
+          "rawAn": 2
         }
       ],
       "signals": {
@@ -11241,7 +11465,7 @@ const TRECA_DATA = {
       "variant": "MEGAドリームEX MA",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/722241",
-        "psaPop": null
+        "psaPop": "https://www.psacard.com/spec/psa/14955405"
       },
       "snapshots": [
         {
@@ -12004,6 +12228,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 57,
           "rawAn": 3
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 11470,
+          "p9": 3499,
+          "rawA": 1400,
+          "rawB": 1500,
+          "pop10": 12510,
+          "popTotal": 13549,
+          "rate10": 92.33,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 92.33% (g10=12510/total=13549・cert#153957970・spec14955405) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 91.86% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 57,
+          "rawAn": 3
         }
       ],
       "signals": {
@@ -12030,7 +12270,7 @@ const TRECA_DATA = {
       "variant": "MEGAドリームEX MA",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/722240",
-        "psaPop": null
+        "psaPop": "https://www.psacard.com/spec/psa/14955403"
       },
       "snapshots": [
         {
@@ -12793,6 +13033,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 76,
           "rawAn": 1
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 5700,
+          "p9": 3000,
+          "rawA": 1000,
+          "rawB": 1000,
+          "pop10": 11371,
+          "popTotal": 12350,
+          "rate10": 92.07,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 92.07% (g10=11371/total=12350・cert#141296959・spec14955403) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 91.29% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 76,
+          "rawAn": 1
         }
       ],
       "signals": {
@@ -12819,7 +13075,7 @@ const TRECA_DATA = {
       "variant": "MEGAドリームEX MA",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/730948",
-        "psaPop": null
+        "psaPop": "https://www.psacard.com/spec/psa/14955401"
       },
       "snapshots": [
         {
@@ -13578,6 +13834,22 @@ const TRECA_DATA = {
           "rate10": 91.06,
           "currency": "JPY",
           "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-23・PSA10約定n79/proxy率98.8%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 79,
+          "rawAn": 0
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 5999,
+          "p9": 2380,
+          "rawA": 1000,
+          "rawB": 2000,
+          "pop10": 8824,
+          "popTotal": 9640,
+          "rate10": 91.54,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 91.54% (g10=8824/total=9640・cert#154577471・spec14955401) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 91.06% から変更 (treca-scout 全数再計測 2026-07-23)",
           "stale": false,
           "alert": null,
           "p10n": 79,
@@ -14371,6 +14643,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 50,
           "rawAn": 10
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 16400,
+          "p9": 4000,
+          "rawA": 4000,
+          "rawB": 2700,
+          "pop10": 13588,
+          "popTotal": 16831,
+          "rate10": 80.73,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 80.73% (g10=13588/total=16831・cert#125941050・spec6984646) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 80.9% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 50,
+          "rawAn": 10
         }
       ],
       "signals": {
@@ -15156,6 +15444,22 @@ const TRECA_DATA = {
           "rate10": 87.59,
           "currency": "JPY",
           "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-23・PSA10約定n45/proxy率93.8%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 45,
+          "rawAn": 10
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 12800,
+          "p9": 5000,
+          "rawA": 3500,
+          "rawB": 2500,
+          "pop10": 279187,
+          "popTotal": 318867,
+          "rate10": 87.55,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 87.55% (g10=279187/total=318867・cert#130657032・spec14234253) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 87.59% から変更 (treca-scout 全数再計測 2026-07-23)",
           "stale": false,
           "alert": null,
           "p10n": 45,
@@ -15949,6 +16253,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 80,
           "rawAn": 0
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 5899,
+          "p9": 2850,
+          "rawA": 1000,
+          "rawB": null,
+          "pop10": 8500,
+          "popTotal": 9831,
+          "rate10": 86.46,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 86.46% (g10=8500/total=9831・cert#149878602・spec14234346) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 86.42% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 80,
+          "rawAn": 0
         }
       ],
       "signals": {
@@ -16734,6 +17054,22 @@ const TRECA_DATA = {
           "rate10": 48,
           "currency": "JPY",
           "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-23・PSA10約定n46/proxy率73%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 46,
+          "rawAn": 11
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 51500,
+          "p9": 10800,
+          "rawA": 12000,
+          "rawB": 8499,
+          "pop10": 504,
+          "popTotal": 1060,
+          "rate10": 47.55,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 47.55% (g10=504/total=1060・cert#159180947・spec2768280) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 48% から変更 (treca-scout 全数再計測 2026-07-23)",
           "stale": false,
           "alert": null,
           "p10n": 46,
@@ -17527,6 +17863,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 11,
           "rawAn": 49
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 29999,
+          "p9": null,
+          "rawA": 7800,
+          "rawB": 3999,
+          "pop10": 306,
+          "popTotal": 339,
+          "rate10": 90.27,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 90.27% (g10=306/total=339・cert#163744592・spec14115559) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 91.7% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 11,
+          "rawAn": 49
         }
       ],
       "signals": {
@@ -17553,7 +17905,7 @@ const TRECA_DATA = {
       "variant": "週刊少年ジャンプ2023付録",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/167350",
-        "psaPop": null
+        "psaPop": "https://www.psacard.com/spec/psa/9319871"
       },
       "snapshots": [
         {
@@ -18316,6 +18668,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 34,
           "rawAn": 10
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 37777,
+          "p9": 13500,
+          "rawA": 13400,
+          "rawB": 5500,
+          "pop10": 13514,
+          "popTotal": 15898,
+          "rate10": 85,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 85% (g10=13514/total=15898・cert#159063430・spec9319871) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 85.39% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 34,
+          "rawAn": 10
         }
       ],
       "signals": {
@@ -18342,7 +18710,7 @@ const TRECA_DATA = {
       "variant": "決戦の刻 L-P（リーダーパラレル）",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/822605",
-        "psaPop": null
+        "psaPop": "https://www.psacard.com/spec/psa/16308700"
       },
       "snapshots": [
         {
@@ -19074,6 +19442,22 @@ const TRECA_DATA = {
           "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-23・PSA10約定n0/proxy率-%・rate10は前回cert継承",
           "stale": false,
           "alert": null,
+          "p10n": 0,
+          "rawAn": 42
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": null,
+          "p9": null,
+          "rawA": 7900,
+          "rawB": 6800,
+          "pop10": 3,
+          "popTotal": 3,
+          "rate10": 100,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 100% (g10=3/total=3・cert#163702774・spec16308700)・⚠母数3枚=統計的に不安定 / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 null% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": "母数僅少",
           "p10n": 0,
           "rawAn": 42
         }
@@ -19861,6 +20245,22 @@ const TRECA_DATA = {
           "rate10": 88.29,
           "currency": "JPY",
           "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-23・PSA10約定n28/proxy率96.6%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 28,
+          "rawAn": 24
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 37500,
+          "p9": null,
+          "rawA": 10500,
+          "rawB": 4900,
+          "pop10": 2440,
+          "popTotal": 2777,
+          "rate10": 87.86,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 87.86% (g10=2440/total=2777・cert#148595461・spec9454301) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 88.29% から変更 (treca-scout 全数再計測 2026-07-23)",
           "stale": false,
           "alert": null,
           "p10n": 28,
@@ -21443,6 +21843,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 25,
           "rawAn": 38
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 75000,
+          "p9": null,
+          "rawA": 18000,
+          "rawB": 17000,
+          "pop10": 1064,
+          "popTotal": 1087,
+          "rate10": 97.88,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 97.88% (g10=1064/total=1087・cert#88050676・spec10006976) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 76.47% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 25,
+          "rawAn": 38
         }
       ],
       "signals": {
@@ -21467,7 +21883,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/618447",
-        "psaPop": null
+        "psaPop": "https://www.psacard.com/spec/psa/14570448"
       },
       "watch": true,
       "gradingCostDefault": 11980,
@@ -22228,6 +22644,22 @@ const TRECA_DATA = {
           "rate10": 83.5,
           "currency": "JPY",
           "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-23・PSA10約定n43/proxy率86%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 43,
+          "rawAn": 5
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 38980,
+          "p9": 15500,
+          "rawA": 15500,
+          "rawB": 4000,
+          "pop10": 27256,
+          "popTotal": 32780,
+          "rate10": 83.15,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 83.15% (g10=27256/total=32780・cert#167244636・spec14570448) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 83.5% から変更 (treca-scout 全数再計測 2026-07-23)",
           "stale": false,
           "alert": null,
           "p10n": 43,
@@ -23021,6 +23453,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 18,
           "rawAn": 22
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 51400,
+          "p9": 11777,
+          "rawA": 16999,
+          "rawB": 7300,
+          "pop10": 7692,
+          "popTotal": 10211,
+          "rate10": 75.33,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 75.33% (g10=7692/total=10211・cert#165504281・spec8187014) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 75.49% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 18,
+          "rawAn": 22
         }
       ],
       "signals": {
@@ -23806,6 +24254,22 @@ const TRECA_DATA = {
           "rate10": 88.41,
           "currency": "JPY",
           "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-23・PSA10約定n31/proxy率96.9%・rate10は前回cert継承・p9±>50%保留(新¥20000/旧¥8888)",
+          "stale": false,
+          "alert": null,
+          "p10n": 31,
+          "rawAn": 11
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 33000,
+          "p9": 8888,
+          "rawA": 8800,
+          "rawB": 3500,
+          "pop10": 4912,
+          "popTotal": 5554,
+          "rate10": 88.44,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 88.44% (g10=4912/total=5554・cert#161144999・spec10747426) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 88.41% から変更 (treca-scout 全数再計測 2026-07-23)",
           "stale": false,
           "alert": null,
           "p10n": 31,
@@ -24599,6 +25063,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 44,
           "rawAn": 9
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 79300,
+          "p9": 28800,
+          "rawA": 39999,
+          "rawB": 29000,
+          "pop10": 5354,
+          "popTotal": 6269,
+          "rate10": 85.4,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 85.4% (g10=5354/total=6269・cert#166501182・spec13329447) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 86.14% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 44,
+          "rawAn": 9
         }
       ],
       "signals": {
@@ -24623,7 +25103,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/569552",
-        "psaPop": ""
+        "psaPop": "https://www.psacard.com/spec/psa/13522495"
       },
       "watch": true,
       "invest": true,
@@ -25361,6 +25841,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 31,
           "rawAn": 12
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 110000,
+          "p9": null,
+          "rawA": 34000,
+          "rawB": null,
+          "pop10": 172,
+          "popTotal": 175,
+          "rate10": 98.29,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 98.29% (g10=172/total=175・cert#116080753・spec13522495) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 95.81% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 31,
+          "rawAn": 12
         }
       ],
       "signals": {
@@ -25385,7 +25881,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/315324",
-        "psaPop": ""
+        "psaPop": "https://www.psacard.com/spec/psa/11625995"
       },
       "watch": true,
       "invest": true,
@@ -26123,6 +26619,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 29,
           "rawAn": 23
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 99500,
+          "p9": 36888,
+          "rawA": 60000,
+          "rawB": 30000,
+          "pop10": 4412,
+          "popTotal": 6368,
+          "rate10": 69.28,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 69.28% (g10=4412/total=6368・cert#166131687・spec11625995) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 71.01% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 29,
+          "rawAn": 23
         }
       ],
       "signals": {
@@ -26147,7 +26659,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/635880",
-        "psaPop": ""
+        "psaPop": "https://www.psacard.com/spec/psa/13940726"
       },
       "watch": true,
       "invest": true,
@@ -26885,6 +27397,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 33,
           "rawAn": 19
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 79980,
+          "p9": 34800,
+          "rawA": 40868,
+          "rawB": 29250,
+          "pop10": 4261,
+          "popTotal": 4698,
+          "rate10": 90.7,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 90.7% (g10=4261/total=4698・cert#150721588・spec13940726) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 90.53% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 33,
+          "rawAn": 19
         }
       ],
       "signals": {
@@ -26909,7 +27437,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/838503",
-        "psaPop": ""
+        "psaPop": "https://www.psacard.com/spec/psa/14404666"
       },
       "watch": true,
       "invest": true,
@@ -27647,6 +28175,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 8,
           "rawAn": 19
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 43000,
+          "p9": 7000,
+          "rawA": 6200,
+          "rawB": 3000,
+          "pop10": 394,
+          "popTotal": 473,
+          "rate10": 83.3,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 83.3% (g10=394/total=473・cert#146520554・spec14404666) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 83.75% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 8,
+          "rawAn": 19
         }
       ],
       "signals": {
@@ -27671,7 +28215,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/753274",
-        "psaPop": ""
+        "psaPop": "https://www.psacard.com/spec/psa/15251330"
       },
       "watch": true,
       "invest": true,
@@ -28409,6 +28953,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 19,
           "rawAn": 3
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 43000,
+          "p9": 12800,
+          "rawA": 13800,
+          "rawB": 11000,
+          "pop10": 3969,
+          "popTotal": 7709,
+          "rate10": 51.49,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 51.49% (g10=3969/total=7709・cert#162511313・spec15251330) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 53.7% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 19,
+          "rawAn": 3
         }
       ],
       "signals": {
@@ -28433,7 +28993,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/102461",
-        "psaPop": ""
+        "psaPop": "https://www.psacard.com/spec/psa/7751259"
       },
       "watch": true,
       "invest": true,
@@ -29171,6 +29731,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 13,
           "rawAn": 28
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 27500,
+          "p9": null,
+          "rawA": 3500,
+          "rawB": 1000,
+          "pop10": 1713,
+          "popTotal": 1908,
+          "rate10": 89.78,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 89.78% (g10=1713/total=1908・cert#157457791・spec7751259) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 90.44% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 13,
+          "rawAn": 28
         }
       ],
       "signals": {
@@ -29195,7 +29771,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/724996",
-        "psaPop": ""
+        "psaPop": "https://www.psacard.com/spec/psa/14955487"
       },
       "watch": true,
       "invest": true,
@@ -29933,6 +30509,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 30,
           "rawAn": 7
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 94000,
+          "p9": 48000,
+          "rawA": 62000,
+          "rawB": 42000,
+          "pop10": 29908,
+          "popTotal": 33661,
+          "rate10": 88.85,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 88.85% (g10=29908/total=33661・cert#162121314・spec14955487) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 88.6% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 30,
+          "rawAn": 7
         }
       ],
       "signals": {
@@ -29957,7 +30549,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/203863",
-        "psaPop": ""
+        "psaPop": "https://www.psacard.com/spec/psa/10561339"
       },
       "watch": true,
       "invest": true,
@@ -30695,6 +31287,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 46,
           "rawAn": 8
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 60000,
+          "p9": null,
+          "rawA": 25000,
+          "rawB": null,
+          "pop10": 990,
+          "popTotal": 1046,
+          "rate10": 94.65,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 94.65% (g10=990/total=1046・cert#89657904・spec10561339) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 93.1% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 46,
+          "rawAn": 8
         }
       ],
       "signals": {
@@ -30719,7 +31327,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/686000",
-        "psaPop": ""
+        "psaPop": "https://www.psacard.com/spec/psa/14272780"
       },
       "watch": true,
       "invest": true,
@@ -31457,6 +32065,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 38,
           "rawAn": 1
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 59000,
+          "p9": 26666,
+          "rawA": 34980,
+          "rawB": 25555,
+          "pop10": 16447,
+          "popTotal": 17473,
+          "rate10": 94.13,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 94.13% (g10=16447/total=17473・cert#148188527・spec14272780) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 94.14% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 38,
+          "rawAn": 1
         }
       ],
       "signals": {
@@ -31481,7 +32105,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/730956",
-        "psaPop": ""
+        "psaPop": "https://www.psacard.com/spec/psa/14955481"
       },
       "watch": true,
       "invest": true,
@@ -32219,6 +32843,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 30,
           "rawAn": 6
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 81500,
+          "p9": 34000,
+          "rawA": 44000,
+          "rawB": 30900,
+          "pop10": 27460,
+          "popTotal": 31627,
+          "rate10": 86.82,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 86.82% (g10=27460/total=31627・cert#155697322・spec14955481) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 86.4% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 30,
+          "rawAn": 6
         }
       ],
       "signals": {
@@ -32243,7 +32883,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/128117",
-        "psaPop": ""
+        "psaPop": "https://www.psacard.com/spec/psa/8966982"
       },
       "watch": true,
       "invest": true,
@@ -32981,6 +33621,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 46,
           "rawAn": 5
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 120000,
+          "p9": 69800,
+          "rawA": 85000,
+          "rawB": 62000,
+          "pop10": 37029,
+          "popTotal": 43848,
+          "rate10": 84.45,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 84.45% (g10=37029/total=43848・cert#78903872・spec8966982) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 84.63% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 46,
+          "rawAn": 5
         }
       ],
       "signals": {
@@ -33011,7 +33667,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/712256",
-        "psaPop": ""
+        "psaPop": "https://www.psacard.com/spec/psa/14742025"
       },
       "watch": true,
       "invest": true,
@@ -33749,6 +34405,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 33,
           "rawAn": 11
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 77000,
+          "p9": 34400,
+          "rawA": 46000,
+          "rawB": 22000,
+          "pop10": 1962,
+          "popTotal": 2126,
+          "rate10": 92.29,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 92.29% (g10=1962/total=2126・cert#147084516・spec14742025) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 92.83% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 33,
+          "rawAn": 11
         }
       ],
       "signals": {
@@ -33773,7 +34445,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/190309",
-        "psaPop": ""
+        "psaPop": "https://www.psacard.com/spec/psa/10460982"
       },
       "watch": true,
       "invest": true,
@@ -34511,6 +35183,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 37,
           "rawAn": 28
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 69696,
+          "p9": 15800,
+          "rawA": 9999,
+          "rawB": 5500,
+          "pop10": 813,
+          "popTotal": 866,
+          "rate10": 93.88,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 93.88% (g10=813/total=866・cert#100672817・spec10460982) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 96.49% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 37,
+          "rawAn": 28
         }
       ],
       "signals": {
@@ -34535,7 +35223,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/706813",
-        "psaPop": ""
+        "psaPop": "https://www.psacard.com/spec/psa/14636659"
       },
       "watch": true,
       "invest": true,
@@ -35273,6 +35961,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 32,
           "rawAn": 6
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 47500,
+          "p9": 21250,
+          "rawA": 23999,
+          "rawB": 18500,
+          "pop10": 39166,
+          "popTotal": 43076,
+          "rate10": 90.92,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 90.92% (g10=39166/total=43076・cert#162303387・spec14636659) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 91.4% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 32,
+          "rawAn": 6
         }
       ],
       "signals": {
@@ -35297,7 +36001,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/776365",
-        "psaPop": ""
+        "psaPop": "https://www.psacard.com/spec/psa/15588519"
       },
       "watch": true,
       "invest": true,
@@ -36035,6 +36739,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 46,
           "rawAn": 5
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 54400,
+          "p9": 27500,
+          "rawA": 30000,
+          "rawB": 27999,
+          "pop10": 11448,
+          "popTotal": 12158,
+          "rate10": 94.16,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 94.16% (g10=11448/total=12158・cert#166647650・spec15588519) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 94.66% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 46,
+          "rawAn": 5
         }
       ],
       "signals": {
@@ -36059,7 +36779,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/532226",
-        "psaPop": ""
+        "psaPop": "https://www.psacard.com/spec/psa/12937958"
       },
       "watch": true,
       "invest": true,
@@ -36793,6 +37513,22 @@ const TRECA_DATA = {
           "rate10": 86.49,
           "currency": "JPY",
           "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-23・PSA10約定n22/proxy率95.7%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 22,
+          "rawAn": 5
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 40000,
+          "p9": 10000,
+          "rawA": 10500,
+          "rawB": 7000,
+          "pop10": 525,
+          "popTotal": 609,
+          "rate10": 86.21,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 86.21% (g10=525/total=609・cert#156491446・spec12937958) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 86.49% から変更 (treca-scout 全数再計測 2026-07-23)",
           "stale": false,
           "alert": null,
           "p10n": 22,
@@ -37559,6 +38295,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 23,
           "rawAn": 37
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 28800,
+          "p9": null,
+          "rawA": 8888,
+          "rawB": null,
+          "pop10": 1666,
+          "popTotal": 1707,
+          "rate10": 97.6,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 97.6% (g10=1666/total=1707・cert#164289592・spec12990878) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 97.46% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 23,
+          "rawAn": 37
         }
       ],
       "signals": {
@@ -38317,6 +39069,22 @@ const TRECA_DATA = {
           "rate10": 80,
           "currency": "JPY",
           "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-23・PSA10約定n23/proxy率100%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 23,
+          "rawAn": 46
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 111000,
+          "p9": 38000,
+          "rawA": 39900,
+          "rawB": 22000,
+          "pop10": 485,
+          "popTotal": 584,
+          "rate10": 83.05,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 83.05% (g10=485/total=584・cert#157579028・spec15506769) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 80% から変更 (treca-scout 全数再計測 2026-07-23)",
           "stale": false,
           "alert": null,
           "p10n": 23,
@@ -39083,6 +39851,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 43,
           "rawAn": 24
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 118000,
+          "p9": 20000,
+          "rawA": 54800,
+          "rawB": 40500,
+          "pop10": 1176,
+          "popTotal": 1456,
+          "rate10": 80.77,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 80.77% (g10=1176/total=1456・cert#153576081・spec10405764) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 80.93% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 43,
+          "rawAn": 24
         }
       ],
       "signals": {
@@ -39841,6 +40625,22 @@ const TRECA_DATA = {
           "rate10": 87.14,
           "currency": "JPY",
           "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-23・PSA10約定n27/proxy率90%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 27,
+          "rawAn": 12
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 87500,
+          "p9": 39000,
+          "rawA": 54800,
+          "rawB": 43000,
+          "pop10": 2068,
+          "popTotal": 2366,
+          "rate10": 87.4,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 87.4% (g10=2068/total=2366・cert#94271740・spec9261614) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 87.14% から変更 (treca-scout 全数再計測 2026-07-23)",
           "stale": false,
           "alert": null,
           "p10n": 27,
@@ -40607,6 +41407,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 16,
           "rawAn": 50
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 103000,
+          "p9": 25000,
+          "rawA": 33000,
+          "rawB": 26500,
+          "pop10": 159,
+          "popTotal": 193,
+          "rate10": 82.38,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 82.38% (g10=159/total=193・cert#164398032・spec14676298) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 80.65% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 16,
+          "rawAn": 50
         }
       ],
       "signals": {
@@ -41352,6 +42168,22 @@ const TRECA_DATA = {
           "rate10": 96.4,
           "currency": "JPY",
           "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-23・PSA10約定n17/proxy率100%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 17,
+          "rawAn": 35
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 108000,
+          "p9": null,
+          "rawA": 29500,
+          "rawB": 12500,
+          "pop10": 380,
+          "popTotal": 397,
+          "rate10": 95.72,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 95.72% (g10=380/total=397・cert#157378308・spec13617908) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 96.4% から変更 (treca-scout 全数再計測 2026-07-23)",
           "stale": false,
           "alert": null,
           "p10n": 17,
@@ -42105,6 +42937,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 11,
           "rawAn": 53
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 72500,
+          "p9": 29800,
+          "rawA": 32000,
+          "rawB": 14500,
+          "pop10": 443,
+          "popTotal": 483,
+          "rate10": 91.72,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 91.72% (g10=443/total=483・cert#164366155・spec14676566) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 91.9% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 11,
+          "rawAn": 53
         }
       ],
       "signals": {
@@ -42850,6 +43698,22 @@ const TRECA_DATA = {
           "rate10": 91.8,
           "currency": "JPY",
           "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-23・PSA10約定n58/proxy率100%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 58,
+          "rawAn": 6
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 82222,
+          "p9": 48000,
+          "rawA": 52999,
+          "rawB": 31500,
+          "pop10": 1724,
+          "popTotal": 1881,
+          "rate10": 91.65,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 91.65% (g10=1724/total=1881・cert#156486397・spec12591339) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 91.8% から変更 (treca-scout 全数再計測 2026-07-23)",
           "stale": false,
           "alert": null,
           "p10n": 58,
@@ -43603,6 +44467,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 32,
           "rawAn": 9
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 55499,
+          "p9": 22000,
+          "rawA": 29800,
+          "rawB": 19500,
+          "pop10": 10155,
+          "popTotal": 13432,
+          "rate10": 75.59,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 75.59% (g10=10155/total=13432・cert#142445724・spec12029715) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 74.8% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 32,
+          "rawAn": 9
         }
       ],
       "signals": {
@@ -44352,6 +45232,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 16,
           "rawAn": 29
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 78000,
+          "p9": 20000,
+          "rawA": 23000,
+          "rawB": 16500,
+          "pop10": 191,
+          "popTotal": 276,
+          "rate10": 69.2,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 69.2% (g10=191/total=276・cert#161345531・spec15499953) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 72.8% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 16,
+          "rawAn": 29
         }
       ],
       "signals": {
@@ -45069,6 +45965,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 40,
           "rawAn": 7
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 519999,
+          "p9": 140000,
+          "rawA": 200000,
+          "rawB": 165000,
+          "pop10": 49533,
+          "popTotal": 115112,
+          "rate10": 43.03,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 43.03% (g10=49533/total=115112・cert#87590726・spec9656727) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 43.33% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 40,
+          "rawAn": 7
         }
       ],
       "signals": {
@@ -45093,7 +46005,7 @@ const TRECA_DATA = {
       "imageNote": "メガカイリューex MUR(MEGAドリームex・M2a 250)。スニダン商品画像(apparels/730968)。既存pk-m2a-246はSAR(別レアリティ)。",
       "links": {
         "snkrdunk": "https://snkrdunk.com/trading-cards/apparels/730968",
-        "psaPop": ""
+        "psaPop": "https://www.psacard.com/spec/psa/14955497"
       },
       "watch": true,
       "invest": false,
@@ -45786,6 +46698,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 31,
           "rawAn": 6
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 88000,
+          "p9": 26000,
+          "rawA": 39800,
+          "rawB": 23500,
+          "pop10": 6675,
+          "popTotal": 11943,
+          "rate10": 55.89,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 55.89% (g10=6675/total=11943・cert#161989247・spec14955497) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 77.8% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 31,
+          "rawAn": 6
         }
       ],
       "signals": {
@@ -45810,7 +46738,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/826553",
-        "psaPop": ""
+        "psaPop": "https://www.psacard.com/spec/psa/16192454"
       },
       "watch": true,
       "invest": true,
@@ -46423,6 +47351,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 22,
           "rawAn": 13
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 78500,
+          "p9": 34000,
+          "rawA": 38000,
+          "rawB": 30000,
+          "pop10": 913,
+          "popTotal": 948,
+          "rate10": 96.31,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 96.31% (g10=913/total=948・cert#168652597・spec16192454) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 97.98% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 22,
+          "rawAn": 13
         }
       ],
       "signals": {
@@ -47030,6 +47974,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 26,
           "rawAn": 45
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 122000,
+          "p9": 36500,
+          "rawA": 63000,
+          "rawB": 58000,
+          "pop10": 1468,
+          "popTotal": 1565,
+          "rate10": 93.8,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 93.8% (g10=1468/total=1565・cert#149509762・spec11477762) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 93.81% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 26,
+          "rawAn": 45
         }
       ]
     },
@@ -47623,6 +48583,22 @@ const TRECA_DATA = {
           "rate10": 83.69,
           "currency": "JPY",
           "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-23・PSA10約定n22/proxy率100%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 22,
+          "rawAn": 62
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 67000,
+          "p9": null,
+          "rawA": 26999,
+          "rawB": 14800,
+          "pop10": 774,
+          "popTotal": 927,
+          "rate10": 83.5,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 83.5% (g10=774/total=927・cert#151706379・spec10405769) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 83.69% から変更 (treca-scout 全数再計測 2026-07-23)",
           "stale": false,
           "alert": null,
           "p10n": 22,
@@ -48224,6 +49200,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 50,
           "rawAn": 4
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 120000,
+          "p9": 41800,
+          "rawA": 60000,
+          "rawB": 40000,
+          "pop10": 3495,
+          "popTotal": 6486,
+          "rate10": 53.89,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 53.89% (g10=3495/total=6486・cert#145878556・spec14158347) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 55.1% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 50,
+          "rawAn": 4
         }
       ]
     },
@@ -48238,7 +49230,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/481269",
-        "psaPop": ""
+        "psaPop": "https://www.psacard.com/spec/psa/12637347"
       },
       "watch": true,
       "invest": true,
@@ -48755,6 +49747,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 14,
           "rawAn": 35
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 198000,
+          "p9": 58000,
+          "rawA": 53000,
+          "rawB": 34999,
+          "pop10": 240,
+          "popTotal": 302,
+          "rate10": 79.47,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 79.47% (g10=240/total=302・cert#165662703・spec12637347) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 79.67% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 14,
+          "rawAn": 35
         }
       ],
       "signals": {}
@@ -48770,7 +49778,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/568241",
-        "psaPop": ""
+        "psaPop": "https://www.psacard.com/spec/psa/14595425"
       },
       "watch": true,
       "invest": true,
@@ -49287,6 +50295,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 52,
           "rawAn": 8
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 61999,
+          "p9": 25000,
+          "rawA": 32000,
+          "rawB": 22000,
+          "pop10": 1419,
+          "popTotal": 1680,
+          "rate10": 84.46,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 84.46% (g10=1419/total=1680・cert#147793914・spec14595425) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 83.7% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 52,
+          "rawAn": 8
         }
       ],
       "signals": {}
@@ -49302,7 +50326,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/708622",
-        "psaPop": ""
+        "psaPop": "https://www.psacard.com/spec/psa/14731672"
       },
       "watch": true,
       "invest": true,
@@ -49819,6 +50843,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 37,
           "rawAn": 14
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 51500,
+          "p9": 29650,
+          "rawA": 27500,
+          "rawB": 22000,
+          "pop10": 1380,
+          "popTotal": 1685,
+          "rate10": 81.9,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 81.9% (g10=1380/total=1685・cert#145011693・spec14731672) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 81.83% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 37,
+          "rawAn": 14
         }
       ],
       "signals": {}
@@ -49834,7 +50874,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/776371",
-        "psaPop": ""
+        "psaPop": "https://www.psacard.com/spec/psa/15588516"
       },
       "watch": true,
       "invest": true,
@@ -50351,6 +51391,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 34,
           "rawAn": 10
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 194999,
+          "p9": 62222,
+          "rawA": 83000,
+          "rawB": 60900,
+          "pop10": 1653,
+          "popTotal": 3258,
+          "rate10": 50.74,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 50.74% (g10=1653/total=3258・cert#164549419・spec15588516) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 51.47% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 34,
+          "rawAn": 10
         }
       ],
       "signals": {}
@@ -50783,6 +51839,22 @@ const TRECA_DATA = {
           "rate10": 80.62,
           "currency": "JPY",
           "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-23・PSA10約定n37/proxy率88.1%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 37,
+          "rawAn": 28
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 78000,
+          "p9": 35000,
+          "rawA": 30000,
+          "rawB": 19500,
+          "pop10": 469,
+          "popTotal": 586,
+          "rate10": 80.03,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 80.03% (g10=469/total=586・cert#164923151・spec14676310) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 80.62% から変更 (treca-scout 全数再計測 2026-07-23)",
           "stale": false,
           "alert": null,
           "p10n": 37,
@@ -51223,6 +52295,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 42,
           "rawAn": 19
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 55000,
+          "p9": 16000,
+          "rawA": 21111,
+          "rawB": 5000,
+          "pop10": 753,
+          "popTotal": 847,
+          "rate10": 88.9,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 88.9% (g10=753/total=847・cert#163744634・spec13256728) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 91.87% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 42,
+          "rawAn": 19
         }
       ],
       "signals": {}
@@ -51655,6 +52743,22 @@ const TRECA_DATA = {
           "rate10": 96.67,
           "currency": "JPY",
           "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-23・PSA10約定n12/proxy率100%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 12,
+          "rawAn": 70
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 105000,
+          "p9": null,
+          "rawA": 40000,
+          "rawB": 15000,
+          "pop10": 692,
+          "popTotal": 716,
+          "rate10": 96.65,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 96.65% (g10=692/total=716・cert#89086295・spec10006984) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 96.67% から変更 (treca-scout 全数再計測 2026-07-23)",
           "stale": false,
           "alert": null,
           "p10n": 12,
@@ -52095,6 +53199,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 46,
           "rawAn": 5
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 159000,
+          "p9": 45000,
+          "rawA": 70000,
+          "rawB": 28888,
+          "pop10": 7188,
+          "popTotal": 12241,
+          "rate10": 58.71,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 58.71% (g10=7188/total=12241・cert#154635605・spec2854344) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 58.97% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 46,
+          "rawAn": 5
         }
       ],
       "signals": {}
@@ -52449,6 +53569,22 @@ const TRECA_DATA = {
           "rate10": 47.51,
           "currency": "JPY",
           "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-23・PSA10約定n51/proxy率75%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 51,
+          "rawAn": 11
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 129800,
+          "p9": 37000,
+          "rawA": 43000,
+          "rawB": 37499,
+          "pop10": 2403,
+          "popTotal": 5158,
+          "rate10": 46.59,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 46.59% (g10=2403/total=5158・cert#168299995・spec14158477) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 47.51% から変更 (treca-scout 全数再計測 2026-07-23)",
           "stale": false,
           "alert": null,
           "p10n": 51,
@@ -52810,6 +53946,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 52,
           "rawAn": 34
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 133000,
+          "p9": null,
+          "rawA": 49800,
+          "rawB": 23350,
+          "pop10": 369,
+          "popTotal": 432,
+          "rate10": 85.42,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 85.42% (g10=369/total=432・cert#165577170・spec15499942) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 88.55% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 52,
+          "rawAn": 34
         }
       ]
     },
@@ -53163,6 +54315,22 @@ const TRECA_DATA = {
           "rate10": 74.38,
           "currency": "JPY",
           "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-23・PSA10約定n24/proxy率100%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 24,
+          "rawAn": 24
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 170000,
+          "p9": null,
+          "rawA": 72000,
+          "rawB": 58999,
+          "pop10": 228,
+          "popTotal": 290,
+          "rate10": 78.62,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 78.62% (g10=228/total=290・cert#168596944・spec16192488) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 74.38% から変更 (treca-scout 全数再計測 2026-07-23)",
           "stale": false,
           "alert": null,
           "p10n": 24,
@@ -53524,6 +54692,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 34,
           "rawAn": 7
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 113500,
+          "p9": 46800,
+          "rawA": 65500,
+          "rawB": 41000,
+          "pop10": 26207,
+          "popTotal": 30741,
+          "rate10": 85.24,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 85.24% (g10=26207/total=30741・cert#105443269・spec5955510) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 85.38% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 34,
+          "rawAn": 7
         }
       ]
     },
@@ -53877,6 +55061,22 @@ const TRECA_DATA = {
           "rate10": 81.72,
           "currency": "JPY",
           "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-23・PSA10約定n49/proxy率90.7%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 49,
+          "rawAn": 2
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 94000,
+          "p9": 37500,
+          "rawA": 52000,
+          "rawB": 30000,
+          "pop10": 21467,
+          "popTotal": 26288,
+          "rate10": 81.66,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 81.66% (g10=21467/total=26288・cert#166647657・spec8971859) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 81.72% から変更 (treca-scout 全数再計測 2026-07-23)",
           "stale": false,
           "alert": null,
           "p10n": 49,
@@ -54238,6 +55438,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 60,
           "rawAn": 9
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 114999,
+          "p9": null,
+          "rawA": 78500,
+          "rawB": null,
+          "pop10": 654,
+          "popTotal": 666,
+          "rate10": 98.2,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 98.2% (g10=654/total=666・cert#151427228・spec15022368) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 98.18% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 60,
+          "rawAn": 9
         }
       ]
     },
@@ -54595,6 +55811,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 41,
           "rawAn": 12
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 48000,
+          "p9": 25000,
+          "rawA": 20994,
+          "rawB": null,
+          "pop10": 1175,
+          "popTotal": 1272,
+          "rate10": 92.37,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 92.37% (g10=1175/total=1272・cert#153703661・spec12591332) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 92.68% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 41,
+          "rawAn": 12
         }
       ]
     },
@@ -54846,7 +56078,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/412058",
-        "psaPop": ""
+        "psaPop": "https://www.psacard.com/spec/psa/12153807"
       },
       "watch": true,
       "invest": true,
@@ -55055,6 +56287,22 @@ const TRECA_DATA = {
           "rate10": 81.27,
           "currency": "JPY",
           "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-23・PSA10約定n43/proxy率97.7%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 43,
+          "rawAn": 24
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 68000,
+          "p9": 22000,
+          "rawA": 24500,
+          "rawB": 9999,
+          "pop10": 263,
+          "popTotal": 320,
+          "rate10": 82.19,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 82.19% (g10=263/total=320・cert#161206891・spec12153807) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 81.27% から変更 (treca-scout 全数再計測 2026-07-23)",
           "stale": false,
           "alert": null,
           "p10n": 43,
@@ -55287,6 +56535,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 26,
           "rawAn": 42
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 74000,
+          "p9": 28717,
+          "rawA": 39700,
+          "rawB": 19900,
+          "pop10": 1823,
+          "popTotal": 2029,
+          "rate10": 89.85,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 89.85% (g10=1823/total=2029・cert#157962419・spec9678067) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 90.24% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 26,
+          "rawAn": 42
         }
       ],
       "signals": {}
@@ -55511,6 +56775,22 @@ const TRECA_DATA = {
           "rate10": 89.46,
           "currency": "JPY",
           "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-23・PSA10約定n43/proxy率97.7%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 43,
+          "rawAn": 13
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 37000,
+          "p9": 16000,
+          "rawA": 11800,
+          "rawB": null,
+          "pop10": 3965,
+          "popTotal": 4440,
+          "rate10": 89.3,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 89.3% (g10=3965/total=4440・cert#68662184・spec7392713) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 89.46% から変更 (treca-scout 全数再計測 2026-07-23)",
           "stale": false,
           "alert": null,
           "p10n": 43,
@@ -55743,6 +57023,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 58,
           "rawAn": 3
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 115555,
+          "p9": 58000,
+          "rawA": 74900,
+          "rawB": 49500,
+          "pop10": 12762,
+          "popTotal": 15928,
+          "rate10": 80.12,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 80.12% (g10=12762/total=15928・cert#166647649・spec13676714) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 80.17% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 58,
+          "rawAn": 3
         }
       ],
       "signals": {}
@@ -55971,6 +57267,22 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 70,
           "rawAn": 8
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 119999,
+          "p9": 63000,
+          "rawA": 75000,
+          "rawB": 53000,
+          "pop10": 12707,
+          "popTotal": 15415,
+          "rate10": 82.43,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 82.43% (g10=12707/total=15415・cert#146761011・spec13676896) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 82.47% から変更 (treca-scout 全数再計測 2026-07-23)",
+          "stale": false,
+          "alert": null,
+          "p10n": 70,
+          "rawAn": 8
         }
       ],
       "signals": {}
@@ -56195,6 +57507,22 @@ const TRECA_DATA = {
           "rate10": 91.08,
           "currency": "JPY",
           "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-23・PSA10約定n40/proxy率97.6%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 40,
+          "rawAn": 5
+        },
+        {
+          "at": "2026-07-23T12:27:38.595+09:00",
+          "p10": 48200,
+          "p9": 25000,
+          "rawA": 25000,
+          "rawB": 20000,
+          "pop10": 56277,
+          "popTotal": 61796,
+          "rate10": 91.07,
+          "currency": "JPY",
+          "src": "rate10 洗い替え=PSA公式GEM RATE実測 91.07% (g10=56277/total=61796・cert#157736861・spec8422222) / 価格は2026-07-23の直近3約定中央値を据え置き(再取得せず) / 旧rate10 91.08% から変更 (treca-scout 全数再計測 2026-07-23)",
           "stale": false,
           "alert": null,
           "p10n": 40,

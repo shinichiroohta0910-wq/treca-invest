@@ -4,8 +4,8 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床{店舗名・買取価格}/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-07-23T11:12:42.503+09:00",
-  "updatedBy": "treca-scout 2026-07-23: cert実測済み新規投資候補5枚追加(op-op05-119-744848, pk-sm9-038-387059, pk-sv2a-025-mb-128147, op-op09-001-744849, db-e32-energy-marker-570273). 85→90枚.",
+  "updatedAt": "2026-07-23T11:49:00.999+09:00",
+  "updatedBy": "treca-scout 2026-07-23 第2バッチ: cert実測済み4枚追加(pk-svp-067-122059, op-op11-054-744313, pk-svp-098-135232, pk-s8ap-012-91160). 90→94枚.",
   "games": [
     {
       "id": "onepiece",
@@ -56375,6 +56375,146 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 42,
           "rawAn": 15
+        }
+      ]
+    },
+    {
+      "id": "pk-svp-067-122059",
+      "game": "pokemon",
+      "name": "ブラッキー PROMO [SV-P 067](YU NAGABA×ポケモンカードゲーム)",
+      "number": "SV-P-067",
+      "variant": "YU NAGABA X PCG CAMPAIGN",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/20230523021334-0.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/122059",
+        "psaPop": "https://www.psacard.com/spec/psa/8880222"
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-07-23T11:49:00.999+09:00",
+          "p10": 46800,
+          "p9": 26000,
+          "rawA": 24500,
+          "rawB": null,
+          "pop10": 28564,
+          "popTotal": 31574,
+          "rate10": 90.46,
+          "currency": "JPY",
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用) 2026-07-23 / rate10=psacard spec Population実測(GEM RATE・grade行合計=TOTAL POP検算済) / 需要signals=未取得 / 新規発掘(treca-scout 2026-07-23 第2バッチ) / PSA10率 実測 90.46% (g10=28564/total=31574・cert#142353589・POKEMON JAPANESE SV-P PROMO #067 UMBREON (YU NAGABA X PCG CAMPAIGN)) / 素体A n8・PSA10 n66",
+          "stale": false,
+          "alert": null,
+          "p10n": 66,
+          "rawAn": 8
+        }
+      ]
+    },
+    {
+      "id": "op-op11-054-744313",
+      "game": "onepiece",
+      "name": "Nami SR [OP11-054](3rd ANNIVERSARY SET)",
+      "number": "OP11-054",
+      "variant": "3rd ANNIVERSARY SET",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/OPC-TCG-3AS-002-of.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/744313",
+        "psaPop": "https://www.psacard.com/spec/psa/15094457"
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-07-23T11:49:00.999+09:00",
+          "p10": 40000,
+          "p9": null,
+          "rawA": 18888,
+          "rawB": null,
+          "pop10": 1093,
+          "popTotal": 1144,
+          "rate10": 95.54,
+          "currency": "JPY",
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用) 2026-07-23 / rate10=psacard spec Population実測(GEM RATE・grade行合計=TOTAL POP検算済) / 需要signals=未取得 / 新規発掘(treca-scout 2026-07-23 第2バッチ) / PSA10率 実測 95.54% (g10=1093/total=1144・cert#156790603・ONE PIECE JAPANESE 3RD ANNIVERSARY SET #054 NAMI) / 素体A n13・PSA10 n23",
+          "stale": false,
+          "alert": null,
+          "p10n": 23,
+          "rawAn": 13
+        }
+      ]
+    },
+    {
+      "id": "pk-svp-098-135232",
+      "game": "pokemon",
+      "name": "名探偵ピカチュウ PROMO [SV-P 098](帰ってきた名探偵ピカチュウ 予約特典)",
+      "number": "SV-P-098",
+      "variant": "DET PIKACHU RTRNS PRE-ORDER",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/20230823022422-0.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/135232",
+        "psaPop": "https://www.psacard.com/spec/psa/9724035"
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-07-23T11:49:00.999+09:00",
+          "p10": 64800,
+          "p9": 29900,
+          "rawA": 39999,
+          "rawB": null,
+          "pop10": 47730,
+          "popTotal": 55030,
+          "rate10": 86.73,
+          "currency": "JPY",
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用) 2026-07-23 / rate10=psacard spec Population実測(GEM RATE・grade行合計=TOTAL POP検算済) / 需要signals=未取得 / 新規発掘(treca-scout 2026-07-23 第2バッチ) / PSA10率 実測 86.73% (g10=47730/total=55030・cert#165586721・POKEMON JAPANESE SV-P PROMO #098 DETECTIVE PIKACHU (DET PIKACHU RTRNS PRE-ORDER)) / 素体A n12・PSA10 n48",
+          "stale": false,
+          "alert": null,
+          "p10n": 48,
+          "rawAn": 12
+        }
+      ]
+    },
+    {
+      "id": "pk-s8ap-012-91160",
+      "game": "pokemon",
+      "name": "ブラッキー☆ ゴールドスター [S8a-P 012/025](25th ANNIVERSARY プロモパック)",
+      "number": "S8a-P-012",
+      "variant": "PCP 25TH ANNIVERSARY ED.",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/20221015014405-0.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/91160",
+        "psaPop": "https://www.psacard.com/spec/psa/5955515"
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-07-23T11:49:00.999+09:00",
+          "p10": 57000,
+          "p9": 29500,
+          "rawA": 35000,
+          "rawB": null,
+          "pop10": 27580,
+          "popTotal": 30874,
+          "rate10": 89.33,
+          "currency": "JPY",
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用) 2026-07-23 / rate10=psacard spec Population実測(GEM RATE・grade行合計=TOTAL POP検算済) / 需要signals=未取得 / 新規発掘(treca-scout 2026-07-23 第2バッチ) / PSA10率 実測 89.33% (g10=27580/total=30874・cert#122364521・POKEMON JAPANESE PROMO CARD PACK 25TH ANNIVERSARY EDITION #012 UMBREON-GOLD STAR) / 素体A n6・PSA10 n56",
+          "stale": false,
+          "alert": null,
+          "p10n": 56,
+          "rawAn": 6
         }
       ]
     }

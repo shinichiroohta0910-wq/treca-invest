@@ -4,8 +4,8 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床{店舗名・買取価格}/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-07-23T09:07:00.104+09:00",
-  "updatedBy": "prune_negative_ev 2026-07-23: 非保有EVマイナス3枚削除(db-dbsc-tcg-fb06-119-722695, op-op09-119-744321, db-e100-energy-marker). 88→85枚.",
+  "updatedAt": "2026-07-23T11:12:42.503+09:00",
+  "updatedBy": "treca-scout 2026-07-23: cert実測済み新規投資候補5枚追加(op-op05-119-744848, pk-sm9-038-387059, pk-sv2a-025-mb-128147, op-op09-001-744849, db-e32-energy-marker-570273). 85→90枚.",
   "games": [
     {
       "id": "onepiece",
@@ -56202,6 +56202,181 @@ const TRECA_DATA = {
         }
       ],
       "signals": {}
+    },
+    {
+      "id": "op-op05-119-744848",
+      "game": "onepiece",
+      "name": "Monkey.D.Luffy SEC [OP05-119](EN 2nd ANNIVERSARY SET)",
+      "number": "OP05-119",
+      "variant": "EN 2nd ANNIVERSARY SET",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/20251225044922-0.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/744848",
+        "psaPop": ""
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-07-23T11:12:42.503+09:00",
+          "p10": 54000,
+          "p9": 14000,
+          "rawA": 16880,
+          "rawB": null,
+          "pop10": 629,
+          "popTotal": 835,
+          "rate10": 75.33,
+          "currency": "JPY",
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用) 2026-07-23 / rate10=PSA Pop Report cert実測(grade行合計=TOTAL検算済) / 需要signals(eBay sold・買取床)=未取得(自動実行では該当ドメイン遮断・出口はスニダン約定の厚みで代替) / 新規発掘(treca-scout 2026-07-23) / PSA10率 実測 75.33% (g10=629/total=835・cert#156829529・ONE PIECE JAPANESE ENGLISH VERSION 2ND ANNIVERSARY SET #119 MONKEY D. LUFFY) / 素体A n18・PSA10 n40",
+          "stale": false,
+          "alert": null,
+          "p10n": 40,
+          "rawAn": 18
+        }
+      ]
+    },
+    {
+      "id": "pk-sm9-038-387059",
+      "game": "pokemon",
+      "name": "ゲンガー&ミミッキュGX RR [SM9 038/095](タッグボルト)",
+      "number": "SM9-038",
+      "variant": "TAG BOLT",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/20240914010846-0.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/387059",
+        "psaPop": ""
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-07-23T11:12:42.503+09:00",
+          "p10": 54999,
+          "p9": 17000,
+          "rawA": 22000,
+          "rawB": null,
+          "pop10": 12560,
+          "popTotal": 17457,
+          "rate10": 71.95,
+          "currency": "JPY",
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用) 2026-07-23 / rate10=PSA Pop Report cert実測(grade行合計=TOTAL検算済) / 需要signals(eBay sold・買取床)=未取得(自動実行では該当ドメイン遮断・出口はスニダン約定の厚みで代替) / 新規発掘(treca-scout 2026-07-23) / PSA10率 実測 71.95% (g10=12560/total=17457・cert#98188060・POKEMON JAPANESE SUN & MOON TAG BOLT #038 GENGAR & MIMIKYU GX (TAG BOLT)) / 素体A n11・PSA10 n56",
+          "stale": false,
+          "alert": null,
+          "p10n": 56,
+          "rawAn": 11
+        }
+      ]
+    },
+    {
+      "id": "pk-sv2a-025-mb-128147",
+      "game": "pokemon",
+      "name": "ピカチュウ C マスターボールミラー [SV2a 025/165](ポケモンカード151)",
+      "number": "SV2a-025",
+      "variant": "MASTER BALL REVERSE HOLO",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/20230615163110-5.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/128147",
+        "psaPop": ""
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-07-23T11:12:42.503+09:00",
+          "p10": 121800,
+          "p9": null,
+          "rawA": 75000,
+          "rawB": null,
+          "pop10": 12428,
+          "popTotal": 14950,
+          "rate10": 83.13,
+          "currency": "JPY",
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用) 2026-07-23 / rate10=PSA Pop Report cert実測(grade行合計=TOTAL検算済) / 需要signals(eBay sold・買取床)=未取得(自動実行では該当ドメイン遮断・出口はスニダン約定の厚みで代替) / 新規発掘(treca-scout 2026-07-23) / PSA10率 実測 83.13% (g10=12428/total=14950・cert#100560557・POKEMON JAPANESE SV2A-POKEMON CARD 151 #025 PIKACHU (MASTER BALL REVERSE HOLO)) / 素体A n5・PSA10 n62",
+          "stale": false,
+          "alert": null,
+          "p10n": 62,
+          "rawAn": 5
+        }
+      ]
+    },
+    {
+      "id": "op-op09-001-744849",
+      "game": "onepiece",
+      "name": "Shanks L [OP09-001](EN 2nd ANNIVERSARY SET)",
+      "number": "OP09-001",
+      "variant": "EN 2nd ANNIVERSARY SET",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/20251225044922-1.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/744849",
+        "psaPop": ""
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-07-23T11:12:42.503+09:00",
+          "p10": 49999,
+          "p9": 25000,
+          "rawA": 22980,
+          "rawB": null,
+          "pop10": 848,
+          "popTotal": 913,
+          "rate10": 92.88,
+          "currency": "JPY",
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用) 2026-07-23 / rate10=PSA Pop Report cert実測(grade行合計=TOTAL検算済) / 需要signals(eBay sold・買取床)=未取得(自動実行では該当ドメイン遮断・出口はスニダン約定の厚みで代替) / 新規発掘(treca-scout 2026-07-23) / PSA10率 実測 92.88% (g10=848/total=913・cert#153538042・ONE PIECE JAPANESE ENGLISH VERSION 2ND ANNIVERSARY SET #001 SHANKS) / 素体A n12・PSA10 n56",
+          "stale": false,
+          "alert": null,
+          "p10n": 56,
+          "rawAn": 12
+        }
+      ]
+    },
+    {
+      "id": "db-e32-energy-marker-570273",
+      "game": "dbfw",
+      "name": "エナジーマーカー 神龍 [E-32](FUSION WORLD 1st ANNIVERSARY SET)",
+      "number": "E-32",
+      "variant": "1st ANNIVERSARY SET",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/E-32-of.webp",
+      "imageNote": "",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/570273",
+        "psaPop": ""
+      },
+      "watch": true,
+      "invest": true,
+      "gradingCostDefault": 11980,
+      "snapshots": [
+        {
+          "at": "2026-07-23T11:12:42.503+09:00",
+          "p10": 120000,
+          "p9": null,
+          "rawA": 77000,
+          "rawB": null,
+          "pop10": 441,
+          "popTotal": 456,
+          "rate10": 96.71,
+          "currency": "JPY",
+          "src": "価格=スニダン直近3約定中央値(実売・ask不使用) 2026-07-23 / rate10=PSA Pop Report cert実測(grade行合計=TOTAL検算済) / 需要signals(eBay sold・買取床)=未取得(自動実行では該当ドメイン遮断・出口はスニダン約定の厚みで代替) / 新規発掘(treca-scout 2026-07-23) / PSA10率 実測 96.71% (g10=441/total=456・cert#155329042・DRAGON BALL SUPER CARD GAME FUSION WORLD JAPANESE 1ST ANNIVERSARY SET #E-32 ENERGY MARKER) / 素体A n15・PSA10 n42",
+          "stale": false,
+          "alert": null,
+          "p10n": 42,
+          "rawAn": 15
+        }
+      ]
     }
   ],
   "boxes": [

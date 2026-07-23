@@ -4,8 +4,8 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床{店舗名・買取価格}/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-07-23T12:27:38.595+09:00",
-  "updatedBy": "treca-scout 2026-07-23: rate10 全数洗い替え(PSA公式GEM RATE実測 83枚・価格据え置き). EV符号反転0枚.",
+  "updatedAt": "2026-07-23T12:40:11.327+09:00",
+  "updatedBy": "links.psaPop を spec URL(/spec/psa/{id}) に統一 54枚. 次回rate10更新はOCR不要でAPI直叩き可.",
   "games": [
     {
       "id": "onepiece",
@@ -3377,7 +3377,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/91299",
-        "psaPop": "https://www.psacard.com/pop/tcg-cards/2018/pokemon-japanese-sun-moon-ultra-shiny-gx/162323"
+        "psaPop": "https://www.psacard.com/spec/psa/2676664"
       },
       "watch": true,
       "gradingCostDefault": 11980,
@@ -4993,7 +4993,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/663637",
-        "psaPop": "https://www.psacard.com/pop/tcg-cards/2025/pokemon-japanese-m1l-mega-brave/312124"
+        "psaPop": "https://www.psacard.com/spec/psa/14158330"
       },
       "watch": true,
       "gradingCostDefault": 11980,
@@ -5804,7 +5804,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/730964",
-        "psaPop": "https://www.psacard.com/pop/tcg-cards/2025/pokemon-japanese-m2a-mega-dream-ex/323965"
+        "psaPop": "https://www.psacard.com/spec/psa/14955493"
       },
       "watch": true,
       "gradingCostDefault": 11980,
@@ -6609,7 +6609,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/455595",
-        "psaPop": "https://www.psacard.com/pop/tcg-cards/2024/pokemon-japanese-sv8a-terastal-fest-ex/288603"
+        "psaPop": "https://www.psacard.com/spec/psa/12376820"
       },
       "watch": true,
       "gradingCostDefault": 11980,
@@ -7422,7 +7422,7 @@ const TRECA_DATA = {
       "variant": "MEGAドリームEX SAR",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/730961",
-        "psaPop": "https://www.psacard.com/pop/tcg-cards/2025/pokemon-japanese-m2a-mega-dream-ex/323965"
+        "psaPop": "https://www.psacard.com/spec/psa/14955489"
       },
       "snapshots": [
         {
@@ -8227,7 +8227,7 @@ const TRECA_DATA = {
       "variant": "テラスタルフェスex SAR",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/469628",
-        "psaPop": "https://www.psacard.com/pop/tcg-cards/2024/pokemon-japanese-sv8a-terastal-fest-ex/288603"
+        "psaPop": "https://www.psacard.com/spec/psa/12376819"
       },
       "snapshots": [
         {
@@ -9038,7 +9038,7 @@ const TRECA_DATA = {
       "variant": "MEGAドリームEX SAR",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/730966",
-        "psaPop": "https://www.psacard.com/pop/tcg-cards/2025/pokemon-japanese-m2a-mega-dream-ex/323965"
+        "psaPop": "https://www.psacard.com/spec/psa/14955495"
       },
       "snapshots": [
         {
@@ -9843,7 +9843,7 @@ const TRECA_DATA = {
       "variant": "VSTARユニバース AR",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/105553",
-        "psaPop": "https://www.psacard.com/pop/tcg-cards/2022/pokemon-japanese-sword-shield-vstar-universe/225772"
+        "psaPop": "https://www.psacard.com/spec/psa/7917436"
       },
       "snapshots": [
         {
@@ -10654,7 +10654,7 @@ const TRECA_DATA = {
       "variant": "シャイニートレジャーex SAR",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/164250",
-        "psaPop": "https://www.psacard.com/pop/tcg-cards/2023/pokemon-japanese-sv4a-shiny-treasure-ex/255404"
+        "psaPop": "https://www.psacard.com/spec/psa/10041062"
       },
       "snapshots": [
         {
@@ -13880,7 +13880,7 @@ const TRECA_DATA = {
       "variant": "プロモ",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/111868",
-        "psaPop": "https://www.psacard.com/pop/tcg-cards/2022/pokemon-japanese-s-promo/206522"
+        "psaPop": "https://www.psacard.com/spec/psa/6984646"
       },
       "snapshots": [
         {
@@ -14685,7 +14685,7 @@ const TRECA_DATA = {
       "variant": "マクドナルド2025プロモ",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/671486",
-        "psaPop": "https://www.psacard.com/pop/tcg-cards/2025/pokemon-japanese-m-p-promo/312898"
+        "psaPop": "https://www.psacard.com/spec/psa/14234253"
       },
       "snapshots": [
         {
@@ -15490,7 +15490,7 @@ const TRECA_DATA = {
       "variant": "マクドナルド2025プロモ",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/671485",
-        "psaPop": "https://www.psacard.com/pop/tcg-cards/2025/pokemon-japanese-m-p-promo/312898"
+        "psaPop": "https://www.psacard.com/spec/psa/14234346"
       },
       "snapshots": [
         {
@@ -16295,7 +16295,7 @@ const TRECA_DATA = {
       "variant": "スカイレジェンド SR",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/104606",
-        "psaPop": "https://www.psacard.com/pop/tcg-cards/2019/pokemon-japanese-sun-moon-sky-legend/166859"
+        "psaPop": "https://www.psacard.com/spec/psa/2768280"
       },
       "snapshots": [
         {
@@ -17100,7 +17100,7 @@ const TRECA_DATA = {
       "variant": "THE BEST vol.2 SR-P",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/656346",
-        "psaPop": "https://www.psacard.com/pop/tcg-cards/2025/one-piece-japanese-prb02-premium-booster-card-best-vol-2/311514"
+        "psaPop": "https://www.psacard.com/spec/psa/14115559"
       },
       "snapshots": [
         {
@@ -19486,7 +19486,7 @@ const TRECA_DATA = {
       "variant": "新時代の主役 L-P",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/135420",
-        "psaPop": "https://www.psacard.com/pop/tcg-cards/2023/one-piece-japanese-op05-awakening-new-era/247085"
+        "psaPop": "https://www.psacard.com/spec/psa/9454301"
       },
       "snapshots": [
         {
@@ -21080,7 +21080,7 @@ const TRECA_DATA = {
       "variant": "プロモセット2 UC",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/157936",
-        "psaPop": "https://www.psacard.com/pop/tcg-cards/2022/one-piece-japanese-op02-paramount-war/223860"
+        "psaPop": "https://www.psacard.com/spec/psa/10006976"
       },
       "snapshots": [
         {
@@ -22688,7 +22688,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/108050",
-        "psaPop": "https://www.psacard.com/pop/tcg-cards/2023/one-piece-japanese-promos/229483"
+        "psaPop": "https://www.psacard.com/spec/psa/8187014"
       },
       "watch": true,
       "gradingCostDefault": 12770,
@@ -23493,7 +23493,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/94909",
-        "psaPop": "https://www.psacard.com/pop/tcg-cards/2022/one-piece-japanese-25th-anniversary-premium-card-collection/266218"
+        "psaPop": "https://www.psacard.com/spec/psa/10747426"
       },
       "watch": true,
       "gradingCostDefault": 12770,
@@ -24298,7 +24298,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/442415",
-        "psaPop": "https://www.psacard.com/pop/tcg-cards/2025/yu-gi-oh-japanese-nyc1-blue-eyes-white-dragon-ukiyo-e-style-limited-ocg-card-framed-stamp-set/301724"
+        "psaPop": "https://www.psacard.com/spec/psa/13329447"
       },
       "watch": true,
       "gradingCostDefault": 12100,
@@ -37557,7 +37557,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/595511/used",
-        "psaPop": "https://www.psacard.com/pop/tcg-cards/2025/dragon-ball-super-card-game-fusion-world-japanese-1st-complete-collection/297045"
+        "psaPop": "https://www.psacard.com/spec/psa/12990878"
       },
       "watch": true,
       "invest": true,
@@ -38335,7 +38335,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/755878/used",
-        "psaPop": "https://www.psacard.com/pop/tcg-cards/2026/one-piece-japanese-premium-card-collection-kumamoto-prefecture-special/332902"
+        "psaPop": "https://www.psacard.com/spec/psa/15506769"
       },
       "watch": true,
       "invest": true,
@@ -39113,7 +39113,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/185263/used",
-        "psaPop": "https://www.psacard.com/pop/tcg-cards/2024/yu-gi-oh-japanese-td02-duel-monsters-legend-duelist-quarter-century-day-2-attenda/261026"
+        "psaPop": "https://www.psacard.com/spec/psa/10405764"
       },
       "watch": true,
       "invest": true,
@@ -39891,7 +39891,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/171995/used",
-        "psaPop": "https://www.psacard.com/pop/tcg-cards/2023/one-piece-japanese-promos/229483"
+        "psaPop": "https://www.psacard.com/spec/psa/9261614"
       },
       "watch": true,
       "invest": true,
@@ -40669,7 +40669,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/743994/used",
-        "psaPop": "https://www.psacard.com/pop/tcg-cards/2025/one-piece-japanese-promos/291941"
+        "psaPop": "https://www.psacard.com/spec/psa/14676298"
       },
       "watch": true,
       "invest": true,
@@ -41447,7 +41447,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/575849",
-        "psaPop": "https://www.psacard.com/pop/tcg-cards/2025/one-piece-japanese-promotion-pack-ex-vol-2/304904"
+        "psaPop": "https://www.psacard.com/spec/psa/13617908"
       },
       "watch": true,
       "invest": true,
@@ -42212,7 +42212,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/714196",
-        "psaPop": "https://www.psacard.com/pop/tcg-cards/2025/one-piece-japanese-promotion-pack-ex-vol-3/319880"
+        "psaPop": "https://www.psacard.com/spec/psa/14676566"
       },
       "watch": true,
       "invest": true,
@@ -42977,7 +42977,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/300067",
-        "psaPop": "https://www.psacard.com/pop/tcg-cards/2024/one-piece-japanese-2nd-anniversary-set/291377"
+        "psaPop": "https://www.psacard.com/spec/psa/12591339"
       },
       "watch": true,
       "invest": true,
@@ -43742,7 +43742,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/106796",
-        "psaPop": "https://www.psacard.com/pop/tcg-cards/2021/pokemon-japanese-s-promo/189313"
+        "psaPop": "https://www.psacard.com/spec/psa/12029715"
       },
       "watch": true,
       "invest": true,
@@ -44507,7 +44507,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/769229",
-        "psaPop": "https://www.psacard.com/pop/tcg-cards/2026/yu-gi-oh-japanese-loch-limit-over-collection-heroes/332580"
+        "psaPop": "https://www.psacard.com/spec/psa/15499953"
       },
       "watch": true,
       "invest": true,
@@ -45272,7 +45272,7 @@ const TRECA_DATA = {
       "imageNote": "ゴッホ展/Van Gogh Museumピカチュウ。スニダン商品画像(apparels/146897・背景除去)。",
       "links": {
         "snkrdunk": "https://snkrdunk.com/trading-cards/apparels/146897",
-        "psaPop": "https://www.psacard.com/cert/122462895",
+        "psaPop": "https://www.psacard.com/spec/psa/9656727",
         "psaPopNote": "ルース085 Pikachu With Grey Felt Hat のPOPを使用(Shin保有=開封済みPSA9)。cert 122462895はcello pack(別物・参照のみ)"
       },
       "watch": true,
@@ -47391,7 +47391,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/171996",
-        "psaPop": "https://www.psacard.com/cert/147456655"
+        "psaPop": "https://www.psacard.com/spec/psa/11477762"
       },
       "watch": true,
       "invest": true,
@@ -48004,7 +48004,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/185262",
-        "psaPop": "https://www.psacard.com/cert/151158544"
+        "psaPop": "https://www.psacard.com/spec/psa/10405769"
       },
       "watch": true,
       "invest": true,
@@ -48617,7 +48617,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/663638",
-        "psaPop": "https://www.psacard.com/cert/157883614"
+        "psaPop": "https://www.psacard.com/spec/psa/14158347"
       },
       "watch": true,
       "invest": true,
@@ -51422,7 +51422,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/710532",
-        "psaPop": "https://www.psacard.com/cert/154705396"
+        "psaPop": "https://www.psacard.com/spec/psa/14676310"
       },
       "watch": true,
       "invest": true,
@@ -51874,7 +51874,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/300064",
-        "psaPop": "https://www.psacard.com/cert/110217009"
+        "psaPop": "https://www.psacard.com/spec/psa/13256728"
       },
       "watch": true,
       "invest": true,
@@ -52326,7 +52326,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/157937",
-        "psaPop": "https://www.psacard.com/cert/89086295"
+        "psaPop": "https://www.psacard.com/spec/psa/10006984"
       },
       "watch": true,
       "invest": true,
@@ -52778,7 +52778,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/127035",
-        "psaPop": "https://www.psacard.com/cert/159798216"
+        "psaPop": "https://www.psacard.com/spec/psa/2854344"
       },
       "watch": true,
       "invest": true,
@@ -53230,7 +53230,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/663661",
-        "psaPop": "https://www.psacard.com/cert/155121802"
+        "psaPop": "https://www.psacard.com/spec/psa/14158477"
       },
       "watch": true,
       "invest": true,
@@ -53603,7 +53603,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/769218",
-        "psaPop": "https://www.psacard.com/cert/161358062"
+        "psaPop": "https://www.psacard.com/spec/psa/15499942"
       },
       "watch": true,
       "invest": true,
@@ -53976,7 +53976,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/826556",
-        "psaPop": "https://www.psacard.com/cert/164715787"
+        "psaPop": "https://www.psacard.com/spec/psa/16192488"
       },
       "watch": true,
       "invest": true,
@@ -54349,7 +54349,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/93015",
-        "psaPop": "https://www.psacard.com/cert/139447322"
+        "psaPop": "https://www.psacard.com/spec/psa/5955510"
       },
       "watch": true,
       "invest": true,
@@ -54722,7 +54722,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/128121",
-        "psaPop": "https://www.psacard.com/cert/161485367"
+        "psaPop": "https://www.psacard.com/spec/psa/8971859"
       },
       "watch": true,
       "invest": true,
@@ -55095,7 +55095,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/838293",
-        "psaPop": "https://www.psacard.com/cert/154327957"
+        "psaPop": "https://www.psacard.com/spec/psa/15022368"
       },
       "watch": true,
       "invest": true,
@@ -55468,7 +55468,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/300060",
-        "psaPop": "https://www.psacard.com/cert/151235283"
+        "psaPop": "https://www.psacard.com/spec/psa/12591332"
       },
       "watch": true,
       "invest": true,
@@ -56322,7 +56322,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/129630",
-        "psaPop": "https://www.psacard.com/cert/87884101"
+        "psaPop": "https://www.psacard.com/spec/psa/9678067"
       },
       "watch": true,
       "invest": true,
@@ -56566,7 +56566,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/95888",
-        "psaPop": "https://www.psacard.com/cert/97910772"
+        "psaPop": "https://www.psacard.com/spec/psa/7392713"
       },
       "watch": true,
       "invest": true,
@@ -56810,7 +56810,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/585213",
-        "psaPop": "https://www.psacard.com/cert/145628531"
+        "psaPop": "https://www.psacard.com/spec/psa/13676714"
       },
       "watch": true,
       "invest": true,
@@ -57054,7 +57054,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/585221",
-        "psaPop": "https://www.psacard.com/cert/144122238"
+        "psaPop": "https://www.psacard.com/spec/psa/13676896"
       },
       "watch": true,
       "invest": true,
@@ -57298,7 +57298,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/116069",
-        "psaPop": "https://www.psacard.com/cert/79984910"
+        "psaPop": "https://www.psacard.com/spec/psa/8422222"
       },
       "watch": true,
       "invest": true,
@@ -57542,7 +57542,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/744848",
-        "psaPop": ""
+        "psaPop": "https://www.psacard.com/spec/psa/14595416"
       },
       "watch": true,
       "invest": true,
@@ -57577,7 +57577,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/387059",
-        "psaPop": ""
+        "psaPop": "https://www.psacard.com/spec/psa/2691315"
       },
       "watch": true,
       "invest": true,
@@ -57612,7 +57612,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/128147",
-        "psaPop": ""
+        "psaPop": "https://www.psacard.com/spec/psa/8972128"
       },
       "watch": true,
       "invest": true,
@@ -57647,7 +57647,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/744849",
-        "psaPop": ""
+        "psaPop": "https://www.psacard.com/spec/psa/14595407"
       },
       "watch": true,
       "invest": true,
@@ -57682,7 +57682,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/570273",
-        "psaPop": ""
+        "psaPop": "https://www.psacard.com/spec/psa/13786510"
       },
       "watch": true,
       "invest": true,

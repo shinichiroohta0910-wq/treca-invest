@@ -772,6 +772,8 @@ function renderWatch(){
     metaBits.push(mi("9", snap&&snap.p9!=null? yen(e.p9):"—"));
     metaBits.push(mi("素A", snap&&snap.rawA!=null? yen(e.rawA):"—"));
     if(snap && snap.rawB!=null) metaBits.push(mi("素B", yen(e.rawB)));
+    // 国内の約定件数（＝スカウトの「国内n」と同じ値）。🌐バッジの海外件数と混同しないよう並べて出す
+    if(snap && snap.p10n!=null) metaBits.push(mi("国内n", snap.p10n + (snap.p10n<=4?"⚠":"")));
     // 需要・出口シグナル（買取床/eBay/オリパ）バッジ
     const sg = c.signals || {};
     const sigBadges = [];
@@ -890,14 +892,18 @@ function renderScout(){
     else if(r.tier==="caution" && r.n!=null && r.n<=4) flags.push(`<span class="stag" style="background:rgba(255,180,84,.18);color:var(--warn)">薄商い</span>`);
     if(r.tier==="skip") flags.push(`<span class="stag" style="background:rgba(154,163,171,.18);color:var(--muted)">素体で売れ</span>`);
     const bb = (r.e.floor10!=null) ? `<span class="stag" style="background:rgba(57,217,138,.16);color:var(--accent)">床${yen(r.e.floor10)}</span>` : "";
-    const nlbl = r.n!=null ? `・n${r.n}${r.n<=4?"⚠":""}` : "";
+    // n はスニダン(国内)のPSA10約定件数。ウォッチの🌐バッジ=eBay(海外)実売件数とは別物なので
+    // 「国内」と明示する（同じ"n"に見えて混同するため・2026-07-24）
+    const nlbl = r.n!=null ? `・国内n${r.n}${r.n<=4?"⚠":""}` : "";
+    const eb = r.c.signals && r.c.signals.ebay;
+    const eblbl = (eb && eb.n!=null) ? `・🌐${eb.n}` : "";
     const id = escAttr(r.c.id);
     return `
       <div class="srow ${on?"sel":""}" onclick="showDetail('${id}')">
         ${thumbHTML(r.c,false)}
         <div class="smain">
           <div class="sname"><span class="tdot" style="background:${col}" title="${SCOUT_LABEL[r.tier]}"></span>${escHtml(r.c.name)} <span style="font-size:.62rem;color:var(--muted);font-weight:400">${escHtml(gameById(r.c.game).name)}</span>${flags.join("")}</div>
-          <div class="ssub">素体${yen(r.e.rawA)}→${yen(r.e.p10)}・率${r.e.rate.toFixed(0)}%${nlbl}・耐${r.beDecay}% ${bb}</div>
+          <div class="ssub" title="国内n=スニダンPSA10約定件数（流動性）／🌐=eBay実売件数(3ヶ月・海外需要)。母集団が別なので数値は一致しません">素体${yen(r.e.rawA)}→${yen(r.e.p10)}・率${r.e.rate.toFixed(0)}%${nlbl}${eblbl}・耐${r.beDecay}% ${bb}</div>
         </div>
         <div class="sright">
           <div class="sev" style="color:${r.buyEV>=0?"var(--accent)":"var(--bad)"}">EV${signYen(r.buyEV)}</div>
@@ -1122,7 +1128,7 @@ function renderDetail(){
     const ej  = usd!=null ? Math.round(usd*USDJPY) : (sig.ebay.soldMedianJPY!=null? num(sig.ebay.soldMedianJPY):null);
     const spread = (ej!=null && e.p10>0)? Math.round((ej/e.p10-1)*100) : null;
     const arrow = spread==null?"":(spread>0?`🔺海外+${spread}%`:`🔻海外${spread}%`);
-    const nTxt = sig.ebay.n!=null? ` <span class="sub">×${sig.ebay.n}件${sig.ebay.days?`/${sig.ebay.days}日`:"/3ヶ月"}</span>`:"";
+    const nTxt = sig.ebay.n!=null? ` <span class="sub">×${sig.ebay.n}件${sig.ebay.days?`/${sig.ebay.days}日`:"/3ヶ月"}(海外)</span>`:"";
     const usdTxt = usd!=null? ` <span class="sub">($${usd})</span>`:"";
     demandRows.push(`<div class="kv"><span class="k">eBay sold(海外)</span><span class="v">${ej!=null?yen(ej):"—"}${usdTxt}${nTxt}</span></div>`);
     if(spread!=null) demandRows.push(`<div class="kv"><span class="k">内外価格差</span><span class="v">${arrow} <span class="sub">(対スニダンPSA10・$1=¥${USDJPY})</span></span></div>`);

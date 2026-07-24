@@ -4,8 +4,8 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床{店舗名・買取価格}/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-07-24T09:58:02.061+09:00",
-  "updatedBy": "psa_refresh 2026-07-24: rate10 0枚更新・eBay実売 92枚(USD・期間別・トレンド判定付).",
+  "updatedAt": "2026-07-24T10:55:44.289+09:00",
+  "updatedBy": "レックウザ144/BW-P: spec URL回収(cert重複を/cert/{n}/psaで解決)＋rate10実測41.26%反映. spec URL保有 93/94枚.",
   "games": [
     {
       "id": "onepiece",
@@ -67515,7 +67515,7 @@ const TRECA_DATA = {
       "imageNote": "",
       "links": {
         "snkrdunk": "https://snkrdunk.com/apparels/91570",
-        "psaPop": "https://www.psacard.com/cert/147971797"
+        "psaPop": "https://www.psacard.com/spec/psa/2056132"
       },
       "watch": true,
       "invest": true,
@@ -67740,6 +67740,22 @@ const TRECA_DATA = {
           "rate10": 41.39,
           "currency": "JPY",
           "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-07-24・PSA10約定n17/proxy率53.1%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 17,
+          "rawAn": 16
+        },
+        {
+          "at": "2026-07-24T10:55:44.289+09:00",
+          "p10": 219000,
+          "p9": 45000,
+          "rawA": 63000,
+          "rawB": 40000,
+          "pop10": 1288,
+          "popTotal": 3122,
+          "rate10": 41.26,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 41.26% (g10=1288/total=3122・spec2056132・cert#70114813) / cert番号がDNA認証品と重複しており /cert/{n}/psa で解決 / 価格は直近値を据え置き(再取得せず) / 旧41.39% (psa_refresh 2026-07-24)",
           "stale": false,
           "alert": null,
           "p10n": 17,

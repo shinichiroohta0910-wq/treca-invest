@@ -538,6 +538,12 @@ if(!HAS_DATA){
   b.textContent="⚠️ data.js が読めません。相場なし・手入力モードで動作中（ポジションの追加・台帳・設定は通常どおり使えます）。";
 }
 
+/* ---------- 為替 ----------
+   eBay実売は data.js に USD で保存する（2026-07-24〜）。円換算は表示時にここで当てる。
+   ※以前は取得時レートを焼き込んだ soldMedianJPY を保存していたため、時間が経つほど劣化していた。
+   レートを変えたい場合はこの1箇所だけ直す。 */
+const USDJPY = 150;
+
 /* ---------- 最新スナップショット取得 ---------- */
 function latestSnap(card){
   if(!card || !Array.isArray(card.snapshots) || card.snapshots.length===0) return null;
@@ -774,7 +780,21 @@ function renderWatch(){
       const col = pct>=70? "#39d98a" : pct>=50? "#ffb454" : "#9aa3ab";
       sigBadges.push(`<span class="bdg" style="background:${hexA(col,.16)};color:${col}" title="ショップ買取床=相場の${pct}%（下値の堅さ・出口の太さ）">床${pct}%</span>`);
     }
-    if(sg.ebay && sg.ebay.n!=null) sigBadges.push(`<span class="bdg" style="background:rgba(74,168,255,.16);color:#4aa8ff" title="eBay直近sold ${sg.ebay.n}件（海外需要）">🌐${sg.ebay.n}</span>`);
+    if(sg.ebay && sg.ebay.n!=null){
+      const eu = sg.ebay.soldMedianUSD;
+      const tip = `eBay実売 ${sg.ebay.n}件/3ヶ月（海外需要）${eu!=null?` ・中央値$${eu}(≒${yen(Math.round(eu*USDJPY))})`:""}${sg.ebay.stale?" ⚠古い値":""}`;
+      sigBadges.push(`<span class="bdg" style="background:rgba(74,168,255,.16);color:#4aa8ff" title="${escAttr(tip)}">🌐${sg.ebay.n}${sg.ebay.stale?"⚠":""}</span>`);
+    }
+    // 海外実勢トレンド（急騰/急落だけバッジで出す。横ばい・判定不能は詳細画面で見る）
+    if(sg.ebay && sg.ebay.trend && sg.ebay.trend.ratio!=null){
+      const tr=sg.ebay.trend, v=tr.verdict;
+      if(/急騰|上昇|急落|下落/.test(v)){
+        const col = v==="急騰"?"#39d98a" : v==="上昇"?"#8fd6ff" : v==="急落"?"#ff6b6b" : "#ffb454";
+        const ar  = /騰|上昇/.test(v)?"▲":"▼";
+        const hist=(tr.history||[]).slice().sort((a,b)=>b.actualMonths-a.actualMonths).map(h=>`${h.actualMonths}ヶ月前 $${h.med}`).join(" → ");
+        sigBadges.push(`<span class="bdg" style="background:${hexA(col,.16)};color:${col}" title="${escAttr(`海外実勢 ${v} ×${tr.ratio}${tr.approx?"(概算)":""} [${tr.basis||""}]${hist?` ／ ${hist} → 直近 $${sg.ebay.soldMedianUSD}`:""}`)}">${ar}${tr.ratio}</span>`);
+      }
+    }
     if(sg.oripa && sg.oripa.seen) sigBadges.push(`<span class="bdg" style="background:rgba(180,120,255,.18);color:#b478ff" title="オリパ景品採用（回転の証拠）">🎰</span>`);
     // スカウトのプロット（ティア色＋拾EV）。色は🎯スカウトタブの凡例と共通。
     const sc = scoutEval(c, d);
@@ -1096,12 +1116,30 @@ function renderDetail(){
     demandRows.push(`<div class="kv"><span class="k">ショップ買取床(PSA10)</span><span class="v">${yen(bp)}${pct!=null?` <span class="sub">相場の${pct}%</span>`:""}</span></div>`);
     if(sig.buyback.shop) demandRows.push(`<div class="kv"><span class="k">買取店舗</span><span class="v sub">${escHtml(sig.buyback.shop)}${sig.buyback.demand!=null?` ・ ${sig.buyback.demand}点募集`:""}${sig.buyback.at?` ・ ${fmtD(sig.buyback.at)}`:""}</span></div>`);
   }
-  if(sig.ebay && (sig.ebay.soldMedianJPY!=null || sig.ebay.n!=null)){
-    const ej = sig.ebay.soldMedianJPY!=null? num(sig.ebay.soldMedianJPY):null;
+  if(sig.ebay && (sig.ebay.soldMedianUSD!=null || sig.ebay.soldMedianJPY!=null || sig.ebay.n!=null)){
+    // 新形式(2026-07-24〜)=USD保存・円換算は表示時にレート適用。旧形式(soldMedianJPY)は取得時レートが焼き込み済み
+    const usd = sig.ebay.soldMedianUSD!=null? num(sig.ebay.soldMedianUSD):null;
+    const ej  = usd!=null ? Math.round(usd*USDJPY) : (sig.ebay.soldMedianJPY!=null? num(sig.ebay.soldMedianJPY):null);
     const spread = (ej!=null && e.p10>0)? Math.round((ej/e.p10-1)*100) : null;
     const arrow = spread==null?"":(spread>0?`🔺海外+${spread}%`:`🔻海外${spread}%`);
-    demandRows.push(`<div class="kv"><span class="k">eBay sold(海外)</span><span class="v">${ej!=null?yen(ej):"—"}${sig.ebay.n!=null?` <span class="sub">×${sig.ebay.n}件${sig.ebay.days?`/${sig.ebay.days}日`:""}</span>`:""}</span></div>`);
-    if(spread!=null) demandRows.push(`<div class="kv"><span class="k">内外価格差</span><span class="v">${arrow} <span class="sub">(対スニダンPSA10)</span></span></div>`);
+    const nTxt = sig.ebay.n!=null? ` <span class="sub">×${sig.ebay.n}件${sig.ebay.days?`/${sig.ebay.days}日`:"/3ヶ月"}</span>`:"";
+    const usdTxt = usd!=null? ` <span class="sub">($${usd})</span>`:"";
+    demandRows.push(`<div class="kv"><span class="k">eBay sold(海外)</span><span class="v">${ej!=null?yen(ej):"—"}${usdTxt}${nTxt}</span></div>`);
+    if(spread!=null) demandRows.push(`<div class="kv"><span class="k">内外価格差</span><span class="v">${arrow} <span class="sub">(対スニダンPSA10・$1=¥${USDJPY})</span></span></div>`);
+    if(sig.ebay.stale) demandRows.push(`<div class="kv"><span class="k">⚠ 鮮度</span><span class="v sub">${escHtml(sig.ebay.staleNote||"古い値")}</span></div>`);
+    // 海外実勢トレンド（timeRange比較 or cursor履歴で判定・判定不能なら理由を出す）
+    const tr = sig.ebay.trend;
+    if(tr){
+      if(tr.ratio!=null){
+        const col = tr.ratio>=1.3?"var(--accent)":tr.ratio>=1.1?"#8fd6ff":tr.ratio<=0.7?"var(--bad)":tr.ratio<=0.9?"#ffb47a":"var(--muted)";
+        demandRows.push(`<div class="kv"><span class="k">海外トレンド</span><span class="v" style="color:${col}">${escHtml(tr.verdict)} ×${tr.ratio}${tr.approx?"≈":""} <span class="sub">${escHtml(tr.basis||"")}</span></span></div>`);
+        const hist = (tr.history||[]).slice().sort((a,b)=>b.actualMonths-a.actualMonths)
+          .map(h=>`${h.actualMonths}ヶ月前 $${h.med}`).join(" → ");
+        if(hist) demandRows.push(`<div class="kv"><span class="k">推移(USD)</span><span class="v sub">${escHtml(hist)} → 直近 $${usd!=null?usd:"—"}</span></div>`);
+      } else {
+        demandRows.push(`<div class="kv"><span class="k">海外トレンド</span><span class="v sub">${escHtml(tr.verdict)}</span></div>`);
+      }
+    }
   }
   if(sig.oripa && sig.oripa.seen){
     demandRows.push(`<div class="kv"><span class="k">オリパ景品</span><span class="v">🎰 採用 <span class="sub">${sig.oripa.at?fmtD(sig.oripa.at):""}</span></span></div>`);

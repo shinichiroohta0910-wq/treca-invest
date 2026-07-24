@@ -4,8 +4,8 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床{店舗名・買取価格}/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-07-24T09:29:07.878+09:00",
-  "updatedBy": "psa_refresh 2026-07-24: rate10 29枚更新・eBay実売 92枚(USD・期間別・トレンド判定付).",
+  "updatedAt": "2026-07-24T09:58:02.061+09:00",
+  "updatedBy": "psa_refresh 2026-07-24: rate10 0枚更新・eBay実売 92枚(USD・期間別・トレンド判定付).",
   "games": [
     {
       "id": "onepiece",
@@ -5724,9 +5724,37 @@ const TRECA_DATA = {
               "med": 280,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 3,
+                "actualMonths": 3.4,
+                "n": 96,
+                "med": 450,
+                "range": "2026-03-27〜2026-04-27",
+                "approx": false
+              },
+              {
+                "targetMonths": 6,
+                "actualMonths": 5.6,
+                "n": 99,
+                "med": 350,
+                "range": "2026-01-15〜2026-02-21",
+                "approx": false
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 10.3,
+                "n": 55,
+                "med": 524,
+                "range": "2025-09-06〜2025-09-22",
+                "approx": true
+              }
+            ],
+            "ratio": 0.53,
+            "basis": "直近/10.3ヶ月前(履歴)",
+            "verdict": "急落",
+            "fromHistory": true,
+            "approx": true
           },
           "points": [
             {
@@ -6661,9 +6689,37 @@ const TRECA_DATA = {
               "med": 458.01,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 3,
+                "actualMonths": 3.3,
+                "n": 93,
+                "med": 511.31,
+                "range": "2026-03-23〜2026-05-09",
+                "approx": false
+              },
+              {
+                "targetMonths": 6,
+                "actualMonths": 6.6,
+                "n": 99,
+                "med": 449.44,
+                "range": "2025-12-13〜2026-01-27",
+                "approx": false
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 9.9,
+                "n": 77,
+                "med": 950,
+                "range": "2025-08-19〜2025-11-02",
+                "approx": true
+              }
+            ],
+            "ratio": 0.42,
+            "basis": "直近/9.9ヶ月前(履歴)",
+            "verdict": "急落",
+            "fromHistory": true,
+            "approx": true
           },
           "points": [
             {
@@ -7604,9 +7660,37 @@ const TRECA_DATA = {
               "med": 370,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 3,
+                "actualMonths": 2.7,
+                "n": 99,
+                "med": 619.99,
+                "range": "2026-04-21〜2026-05-18",
+                "approx": false
+              },
+              {
+                "targetMonths": 6,
+                "actualMonths": 5.7,
+                "n": 100,
+                "med": 380,
+                "range": "2026-01-21〜2026-02-13",
+                "approx": false
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 6.6,
+                "n": 77,
+                "med": 397,
+                "range": "2025-12-17〜2026-01-21",
+                "approx": true
+              }
+            ],
+            "ratio": 0.93,
+            "basis": "直近/6.6ヶ月前(履歴)",
+            "verdict": "横ばい",
+            "fromHistory": true,
+            "approx": true
           },
           "points": [
             {
@@ -8541,9 +8625,37 @@ const TRECA_DATA = {
               "med": 241.26,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 3,
+                "actualMonths": 3.2,
+                "n": 98,
+                "med": 249.99,
+                "range": "2026-04-08〜2026-04-28",
+                "approx": false
+              },
+              {
+                "targetMonths": 6,
+                "actualMonths": 5.9,
+                "n": 95,
+                "med": 175.5,
+                "range": "2026-01-12〜2026-02-08",
+                "approx": false
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 12,
+                "n": 94,
+                "med": 150,
+                "range": "2025-07-15〜2025-08-04",
+                "approx": false
+              }
+            ],
+            "ratio": 1.6,
+            "basis": "直近/12ヶ月前(履歴)",
+            "verdict": "急騰",
+            "fromHistory": true,
+            "approx": false
           },
           "points": [
             {
@@ -9500,9 +9612,37 @@ const TRECA_DATA = {
               "med": 174.01,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 3,
+                "actualMonths": 4.6,
+                "n": 79,
+                "med": 170.98,
+                "range": "2026-01-08〜2026-05-03",
+                "approx": true
+              },
+              {
+                "targetMonths": 6,
+                "actualMonths": 4.6,
+                "n": 79,
+                "med": 170.98,
+                "range": "2026-01-08〜2026-05-03",
+                "approx": true
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 4.6,
+                "n": 79,
+                "med": 170.98,
+                "range": "2026-01-08〜2026-05-03",
+                "approx": true
+              }
+            ],
+            "ratio": 0.82,
+            "basis": "直近/4.6ヶ月前(履歴)",
+            "verdict": "下落",
+            "fromHistory": true,
+            "approx": true
           },
           "points": [
             {
@@ -10437,9 +10577,37 @@ const TRECA_DATA = {
               "med": 162.5,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 3,
+                "actualMonths": 2.7,
+                "n": 88,
+                "med": 154.99,
+                "range": "2026-04-22〜2026-05-19",
+                "approx": false
+              },
+              {
+                "targetMonths": 6,
+                "actualMonths": 5.5,
+                "n": 98,
+                "med": 108.5,
+                "range": "2026-01-24〜2026-02-23",
+                "approx": false
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 11.9,
+                "n": 94,
+                "med": 96,
+                "range": "2025-07-18〜2025-08-08",
+                "approx": false
+              }
+            ],
+            "ratio": 1.69,
+            "basis": "直近/11.9ヶ月前(履歴)",
+            "verdict": "急騰",
+            "fromHistory": true,
+            "approx": false
           },
           "points": [
             {
@@ -12317,9 +12485,29 @@ const TRECA_DATA = {
               "med": 546.25,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 6,
+                "actualMonths": 7.1,
+                "n": 95,
+                "med": 295,
+                "range": "2025-10-05〜2026-03-08",
+                "approx": true
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 12,
+                "n": 99,
+                "med": 216.9,
+                "range": "2025-05-16〜2025-10-01",
+                "approx": false
+              }
+            ],
+            "ratio": 2.24,
+            "basis": "直近/12ヶ月前(履歴)",
+            "verdict": "急騰",
+            "fromHistory": true,
+            "approx": true
           },
           "points": [
             {
@@ -13260,9 +13448,37 @@ const TRECA_DATA = {
               "med": 910,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 3,
+                "actualMonths": 2.6,
+                "n": 89,
+                "med": 958.96,
+                "range": "2026-04-21〜2026-05-22",
+                "approx": false
+              },
+              {
+                "targetMonths": 6,
+                "actualMonths": 6.2,
+                "n": 94,
+                "med": 540.5,
+                "range": "2026-01-03〜2026-01-28",
+                "approx": false
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 12.3,
+                "n": 92,
+                "med": 340,
+                "range": "2025-07-01〜2025-07-26",
+                "approx": false
+              }
+            ],
+            "ratio": 2.67,
+            "basis": "直近/12.3ヶ月前(履歴)",
+            "verdict": "急騰",
+            "fromHistory": true,
+            "approx": false
           },
           "points": [
             {
@@ -14203,9 +14419,37 @@ const TRECA_DATA = {
               "med": 65,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 3,
+                "actualMonths": 3.3,
+                "n": 99,
+                "med": 72.5,
+                "range": "2026-03-29〜2026-04-29",
+                "approx": false
+              },
+              {
+                "targetMonths": 6,
+                "actualMonths": 4.9,
+                "n": 100,
+                "med": 67,
+                "range": "2026-01-23〜2026-03-29",
+                "approx": true
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 6.6,
+                "n": 19,
+                "med": 82,
+                "range": "2025-12-19〜2026-01-23",
+                "approx": true
+              }
+            ],
+            "ratio": 0.74,
+            "basis": "直近/6.6ヶ月前(履歴)",
+            "verdict": "下落",
+            "fromHistory": true,
+            "approx": true
           },
           "points": [
             {
@@ -15140,9 +15384,37 @@ const TRECA_DATA = {
               "med": 48.59,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 3,
+                "actualMonths": 2.8,
+                "n": 99,
+                "med": 50,
+                "range": "2026-04-04〜2026-05-25",
+                "approx": false
+              },
+              {
+                "targetMonths": 6,
+                "actualMonths": 6.1,
+                "n": 52,
+                "med": 63.25,
+                "range": "2026-01-11〜2026-01-29",
+                "approx": false
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 6.1,
+                "n": 52,
+                "med": 63.25,
+                "range": "2026-01-11〜2026-01-29",
+                "approx": true
+              }
+            ],
+            "ratio": 0.74,
+            "basis": "直近/6.1ヶ月前(履歴)",
+            "verdict": "下落",
+            "fromHistory": true,
+            "approx": true
           },
           "points": [
             {
@@ -16077,9 +16349,37 @@ const TRECA_DATA = {
               "med": 53.89,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 3,
+                "actualMonths": 2.8,
+                "n": 98,
+                "med": 47,
+                "range": "2026-03-29〜2026-05-27",
+                "approx": false
+              },
+              {
+                "targetMonths": 6,
+                "actualMonths": 5.1,
+                "n": 46,
+                "med": 52,
+                "range": "2026-01-16〜2026-03-28",
+                "approx": false
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 5.1,
+                "n": 46,
+                "med": 52,
+                "range": "2026-01-16〜2026-03-28",
+                "approx": true
+              }
+            ],
+            "ratio": 1.08,
+            "basis": "直近/5.1ヶ月前(履歴)",
+            "verdict": "横ばい",
+            "fromHistory": true,
+            "approx": true
           },
           "points": [
             {
@@ -17014,9 +17314,37 @@ const TRECA_DATA = {
               "med": 124.73,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 3,
+                "actualMonths": 2.8,
+                "n": 90,
+                "med": 106.2,
+                "range": "2026-04-12〜2026-05-22",
+                "approx": false
+              },
+              {
+                "targetMonths": 6,
+                "actualMonths": 5.2,
+                "n": 96,
+                "med": 78.97,
+                "range": "2026-01-19〜2026-03-15",
+                "approx": false
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 11.4,
+                "n": 87,
+                "med": 90,
+                "range": "2025-07-07〜2025-09-13",
+                "approx": false
+              }
+            ],
+            "ratio": 1.48,
+            "basis": "直近/11.4ヶ月前(履歴)",
+            "verdict": "急騰",
+            "fromHistory": true,
+            "approx": false
           },
           "points": [
             {
@@ -17951,9 +18279,29 @@ const TRECA_DATA = {
               "med": 95,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 3,
+                "actualMonths": 3,
+                "n": 99,
+                "med": 98,
+                "range": "2026-04-23〜2026-04-26",
+                "approx": false
+              },
+              {
+                "targetMonths": 6,
+                "actualMonths": 6,
+                "n": 97,
+                "med": 63.49,
+                "range": "2026-01-23〜2026-01-24",
+                "approx": false
+              }
+            ],
+            "ratio": 1.5,
+            "basis": "直近/6ヶ月前(履歴)",
+            "verdict": "急騰",
+            "fromHistory": true,
+            "approx": false
           },
           "points": [
             {
@@ -18888,9 +19236,29 @@ const TRECA_DATA = {
               "med": 39,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 6,
+                "actualMonths": 6,
+                "n": 99,
+                "med": 28,
+                "range": "2026-01-06〜2026-02-08",
+                "approx": false
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 8.4,
+                "n": 75,
+                "med": 35,
+                "range": "2025-10-05〜2025-12-20",
+                "approx": true
+              }
+            ],
+            "ratio": 1.43,
+            "basis": "直近/8.4ヶ月前(履歴)",
+            "verdict": "急騰",
+            "fromHistory": true,
+            "approx": true
           },
           "points": [
             {
@@ -21731,9 +22099,37 @@ const TRECA_DATA = {
               "med": 279.98,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 3,
+                "actualMonths": 3.4,
+                "n": 99,
+                "med": 177.99,
+                "range": "2026-03-29〜2026-04-26",
+                "approx": false
+              },
+              {
+                "targetMonths": 6,
+                "actualMonths": 6.3,
+                "n": 100,
+                "med": 200,
+                "range": "2025-12-25〜2026-02-02",
+                "approx": false
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 11.1,
+                "n": 86,
+                "med": 43.34,
+                "range": "2025-07-13〜2025-09-28",
+                "approx": false
+              }
+            ],
+            "ratio": 5.65,
+            "basis": "直近/11.1ヶ月前(履歴)",
+            "verdict": "急騰",
+            "fromHistory": true,
+            "approx": false
           },
           "points": [
             {
@@ -26257,9 +26653,37 @@ const TRECA_DATA = {
               "med": 255,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 3,
+                "actualMonths": 2.7,
+                "n": 85,
+                "med": 541.11,
+                "range": "2026-04-16〜2026-05-20",
+                "approx": false
+              },
+              {
+                "targetMonths": 6,
+                "actualMonths": 5.4,
+                "n": 100,
+                "med": 341,
+                "range": "2026-01-20〜2026-03-04",
+                "approx": false
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 9.1,
+                "n": 13,
+                "med": 730,
+                "range": "2025-10-16〜2025-10-19",
+                "approx": true
+              }
+            ],
+            "ratio": 0.35,
+            "basis": "直近/9.1ヶ月前(履歴)",
+            "verdict": "急落",
+            "fromHistory": true,
+            "approx": true
           },
           "points": [
             {
@@ -27194,9 +27618,37 @@ const TRECA_DATA = {
               "med": 380,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 3,
+                "actualMonths": 3,
+                "n": 99,
+                "med": 199.99,
+                "range": "2026-04-10〜2026-05-05",
+                "approx": false
+              },
+              {
+                "targetMonths": 6,
+                "actualMonths": 4.7,
+                "n": 94,
+                "med": 160.25,
+                "range": "2026-01-24〜2026-04-10",
+                "approx": true
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 14,
+                "n": 86,
+                "med": 31.82,
+                "range": "2025-02-10〜2025-09-07",
+                "approx": true
+              }
+            ],
+            "ratio": 11.5,
+            "basis": "直近/14ヶ月前(履歴)",
+            "verdict": "急騰",
+            "fromHistory": true,
+            "approx": true
           },
           "points": [
             {
@@ -28147,9 +28599,37 @@ const TRECA_DATA = {
               "med": 217.5,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 3,
+                "actualMonths": 2,
+                "n": 85,
+                "med": 205.5,
+                "range": "2026-05-09〜2026-06-08",
+                "approx": false
+              },
+              {
+                "targetMonths": 6,
+                "actualMonths": 5,
+                "n": 94,
+                "med": 122.5,
+                "range": "2025-12-11〜2026-05-09",
+                "approx": true
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 12.9,
+                "n": 86,
+                "med": 30,
+                "range": "2025-01-16〜2025-12-09",
+                "approx": false
+              }
+            ],
+            "ratio": 6.42,
+            "basis": "直近/12.9ヶ月前(履歴)",
+            "verdict": "急騰",
+            "fromHistory": true,
+            "approx": true
           },
           "points": [
             {
@@ -29100,9 +29580,29 @@ const TRECA_DATA = {
               "med": 436.8,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 6,
+                "actualMonths": 5.7,
+                "n": 100,
+                "med": 150,
+                "range": "2025-12-02〜2026-04-04",
+                "approx": false
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 10.7,
+                "n": 100,
+                "med": 132,
+                "range": "2025-07-16〜2025-10-24",
+                "approx": true
+              }
+            ],
+            "ratio": 3.45,
+            "basis": "直近/10.7ヶ月前(履歴)",
+            "verdict": "急騰",
+            "fromHistory": true,
+            "approx": true
           },
           "points": [
             {
@@ -30936,9 +31436,29 @@ const TRECA_DATA = {
               "med": 581,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 6,
+                "actualMonths": 7,
+                "n": 98,
+                "med": 280,
+                "range": "2025-09-15〜2026-04-01",
+                "approx": false
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 16.1,
+                "n": 99,
+                "med": 164.99,
+                "range": "2024-09-24〜2025-09-14",
+                "approx": true
+              }
+            ],
+            "ratio": 3.94,
+            "basis": "直近/16.1ヶ月前(履歴)",
+            "verdict": "急騰",
+            "fromHistory": true,
+            "approx": true
           },
           "points": [
             {
@@ -31846,9 +32366,37 @@ const TRECA_DATA = {
               "med": 600,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 3,
+                "actualMonths": 2.5,
+                "n": 98,
+                "med": 217.5,
+                "range": "2026-04-18〜2026-05-29",
+                "approx": false
+              },
+              {
+                "targetMonths": 6,
+                "actualMonths": 5.4,
+                "n": 99,
+                "med": 244,
+                "range": "2026-01-26〜2026-02-24",
+                "approx": false
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 7.9,
+                "n": 88,
+                "med": 202.5,
+                "range": "2025-09-28〜2026-01-25",
+                "approx": true
+              }
+            ],
+            "ratio": 2.8,
+            "basis": "直近/7.9ヶ月前(履歴)",
+            "verdict": "急騰",
+            "fromHistory": true,
+            "approx": true
           },
           "points": [
             {
@@ -35518,9 +36066,37 @@ const TRECA_DATA = {
               "med": 630,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 3,
+                "actualMonths": 2.9,
+                "n": 97,
+                "med": 1050,
+                "range": "2026-04-21〜2026-05-03",
+                "approx": false
+              },
+              {
+                "targetMonths": 6,
+                "actualMonths": 5.7,
+                "n": 100,
+                "med": 600,
+                "range": "2026-01-22〜2026-02-12",
+                "approx": false
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 7.2,
+                "n": 87,
+                "med": 625,
+                "range": "2025-12-17〜2025-12-20",
+                "approx": true
+              }
+            ],
+            "ratio": 1.01,
+            "basis": "直近/7.2ヶ月前(履歴)",
+            "verdict": "横ばい",
+            "fromHistory": true,
+            "approx": true
           },
           "points": [
             {
@@ -37338,9 +37914,37 @@ const TRECA_DATA = {
               "med": 374,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 3,
+                "actualMonths": 3.1,
+                "n": 99,
+                "med": 172.5,
+                "range": "2026-04-17〜2026-04-25",
+                "approx": false
+              },
+              {
+                "targetMonths": 6,
+                "actualMonths": 7.4,
+                "n": 95,
+                "med": 350,
+                "range": "2025-10-17〜2026-02-08",
+                "approx": true
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 7.4,
+                "n": 95,
+                "med": 350,
+                "range": "2025-10-17〜2026-02-08",
+                "approx": true
+              }
+            ],
+            "ratio": 1.07,
+            "basis": "直近/7.4ヶ月前(履歴)",
+            "verdict": "横ばい",
+            "fromHistory": true,
+            "approx": true
           },
           "points": [
             {
@@ -38248,9 +38852,37 @@ const TRECA_DATA = {
               "med": 485,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 3,
+                "actualMonths": 3.2,
+                "n": 100,
+                "med": 800.5,
+                "range": "2026-03-29〜2026-05-10",
+                "approx": false
+              },
+              {
+                "targetMonths": 6,
+                "actualMonths": 5.7,
+                "n": 100,
+                "med": 475,
+                "range": "2026-01-17〜2026-02-18",
+                "approx": false
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 6.7,
+                "n": 48,
+                "med": 511,
+                "range": "2025-12-17〜2026-01-17",
+                "approx": true
+              }
+            ],
+            "ratio": 0.95,
+            "basis": "直近/6.7ヶ月前(履歴)",
+            "verdict": "横ばい",
+            "fromHistory": true,
+            "approx": true
           },
           "points": [
             {
@@ -39158,9 +39790,37 @@ const TRECA_DATA = {
               "med": 694.44,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 3,
+                "actualMonths": 2.7,
+                "n": 92,
+                "med": 863.5,
+                "range": "2026-04-18〜2026-05-18",
+                "approx": false
+              },
+              {
+                "targetMonths": 6,
+                "actualMonths": 6.2,
+                "n": 93,
+                "med": 390,
+                "range": "2026-01-03〜2026-01-28",
+                "approx": false
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 12.3,
+                "n": 95,
+                "med": 272,
+                "range": "2025-07-06〜2025-07-28",
+                "approx": false
+              }
+            ],
+            "ratio": 2.54,
+            "basis": "直近/12.3ヶ月前(履歴)",
+            "verdict": "急騰",
+            "fromHistory": true,
+            "approx": false
           },
           "points": [
             {
@@ -41910,9 +42570,37 @@ const TRECA_DATA = {
               "med": 290,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 3,
+                "actualMonths": 3,
+                "n": 98,
+                "med": 207.75,
+                "range": "2026-04-22〜2026-04-27",
+                "approx": false
+              },
+              {
+                "targetMonths": 6,
+                "actualMonths": 6,
+                "n": 98,
+                "med": 344,
+                "range": "2026-01-19〜2026-01-25",
+                "approx": false
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 8.5,
+                "n": 33,
+                "med": 305,
+                "range": "2025-11-08〜2025-11-08",
+                "approx": true
+              }
+            ],
+            "ratio": 0.95,
+            "basis": "直近/8.5ヶ月前(履歴)",
+            "verdict": "横ばい",
+            "fromHistory": true,
+            "approx": true
           },
           "points": [
             {
@@ -42820,9 +43508,37 @@ const TRECA_DATA = {
               "med": 316.16,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 3,
+                "actualMonths": 3.2,
+                "n": 42,
+                "med": 725.5,
+                "range": "2026-04-12〜2026-04-27",
+                "approx": false
+              },
+              {
+                "targetMonths": 6,
+                "actualMonths": 3.2,
+                "n": 42,
+                "med": 725.5,
+                "range": "2026-04-12〜2026-04-27",
+                "approx": true
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 3.2,
+                "n": 42,
+                "med": 725.5,
+                "range": "2026-04-12〜2026-04-27",
+                "approx": true
+              }
+            ],
+            "ratio": 0.44,
+            "basis": "直近/3.2ヶ月前(履歴)",
+            "verdict": "急落",
+            "fromHistory": true,
+            "approx": true
           },
           "points": [
             {
@@ -51019,9 +51735,29 @@ const TRECA_DATA = {
               "med": 430,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 6,
+                "actualMonths": 9.7,
+                "n": 50,
+                "med": 112.5,
+                "range": "2025-04-21〜2026-03-15",
+                "approx": true
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 9.7,
+                "n": 50,
+                "med": 112.5,
+                "range": "2025-04-21〜2026-03-15",
+                "approx": true
+              }
+            ],
+            "ratio": 5.02,
+            "basis": "直近/9.7ヶ月前(履歴)",
+            "verdict": "急騰",
+            "fromHistory": true,
+            "approx": true
           },
           "points": [
             {
@@ -51916,9 +52652,37 @@ const TRECA_DATA = {
               "med": 109.99,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 3,
+                "actualMonths": 3.2,
+                "n": 98,
+                "med": 103.02,
+                "range": "2026-03-24〜2026-05-15",
+                "approx": false
+              },
+              {
+                "targetMonths": 6,
+                "actualMonths": 5.2,
+                "n": 98,
+                "med": 82.97,
+                "range": "2026-01-16〜2026-03-22",
+                "approx": false
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 14.4,
+                "n": 78,
+                "med": 60,
+                "range": "2024-12-05〜2025-10-18",
+                "approx": true
+              }
+            ],
+            "ratio": 1.83,
+            "basis": "直近/14.4ヶ月前(履歴)",
+            "verdict": "急騰",
+            "fromHistory": true,
+            "approx": true
           },
           "points": [
             {
@@ -53678,9 +54442,37 @@ const TRECA_DATA = {
               "med": 2800,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 3,
+                "actualMonths": 3.1,
+                "n": 96,
+                "med": 3047.94,
+                "range": "2026-04-18〜2026-04-26",
+                "approx": false
+              },
+              {
+                "targetMonths": 6,
+                "actualMonths": 5.9,
+                "n": 88,
+                "med": 1888.05,
+                "range": "2026-01-19〜2026-01-30",
+                "approx": false
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 12.2,
+                "n": 66,
+                "med": 1088.24,
+                "range": "2025-07-14〜2025-07-24",
+                "approx": false
+              }
+            ],
+            "ratio": 2.57,
+            "basis": "直近/12.2ヶ月前(履歴)",
+            "verdict": "急騰",
+            "fromHistory": true,
+            "approx": false
           },
           "points": [
             {
@@ -54559,9 +55351,29 @@ const TRECA_DATA = {
               "med": 615,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 6,
+                "actualMonths": 6.4,
+                "n": 67,
+                "med": 511.99,
+                "range": "2025-12-17〜2026-02-04",
+                "approx": false
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 6.4,
+                "n": 67,
+                "med": 511.99,
+                "range": "2025-12-17〜2026-02-04",
+                "approx": true
+              }
+            ],
+            "ratio": 0.97,
+            "basis": "直近/6.4ヶ月前(履歴)",
+            "verdict": "横ばい",
+            "fromHistory": true,
+            "approx": true
           },
           "points": [
             {
@@ -59740,9 +60552,29 @@ const TRECA_DATA = {
               "med": 235,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 6,
+                "actualMonths": 5.4,
+                "n": 30,
+                "med": 202.5,
+                "range": "2025-12-16〜2026-04-08",
+                "approx": false
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 5.4,
+                "n": 30,
+                "med": 202.5,
+                "range": "2025-12-16〜2026-04-08",
+                "approx": true
+              }
+            ],
+            "ratio": 1.51,
+            "basis": "直近/5.4ヶ月前(履歴)",
+            "verdict": "急騰",
+            "fromHistory": true,
+            "approx": true
           },
           "points": [
             {
@@ -61631,9 +62463,29 @@ const TRECA_DATA = {
               "med": 320,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 6,
+                "actualMonths": 8.7,
+                "n": 34,
+                "med": 230.01,
+                "range": "2025-07-14〜2026-02-18",
+                "approx": true
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 8.7,
+                "n": 34,
+                "med": 230.01,
+                "range": "2025-07-14〜2026-02-18",
+                "approx": true
+              }
+            ],
+            "ratio": 1.57,
+            "basis": "直近/8.7ヶ月前(履歴)",
+            "verdict": "急騰",
+            "fromHistory": true,
+            "approx": true
           },
           "points": [
             {
@@ -62833,9 +63685,29 @@ const TRECA_DATA = {
               "med": 1100,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 6,
+                "actualMonths": 5.4,
+                "n": 90,
+                "med": 650,
+                "range": "2025-12-13〜2026-04-13",
+                "approx": false
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 11,
+                "n": 95,
+                "med": 510,
+                "range": "2025-07-23〜2025-09-22",
+                "approx": false
+              }
+            ],
+            "ratio": 1.91,
+            "basis": "直近/11ヶ月前(履歴)",
+            "verdict": "急騰",
+            "fromHistory": true,
+            "approx": false
           },
           "points": [
             {
@@ -64941,9 +65813,29 @@ const TRECA_DATA = {
               "med": 823.68,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 6,
+                "actualMonths": 5.1,
+                "n": 86,
+                "med": 598.04,
+                "range": "2026-01-01〜2026-04-13",
+                "approx": false
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 12.2,
+                "n": 95,
+                "med": 341,
+                "range": "2025-05-24〜2025-09-12",
+                "approx": false
+              }
+            ],
+            "ratio": 1.9,
+            "basis": "直近/12.2ヶ月前(履歴)",
+            "verdict": "急騰",
+            "fromHistory": true,
+            "approx": false
           },
           "points": [
             {
@@ -65456,9 +66348,37 @@ const TRECA_DATA = {
               "med": 560,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 3,
+                "actualMonths": 2.8,
+                "n": 95,
+                "med": 710,
+                "range": "2026-04-07〜2026-05-22",
+                "approx": false
+              },
+              {
+                "targetMonths": 6,
+                "actualMonths": 6.5,
+                "n": 94,
+                "med": 245,
+                "range": "2025-12-17〜2026-01-28",
+                "approx": false
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 12.1,
+                "n": 94,
+                "med": 165,
+                "range": "2025-07-05〜2025-08-09",
+                "approx": false
+              }
+            ],
+            "ratio": 3.15,
+            "basis": "直近/12.1ヶ月前(履歴)",
+            "verdict": "急騰",
+            "fromHistory": true,
+            "approx": false
           },
           "points": [
             {
@@ -68297,9 +69217,29 @@ const TRECA_DATA = {
               "med": 750,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 6,
+                "actualMonths": 6.3,
+                "n": 92,
+                "med": 416.5,
+                "range": "2025-12-13〜2026-02-14",
+                "approx": false
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 10.9,
+                "n": 100,
+                "med": 470,
+                "range": "2025-07-23〜2025-10-02",
+                "approx": true
+              }
+            ],
+            "ratio": 1.49,
+            "basis": "直近/10.9ヶ月前(履歴)",
+            "verdict": "急騰",
+            "fromHistory": true,
+            "approx": true
           },
           "points": [
             {
@@ -68682,9 +69622,29 @@ const TRECA_DATA = {
               "med": 699,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 6,
+                "actualMonths": 7,
+                "n": 93,
+                "med": 399.99,
+                "range": "2025-11-18〜2026-01-29",
+                "approx": false
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 11.9,
+                "n": 80,
+                "med": 500.75,
+                "range": "2025-06-21〜2025-09-05",
+                "approx": false
+              }
+            ],
+            "ratio": 1.23,
+            "basis": "直近/11.9ヶ月前(履歴)",
+            "verdict": "上昇",
+            "fromHistory": true,
+            "approx": false
           },
           "points": [
             {
@@ -69067,9 +70027,37 @@ const TRECA_DATA = {
               "med": 329.99,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 3,
+                "actualMonths": 3,
+                "n": 94,
+                "med": 293.25,
+                "range": "2026-04-19〜2026-04-29",
+                "approx": false
+              },
+              {
+                "targetMonths": 6,
+                "actualMonths": 5.9,
+                "n": 98,
+                "med": 199.99,
+                "range": "2026-01-19〜2026-02-01",
+                "approx": false
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 12,
+                "n": 95,
+                "med": 142.99,
+                "range": "2025-07-19〜2025-08-03",
+                "approx": false
+              }
+            ],
+            "ratio": 2.31,
+            "basis": "直近/12ヶ月前(履歴)",
+            "verdict": "急騰",
+            "fromHistory": true,
+            "approx": false
           },
           "points": [
             {
@@ -69437,9 +70425,37 @@ const TRECA_DATA = {
               "med": 354.5,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 3,
+                "actualMonths": 2.8,
+                "n": 94,
+                "med": 299.99,
+                "range": "2026-04-11〜2026-05-14",
+                "approx": false
+              },
+              {
+                "targetMonths": 6,
+                "actualMonths": 5.3,
+                "n": 98,
+                "med": 210.25,
+                "range": "2026-01-23〜2026-03-08",
+                "approx": false
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 12,
+                "n": 100,
+                "med": 240,
+                "range": "2025-06-30〜2025-08-17",
+                "approx": false
+              }
+            ],
+            "ratio": 1.46,
+            "basis": "直近/12ヶ月前(履歴)",
+            "verdict": "急騰",
+            "fromHistory": true,
+            "approx": false
           },
           "points": [
             {
@@ -69614,9 +70630,29 @@ const TRECA_DATA = {
               "med": 759,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 6,
+                "actualMonths": 7,
+                "n": 96,
+                "med": 360,
+                "range": "2025-11-02〜2026-02-15",
+                "approx": false
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 12.4,
+                "n": 100,
+                "med": 323.97,
+                "range": "2025-06-08〜2025-08-18",
+                "approx": false
+              }
+            ],
+            "ratio": 1.95,
+            "basis": "直近/12.4ヶ月前(履歴)",
+            "verdict": "急騰",
+            "fromHistory": true,
+            "approx": false
           },
           "points": [
             {
@@ -70161,9 +71197,37 @@ const TRECA_DATA = {
               "med": 368.31,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 3,
+                "actualMonths": 2.8,
+                "n": 89,
+                "med": 310,
+                "range": "2026-04-05〜2026-05-23",
+                "approx": false
+              },
+              {
+                "targetMonths": 6,
+                "actualMonths": 5.5,
+                "n": 97,
+                "med": 220,
+                "range": "2026-01-20〜2026-02-26",
+                "approx": false
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 11.4,
+                "n": 91,
+                "med": 170.5,
+                "range": "2025-07-21〜2025-09-04",
+                "approx": false
+              }
+            ],
+            "ratio": 2.14,
+            "basis": "直近/11.4ヶ月前(履歴)",
+            "verdict": "急騰",
+            "fromHistory": true,
+            "approx": false
           },
           "points": [
             {
@@ -70531,9 +71595,37 @@ const TRECA_DATA = {
               "med": 520,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 3,
+                "actualMonths": 3.1,
+                "n": 94,
+                "med": 490,
+                "range": "2026-04-15〜2026-04-29",
+                "approx": false
+              },
+              {
+                "targetMonths": 6,
+                "actualMonths": 6.1,
+                "n": 90,
+                "med": 257.5,
+                "range": "2026-01-15〜2026-01-26",
+                "approx": false
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 12.2,
+                "n": 96,
+                "med": 265,
+                "range": "2025-07-12〜2025-07-27",
+                "approx": false
+              }
+            ],
+            "ratio": 1.96,
+            "basis": "直近/12.2ヶ月前(履歴)",
+            "verdict": "急騰",
+            "fromHistory": true,
+            "approx": false
           },
           "points": [
             {
@@ -70708,9 +71800,37 @@ const TRECA_DATA = {
               "med": 490,
               "truncated": true
             },
-            "ratio": null,
-            "basis": null,
-            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)"
+            "history": [
+              {
+                "targetMonths": 3,
+                "actualMonths": 3.1,
+                "n": 87,
+                "med": 455,
+                "range": "2026-03-23〜2026-05-22",
+                "approx": false
+              },
+              {
+                "targetMonths": 6,
+                "actualMonths": 5.6,
+                "n": 92,
+                "med": 300,
+                "range": "2025-12-20〜2026-03-23",
+                "approx": false
+              },
+              {
+                "targetMonths": 12,
+                "actualMonths": 11.1,
+                "n": 96,
+                "med": 250,
+                "range": "2025-07-24〜2025-09-21",
+                "approx": false
+              }
+            ],
+            "ratio": 1.6,
+            "basis": "直近/11.1ヶ月前(履歴)",
+            "verdict": "急騰",
+            "fromHistory": true,
+            "approx": false
           },
           "points": [
             {

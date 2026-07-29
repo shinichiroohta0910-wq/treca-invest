@@ -552,6 +552,15 @@ function latestSnap(card){
 // nullは0扱い（保守モデル）。実数はそのまま。
 const num = v => (v==null || isNaN(v)) ? 0 : Number(v);
 
+// 日付表示と鮮度（2026-07-29追加）。需要シグナル(signals.ebay/buyback)は日次自動更新の対象外＝
+// 手動「需要更新して」でしか動かないため、値の隣に「何日前の数字か」を添えて陳腐化を可視化する。
+// 価格(snapshots)は毎朝自動更新なのでこの表示は不要。
+const fmtD = iso => { if(!iso) return ""; const dt=new Date(iso); return isNaN(dt)?"":(dt.getFullYear()+"/"+(dt.getMonth()+1)+"/"+dt.getDate()); };
+const daysAgo = iso => { if(!iso) return null; const dt=new Date(iso); if(isNaN(dt)) return null;
+  return Math.floor((Date.now()-dt.getTime())/86400000); };
+// 鮮度の閾値: eBay需要=30日／買取床=60日（system-health-weekly 項目4b と同一基準）
+const EBAY_STALE_DAYS = 30, BUYBACK_STALE_DAYS = 60;
+
 /* =====================================================================
    個人レイヤー（localStorage）
    ===================================================================== */
@@ -896,7 +905,11 @@ function renderScout(){
     // 「国内」と明示する（同じ"n"に見えて混同するため・2026-07-24）
     const nlbl = r.n!=null ? `・国内n${r.n}${r.n<=4?"⚠":""}` : "";
     const eb = r.c.signals && r.c.signals.ebay;
-    const eblbl = (eb && eb.n!=null) ? `・🌐${eb.n}` : "";
+    // 🌐は手動更新のeBay需要。30日超は「何日前の件数か」を添える（淡色＝判断材料としての重みを下げる）
+    const ebAgeL = eb ? daysAgo(eb.asOf) : null;
+    const eblbl = (eb && eb.n!=null)
+      ? `・🌐${eb.n}${(ebAgeL!=null && ebAgeL>EBAY_STALE_DAYS)?`<span class="sub">(${ebAgeL}日前)</span>`:""}`
+      : "";
     const id = escAttr(r.c.id);
     return `
       <div class="srow ${on?"sel":""}" onclick="showDetail('${id}')">
@@ -1114,13 +1127,15 @@ function renderDetail(){
 
   // 需要・出口シグナル（買取床/eBay/オリパ）
   const sig = c.signals || {};
-  const fmtD = iso => { if(!iso) return ""; const dt=new Date(iso); return isNaN(dt)?"":(dt.getFullYear()+"/"+(dt.getMonth()+1)+"/"+dt.getDate()); };
   const demandRows = [];
   if(sig.buyback && sig.buyback.p10JPY!=null){
     const bp = num(sig.buyback.p10JPY);
     const pct = e.p10>0 ? Math.round(bp/e.p10*100) : null;
-    demandRows.push(`<div class="kv"><span class="k">ショップ買取床(PSA10)</span><span class="v">${yen(bp)}${pct!=null?` <span class="sub">相場の${pct}%</span>`:""}</span></div>`);
-    if(sig.buyback.shop) demandRows.push(`<div class="kv"><span class="k">買取店舗</span><span class="v sub">${escHtml(sig.buyback.shop)}${sig.buyback.demand!=null?` ・ ${sig.buyback.demand}点募集`:""}${sig.buyback.at?` ・ ${fmtD(sig.buyback.at)}`:""}</span></div>`);
+    // 買取床は手動更新（Xの買取表）。古い床のまま出口の太さを判断しないよう経過日数を添える
+    const bbAge = daysAgo(sig.buyback.at);
+    const bbAgeTxt = (bbAge!=null && bbAge>BUYBACK_STALE_DAYS) ? ` <span class="sub">※${bbAge}日前の値</span>` : "";
+    demandRows.push(`<div class="kv"><span class="k">ショップ買取床(PSA10)</span><span class="v">${yen(bp)}${pct!=null?` <span class="sub">相場の${pct}%</span>`:""}${bbAgeTxt}</span></div>`);
+    if(sig.buyback.shop) demandRows.push(`<div class="kv"><span class="k">買取店舗</span><span class="v sub">${escHtml(sig.buyback.shop)}${sig.buyback.demand!=null?` ・ ${sig.buyback.demand}点募集`:""}${sig.buyback.at?` ・ ${fmtD(sig.buyback.at)}${bbAge!=null?`（${bbAge}日前${bbAge>BUYBACK_STALE_DAYS?"⚠":""}）`:""}`:""}</span></div>`);
   }
   if(sig.ebay && (sig.ebay.soldMedianUSD!=null || sig.ebay.soldMedianJPY!=null || sig.ebay.n!=null)){
     // 新形式(2026-07-24〜)=USD保存・円換算は表示時にレート適用。旧形式(soldMedianJPY)は取得時レートが焼き込み済み
@@ -1130,7 +1145,10 @@ function renderDetail(){
     const arrow = spread==null?"":(spread>0?`🔺海外+${spread}%`:`🔻海外${spread}%`);
     const nTxt = sig.ebay.n!=null? ` <span class="sub">×${sig.ebay.n}件${sig.ebay.days?`/${sig.ebay.days}日`:"/3ヶ月"}(海外)</span>`:"";
     const usdTxt = usd!=null? ` <span class="sub">($${usd})</span>`:"";
-    demandRows.push(`<div class="kv"><span class="k">eBay sold(海外)</span><span class="v">${ej!=null?yen(ej):"—"}${usdTxt}${nTxt}</span></div>`);
+    // eBay需要も手動更新（asOf）。30日超は取得日を明示して古さが黙って埋もれないようにする
+    const ebAge = daysAgo(sig.ebay.asOf);
+    const ebAgeTxt = (ebAge!=null && ebAge>EBAY_STALE_DAYS) ? ` <span class="sub">※${fmtD(sig.ebay.asOf)}取得・${ebAge}日前</span>` : "";
+    demandRows.push(`<div class="kv"><span class="k">eBay sold(海外)</span><span class="v">${ej!=null?yen(ej):"—"}${usdTxt}${nTxt}${ebAgeTxt}</span></div>`);
     if(spread!=null) demandRows.push(`<div class="kv"><span class="k">内外価格差</span><span class="v">${arrow} <span class="sub">(対スニダンPSA10・$1=¥${USDJPY})</span></span></div>`);
     if(sig.ebay.stale) demandRows.push(`<div class="kv"><span class="k">⚠ 鮮度</span><span class="v sub">${escHtml(sig.ebay.staleNote||"古い値")}</span></div>`);
     // 海外実勢トレンド（timeRange比較 or cursor履歴で判定・判定不能なら理由を出す）
@@ -1205,7 +1223,7 @@ function renderDetail(){
       <div class="kv"><span class="k">鑑定純額/枚</span><span class="v ${e.netGrade>=e.netRaw?'good':''}">${e.hasData?yen(e.netGrade):"—"}</span></div>
       <div class="kv"><span class="k">素体純額/枚</span><span class="v ${e.netRaw>e.netGrade?'blue':''}">${e.hasData?yen(e.netRaw):"—"}</span></div>
       <div class="kv"><span class="k">採用ルート</span><span class="v">${e.hasData? (e.route==="grade"?"🟢 鑑定で出す":"🔵 素体で売る") : "—"}</span></div>
-      ${e.floorNet!=null?`<div class="kv"><span class="k">ショップ買取床(下限保証)</span><span class="v" style="color:#b478ff">${yen(e.floorNet)}${e.buybackPct!=null?` <span class="sub">買取率${Math.round(e.buybackPct*100)}%</span>`:""}</span></div>`:""}
+      ${e.floorNet!=null?`<div class="kv"><span class="k">ショップ買取床(下限保証)</span><span class="v" style="color:#b478ff">${yen(e.floorNet)}${e.buybackPct!=null?` <span class="sub">買取率${Math.round(e.buybackPct*100)}%</span>`:""}${(()=>{const a=daysAgo(sig.buyback&&sig.buyback.at);return (a!=null&&a>BUYBACK_STALE_DAYS)?` <span class="sub">※${a}日前の値</span>`:"";})()}</span></div>`:""}
       <div style="margin-top:12px"><div class="sub" style="margin-bottom:6px">反落シナリオ（期待値/枚）</div>${scnHTML}</div>
       <div class="kv" style="margin-top:12px"><span class="k">損益分岐 反落率</span><span class="v">${be===null? "—（現状で赤字）" : (be>=99?"▲99%超でも黒字":"▲"+be+"% まで黒字")}</span></div>
     </div>
@@ -1637,9 +1655,12 @@ function renderStrategy(){
     const e=evalCard(c,0);
     const ueAll=active.filter(q=>{const qc=posCard(q);return qc&&qc.id===c.id&&(q.status==="graded"||q.status==="listed");}).reduce((s,q)=>s+posUnrealized(q),0);
     if(ueAll>0 && e.buybackPct!=null && e.buybackPct>=0.7){
+      // 発火条件は変えない（判断材料を減らさない）。買取床は手動更新なので、古い床が根拠のときだけ鮮度を添える
+      const bbA = daysAgo(c.signals && c.signals.buyback && c.signals.buyback.at);
+      const bbNote = (bbA!=null && bbA>BUYBACK_STALE_DAYS) ? ` ※買取床は${bbA}日前の値。出口の太さは要再確認。` : "";
       alerts.push({sev:2e6+ueAll, cls:"", icon:"💰",
         title:`${cardLabel(c)}：売り時（買取床${Math.round(e.buybackPct*100)}%）`,
-        body:`含み益 ${signYen(ueAll)}。ショップ買取が相場の${Math.round(e.buybackPct*100)}%＝出口が太い。利確の有力候補。`});
+        body:`含み益 ${signYen(ueAll)}。ショップ買取が相場の${Math.round(e.buybackPct*100)}%＝出口が太い。利確の有力候補。${bbNote}`});
     }
   });
   // 4) PSA10率の希薄化（graded/grading・カード単位）

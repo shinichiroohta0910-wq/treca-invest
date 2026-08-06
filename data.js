@@ -4,8 +4,8 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床{店舗名・買取価格}/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-06T12:09:49.888+09:00",
-  "updatedBy": "psa_refresh 2026-08-06: rate10 63枚更新・eBay実売 84枚(USD/期間別/Auction主).",
+  "updatedAt": "2026-08-06T14:29:25.097+09:00",
+  "updatedBy": "force_price_override 2026-08-06: db-dbsc-tcg-fb01-139-190309 p10 ¥69696→¥29900(ガード手動解除)",
   "games": [
     {
       "id": "onepiece",
@@ -48760,6 +48760,22 @@ const TRECA_DATA = {
           "rate10": 93.79,
           "currency": "JPY",
           "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-08-06・PSA10約定n37/proxy率100%・rate10は前回cert継承・p10±>50%保留(新¥29900/旧¥69696)",
+          "stale": false,
+          "alert": null,
+          "p10n": 37,
+          "rawAn": 28
+        },
+        {
+          "at": "2026-08-06T14:29:25.097+09:00",
+          "p10": 29900,
+          "p9": 15800,
+          "rawA": 9999,
+          "rawB": 5500,
+          "pop10": 815,
+          "popTotal": 869,
+          "rate10": 93.79,
+          "currency": "JPY",
+          "src": "p10=スニダン実約定 直近3中央値 ¥29900（±50%ガードを手動解除・旧¥69696・直近3約定中3件が同方向で継続的変動と確認 2026-08-06） / 他の価格とrate10は据え置き",
           "stale": false,
           "alert": null,
           "p10n": 37,

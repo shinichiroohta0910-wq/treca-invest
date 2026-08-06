@@ -4,8 +4,8 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床{店舗名・買取価格}/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-06T08:34:54.663+09:00",
-  "updatedBy": "prune_negative_ev 2026-08-06: 非保有EVマイナス4枚削除(op-pp001-luffy-25th, op-st21-014-706813, op-op06-118-zoro-sec-300064, op-op11-054-744313). 89→85枚.",
+  "updatedAt": "2026-08-06T12:09:49.888+09:00",
+  "updatedBy": "psa_refresh 2026-08-06: rate10 63枚更新・eBay実売 84枚(USD/期間別/Auction主).",
   "games": [
     {
       "id": "onepiece",
@@ -1126,50 +1126,74 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 17,
           "rawAn": 42
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 150000,
+          "p9": 35000,
+          "rawA": 56000,
+          "rawB": 52000,
+          "pop10": 999,
+          "popTotal": 1194,
+          "rate10": 83.67,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 83.67% (g10=999/total=1194・spec9929757) / 価格は直近値を据え置き(再取得せず) / 旧84.44% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 17,
+          "rawAn": 42
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 21,
-          "soldMedianUSD": 335,
-          "medianBasis": "eBay全込み(n19)",
+          "n": 34,
+          "soldMedianUSD": 404,
+          "medianBasis": "eBay全込み(n32)",
           "trend": {
             "m1": {
-              "n": 1,
-              "med": 983.11,
+              "n": 14,
+              "med": 410,
               "truncated": false
             },
             "m3": {
-              "n": 19,
-              "med": 335,
+              "n": 32,
+              "med": 404,
               "truncated": false
             },
             "m6": {
-              "n": 20,
-              "med": 317.5,
+              "n": 34,
+              "med": 401.5,
               "truncated": false
             },
             "m12": {
-              "n": 28,
-              "med": 255.72,
+              "n": 41,
+              "med": 357,
               "truncated": false
             },
-            "ratio": 1.31,
-            "basis": "3M/12M",
-            "verdict": "急騰"
+            "ratio": 1.15,
+            "basis": "1M/12M",
+            "verdict": "上昇",
+            "spot1M": {
+              "n": 14,
+              "med": 410,
+              "lo": 345,
+              "hi": 465,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 1,
-              "nEbay": 1,
-              "medAll": 983.11,
+              "n": 14,
+              "nEbay": 14,
+              "sampled": 14,
+              "medAll": 410,
               "auction": {
-                "n": 1,
-                "med": 983.11
+                "n": 14,
+                "med": 410
               },
               "fixed": {
                 "n": 0,
@@ -1179,19 +1203,19 @@ const TRECA_DATA = {
                 "n": 0,
                 "med": null
               },
-              "lo": 983.11,
-              "hi": 983.11,
-              "newest": "2026-06-27",
-              "truncated": false
+              "lo": 345,
+              "hi": 465,
+              "newest": "2026-08-04"
             },
             {
               "months": 3,
-              "n": 21,
-              "nEbay": 19,
-              "medAll": 335,
+              "n": 34,
+              "nEbay": 32,
+              "sampled": 34,
+              "medAll": 404,
               "auction": {
-                "n": 5,
-                "med": 983.11
+                "n": 18,
+                "med": 415
               },
               "fixed": {
                 "n": 5,
@@ -1201,19 +1225,19 @@ const TRECA_DATA = {
                 "n": 9,
                 "med": 400
               },
-              "lo": 147.5,
+              "lo": 200,
               "hi": 2013,
-              "newest": "2026-06-27",
-              "truncated": false
+              "newest": "2026-08-04"
             },
             {
               "months": 6,
-              "n": 22,
-              "nEbay": 20,
-              "medAll": 317.5,
+              "n": 36,
+              "nEbay": 34,
+              "sampled": 36,
+              "medAll": 401.5,
               "auction": {
-                "n": 5,
-                "med": 983.11
+                "n": 19,
+                "med": 415
               },
               "fixed": {
                 "n": 6,
@@ -1225,17 +1249,17 @@ const TRECA_DATA = {
               },
               "lo": 39.99,
               "hi": 2013,
-              "newest": "2026-06-27",
-              "truncated": false
+              "newest": "2026-08-04"
             },
             {
               "months": 12,
-              "n": 31,
-              "nEbay": 28,
-              "medAll": 255.72,
+              "n": 44,
+              "nEbay": 41,
+              "sampled": 44,
+              "medAll": 357,
               "auction": {
-                "n": 7,
-                "med": 335
+                "n": 20,
+                "med": 410
               },
               "fixed": {
                 "n": 9,
@@ -1245,13 +1269,12 @@ const TRECA_DATA = {
                 "n": 12,
                 "med": 325
               },
-              "lo": 19.5,
+              "lo": 31,
               "hi": 2013,
-              "newest": "2026-06-27",
-              "truncated": false
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec9929757) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec9929757) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -2331,50 +2354,74 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 12,
           "rawAn": 46
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 48000,
+          "p9": null,
+          "rawA": 18000,
+          "rawB": 14000,
+          "pop10": 1394,
+          "popTotal": 1450,
+          "rate10": 96.14,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 96.14% (g10=1394/total=1450・spec9929764) / 価格は直近値を据え置き(再取得せず) / 旧96.08% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 12,
+          "rawAn": 46
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 28,
-          "soldMedianUSD": 203.87,
-          "medianBasis": "eBay全込み(n28)",
+          "n": 27,
+          "soldMedianUSD": 215.5,
+          "medianBasis": "eBay全込み(n27)",
           "trend": {
             "m1": {
-              "n": 2,
-              "med": 303.75,
+              "n": 1,
+              "med": 246.5,
               "truncated": false
             },
             "m3": {
-              "n": 28,
-              "med": 203.87,
+              "n": 27,
+              "med": 215.5,
               "truncated": false
             },
             "m6": {
               "n": 33,
-              "med": 199.99,
+              "med": 200,
               "truncated": false
             },
             "m12": {
               "n": 43,
-              "med": 173.5,
+              "med": 177,
               "truncated": false
             },
-            "ratio": 1.18,
+            "ratio": 1.22,
             "basis": "3M/12M",
-            "verdict": "上昇"
+            "verdict": "上昇",
+            "spot1M": {
+              "n": 1,
+              "med": 246.5,
+              "lo": 246.5,
+              "hi": 246.5,
+              "reliable": false
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 2,
-              "nEbay": 2,
-              "medAll": 303.75,
+              "n": 1,
+              "nEbay": 1,
+              "sampled": 1,
+              "medAll": 246.5,
               "auction": {
-                "n": 2,
-                "med": 303.75
+                "n": 1,
+                "med": 246.5
               },
               "fixed": {
                 "n": 0,
@@ -2384,16 +2431,16 @@ const TRECA_DATA = {
                 "n": 0,
                 "med": null
               },
-              "lo": 237.5,
-              "hi": 370,
-              "newest": "2026-07-02",
-              "truncated": false
+              "lo": 246.5,
+              "hi": 246.5,
+              "newest": "2026-07-28"
             },
             {
               "months": 3,
-              "n": 28,
-              "nEbay": 28,
-              "medAll": 203.87,
+              "n": 27,
+              "nEbay": 27,
+              "sampled": 27,
+              "medAll": 215.5,
               "auction": {
                 "n": 13,
                 "med": 200
@@ -2403,44 +2450,44 @@ const TRECA_DATA = {
                 "med": 350
               },
               "bestOffer": {
-                "n": 11,
-                "med": 250
+                "n": 10,
+                "med": 300
               },
               "lo": 59.99,
               "hi": 799.99,
-              "newest": "2026-07-02",
-              "truncated": false
+              "newest": "2026-07-28"
             },
             {
               "months": 6,
               "n": 33,
               "nEbay": 33,
-              "medAll": 199.99,
+              "sampled": 33,
+              "medAll": 200,
               "auction": {
-                "n": 16,
-                "med": 188.5
+                "n": 17,
+                "med": 197.5
               },
               "fixed": {
                 "n": 5,
                 "med": 199.99
               },
               "bestOffer": {
-                "n": 12,
-                "med": 238.32
+                "n": 11,
+                "med": 250
               },
               "lo": 51.36,
               "hi": 799.99,
-              "newest": "2026-07-02",
-              "truncated": false
+              "newest": "2026-07-28"
             },
             {
               "months": 12,
               "n": 44,
               "nEbay": 43,
-              "medAll": 173.5,
+              "sampled": 44,
+              "medAll": 177,
               "auction": {
                 "n": 19,
-                "med": 173.5
+                "med": 179.5
               },
               "fixed": {
                 "n": 7,
@@ -2450,13 +2497,12 @@ const TRECA_DATA = {
                 "n": 17,
                 "med": 177
               },
-              "lo": 15.5,
+              "lo": 31.5,
               "hi": 799.99,
-              "newest": "2026-07-02",
-              "truncated": false
+              "newest": "2026-07-28"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec9929764) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec9929764) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -3568,11 +3614,27 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 25,
           "rawAn": 37
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 33000,
+          "p9": null,
+          "rawA": 3900,
+          "rawB": 2800,
+          "pop10": 563,
+          "popTotal": 659,
+          "rate10": 85.43,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 85.43% (g10=563/total=659・spec9929778) / 価格は直近値を据え置き(再取得せず) / 旧86.54% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 25,
+          "rawAn": 37
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
           "n": 15,
@@ -3580,8 +3642,8 @@ const TRECA_DATA = {
           "medianBasis": "eBay全込み(n15)",
           "trend": {
             "m1": {
-              "n": 4,
-              "med": 115.25,
+              "n": 7,
+              "med": 133.5,
               "truncated": false
             },
             "m3": {
@@ -3590,28 +3652,36 @@ const TRECA_DATA = {
               "truncated": false
             },
             "m6": {
-              "n": 19,
-              "med": 126.19,
+              "n": 22,
+              "med": 133,
               "truncated": false
             },
             "m12": {
-              "n": 22,
-              "med": 117.17,
+              "n": 24,
+              "med": 133,
               "truncated": false
             },
-            "ratio": 0.98,
+            "ratio": 1,
             "basis": "1M/12M",
-            "verdict": "横ばい"
+            "verdict": "横ばい",
+            "spot1M": {
+              "n": 7,
+              "med": 133.5,
+              "lo": 24.99,
+              "hi": 152,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 4,
-              "nEbay": 4,
-              "medAll": 115.25,
+              "n": 7,
+              "nEbay": 7,
+              "sampled": 7,
+              "medAll": 133.5,
               "auction": {
-                "n": 2,
-                "med": 147.25
+                "n": 5,
+                "med": 142.5
               },
               "fixed": {
                 "n": 2,
@@ -3623,21 +3693,21 @@ const TRECA_DATA = {
               },
               "lo": 24.99,
               "hi": 152,
-              "newest": "2026-07-16",
-              "truncated": false
+              "newest": "2026-07-28"
             },
             {
               "months": 3,
               "n": 15,
               "nEbay": 15,
+              "sampled": 15,
               "medAll": 150,
               "auction": {
-                "n": 7,
-                "med": 126.19
+                "n": 8,
+                "med": 138
               },
               "fixed": {
-                "n": 5,
-                "med": 150
+                "n": 4,
+                "med": 154
               },
               "bestOffer": {
                 "n": 3,
@@ -3645,17 +3715,17 @@ const TRECA_DATA = {
               },
               "lo": 24.99,
               "hi": 299.99,
-              "newest": "2026-07-16",
-              "truncated": false
+              "newest": "2026-07-28"
             },
             {
               "months": 6,
-              "n": 19,
-              "nEbay": 19,
-              "medAll": 126.19,
+              "n": 22,
+              "nEbay": 22,
+              "sampled": 22,
+              "medAll": 133,
               "auction": {
-                "n": 10,
-                "med": 83.46
+                "n": 13,
+                "med": 126.19
               },
               "fixed": {
                 "n": 5,
@@ -3667,17 +3737,17 @@ const TRECA_DATA = {
               },
               "lo": 24.99,
               "hi": 299.99,
-              "newest": "2026-07-16",
-              "truncated": false
+              "newest": "2026-07-28"
             },
             {
               "months": 12,
-              "n": 22,
-              "nEbay": 22,
-              "medAll": 117.17,
+              "n": 24,
+              "nEbay": 24,
+              "sampled": 24,
+              "medAll": 133,
               "auction": {
-                "n": 12,
-                "med": 83.46
+                "n": 14,
+                "med": 129.35
               },
               "fixed": {
                 "n": 5,
@@ -3687,13 +3757,12 @@ const TRECA_DATA = {
                 "n": 5,
                 "med": 170
               },
-              "lo": 22.5,
+              "lo": 24.99,
               "hi": 299.99,
-              "newest": "2026-07-16",
-              "truncated": false
+              "newest": "2026-07-28"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec9929778) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec9929778) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -4777,43 +4846,51 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 8,
-          "soldMedianUSD": 102.95,
-          "medianBasis": "eBay全込み(n8)",
+          "n": 9,
+          "soldMedianUSD": 104.95,
+          "medianBasis": "eBay全込み(n9)",
           "trend": {
             "m1": {
-              "n": 0,
-              "med": null,
+              "n": 1,
+              "med": 129.95,
               "truncated": false
             },
             "m3": {
-              "n": 8,
-              "med": 102.95,
+              "n": 9,
+              "med": 104.95,
               "truncated": false
             },
             "m6": {
-              "n": 9,
-              "med": 100.95,
+              "n": 10,
+              "med": 102.95,
               "truncated": false
             },
             "m12": {
               "n": 15,
-              "med": 77,
+              "med": 82,
               "truncated": false
             },
-            "ratio": 1.34,
+            "ratio": 1.28,
             "basis": "3M/12M",
-            "verdict": "急騰"
+            "verdict": "上昇",
+            "spot1M": {
+              "n": 1,
+              "med": 129.95,
+              "lo": 129.95,
+              "hi": 129.95,
+              "reliable": false
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 0,
-              "nEbay": 0,
-              "medAll": null,
+              "n": 1,
+              "nEbay": 1,
+              "sampled": 1,
+              "medAll": 129.95,
               "auction": {
                 "n": 0,
                 "med": null
@@ -4823,19 +4900,19 @@ const TRECA_DATA = {
                 "med": null
               },
               "bestOffer": {
-                "n": 0,
-                "med": null
+                "n": 1,
+                "med": 129.95
               },
-              "lo": null,
-              "hi": null,
-              "newest": null,
-              "truncated": false
+              "lo": 129.95,
+              "hi": 129.95,
+              "newest": "2026-08-02"
             },
             {
               "months": 3,
-              "n": 8,
-              "nEbay": 8,
-              "medAll": 102.95,
+              "n": 9,
+              "nEbay": 9,
+              "sampled": 9,
+              "medAll": 104.95,
               "auction": {
                 "n": 3,
                 "med": 77
@@ -4845,19 +4922,19 @@ const TRECA_DATA = {
                 "med": 102.95
               },
               "bestOffer": {
-                "n": 3,
-                "med": 150.27
+                "n": 4,
+                "med": 140.11
               },
               "lo": 52.55,
               "hi": 228,
-              "newest": "2026-06-09",
-              "truncated": false
+              "newest": "2026-08-02"
             },
             {
               "months": 6,
-              "n": 9,
-              "nEbay": 9,
-              "medAll": 100.95,
+              "n": 10,
+              "nEbay": 10,
+              "sampled": 10,
+              "medAll": 102.95,
               "auction": {
                 "n": 3,
                 "med": 77
@@ -4867,38 +4944,37 @@ const TRECA_DATA = {
                 "med": 100.95
               },
               "bestOffer": {
-                "n": 3,
-                "med": 150.27
+                "n": 4,
+                "med": 140.11
               },
               "lo": 52.55,
               "hi": 228,
-              "newest": "2026-06-09",
-              "truncated": false
+              "newest": "2026-08-02"
             },
             {
               "months": 12,
               "n": 15,
               "nEbay": 15,
-              "medAll": 77,
+              "sampled": 15,
+              "medAll": 82,
               "auction": {
-                "n": 6,
-                "med": 41.28
+                "n": 5,
+                "med": 52.55
               },
               "fixed": {
                 "n": 4,
                 "med": 95.52
               },
               "bestOffer": {
-                "n": 5,
-                "med": 121.76
+                "n": 6,
+                "med": 125.85
               },
               "lo": 19.49,
               "hi": 228,
-              "newest": "2026-06-09",
-              "truncated": false
+              "newest": "2026-08-02"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec9929769) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec9929769) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -5950,116 +6026,140 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 84,
           "rawAn": 0
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 249000,
+          "p9": 72000,
+          "rawA": null,
+          "rawB": null,
+          "pop10": 2016,
+          "popTotal": 2874,
+          "rate10": 70.15,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 70.15% (g10=2016/total=2874・spec2676664) / 価格は直近値を据え置き(再取得せず) / 旧70.21% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 84,
+          "rawAn": 0
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 16,
-          "soldMedianUSD": 1080,
-          "medianBasis": "eBay全込み(n15)",
+          "n": 15,
+          "soldMedianUSD": 979.5,
+          "medianBasis": "eBay全込み(n14)",
           "trend": {
             "m1": {
-              "n": 7,
-              "med": 830,
+              "n": 6,
+              "med": 864.5,
               "truncated": false
             },
             "m3": {
-              "n": 15,
-              "med": 1080,
+              "n": 14,
+              "med": 979.5,
               "truncated": false
             },
             "m6": {
               "n": 26,
-              "med": 893,
+              "med": 926.38,
               "truncated": false
             },
             "m12": {
-              "n": 48,
-              "med": 705,
+              "n": 47,
+              "med": 712,
               "truncated": false
             },
-            "ratio": 1.18,
+            "ratio": 1.21,
             "basis": "1M/12M",
-            "verdict": "上昇"
+            "verdict": "上昇",
+            "spot1M": {
+              "n": 6,
+              "med": 864.5,
+              "lo": 710,
+              "hi": 989,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 8,
-              "nEbay": 7,
-              "medAll": 830,
+              "n": 7,
+              "nEbay": 6,
+              "sampled": 7,
+              "medAll": 864.5,
               "auction": {
-                "n": 4,
-                "med": 821.1
+                "n": 2,
+                "med": 790
               },
               "fixed": {
                 "n": 1,
                 "med": 970
               },
               "bestOffer": {
-                "n": 2,
-                "med": 804.5
+                "n": 3,
+                "med": 899
               },
               "lo": 710,
-              "hi": 970,
-              "newest": "2026-07-21",
-              "truncated": false
+              "hi": 989,
+              "newest": "2026-07-30"
             },
             {
               "months": 3,
-              "n": 16,
-              "nEbay": 15,
-              "medAll": 1080,
+              "n": 15,
+              "nEbay": 14,
+              "sampled": 15,
+              "medAll": 979.5,
               "auction": {
                 "n": 8,
                 "med": 983.5
               },
               "fixed": {
-                "n": 2,
-                "med": 1027.19
+                "n": 1,
+                "med": 970
               },
               "bestOffer": {
                 "n": 5,
-                "med": 1083.3
+                "med": 989
               },
               "lo": 710,
-              "hi": 1523.79,
-              "newest": "2026-07-21",
-              "truncated": false
+              "hi": 1333,
+              "newest": "2026-07-30"
             },
             {
               "months": 6,
               "n": 28,
               "nEbay": 26,
-              "medAll": 893,
+              "sampled": 28,
+              "medAll": 926.38,
               "auction": {
                 "n": 11,
                 "med": 830
               },
               "fixed": {
-                "n": 5,
-                "med": 815.17
+                "n": 4,
+                "med": 892.59
               },
               "bestOffer": {
-                "n": 10,
-                "med": 966.38
+                "n": 11,
+                "med": 979
               },
               "lo": 700,
               "hi": 1804.95,
-              "newest": "2026-07-21",
-              "truncated": false
+              "newest": "2026-07-30"
             },
             {
               "months": 12,
-              "n": 51,
-              "nEbay": 48,
-              "medAll": 705,
+              "n": 50,
+              "nEbay": 47,
+              "sampled": 50,
+              "medAll": 712,
               "auction": {
-                "n": 23,
-                "med": 541
+                "n": 22,
+                "med": 626.5
               },
               "fixed": {
                 "n": 7,
@@ -6067,15 +6167,14 @@ const TRECA_DATA = {
               },
               "bestOffer": {
                 "n": 18,
-                "med": 705
+                "med": 736.49
               },
               "lo": 397.28,
               "hi": 1804.95,
-              "newest": "2026-07-21",
-              "truncated": false
+              "newest": "2026-07-30"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec2676664) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec2676664) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         },
         "buyback": {
           "shop": "トレカバンク",
@@ -7149,160 +7248,156 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 76,
           "rawAn": 1
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 36900,
+          "p9": 10950,
+          "rawA": 11800,
+          "rawB": 9400,
+          "pop10": 23901,
+          "popTotal": 39810,
+          "rate10": 60.04,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 60.04% (g10=23901/total=39810・spec14269733) / 価格は直近値を据え置き(再取得せず) / 旧59.69% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 76,
+          "rawAn": 1
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 406,
-          "soldMedianUSD": 280,
-          "medianBasis": "eBay全込み(n96)・直近96件のみ",
+          "n": 446,
+          "soldMedianUSD": 260,
+          "medianBasis": "eBay全込み(n98)",
           "trend": {
             "m1": {
-              "n": 96,
-              "med": 280,
+              "n": 98,
+              "med": 260,
               "truncated": true
             },
             "m3": {
-              "n": 96,
-              "med": 280,
+              "n": 98,
+              "med": 260,
               "truncated": true
             },
             "m6": {
-              "n": 96,
-              "med": 280,
+              "n": 98,
+              "med": 260,
               "truncated": true
             },
             "m12": {
-              "n": 96,
-              "med": 280,
+              "n": 98,
+              "med": 260,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 3,
-                "actualMonths": 3.4,
-                "n": 96,
-                "med": 450,
-                "range": "2026-03-27〜2026-04-27",
-                "approx": false
-              },
-              {
-                "targetMonths": 6,
-                "actualMonths": 5.6,
-                "n": 99,
-                "med": 350,
-                "range": "2026-01-15〜2026-02-21",
-                "approx": false
-              },
-              {
-                "targetMonths": 12,
-                "actualMonths": 10.3,
-                "n": 55,
-                "med": 524,
-                "range": "2025-09-06〜2025-09-22",
-                "approx": true
-              }
-            ],
-            "ratio": 0.53,
-            "basis": "直近/10.3ヶ月前(履歴)",
-            "verdict": "急落",
-            "fromHistory": true,
-            "approx": true
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 98,
+              "med": 260,
+              "lo": 190.5,
+              "hi": 456.46,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 182,
-              "nEbay": 96,
-              "medAll": 280,
+              "n": 167,
+              "nEbay": 98,
+              "sampled": 100,
+              "medAll": 260,
               "auction": {
-                "n": 77,
-                "med": 277
+                "n": 74,
+                "med": 258
               },
               "fixed": {
-                "n": 14,
-                "med": 315.2
+                "n": 13,
+                "med": 268
               },
               "bestOffer": {
-                "n": 5,
-                "med": 325
+                "n": 11,
+                "med": 295
               },
-              "lo": 242.51,
+              "lo": 190.5,
               "hi": 456.46,
-              "newest": "2026-07-22",
-              "truncated": true
+              "newest": "2026-08-04"
             },
             {
               "months": 3,
-              "n": 406,
-              "nEbay": 96,
-              "medAll": 280,
+              "n": 446,
+              "nEbay": 98,
+              "sampled": 100,
+              "medAll": 260,
               "auction": {
-                "n": 77,
-                "med": 277
+                "n": 74,
+                "med": 258
               },
               "fixed": {
-                "n": 14,
-                "med": 315.2
+                "n": 13,
+                "med": 268
               },
               "bestOffer": {
-                "n": 5,
-                "med": 325
+                "n": 11,
+                "med": 295
               },
-              "lo": 242.51,
+              "lo": 190.5,
               "hi": 456.46,
-              "newest": "2026-07-22",
-              "truncated": true
+              "newest": "2026-08-04"
             },
             {
               "months": 6,
-              "n": 670,
-              "nEbay": 96,
-              "medAll": 280,
+              "n": 715,
+              "nEbay": 98,
+              "sampled": 100,
+              "medAll": 260,
               "auction": {
-                "n": 77,
-                "med": 277
+                "n": 74,
+                "med": 258
               },
               "fixed": {
-                "n": 14,
-                "med": 315.2
+                "n": 13,
+                "med": 268
               },
               "bestOffer": {
-                "n": 5,
-                "med": 325
+                "n": 11,
+                "med": 295
               },
-              "lo": 242.51,
+              "lo": 190.5,
               "hi": 456.46,
-              "newest": "2026-07-22",
-              "truncated": true
+              "newest": "2026-08-04"
             },
             {
               "months": 12,
-              "n": 1255,
-              "nEbay": 96,
-              "medAll": 280,
+              "n": 1325,
+              "nEbay": 98,
+              "sampled": 100,
+              "medAll": 260,
               "auction": {
-                "n": 77,
-                "med": 277
+                "n": 74,
+                "med": 258
               },
               "fixed": {
-                "n": 14,
-                "med": 315.2
+                "n": 13,
+                "med": 268
               },
               "bestOffer": {
-                "n": 5,
-                "med": 325
+                "n": 11,
+                "med": 295
               },
-              "lo": 242.51,
+              "lo": 190.5,
               "hi": 456.46,
-              "newest": "2026-07-22",
-              "truncated": true
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec14269733) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec14269733) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -8354,160 +8449,156 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 34,
           "rawAn": 9
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 73000,
+          "p9": 20800,
+          "rawA": 26000,
+          "rawB": 21500,
+          "pop10": 20073,
+          "popTotal": 39956,
+          "rate10": 50.24,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 50.24% (g10=20073/total=39956・spec14158330) / 価格は直近値を据え置き(再取得せず) / 旧50.11% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 34,
+          "rawAn": 9
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 118,
-          "soldMedianUSD": 458.01,
-          "medianBasis": "eBay全込み(n92)・直近92件のみ",
+          "n": 114,
+          "soldMedianUSD": 430,
+          "medianBasis": "eBay全込み(n91)",
           "trend": {
             "m1": {
-              "n": 36,
-              "med": 400,
+              "n": 40,
+              "med": 396,
               "truncated": false
             },
             "m3": {
-              "n": 92,
-              "med": 458.01,
+              "n": 91,
+              "med": 430,
               "truncated": true
             },
             "m6": {
-              "n": 92,
-              "med": 458.01,
+              "n": 91,
+              "med": 430,
               "truncated": true
             },
             "m12": {
-              "n": 92,
-              "med": 458.01,
+              "n": 91,
+              "med": 430,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 3,
-                "actualMonths": 3.3,
-                "n": 93,
-                "med": 511.31,
-                "range": "2026-03-23〜2026-05-09",
-                "approx": false
-              },
-              {
-                "targetMonths": 6,
-                "actualMonths": 6.6,
-                "n": 99,
-                "med": 449.44,
-                "range": "2025-12-13〜2026-01-27",
-                "approx": false
-              },
-              {
-                "targetMonths": 12,
-                "actualMonths": 9.9,
-                "n": 77,
-                "med": 950,
-                "range": "2025-08-19〜2025-11-02",
-                "approx": true
-              }
-            ],
-            "ratio": 0.42,
-            "basis": "直近/9.9ヶ月前(履歴)",
-            "verdict": "急落",
-            "fromHistory": true,
-            "approx": true
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 40,
+              "med": 396,
+              "lo": 330,
+              "hi": 439.99,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 40,
-              "nEbay": 36,
-              "medAll": 400,
+              "n": 44,
+              "nEbay": 40,
+              "sampled": 44,
+              "medAll": 396,
               "auction": {
-                "n": 27,
-                "med": 396
+                "n": 29,
+                "med": 395
               },
               "fixed": {
-                "n": 4,
+                "n": 6,
                 "med": 405
               },
               "bestOffer": {
                 "n": 5,
-                "med": 400
+                "med": 395
               },
-              "lo": 356,
+              "lo": 330,
               "hi": 439.99,
-              "newest": "2026-07-22",
-              "truncated": false
+              "newest": "2026-08-03"
             },
             {
               "months": 3,
-              "n": 118,
-              "nEbay": 92,
-              "medAll": 458.01,
+              "n": 114,
+              "nEbay": 91,
+              "sampled": 100,
+              "medAll": 430,
               "auction": {
-                "n": 63,
-                "med": 446
+                "n": 64,
+                "med": 416.5
               },
               "fixed": {
                 "n": 9,
-                "med": 475
+                "med": 419.99
               },
               "bestOffer": {
-                "n": 20,
-                "med": 470
+                "n": 18,
+                "med": 464
               },
-              "lo": 356,
+              "lo": 330,
               "hi": 571,
-              "newest": "2026-07-22",
-              "truncated": true
+              "newest": "2026-08-03"
             },
             {
               "months": 6,
-              "n": 305,
-              "nEbay": 92,
-              "medAll": 458.01,
+              "n": 304,
+              "nEbay": 91,
+              "sampled": 100,
+              "medAll": 430,
               "auction": {
-                "n": 63,
-                "med": 446
+                "n": 64,
+                "med": 416.5
               },
               "fixed": {
                 "n": 9,
-                "med": 475
+                "med": 419.99
               },
               "bestOffer": {
-                "n": 20,
-                "med": 470
+                "n": 18,
+                "med": 464
               },
-              "lo": 356,
+              "lo": 330,
               "hi": 571,
-              "newest": "2026-07-22",
-              "truncated": true
+              "newest": "2026-08-03"
             },
             {
               "months": 12,
-              "n": 577,
-              "nEbay": 92,
-              "medAll": 458.01,
+              "n": 587,
+              "nEbay": 91,
+              "sampled": 100,
+              "medAll": 430,
               "auction": {
-                "n": 63,
-                "med": 446
+                "n": 64,
+                "med": 416.5
               },
               "fixed": {
                 "n": 9,
-                "med": 475
+                "med": 419.99
               },
               "bestOffer": {
-                "n": 20,
-                "med": 470
+                "n": 18,
+                "med": 464
               },
-              "lo": 356,
+              "lo": 330,
               "hi": 571,
-              "newest": "2026-07-22",
-              "truncated": true
+              "newest": "2026-08-03"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec14158330) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec14158330) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         },
         "buyback": {
           "shop": "トレカバンク",
@@ -9565,160 +9656,156 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 29,
           "rawAn": 5
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 45800,
+          "p9": 25500,
+          "rawA": 26500,
+          "rawB": 23000,
+          "pop10": 24950,
+          "popTotal": 27485,
+          "rate10": 90.78,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 90.78% (g10=24950/total=27485・spec14955493) / 価格は直近値を据え置き(再取得せず) / 旧90.67% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 29,
+          "rawAn": 5
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 585,
-          "soldMedianUSD": 370,
-          "medianBasis": "eBay全込み(n100)・直近100件のみ",
+          "n": 670,
+          "soldMedianUSD": 350,
+          "medianBasis": "eBay全込み(n98)",
           "trend": {
             "m1": {
-              "n": 100,
-              "med": 370,
+              "n": 98,
+              "med": 350,
               "truncated": true
             },
             "m3": {
-              "n": 100,
-              "med": 370,
+              "n": 98,
+              "med": 350,
               "truncated": true
             },
             "m6": {
-              "n": 100,
-              "med": 370,
+              "n": 98,
+              "med": 350,
               "truncated": true
             },
             "m12": {
-              "n": 100,
-              "med": 370,
+              "n": 98,
+              "med": 350,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 3,
-                "actualMonths": 2.7,
-                "n": 99,
-                "med": 619.99,
-                "range": "2026-04-21〜2026-05-18",
-                "approx": false
-              },
-              {
-                "targetMonths": 6,
-                "actualMonths": 5.7,
-                "n": 100,
-                "med": 380,
-                "range": "2026-01-21〜2026-02-13",
-                "approx": false
-              },
-              {
-                "targetMonths": 12,
-                "actualMonths": 6.6,
-                "n": 77,
-                "med": 397,
-                "range": "2025-12-17〜2026-01-21",
-                "approx": true
-              }
-            ],
-            "ratio": 0.93,
-            "basis": "直近/6.6ヶ月前(履歴)",
-            "verdict": "横ばい",
-            "fromHistory": true,
-            "approx": true
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 98,
+              "med": 350,
+              "lo": 315,
+              "hi": 490.05,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 298,
-              "nEbay": 100,
-              "medAll": 370,
+              "n": 287,
+              "nEbay": 98,
+              "sampled": 100,
+              "medAll": 350,
               "auction": {
-                "n": 51,
-                "med": 361.1
+                "n": 67,
+                "med": 345
               },
               "fixed": {
-                "n": 23,
-                "med": 370
+                "n": 11,
+                "med": 364.99
               },
               "bestOffer": {
-                "n": 26,
-                "med": 378
+                "n": 20,
+                "med": 371.5
               },
-              "lo": 290,
-              "hi": 535.71,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 315,
+              "hi": 490.05,
+              "newest": "2026-08-04"
             },
             {
               "months": 3,
-              "n": 585,
-              "nEbay": 100,
-              "medAll": 370,
+              "n": 670,
+              "nEbay": 98,
+              "sampled": 100,
+              "medAll": 350,
               "auction": {
-                "n": 51,
-                "med": 361.1
+                "n": 67,
+                "med": 345
               },
               "fixed": {
-                "n": 23,
-                "med": 370
+                "n": 11,
+                "med": 364.99
               },
               "bestOffer": {
-                "n": 26,
-                "med": 378
+                "n": 20,
+                "med": 371.5
               },
-              "lo": 290,
-              "hi": 535.71,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 315,
+              "hi": 490.05,
+              "newest": "2026-08-04"
             },
             {
               "months": 6,
-              "n": 885,
-              "nEbay": 100,
-              "medAll": 370,
+              "n": 961,
+              "nEbay": 98,
+              "sampled": 100,
+              "medAll": 350,
               "auction": {
-                "n": 51,
-                "med": 361.1
+                "n": 67,
+                "med": 345
               },
               "fixed": {
-                "n": 23,
-                "med": 370
+                "n": 11,
+                "med": 364.99
               },
               "bestOffer": {
-                "n": 26,
-                "med": 378
+                "n": 20,
+                "med": 371.5
               },
-              "lo": 290,
-              "hi": 535.71,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 315,
+              "hi": 490.05,
+              "newest": "2026-08-04"
             },
             {
               "months": 12,
-              "n": 977,
-              "nEbay": 100,
-              "medAll": 370,
+              "n": 1100,
+              "nEbay": 98,
+              "sampled": 100,
+              "medAll": 350,
               "auction": {
-                "n": 51,
-                "med": 361.1
+                "n": 67,
+                "med": 345
               },
               "fixed": {
-                "n": 23,
-                "med": 370
+                "n": 11,
+                "med": 364.99
               },
               "bestOffer": {
-                "n": 26,
-                "med": 378
+                "n": 20,
+                "med": 371.5
               },
-              "lo": 290,
-              "hi": 535.71,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 315,
+              "hi": 490.05,
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec14955493) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec14955493) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -10774,156 +10861,136 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 317,
-          "soldMedianUSD": 241.26,
-          "medianBasis": "eBay全込み(n90)・直近90件のみ",
+          "n": 322,
+          "soldMedianUSD": 221.5,
+          "medianBasis": "eBay全込み(n90)",
           "trend": {
             "m1": {
-              "n": 83,
-              "med": 240,
-              "truncated": false
+              "n": 90,
+              "med": 221.5,
+              "truncated": true
             },
             "m3": {
               "n": 90,
-              "med": 241.26,
+              "med": 221.5,
               "truncated": true
             },
             "m6": {
               "n": 90,
-              "med": 241.26,
+              "med": 221.5,
               "truncated": true
             },
             "m12": {
               "n": 90,
-              "med": 241.26,
+              "med": 221.5,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 3,
-                "actualMonths": 3.2,
-                "n": 98,
-                "med": 249.99,
-                "range": "2026-04-08〜2026-04-28",
-                "approx": false
-              },
-              {
-                "targetMonths": 6,
-                "actualMonths": 5.9,
-                "n": 95,
-                "med": 175.5,
-                "range": "2026-01-12〜2026-02-08",
-                "approx": false
-              },
-              {
-                "targetMonths": 12,
-                "actualMonths": 12,
-                "n": 94,
-                "med": 150,
-                "range": "2025-07-15〜2025-08-04",
-                "approx": false
-              }
-            ],
-            "ratio": 1.6,
-            "basis": "直近/12ヶ月前(履歴)",
-            "verdict": "急騰",
-            "fromHistory": true,
-            "approx": false
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 90,
+              "med": 221.5,
+              "lo": 175,
+              "hi": 340.99,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 92,
-              "nEbay": 83,
-              "medAll": 240,
+              "n": 105,
+              "nEbay": 90,
+              "sampled": 100,
+              "medAll": 221.5,
               "auction": {
-                "n": 52,
-                "med": 231
+                "n": 51,
+                "med": 212.5
               },
               "fixed": {
-                "n": 16,
-                "med": 265
+                "n": 17,
+                "med": 244.99
               },
               "bestOffer": {
-                "n": 15,
-                "med": 255
+                "n": 22,
+                "med": 220
               },
-              "lo": 178.5,
-              "hi": 750,
-              "newest": "2026-07-22",
-              "truncated": false
+              "lo": 175,
+              "hi": 340.99,
+              "newest": "2026-08-04"
             },
             {
               "months": 3,
-              "n": 317,
+              "n": 322,
               "nEbay": 90,
-              "medAll": 241.26,
+              "sampled": 100,
+              "medAll": 221.5,
               "auction": {
-                "n": 55,
-                "med": 232.85
+                "n": 51,
+                "med": 212.5
               },
               "fixed": {
                 "n": 17,
-                "med": 265.25
+                "med": 244.99
               },
               "bestOffer": {
-                "n": 18,
-                "med": 257.5
+                "n": 22,
+                "med": 220
               },
-              "lo": 178.5,
-              "hi": 750,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 175,
+              "hi": 340.99,
+              "newest": "2026-08-04"
             },
             {
               "months": 6,
-              "n": 756,
+              "n": 761,
               "nEbay": 90,
-              "medAll": 241.26,
+              "sampled": 100,
+              "medAll": 221.5,
               "auction": {
-                "n": 55,
-                "med": 232.85
+                "n": 51,
+                "med": 212.5
               },
               "fixed": {
                 "n": 17,
-                "med": 265.25
+                "med": 244.99
               },
               "bestOffer": {
-                "n": 18,
-                "med": 257.5
+                "n": 22,
+                "med": 220
               },
-              "lo": 178.5,
-              "hi": 750,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 175,
+              "hi": 340.99,
+              "newest": "2026-08-04"
             },
             {
               "months": 12,
-              "n": 1658,
+              "n": 1638,
               "nEbay": 90,
-              "medAll": 241.26,
+              "sampled": 100,
+              "medAll": 221.5,
               "auction": {
-                "n": 55,
-                "med": 232.85
+                "n": 51,
+                "med": 212.5
               },
               "fixed": {
                 "n": 17,
-                "med": 265.25
+                "med": 244.99
               },
               "bestOffer": {
-                "n": 18,
-                "med": 257.5
+                "n": 22,
+                "med": 220
               },
-              "lo": 178.5,
-              "hi": 750,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 175,
+              "hi": 340.99,
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec12376820) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec12376820) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         },
         "buyback": {
           "shop": "トレカバンク",
@@ -11997,160 +12064,156 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 59,
           "rawAn": 4
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 16000,
+          "p9": 9200,
+          "rawA": 6999,
+          "rawB": 6100,
+          "pop10": 8901,
+          "popTotal": 9956,
+          "rate10": 89.4,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 89.4% (g10=8901/total=9956・spec14955489) / 価格は直近値を据え置き(再取得せず) / 旧89.31% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 59,
+          "rawAn": 4
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 109,
-          "soldMedianUSD": 174.01,
-          "medianBasis": "eBay全込み(n97)・直近97件のみ",
+          "n": 124,
+          "soldMedianUSD": 157.51,
+          "medianBasis": "eBay全込み(n95)",
           "trend": {
             "m1": {
-              "n": 39,
-              "med": 140.5,
+              "n": 44,
+              "med": 138.5,
               "truncated": false
             },
             "m3": {
-              "n": 97,
-              "med": 174.01,
+              "n": 95,
+              "med": 157.51,
               "truncated": true
             },
             "m6": {
-              "n": 97,
-              "med": 174.01,
+              "n": 95,
+              "med": 157.51,
               "truncated": true
             },
             "m12": {
-              "n": 97,
-              "med": 174.01,
+              "n": 95,
+              "med": 157.51,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 3,
-                "actualMonths": 4.6,
-                "n": 79,
-                "med": 170.98,
-                "range": "2026-01-08〜2026-05-03",
-                "approx": true
-              },
-              {
-                "targetMonths": 6,
-                "actualMonths": 4.6,
-                "n": 79,
-                "med": 170.98,
-                "range": "2026-01-08〜2026-05-03",
-                "approx": true
-              },
-              {
-                "targetMonths": 12,
-                "actualMonths": 4.6,
-                "n": 79,
-                "med": 170.98,
-                "range": "2026-01-08〜2026-05-03",
-                "approx": true
-              }
-            ],
-            "ratio": 0.82,
-            "basis": "直近/4.6ヶ月前(履歴)",
-            "verdict": "下落",
-            "fromHistory": true,
-            "approx": true
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 44,
+              "med": 138.5,
+              "lo": 122.5,
+              "hi": 224,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 39,
-              "nEbay": 39,
-              "medAll": 140.5,
+              "n": 48,
+              "nEbay": 44,
+              "sampled": 48,
+              "medAll": 138.5,
               "auction": {
-                "n": 25,
-                "med": 135.5
+                "n": 28,
+                "med": 135.25
               },
               "fixed": {
-                "n": 6,
-                "med": 172.25
+                "n": 10,
+                "med": 150
               },
               "bestOffer": {
-                "n": 8,
-                "med": 161
+                "n": 6,
+                "med": 140.5
               },
-              "lo": 115.5,
-              "hi": 205.9,
-              "newest": "2026-07-20",
-              "truncated": false
+              "lo": 122.5,
+              "hi": 224,
+              "newest": "2026-08-04"
             },
             {
               "months": 3,
-              "n": 109,
-              "nEbay": 97,
-              "medAll": 174.01,
+              "n": 124,
+              "nEbay": 95,
+              "sampled": 100,
+              "medAll": 157.51,
               "auction": {
-                "n": 52,
-                "med": 155.25
+                "n": 55,
+                "med": 145.24
               },
               "fixed": {
-                "n": 22,
-                "med": 185
+                "n": 23,
+                "med": 180
               },
               "bestOffer": {
-                "n": 23,
-                "med": 175
+                "n": 17,
+                "med": 170
               },
               "lo": 115.5,
-              "hi": 266.87,
-              "newest": "2026-07-20",
-              "truncated": true
+              "hi": 266.23,
+              "newest": "2026-08-04"
             },
             {
               "months": 6,
-              "n": 159,
-              "nEbay": 97,
-              "medAll": 174.01,
+              "n": 181,
+              "nEbay": 95,
+              "sampled": 100,
+              "medAll": 157.51,
               "auction": {
-                "n": 52,
-                "med": 155.25
+                "n": 55,
+                "med": 145.24
               },
               "fixed": {
-                "n": 22,
-                "med": 185
+                "n": 23,
+                "med": 180
               },
               "bestOffer": {
-                "n": 23,
-                "med": 175
+                "n": 17,
+                "med": 170
               },
               "lo": 115.5,
-              "hi": 266.87,
-              "newest": "2026-07-20",
-              "truncated": true
+              "hi": 266.23,
+              "newest": "2026-08-04"
             },
             {
               "months": 12,
-              "n": 179,
-              "nEbay": 97,
-              "medAll": 174.01,
+              "n": 204,
+              "nEbay": 95,
+              "sampled": 100,
+              "medAll": 157.51,
               "auction": {
-                "n": 52,
-                "med": 155.25
+                "n": 55,
+                "med": 145.24
               },
               "fixed": {
-                "n": 22,
-                "med": 185
+                "n": 23,
+                "med": 180
               },
               "bestOffer": {
-                "n": 23,
-                "med": 175
+                "n": 17,
+                "med": 170
               },
               "lo": 115.5,
-              "hi": 266.87,
-              "newest": "2026-07-20",
-              "truncated": true
+              "hi": 266.23,
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec14955489) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec14955489) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -13206,156 +13269,136 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 298,
-          "soldMedianUSD": 162.5,
-          "medianBasis": "eBay全込み(n94)・直近94件のみ",
+          "n": 292,
+          "soldMedianUSD": 154.99,
+          "medianBasis": "eBay全込み(n88)",
           "trend": {
             "m1": {
-              "n": 78,
-              "med": 162.25,
+              "n": 82,
+              "med": 154.99,
               "truncated": false
             },
             "m3": {
-              "n": 94,
-              "med": 162.5,
+              "n": 88,
+              "med": 154.99,
               "truncated": true
             },
             "m6": {
-              "n": 94,
-              "med": 162.5,
+              "n": 88,
+              "med": 154.99,
               "truncated": true
             },
             "m12": {
-              "n": 94,
-              "med": 162.5,
+              "n": 88,
+              "med": 154.99,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 3,
-                "actualMonths": 2.7,
-                "n": 88,
-                "med": 154.99,
-                "range": "2026-04-22〜2026-05-19",
-                "approx": false
-              },
-              {
-                "targetMonths": 6,
-                "actualMonths": 5.5,
-                "n": 98,
-                "med": 108.5,
-                "range": "2026-01-24〜2026-02-23",
-                "approx": false
-              },
-              {
-                "targetMonths": 12,
-                "actualMonths": 11.9,
-                "n": 94,
-                "med": 96,
-                "range": "2025-07-18〜2025-08-08",
-                "approx": false
-              }
-            ],
-            "ratio": 1.69,
-            "basis": "直近/11.9ヶ月前(履歴)",
-            "verdict": "急騰",
-            "fromHistory": true,
-            "approx": false
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 82,
+              "med": 154.99,
+              "lo": 90,
+              "hi": 204.66,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 84,
-              "nEbay": 78,
-              "medAll": 162.25,
+              "n": 94,
+              "nEbay": 82,
+              "sampled": 94,
+              "medAll": 154.99,
               "auction": {
-                "n": 36,
-                "med": 161.25
+                "n": 38,
+                "med": 150.75
               },
               "fixed": {
-                "n": 21,
-                "med": 165
+                "n": 22,
+                "med": 154.99
               },
               "bestOffer": {
-                "n": 21,
-                "med": 160
+                "n": 22,
+                "med": 157.5
               },
-              "lo": 107.5,
-              "hi": 210.47,
-              "newest": "2026-07-22",
-              "truncated": false
+              "lo": 90,
+              "hi": 204.66,
+              "newest": "2026-08-04"
             },
             {
               "months": 3,
-              "n": 298,
-              "nEbay": 94,
-              "medAll": 162.5,
+              "n": 292,
+              "nEbay": 88,
+              "sampled": 100,
+              "medAll": 154.99,
               "auction": {
                 "n": 41,
-                "med": 162.5
+                "med": 151.5
               },
               "fixed": {
-                "n": 25,
-                "med": 170
+                "n": 24,
+                "med": 154.99
               },
               "bestOffer": {
-                "n": 28,
-                "med": 160
+                "n": 23,
+                "med": 156
               },
-              "lo": 100,
-              "hi": 217.92,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 90,
+              "hi": 204.66,
+              "newest": "2026-08-04"
             },
             {
               "months": 6,
-              "n": 700,
-              "nEbay": 94,
-              "medAll": 162.5,
+              "n": 711,
+              "nEbay": 88,
+              "sampled": 100,
+              "medAll": 154.99,
               "auction": {
                 "n": 41,
-                "med": 162.5
+                "med": 151.5
               },
               "fixed": {
-                "n": 25,
-                "med": 170
+                "n": 24,
+                "med": 154.99
               },
               "bestOffer": {
-                "n": 28,
-                "med": 160
+                "n": 23,
+                "med": 156
               },
-              "lo": 100,
-              "hi": 217.92,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 90,
+              "hi": 204.66,
+              "newest": "2026-08-04"
             },
             {
               "months": 12,
-              "n": 1477,
-              "nEbay": 94,
-              "medAll": 162.5,
+              "n": 1454,
+              "nEbay": 88,
+              "sampled": 100,
+              "medAll": 154.99,
               "auction": {
                 "n": 41,
-                "med": 162.5
+                "med": 151.5
               },
               "fixed": {
-                "n": 25,
-                "med": 170
+                "n": 24,
+                "med": 154.99
               },
               "bestOffer": {
-                "n": 28,
-                "med": 160
+                "n": 23,
+                "med": 156
               },
-              "lo": 100,
-              "hi": 217.92,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 90,
+              "hi": 204.66,
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec12376819) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec12376819) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         },
         "buyback": {
           "shop": "トレカバンク",
@@ -14413,94 +14456,118 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 49,
           "rawAn": 4
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 16980,
+          "p9": 3800,
+          "rawA": 3500,
+          "rawB": 3000,
+          "pop10": 4455,
+          "popTotal": 7104,
+          "rate10": 62.71,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 62.71% (g10=4455/total=7104・spec14955495) / 価格は直近値を据え置き(再取得せず) / 旧62.44% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 49,
+          "rawAn": 4
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 50,
-          "soldMedianUSD": 122.5,
-          "medianBasis": "eBay全込み(n49)",
+          "n": 49,
+          "soldMedianUSD": 108.75,
+          "medianBasis": "eBay全込み(n48)",
           "trend": {
             "m1": {
-              "n": 13,
-              "med": 90,
+              "n": 14,
+              "med": 77.25,
               "truncated": false
             },
             "m3": {
-              "n": 49,
-              "med": 122.5,
+              "n": 48,
+              "med": 108.75,
               "truncated": false
             },
             "m6": {
-              "n": 60,
-              "med": 131.25,
+              "n": 65,
+              "med": 128.5,
               "truncated": false
             },
             "m12": {
-              "n": 68,
-              "med": 136.25,
+              "n": 74,
+              "med": 133,
               "truncated": false
             },
-            "ratio": 0.66,
+            "ratio": 0.58,
             "basis": "1M/12M",
-            "verdict": "急落"
+            "verdict": "急落",
+            "spot1M": {
+              "n": 14,
+              "med": 77.25,
+              "lo": 30,
+              "hi": 102.5,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 13,
-              "nEbay": 13,
-              "medAll": 90,
+              "n": 14,
+              "nEbay": 14,
+              "sampled": 14,
+              "medAll": 77.25,
               "auction": {
-                "n": 8,
-                "med": 83.75
+                "n": 11,
+                "med": 76
               },
               "fixed": {
                 "n": 2,
                 "med": 60
               },
               "bestOffer": {
-                "n": 3,
-                "med": 110
+                "n": 1,
+                "med": 99
               },
               "lo": 30,
-              "hi": 140,
-              "newest": "2026-07-20",
-              "truncated": false
+              "hi": 102.5,
+              "newest": "2026-08-02"
             },
             {
               "months": 3,
-              "n": 50,
-              "nEbay": 49,
-              "medAll": 122.5,
+              "n": 49,
+              "nEbay": 48,
+              "sampled": 49,
+              "medAll": 108.75,
               "auction": {
-                "n": 30,
-                "med": 117.27
+                "n": 32,
+                "med": 99.41
               },
               "fixed": {
-                "n": 5,
-                "med": 129.99
+                "n": 4,
+                "med": 110
               },
               "bestOffer": {
-                "n": 14,
-                "med": 132.5
+                "n": 12,
+                "med": 125
               },
               "lo": 30,
-              "hi": 190,
-              "newest": "2026-07-20",
-              "truncated": false
+              "hi": 155,
+              "newest": "2026-08-02"
             },
             {
               "months": 6,
-              "n": 62,
-              "nEbay": 60,
-              "medAll": 131.25,
+              "n": 67,
+              "nEbay": 65,
+              "sampled": 67,
+              "medAll": 128.5,
               "auction": {
-                "n": 37,
-                "med": 128.5
+                "n": 42,
+                "med": 117.27
               },
               "fixed": {
                 "n": 5,
@@ -14512,17 +14579,17 @@ const TRECA_DATA = {
               },
               "lo": 30,
               "hi": 215,
-              "newest": "2026-07-20",
-              "truncated": false
+              "newest": "2026-08-02"
             },
             {
               "months": 12,
-              "n": 70,
-              "nEbay": 68,
-              "medAll": 136.25,
+              "n": 76,
+              "nEbay": 74,
+              "sampled": 76,
+              "medAll": 133,
               "auction": {
-                "n": 44,
-                "med": 134
+                "n": 50,
+                "med": 128.75
               },
               "fixed": {
                 "n": 5,
@@ -14534,11 +14601,10 @@ const TRECA_DATA = {
               },
               "lo": 30,
               "hi": 258,
-              "newest": "2026-07-20",
-              "truncated": false
+              "newest": "2026-08-02"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec14955495) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec14955495) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -15590,16 +15656,32 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 58,
           "rawAn": 4
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 95000,
+          "p9": 46000,
+          "rawA": 55000,
+          "rawB": 30000,
+          "pop10": 17671,
+          "popTotal": 21071,
+          "rate10": 83.86,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 83.86% (g10=17671/total=21071・spec7917436) / 価格は直近値を据え置き(再取得せず) / 旧83.94% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 58,
+          "rawAn": 4
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 47,
-          "soldMedianUSD": 590,
-          "medianBasis": "eBay全込み(n45)",
+          "n": 48,
+          "soldMedianUSD": 541.68,
+          "medianBasis": "eBay全込み(n46)",
           "trend": {
             "m1": {
               "n": 19,
@@ -15607,135 +15689,123 @@ const TRECA_DATA = {
               "truncated": false
             },
             "m3": {
-              "n": 45,
-              "med": 590,
+              "n": 46,
+              "med": 541.68,
               "truncated": false
             },
             "m6": {
-              "n": 95,
-              "med": 546.25,
+              "n": 96,
+              "med": 545.63,
               "truncated": true
             },
             "m12": {
-              "n": 95,
-              "med": 546.25,
+              "n": 96,
+              "med": 545.63,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 6,
-                "actualMonths": 7.1,
-                "n": 95,
-                "med": 295,
-                "range": "2025-10-05〜2026-03-08",
-                "approx": true
-              },
-              {
-                "targetMonths": 12,
-                "actualMonths": 12,
-                "n": 99,
-                "med": 216.9,
-                "range": "2025-05-16〜2025-10-01",
-                "approx": false
-              }
-            ],
-            "ratio": 2.24,
-            "basis": "直近/12ヶ月前(履歴)",
-            "verdict": "急騰",
-            "fromHistory": true,
-            "approx": true
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 19,
+              "med": 485,
+              "lo": 330.65,
+              "hi": 542.37,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
               "n": 19,
               "nEbay": 19,
+              "sampled": 19,
               "medAll": 485,
               "auction": {
-                "n": 12,
-                "med": 489
+                "n": 9,
+                "med": 493
               },
               "fixed": {
-                "n": 5,
+                "n": 9,
                 "med": 480
               },
               "bestOffer": {
-                "n": 2,
-                "med": 532.5
+                "n": 1,
+                "med": 475
               },
               "lo": 330.65,
-              "hi": 590,
-              "newest": "2026-07-21",
-              "truncated": false
+              "hi": 542.37,
+              "newest": "2026-08-04"
             },
             {
               "months": 3,
-              "n": 47,
-              "nEbay": 45,
-              "medAll": 590,
+              "n": 48,
+              "nEbay": 46,
+              "sampled": 48,
+              "medAll": 541.68,
               "auction": {
-                "n": 26,
-                "med": 550.52
+                "n": 25,
+                "med": 532
               },
               "fixed": {
-                "n": 10,
-                "med": 616.18
+                "n": 14,
+                "med": 504.99
               },
               "bestOffer": {
-                "n": 9,
+                "n": 7,
                 "med": 760
               },
-              "lo": 79.99,
-              "hi": 910.42,
-              "newest": "2026-07-21",
-              "truncated": false
+              "lo": 330.65,
+              "hi": 888,
+              "newest": "2026-08-04"
             },
             {
               "months": 6,
-              "n": 132,
-              "nEbay": 95,
-              "medAll": 546.25,
+              "n": 130,
+              "nEbay": 96,
+              "sampled": 100,
+              "medAll": 545.63,
               "auction": {
-                "n": 43,
-                "med": 532
+                "n": 42,
+                "med": 536
               },
               "fixed": {
-                "n": 19,
-                "med": 545
+                "n": 23,
+                "med": 509.99
               },
               "bestOffer": {
-                "n": 33,
-                "med": 575
+                "n": 31,
+                "med": 590
               },
               "lo": 79.99,
               "hi": 910.42,
-              "newest": "2026-07-21",
-              "truncated": true
+              "newest": "2026-08-04"
             },
             {
               "months": 12,
-              "n": 245,
-              "nEbay": 95,
-              "medAll": 546.25,
+              "n": 239,
+              "nEbay": 96,
+              "sampled": 100,
+              "medAll": 545.63,
               "auction": {
-                "n": 43,
-                "med": 532
+                "n": 42,
+                "med": 536
               },
               "fixed": {
-                "n": 19,
-                "med": 545
+                "n": 23,
+                "med": 509.99
               },
               "bestOffer": {
-                "n": 33,
-                "med": 575
+                "n": 31,
+                "med": 590
               },
               "lo": 79.99,
               "hi": 910.42,
-              "newest": "2026-07-21",
-              "truncated": true
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec7917436) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec7917436) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         },
         "buyback": {
           "shop": "トレカバンク",
@@ -16793,160 +16863,156 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 68,
           "rawAn": 5
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 145500,
+          "p9": 70000,
+          "rawA": 78000,
+          "rawB": 66000,
+          "pop10": 26157,
+          "popTotal": 31046,
+          "rate10": 84.25,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 84.25% (g10=26157/total=31046・spec10041062) / 価格は直近値を据え置き(再取得せず) / 旧84.31% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 68,
+          "rawAn": 5
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 292,
-          "soldMedianUSD": 910,
-          "medianBasis": "eBay全込み(n89)・直近89件のみ",
+          "n": 294,
+          "soldMedianUSD": 885,
+          "medianBasis": "eBay全込み(n87)",
           "trend": {
             "m1": {
-              "n": 73,
-              "med": 909,
+              "n": 84,
+              "med": 888,
               "truncated": false
             },
             "m3": {
-              "n": 89,
-              "med": 910,
+              "n": 87,
+              "med": 885,
               "truncated": true
             },
             "m6": {
-              "n": 89,
-              "med": 910,
+              "n": 87,
+              "med": 885,
               "truncated": true
             },
             "m12": {
-              "n": 89,
-              "med": 910,
+              "n": 87,
+              "med": 885,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 3,
-                "actualMonths": 2.6,
-                "n": 89,
-                "med": 958.96,
-                "range": "2026-04-21〜2026-05-22",
-                "approx": false
-              },
-              {
-                "targetMonths": 6,
-                "actualMonths": 6.2,
-                "n": 94,
-                "med": 540.5,
-                "range": "2026-01-03〜2026-01-28",
-                "approx": false
-              },
-              {
-                "targetMonths": 12,
-                "actualMonths": 12.3,
-                "n": 92,
-                "med": 340,
-                "range": "2025-07-01〜2025-07-26",
-                "approx": false
-              }
-            ],
-            "ratio": 2.67,
-            "basis": "直近/12.3ヶ月前(履歴)",
-            "verdict": "急騰",
-            "fromHistory": true,
-            "approx": false
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 84,
+              "med": 888,
+              "lo": 599,
+              "hi": 1222.41,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 82,
-              "nEbay": 73,
-              "medAll": 909,
+              "n": 97,
+              "nEbay": 84,
+              "sampled": 97,
+              "medAll": 888,
               "auction": {
-                "n": 36,
-                "med": 890
+                "n": 40,
+                "med": 872.5
               },
               "fixed": {
-                "n": 16,
-                "med": 930
+                "n": 20,
+                "med": 912.5
               },
               "bestOffer": {
-                "n": 21,
-                "med": 909.21
+                "n": 24,
+                "med": 897.21
               },
-              "lo": 714.99,
+              "lo": 599,
               "hi": 1222.41,
-              "newest": "2026-07-22",
-              "truncated": false
+              "newest": "2026-08-04"
             },
             {
               "months": 3,
-              "n": 292,
-              "nEbay": 89,
-              "medAll": 910,
+              "n": 294,
+              "nEbay": 87,
+              "sampled": 100,
+              "medAll": 885,
               "auction": {
-                "n": 46,
-                "med": 902.49
+                "n": 43,
+                "med": 870
               },
               "fixed": {
                 "n": 20,
-                "med": 966.84
+                "med": 912.5
               },
               "bestOffer": {
-                "n": 23,
-                "med": 909.21
+                "n": 24,
+                "med": 897.21
               },
-              "lo": 435,
+              "lo": 599,
               "hi": 1222.41,
-              "newest": "2026-07-22",
-              "truncated": true
+              "newest": "2026-08-04"
             },
             {
               "months": 6,
-              "n": 715,
-              "nEbay": 89,
-              "medAll": 910,
+              "n": 704,
+              "nEbay": 87,
+              "sampled": 100,
+              "medAll": 885,
               "auction": {
-                "n": 46,
-                "med": 902.49
+                "n": 43,
+                "med": 870
               },
               "fixed": {
                 "n": 20,
-                "med": 966.84
+                "med": 912.5
               },
               "bestOffer": {
-                "n": 23,
-                "med": 909.21
+                "n": 24,
+                "med": 897.21
               },
-              "lo": 435,
+              "lo": 599,
               "hi": 1222.41,
-              "newest": "2026-07-22",
-              "truncated": true
+              "newest": "2026-08-04"
             },
             {
               "months": 12,
-              "n": 1511,
-              "nEbay": 89,
-              "medAll": 910,
+              "n": 1485,
+              "nEbay": 87,
+              "sampled": 100,
+              "medAll": 885,
               "auction": {
-                "n": 46,
-                "med": 902.49
+                "n": 43,
+                "med": 870
               },
               "fixed": {
                 "n": 20,
-                "med": 966.84
+                "med": 912.5
               },
               "bestOffer": {
-                "n": 23,
-                "med": 909.21
+                "n": 24,
+                "med": 897.21
               },
-              "lo": 435,
+              "lo": 599,
               "hi": 1222.41,
-              "newest": "2026-07-22",
-              "truncated": true
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec10041062) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec10041062) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         },
         "buyback": {
           "shop": "トレカバンク",
@@ -18004,160 +18070,156 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 31,
           "rawAn": 2
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 9400,
+          "p9": 3599,
+          "rawA": 2075,
+          "rawB": 1500,
+          "pop10": 13964,
+          "popTotal": 15101,
+          "rate10": 92.47,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 92.47% (g10=13964/total=15101・spec14955405) / 価格は直近値を据え置き(再取得せず) / 旧92.33% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 31,
+          "rawAn": 2
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 215,
-          "soldMedianUSD": 65,
-          "medianBasis": "eBay全込み(n95)・直近95件のみ",
+          "n": 233,
+          "soldMedianUSD": 59,
+          "medianBasis": "eBay全込み(n99)",
           "trend": {
             "m1": {
-              "n": 75,
-              "med": 61,
+              "n": 91,
+              "med": 59,
               "truncated": false
             },
             "m3": {
-              "n": 95,
-              "med": 65,
+              "n": 99,
+              "med": 59,
               "truncated": true
             },
             "m6": {
-              "n": 95,
-              "med": 65,
+              "n": 99,
+              "med": 59,
               "truncated": true
             },
             "m12": {
-              "n": 95,
-              "med": 65,
+              "n": 99,
+              "med": 59,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 3,
-                "actualMonths": 3.3,
-                "n": 99,
-                "med": 72.5,
-                "range": "2026-03-29〜2026-04-29",
-                "approx": false
-              },
-              {
-                "targetMonths": 6,
-                "actualMonths": 4.9,
-                "n": 100,
-                "med": 67,
-                "range": "2026-01-23〜2026-03-29",
-                "approx": true
-              },
-              {
-                "targetMonths": 12,
-                "actualMonths": 6.6,
-                "n": 19,
-                "med": 82,
-                "range": "2025-12-19〜2026-01-23",
-                "approx": true
-              }
-            ],
-            "ratio": 0.74,
-            "basis": "直近/6.6ヶ月前(履歴)",
-            "verdict": "下落",
-            "fromHistory": true,
-            "approx": true
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 91,
+              "med": 59,
+              "lo": 18.37,
+              "hi": 129.95,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 75,
-              "nEbay": 75,
-              "medAll": 61,
+              "n": 92,
+              "nEbay": 91,
+              "sampled": 92,
+              "medAll": 59,
               "auction": {
-                "n": 51,
-                "med": 59.52
+                "n": 66,
+                "med": 56
               },
               "fixed": {
                 "n": 10,
                 "med": 65
               },
               "bestOffer": {
-                "n": 14,
+                "n": 15,
+                "med": 65
+              },
+              "lo": 18.37,
+              "hi": 129.95,
+              "newest": "2026-08-04"
+            },
+            {
+              "months": 3,
+              "n": 233,
+              "nEbay": 99,
+              "sampled": 100,
+              "medAll": 59,
+              "auction": {
+                "n": 70,
+                "med": 56
+              },
+              "fixed": {
+                "n": 11,
+                "med": 65
+              },
+              "bestOffer": {
+                "n": 18,
                 "med": 67.5
               },
               "lo": 18.37,
               "hi": 129.95,
-              "newest": "2026-07-22",
-              "truncated": false
-            },
-            {
-              "months": 3,
-              "n": 215,
-              "nEbay": 95,
-              "medAll": 65,
-              "auction": {
-                "n": 64,
-                "med": 61.5
-              },
-              "fixed": {
-                "n": 14,
-                "med": 73.25
-              },
-              "bestOffer": {
-                "n": 17,
-                "med": 70
-              },
-              "lo": 18.37,
-              "hi": 129.95,
-              "newest": "2026-07-22",
-              "truncated": true
+              "newest": "2026-08-04"
             },
             {
               "months": 6,
-              "n": 396,
-              "nEbay": 95,
-              "medAll": 65,
+              "n": 430,
+              "nEbay": 99,
+              "sampled": 100,
+              "medAll": 59,
               "auction": {
-                "n": 64,
-                "med": 61.5
+                "n": 70,
+                "med": 56
               },
               "fixed": {
-                "n": 14,
-                "med": 73.25
+                "n": 11,
+                "med": 65
               },
               "bestOffer": {
-                "n": 17,
-                "med": 70
+                "n": 18,
+                "med": 67.5
               },
               "lo": 18.37,
               "hi": 129.95,
-              "newest": "2026-07-22",
-              "truncated": true
+              "newest": "2026-08-04"
             },
             {
               "months": 12,
-              "n": 419,
-              "nEbay": 95,
-              "medAll": 65,
+              "n": 463,
+              "nEbay": 99,
+              "sampled": 100,
+              "medAll": 59,
               "auction": {
-                "n": 64,
-                "med": 61.5
+                "n": 70,
+                "med": 56
               },
               "fixed": {
-                "n": 14,
-                "med": 73.25
+                "n": 11,
+                "med": 65
               },
               "bestOffer": {
-                "n": 17,
-                "med": 70
+                "n": 18,
+                "med": 67.5
               },
               "lo": 18.37,
               "hi": 129.95,
-              "newest": "2026-07-22",
-              "truncated": true
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec14955405) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec14955405) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -19209,160 +19271,156 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 53,
           "rawAn": 0
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 5980,
+          "p9": 3000,
+          "rawA": 1000,
+          "rawB": 1000,
+          "pop10": 12540,
+          "popTotal": 13601,
+          "rate10": 92.2,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 92.2% (g10=12540/total=13601・spec14955403) / 価格は直近値を据え置き(再取得せず) / 旧92.07% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 53,
+          "rawAn": 0
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 159,
-          "soldMedianUSD": 48.59,
-          "medianBasis": "eBay全込み(n93)・直近93件のみ",
+          "n": 176,
+          "soldMedianUSD": 45,
+          "medianBasis": "eBay全込み(n97)",
           "trend": {
             "m1": {
-              "n": 51,
-              "med": 47,
+              "n": 67,
+              "med": 40,
               "truncated": false
             },
             "m3": {
-              "n": 93,
-              "med": 48.59,
+              "n": 97,
+              "med": 45,
               "truncated": true
             },
             "m6": {
-              "n": 93,
-              "med": 48.59,
+              "n": 97,
+              "med": 45,
               "truncated": true
             },
             "m12": {
-              "n": 93,
-              "med": 48.59,
+              "n": 97,
+              "med": 45,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 3,
-                "actualMonths": 2.8,
-                "n": 99,
-                "med": 50,
-                "range": "2026-04-04〜2026-05-25",
-                "approx": false
-              },
-              {
-                "targetMonths": 6,
-                "actualMonths": 6.1,
-                "n": 52,
-                "med": 63.25,
-                "range": "2026-01-11〜2026-01-29",
-                "approx": false
-              },
-              {
-                "targetMonths": 12,
-                "actualMonths": 6.1,
-                "n": 52,
-                "med": 63.25,
-                "range": "2026-01-11〜2026-01-29",
-                "approx": true
-              }
-            ],
-            "ratio": 0.74,
-            "basis": "直近/6.1ヶ月前(履歴)",
-            "verdict": "下落",
-            "fromHistory": true,
-            "approx": true
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 67,
+              "med": 40,
+              "lo": 15.51,
+              "hi": 129.99,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 51,
-              "nEbay": 51,
-              "medAll": 47,
+              "n": 68,
+              "nEbay": 67,
+              "sampled": 68,
+              "medAll": 40,
               "auction": {
-                "n": 34,
-                "med": 45.87
+                "n": 50,
+                "med": 38.25
               },
               "fixed": {
-                "n": 7,
-                "med": 55.5
+                "n": 9,
+                "med": 55
               },
               "bestOffer": {
-                "n": 10,
-                "med": 46.5
+                "n": 8,
+                "med": 43.5
               },
               "lo": 15.51,
-              "hi": 79.65,
-              "newest": "2026-07-22",
-              "truncated": false
+              "hi": 129.99,
+              "newest": "2026-08-04"
             },
             {
               "months": 3,
-              "n": 159,
-              "nEbay": 93,
-              "medAll": 48.59,
+              "n": 176,
+              "nEbay": 97,
+              "sampled": 100,
+              "medAll": 45,
               "auction": {
-                "n": 58,
-                "med": 46.34
+                "n": 65,
+                "med": 40
               },
               "fixed": {
                 "n": 16,
-                "med": 57.05
+                "med": 55.73
               },
               "bestOffer": {
-                "n": 19,
-                "med": 52
+                "n": 16,
+                "med": 46.5
               },
               "lo": 15.51,
-              "hi": 79.65,
-              "newest": "2026-07-22",
-              "truncated": true
+              "hi": 129.99,
+              "newest": "2026-08-04"
             },
             {
               "months": 6,
-              "n": 304,
-              "nEbay": 93,
-              "medAll": 48.59,
+              "n": 329,
+              "nEbay": 97,
+              "sampled": 100,
+              "medAll": 45,
               "auction": {
-                "n": 58,
-                "med": 46.34
+                "n": 65,
+                "med": 40
               },
               "fixed": {
                 "n": 16,
-                "med": 57.05
+                "med": 55.73
               },
               "bestOffer": {
-                "n": 19,
-                "med": 52
+                "n": 16,
+                "med": 46.5
               },
               "lo": 15.51,
-              "hi": 79.65,
-              "newest": "2026-07-22",
-              "truncated": true
+              "hi": 129.99,
+              "newest": "2026-08-04"
             },
             {
               "months": 12,
-              "n": 352,
-              "nEbay": 93,
-              "medAll": 48.59,
+              "n": 392,
+              "nEbay": 97,
+              "sampled": 100,
+              "medAll": 45,
               "auction": {
-                "n": 58,
-                "med": 46.34
+                "n": 65,
+                "med": 40
               },
               "fixed": {
                 "n": 16,
-                "med": 57.05
+                "med": 55.73
               },
               "bestOffer": {
-                "n": 19,
-                "med": 52
+                "n": 16,
+                "med": 46.5
               },
               "lo": 15.51,
-              "hi": 79.65,
-              "newest": "2026-07-22",
-              "truncated": true
+              "hi": 129.99,
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec14955403) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec14955403) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -20414,160 +20472,156 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 78,
           "rawAn": 0
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 5100,
+          "p9": 2380,
+          "rawA": 1000,
+          "rawB": 2000,
+          "pop10": 9773,
+          "popTotal": 10642,
+          "rate10": 91.83,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 91.83% (g10=9773/total=10642・spec14955401) / 価格は直近値を据え置き(再取得せず) / 旧91.54% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 78,
+          "rawAn": 0
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 156,
-          "soldMedianUSD": 53.89,
-          "medianBasis": "eBay全込み(n95)・直近95件のみ",
+          "n": 183,
+          "soldMedianUSD": 51.01,
+          "medianBasis": "eBay全込み(n95)",
           "trend": {
             "m1": {
-              "n": 50,
-              "med": 56.25,
+              "n": 62,
+              "med": 47,
               "truncated": false
             },
             "m3": {
               "n": 95,
-              "med": 53.89,
+              "med": 51.01,
               "truncated": true
             },
             "m6": {
               "n": 95,
-              "med": 53.89,
+              "med": 51.01,
               "truncated": true
             },
             "m12": {
               "n": 95,
-              "med": 53.89,
+              "med": 51.01,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 3,
-                "actualMonths": 2.8,
-                "n": 98,
-                "med": 47,
-                "range": "2026-03-29〜2026-05-27",
-                "approx": false
-              },
-              {
-                "targetMonths": 6,
-                "actualMonths": 5.1,
-                "n": 46,
-                "med": 52,
-                "range": "2026-01-16〜2026-03-28",
-                "approx": false
-              },
-              {
-                "targetMonths": 12,
-                "actualMonths": 5.1,
-                "n": 46,
-                "med": 52,
-                "range": "2026-01-16〜2026-03-28",
-                "approx": true
-              }
-            ],
-            "ratio": 1.08,
-            "basis": "直近/5.1ヶ月前(履歴)",
-            "verdict": "横ばい",
-            "fromHistory": true,
-            "approx": true
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 62,
+              "med": 47,
+              "lo": 14.51,
+              "hi": 87.17,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 51,
-              "nEbay": 50,
-              "medAll": 56.25,
+              "n": 63,
+              "nEbay": 62,
+              "sampled": 63,
+              "medAll": 47,
               "auction": {
-                "n": 23,
-                "med": 49.7
+                "n": 38,
+                "med": 41
               },
               "fixed": {
                 "n": 8,
-                "med": 61.97
+                "med": 59
               },
               "bestOffer": {
-                "n": 19,
-                "med": 62.99
+                "n": 16,
+                "med": 59
               },
-              "lo": 40,
+              "lo": 14.51,
               "hi": 87.17,
-              "newest": "2026-07-22",
-              "truncated": false
+              "newest": "2026-08-04"
             },
             {
               "months": 3,
-              "n": 156,
+              "n": 183,
               "nEbay": 95,
-              "medAll": 53.89,
+              "sampled": 100,
+              "medAll": 51.01,
               "auction": {
-                "n": 47,
-                "med": 49
+                "n": 52,
+                "med": 46
               },
               "fixed": {
-                "n": 19,
-                "med": 59
+                "n": 15,
+                "med": 61.74
               },
               "bestOffer": {
-                "n": 29,
-                "med": 59.99
+                "n": 28,
+                "med": 60
               },
-              "lo": 36,
-              "hi": 100,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 14.51,
+              "hi": 87.17,
+              "newest": "2026-08-04"
             },
             {
               "months": 6,
-              "n": 242,
+              "n": 275,
               "nEbay": 95,
-              "medAll": 53.89,
+              "sampled": 100,
+              "medAll": 51.01,
               "auction": {
-                "n": 47,
-                "med": 49
+                "n": 52,
+                "med": 46
               },
               "fixed": {
-                "n": 19,
-                "med": 59
+                "n": 15,
+                "med": 61.74
               },
               "bestOffer": {
-                "n": 29,
-                "med": 59.99
+                "n": 28,
+                "med": 60
               },
-              "lo": 36,
-              "hi": 100,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 14.51,
+              "hi": 87.17,
+              "newest": "2026-08-04"
             },
             {
               "months": 12,
-              "n": 246,
+              "n": 282,
               "nEbay": 95,
-              "medAll": 53.89,
+              "sampled": 100,
+              "medAll": 51.01,
               "auction": {
-                "n": 47,
-                "med": 49
+                "n": 52,
+                "med": 46
               },
               "fixed": {
-                "n": 19,
-                "med": 59
+                "n": 15,
+                "med": 61.74
               },
               "bestOffer": {
-                "n": 29,
-                "med": 59.99
+                "n": 28,
+                "med": 60
               },
-              "lo": 36,
-              "hi": 100,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 14.51,
+              "hi": 87.17,
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec14955401) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec14955401) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -21619,160 +21673,156 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 60,
           "rawAn": 9
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 18800,
+          "p9": 3500,
+          "rawA": 3800,
+          "rawB": 2100,
+          "pop10": 13723,
+          "popTotal": 17019,
+          "rate10": 80.63,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 80.63% (g10=13723/total=17019・spec6984646) / 価格は直近値を据え置き(再取得せず) / 旧80.73% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 60,
+          "rawAn": 9
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 157,
-          "soldMedianUSD": 124.73,
-          "medianBasis": "eBay全込み(n91)・直近91件のみ",
+          "n": 154,
+          "soldMedianUSD": 125,
+          "medianBasis": "eBay全込み(n89)",
           "trend": {
             "m1": {
-              "n": 25,
-              "med": 133,
+              "n": 30,
+              "med": 120,
               "truncated": false
             },
             "m3": {
-              "n": 91,
-              "med": 124.73,
+              "n": 89,
+              "med": 125,
               "truncated": true
             },
             "m6": {
-              "n": 91,
-              "med": 124.73,
+              "n": 89,
+              "med": 125,
               "truncated": true
             },
             "m12": {
-              "n": 91,
-              "med": 124.73,
+              "n": 89,
+              "med": 125,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 3,
-                "actualMonths": 2.8,
-                "n": 90,
-                "med": 106.2,
-                "range": "2026-04-12〜2026-05-22",
-                "approx": false
-              },
-              {
-                "targetMonths": 6,
-                "actualMonths": 5.2,
-                "n": 96,
-                "med": 78.97,
-                "range": "2026-01-19〜2026-03-15",
-                "approx": false
-              },
-              {
-                "targetMonths": 12,
-                "actualMonths": 11.4,
-                "n": 87,
-                "med": 90,
-                "range": "2025-07-07〜2025-09-13",
-                "approx": false
-              }
-            ],
-            "ratio": 1.48,
-            "basis": "直近/11.4ヶ月前(履歴)",
-            "verdict": "急騰",
-            "fromHistory": true,
-            "approx": false
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 30,
+              "med": 120,
+              "lo": 70,
+              "hi": 384.82,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 26,
-              "nEbay": 25,
-              "medAll": 133,
+              "n": 35,
+              "nEbay": 30,
+              "sampled": 35,
+              "medAll": 120,
               "auction": {
-                "n": 8,
-                "med": 136
+                "n": 11,
+                "med": 113.5
               },
               "fixed": {
-                "n": 6,
-                "med": 123
+                "n": 7,
+                "med": 119.99
               },
               "bestOffer": {
-                "n": 11,
-                "med": 139.99
+                "n": 12,
+                "med": 130
               },
-              "lo": 94,
+              "lo": 70,
               "hi": 384.82,
-              "newest": "2026-07-20",
-              "truncated": false
+              "newest": "2026-08-03"
             },
             {
               "months": 3,
-              "n": 157,
-              "nEbay": 91,
-              "medAll": 124.73,
+              "n": 154,
+              "nEbay": 89,
+              "sampled": 100,
+              "medAll": 125,
               "auction": {
-                "n": 37,
+                "n": 35,
                 "med": 123.5
               },
               "fixed": {
-                "n": 23,
-                "med": 124.73
+                "n": 22,
+                "med": 124.99
               },
               "bestOffer": {
-                "n": 31,
-                "med": 125
+                "n": 32,
+                "med": 129.18
               },
-              "lo": 90,
+              "lo": 70,
               "hi": 384.82,
-              "newest": "2026-07-20",
-              "truncated": true
+              "newest": "2026-08-03"
             },
             {
               "months": 6,
-              "n": 392,
-              "nEbay": 91,
-              "medAll": 124.73,
+              "n": 388,
+              "nEbay": 89,
+              "sampled": 100,
+              "medAll": 125,
               "auction": {
-                "n": 37,
+                "n": 35,
                 "med": 123.5
               },
               "fixed": {
-                "n": 23,
-                "med": 124.73
+                "n": 22,
+                "med": 124.99
               },
               "bestOffer": {
-                "n": 31,
-                "med": 125
+                "n": 32,
+                "med": 129.18
               },
-              "lo": 90,
+              "lo": 70,
               "hi": 384.82,
-              "newest": "2026-07-20",
-              "truncated": true
+              "newest": "2026-08-03"
             },
             {
               "months": 12,
-              "n": 678,
-              "nEbay": 91,
-              "medAll": 124.73,
+              "n": 690,
+              "nEbay": 89,
+              "sampled": 100,
+              "medAll": 125,
               "auction": {
-                "n": 37,
+                "n": 35,
                 "med": 123.5
               },
               "fixed": {
-                "n": 23,
-                "med": 124.73
+                "n": 22,
+                "med": 124.99
               },
               "bestOffer": {
-                "n": 31,
-                "med": 125
+                "n": 32,
+                "med": 129.18
               },
-              "lo": 90,
+              "lo": 70,
               "hi": 384.82,
-              "newest": "2026-07-20",
-              "truncated": true
+              "newest": "2026-08-03"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec6984646) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec6984646) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -22828,148 +22878,136 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 2988,
-          "soldMedianUSD": 95,
-          "medianBasis": "eBay全込み(n95)・直近95件のみ",
+          "n": 2797,
+          "soldMedianUSD": 99,
+          "medianBasis": "eBay全込み(n90)",
           "trend": {
             "m1": {
-              "n": 95,
-              "med": 95,
+              "n": 90,
+              "med": 99,
               "truncated": true
             },
             "m3": {
-              "n": 95,
-              "med": 95,
+              "n": 90,
+              "med": 99,
               "truncated": true
             },
             "m6": {
-              "n": 95,
-              "med": 95,
+              "n": 90,
+              "med": 99,
               "truncated": true
             },
             "m12": {
-              "n": 95,
-              "med": 95,
+              "n": 90,
+              "med": 99,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 3,
-                "actualMonths": 3,
-                "n": 99,
-                "med": 98,
-                "range": "2026-04-23〜2026-04-26",
-                "approx": false
-              },
-              {
-                "targetMonths": 6,
-                "actualMonths": 6,
-                "n": 97,
-                "med": 63.49,
-                "range": "2026-01-23〜2026-01-24",
-                "approx": false
-              }
-            ],
-            "ratio": 1.5,
-            "basis": "直近/6ヶ月前(履歴)",
-            "verdict": "急騰",
-            "fromHistory": true,
-            "approx": false
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 90,
+              "med": 99,
+              "lo": 77,
+              "hi": 173.5,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 753,
-              "nEbay": 95,
-              "medAll": 95,
+              "n": 716,
+              "nEbay": 90,
+              "sampled": 100,
+              "medAll": 99,
               "auction": {
-                "n": 43,
-                "med": 94
+                "n": 50,
+                "med": 99
               },
               "fixed": {
-                "n": 34,
-                "med": 98.5
+                "n": 22,
+                "med": 99.99
               },
               "bestOffer": {
                 "n": 18,
-                "med": 91
+                "med": 89.27
               },
               "lo": 77,
-              "hi": 284.99,
-              "newest": "2026-07-22",
-              "truncated": true
+              "hi": 173.5,
+              "newest": "2026-08-04"
             },
             {
               "months": 3,
-              "n": 2988,
-              "nEbay": 95,
-              "medAll": 95,
+              "n": 2797,
+              "nEbay": 90,
+              "sampled": 100,
+              "medAll": 99,
               "auction": {
-                "n": 43,
-                "med": 94
+                "n": 50,
+                "med": 99
               },
               "fixed": {
-                "n": 34,
-                "med": 98.5
+                "n": 22,
+                "med": 99.99
               },
               "bestOffer": {
                 "n": 18,
-                "med": 91
+                "med": 89.27
               },
               "lo": 77,
-              "hi": 284.99,
-              "newest": "2026-07-22",
-              "truncated": true
+              "hi": 173.5,
+              "newest": "2026-08-04"
             },
             {
               "months": 6,
-              "n": 7631,
-              "nEbay": 95,
-              "medAll": 95,
+              "n": 7193,
+              "nEbay": 90,
+              "sampled": 100,
+              "medAll": 99,
               "auction": {
-                "n": 43,
-                "med": 94
+                "n": 50,
+                "med": 99
               },
               "fixed": {
-                "n": 34,
-                "med": 98.5
+                "n": 22,
+                "med": 99.99
               },
               "bestOffer": {
                 "n": 18,
-                "med": 91
+                "med": 89.27
               },
               "lo": 77,
-              "hi": 284.99,
-              "newest": "2026-07-22",
-              "truncated": true
+              "hi": 173.5,
+              "newest": "2026-08-04"
             },
             {
               "months": 12,
-              "n": 25267,
-              "nEbay": 95,
-              "medAll": 95,
+              "n": 25565,
+              "nEbay": 90,
+              "sampled": 100,
+              "medAll": 99,
               "auction": {
-                "n": 43,
-                "med": 94
+                "n": 50,
+                "med": 99
               },
               "fixed": {
-                "n": 34,
-                "med": 98.5
+                "n": 22,
+                "med": 99.99
               },
               "bestOffer": {
                 "n": 18,
-                "med": 91
+                "med": 89.27
               },
               "lo": 77,
-              "hi": 284.99,
-              "newest": "2026-07-22",
-              "truncated": true
+              "hi": 173.5,
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec14234253) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec14234253) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -24025,148 +24063,136 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 68,
-          "soldMedianUSD": 44.97,
-          "medianBasis": "eBay全込み(n58)",
+          "n": 58,
+          "soldMedianUSD": 45,
+          "medianBasis": "eBay全込み(n51)",
           "trend": {
             "m1": {
-              "n": 14,
-              "med": 49.99,
+              "n": 13,
+              "med": 49.44,
               "truncated": false
             },
             "m3": {
-              "n": 58,
-              "med": 44.97,
+              "n": 51,
+              "med": 45,
               "truncated": false
             },
             "m6": {
               "n": 90,
-              "med": 39,
+              "med": 40.5,
               "truncated": true
             },
             "m12": {
               "n": 90,
-              "med": 39,
+              "med": 40.5,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 6,
-                "actualMonths": 6,
-                "n": 99,
-                "med": 28,
-                "range": "2026-01-06〜2026-02-08",
-                "approx": false
-              },
-              {
-                "targetMonths": 12,
-                "actualMonths": 8.4,
-                "n": 75,
-                "med": 35,
-                "range": "2025-10-05〜2025-12-20",
-                "approx": true
-              }
-            ],
-            "ratio": 1.43,
-            "basis": "直近/8.4ヶ月前(履歴)",
-            "verdict": "急騰",
-            "fromHistory": true,
-            "approx": true
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 13,
+              "med": 49.44,
+              "lo": 22.5,
+              "hi": 58,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 14,
-              "nEbay": 14,
-              "medAll": 49.99,
+              "n": 13,
+              "nEbay": 13,
+              "sampled": 13,
+              "medAll": 49.44,
               "auction": {
                 "n": 8,
-                "med": 49.22
+                "med": 44.5
               },
               "fixed": {
                 "n": 3,
                 "med": 49.99
               },
               "bestOffer": {
-                "n": 3,
-                "med": 54
+                "n": 2,
+                "med": 52
               },
               "lo": 22.5,
-              "hi": 78.82,
-              "newest": "2026-07-17",
-              "truncated": false
+              "hi": 58,
+              "newest": "2026-08-04"
             },
             {
               "months": 3,
-              "n": 68,
-              "nEbay": 58,
-              "medAll": 44.97,
+              "n": 58,
+              "nEbay": 51,
+              "sampled": 58,
+              "medAll": 45,
               "auction": {
-                "n": 31,
-                "med": 38
+                "n": 28,
+                "med": 41.54
               },
               "fixed": {
-                "n": 12,
-                "med": 45.67
+                "n": 10,
+                "med": 48.17
               },
               "bestOffer": {
-                "n": 15,
-                "med": 48.99
+                "n": 13,
+                "med": 50
               },
-              "lo": 17.5,
-              "hi": 225,
-              "newest": "2026-07-17",
-              "truncated": false
+              "lo": 22.5,
+              "hi": 78.82,
+              "newest": "2026-08-04"
             },
             {
               "months": 6,
-              "n": 223,
+              "n": 219,
               "nEbay": 90,
-              "medAll": 39,
+              "sampled": 100,
+              "medAll": 40.5,
               "auction": {
-                "n": 38,
+                "n": 41,
                 "med": 37
               },
               "fixed": {
-                "n": 22,
-                "med": 40
+                "n": 23,
+                "med": 41.95
               },
               "bestOffer": {
-                "n": 30,
-                "med": 41.9
+                "n": 26,
+                "med": 45
               },
               "lo": 17.5,
               "hi": 225,
-              "newest": "2026-07-17",
-              "truncated": true
+              "newest": "2026-08-04"
             },
             {
               "months": 12,
-              "n": 477,
+              "n": 483,
               "nEbay": 90,
-              "medAll": 39,
+              "sampled": 100,
+              "medAll": 40.5,
               "auction": {
-                "n": 38,
+                "n": 41,
                 "med": 37
               },
               "fixed": {
-                "n": 22,
-                "med": 40
+                "n": 23,
+                "med": 41.95
               },
               "bestOffer": {
-                "n": 30,
-                "med": 41.9
+                "n": 26,
+                "med": 45
               },
               "lo": 17.5,
               "hi": 225,
-              "newest": "2026-07-17",
-              "truncated": true
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec14234346) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec14234346) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -25234,11 +25260,27 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 45,
           "rawAn": 11
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 50990,
+          "p9": 10800,
+          "rawA": 12000,
+          "rawB": 8499,
+          "pop10": 515,
+          "popTotal": 1084,
+          "rate10": 47.51,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 47.51% (g10=515/total=1084・spec2768280) / 価格は直近値を据え置き(再取得せず) / 旧47.6% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 45,
+          "rawAn": 11
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
           "n": 6,
@@ -25246,8 +25288,8 @@ const TRECA_DATA = {
           "medianBasis": "eBay全込み(n6)",
           "trend": {
             "m1": {
-              "n": 3,
-              "med": 194.5,
+              "n": 2,
+              "med": 187.25,
               "truncated": false
             },
             "m3": {
@@ -25256,8 +25298,8 @@ const TRECA_DATA = {
               "truncated": false
             },
             "m6": {
-              "n": 10,
-              "med": 197.25,
+              "n": 9,
+              "med": 200,
               "truncated": false
             },
             "m12": {
@@ -25265,37 +25307,45 @@ const TRECA_DATA = {
               "med": 166,
               "truncated": false
             },
-            "ratio": 1.17,
-            "basis": "1M/12M",
-            "verdict": "上昇"
+            "ratio": 1.33,
+            "basis": "3M/12M",
+            "verdict": "急騰",
+            "spot1M": {
+              "n": 2,
+              "med": 187.25,
+              "lo": 180,
+              "hi": 194.5,
+              "reliable": false
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 3,
-              "nEbay": 3,
-              "medAll": 194.5,
+              "n": 2,
+              "nEbay": 2,
+              "sampled": 2,
+              "medAll": 187.25,
               "auction": {
                 "n": 1,
                 "med": 194.5
               },
               "fixed": {
-                "n": 1,
-                "med": 279.95
+                "n": 0,
+                "med": null
               },
               "bestOffer": {
                 "n": 1,
                 "med": 180
               },
               "lo": 180,
-              "hi": 279.95,
-              "newest": "2026-07-21",
-              "truncated": false
+              "hi": 194.5,
+              "newest": "2026-07-21"
             },
             {
               "months": 3,
               "n": 6,
               "nEbay": 6,
+              "sampled": 6,
               "medAll": 220,
               "auction": {
                 "n": 1,
@@ -25311,17 +25361,17 @@ const TRECA_DATA = {
               },
               "lo": 180,
               "hi": 279.95,
-              "newest": "2026-07-21",
-              "truncated": false
+              "newest": "2026-07-21"
             },
             {
               "months": 6,
-              "n": 10,
-              "nEbay": 10,
-              "medAll": 197.25,
+              "n": 9,
+              "nEbay": 9,
+              "sampled": 9,
+              "medAll": 200,
               "auction": {
-                "n": 3,
-                "med": 157.5
+                "n": 2,
+                "med": 176
               },
               "fixed": {
                 "n": 2,
@@ -25333,13 +25383,13 @@ const TRECA_DATA = {
               },
               "lo": 150,
               "hi": 279.95,
-              "newest": "2026-07-21",
-              "truncated": false
+              "newest": "2026-07-21"
             },
             {
               "months": 12,
               "n": 21,
               "nEbay": 19,
+              "sampled": 21,
               "medAll": 166,
               "auction": {
                 "n": 7,
@@ -25355,11 +25405,10 @@ const TRECA_DATA = {
               },
               "lo": 77.52,
               "hi": 450,
-              "newest": "2026-07-21",
-              "truncated": false
+              "newest": "2026-07-21"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec2768280) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec2768280) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -26427,98 +26476,122 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 13,
           "rawAn": 52
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 28000,
+          "p9": null,
+          "rawA": 7500,
+          "rawB": 3999,
+          "pop10": 367,
+          "popTotal": 407,
+          "rate10": 90.17,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 90.17% (g10=367/total=407・spec14115559) / 価格は直近値を据え置き(再取得せず) / 旧90.38% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 13,
+          "rawAn": 52
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 40,
+          "n": 41,
           "soldMedianUSD": 220,
-          "medianBasis": "eBay全込み(n39)",
+          "medianBasis": "eBay全込み(n40)",
           "trend": {
             "m1": {
-              "n": 11,
-              "med": 228.5,
+              "n": 7,
+              "med": 182.5,
               "truncated": false
             },
             "m3": {
-              "n": 39,
+              "n": 40,
               "med": 220,
               "truncated": false
             },
             "m6": {
-              "n": 43,
+              "n": 46,
               "med": 215,
               "truncated": false
             },
             "m12": {
-              "n": 50,
-              "med": 200.95,
+              "n": 53,
+              "med": 200,
               "truncated": false
             },
-            "ratio": 1.14,
+            "ratio": 0.91,
             "basis": "1M/12M",
-            "verdict": "上昇"
+            "verdict": "横ばい",
+            "spot1M": {
+              "n": 7,
+              "med": 182.5,
+              "lo": 112.5,
+              "hi": 222.5,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 11,
-              "nEbay": 11,
-              "medAll": 228.5,
+              "n": 7,
+              "nEbay": 7,
+              "sampled": 7,
+              "medAll": 182.5,
               "auction": {
-                "n": 10,
-                "med": 225.5
+                "n": 7,
+                "med": 182.5
               },
               "fixed": {
                 "n": 0,
                 "med": null
               },
               "bestOffer": {
-                "n": 1,
-                "med": 300
+                "n": 0,
+                "med": null
               },
               "lo": 112.5,
-              "hi": 300,
-              "newest": "2026-07-20",
-              "truncated": false
+              "hi": 222.5,
+              "newest": "2026-08-02"
             },
             {
               "months": 3,
-              "n": 40,
-              "nEbay": 39,
+              "n": 41,
+              "nEbay": 40,
+              "sampled": 41,
               "medAll": 220,
               "auction": {
                 "n": 18,
                 "med": 212.2
               },
               "fixed": {
-                "n": 3,
-                "med": 139.99
+                "n": 4,
+                "med": 170
               },
               "bestOffer": {
                 "n": 18,
                 "med": 225
               },
-              "lo": 100,
+              "lo": 110,
               "hi": 340.5,
-              "newest": "2026-07-20",
-              "truncated": false
+              "newest": "2026-08-02"
             },
             {
               "months": 6,
-              "n": 44,
-              "nEbay": 43,
+              "n": 47,
+              "nEbay": 46,
+              "sampled": 47,
               "medAll": 215,
               "auction": {
-                "n": 21,
-                "med": 199.5
+                "n": 23,
+                "med": 194.7
               },
               "fixed": {
-                "n": 4,
-                "med": 130
+                "n": 5,
+                "med": 139.99
               },
               "bestOffer": {
                 "n": 18,
@@ -26526,21 +26599,21 @@ const TRECA_DATA = {
               },
               "lo": 68,
               "hi": 340.5,
-              "newest": "2026-07-20",
-              "truncated": false
+              "newest": "2026-08-02"
             },
             {
               "months": 12,
-              "n": 51,
-              "nEbay": 50,
-              "medAll": 200.95,
+              "n": 54,
+              "nEbay": 53,
+              "sampled": 54,
+              "medAll": 200,
               "auction": {
-                "n": 23,
-                "med": 194.7
+                "n": 25,
+                "med": 182.5
               },
               "fixed": {
-                "n": 7,
-                "med": 104.06
+                "n": 8,
+                "med": 112.03
               },
               "bestOffer": {
                 "n": 20,
@@ -26548,11 +26621,10 @@ const TRECA_DATA = {
               },
               "lo": 67,
               "hi": 340.5,
-              "newest": "2026-07-20",
-              "truncated": false
+              "newest": "2026-08-02"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec14115559) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec14115559) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -27604,160 +27676,156 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 48,
           "rawAn": 4
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 34000,
+          "p9": 11000,
+          "rawA": 13800,
+          "rawB": 4000,
+          "pop10": 14211,
+          "popTotal": 16754,
+          "rate10": 84.82,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 84.82% (g10=14211/total=16754・spec9319871) / 価格は直近値を据え置き(再取得せず) / 旧85% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 48,
+          "rawAn": 4
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 316,
-          "soldMedianUSD": 279.98,
-          "medianBasis": "eBay全込み(n95)・直近95件のみ",
+          "n": 312,
+          "soldMedianUSD": 200.5,
+          "medianBasis": "eBay全込み(n96)",
           "trend": {
             "m1": {
-              "n": 66,
-              "med": 244.89,
-              "truncated": false
+              "n": 96,
+              "med": 200.5,
+              "truncated": true
             },
             "m3": {
-              "n": 95,
-              "med": 279.98,
+              "n": 96,
+              "med": 200.5,
               "truncated": true
             },
             "m6": {
-              "n": 95,
-              "med": 279.98,
+              "n": 96,
+              "med": 200.5,
               "truncated": true
             },
             "m12": {
-              "n": 95,
-              "med": 279.98,
+              "n": 96,
+              "med": 200.5,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 3,
-                "actualMonths": 3.4,
-                "n": 99,
-                "med": 177.99,
-                "range": "2026-03-29〜2026-04-26",
-                "approx": false
-              },
-              {
-                "targetMonths": 6,
-                "actualMonths": 6.3,
-                "n": 100,
-                "med": 200,
-                "range": "2025-12-25〜2026-02-02",
-                "approx": false
-              },
-              {
-                "targetMonths": 12,
-                "actualMonths": 11.1,
-                "n": 86,
-                "med": 43.34,
-                "range": "2025-07-13〜2025-09-28",
-                "approx": false
-              }
-            ],
-            "ratio": 5.65,
-            "basis": "直近/11.1ヶ月前(履歴)",
-            "verdict": "急騰",
-            "fromHistory": true,
-            "approx": false
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 96,
+              "med": 200.5,
+              "lo": 89,
+              "hi": 461.21,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 69,
-              "nEbay": 66,
-              "medAll": 244.89,
+              "n": 110,
+              "nEbay": 96,
+              "sampled": 100,
+              "medAll": 200.5,
               "auction": {
-                "n": 46,
-                "med": 242.5
+                "n": 80,
+                "med": 192.5
               },
               "fixed": {
                 "n": 9,
-                "med": 275
+                "med": 210
               },
               "bestOffer": {
-                "n": 11,
-                "med": 300
+                "n": 7,
+                "med": 270
               },
-              "lo": 40.99,
-              "hi": 600,
-              "newest": "2026-07-22",
-              "truncated": false
+              "lo": 89,
+              "hi": 461.21,
+              "newest": "2026-08-04"
             },
             {
               "months": 3,
-              "n": 316,
-              "nEbay": 95,
-              "medAll": 279.98,
+              "n": 312,
+              "nEbay": 96,
+              "sampled": 100,
+              "medAll": 200.5,
               "auction": {
-                "n": 63,
-                "med": 247.5
+                "n": 80,
+                "med": 192.5
               },
               "fixed": {
-                "n": 15,
-                "med": 279.99
+                "n": 9,
+                "med": 210
               },
               "bestOffer": {
-                "n": 17,
-                "med": 350
+                "n": 7,
+                "med": 270
               },
-              "lo": 40,
-              "hi": 600,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 89,
+              "hi": 461.21,
+              "newest": "2026-08-04"
             },
             {
               "months": 6,
-              "n": 517,
-              "nEbay": 95,
-              "medAll": 279.98,
+              "n": 550,
+              "nEbay": 96,
+              "sampled": 100,
+              "medAll": 200.5,
               "auction": {
-                "n": 63,
-                "med": 247.5
+                "n": 80,
+                "med": 192.5
               },
               "fixed": {
-                "n": 15,
-                "med": 279.99
+                "n": 9,
+                "med": 210
               },
               "bestOffer": {
-                "n": 17,
-                "med": 350
+                "n": 7,
+                "med": 270
               },
-              "lo": 40,
-              "hi": 600,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 89,
+              "hi": 461.21,
+              "newest": "2026-08-04"
             },
             {
               "months": 12,
-              "n": 776,
-              "nEbay": 95,
-              "medAll": 279.98,
+              "n": 825,
+              "nEbay": 96,
+              "sampled": 100,
+              "medAll": 200.5,
               "auction": {
-                "n": 63,
-                "med": 247.5
+                "n": 80,
+                "med": 192.5
               },
               "fixed": {
-                "n": 15,
-                "med": 279.99
+                "n": 9,
+                "med": 210
               },
               "bestOffer": {
-                "n": 17,
-                "med": 350
+                "n": 7,
+                "med": 270
               },
-              "lo": 40,
-              "hi": 600,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 89,
+              "hi": 461.21,
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec9319871) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec9319871) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -28784,7 +28852,7 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
           "n": 0,
@@ -28813,13 +28881,21 @@ const TRECA_DATA = {
             },
             "ratio": null,
             "basis": null,
-            "verdict": "判定不能(実売が薄い)"
+            "verdict": "判定不能(実売が薄い)",
+            "spot1M": {
+              "n": 0,
+              "med": null,
+              "lo": null,
+              "hi": null,
+              "reliable": false
+            }
           },
           "points": [
             {
               "months": 1,
               "n": 0,
               "nEbay": 0,
+              "sampled": 0,
               "medAll": null,
               "auction": {
                 "n": 0,
@@ -28835,13 +28911,13 @@ const TRECA_DATA = {
               },
               "lo": null,
               "hi": null,
-              "newest": null,
-              "truncated": false
+              "newest": null
             },
             {
               "months": 3,
               "n": 0,
               "nEbay": 0,
+              "sampled": 0,
               "medAll": null,
               "auction": {
                 "n": 0,
@@ -28857,13 +28933,13 @@ const TRECA_DATA = {
               },
               "lo": null,
               "hi": null,
-              "newest": null,
-              "truncated": false
+              "newest": null
             },
             {
               "months": 6,
               "n": 0,
               "nEbay": 0,
+              "sampled": 0,
               "medAll": null,
               "auction": {
                 "n": 0,
@@ -28879,13 +28955,13 @@ const TRECA_DATA = {
               },
               "lo": null,
               "hi": null,
-              "newest": null,
-              "truncated": false
+              "newest": null
             },
             {
               "months": 12,
               "n": 0,
               "nEbay": 0,
+              "sampled": 0,
               "medAll": null,
               "auction": {
                 "n": 0,
@@ -28901,11 +28977,10 @@ const TRECA_DATA = {
               },
               "lo": null,
               "hi": null,
-              "newest": null,
-              "truncated": false
+              "newest": null
             }
           ],
-          "src": "PSA getSalesBySpecId(spec16308700) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec16308700) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -29961,72 +30036,80 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 56,
-          "soldMedianUSD": 153.95,
-          "medianBasis": "eBay全込み(n53)",
+          "n": 46,
+          "soldMedianUSD": 170.2,
+          "medianBasis": "eBay全込み(n43)",
           "trend": {
             "m1": {
-              "n": 14,
-              "med": 181.25,
+              "n": 17,
+              "med": 172.5,
               "truncated": false
             },
             "m3": {
-              "n": 53,
-              "med": 153.95,
+              "n": 43,
+              "med": 170.2,
               "truncated": false
             },
             "m6": {
-              "n": 72,
-              "med": 135,
+              "n": 75,
+              "med": 135.5,
               "truncated": false
             },
             "m12": {
               "n": 97,
-              "med": 113.76,
+              "med": 119.99,
               "truncated": true
             },
-            "ratio": 1.34,
-            "basis": "1M/6M",
-            "verdict": "急騰"
+            "ratio": 1.27,
+            "basis": "1M/12M",
+            "verdict": "上昇",
+            "spot1M": {
+              "n": 17,
+              "med": 172.5,
+              "lo": 110,
+              "hi": 260,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 14,
-              "nEbay": 14,
-              "medAll": 181.25,
+              "n": 17,
+              "nEbay": 17,
+              "sampled": 17,
+              "medAll": 172.5,
               "auction": {
-                "n": 8,
-                "med": 160.1
+                "n": 12,
+                "med": 147.75
               },
               "fixed": {
-                "n": 5,
+                "n": 4,
                 "med": 199.99
               },
               "bestOffer": {
                 "n": 1,
                 "med": 260
               },
-              "lo": 59.99,
+              "lo": 110,
               "hi": 260,
-              "newest": "2026-07-21",
-              "truncated": false
+              "newest": "2026-08-01"
             },
             {
               "months": 3,
-              "n": 56,
-              "nEbay": 53,
-              "medAll": 153.95,
+              "n": 46,
+              "nEbay": 43,
+              "sampled": 46,
+              "medAll": 170.2,
               "auction": {
-                "n": 30,
-                "med": 132.66
+                "n": 21,
+                "med": 151
               },
               "fixed": {
-                "n": 13,
-                "med": 195
+                "n": 12,
+                "med": 197.5
               },
               "bestOffer": {
                 "n": 10,
@@ -30034,21 +30117,21 @@ const TRECA_DATA = {
               },
               "lo": 59.99,
               "hi": 579.13,
-              "newest": "2026-07-21",
-              "truncated": false
+              "newest": "2026-08-01"
             },
             {
               "months": 6,
-              "n": 75,
-              "nEbay": 72,
-              "medAll": 135,
+              "n": 78,
+              "nEbay": 75,
+              "sampled": 78,
+              "medAll": 135.5,
               "auction": {
-                "n": 42,
-                "med": 102.5
+                "n": 46,
+                "med": 108.75
               },
               "fixed": {
-                "n": 16,
-                "med": 174.99
+                "n": 15,
+                "med": 189.99
               },
               "bestOffer": {
                 "n": 14,
@@ -30056,33 +30139,32 @@ const TRECA_DATA = {
               },
               "lo": 59.99,
               "hi": 579.13,
-              "newest": "2026-07-21",
-              "truncated": false
+              "newest": "2026-08-01"
             },
             {
               "months": 12,
-              "n": 105,
+              "n": 109,
               "nEbay": 97,
-              "medAll": 113.76,
+              "sampled": 100,
+              "medAll": 119.99,
               "auction": {
-                "n": 49,
-                "med": 102.5
+                "n": 52,
+                "med": 108.75
               },
               "fixed": {
                 "n": 20,
                 "med": 153.95
               },
               "bestOffer": {
-                "n": 28,
-                "med": 107.41
+                "n": 25,
+                "med": 129.99
               },
-              "lo": 27,
+              "lo": 45,
               "hi": 579.13,
-              "newest": "2026-07-21",
-              "truncated": true
+              "newest": "2026-08-01"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec9454301) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec9454301) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -32185,90 +32267,98 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 18,
-          "soldMedianUSD": 225,
-          "medianBasis": "eBay全込み(n17)",
+          "n": 16,
+          "soldMedianUSD": 230,
+          "medianBasis": "eBay全込み(n15)",
           "trend": {
             "m1": {
               "n": 2,
-              "med": 262,
+              "med": 250.75,
               "truncated": false
             },
             "m3": {
-              "n": 17,
-              "med": 225,
+              "n": 15,
+              "med": 230,
               "truncated": false
             },
             "m6": {
               "n": 24,
-              "med": 168.67,
+              "med": 183.24,
               "truncated": false
             },
             "m12": {
               "n": 39,
-              "med": 83.25,
+              "med": 99.95,
               "truncated": false
             },
-            "ratio": 2.7,
+            "ratio": 2.3,
             "basis": "3M/12M",
-            "verdict": "急騰"
+            "verdict": "急騰",
+            "spot1M": {
+              "n": 2,
+              "med": 250.75,
+              "lo": 202.5,
+              "hi": 299,
+              "reliable": false
+            }
           },
           "points": [
             {
               "months": 1,
               "n": 2,
               "nEbay": 2,
-              "medAll": 262,
+              "sampled": 2,
+              "medAll": 250.75,
               "auction": {
-                "n": 0,
-                "med": null
+                "n": 1,
+                "med": 202.5
               },
               "fixed": {
                 "n": 0,
                 "med": null
               },
               "bestOffer": {
-                "n": 2,
-                "med": 262
+                "n": 1,
+                "med": 299
               },
-              "lo": 225,
+              "lo": 202.5,
               "hi": 299,
-              "newest": "2026-07-07",
-              "truncated": false
+              "newest": "2026-08-01"
             },
             {
               "months": 3,
-              "n": 18,
-              "nEbay": 17,
-              "medAll": 225,
+              "n": 16,
+              "nEbay": 15,
+              "sampled": 16,
+              "medAll": 230,
               "auction": {
-                "n": 5,
-                "med": 102.5
+                "n": 4,
+                "med": 216.25
               },
               "fixed": {
-                "n": 1,
-                "med": 39.99
+                "n": 0,
+                "med": null
               },
               "bestOffer": {
                 "n": 11,
                 "med": 299
               },
-              "lo": 39.99,
+              "lo": 76.5,
               "hi": 999.99,
-              "newest": "2026-07-07",
-              "truncated": false
+              "newest": "2026-08-01"
             },
             {
               "months": 6,
               "n": 26,
               "nEbay": 24,
-              "medAll": 168.67,
+              "sampled": 26,
+              "medAll": 183.24,
               "auction": {
                 "n": 8,
-                "med": 91.63
+                "med": 101.25
               },
               "fixed": {
                 "n": 2,
@@ -32280,17 +32370,17 @@ const TRECA_DATA = {
               },
               "lo": 39.99,
               "hi": 999.99,
-              "newest": "2026-07-07",
-              "truncated": false
+              "newest": "2026-08-01"
             },
             {
               "months": 12,
               "n": 41,
               "nEbay": 39,
-              "medAll": 83.25,
+              "sampled": 41,
+              "medAll": 99.95,
               "auction": {
                 "n": 14,
-                "med": 73.25
+                "med": 78.75
               },
               "fixed": {
                 "n": 7,
@@ -32300,13 +32390,12 @@ const TRECA_DATA = {
                 "n": 18,
                 "med": 183.24
               },
-              "lo": 20.5,
+              "lo": 29.88,
               "hi": 999.99,
-              "newest": "2026-07-07",
-              "truncated": false
+              "newest": "2026-08-01"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec10006976) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec10006976) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -33358,160 +33447,156 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 35,
           "rawAn": 6
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 39800,
+          "p9": 14000,
+          "rawA": 13999,
+          "rawB": 4000,
+          "pop10": 30102,
+          "popTotal": 36242,
+          "rate10": 83.06,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 83.06% (g10=30102/total=36242・spec14570448) / 価格は直近値を据え置き(再取得せず) / 旧83.15% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 35,
+          "rawAn": 6
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 574,
-          "soldMedianUSD": 255,
-          "medianBasis": "eBay全込み(n99)・直近99件のみ",
+          "n": 696,
+          "soldMedianUSD": 234.75,
+          "medianBasis": "eBay全込み(n100)",
           "trend": {
             "m1": {
-              "n": 99,
-              "med": 255,
+              "n": 100,
+              "med": 234.75,
               "truncated": true
             },
             "m3": {
-              "n": 99,
-              "med": 255,
+              "n": 100,
+              "med": 234.75,
               "truncated": true
             },
             "m6": {
-              "n": 99,
-              "med": 255,
+              "n": 100,
+              "med": 234.75,
               "truncated": true
             },
             "m12": {
-              "n": 99,
-              "med": 255,
+              "n": 100,
+              "med": 234.75,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 3,
-                "actualMonths": 2.7,
-                "n": 85,
-                "med": 541.11,
-                "range": "2026-04-16〜2026-05-20",
-                "approx": false
-              },
-              {
-                "targetMonths": 6,
-                "actualMonths": 5.4,
-                "n": 100,
-                "med": 341,
-                "range": "2026-01-20〜2026-03-04",
-                "approx": false
-              },
-              {
-                "targetMonths": 12,
-                "actualMonths": 9.1,
-                "n": 13,
-                "med": 730,
-                "range": "2025-10-16〜2025-10-19",
-                "approx": true
-              }
-            ],
-            "ratio": 0.35,
-            "basis": "直近/9.1ヶ月前(履歴)",
-            "verdict": "急落",
-            "fromHistory": true,
-            "approx": true
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 100,
+              "med": 234.75,
+              "lo": 187.5,
+              "hi": 350,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 334,
-              "nEbay": 99,
-              "medAll": 255,
+              "n": 338,
+              "nEbay": 100,
+              "sampled": 100,
+              "medAll": 234.75,
               "auction": {
-                "n": 80,
-                "med": 255
+                "n": 85,
+                "med": 232.5
               },
               "fixed": {
-                "n": 12,
-                "med": 277.49
+                "n": 8,
+                "med": 269.99
               },
               "bestOffer": {
                 "n": 7,
-                "med": 275
+                "med": 260
               },
-              "lo": 216,
-              "hi": 460,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 187.5,
+              "hi": 350,
+              "newest": "2026-08-04"
             },
             {
               "months": 3,
-              "n": 574,
-              "nEbay": 99,
-              "medAll": 255,
+              "n": 696,
+              "nEbay": 100,
+              "sampled": 100,
+              "medAll": 234.75,
               "auction": {
-                "n": 80,
-                "med": 255
+                "n": 85,
+                "med": 232.5
               },
               "fixed": {
-                "n": 12,
-                "med": 277.49
+                "n": 8,
+                "med": 269.99
               },
               "bestOffer": {
                 "n": 7,
-                "med": 275
+                "med": 260
               },
-              "lo": 216,
-              "hi": 460,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 187.5,
+              "hi": 350,
+              "newest": "2026-08-04"
             },
             {
               "months": 6,
-              "n": 792,
-              "nEbay": 99,
-              "medAll": 255,
+              "n": 922,
+              "nEbay": 100,
+              "sampled": 100,
+              "medAll": 234.75,
               "auction": {
-                "n": 80,
-                "med": 255
+                "n": 85,
+                "med": 232.5
               },
               "fixed": {
-                "n": 12,
-                "med": 277.49
+                "n": 8,
+                "med": 269.99
               },
               "bestOffer": {
                 "n": 7,
-                "med": 275
+                "med": 260
               },
-              "lo": 216,
-              "hi": 460,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 187.5,
+              "hi": 350,
+              "newest": "2026-08-04"
             },
             {
               "months": 12,
-              "n": 1613,
-              "nEbay": 99,
-              "medAll": 255,
+              "n": 1762,
+              "nEbay": 100,
+              "sampled": 100,
+              "medAll": 234.75,
               "auction": {
-                "n": 80,
-                "med": 255
+                "n": 85,
+                "med": 232.5
               },
               "fixed": {
-                "n": 12,
-                "med": 277.49
+                "n": 8,
+                "med": 269.99
               },
               "bestOffer": {
                 "n": 7,
-                "med": 275
+                "med": 260
               },
-              "lo": 216,
-              "hi": 460,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 187.5,
+              "hi": 350,
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec14570448) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec14570448) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -34563,160 +34648,156 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 65,
           "rawAn": 18
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 42800,
+          "p9": 11000,
+          "rawA": 16000,
+          "rawB": 6950,
+          "pop10": 8694,
+          "popTotal": 11411,
+          "rate10": 76.19,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 76.19% (g10=8694/total=11411・spec8187014) / 価格は直近値を据え置き(再取得せず) / 旧75.33% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 65,
+          "rawAn": 18
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
           "n": 241,
-          "soldMedianUSD": 380,
-          "medianBasis": "eBay全込み(n89)・直近89件のみ",
+          "soldMedianUSD": 315,
+          "medianBasis": "eBay全込み(n91)",
           "trend": {
             "m1": {
-              "n": 73,
-              "med": 366,
+              "n": 82,
+              "med": 310.5,
               "truncated": false
             },
             "m3": {
-              "n": 89,
-              "med": 380,
+              "n": 91,
+              "med": 315,
               "truncated": true
             },
             "m6": {
-              "n": 89,
-              "med": 380,
+              "n": 91,
+              "med": 315,
               "truncated": true
             },
             "m12": {
-              "n": 89,
-              "med": 380,
+              "n": 91,
+              "med": 315,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 3,
-                "actualMonths": 3,
-                "n": 99,
-                "med": 199.99,
-                "range": "2026-04-10〜2026-05-05",
-                "approx": false
-              },
-              {
-                "targetMonths": 6,
-                "actualMonths": 4.7,
-                "n": 94,
-                "med": 160.25,
-                "range": "2026-01-24〜2026-04-10",
-                "approx": true
-              },
-              {
-                "targetMonths": 12,
-                "actualMonths": 14,
-                "n": 86,
-                "med": 31.82,
-                "range": "2025-02-10〜2025-09-07",
-                "approx": true
-              }
-            ],
-            "ratio": 11.5,
-            "basis": "直近/14ヶ月前(履歴)",
-            "verdict": "急騰",
-            "fromHistory": true,
-            "approx": true
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 82,
+              "med": 310.5,
+              "lo": 160,
+              "hi": 700,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 84,
-              "nEbay": 73,
-              "medAll": 366,
+              "n": 91,
+              "nEbay": 82,
+              "sampled": 91,
+              "medAll": 310.5,
               "auction": {
-                "n": 56,
-                "med": 365
+                "n": 68,
+                "med": 306.39
               },
               "fixed": {
-                "n": 7,
-                "med": 392.5
+                "n": 6,
+                "med": 392.22
               },
               "bestOffer": {
-                "n": 10,
-                "med": 357
+                "n": 8,
+                "med": 350
               },
-              "lo": 190.88,
+              "lo": 160,
               "hi": 700,
-              "newest": "2026-07-22",
-              "truncated": false
+              "newest": "2026-08-04"
             },
             {
               "months": 3,
               "n": 241,
-              "nEbay": 89,
-              "medAll": 380,
+              "nEbay": 91,
+              "sampled": 100,
+              "medAll": 315,
               "auction": {
-                "n": 65,
-                "med": 375
+                "n": 76,
+                "med": 310.5
               },
               "fixed": {
-                "n": 9,
-                "med": 399.99
+                "n": 6,
+                "med": 392.22
               },
               "bestOffer": {
-                "n": 15,
-                "med": 388.68
+                "n": 9,
+                "med": 350
               },
-              "lo": 190.88,
+              "lo": 160,
               "hi": 700,
-              "newest": "2026-07-22",
-              "truncated": true
+              "newest": "2026-08-04"
             },
             {
               "months": 6,
-              "n": 401,
-              "nEbay": 89,
-              "medAll": 380,
+              "n": 432,
+              "nEbay": 91,
+              "sampled": 100,
+              "medAll": 315,
               "auction": {
-                "n": 65,
-                "med": 375
+                "n": 76,
+                "med": 310.5
               },
               "fixed": {
-                "n": 9,
-                "med": 399.99
+                "n": 6,
+                "med": 392.22
               },
               "bestOffer": {
-                "n": 15,
-                "med": 388.68
+                "n": 9,
+                "med": 350
               },
-              "lo": 190.88,
+              "lo": 160,
               "hi": 700,
-              "newest": "2026-07-22",
-              "truncated": true
+              "newest": "2026-08-04"
             },
             {
               "months": 12,
-              "n": 515,
-              "nEbay": 89,
-              "medAll": 380,
+              "n": 550,
+              "nEbay": 91,
+              "sampled": 100,
+              "medAll": 315,
               "auction": {
-                "n": 65,
-                "med": 375
+                "n": 76,
+                "med": 310.5
               },
               "fixed": {
-                "n": 9,
-                "med": 399.99
+                "n": 6,
+                "med": 392.22
               },
               "bestOffer": {
-                "n": 15,
-                "med": 388.68
+                "n": 9,
+                "med": 350
               },
-              "lo": 190.88,
+              "lo": 160,
               "hi": 700,
-              "newest": "2026-07-22",
-              "truncated": true
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec8187014) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec8187014) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -35788,148 +35869,136 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 88,
+          "n": 89,
           "soldMedianUSD": 450,
-          "medianBasis": "eBay全込み(n88)",
+          "medianBasis": "eBay全込み(n89)",
           "trend": {
             "m1": {
-              "n": 35,
-              "med": 456,
+              "n": 32,
+              "med": 450,
               "truncated": false
             },
             "m3": {
-              "n": 88,
+              "n": 89,
               "med": 450,
               "truncated": false
             },
             "m6": {
               "n": 100,
-              "med": 436.8,
+              "med": 446,
               "truncated": true
             },
             "m12": {
               "n": 100,
-              "med": 436.8,
+              "med": 446,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 6,
-                "actualMonths": 5.7,
-                "n": 100,
-                "med": 150,
-                "range": "2025-12-02〜2026-04-04",
-                "approx": false
-              },
-              {
-                "targetMonths": 12,
-                "actualMonths": 10.7,
-                "n": 100,
-                "med": 132,
-                "range": "2025-07-16〜2025-10-24",
-                "approx": true
-              }
-            ],
-            "ratio": 3.45,
-            "basis": "直近/10.7ヶ月前(履歴)",
-            "verdict": "急騰",
-            "fromHistory": true,
-            "approx": true
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 32,
+              "med": 450,
+              "lo": 119,
+              "hi": 610,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 35,
-              "nEbay": 35,
-              "medAll": 456,
+              "n": 32,
+              "nEbay": 32,
+              "sampled": 32,
+              "medAll": 450,
               "auction": {
-                "n": 31,
-                "med": 456
+                "n": 28,
+                "med": 448.5
               },
               "fixed": {
-                "n": 1,
-                "med": 119
+                "n": 2,
+                "med": 288.27
               },
               "bestOffer": {
-                "n": 3,
-                "med": 475
+                "n": 2,
+                "med": 537.5
               },
               "lo": 119,
-              "hi": 679.99,
-              "newest": "2026-07-20",
-              "truncated": false
+              "hi": 610,
+              "newest": "2026-08-04"
             },
             {
               "months": 3,
-              "n": 88,
-              "nEbay": 88,
+              "n": 89,
+              "nEbay": 89,
+              "sampled": 89,
               "medAll": 450,
               "auction": {
                 "n": 65,
-                "med": 450
+                "med": 456
               },
               "fixed": {
                 "n": 14,
-                "med": 435
+                "med": 450
               },
               "bestOffer": {
-                "n": 9,
+                "n": 10,
                 "med": 450
               },
               "lo": 119,
               "hi": 774,
-              "newest": "2026-07-20",
-              "truncated": false
+              "newest": "2026-08-04"
             },
             {
               "months": 6,
-              "n": 153,
+              "n": 152,
               "nEbay": 100,
-              "medAll": 436.8,
+              "sampled": 100,
+              "medAll": 446,
               "auction": {
-                "n": 75,
-                "med": 438.6
+                "n": 74,
+                "med": 442.5
               },
               "fixed": {
                 "n": 15,
-                "med": 419.99
+                "med": 450
               },
               "bestOffer": {
-                "n": 10,
-                "med": 425
+                "n": 11,
+                "med": 450
               },
               "lo": 119,
               "hi": 774,
-              "newest": "2026-07-20",
-              "truncated": true
+              "newest": "2026-08-04"
             },
             {
               "months": 12,
-              "n": 397,
+              "n": 398,
               "nEbay": 100,
-              "medAll": 436.8,
+              "sampled": 100,
+              "medAll": 446,
               "auction": {
-                "n": 75,
-                "med": 438.6
+                "n": 74,
+                "med": 442.5
               },
               "fixed": {
                 "n": 15,
-                "med": 419.99
+                "med": 450
               },
               "bestOffer": {
-                "n": 10,
-                "med": 425
+                "n": 11,
+                "med": 450
               },
               "lo": 119,
               "hi": 774,
-              "newest": "2026-07-20",
-              "truncated": true
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec13329447) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec13329447) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -36954,50 +37023,74 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 33,
           "rawAn": 14
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 79999,
+          "p9": null,
+          "rawA": 37000,
+          "rawB": null,
+          "pop10": 179,
+          "popTotal": 184,
+          "rate10": 97.28,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 97.28% (g10=179/total=184・spec13522495) / 価格は直近値を据え置き(再取得せず) / 旧98.29% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 33,
+          "rawAn": 14
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 3,
-          "soldMedianUSD": 345.66,
-          "medianBasis": "eBay全込み(n3)",
+          "n": 8,
+          "soldMedianUSD": 268,
+          "medianBasis": "eBay全込み(n8)",
           "trend": {
             "m1": {
-              "n": 2,
-              "med": 340,
+              "n": 6,
+              "med": 265.5,
               "truncated": false
             },
             "m3": {
-              "n": 3,
-              "med": 345.66,
+              "n": 8,
+              "med": 268,
               "truncated": false
             },
             "m6": {
-              "n": 3,
-              "med": 345.66,
+              "n": 8,
+              "med": 268,
               "truncated": false
             },
             "m12": {
-              "n": 3,
-              "med": 345.66,
+              "n": 8,
+              "med": 268,
               "truncated": false
             },
-            "ratio": 1,
-            "basis": "3M/12M",
-            "verdict": "横ばい"
+            "ratio": 0.99,
+            "basis": "1M/12M",
+            "verdict": "横ばい",
+            "spot1M": {
+              "n": 6,
+              "med": 265.5,
+              "lo": 174.5,
+              "hi": 405,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 2,
-              "nEbay": 2,
-              "medAll": 340,
+              "n": 6,
+              "nEbay": 6,
+              "sampled": 6,
+              "medAll": 265.5,
               "auction": {
-                "n": 2,
-                "med": 340
+                "n": 6,
+                "med": 265.5
               },
               "fixed": {
                 "n": 0,
@@ -37007,19 +37100,19 @@ const TRECA_DATA = {
                 "n": 0,
                 "med": null
               },
-              "lo": 260,
-              "hi": 420,
-              "newest": "2026-07-13",
-              "truncated": false
+              "lo": 174.5,
+              "hi": 405,
+              "newest": "2026-08-03"
             },
             {
               "months": 3,
-              "n": 3,
-              "nEbay": 3,
-              "medAll": 345.66,
+              "n": 8,
+              "nEbay": 8,
+              "sampled": 8,
+              "medAll": 268,
               "auction": {
-                "n": 2,
-                "med": 340
+                "n": 7,
+                "med": 260
               },
               "fixed": {
                 "n": 1,
@@ -37029,19 +37122,19 @@ const TRECA_DATA = {
                 "n": 0,
                 "med": null
               },
-              "lo": 260,
-              "hi": 420,
-              "newest": "2026-07-13",
-              "truncated": false
+              "lo": 174.5,
+              "hi": 405,
+              "newest": "2026-08-03"
             },
             {
               "months": 6,
-              "n": 3,
-              "nEbay": 3,
-              "medAll": 345.66,
+              "n": 8,
+              "nEbay": 8,
+              "sampled": 8,
+              "medAll": 268,
               "auction": {
-                "n": 2,
-                "med": 340
+                "n": 7,
+                "med": 260
               },
               "fixed": {
                 "n": 1,
@@ -37051,19 +37144,19 @@ const TRECA_DATA = {
                 "n": 0,
                 "med": null
               },
-              "lo": 260,
-              "hi": 420,
-              "newest": "2026-07-13",
-              "truncated": false
+              "lo": 174.5,
+              "hi": 405,
+              "newest": "2026-08-03"
             },
             {
               "months": 12,
-              "n": 3,
-              "nEbay": 3,
-              "medAll": 345.66,
+              "n": 8,
+              "nEbay": 8,
+              "sampled": 8,
+              "medAll": 268,
               "auction": {
-                "n": 2,
-                "med": 340
+                "n": 7,
+                "med": 260
               },
               "fixed": {
                 "n": 1,
@@ -37073,13 +37166,12 @@ const TRECA_DATA = {
                 "n": 0,
                 "med": null
               },
-              "lo": 260,
-              "hi": 420,
-              "newest": "2026-07-13",
-              "truncated": false
+              "lo": 174.5,
+              "hi": 405,
+              "newest": "2026-08-03"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec13522495) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec13522495) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -38104,160 +38196,156 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 42,
           "rawAn": 15
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 63000,
+          "p9": 34800,
+          "rawA": 41800,
+          "rawB": 28500,
+          "pop10": 4387,
+          "popTotal": 4841,
+          "rate10": 90.62,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 90.62% (g10=4387/total=4841・spec13940726) / 価格は直近値を据え置き(再取得せず) / 旧90.7% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 42,
+          "rawAn": 15
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 180,
-          "soldMedianUSD": 600,
-          "medianBasis": "eBay全込み(n97)・直近97件のみ",
+          "n": 185,
+          "soldMedianUSD": 549.99,
+          "medianBasis": "eBay全込み(n97)",
           "trend": {
             "m1": {
-              "n": 42,
-              "med": 567.5,
+              "n": 54,
+              "med": 458,
               "truncated": false
             },
             "m3": {
               "n": 97,
-              "med": 600,
+              "med": 549.99,
               "truncated": true
             },
             "m6": {
               "n": 97,
-              "med": 600,
+              "med": 549.99,
               "truncated": true
             },
             "m12": {
               "n": 97,
-              "med": 600,
+              "med": 549.99,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 3,
-                "actualMonths": 2.5,
-                "n": 98,
-                "med": 217.5,
-                "range": "2026-04-18〜2026-05-29",
-                "approx": false
-              },
-              {
-                "targetMonths": 6,
-                "actualMonths": 5.4,
-                "n": 99,
-                "med": 244,
-                "range": "2026-01-26〜2026-02-24",
-                "approx": false
-              },
-              {
-                "targetMonths": 12,
-                "actualMonths": 7.9,
-                "n": 88,
-                "med": 202.5,
-                "range": "2025-09-28〜2026-01-25",
-                "approx": true
-              }
-            ],
-            "ratio": 2.8,
-            "basis": "直近/7.9ヶ月前(履歴)",
-            "verdict": "急騰",
-            "fromHistory": true,
-            "approx": true
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 54,
+              "med": 458,
+              "lo": 343,
+              "hi": 702.08,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 44,
-              "nEbay": 42,
-              "medAll": 567.5,
+              "n": 57,
+              "nEbay": 54,
+              "sampled": 57,
+              "medAll": 458,
               "auction": {
-                "n": 28,
-                "med": 560
+                "n": 37,
+                "med": 455
               },
               "fixed": {
                 "n": 7,
-                "med": 600
+                "med": 500
               },
               "bestOffer": {
-                "n": 7,
-                "med": 599
+                "n": 10,
+                "med": 455
               },
-              "lo": 425,
-              "hi": 720,
-              "newest": "2026-07-20",
-              "truncated": false
+              "lo": 343,
+              "hi": 702.08,
+              "newest": "2026-08-04"
             },
             {
               "months": 3,
-              "n": 180,
+              "n": 185,
               "nEbay": 97,
-              "medAll": 600,
+              "sampled": 100,
+              "medAll": 549.99,
               "auction": {
-                "n": 50,
-                "med": 595.5
+                "n": 62,
+                "med": 515
               },
               "fixed": {
-                "n": 13,
-                "med": 500
+                "n": 12,
+                "med": 555
               },
               "bestOffer": {
-                "n": 34,
-                "med": 650
+                "n": 23,
+                "med": 599
               },
               "lo": 100,
-              "hi": 1050,
-              "newest": "2026-07-20",
-              "truncated": true
+              "hi": 800,
+              "newest": "2026-08-04"
             },
             {
               "months": 6,
-              "n": 403,
+              "n": 415,
               "nEbay": 97,
-              "medAll": 600,
+              "sampled": 100,
+              "medAll": 549.99,
               "auction": {
-                "n": 50,
-                "med": 595.5
+                "n": 62,
+                "med": 515
               },
               "fixed": {
-                "n": 13,
-                "med": 500
+                "n": 12,
+                "med": 555
               },
               "bestOffer": {
-                "n": 34,
-                "med": 650
+                "n": 23,
+                "med": 599
               },
               "lo": 100,
-              "hi": 1050,
-              "newest": "2026-07-20",
-              "truncated": true
+              "hi": 800,
+              "newest": "2026-08-04"
             },
             {
               "months": 12,
-              "n": 488,
+              "n": 525,
               "nEbay": 97,
-              "medAll": 600,
+              "sampled": 100,
+              "medAll": 549.99,
               "auction": {
-                "n": 50,
-                "med": 595.5
+                "n": 62,
+                "med": 515
               },
               "fixed": {
-                "n": 13,
-                "med": 500
+                "n": 12,
+                "med": 555
               },
               "bestOffer": {
-                "n": 34,
-                "med": 650
+                "n": 23,
+                "med": 599
               },
               "lo": 100,
-              "hi": 1050,
-              "newest": "2026-07-20",
-              "truncated": true
+              "hi": 800,
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec13940726) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec13940726) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -39298,49 +39386,73 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 9,
           "rawAn": 16
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 26999,
+          "p9": 5600,
+          "rawA": 6000,
+          "rawB": 3000,
+          "pop10": 422,
+          "popTotal": 509,
+          "rate10": 82.91,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 82.91% (g10=422/total=509・spec14404666) / 価格は直近値を据え置き(再取得せず) / 旧83.44% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 9,
+          "rawAn": 16
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 10,
+          "n": 12,
           "soldMedianUSD": 171.25,
-          "medianBasis": "eBay全込み(n10)",
+          "medianBasis": "eBay全込み(n12)",
           "trend": {
             "m1": {
-              "n": 2,
-              "med": 216.25,
+              "n": 4,
+              "med": 213.75,
               "truncated": false
             },
             "m3": {
-              "n": 10,
+              "n": 12,
               "med": 171.25,
               "truncated": false
             },
             "m6": {
-              "n": 13,
+              "n": 15,
               "med": 99.88,
               "truncated": false
             },
             "m12": {
-              "n": 13,
+              "n": 15,
               "med": 99.88,
               "truncated": false
             },
-            "ratio": 1.71,
-            "basis": "3M/12M",
-            "verdict": "急騰"
+            "ratio": 2.14,
+            "basis": "1M/12M",
+            "verdict": "急騰",
+            "spot1M": {
+              "n": 4,
+              "med": 213.75,
+              "lo": 89,
+              "hi": 270,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 2,
-              "nEbay": 2,
-              "medAll": 216.25,
+              "n": 4,
+              "nEbay": 4,
+              "sampled": 4,
+              "medAll": 213.75,
               "auction": {
-                "n": 1,
+                "n": 3,
                 "med": 162.5
               },
               "fixed": {
@@ -39351,19 +39463,19 @@ const TRECA_DATA = {
                 "n": 1,
                 "med": 270
               },
-              "lo": 162.5,
+              "lo": 89,
               "hi": 270,
-              "newest": "2026-07-21",
-              "truncated": false
+              "newest": "2026-07-28"
             },
             {
               "months": 3,
-              "n": 10,
-              "nEbay": 10,
+              "n": 12,
+              "nEbay": 12,
+              "sampled": 12,
               "medAll": 171.25,
               "auction": {
-                "n": 4,
-                "med": 81
+                "n": 6,
+                "med": 93
               },
               "fixed": {
                 "n": 0,
@@ -39375,17 +39487,17 @@ const TRECA_DATA = {
               },
               "lo": 57.5,
               "hi": 290,
-              "newest": "2026-07-21",
-              "truncated": false
+              "newest": "2026-07-28"
             },
             {
               "months": 6,
-              "n": 13,
-              "nEbay": 13,
+              "n": 15,
+              "nEbay": 15,
+              "sampled": 15,
               "medAll": 99.88,
               "auction": {
-                "n": 7,
-                "med": 65
+                "n": 9,
+                "med": 81
               },
               "fixed": {
                 "n": 0,
@@ -39397,17 +39509,17 @@ const TRECA_DATA = {
               },
               "lo": 42,
               "hi": 290,
-              "newest": "2026-07-21",
-              "truncated": false
+              "newest": "2026-07-28"
             },
             {
               "months": 12,
-              "n": 13,
-              "nEbay": 13,
+              "n": 15,
+              "nEbay": 15,
+              "sampled": 15,
               "medAll": 99.88,
               "auction": {
-                "n": 7,
-                "med": 65
+                "n": 9,
+                "med": 81
               },
               "fixed": {
                 "n": 0,
@@ -39419,11 +39531,10 @@ const TRECA_DATA = {
               },
               "lo": 42,
               "hi": 290,
-              "newest": "2026-07-21",
-              "truncated": false
+              "newest": "2026-07-28"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec14404666) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec14404666) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -40448,29 +40559,45 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 16,
           "rawAn": 28
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 27800,
+          "p9": 7000,
+          "rawA": 3500,
+          "rawB": 1350,
+          "pop10": 1755,
+          "popTotal": 1957,
+          "rate10": 89.68,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 89.68% (g10=1755/total=1957・spec7751259) / 価格は直近値を据え置き(再取得せず) / 旧89.78% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 16,
+          "rawAn": 28
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 28,
+          "n": 26,
           "soldMedianUSD": 160,
-          "medianBasis": "eBay全込み(n27)",
+          "medianBasis": "eBay全込み(n25)",
           "trend": {
             "m1": {
-              "n": 6,
-              "med": 215.19,
+              "n": 5,
+              "med": 180.38,
               "truncated": false
             },
             "m3": {
-              "n": 27,
+              "n": 25,
               "med": 160,
               "truncated": false
             },
             "m6": {
-              "n": 37,
+              "n": 35,
               "med": 150,
               "truncated": false
             },
@@ -40479,81 +40606,89 @@ const TRECA_DATA = {
               "med": 88.65,
               "truncated": false
             },
-            "ratio": 2.43,
+            "ratio": 2.03,
             "basis": "1M/12M",
-            "verdict": "急騰"
+            "verdict": "急騰",
+            "spot1M": {
+              "n": 5,
+              "med": 180.38,
+              "lo": 122,
+              "hi": 275.6,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 6,
-              "nEbay": 6,
-              "medAll": 215.19,
+              "n": 5,
+              "nEbay": 5,
+              "sampled": 5,
+              "medAll": 180.38,
               "auction": {
                 "n": 3,
-                "med": 180.38
+                "med": 172.5
               },
               "fixed": {
                 "n": 1,
                 "med": 249.99
               },
               "bestOffer": {
-                "n": 2,
-                "med": 236.34
+                "n": 1,
+                "med": 275.6
               },
-              "lo": 170,
-              "hi": 302.67,
-              "newest": "2026-07-18",
-              "truncated": false
+              "lo": 122,
+              "hi": 275.6,
+              "newest": "2026-08-04"
             },
             {
               "months": 3,
-              "n": 28,
-              "nEbay": 27,
+              "n": 26,
+              "nEbay": 25,
+              "sampled": 26,
               "medAll": 160,
               "auction": {
-                "n": 11,
-                "med": 180.38
+                "n": 10,
+                "med": 176.44
               },
               "fixed": {
                 "n": 6,
                 "med": 122.5
               },
               "bestOffer": {
-                "n": 10,
-                "med": 155
+                "n": 9,
+                "med": 160
               },
-              "lo": 57.63,
-              "hi": 302.67,
-              "newest": "2026-07-18",
-              "truncated": false
+              "lo": 88.65,
+              "hi": 275.6,
+              "newest": "2026-08-04"
             },
             {
               "months": 6,
-              "n": 38,
-              "nEbay": 37,
+              "n": 36,
+              "nEbay": 35,
+              "sampled": 36,
               "medAll": 150,
               "auction": {
-                "n": 14,
-                "med": 168.75
+                "n": 13,
+                "med": 165
               },
               "fixed": {
                 "n": 9,
                 "med": 120
               },
               "bestOffer": {
-                "n": 14,
-                "med": 140
+                "n": 13,
+                "med": 150
               },
               "lo": 44.99,
-              "hi": 302.67,
-              "newest": "2026-07-18",
-              "truncated": false
+              "hi": 275.6,
+              "newest": "2026-08-04"
             },
             {
               "months": 12,
               "n": 71,
               "nEbay": 67,
+              "sampled": 71,
               "medAll": 88.65,
               "auction": {
                 "n": 32,
@@ -40568,12 +40703,11 @@ const TRECA_DATA = {
                 "med": 99.99
               },
               "lo": 30,
-              "hi": 302.67,
-              "newest": "2026-07-18",
-              "truncated": false
+              "hi": 275.6,
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec7751259) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec7751259) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -41598,160 +41732,156 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 19,
           "rawAn": 8
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 88500,
+          "p9": 44800,
+          "rawA": 56800,
+          "rawB": 48600,
+          "pop10": 32206,
+          "popTotal": 36274,
+          "rate10": 88.79,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 88.79% (g10=32206/total=36274・spec14955487) / 価格は直近値を据え置き(再取得せず) / 旧88.85% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 19,
+          "rawAn": 8
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 773,
-          "soldMedianUSD": 630,
-          "medianBasis": "eBay全込み(n97)・直近97件のみ",
+          "n": 809,
+          "soldMedianUSD": 619,
+          "medianBasis": "eBay全込み(n97)",
           "trend": {
             "m1": {
               "n": 97,
-              "med": 630,
+              "med": 619,
               "truncated": true
             },
             "m3": {
               "n": 97,
-              "med": 630,
+              "med": 619,
               "truncated": true
             },
             "m6": {
               "n": 97,
-              "med": 630,
+              "med": 619,
               "truncated": true
             },
             "m12": {
               "n": 97,
-              "med": 630,
+              "med": 619,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 3,
-                "actualMonths": 2.9,
-                "n": 97,
-                "med": 1050,
-                "range": "2026-04-21〜2026-05-03",
-                "approx": false
-              },
-              {
-                "targetMonths": 6,
-                "actualMonths": 5.7,
-                "n": 100,
-                "med": 600,
-                "range": "2026-01-22〜2026-02-12",
-                "approx": false
-              },
-              {
-                "targetMonths": 12,
-                "actualMonths": 7.2,
-                "n": 87,
-                "med": 625,
-                "range": "2025-12-17〜2025-12-20",
-                "approx": true
-              }
-            ],
-            "ratio": 1.01,
-            "basis": "直近/7.2ヶ月前(履歴)",
-            "verdict": "横ばい",
-            "fromHistory": true,
-            "approx": true
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 97,
+              "med": 619,
+              "lo": 560,
+              "hi": 866.28,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 329,
+              "n": 275,
               "nEbay": 97,
-              "medAll": 630,
+              "sampled": 100,
+              "medAll": 619,
               "auction": {
-                "n": 50,
-                "med": 624
+                "n": 43,
+                "med": 615
               },
               "fixed": {
-                "n": 22,
-                "med": 637.45
+                "n": 32,
+                "med": 622.5
               },
               "bestOffer": {
-                "n": 25,
-                "med": 650
+                "n": 22,
+                "med": 620
               },
               "lo": 560,
-              "hi": 915.2,
-              "newest": "2026-07-22",
-              "truncated": true
+              "hi": 866.28,
+              "newest": "2026-08-04"
             },
             {
               "months": 3,
-              "n": 773,
+              "n": 809,
               "nEbay": 97,
-              "medAll": 630,
+              "sampled": 100,
+              "medAll": 619,
               "auction": {
-                "n": 50,
-                "med": 624
+                "n": 43,
+                "med": 615
               },
               "fixed": {
-                "n": 22,
-                "med": 637.45
+                "n": 32,
+                "med": 622.5
               },
               "bestOffer": {
-                "n": 25,
-                "med": 650
+                "n": 22,
+                "med": 620
               },
               "lo": 560,
-              "hi": 915.2,
-              "newest": "2026-07-22",
-              "truncated": true
+              "hi": 866.28,
+              "newest": "2026-08-04"
             },
             {
               "months": 6,
-              "n": 1188,
+              "n": 1247,
               "nEbay": 97,
-              "medAll": 630,
+              "sampled": 100,
+              "medAll": 619,
               "auction": {
-                "n": 50,
-                "med": 624
+                "n": 43,
+                "med": 615
               },
               "fixed": {
-                "n": 22,
-                "med": 637.45
+                "n": 32,
+                "med": 622.5
               },
               "bestOffer": {
-                "n": 25,
-                "med": 650
+                "n": 22,
+                "med": 620
               },
               "lo": 560,
-              "hi": 915.2,
-              "newest": "2026-07-22",
-              "truncated": true
+              "hi": 866.28,
+              "newest": "2026-08-04"
             },
             {
               "months": 12,
-              "n": 1487,
+              "n": 1609,
               "nEbay": 97,
-              "medAll": 630,
+              "sampled": 100,
+              "medAll": 619,
               "auction": {
-                "n": 50,
-                "med": 624
+                "n": 43,
+                "med": 615
               },
               "fixed": {
-                "n": 22,
-                "med": 637.45
+                "n": 32,
+                "med": 622.5
               },
               "bestOffer": {
-                "n": 25,
-                "med": 650
+                "n": 22,
+                "med": 620
               },
               "lo": 560,
-              "hi": 915.2,
-              "newest": "2026-07-22",
-              "truncated": true
+              "hi": 866.28,
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec14955487) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec14955487) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -42780,7 +42910,7 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
           "n": 3,
@@ -42809,13 +42939,21 @@ const TRECA_DATA = {
             },
             "ratio": 1.13,
             "basis": "3M/12M",
-            "verdict": "上昇"
+            "verdict": "上昇",
+            "spot1M": {
+              "n": 0,
+              "med": null,
+              "lo": null,
+              "hi": null,
+              "reliable": false
+            }
           },
           "points": [
             {
               "months": 1,
               "n": 0,
               "nEbay": 0,
+              "sampled": 0,
               "medAll": null,
               "auction": {
                 "n": 0,
@@ -42831,13 +42969,13 @@ const TRECA_DATA = {
               },
               "lo": null,
               "hi": null,
-              "newest": null,
-              "truncated": false
+              "newest": null
             },
             {
               "months": 3,
               "n": 3,
               "nEbay": 3,
+              "sampled": 3,
               "medAll": 225,
               "auction": {
                 "n": 0,
@@ -42853,13 +42991,13 @@ const TRECA_DATA = {
               },
               "lo": 200,
               "hi": 273.87,
-              "newest": "2026-06-12",
-              "truncated": false
+              "newest": "2026-06-12"
             },
             {
               "months": 6,
               "n": 9,
               "nEbay": 9,
+              "sampled": 9,
               "medAll": 200,
               "auction": {
                 "n": 4,
@@ -42875,13 +43013,13 @@ const TRECA_DATA = {
               },
               "lo": 86.11,
               "hi": 340,
-              "newest": "2026-06-12",
-              "truncated": false
+              "newest": "2026-06-12"
             },
             {
               "months": 12,
               "n": 9,
               "nEbay": 9,
+              "sampled": 9,
               "medAll": 200,
               "auction": {
                 "n": 4,
@@ -42897,11 +43035,10 @@ const TRECA_DATA = {
               },
               "lo": 86.11,
               "hi": 340,
-              "newest": "2026-06-12",
-              "truncated": false
+              "newest": "2026-06-12"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec10561339) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec10561339) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -43926,160 +44063,156 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 46,
           "rawAn": 1
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 48800,
+          "p9": 26666,
+          "rawA": 27500,
+          "rawB": 24500,
+          "pop10": 17294,
+          "popTotal": 18362,
+          "rate10": 94.18,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 94.18% (g10=17294/total=18362・spec14272780) / 価格は直近値を据え置き(再取得せず) / 旧94.13% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 46,
+          "rawAn": 1
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 822,
-          "soldMedianUSD": 374,
-          "medianBasis": "eBay全込み(n99)・直近99件のみ",
+          "n": 938,
+          "soldMedianUSD": 306,
+          "medianBasis": "eBay全込み(n98)",
           "trend": {
             "m1": {
-              "n": 99,
-              "med": 374,
+              "n": 98,
+              "med": 306,
               "truncated": true
             },
             "m3": {
-              "n": 99,
-              "med": 374,
+              "n": 98,
+              "med": 306,
               "truncated": true
             },
             "m6": {
-              "n": 99,
-              "med": 374,
+              "n": 98,
+              "med": 306,
               "truncated": true
             },
             "m12": {
-              "n": 99,
-              "med": 374,
+              "n": 98,
+              "med": 306,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 3,
-                "actualMonths": 3.1,
-                "n": 99,
-                "med": 172.5,
-                "range": "2026-04-17〜2026-04-25",
-                "approx": false
-              },
-              {
-                "targetMonths": 6,
-                "actualMonths": 7.4,
-                "n": 95,
-                "med": 350,
-                "range": "2025-10-17〜2026-02-08",
-                "approx": true
-              },
-              {
-                "targetMonths": 12,
-                "actualMonths": 7.4,
-                "n": 95,
-                "med": 350,
-                "range": "2025-10-17〜2026-02-08",
-                "approx": true
-              }
-            ],
-            "ratio": 1.07,
-            "basis": "直近/7.4ヶ月前(履歴)",
-            "verdict": "横ばい",
-            "fromHistory": true,
-            "approx": true
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 98,
+              "med": 306,
+              "lo": 255,
+              "hi": 552.26,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 198,
-              "nEbay": 99,
-              "medAll": 374,
+              "n": 303,
+              "nEbay": 98,
+              "sampled": 100,
+              "medAll": 306,
               "auction": {
-                "n": 88,
-                "med": 372
+                "n": 78,
+                "med": 305
               },
               "fixed": {
-                "n": 6,
-                "med": 413.88
+                "n": 12,
+                "med": 350
               },
               "bestOffer": {
-                "n": 5,
-                "med": 355
+                "n": 8,
+                "med": 329.5
               },
-              "lo": 315,
-              "hi": 475,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 255,
+              "hi": 552.26,
+              "newest": "2026-08-04"
             },
             {
               "months": 3,
-              "n": 822,
-              "nEbay": 99,
-              "medAll": 374,
+              "n": 938,
+              "nEbay": 98,
+              "sampled": 100,
+              "medAll": 306,
               "auction": {
-                "n": 88,
-                "med": 372
+                "n": 78,
+                "med": 305
               },
               "fixed": {
-                "n": 6,
-                "med": 413.88
+                "n": 12,
+                "med": 350
               },
               "bestOffer": {
-                "n": 5,
-                "med": 355
+                "n": 8,
+                "med": 329.5
               },
-              "lo": 315,
-              "hi": 475,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 255,
+              "hi": 552.26,
+              "newest": "2026-08-04"
             },
             {
               "months": 6,
-              "n": 1452,
-              "nEbay": 99,
-              "medAll": 374,
+              "n": 1615,
+              "nEbay": 98,
+              "sampled": 100,
+              "medAll": 306,
               "auction": {
-                "n": 88,
-                "med": 372
+                "n": 78,
+                "med": 305
               },
               "fixed": {
-                "n": 6,
-                "med": 413.88
+                "n": 12,
+                "med": 350
               },
               "bestOffer": {
-                "n": 5,
-                "med": 355
+                "n": 8,
+                "med": 329.5
               },
-              "lo": 315,
-              "hi": 475,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 255,
+              "hi": 552.26,
+              "newest": "2026-08-04"
             },
             {
               "months": 12,
-              "n": 1496,
-              "nEbay": 99,
-              "medAll": 374,
+              "n": 1694,
+              "nEbay": 98,
+              "sampled": 100,
+              "medAll": 306,
               "auction": {
-                "n": 88,
-                "med": 372
+                "n": 78,
+                "med": 305
               },
               "fixed": {
-                "n": 6,
-                "med": 413.88
+                "n": 12,
+                "med": 350
               },
               "bestOffer": {
-                "n": 5,
-                "med": 355
+                "n": 8,
+                "med": 329.5
               },
-              "lo": 315,
-              "hi": 475,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 255,
+              "hi": 552.26,
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec14272780) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec14272780) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -45104,160 +45237,156 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 33,
           "rawAn": 7
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 76800,
+          "p9": 33000,
+          "rawA": 45000,
+          "rawB": 29500,
+          "pop10": 29778,
+          "popTotal": 34253,
+          "rate10": 86.94,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 86.94% (g10=29778/total=34253・spec14955481) / 価格は直近値を据え置き(再取得せず) / 旧86.82% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 33,
+          "rawAn": 7
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 445,
-          "soldMedianUSD": 485,
-          "medianBasis": "eBay全込み(n95)・直近95件のみ",
+          "n": 467,
+          "soldMedianUSD": 468.5,
+          "medianBasis": "eBay全込み(n92)",
           "trend": {
             "m1": {
-              "n": 95,
-              "med": 485,
+              "n": 92,
+              "med": 468.5,
               "truncated": true
             },
             "m3": {
-              "n": 95,
-              "med": 485,
+              "n": 92,
+              "med": 468.5,
               "truncated": true
             },
             "m6": {
-              "n": 95,
-              "med": 485,
+              "n": 92,
+              "med": 468.5,
               "truncated": true
             },
             "m12": {
-              "n": 95,
-              "med": 485,
+              "n": 92,
+              "med": 468.5,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 3,
-                "actualMonths": 3.2,
-                "n": 100,
-                "med": 800.5,
-                "range": "2026-03-29〜2026-05-10",
-                "approx": false
-              },
-              {
-                "targetMonths": 6,
-                "actualMonths": 5.7,
-                "n": 100,
-                "med": 475,
-                "range": "2026-01-17〜2026-02-18",
-                "approx": false
-              },
-              {
-                "targetMonths": 12,
-                "actualMonths": 6.7,
-                "n": 48,
-                "med": 511,
-                "range": "2025-12-17〜2026-01-17",
-                "approx": true
-              }
-            ],
-            "ratio": 0.95,
-            "basis": "直近/6.7ヶ月前(履歴)",
-            "verdict": "横ばい",
-            "fromHistory": true,
-            "approx": true
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 92,
+              "med": 468.5,
+              "lo": 37.81,
+              "hi": 664.24,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 218,
-              "nEbay": 95,
-              "medAll": 485,
+              "n": 172,
+              "nEbay": 92,
+              "sampled": 100,
+              "medAll": 468.5,
               "auction": {
-                "n": 65,
-                "med": 480
+                "n": 57,
+                "med": 466
               },
               "fixed": {
-                "n": 10,
-                "med": 509.99
+                "n": 13,
+                "med": 475
               },
               "bestOffer": {
-                "n": 20,
-                "med": 497
+                "n": 22,
+                "med": 475
               },
-              "lo": 400,
-              "hi": 650,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 37.81,
+              "hi": 664.24,
+              "newest": "2026-08-04"
             },
             {
               "months": 3,
-              "n": 445,
-              "nEbay": 95,
-              "medAll": 485,
+              "n": 467,
+              "nEbay": 92,
+              "sampled": 100,
+              "medAll": 468.5,
               "auction": {
-                "n": 65,
-                "med": 480
+                "n": 57,
+                "med": 466
               },
               "fixed": {
-                "n": 10,
-                "med": 509.99
+                "n": 13,
+                "med": 475
               },
               "bestOffer": {
-                "n": 20,
-                "med": 497
+                "n": 22,
+                "med": 475
               },
-              "lo": 400,
-              "hi": 650,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 37.81,
+              "hi": 664.24,
+              "newest": "2026-08-04"
             },
             {
               "months": 6,
-              "n": 654,
-              "nEbay": 95,
-              "medAll": 485,
+              "n": 684,
+              "nEbay": 92,
+              "sampled": 100,
+              "medAll": 468.5,
               "auction": {
-                "n": 65,
-                "med": 480
+                "n": 57,
+                "med": 466
               },
               "fixed": {
-                "n": 10,
-                "med": 509.99
+                "n": 13,
+                "med": 475
               },
               "bestOffer": {
-                "n": 20,
-                "med": 497
+                "n": 22,
+                "med": 475
               },
-              "lo": 400,
-              "hi": 650,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 37.81,
+              "hi": 664.24,
+              "newest": "2026-08-04"
             },
             {
               "months": 12,
-              "n": 748,
-              "nEbay": 95,
-              "medAll": 485,
+              "n": 804,
+              "nEbay": 92,
+              "sampled": 100,
+              "medAll": 468.5,
               "auction": {
-                "n": 65,
-                "med": 480
+                "n": 57,
+                "med": 466
               },
               "fixed": {
-                "n": 10,
-                "med": 509.99
+                "n": 13,
+                "med": 475
               },
               "bestOffer": {
-                "n": 20,
-                "med": 497
+                "n": 22,
+                "med": 475
               },
-              "lo": 400,
-              "hi": 650,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 37.81,
+              "hi": 664.24,
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec14955481) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec14955481) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -46286,156 +46415,136 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 269,
-          "soldMedianUSD": 694.44,
-          "medianBasis": "eBay全込み(n94)・直近94件のみ",
+          "n": 278,
+          "soldMedianUSD": 675,
+          "medianBasis": "eBay全込み(n92)",
           "trend": {
             "m1": {
-              "n": 79,
-              "med": 690,
+              "n": 84,
+              "med": 673.95,
               "truncated": false
             },
             "m3": {
-              "n": 94,
-              "med": 694.44,
+              "n": 92,
+              "med": 675,
               "truncated": true
             },
             "m6": {
-              "n": 94,
-              "med": 694.44,
+              "n": 92,
+              "med": 675,
               "truncated": true
             },
             "m12": {
-              "n": 94,
-              "med": 694.44,
+              "n": 92,
+              "med": 675,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 3,
-                "actualMonths": 2.7,
-                "n": 92,
-                "med": 863.5,
-                "range": "2026-04-18〜2026-05-18",
-                "approx": false
-              },
-              {
-                "targetMonths": 6,
-                "actualMonths": 6.2,
-                "n": 93,
-                "med": 390,
-                "range": "2026-01-03〜2026-01-28",
-                "approx": false
-              },
-              {
-                "targetMonths": 12,
-                "actualMonths": 12.3,
-                "n": 95,
-                "med": 272,
-                "range": "2025-07-06〜2025-07-28",
-                "approx": false
-              }
-            ],
-            "ratio": 2.54,
-            "basis": "直近/12.3ヶ月前(履歴)",
-            "verdict": "急騰",
-            "fromHistory": true,
-            "approx": false
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 84,
+              "med": 673.95,
+              "lo": 26,
+              "hi": 945.79,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 84,
-              "nEbay": 79,
-              "medAll": 690,
+              "n": 92,
+              "nEbay": 84,
+              "sampled": 92,
+              "medAll": 673.95,
               "auction": {
-                "n": 36,
-                "med": 681
+                "n": 35,
+                "med": 661.01
               },
               "fixed": {
-                "n": 22,
-                "med": 700
+                "n": 23,
+                "med": 690
               },
               "bestOffer": {
-                "n": 21,
-                "med": 690
+                "n": 26,
+                "med": 667.63
               },
               "lo": 26,
               "hi": 945.79,
-              "newest": "2026-07-22",
-              "truncated": false
+              "newest": "2026-08-04"
             },
             {
               "months": 3,
-              "n": 269,
-              "nEbay": 94,
-              "medAll": 694.44,
+              "n": 278,
+              "nEbay": 92,
+              "sampled": 100,
+              "medAll": 675,
               "auction": {
-                "n": 44,
-                "med": 688.89
+                "n": 38,
+                "med": 665.51
               },
               "fixed": {
-                "n": 24,
-                "med": 700.5
+                "n": 25,
+                "med": 690
               },
               "bestOffer": {
-                "n": 26,
-                "med": 692.5
+                "n": 29,
+                "med": 675
               },
               "lo": 26,
               "hi": 945.79,
-              "newest": "2026-07-22",
-              "truncated": true
+              "newest": "2026-08-04"
             },
             {
               "months": 6,
-              "n": 713,
-              "nEbay": 94,
-              "medAll": 694.44,
+              "n": 717,
+              "nEbay": 92,
+              "sampled": 100,
+              "medAll": 675,
               "auction": {
-                "n": 44,
-                "med": 688.89
+                "n": 38,
+                "med": 665.51
               },
               "fixed": {
-                "n": 24,
-                "med": 700.5
+                "n": 25,
+                "med": 690
               },
               "bestOffer": {
-                "n": 26,
-                "med": 692.5
+                "n": 29,
+                "med": 675
               },
               "lo": 26,
               "hi": 945.79,
-              "newest": "2026-07-22",
-              "truncated": true
+              "newest": "2026-08-04"
             },
             {
               "months": 12,
-              "n": 1422,
-              "nEbay": 94,
-              "medAll": 694.44,
+              "n": 1406,
+              "nEbay": 92,
+              "sampled": 100,
+              "medAll": 675,
               "auction": {
-                "n": 44,
-                "med": 688.89
+                "n": 38,
+                "med": 665.51
               },
               "fixed": {
-                "n": 24,
-                "med": 700.5
+                "n": 25,
+                "med": 690
               },
               "bestOffer": {
-                "n": 26,
-                "med": 692.5
+                "n": 29,
+                "med": 675
               },
               "lo": 26,
               "hi": 945.79,
-              "newest": "2026-07-22",
-              "truncated": true
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec8966982) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec8966982) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         },
         "buyback": {
           "shop": "トレカバンク",
@@ -47470,128 +47579,135 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 36,
+          "n": 43,
           "soldMedianUSD": 355,
-          "medianBasis": "eBay全込み(n28)",
+          "medianBasis": "eBay全込み(n34)",
           "trend": {
             "m1": {
-              "n": 6,
-              "med": 405,
+              "n": 11,
+              "med": 369.99,
               "truncated": false
             },
             "m3": {
-              "n": 28,
+              "n": 34,
               "med": 355,
               "truncated": false
             },
             "m6": {
-              "n": 59,
-              "med": 225,
+              "n": 57,
+              "med": 255,
               "truncated": false
             },
             "m12": {
-              "n": 78,
-              "med": 219,
+              "n": 85,
+              "med": 220,
               "truncated": false
             },
-            "ratio": 1.85,
+            "ratio": 1.68,
             "basis": "1M/12M",
-            "verdict": "急騰"
+            "verdict": "急騰",
+            "spot1M": {
+              "n": 11,
+              "med": 369.99,
+              "lo": 265,
+              "hi": 600,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 9,
-              "nEbay": 6,
-              "medAll": 405,
+              "n": 15,
+              "nEbay": 11,
+              "sampled": 15,
+              "medAll": 369.99,
               "auction": {
-                "n": 5,
-                "med": 405
+                "n": 8,
+                "med": 350
               },
               "fixed": {
-                "n": 1,
+                "n": 2,
                 "med": 425
               },
               "bestOffer": {
-                "n": 0,
-                "med": null
+                "n": 1,
+                "med": 600
               },
-              "lo": 355,
-              "hi": 460,
-              "newest": "2026-07-20",
-              "truncated": false
+              "lo": 265,
+              "hi": 600,
+              "newest": "2026-08-03"
             },
             {
               "months": 3,
-              "n": 36,
-              "nEbay": 28,
+              "n": 43,
+              "nEbay": 34,
+              "sampled": 43,
               "medAll": 355,
               "auction": {
-                "n": 17,
+                "n": 21,
                 "med": 345
               },
               "fixed": {
-                "n": 3,
+                "n": 4,
                 "med": 425
               },
               "bestOffer": {
-                "n": 8,
-                "med": 412.5
+                "n": 9,
+                "med": 425
               },
               "lo": 168.5,
               "hi": 600,
-              "newest": "2026-07-20",
-              "truncated": false
+              "newest": "2026-08-03"
             },
             {
               "months": 6,
-              "n": 67,
-              "nEbay": 59,
-              "medAll": 225,
+              "n": 66,
+              "nEbay": 57,
+              "sampled": 66,
+              "medAll": 255,
               "auction": {
-                "n": 31,
-                "med": 222.5
+                "n": 29,
+                "med": 308
               },
               "fixed": {
                 "n": 7,
-                "med": 230
+                "med": 250
               },
               "bestOffer": {
                 "n": 21,
-                "med": 230
+                "med": 232
               },
               "lo": 168.5,
               "hi": 600,
-              "newest": "2026-07-20",
-              "truncated": false
+              "newest": "2026-08-03"
             },
             {
               "months": 12,
-              "n": 86,
-              "nEbay": 78,
-              "medAll": 219,
+              "n": 94,
+              "nEbay": 85,
+              "sampled": 94,
+              "medAll": 220,
               "auction": {
-                "n": 43,
-                "med": 215.37
+                "n": 48,
+                "med": 220
               },
               "fixed": {
-                "n": 7,
-                "med": 230
+                "n": 8,
+                "med": 240
               },
               "bestOffer": {
-                "n": 28,
+                "n": 29,
                 "med": 219
               },
               "lo": 152.5,
               "hi": 600,
-              "newest": "2026-07-20",
-              "truncated": false
+              "newest": "2026-08-03"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec14742025) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec14742025) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -48652,109 +48768,117 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 9,
-          "soldMedianUSD": 222.52,
-          "medianBasis": "eBay全込み(n9)",
+          "n": 12,
+          "soldMedianUSD": 179.45,
+          "medianBasis": "eBay全込み(n12)",
           "trend": {
             "m1": {
-              "n": 3,
-              "med": 157.49,
+              "n": 6,
+              "med": 134.95,
               "truncated": false
             },
             "m3": {
-              "n": 9,
-              "med": 222.52,
+              "n": 12,
+              "med": 179.45,
               "truncated": false
             },
             "m6": {
-              "n": 21,
-              "med": 157.49,
+              "n": 23,
+              "med": 150,
               "truncated": false
             },
             "m12": {
-              "n": 26,
-              "med": 142.01,
+              "n": 30,
+              "med": 140.95,
               "truncated": false
             },
-            "ratio": 1.11,
+            "ratio": 0.96,
             "basis": "1M/12M",
-            "verdict": "上昇"
+            "verdict": "横ばい",
+            "spot1M": {
+              "n": 6,
+              "med": 134.95,
+              "lo": 76.23,
+              "hi": 157.49,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 3,
-              "nEbay": 3,
-              "medAll": 157.49,
+              "n": 6,
+              "nEbay": 6,
+              "sampled": 6,
+              "medAll": 134.95,
               "auction": {
-                "n": 3,
-                "med": 157.49
+                "n": 2,
+                "med": 132.49
               },
               "fixed": {
                 "n": 0,
                 "med": null
               },
               "bestOffer": {
-                "n": 0,
-                "med": null
+                "n": 4,
+                "med": 134.95
               },
-              "lo": 107.49,
-              "hi": 223.05,
-              "newest": "2026-07-19",
-              "truncated": false
+              "lo": 76.23,
+              "hi": 157.49,
+              "newest": "2026-08-01"
             },
             {
               "months": 3,
-              "n": 9,
-              "nEbay": 9,
-              "medAll": 222.52,
+              "n": 12,
+              "nEbay": 12,
+              "sampled": 12,
+              "medAll": 179.45,
               "auction": {
-                "n": 4,
-                "med": 181.03
+                "n": 3,
+                "med": 157.49
               },
               "fixed": {
                 "n": 2,
                 "med": 244.85
               },
               "bestOffer": {
-                "n": 3,
-                "med": 222.52
+                "n": 7,
+                "med": 150
               },
-              "lo": 107.49,
+              "lo": 76.23,
               "hi": 250,
-              "newest": "2026-07-19",
-              "truncated": false
+              "newest": "2026-08-01"
             },
             {
               "months": 6,
-              "n": 23,
-              "nEbay": 21,
-              "medAll": 157.49,
+              "n": 24,
+              "nEbay": 23,
+              "sampled": 24,
+              "medAll": 150,
               "auction": {
                 "n": 7,
                 "med": 123.94
               },
               "fixed": {
-                "n": 5,
-                "med": 239.69
+                "n": 4,
+                "med": 244.85
               },
               "bestOffer": {
-                "n": 9,
-                "med": 201.41
+                "n": 12,
+                "med": 147.5
               },
               "lo": 71,
               "hi": 350,
-              "newest": "2026-07-19",
-              "truncated": false
+              "newest": "2026-08-01"
             },
             {
               "months": 12,
-              "n": 28,
-              "nEbay": 26,
-              "medAll": 142.01,
+              "n": 32,
+              "nEbay": 30,
+              "sampled": 32,
+              "medAll": 140.95,
               "auction": {
                 "n": 10,
                 "med": 110.09
@@ -48764,16 +48888,15 @@ const TRECA_DATA = {
                 "med": 239.69
               },
               "bestOffer": {
-                "n": 11,
-                "med": 145
+                "n": 15,
+                "med": 141.9
               },
               "lo": 21.5,
               "hi": 350,
-              "newest": "2026-07-19",
-              "truncated": false
+              "newest": "2026-08-01"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec10460982) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec10460982) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -49798,160 +49921,156 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 43,
           "rawAn": 9
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 46500,
+          "p9": 27800,
+          "rawA": 25000,
+          "rawB": 25345,
+          "pop10": 12788,
+          "popTotal": 13610,
+          "rate10": 93.96,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 93.96% (g10=12788/total=13610・spec15588519) / 価格は直近値を据え置き(再取得せず) / 旧94.16% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 43,
+          "rawAn": 9
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 312,
-          "soldMedianUSD": 316.16,
-          "medianBasis": "eBay全込み(n99)・直近99件のみ",
+          "n": 340,
+          "soldMedianUSD": 313.5,
+          "medianBasis": "eBay全込み(n98)",
           "trend": {
             "m1": {
-              "n": 99,
-              "med": 316.16,
+              "n": 98,
+              "med": 313.5,
               "truncated": true
             },
             "m3": {
-              "n": 99,
-              "med": 316.16,
+              "n": 98,
+              "med": 313.5,
               "truncated": true
             },
             "m6": {
-              "n": 99,
-              "med": 316.16,
+              "n": 98,
+              "med": 313.5,
               "truncated": true
             },
             "m12": {
-              "n": 99,
-              "med": 316.16,
+              "n": 98,
+              "med": 313.5,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 3,
-                "actualMonths": 3.2,
-                "n": 42,
-                "med": 725.5,
-                "range": "2026-04-12〜2026-04-27",
-                "approx": false
-              },
-              {
-                "targetMonths": 6,
-                "actualMonths": 3.2,
-                "n": 42,
-                "med": 725.5,
-                "range": "2026-04-12〜2026-04-27",
-                "approx": true
-              },
-              {
-                "targetMonths": 12,
-                "actualMonths": 3.2,
-                "n": 42,
-                "med": 725.5,
-                "range": "2026-04-12〜2026-04-27",
-                "approx": true
-              }
-            ],
-            "ratio": 0.44,
-            "basis": "直近/3.2ヶ月前(履歴)",
-            "verdict": "急落",
-            "fromHistory": true,
-            "approx": true
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 98,
+              "med": 313.5,
+              "lo": 271,
+              "hi": 458,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 151,
-              "nEbay": 99,
-              "medAll": 316.16,
+              "n": 124,
+              "nEbay": 98,
+              "sampled": 100,
+              "medAll": 313.5,
               "auction": {
-                "n": 76,
-                "med": 316
+                "n": 61,
+                "med": 310
               },
               "fixed": {
-                "n": 5,
-                "med": 399.98
+                "n": 12,
+                "med": 315.45
               },
               "bestOffer": {
-                "n": 18,
+                "n": 25,
                 "med": 325
               },
-              "lo": 290,
-              "hi": 526.4,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 271,
+              "hi": 458,
+              "newest": "2026-08-04"
             },
             {
               "months": 3,
-              "n": 312,
-              "nEbay": 99,
-              "medAll": 316.16,
+              "n": 340,
+              "nEbay": 98,
+              "sampled": 100,
+              "medAll": 313.5,
               "auction": {
-                "n": 76,
-                "med": 316
+                "n": 61,
+                "med": 310
               },
               "fixed": {
-                "n": 5,
-                "med": 399.98
+                "n": 12,
+                "med": 315.45
               },
               "bestOffer": {
-                "n": 18,
+                "n": 25,
                 "med": 325
               },
-              "lo": 290,
-              "hi": 526.4,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 271,
+              "hi": 458,
+              "newest": "2026-08-04"
             },
             {
               "months": 6,
-              "n": 342,
-              "nEbay": 99,
-              "medAll": 316.16,
+              "n": 398,
+              "nEbay": 98,
+              "sampled": 100,
+              "medAll": 313.5,
               "auction": {
-                "n": 76,
-                "med": 316
+                "n": 61,
+                "med": 310
               },
               "fixed": {
-                "n": 5,
-                "med": 399.98
+                "n": 12,
+                "med": 315.45
               },
               "bestOffer": {
-                "n": 18,
+                "n": 25,
                 "med": 325
               },
-              "lo": 290,
-              "hi": 526.4,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 271,
+              "hi": 458,
+              "newest": "2026-08-04"
             },
             {
               "months": 12,
-              "n": 342,
-              "nEbay": 99,
-              "medAll": 316.16,
+              "n": 398,
+              "nEbay": 98,
+              "sampled": 100,
+              "medAll": 313.5,
               "auction": {
-                "n": 76,
-                "med": 316
+                "n": 61,
+                "med": 310
               },
               "fixed": {
-                "n": 5,
-                "med": 399.98
+                "n": 12,
+                "med": 315.45
               },
               "bestOffer": {
-                "n": 18,
+                "n": 25,
                 "med": 325
               },
-              "lo": 290,
-              "hi": 526.4,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 271,
+              "hi": 458,
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec15588519) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec15588519) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -50976,50 +51095,74 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 23,
           "rawAn": 6
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 43000,
+          "p9": 10000,
+          "rawA": 10500,
+          "rawB": 7000,
+          "pop10": 554,
+          "popTotal": 639,
+          "rate10": 86.7,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 86.7% (g10=554/total=639・spec12937958) / 価格は直近値を据え置き(再取得せず) / 旧86.21% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 23,
+          "rawAn": 6
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 8,
-          "soldMedianUSD": 187.26,
-          "medianBasis": "eBay全込み(n8)",
+          "n": 11,
+          "soldMedianUSD": 217.5,
+          "medianBasis": "eBay全込み(n11)",
           "trend": {
             "m1": {
-              "n": 3,
-              "med": 217.5,
+              "n": 4,
+              "med": 262.47,
               "truncated": false
             },
             "m3": {
-              "n": 8,
-              "med": 187.26,
+              "n": 11,
+              "med": 217.5,
               "truncated": false
             },
             "m6": {
-              "n": 9,
-              "med": 170,
+              "n": 12,
+              "med": 211.01,
               "truncated": false
             },
             "m12": {
-              "n": 18,
-              "med": 130,
+              "n": 19,
+              "med": 155,
               "truncated": false
             },
-            "ratio": 1.67,
+            "ratio": 1.69,
             "basis": "1M/12M",
-            "verdict": "急騰"
+            "verdict": "急騰",
+            "spot1M": {
+              "n": 4,
+              "med": 262.47,
+              "lo": 222.5,
+              "hi": 304.99,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 3,
-              "nEbay": 3,
-              "medAll": 217.5,
+              "n": 4,
+              "nEbay": 4,
+              "sampled": 4,
+              "medAll": 262.47,
               "auction": {
-                "n": 2,
-                "med": 220
+                "n": 3,
+                "med": 270
               },
               "fixed": {
                 "n": 0,
@@ -51027,65 +51170,65 @@ const TRECA_DATA = {
               },
               "bestOffer": {
                 "n": 1,
-                "med": 204.52
+                "med": 254.94
               },
-              "lo": 204.52,
-              "hi": 222.5,
-              "newest": "2026-07-15",
-              "truncated": false
+              "lo": 222.5,
+              "hi": 304.99,
+              "newest": "2026-08-01"
             },
             {
               "months": 3,
-              "n": 8,
-              "nEbay": 8,
-              "medAll": 187.26,
+              "n": 11,
+              "nEbay": 11,
+              "sampled": 11,
+              "medAll": 217.5,
               "auction": {
-                "n": 5,
-                "med": 155
+                "n": 7,
+                "med": 217.5
               },
               "fixed": {
                 "n": 0,
                 "med": null
               },
               "bestOffer": {
-                "n": 3,
-                "med": 204.52
+                "n": 4,
+                "med": 229.73
               },
               "lo": 132.5,
-              "hi": 300,
-              "newest": "2026-07-15",
-              "truncated": false
+              "hi": 304.99,
+              "newest": "2026-08-01"
             },
             {
               "months": 6,
-              "n": 9,
-              "nEbay": 9,
-              "medAll": 170,
+              "n": 12,
+              "nEbay": 12,
+              "sampled": 12,
+              "medAll": 211.01,
               "auction": {
-                "n": 5,
-                "med": 155
+                "n": 7,
+                "med": 217.5
               },
               "fixed": {
                 "n": 1,
                 "med": 119.99
               },
               "bestOffer": {
-                "n": 3,
-                "med": 204.52
+                "n": 4,
+                "med": 229.73
               },
               "lo": 119.99,
-              "hi": 300,
-              "newest": "2026-07-15",
-              "truncated": false
+              "hi": 304.99,
+              "newest": "2026-08-01"
             },
             {
               "months": 12,
-              "n": 18,
-              "nEbay": 18,
-              "medAll": 130,
+              "n": 19,
+              "nEbay": 19,
+              "sampled": 19,
+              "medAll": 155,
               "auction": {
-                "n": 10,
-                "med": 142.75
+                "n": 11,
+                "med": 155
               },
               "fixed": {
                 "n": 2,
@@ -51093,15 +51236,14 @@ const TRECA_DATA = {
               },
               "bestOffer": {
                 "n": 6,
-                "med": 132.5
+                "med": 187.26
               },
               "lo": 71,
-              "hi": 300,
-              "newest": "2026-07-15",
-              "truncated": false
+              "hi": 304.99,
+              "newest": "2026-08-01"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec12937958) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec12937958) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -52126,16 +52268,32 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 26,
           "rawAn": 22
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 27000,
+          "p9": null,
+          "rawA": 5800,
+          "rawB": 5500,
+          "pop10": 1747,
+          "popTotal": 1792,
+          "rate10": 97.49,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 97.49% (g10=1747/total=1792・spec12990878) / 価格は直近値を据え置き(再取得せず) / 旧97.6% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 26,
+          "rawAn": 22
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 19,
-          "soldMedianUSD": 190,
-          "medianBasis": "eBay全込み(n19)",
+          "n": 14,
+          "soldMedianUSD": 230.6,
+          "medianBasis": "eBay全込み(n14)",
           "trend": {
             "m1": {
               "n": 2,
@@ -52143,29 +52301,37 @@ const TRECA_DATA = {
               "truncated": false
             },
             "m3": {
-              "n": 19,
-              "med": 190,
+              "n": 14,
+              "med": 230.6,
               "truncated": false
             },
             "m6": {
-              "n": 34,
-              "med": 153.5,
+              "n": 30,
+              "med": 156.75,
               "truncated": false
             },
             "m12": {
-              "n": 54,
-              "med": 120,
+              "n": 51,
+              "med": 122.5,
               "truncated": false
             },
-            "ratio": 1.58,
+            "ratio": 1.88,
             "basis": "3M/12M",
-            "verdict": "急騰"
+            "verdict": "急騰",
+            "spot1M": {
+              "n": 2,
+              "med": 252.5,
+              "lo": 250,
+              "hi": 255,
+              "reliable": false
+            }
           },
           "points": [
             {
               "months": 1,
               "n": 2,
               "nEbay": 2,
+              "sampled": 2,
               "medAll": 252.5,
               "auction": {
                 "n": 0,
@@ -52181,61 +52347,61 @@ const TRECA_DATA = {
               },
               "lo": 250,
               "hi": 255,
-              "newest": "2026-07-11",
-              "truncated": false
+              "newest": "2026-07-11"
             },
             {
               "months": 3,
-              "n": 19,
-              "nEbay": 19,
-              "medAll": 190,
+              "n": 14,
+              "nEbay": 14,
+              "sampled": 14,
+              "medAll": 230.6,
               "auction": {
-                "n": 4,
-                "med": 142
+                "n": 2,
+                "med": 233.25
               },
               "fixed": {
                 "n": 1,
                 "med": 219.15
               },
               "bestOffer": {
-                "n": 14,
-                "med": 190
+                "n": 11,
+                "med": 242.05
               },
-              "lo": 93,
+              "lo": 152,
               "hi": 305,
-              "newest": "2026-07-11",
-              "truncated": false
+              "newest": "2026-07-11"
             },
             {
               "months": 6,
-              "n": 34,
-              "nEbay": 34,
-              "medAll": 153.5,
+              "n": 30,
+              "nEbay": 30,
+              "sampled": 30,
+              "medAll": 156.75,
               "auction": {
                 "n": 8,
                 "med": 124
               },
               "fixed": {
-                "n": 5,
-                "med": 166.99
+                "n": 3,
+                "med": 167.85
               },
               "bestOffer": {
-                "n": 21,
-                "med": 169.99
+                "n": 19,
+                "med": 177.73
               },
               "lo": 56,
               "hi": 305,
-              "newest": "2026-07-11",
-              "truncated": false
+              "newest": "2026-07-11"
             },
             {
               "months": 12,
-              "n": 54,
-              "nEbay": 54,
-              "medAll": 120,
+              "n": 51,
+              "nEbay": 51,
+              "sampled": 51,
+              "medAll": 122.5,
               "auction": {
-                "n": 23,
-                "med": 55
+                "n": 20,
+                "med": 58
               },
               "fixed": {
                 "n": 5,
@@ -52245,13 +52411,12 @@ const TRECA_DATA = {
                 "n": 26,
                 "med": 151
               },
-              "lo": 35,
+              "lo": 36,
               "hi": 305,
-              "newest": "2026-07-11",
-              "truncated": false
+              "newest": "2026-07-11"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec12990878) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec12990878) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -53292,132 +53457,155 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 23,
           "rawAn": 26
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 78000,
+          "p9": 31000,
+          "rawA": 41111,
+          "rawB": 20000,
+          "pop10": 643,
+          "popTotal": 791,
+          "rate10": 81.29,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 81.29% (g10=643/total=791・spec15506769) / 価格は直近値を据え置き(再取得せず) / 旧82.83% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 23,
+          "rawAn": 26
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 32,
-          "soldMedianUSD": 620,
-          "medianBasis": "eBay全込み(n31)",
+          "n": 47,
+          "soldMedianUSD": 556.56,
+          "medianBasis": "eBay全込み(n46)",
           "trend": {
             "m1": {
-              "n": 16,
-              "med": 610.51,
+              "n": 32,
+              "med": 501,
               "truncated": false
             },
             "m3": {
-              "n": 31,
-              "med": 620,
+              "n": 46,
+              "med": 556.56,
               "truncated": false
             },
             "m6": {
-              "n": 43,
-              "med": 575,
+              "n": 63,
+              "med": 480,
               "truncated": false
             },
             "m12": {
-              "n": 43,
-              "med": 575,
+              "n": 63,
+              "med": 480,
               "truncated": false
             },
-            "ratio": 1.06,
+            "ratio": 1.04,
             "basis": "1M/12M",
-            "verdict": "横ばい"
+            "verdict": "横ばい",
+            "spot1M": {
+              "n": 32,
+              "med": 501,
+              "lo": 407.19,
+              "hi": 820,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 16,
-              "nEbay": 16,
-              "medAll": 610.51,
+              "n": 32,
+              "nEbay": 32,
+              "sampled": 32,
+              "medAll": 501,
               "auction": {
-                "n": 15,
-                "med": 610.01
+                "n": 27,
+                "med": 502
               },
               "fixed": {
-                "n": 1,
-                "med": 684
+                "n": 4,
+                "med": 450
               },
               "bestOffer": {
-                "n": 0,
-                "med": null
+                "n": 1,
+                "med": 568.12
               },
-              "lo": 460,
+              "lo": 407.19,
               "hi": 820,
-              "newest": "2026-07-22",
-              "truncated": false
+              "newest": "2026-08-04"
             },
             {
               "months": 3,
-              "n": 32,
-              "nEbay": 31,
-              "medAll": 620,
+              "n": 47,
+              "nEbay": 46,
+              "sampled": 47,
+              "medAll": 556.56,
               "auction": {
-                "n": 23,
-                "med": 630
+                "n": 38,
+                "med": 582.5
               },
               "fixed": {
-                "n": 6,
-                "med": 350
+                "n": 7,
+                "med": 450
               },
               "bestOffer": {
-                "n": 2,
-                "med": 762.67
+                "n": 1,
+                "med": 568.12
               },
-              "lo": 270,
-              "hi": 1200,
-              "newest": "2026-07-22",
-              "truncated": false
+              "lo": 350,
+              "hi": 1150,
+              "newest": "2026-08-04"
             },
             {
               "months": 6,
-              "n": 44,
-              "nEbay": 43,
-              "medAll": 575,
+              "n": 64,
+              "nEbay": 63,
+              "sampled": 64,
+              "medAll": 480,
               "auction": {
-                "n": 35,
-                "med": 590
+                "n": 51,
+                "med": 500
               },
               "fixed": {
-                "n": 6,
-                "med": 350
+                "n": 9,
+                "med": 450
               },
               "bestOffer": {
-                "n": 2,
-                "med": 762.67
+                "n": 3,
+                "med": 568.12
               },
               "lo": 242.5,
               "hi": 1200,
-              "newest": "2026-07-22",
-              "truncated": false
+              "newest": "2026-08-04"
             },
             {
               "months": 12,
-              "n": 44,
-              "nEbay": 43,
-              "medAll": 575,
+              "n": 64,
+              "nEbay": 63,
+              "sampled": 64,
+              "medAll": 480,
               "auction": {
-                "n": 35,
-                "med": 590
+                "n": 51,
+                "med": 500
               },
               "fixed": {
-                "n": 6,
-                "med": 350
+                "n": 9,
+                "med": 450
               },
               "bestOffer": {
-                "n": 2,
-                "med": 762.67
+                "n": 3,
+                "med": 568.12
               },
               "lo": 242.5,
               "hi": 1200,
-              "newest": "2026-07-22",
-              "truncated": false
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec15506769) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec15506769) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -54442,132 +54630,155 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 39,
           "rawAn": 28
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 118000,
+          "p9": 20000,
+          "rawA": 56999,
+          "rawB": 40000,
+          "pop10": 1219,
+          "popTotal": 1513,
+          "rate10": 80.57,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 80.57% (g10=1219/total=1513・spec10405764) / 価格は直近値を据え置き(再取得せず) / 旧80.77% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 39,
+          "rawAn": 28
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 7,
-          "soldMedianUSD": 500,
-          "medianBasis": "eBay全込み(n7)",
+          "n": 10,
+          "soldMedianUSD": 484.27,
+          "medianBasis": "eBay全込み(n10)",
           "trend": {
             "m1": {
-              "n": 2,
-              "med": 741.01,
+              "n": 6,
+              "med": 589.27,
               "truncated": false
             },
             "m3": {
-              "n": 7,
-              "med": 500,
+              "n": 10,
+              "med": 484.27,
               "truncated": false
             },
             "m6": {
-              "n": 25,
-              "med": 393.88,
+              "n": 26,
+              "med": 430.75,
               "truncated": false
             },
             "m12": {
-              "n": 35,
-              "med": 356,
+              "n": 39,
+              "med": 357.22,
               "truncated": false
             },
-            "ratio": 1.4,
-            "basis": "3M/12M",
-            "verdict": "急騰"
+            "ratio": 1.65,
+            "basis": "1M/12M",
+            "verdict": "急騰",
+            "spot1M": {
+              "n": 6,
+              "med": 589.27,
+              "lo": 319.99,
+              "hi": 802.77,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 2,
-              "nEbay": 2,
-              "medAll": 741.01,
+              "n": 6,
+              "nEbay": 6,
+              "sampled": 6,
+              "medAll": 589.27,
               "auction": {
-                "n": 1,
-                "med": 679.25
+                "n": 2,
+                "med": 724.53
               },
               "fixed": {
-                "n": 0,
-                "med": null
-              },
-              "bestOffer": {
-                "n": 1,
-                "med": 802.77
-              },
-              "lo": 679.25,
-              "hi": 802.77,
-              "newest": "2026-07-12",
-              "truncated": false
-            },
-            {
-              "months": 3,
-              "n": 7,
-              "nEbay": 7,
-              "medAll": 500,
-              "auction": {
-                "n": 4,
-                "med": 547.13
-              },
-              "fixed": {
-                "n": 1,
-                "med": 399.99
+                "n": 2,
+                "med": 383.24
               },
               "bestOffer": {
                 "n": 2,
-                "med": 651.39
+                "med": 635.65
               },
-              "lo": 364.99,
+              "lo": 319.99,
               "hi": 802.77,
-              "newest": "2026-07-12",
-              "truncated": false
+              "newest": "2026-08-04"
             },
             {
-              "months": 6,
-              "n": 25,
-              "nEbay": 25,
-              "medAll": 393.88,
+              "months": 3,
+              "n": 10,
+              "nEbay": 10,
+              "sampled": 10,
+              "medAll": 484.27,
               "auction": {
-                "n": 16,
-                "med": 377.5
+                "n": 4,
+                "med": 703.6
               },
               "fixed": {
                 "n": 3,
-                "med": 295.99
+                "med": 399.99
               },
               "bestOffer": {
-                "n": 6,
+                "n": 3,
                 "med": 500
               },
-              "lo": 247.5,
-              "hi": 1158.62,
-              "newest": "2026-07-12",
-              "truncated": false
+              "lo": 319.99,
+              "hi": 802.77,
+              "newest": "2026-08-04"
             },
             {
-              "months": 12,
-              "n": 37,
-              "nEbay": 35,
-              "medAll": 356,
+              "months": 6,
+              "n": 26,
+              "nEbay": 26,
+              "sampled": 26,
+              "medAll": 430.75,
               "auction": {
-                "n": 22,
-                "med": 356.61
+                "n": 15,
+                "med": 393.88
               },
               "fixed": {
                 "n": 4,
-                "med": 292.99
+                "med": 359.99
               },
               "bestOffer": {
-                "n": 9,
-                "med": 470.05
+                "n": 7,
+                "med": 500
+              },
+              "lo": 285,
+              "hi": 1158.62,
+              "newest": "2026-08-04"
+            },
+            {
+              "months": 12,
+              "n": 40,
+              "nEbay": 39,
+              "sampled": 40,
+              "medAll": 357.22,
+              "auction": {
+                "n": 23,
+                "med": 357.22
+              },
+              "fixed": {
+                "n": 6,
+                "med": 307.99
+              },
+              "bestOffer": {
+                "n": 10,
+                "med": 469.29
               },
               "lo": 189,
               "hi": 1158.62,
-              "newest": "2026-07-12",
-              "truncated": false
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec10405764) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec10405764) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -55608,76 +55819,100 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 5,
           "rawAn": 47
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 55500,
+          "p9": 25000,
+          "rawA": 15000,
+          "rawB": 20000,
+          "pop10": 202,
+          "popTotal": 244,
+          "rate10": 82.79,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 82.79% (g10=202/total=244・spec14676298) / 価格は直近値を据え置き(再取得せず) / 旧82.65% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 5,
+          "rawAn": 47
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 10,
-          "soldMedianUSD": 372.5,
-          "medianBasis": "eBay全込み(n10)",
+          "n": 11,
+          "soldMedianUSD": 445,
+          "medianBasis": "eBay全込み(n11)",
           "trend": {
             "m1": {
-              "n": 7,
-              "med": 371,
-              "truncated": false
-            },
-            "m3": {
-              "n": 10,
+              "n": 8,
               "med": 372.5,
               "truncated": false
             },
+            "m3": {
+              "n": 11,
+              "med": 445,
+              "truncated": false
+            },
             "m6": {
-              "n": 14,
-              "med": 358,
+              "n": 16,
+              "med": 365,
               "truncated": false
             },
             "m12": {
-              "n": 14,
-              "med": 358,
+              "n": 16,
+              "med": 365,
               "truncated": false
             },
-            "ratio": 1.04,
+            "ratio": 1.02,
             "basis": "1M/12M",
-            "verdict": "横ばい"
+            "verdict": "横ばい",
+            "spot1M": {
+              "n": 8,
+              "med": 372.5,
+              "lo": 325,
+              "hi": 550,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 7,
-              "nEbay": 7,
-              "medAll": 371,
+              "n": 8,
+              "nEbay": 8,
+              "sampled": 8,
+              "medAll": 372.5,
               "auction": {
                 "n": 7,
                 "med": 371
               },
               "fixed": {
-                "n": 0,
-                "med": null
+                "n": 1,
+                "med": 550
               },
               "bestOffer": {
                 "n": 0,
                 "med": null
               },
               "lo": 325,
-              "hi": 553,
-              "newest": "2026-07-22",
-              "truncated": false
+              "hi": 550,
+              "newest": "2026-07-23"
             },
             {
               "months": 3,
-              "n": 10,
-              "nEbay": 10,
-              "medAll": 372.5,
+              "n": 11,
+              "nEbay": 11,
+              "sampled": 11,
+              "medAll": 445,
               "auction": {
                 "n": 9,
-                "med": 371
+                "med": 374
               },
               "fixed": {
-                "n": 0,
-                "med": null
+                "n": 1,
+                "med": 550
               },
               "bestOffer": {
                 "n": 1,
@@ -55685,21 +55920,21 @@ const TRECA_DATA = {
               },
               "lo": 325,
               "hi": 553,
-              "newest": "2026-07-22",
-              "truncated": false
+              "newest": "2026-07-23"
             },
             {
               "months": 6,
-              "n": 14,
-              "nEbay": 14,
-              "medAll": 358,
+              "n": 16,
+              "nEbay": 16,
+              "sampled": 16,
+              "medAll": 365,
               "auction": {
-                "n": 12,
-                "med": 358
+                "n": 13,
+                "med": 359
               },
               "fixed": {
-                "n": 0,
-                "med": null
+                "n": 1,
+                "med": 550
               },
               "bestOffer": {
                 "n": 2,
@@ -55707,21 +55942,21 @@ const TRECA_DATA = {
               },
               "lo": 157.5,
               "hi": 553,
-              "newest": "2026-07-22",
-              "truncated": false
+              "newest": "2026-07-23"
             },
             {
               "months": 12,
-              "n": 14,
-              "nEbay": 14,
-              "medAll": 358,
+              "n": 16,
+              "nEbay": 16,
+              "sampled": 16,
+              "medAll": 365,
               "auction": {
-                "n": 12,
-                "med": 358
+                "n": 13,
+                "med": 359
               },
               "fixed": {
-                "n": 0,
-                "med": null
+                "n": 1,
+                "med": 550
               },
               "bestOffer": {
                 "n": 2,
@@ -55729,11 +55964,10 @@ const TRECA_DATA = {
               },
               "lo": 157.5,
               "hi": 553,
-              "newest": "2026-07-22",
-              "truncated": false
+              "newest": "2026-07-23"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec14676298) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec14676298) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -56761,72 +56995,96 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 14,
           "rawAn": 50
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 53900,
+          "p9": 29800,
+          "rawA": 32000,
+          "rawB": 17777,
+          "pop10": 499,
+          "popTotal": 552,
+          "rate10": 90.4,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 90.4% (g10=499/total=552・spec14676566) / 価格は直近値を据え置き(再取得せず) / 旧92.05% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 14,
+          "rawAn": 50
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 39,
-          "soldMedianUSD": 380,
-          "medianBasis": "eBay全込み(n37)",
+          "n": 43,
+          "soldMedianUSD": 350,
+          "medianBasis": "eBay全込み(n41)",
           "trend": {
             "m1": {
-              "n": 8,
-              "med": 415.35,
+              "n": 11,
+              "med": 275,
               "truncated": false
             },
             "m3": {
-              "n": 37,
-              "med": 380,
+              "n": 41,
+              "med": 350,
               "truncated": false
             },
             "m6": {
-              "n": 47,
-              "med": 335,
+              "n": 54,
+              "med": 285,
               "truncated": false
             },
             "m12": {
-              "n": 47,
-              "med": 335,
+              "n": 55,
+              "med": 290,
               "truncated": false
             },
-            "ratio": 1.24,
+            "ratio": 0.95,
             "basis": "1M/12M",
-            "verdict": "上昇"
+            "verdict": "横ばい",
+            "spot1M": {
+              "n": 11,
+              "med": 275,
+              "lo": 192.5,
+              "hi": 410,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 8,
-              "nEbay": 8,
-              "medAll": 415.35,
+              "n": 11,
+              "nEbay": 11,
+              "sampled": 11,
+              "medAll": 275,
               "auction": {
-                "n": 4,
-                "med": 412.5
+                "n": 6,
+                "med": 282.5
               },
               "fixed": {
                 "n": 0,
                 "med": null
               },
               "bestOffer": {
-                "n": 4,
-                "med": 415.35
+                "n": 5,
+                "med": 270
               },
-              "lo": 335,
-              "hi": 455,
-              "newest": "2026-07-17",
-              "truncated": false
+              "lo": 192.5,
+              "hi": 410,
+              "newest": "2026-08-03"
             },
             {
               "months": 3,
-              "n": 39,
-              "nEbay": 37,
-              "medAll": 380,
+              "n": 43,
+              "nEbay": 41,
+              "sampled": 43,
+              "medAll": 350,
               "auction": {
-                "n": 8,
-                "med": 412.5
+                "n": 12,
+                "med": 357.5
               },
               "fixed": {
                 "n": 4,
@@ -56838,55 +57096,54 @@ const TRECA_DATA = {
               },
               "lo": 165,
               "hi": 591,
-              "newest": "2026-07-17",
-              "truncated": false
+              "newest": "2026-08-03"
             },
             {
               "months": 6,
-              "n": 49,
-              "nEbay": 47,
-              "medAll": 335,
+              "n": 56,
+              "nEbay": 54,
+              "sampled": 56,
+              "medAll": 285,
               "auction": {
-                "n": 12,
-                "med": 357.5
+                "n": 17,
+                "med": 290
               },
               "fixed": {
-                "n": 7,
+                "n": 6,
                 "med": 200
               },
               "bestOffer": {
-                "n": 28,
-                "med": 365
+                "n": 31,
+                "med": 325
               },
               "lo": 102.5,
               "hi": 591,
-              "newest": "2026-07-17",
-              "truncated": false
+              "newest": "2026-08-03"
             },
             {
               "months": 12,
-              "n": 49,
-              "nEbay": 47,
-              "medAll": 335,
+              "n": 57,
+              "nEbay": 55,
+              "sampled": 57,
+              "medAll": 290,
               "auction": {
-                "n": 12,
-                "med": 357.5
+                "n": 17,
+                "med": 290
               },
               "fixed": {
                 "n": 7,
                 "med": 200
               },
               "bestOffer": {
-                "n": 28,
-                "med": 365
+                "n": 31,
+                "med": 325
               },
               "lo": 102.5,
               "hi": 591,
-              "newest": "2026-07-17",
-              "truncated": false
+              "newest": "2026-08-03"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec14676566) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec14676566) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -57902,156 +58159,136 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 157,
-          "soldMedianUSD": 109.99,
-          "medianBasis": "eBay全込み(n95)・直近95件のみ",
+          "n": 146,
+          "soldMedianUSD": 110,
+          "medianBasis": "eBay全込み(n95)",
           "trend": {
             "m1": {
-              "n": 33,
-              "med": 110,
+              "n": 32,
+              "med": 108.85,
               "truncated": false
             },
             "m3": {
               "n": 95,
-              "med": 109.99,
+              "med": 110,
               "truncated": true
             },
             "m6": {
               "n": 95,
-              "med": 109.99,
+              "med": 110,
               "truncated": true
             },
             "m12": {
               "n": 95,
-              "med": 109.99,
+              "med": 110,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 3,
-                "actualMonths": 3.2,
-                "n": 98,
-                "med": 103.02,
-                "range": "2026-03-24〜2026-05-15",
-                "approx": false
-              },
-              {
-                "targetMonths": 6,
-                "actualMonths": 5.2,
-                "n": 98,
-                "med": 82.97,
-                "range": "2026-01-16〜2026-03-22",
-                "approx": false
-              },
-              {
-                "targetMonths": 12,
-                "actualMonths": 14.4,
-                "n": 78,
-                "med": 60,
-                "range": "2024-12-05〜2025-10-18",
-                "approx": true
-              }
-            ],
-            "ratio": 1.83,
-            "basis": "直近/14.4ヶ月前(履歴)",
-            "verdict": "急騰",
-            "fromHistory": true,
-            "approx": true
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 32,
+              "med": 108.85,
+              "lo": 61,
+              "hi": 151.81,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 35,
-              "nEbay": 33,
-              "medAll": 110,
+              "n": 33,
+              "nEbay": 32,
+              "sampled": 33,
+              "medAll": 108.85,
               "auction": {
-                "n": 22,
-                "med": 106.93
+                "n": 20,
+                "med": 102.5
               },
               "fixed": {
-                "n": 4,
+                "n": 5,
                 "med": 115
               },
               "bestOffer": {
                 "n": 7,
-                "med": 110.99
+                "med": 119.99
               },
               "lo": 61,
-              "hi": 143.84,
-              "newest": "2026-07-20",
-              "truncated": false
+              "hi": 151.81,
+              "newest": "2026-08-02"
             },
             {
               "months": 3,
-              "n": 157,
+              "n": 146,
               "nEbay": 95,
-              "medAll": 109.99,
+              "sampled": 100,
+              "medAll": 110,
               "auction": {
                 "n": 47,
                 "med": 102.5
               },
               "fixed": {
-                "n": 20,
-                "med": 114.99
+                "n": 19,
+                "med": 115
               },
               "bestOffer": {
-                "n": 28,
-                "med": 115
+                "n": 29,
+                "med": 119.99
               },
               "lo": 61,
               "hi": 266.67,
-              "newest": "2026-07-20",
-              "truncated": true
+              "newest": "2026-08-02"
             },
             {
               "months": 6,
-              "n": 294,
+              "n": 290,
               "nEbay": 95,
-              "medAll": 109.99,
+              "sampled": 100,
+              "medAll": 110,
               "auction": {
                 "n": 47,
                 "med": 102.5
               },
               "fixed": {
-                "n": 20,
-                "med": 114.99
+                "n": 19,
+                "med": 115
               },
               "bestOffer": {
-                "n": 28,
-                "med": 115
+                "n": 29,
+                "med": 119.99
               },
               "lo": 61,
               "hi": 266.67,
-              "newest": "2026-07-20",
-              "truncated": true
+              "newest": "2026-08-02"
             },
             {
               "months": 12,
-              "n": 435,
+              "n": 446,
               "nEbay": 95,
-              "medAll": 109.99,
+              "sampled": 100,
+              "medAll": 110,
               "auction": {
                 "n": 47,
                 "med": 102.5
               },
               "fixed": {
-                "n": 20,
-                "med": 114.99
+                "n": 19,
+                "med": 115
               },
               "bestOffer": {
-                "n": 28,
-                "med": 115
+                "n": 29,
+                "med": 119.99
               },
               "lo": 61,
               "hi": 266.67,
-              "newest": "2026-07-20",
-              "truncated": true
+              "newest": "2026-08-02"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec12029715) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec12029715) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -59063,72 +59300,96 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 17,
           "rawAn": 32
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 79800,
+          "p9": 20000,
+          "rawA": 28000,
+          "rawB": 16500,
+          "pop10": 212,
+          "popTotal": 308,
+          "rate10": 68.83,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 68.83% (g10=212/total=308・spec15499953) / 価格は直近値を据え置き(再取得せず) / 旧69.2% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 17,
+          "rawAn": 32
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 8,
-          "soldMedianUSD": 425,
-          "medianBasis": "eBay全込み(n8)",
+          "n": 9,
+          "soldMedianUSD": 399,
+          "medianBasis": "eBay全込み(n9)",
           "trend": {
             "m1": {
               "n": 3,
-              "med": 360.55,
+              "med": 309.2,
               "truncated": false
             },
             "m3": {
-              "n": 8,
-              "med": 425,
+              "n": 9,
+              "med": 399,
               "truncated": false
             },
             "m6": {
-              "n": 8,
-              "med": 425,
+              "n": 10,
+              "med": 399.5,
               "truncated": false
             },
             "m12": {
-              "n": 8,
-              "med": 425,
+              "n": 10,
+              "med": 399.5,
               "truncated": false
             },
-            "ratio": 0.85,
+            "ratio": 0.77,
             "basis": "1M/12M",
-            "verdict": "下落"
+            "verdict": "下落",
+            "spot1M": {
+              "n": 3,
+              "med": 309.2,
+              "lo": 249.5,
+              "hi": 399,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
               "n": 3,
               "nEbay": 3,
-              "medAll": 360.55,
+              "sampled": 3,
+              "medAll": 309.2,
               "auction": {
-                "n": 3,
-                "med": 360.55
+                "n": 2,
+                "med": 279.35
               },
               "fixed": {
                 "n": 0,
                 "med": null
               },
               "bestOffer": {
-                "n": 0,
-                "med": null
+                "n": 1,
+                "med": 399
               },
-              "lo": 309.2,
-              "hi": 363,
-              "newest": "2026-07-17",
-              "truncated": false
+              "lo": 249.5,
+              "hi": 399,
+              "newest": "2026-08-03"
             },
             {
               "months": 3,
-              "n": 8,
-              "nEbay": 8,
-              "medAll": 425,
+              "n": 9,
+              "nEbay": 9,
+              "sampled": 9,
+              "medAll": 399,
               "auction": {
-                "n": 5,
-                "med": 363
+                "n": 6,
+                "med": 361.78
               },
               "fixed": {
                 "n": 0,
@@ -59136,59 +59397,58 @@ const TRECA_DATA = {
               },
               "bestOffer": {
                 "n": 3,
-                "med": 450
+                "med": 400
               },
-              "lo": 309.2,
-              "hi": 660,
-              "newest": "2026-07-17",
-              "truncated": false
+              "lo": 249.5,
+              "hi": 495,
+              "newest": "2026-08-03"
             },
             {
               "months": 6,
-              "n": 8,
-              "nEbay": 8,
-              "medAll": 425,
+              "n": 10,
+              "nEbay": 10,
+              "sampled": 10,
+              "medAll": 399.5,
               "auction": {
-                "n": 5,
-                "med": 363
+                "n": 6,
+                "med": 361.78
               },
               "fixed": {
                 "n": 0,
                 "med": null
               },
               "bestOffer": {
-                "n": 3,
-                "med": 450
+                "n": 4,
+                "med": 425
               },
-              "lo": 309.2,
+              "lo": 249.5,
               "hi": 660,
-              "newest": "2026-07-17",
-              "truncated": false
+              "newest": "2026-08-03"
             },
             {
               "months": 12,
-              "n": 8,
-              "nEbay": 8,
-              "medAll": 425,
+              "n": 10,
+              "nEbay": 10,
+              "sampled": 10,
+              "medAll": 399.5,
               "auction": {
-                "n": 5,
-                "med": 363
+                "n": 6,
+                "med": 361.78
               },
               "fixed": {
                 "n": 0,
                 "med": null
               },
               "bestOffer": {
-                "n": 3,
-                "med": 450
+                "n": 4,
+                "med": 425
               },
-              "lo": 309.2,
+              "lo": 249.5,
               "hi": 660,
-              "newest": "2026-07-17",
-              "truncated": false
+              "newest": "2026-08-03"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec15499953) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec15499953) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -60168,160 +60428,156 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 31,
           "rawAn": 6
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 515000,
+          "p9": 152000,
+          "rawA": 193315,
+          "rawB": 180000,
+          "pop10": 49707,
+          "popTotal": 115863,
+          "rate10": 42.9,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 42.9% (g10=49707/total=115863・spec9656727) / 価格は直近値を据え置き(再取得せず) / 旧43.03% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 31,
+          "rawAn": 6
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 726,
-          "soldMedianUSD": 2800,
-          "medianBasis": "eBay全込み(n89)・直近89件のみ",
+          "n": 690,
+          "soldMedianUSD": 2850,
+          "medianBasis": "eBay全込み(n91)",
           "trend": {
             "m1": {
-              "n": 89,
-              "med": 2800,
+              "n": 91,
+              "med": 2850,
               "truncated": true
             },
             "m3": {
-              "n": 89,
-              "med": 2800,
+              "n": 91,
+              "med": 2850,
               "truncated": true
             },
             "m6": {
-              "n": 89,
-              "med": 2800,
+              "n": 91,
+              "med": 2850,
               "truncated": true
             },
             "m12": {
-              "n": 89,
-              "med": 2800,
+              "n": 91,
+              "med": 2850,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 3,
-                "actualMonths": 3.1,
-                "n": 96,
-                "med": 3047.94,
-                "range": "2026-04-18〜2026-04-26",
-                "approx": false
-              },
-              {
-                "targetMonths": 6,
-                "actualMonths": 5.9,
-                "n": 88,
-                "med": 1888.05,
-                "range": "2026-01-19〜2026-01-30",
-                "approx": false
-              },
-              {
-                "targetMonths": 12,
-                "actualMonths": 12.2,
-                "n": 66,
-                "med": 1088.24,
-                "range": "2025-07-14〜2025-07-24",
-                "approx": false
-              }
-            ],
-            "ratio": 2.57,
-            "basis": "直近/12.2ヶ月前(履歴)",
-            "verdict": "急騰",
-            "fromHistory": true,
-            "approx": false
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 91,
+              "med": 2850,
+              "lo": 1500,
+              "hi": 3056,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 190,
-              "nEbay": 89,
-              "medAll": 2800,
+              "n": 205,
+              "nEbay": 91,
+              "sampled": 100,
+              "medAll": 2850,
               "auction": {
-                "n": 41,
-                "med": 2800
+                "n": 45,
+                "med": 2850
               },
               "fixed": {
-                "n": 19,
-                "med": 2825
+                "n": 21,
+                "med": 2979.56
               },
               "bestOffer": {
-                "n": 29,
-                "med": 2789.94
+                "n": 25,
+                "med": 2800
               },
-              "lo": 79,
-              "hi": 9200,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 1500,
+              "hi": 3056,
+              "newest": "2026-08-04"
             },
             {
               "months": 3,
-              "n": 726,
-              "nEbay": 89,
-              "medAll": 2800,
+              "n": 690,
+              "nEbay": 91,
+              "sampled": 100,
+              "medAll": 2850,
               "auction": {
-                "n": 41,
-                "med": 2800
+                "n": 45,
+                "med": 2850
               },
               "fixed": {
-                "n": 19,
-                "med": 2825
+                "n": 21,
+                "med": 2979.56
               },
               "bestOffer": {
-                "n": 29,
-                "med": 2789.94
+                "n": 25,
+                "med": 2800
               },
-              "lo": 79,
-              "hi": 9200,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 1500,
+              "hi": 3056,
+              "newest": "2026-08-04"
             },
             {
               "months": 6,
-              "n": 1956,
-              "nEbay": 89,
-              "medAll": 2800,
+              "n": 1937,
+              "nEbay": 91,
+              "sampled": 100,
+              "medAll": 2850,
               "auction": {
-                "n": 41,
-                "med": 2800
+                "n": 45,
+                "med": 2850
               },
               "fixed": {
-                "n": 19,
-                "med": 2825
+                "n": 21,
+                "med": 2979.56
               },
               "bestOffer": {
-                "n": 29,
-                "med": 2789.94
+                "n": 25,
+                "med": 2800
               },
-              "lo": 79,
-              "hi": 9200,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 1500,
+              "hi": 3056,
+              "newest": "2026-08-04"
             },
             {
               "months": 12,
-              "n": 4201,
-              "nEbay": 89,
-              "medAll": 2800,
+              "n": 4142,
+              "nEbay": 91,
+              "sampled": 100,
+              "medAll": 2850,
               "auction": {
-                "n": 41,
-                "med": 2800
+                "n": 45,
+                "med": 2850
               },
               "fixed": {
-                "n": 19,
-                "med": 2825
+                "n": 21,
+                "med": 2979.56
               },
               "bestOffer": {
-                "n": 29,
-                "med": 2789.94
+                "n": 25,
+                "med": 2800
               },
-              "lo": 79,
-              "hi": 9200,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 1500,
+              "hi": 3056,
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec9656727) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec9656727) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -61317,16 +61573,32 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 32,
           "rawAn": 6
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 87800,
+          "p9": 24800,
+          "rawA": 36000,
+          "rawB": 25000,
+          "pop10": 7179,
+          "popTotal": 13016,
+          "rate10": 55.15,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 55.15% (g10=7179/total=13016・spec14955497) / 価格は直近値を据え置き(再取得せず) / 旧55.83% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 32,
+          "rawAn": 6
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 58,
-          "soldMedianUSD": 590.51,
-          "medianBasis": "eBay全込み(n56)",
+          "n": 60,
+          "soldMedianUSD": 550,
+          "medianBasis": "eBay全込み(n59)",
           "trend": {
             "m1": {
               "n": 20,
@@ -61334,8 +61606,8 @@ const TRECA_DATA = {
               "truncated": false
             },
             "m3": {
-              "n": 56,
-              "med": 590.51,
+              "n": 59,
+              "med": 550,
               "truncated": false
             },
             "m6": {
@@ -61348,121 +61620,109 @@ const TRECA_DATA = {
               "med": 615,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 6,
-                "actualMonths": 6.4,
-                "n": 67,
-                "med": 511.99,
-                "range": "2025-12-17〜2026-02-04",
-                "approx": false
-              },
-              {
-                "targetMonths": 12,
-                "actualMonths": 6.4,
-                "n": 67,
-                "med": 511.99,
-                "range": "2025-12-17〜2026-02-04",
-                "approx": true
-              }
-            ],
-            "ratio": 0.97,
-            "basis": "直近/6.4ヶ月前(履歴)",
-            "verdict": "横ばい",
-            "fromHistory": true,
-            "approx": true
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 20,
+              "med": 495,
+              "lo": 431,
+              "hi": 550,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
               "n": 21,
               "nEbay": 20,
+              "sampled": 21,
               "medAll": 495,
               "auction": {
-                "n": 16,
-                "med": 487.5
+                "n": 15,
+                "med": 485
               },
               "fixed": {
-                "n": 2,
-                "med": 560
+                "n": 3,
+                "med": 520
               },
               "bestOffer": {
                 "n": 2,
-                "med": 495
+                "med": 512.5
               },
-              "lo": 445,
-              "hi": 573.99,
-              "newest": "2026-07-22",
-              "truncated": false
+              "lo": 431,
+              "hi": 550,
+              "newest": "2026-08-02"
             },
             {
               "months": 3,
-              "n": 58,
-              "nEbay": 56,
-              "medAll": 590.51,
+              "n": 60,
+              "nEbay": 59,
+              "sampled": 60,
+              "medAll": 550,
               "auction": {
-                "n": 42,
-                "med": 585.51
+                "n": 45,
+                "med": 520
               },
               "fixed": {
-                "n": 6,
-                "med": 799.99
+                "n": 7,
+                "med": 569.99
               },
               "bestOffer": {
-                "n": 8,
-                "med": 650
+                "n": 7,
+                "med": 550
               },
-              "lo": 445,
-              "hi": 1000,
-              "newest": "2026-07-22",
-              "truncated": false
+              "lo": 431,
+              "hi": 929,
+              "newest": "2026-08-02"
             },
             {
               "months": 6,
-              "n": 110,
+              "n": 104,
               "nEbay": 98,
+              "sampled": 100,
               "medAll": 615,
               "auction": {
-                "n": 63,
+                "n": 64,
                 "med": 591
               },
               "fixed": {
-                "n": 12,
-                "med": 732.5
+                "n": 14,
+                "med": 712.5
               },
               "bestOffer": {
-                "n": 23,
-                "med": 660
+                "n": 20,
+                "med": 682.5
               },
-              "lo": 445,
+              "lo": 431,
               "hi": 1000,
-              "newest": "2026-07-22",
-              "truncated": true
+              "newest": "2026-08-02"
             },
             {
               "months": 12,
-              "n": 167,
+              "n": 173,
               "nEbay": 98,
+              "sampled": 100,
               "medAll": 615,
               "auction": {
-                "n": 63,
+                "n": 64,
                 "med": 591
               },
               "fixed": {
-                "n": 12,
-                "med": 732.5
+                "n": 14,
+                "med": 712.5
               },
               "bestOffer": {
-                "n": 23,
-                "med": 660
+                "n": 20,
+                "med": 682.5
               },
-              "lo": 445,
+              "lo": 431,
               "hi": 1000,
-              "newest": "2026-07-22",
-              "truncated": true
+              "newest": "2026-08-02"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec14955497) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec14955497) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -62378,132 +62638,156 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 31,
           "rawAn": 20
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 61700,
+          "p9": 32000,
+          "rawA": 34000,
+          "rawB": 26000,
+          "pop10": 2076,
+          "popTotal": 2167,
+          "rate10": 95.8,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 95.8% (g10=2076/total=2167・spec16192454) / 価格は直近値を据え置き(再取得せず) / 旧95.69% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 31,
+          "rawAn": 20
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 88,
-          "soldMedianUSD": 630,
-          "medianBasis": "eBay全込み(n88)",
+          "n": 118,
+          "soldMedianUSD": 600,
+          "medianBasis": "eBay全込み(n100)",
           "trend": {
             "m1": {
-              "n": 68,
-              "med": 610.75,
+              "n": 79,
+              "med": 578,
               "truncated": false
             },
             "m3": {
-              "n": 88,
-              "med": 630,
-              "truncated": false
+              "n": 100,
+              "med": 600,
+              "truncated": true
             },
             "m6": {
-              "n": 88,
-              "med": 630,
-              "truncated": false
+              "n": 100,
+              "med": 600,
+              "truncated": true
             },
             "m12": {
-              "n": 88,
-              "med": 630,
-              "truncated": false
+              "n": 100,
+              "med": 600,
+              "truncated": true
             },
-            "ratio": 0.97,
-            "basis": "1M/12M",
-            "verdict": "横ばい"
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 79,
+              "med": 578,
+              "lo": 450,
+              "hi": 799,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 68,
-              "nEbay": 68,
-              "medAll": 610.75,
+              "n": 79,
+              "nEbay": 79,
+              "sampled": 79,
+              "medAll": 578,
               "auction": {
-                "n": 52,
-                "med": 610.25
+                "n": 56,
+                "med": 570
               },
               "fixed": {
-                "n": 6,
-                "med": 627.5
+                "n": 10,
+                "med": 610
               },
               "bestOffer": {
-                "n": 10,
-                "med": 615
+                "n": 13,
+                "med": 595.99
               },
-              "lo": 540,
-              "hi": 1249.99,
-              "newest": "2026-07-21",
-              "truncated": false
+              "lo": 450,
+              "hi": 799,
+              "newest": "2026-08-04"
             },
             {
               "months": 3,
-              "n": 88,
-              "nEbay": 88,
-              "medAll": 630,
+              "n": 118,
+              "nEbay": 100,
+              "sampled": 100,
+              "medAll": 600,
               "auction": {
-                "n": 67,
-                "med": 621.1
+                "n": 74,
+                "med": 590
               },
               "fixed": {
-                "n": 7,
-                "med": 630
+                "n": 10,
+                "med": 610
               },
               "bestOffer": {
-                "n": 14,
-                "med": 664
+                "n": 16,
+                "med": 602.5
               },
-              "lo": 540,
-              "hi": 1700,
-              "newest": "2026-07-21",
-              "truncated": false
+              "lo": 450,
+              "hi": 1250,
+              "newest": "2026-08-04"
             },
             {
               "months": 6,
-              "n": 88,
-              "nEbay": 88,
-              "medAll": 630,
+              "n": 118,
+              "nEbay": 100,
+              "sampled": 100,
+              "medAll": 600,
               "auction": {
-                "n": 67,
-                "med": 621.1
+                "n": 74,
+                "med": 590
               },
               "fixed": {
-                "n": 7,
-                "med": 630
+                "n": 10,
+                "med": 610
               },
               "bestOffer": {
-                "n": 14,
-                "med": 664
+                "n": 16,
+                "med": 602.5
               },
-              "lo": 540,
-              "hi": 1700,
-              "newest": "2026-07-21",
-              "truncated": false
+              "lo": 450,
+              "hi": 1250,
+              "newest": "2026-08-04"
             },
             {
               "months": 12,
-              "n": 88,
-              "nEbay": 88,
-              "medAll": 630,
+              "n": 118,
+              "nEbay": 100,
+              "sampled": 100,
+              "medAll": 600,
               "auction": {
-                "n": 67,
-                "med": 621.1
+                "n": 74,
+                "med": 590
               },
               "fixed": {
-                "n": 7,
-                "med": 630
+                "n": 10,
+                "med": 610
               },
               "bestOffer": {
-                "n": 14,
-                "med": 664
+                "n": 16,
+                "med": 602.5
               },
-              "lo": 540,
-              "hi": 1700,
-              "newest": "2026-07-21",
-              "truncated": false
+              "lo": 450,
+              "hi": 1250,
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec16192454) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec16192454) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -63373,132 +63657,155 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 26,
           "rawAn": 43
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 102000,
+          "p9": 36500,
+          "rawA": 54000,
+          "rawB": 58000,
+          "pop10": 1510,
+          "popTotal": 1611,
+          "rate10": 93.73,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 93.73% (g10=1510/total=1611・spec11477762) / 価格は直近値を据え置き(再取得せず) / 旧93.8% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 26,
+          "rawAn": 43
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 32,
-          "soldMedianUSD": 610,
-          "medianBasis": "eBay全込み(n31)",
+          "n": 37,
+          "soldMedianUSD": 680,
+          "medianBasis": "eBay全込み(n36)",
           "trend": {
             "m1": {
-              "n": 11,
-              "med": 840,
+              "n": 16,
+              "med": 689.88,
               "truncated": false
             },
             "m3": {
-              "n": 31,
-              "med": 610,
+              "n": 36,
+              "med": 680,
               "truncated": false
             },
             "m6": {
-              "n": 45,
-              "med": 325.15,
+              "n": 54,
+              "med": 463,
               "truncated": false
             },
             "m12": {
-              "n": 65,
-              "med": 249.99,
+              "n": 74,
+              "med": 250,
               "truncated": false
             },
-            "ratio": 3.36,
+            "ratio": 2.76,
             "basis": "1M/12M",
-            "verdict": "急騰"
+            "verdict": "急騰",
+            "spot1M": {
+              "n": 16,
+              "med": 689.88,
+              "lo": 610,
+              "hi": 964.65,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 11,
-              "nEbay": 11,
-              "medAll": 840,
+              "n": 16,
+              "nEbay": 16,
+              "sampled": 16,
+              "medAll": 689.88,
               "auction": {
-                "n": 9,
-                "med": 840
+                "n": 10,
+                "med": 743.2
               },
               "fixed": {
-                "n": 0,
-                "med": null
+                "n": 1,
+                "med": 800
               },
               "bestOffer": {
-                "n": 2,
-                "med": 825
+                "n": 5,
+                "med": 680
               },
               "lo": 610,
-              "hi": 1035.05,
-              "newest": "2026-07-22",
-              "truncated": false
+              "hi": 964.65,
+              "newest": "2026-08-04"
             },
             {
               "months": 3,
-              "n": 32,
-              "nEbay": 31,
-              "medAll": 610,
+              "n": 37,
+              "nEbay": 36,
+              "sampled": 37,
+              "medAll": 680,
               "auction": {
                 "n": 20,
-                "med": 669.35
+                "med": 757.67
               },
               "fixed": {
-                "n": 4,
-                "med": 323.08
+                "n": 5,
+                "med": 459.99
               },
               "bestOffer": {
-                "n": 7,
-                "med": 374.26
+                "n": 11,
+                "med": 660
               },
               "lo": 159,
               "hi": 1146.8,
-              "newest": "2026-07-22",
-              "truncated": false
+              "newest": "2026-08-04"
             },
             {
               "months": 6,
-              "n": 48,
-              "nEbay": 45,
-              "medAll": 325.15,
+              "n": 57,
+              "nEbay": 54,
+              "sampled": 57,
+              "medAll": 463,
               "auction": {
-                "n": 28,
-                "med": 433
+                "n": 32,
+                "med": 547.5
               },
               "fixed": {
-                "n": 7,
+                "n": 8,
                 "med": 249.99
               },
               "bestOffer": {
-                "n": 10,
-                "med": 337.58
+                "n": 14,
+                "med": 512.13
               },
               "lo": 137.5,
               "hi": 1146.8,
-              "newest": "2026-07-22",
-              "truncated": false
+              "newest": "2026-08-04"
             },
             {
               "months": 12,
-              "n": 68,
-              "nEbay": 65,
-              "medAll": 249.99,
+              "n": 77,
+              "nEbay": 74,
+              "sampled": 77,
+              "medAll": 250,
               "auction": {
-                "n": 31,
-                "med": 267
+                "n": 35,
+                "med": 466
               },
               "fixed": {
-                "n": 16,
-                "med": 173.16
+                "n": 17,
+                "med": 186.16
               },
               "bestOffer": {
-                "n": 18,
-                "med": 250
+                "n": 22,
+                "med": 255
               },
               "lo": 79.99,
               "hi": 1146.8,
-              "newest": "2026-07-22",
-              "truncated": false
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec11477762) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec11477762) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -64368,30 +64675,46 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 22,
           "rawAn": 63
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 67000,
+          "p9": null,
+          "rawA": 28499,
+          "rawB": 14800,
+          "pop10": 796,
+          "popTotal": 965,
+          "rate10": 82.49,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 82.49% (g10=796/total=965・spec10405769) / 価格は直近値を据え置き(再取得せず) / 旧83.5% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 22,
+          "rawAn": 63
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 5,
-          "soldMedianUSD": 300,
-          "medianBasis": "eBay全込み(n5)",
+          "n": 2,
+          "soldMedianUSD": 377.5,
+          "medianBasis": "eBay全込み(n2)・薄商い",
           "trend": {
             "m1": {
-              "n": 0,
-              "med": null,
+              "n": 1,
+              "med": 455,
               "truncated": false
             },
             "m3": {
-              "n": 5,
-              "med": 300,
+              "n": 2,
+              "med": 377.5,
               "truncated": false
             },
             "m6": {
-              "n": 7,
-              "med": 299.99,
+              "n": 8,
+              "med": 300,
               "truncated": false
             },
             "m12": {
@@ -64399,19 +64722,27 @@ const TRECA_DATA = {
               "med": 202.5,
               "truncated": false
             },
-            "ratio": 1.48,
-            "basis": "3M/12M",
-            "verdict": "急騰"
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(実売が薄い)",
+            "spot1M": {
+              "n": 1,
+              "med": 455,
+              "lo": 455,
+              "hi": 455,
+              "reliable": false
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 0,
-              "nEbay": 0,
-              "medAll": null,
+              "n": 1,
+              "nEbay": 1,
+              "sampled": 1,
+              "medAll": 455,
               "auction": {
-                "n": 0,
-                "med": null
+                "n": 1,
+                "med": 455
               },
               "fixed": {
                 "n": 0,
@@ -64421,41 +64752,41 @@ const TRECA_DATA = {
                 "n": 0,
                 "med": null
               },
-              "lo": null,
-              "hi": null,
-              "newest": null,
-              "truncated": false
+              "lo": 455,
+              "hi": 455,
+              "newest": "2026-07-27"
             },
             {
               "months": 3,
-              "n": 5,
-              "nEbay": 5,
-              "medAll": 300,
+              "n": 2,
+              "nEbay": 2,
+              "sampled": 2,
+              "medAll": 377.5,
               "auction": {
-                "n": 3,
-                "med": 300
+                "n": 2,
+                "med": 377.5
               },
               "fixed": {
-                "n": 1,
-                "med": 299.99
+                "n": 0,
+                "med": null
               },
               "bestOffer": {
-                "n": 1,
-                "med": 374.58
+                "n": 0,
+                "med": null
               },
-              "lo": 202.49,
-              "hi": 374.58,
-              "newest": "2026-05-10",
-              "truncated": false
+              "lo": 300,
+              "hi": 455,
+              "newest": "2026-07-27"
             },
             {
               "months": 6,
-              "n": 7,
-              "nEbay": 7,
-              "medAll": 299.99,
+              "n": 8,
+              "nEbay": 8,
+              "sampled": 8,
+              "medAll": 300,
               "auction": {
-                "n": 5,
-                "med": 202.5
+                "n": 6,
+                "med": 251.25
               },
               "fixed": {
                 "n": 1,
@@ -64466,34 +64797,33 @@ const TRECA_DATA = {
                 "med": 374.58
               },
               "lo": 105.83,
-              "hi": 374.58,
-              "newest": "2026-05-10",
-              "truncated": false
+              "hi": 455,
+              "newest": "2026-07-27"
             },
             {
               "months": 12,
               "n": 12,
               "nEbay": 12,
+              "sampled": 12,
               "medAll": 202.5,
               "auction": {
-                "n": 7,
-                "med": 202.49
+                "n": 8,
+                "med": 202.5
               },
               "fixed": {
                 "n": 3,
                 "med": 165
               },
               "bestOffer": {
-                "n": 2,
-                "med": 292.29
+                "n": 1,
+                "med": 374.58
               },
               "lo": 105.83,
-              "hi": 374.58,
-              "newest": "2026-05-10",
-              "truncated": false
+              "hi": 455,
+              "newest": "2026-07-27"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec10405769) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec10405769) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -65379,132 +65709,155 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 50,
           "rawAn": 5
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 145000,
+          "p9": 40000,
+          "rawA": 65000,
+          "rawB": 40000,
+          "pop10": 3572,
+          "popTotal": 6705,
+          "rate10": 53.27,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 53.27% (g10=3572/total=6705・spec14158347) / 価格は直近値を据え置き(再取得せず) / 旧53.83% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 50,
+          "rawAn": 5
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 26,
-          "soldMedianUSD": 805,
-          "medianBasis": "eBay全込み(n22)",
+          "n": 21,
+          "soldMedianUSD": 747.89,
+          "medianBasis": "eBay全込み(n18)",
           "trend": {
             "m1": {
               "n": 7,
-              "med": 700,
+              "med": 651,
               "truncated": false
             },
             "m3": {
-              "n": 22,
-              "med": 805,
+              "n": 18,
+              "med": 747.89,
               "truncated": false
             },
             "m6": {
-              "n": 66,
-              "med": 754.5,
+              "n": 65,
+              "med": 759,
               "truncated": false
             },
             "m12": {
-              "n": 90,
-              "med": 644.56,
+              "n": 89,
+              "med": 651,
               "truncated": true
             },
-            "ratio": 0.93,
-            "basis": "1M/6M",
-            "verdict": "横ばい"
+            "ratio": 0.86,
+            "basis": "1M/12M",
+            "verdict": "下落",
+            "spot1M": {
+              "n": 7,
+              "med": 651,
+              "lo": 560,
+              "hi": 770,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 8,
+              "n": 9,
               "nEbay": 7,
-              "medAll": 700,
+              "sampled": 9,
+              "medAll": 651,
               "auction": {
-                "n": 4,
-                "med": 656.76
+                "n": 5,
+                "med": 630
               },
               "fixed": {
                 "n": 1,
                 "med": 770
               },
               "bestOffer": {
-                "n": 2,
-                "med": 712.89
+                "n": 1,
+                "med": 700
               },
-              "lo": 630,
+              "lo": 560,
               "hi": 770,
-              "newest": "2026-07-20",
-              "truncated": false
+              "newest": "2026-07-31"
             },
             {
               "months": 3,
-              "n": 26,
-              "nEbay": 22,
-              "medAll": 805,
+              "n": 21,
+              "nEbay": 18,
+              "sampled": 21,
+              "medAll": 747.89,
               "auction": {
-                "n": 8,
-                "med": 715.5
+                "n": 9,
+                "med": 662.51
               },
               "fixed": {
-                "n": 5,
+                "n": 3,
                 "med": 856.27
               },
               "bestOffer": {
-                "n": 9,
-                "med": 825
+                "n": 6,
+                "med": 812.5
               },
-              "lo": 620,
+              "lo": 560,
               "hi": 950,
-              "newest": "2026-07-20",
-              "truncated": false
+              "newest": "2026-07-31"
             },
             {
               "months": 6,
               "n": 76,
-              "nEbay": 66,
-              "medAll": 754.5,
+              "nEbay": 65,
+              "sampled": 76,
+              "medAll": 759,
               "auction": {
-                "n": 19,
-                "med": 651
+                "n": 20,
+                "med": 644.56
               },
               "fixed": {
-                "n": 14,
-                "med": 764.5
+                "n": 13,
+                "med": 770
               },
               "bestOffer": {
-                "n": 33,
-                "med": 825
+                "n": 32,
+                "med": 827.5
               },
               "lo": 467.78,
               "hi": 950,
-              "newest": "2026-07-20",
-              "truncated": false
+              "newest": "2026-07-31"
             },
             {
               "months": 12,
-              "n": 182,
-              "nEbay": 90,
-              "medAll": 644.56,
+              "n": 185,
+              "nEbay": 89,
+              "sampled": 100,
+              "medAll": 651,
               "auction": {
-                "n": 29,
-                "med": 570
+                "n": 30,
+                "med": 565
               },
               "fixed": {
-                "n": 19,
-                "med": 590
+                "n": 18,
+                "med": 644.5
               },
               "bestOffer": {
-                "n": 42,
-                "med": 772.5
+                "n": 41,
+                "med": 795
               },
               "lo": 400,
               "hi": 1099.5,
-              "newest": "2026-07-20",
-              "truncated": true
+              "newest": "2026-07-31"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec14158347) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec14158347) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -66308,11 +66661,27 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 15,
           "rawAn": 34
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 110000,
+          "p9": 58000,
+          "rawA": 53000,
+          "rawB": 19000,
+          "pop10": 248,
+          "popTotal": 313,
+          "rate10": 79.23,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 79.23% (g10=248/total=313・spec12637347) / 価格は直近値を据え置き(再取得せず) / 旧79.47% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 15,
+          "rawAn": 34
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
           "n": 1,
@@ -66341,13 +66710,21 @@ const TRECA_DATA = {
             },
             "ratio": null,
             "basis": null,
-            "verdict": "判定不能(実売が薄い)"
+            "verdict": "判定不能(実売が薄い)",
+            "spot1M": {
+              "n": 0,
+              "med": null,
+              "lo": null,
+              "hi": null,
+              "reliable": false
+            }
           },
           "points": [
             {
               "months": 1,
               "n": 0,
               "nEbay": 0,
+              "sampled": 0,
               "medAll": null,
               "auction": {
                 "n": 0,
@@ -66363,13 +66740,13 @@ const TRECA_DATA = {
               },
               "lo": null,
               "hi": null,
-              "newest": null,
-              "truncated": false
+              "newest": null
             },
             {
               "months": 3,
               "n": 1,
               "nEbay": 1,
+              "sampled": 1,
               "medAll": 500,
               "auction": {
                 "n": 0,
@@ -66385,13 +66762,13 @@ const TRECA_DATA = {
               },
               "lo": 500,
               "hi": 500,
-              "newest": "2026-05-22",
-              "truncated": false
+              "newest": "2026-05-22"
             },
             {
               "months": 6,
               "n": 2,
               "nEbay": 2,
+              "sampled": 2,
               "medAll": 350.25,
               "auction": {
                 "n": 1,
@@ -66407,13 +66784,13 @@ const TRECA_DATA = {
               },
               "lo": 200.5,
               "hi": 500,
-              "newest": "2026-05-22",
-              "truncated": false
+              "newest": "2026-05-22"
             },
             {
               "months": 12,
               "n": 2,
               "nEbay": 2,
+              "sampled": 2,
               "medAll": 350.25,
               "auction": {
                 "n": 1,
@@ -66429,11 +66806,10 @@ const TRECA_DATA = {
               },
               "lo": 200.5,
               "hi": 500,
-              "newest": "2026-05-22",
-              "truncated": false
+              "newest": "2026-05-22"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec12637347) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec12637347) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -67253,16 +67629,32 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 49,
           "rawAn": 8
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 55000,
+          "p9": 25000,
+          "rawA": 30000,
+          "rawB": 22000,
+          "pop10": 1551,
+          "popTotal": 1841,
+          "rate10": 84.25,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 84.25% (g10=1551/total=1841・spec14595425) / 価格は直近値を据え置き(再取得せず) / 旧84.52% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 49,
+          "rawAn": 8
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 23,
-          "soldMedianUSD": 335,
-          "medianBasis": "eBay全込み(n23)",
+          "n": 21,
+          "soldMedianUSD": 338.5,
+          "medianBasis": "eBay全込み(n20)",
           "trend": {
             "m1": {
               "n": 4,
@@ -67270,8 +67662,8 @@ const TRECA_DATA = {
               "truncated": false
             },
             "m3": {
-              "n": 23,
-              "med": 335,
+              "n": 20,
+              "med": 338.5,
               "truncated": false
             },
             "m6": {
@@ -67286,13 +67678,21 @@ const TRECA_DATA = {
             },
             "ratio": 1.33,
             "basis": "1M/12M",
-            "verdict": "急騰"
+            "verdict": "急騰",
+            "spot1M": {
+              "n": 4,
+              "med": 396.04,
+              "lo": 296,
+              "hi": 499.99,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 4,
+              "n": 5,
               "nEbay": 4,
+              "sampled": 5,
               "medAll": 396.04,
               "auction": {
                 "n": 3,
@@ -67308,35 +67708,35 @@ const TRECA_DATA = {
               },
               "lo": 296,
               "hi": 499.99,
-              "newest": "2026-07-20",
-              "truncated": false
+              "newest": "2026-08-03"
             },
             {
               "months": 3,
-              "n": 23,
-              "nEbay": 23,
-              "medAll": 335,
+              "n": 21,
+              "nEbay": 20,
+              "sampled": 21,
+              "medAll": 338.5,
               "auction": {
-                "n": 14,
-                "med": 336
+                "n": 13,
+                "med": 337
               },
               "fixed": {
                 "n": 3,
                 "med": 349
               },
               "bestOffer": {
-                "n": 6,
-                "med": 295
+                "n": 4,
+                "med": 330
               },
-              "lo": 175,
+              "lo": 256,
               "hi": 525,
-              "newest": "2026-07-20",
-              "truncated": false
+              "newest": "2026-08-03"
             },
             {
               "months": 6,
-              "n": 38,
+              "n": 39,
               "nEbay": 38,
+              "sampled": 39,
               "medAll": 298,
               "auction": {
                 "n": 24,
@@ -67352,13 +67752,13 @@ const TRECA_DATA = {
               },
               "lo": 166,
               "hi": 525,
-              "newest": "2026-07-20",
-              "truncated": false
+              "newest": "2026-08-03"
             },
             {
               "months": 12,
-              "n": 38,
+              "n": 39,
               "nEbay": 38,
+              "sampled": 39,
               "medAll": 298,
               "auction": {
                 "n": 24,
@@ -67374,11 +67774,10 @@ const TRECA_DATA = {
               },
               "lo": 166,
               "hi": 525,
-              "newest": "2026-07-20",
-              "truncated": false
+              "newest": "2026-08-03"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec14595425) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec14595425) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -68198,152 +68597,156 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 41,
           "rawAn": 16
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 49000,
+          "p9": 29650,
+          "rawA": 27500,
+          "rawB": 22000,
+          "pop10": 1447,
+          "popTotal": 1767,
+          "rate10": 81.89,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 81.89% (g10=1447/total=1767・spec14731672) / 価格は直近値を据え置き(再取得せず) / 旧81.96% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 41,
+          "rawAn": 16
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 90,
-          "soldMedianUSD": 249,
-          "medianBasis": "eBay全込み(n87)",
+          "n": 119,
+          "soldMedianUSD": 238.82,
+          "medianBasis": "eBay全込み(n96)",
           "trend": {
             "m1": {
-              "n": 14,
-              "med": 305,
+              "n": 47,
+              "med": 222.85,
               "truncated": false
             },
             "m3": {
-              "n": 87,
-              "med": 249,
-              "truncated": false
+              "n": 96,
+              "med": 238.82,
+              "truncated": true
             },
             "m6": {
-              "n": 97,
-              "med": 235,
+              "n": 96,
+              "med": 238.82,
               "truncated": true
             },
             "m12": {
-              "n": 97,
-              "med": 235,
+              "n": 96,
+              "med": 238.82,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 6,
-                "actualMonths": 5.4,
-                "n": 30,
-                "med": 202.5,
-                "range": "2025-12-16〜2026-04-08",
-                "approx": false
-              },
-              {
-                "targetMonths": 12,
-                "actualMonths": 5.4,
-                "n": 30,
-                "med": 202.5,
-                "range": "2025-12-16〜2026-04-08",
-                "approx": true
-              }
-            ],
-            "ratio": 1.51,
-            "basis": "直近/5.4ヶ月前(履歴)",
-            "verdict": "急騰",
-            "fromHistory": true,
-            "approx": true
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 47,
+              "med": 222.85,
+              "lo": 136.5,
+              "hi": 545.55,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 16,
-              "nEbay": 14,
-              "medAll": 305,
+              "n": 50,
+              "nEbay": 47,
+              "sampled": 50,
+              "medAll": 222.85,
               "auction": {
-                "n": 12,
-                "med": 298.92
+                "n": 41,
+                "med": 219.5
               },
               "fixed": {
                 "n": 2,
-                "med": 472.78
+                "med": 410.28
               },
               "bestOffer": {
-                "n": 0,
-                "med": null
+                "n": 4,
+                "med": 238.5
               },
-              "lo": 212.5,
+              "lo": 136.5,
               "hi": 545.55,
-              "newest": "2026-07-21",
-              "truncated": false
+              "newest": "2026-08-03"
             },
             {
               "months": 3,
-              "n": 90,
-              "nEbay": 87,
-              "medAll": 249,
+              "n": 119,
+              "nEbay": 96,
+              "sampled": 100,
+              "medAll": 238.82,
               "auction": {
-                "n": 30,
-                "med": 282.5
+                "n": 58,
+                "med": 229.52
               },
               "fixed": {
-                "n": 13,
-                "med": 369.99
+                "n": 12,
+                "med": 370
               },
               "bestOffer": {
-                "n": 44,
-                "med": 230
+                "n": 26,
+                "med": 240
               },
-              "lo": 167.5,
+              "lo": 136.5,
               "hi": 545.55,
-              "newest": "2026-07-21",
-              "truncated": false
+              "newest": "2026-08-03"
             },
             {
               "months": 6,
-              "n": 123,
-              "nEbay": 97,
-              "medAll": 235,
+              "n": 160,
+              "nEbay": 96,
+              "sampled": 100,
+              "medAll": 238.82,
               "auction": {
-                "n": 36,
-                "med": 255
+                "n": 58,
+                "med": 229.52
               },
               "fixed": {
-                "n": 13,
-                "med": 369.99
+                "n": 12,
+                "med": 370
               },
               "bestOffer": {
-                "n": 48,
-                "med": 227.75
+                "n": 26,
+                "med": 240
               },
-              "lo": 152.22,
+              "lo": 136.5,
               "hi": 545.55,
-              "newest": "2026-07-21",
-              "truncated": true
+              "newest": "2026-08-03"
             },
             {
               "months": 12,
-              "n": 130,
-              "nEbay": 97,
-              "medAll": 235,
+              "n": 170,
+              "nEbay": 96,
+              "sampled": 100,
+              "medAll": 238.82,
               "auction": {
-                "n": 36,
-                "med": 255
+                "n": 58,
+                "med": 229.52
               },
               "fixed": {
-                "n": 13,
-                "med": 369.99
+                "n": 12,
+                "med": 370
               },
               "bestOffer": {
-                "n": 48,
-                "med": 227.75
+                "n": 26,
+                "med": 240
               },
-              "lo": 152.22,
+              "lo": 136.5,
               "hi": 545.55,
-              "newest": "2026-07-21",
-              "truncated": true
+              "newest": "2026-08-03"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec14731672) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec14731672) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -69163,50 +69566,74 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 24,
           "rawAn": 8
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 179800,
+          "p9": 61000,
+          "rawA": 77700,
+          "rawB": 64500,
+          "pop10": 1806,
+          "popTotal": 3611,
+          "rate10": 50.01,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 50.01% (g10=1806/total=3611・spec15588516) / 価格は直近値を据え置き(再取得せず) / 旧50.61% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 24,
+          "rawAn": 8
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 21,
-          "soldMedianUSD": 1280,
-          "medianBasis": "eBay全込み(n21)",
+          "n": 18,
+          "soldMedianUSD": 1212.5,
+          "medianBasis": "eBay全込み(n18)",
           "trend": {
             "m1": {
               "n": 7,
-              "med": 899.99,
+              "med": 865,
               "truncated": false
             },
             "m3": {
-              "n": 21,
-              "med": 1280,
+              "n": 18,
+              "med": 1212.5,
               "truncated": false
             },
             "m6": {
-              "n": 23,
-              "med": 1480,
+              "n": 24,
+              "med": 1380,
               "truncated": false
             },
             "m12": {
-              "n": 23,
-              "med": 1480,
+              "n": 24,
+              "med": 1380,
               "truncated": false
             },
-            "ratio": 0.61,
+            "ratio": 0.63,
             "basis": "1M/12M",
-            "verdict": "急落"
+            "verdict": "急落",
+            "spot1M": {
+              "n": 7,
+              "med": 865,
+              "lo": 800,
+              "hi": 1000,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
               "n": 7,
               "nEbay": 7,
-              "medAll": 899.99,
+              "sampled": 7,
+              "medAll": 865,
               "auction": {
                 "n": 3,
-                "med": 930
+                "med": 865
               },
               "fixed": {
                 "n": 1,
@@ -69218,17 +69645,17 @@ const TRECA_DATA = {
               },
               "lo": 800,
               "hi": 1000,
-              "newest": "2026-07-20",
-              "truncated": false
+              "newest": "2026-07-30"
             },
             {
               "months": 3,
-              "n": 21,
-              "nEbay": 21,
-              "medAll": 1280,
+              "n": 18,
+              "nEbay": 18,
+              "sampled": 18,
+              "medAll": 1212.5,
               "auction": {
-                "n": 14,
-                "med": 1627.5
+                "n": 11,
+                "med": 1225.02
               },
               "fixed": {
                 "n": 1,
@@ -69239,18 +69666,18 @@ const TRECA_DATA = {
                 "med": 1100
               },
               "lo": 800,
-              "hi": 2499.99,
-              "newest": "2026-07-20",
-              "truncated": false
+              "hi": 2000,
+              "newest": "2026-07-30"
             },
             {
               "months": 6,
-              "n": 23,
-              "nEbay": 23,
-              "medAll": 1480,
+              "n": 24,
+              "nEbay": 24,
+              "sampled": 24,
+              "medAll": 1380,
               "auction": {
-                "n": 16,
-                "med": 1805.5
+                "n": 17,
+                "med": 1775
               },
               "fixed": {
                 "n": 1,
@@ -69262,17 +69689,17 @@ const TRECA_DATA = {
               },
               "lo": 800,
               "hi": 2550,
-              "newest": "2026-07-20",
-              "truncated": false
+              "newest": "2026-07-30"
             },
             {
               "months": 12,
-              "n": 23,
-              "nEbay": 23,
-              "medAll": 1480,
+              "n": 24,
+              "nEbay": 24,
+              "sampled": 24,
+              "medAll": 1380,
               "auction": {
-                "n": 16,
-                "med": 1805.5
+                "n": 17,
+                "med": 1775
               },
               "fixed": {
                 "n": 1,
@@ -69284,11 +69711,10 @@ const TRECA_DATA = {
               },
               "lo": 800,
               "hi": 2550,
-              "newest": "2026-07-20",
-              "truncated": false
+              "newest": "2026-07-30"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec15588516) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec15588516) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -69996,50 +70422,74 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 34,
           "rawAn": 27
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 65000,
+          "p9": 35000,
+          "rawA": 30000,
+          "rawB": 18555,
+          "pop10": 497,
+          "popTotal": 620,
+          "rate10": 80.16,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 80.16% (g10=497/total=620・spec14676310) / 価格は直近値を据え置き(再取得せず) / 旧80.03% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 34,
+          "rawAn": 27
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
           "n": 5,
-          "soldMedianUSD": 323,
+          "soldMedianUSD": 328,
           "medianBasis": "eBay全込み(n5)",
           "trend": {
             "m1": {
-              "n": 1,
-              "med": 173,
+              "n": 2,
+              "med": 250.5,
               "truncated": false
             },
             "m3": {
               "n": 5,
-              "med": 323,
+              "med": 328,
               "truncated": false
             },
             "m6": {
-              "n": 14,
-              "med": 280,
+              "n": 15,
+              "med": 295,
               "truncated": false
             },
             "m12": {
-              "n": 14,
-              "med": 280,
+              "n": 15,
+              "med": 295,
               "truncated": false
             },
-            "ratio": 1.15,
+            "ratio": 1.11,
             "basis": "3M/12M",
-            "verdict": "上昇"
+            "verdict": "上昇",
+            "spot1M": {
+              "n": 2,
+              "med": 250.5,
+              "lo": 173,
+              "hi": 328,
+              "reliable": false
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 1,
-              "nEbay": 1,
-              "medAll": 173,
+              "n": 2,
+              "nEbay": 2,
+              "sampled": 2,
+              "medAll": 250.5,
               "auction": {
-                "n": 0,
-                "med": null
+                "n": 1,
+                "med": 328
               },
               "fixed": {
                 "n": 1,
@@ -70050,18 +70500,18 @@ const TRECA_DATA = {
                 "med": null
               },
               "lo": 173,
-              "hi": 173,
-              "newest": "2026-07-09",
-              "truncated": false
+              "hi": 328,
+              "newest": "2026-07-25"
             },
             {
               "months": 3,
               "n": 5,
               "nEbay": 5,
-              "medAll": 323,
+              "sampled": 5,
+              "medAll": 328,
               "auction": {
                 "n": 1,
-                "med": 295
+                "med": 328
               },
               "fixed": {
                 "n": 1,
@@ -70073,17 +70523,17 @@ const TRECA_DATA = {
               },
               "lo": 173,
               "hi": 699,
-              "newest": "2026-07-09",
-              "truncated": false
+              "newest": "2026-07-25"
             },
             {
               "months": 6,
-              "n": 14,
-              "nEbay": 14,
-              "medAll": 280,
+              "n": 15,
+              "nEbay": 15,
+              "sampled": 15,
+              "medAll": 295,
               "auction": {
-                "n": 7,
-                "med": 168.49
+                "n": 8,
+                "med": 209.25
               },
               "fixed": {
                 "n": 2,
@@ -70095,17 +70545,17 @@ const TRECA_DATA = {
               },
               "lo": 150,
               "hi": 699,
-              "newest": "2026-07-09",
-              "truncated": false
+              "newest": "2026-07-25"
             },
             {
               "months": 12,
-              "n": 14,
-              "nEbay": 14,
-              "medAll": 280,
+              "n": 15,
+              "nEbay": 15,
+              "sampled": 15,
+              "medAll": 295,
               "auction": {
-                "n": 7,
-                "med": 168.49
+                "n": 8,
+                "med": 209.25
               },
               "fixed": {
                 "n": 2,
@@ -70117,11 +70567,10 @@ const TRECA_DATA = {
               },
               "lo": 150,
               "hi": 699,
-              "newest": "2026-07-09",
-              "truncated": false
+              "newest": "2026-07-25"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec14676310) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec14676310) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -70845,94 +71294,118 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 13,
           "rawAn": 59
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 105000,
+          "p9": null,
+          "rawA": 40000,
+          "rawB": 15000,
+          "pop10": 734,
+          "popTotal": 760,
+          "rate10": 96.58,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 96.58% (g10=734/total=760・spec10006984) / 価格は直近値を据え置き(再取得せず) / 旧96.51% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 13,
+          "rawAn": 59
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 5,
-          "soldMedianUSD": 535,
-          "medianBasis": "eBay全込み(n5)",
+          "n": 4,
+          "soldMedianUSD": 557.5,
+          "medianBasis": "eBay全込み(n4)",
           "trend": {
             "m1": {
-              "n": 2,
-              "med": 557.5,
-              "truncated": false
-            },
-            "m3": {
-              "n": 5,
+              "n": 3,
               "med": 535,
               "truncated": false
             },
+            "m3": {
+              "n": 4,
+              "med": 557.5,
+              "truncated": false
+            },
             "m6": {
-              "n": 6,
-              "med": 402.5,
+              "n": 7,
+              "med": 350,
               "truncated": false
             },
             "m12": {
-              "n": 15,
-              "med": 42.99,
+              "n": 14,
+              "med": 70,
               "truncated": false
             },
-            "ratio": 12.44,
-            "basis": "3M/12M",
-            "verdict": "急騰"
+            "ratio": 7.64,
+            "basis": "1M/12M",
+            "verdict": "急騰",
+            "spot1M": {
+              "n": 3,
+              "med": 535,
+              "lo": 350,
+              "hi": 580,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 2,
-              "nEbay": 2,
-              "medAll": 557.5,
-              "auction": {
-                "n": 2,
-                "med": 557.5
-              },
-              "fixed": {
-                "n": 0,
-                "med": null
-              },
-              "bestOffer": {
-                "n": 0,
-                "med": null
-              },
-              "lo": 535,
-              "hi": 580,
-              "newest": "2026-07-14",
-              "truncated": false
-            },
-            {
-              "months": 3,
-              "n": 5,
-              "nEbay": 5,
+              "n": 3,
+              "nEbay": 3,
+              "sampled": 3,
               "medAll": 535,
               "auction": {
                 "n": 3,
                 "med": 535
               },
               "fixed": {
-                "n": 1,
-                "med": 270
+                "n": 0,
+                "med": null
+              },
+              "bestOffer": {
+                "n": 0,
+                "med": null
+              },
+              "lo": 350,
+              "hi": 580,
+              "newest": "2026-07-29"
+            },
+            {
+              "months": 3,
+              "n": 4,
+              "nEbay": 4,
+              "sampled": 4,
+              "medAll": 557.5,
+              "auction": {
+                "n": 3,
+                "med": 535
+              },
+              "fixed": {
+                "n": 0,
+                "med": null
               },
               "bestOffer": {
                 "n": 1,
                 "med": 599.99
               },
-              "lo": 270,
+              "lo": 350,
               "hi": 599.99,
-              "newest": "2026-07-14",
-              "truncated": false
+              "newest": "2026-07-29"
             },
             {
               "months": 6,
-              "n": 6,
-              "nEbay": 6,
-              "medAll": 402.5,
+              "n": 7,
+              "nEbay": 7,
+              "sampled": 7,
+              "medAll": 350,
               "auction": {
-                "n": 4,
-                "med": 402.5
+                "n": 5,
+                "med": 350
               },
               "fixed": {
                 "n": 1,
@@ -70944,17 +71417,17 @@ const TRECA_DATA = {
               },
               "lo": 62,
               "hi": 599.99,
-              "newest": "2026-07-14",
-              "truncated": false
+              "newest": "2026-07-29"
             },
             {
               "months": 12,
-              "n": 15,
-              "nEbay": 15,
-              "medAll": 42.99,
+              "n": 14,
+              "nEbay": 14,
+              "sampled": 14,
+              "medAll": 70,
               "auction": {
-                "n": 10,
-                "med": 50
+                "n": 9,
+                "med": 78
               },
               "fixed": {
                 "n": 2,
@@ -70964,13 +71437,12 @@ const TRECA_DATA = {
                 "n": 3,
                 "med": 38
               },
-              "lo": 27,
+              "lo": 27.05,
               "hi": 599.99,
-              "newest": "2026-07-14",
-              "truncated": false
+              "newest": "2026-07-29"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec10006984) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec10006984) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -71678,118 +72150,123 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 47,
           "rawAn": 1
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 179000,
+          "p9": 45555,
+          "rawA": 85000,
+          "rawB": 31000,
+          "pop10": 7249,
+          "popTotal": 12380,
+          "rate10": 58.54,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 58.54% (g10=7249/total=12380・spec2854344) / 価格は直近値を据え置き(再取得せず) / 旧58.71% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 47,
+          "rawAn": 1
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
           "n": 90,
-          "soldMedianUSD": 1100,
-          "medianBasis": "eBay全込み(n69)",
+          "soldMedianUSD": 1077.5,
+          "medianBasis": "eBay全込み(n70)",
           "trend": {
             "m1": {
-              "n": 23,
-              "med": 975,
+              "n": 28,
+              "med": 954.38,
               "truncated": false
             },
             "m3": {
-              "n": 69,
-              "med": 1100,
+              "n": 70,
+              "med": 1077.5,
               "truncated": false
             },
             "m6": {
-              "n": 77,
-              "med": 1100,
+              "n": 78,
+              "med": 1083.25,
               "truncated": true
             },
             "m12": {
-              "n": 77,
-              "med": 1100,
+              "n": 78,
+              "med": 1083.25,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 6,
-                "actualMonths": 5.4,
-                "n": 90,
-                "med": 650,
-                "range": "2025-12-13〜2026-04-13",
-                "approx": false
-              },
-              {
-                "targetMonths": 12,
-                "actualMonths": 11,
-                "n": 95,
-                "med": 510,
-                "range": "2025-07-23〜2025-09-22",
-                "approx": false
-              }
-            ],
-            "ratio": 1.91,
-            "basis": "直近/11ヶ月前(履歴)",
-            "verdict": "急騰",
-            "fromHistory": true,
-            "approx": false
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 28,
+              "med": 954.38,
+              "lo": 499.99,
+              "hi": 1275,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 27,
-              "nEbay": 23,
-              "medAll": 975,
+              "n": 34,
+              "nEbay": 28,
+              "sampled": 34,
+              "medAll": 954.38,
               "auction": {
-                "n": 15,
-                "med": 1000
+                "n": 17,
+                "med": 920
               },
               "fixed": {
-                "n": 3,
-                "med": 925
+                "n": 5,
+                "med": 1000
               },
               "bestOffer": {
-                "n": 5,
-                "med": 975
+                "n": 6,
+                "med": 974.43
               },
               "lo": 499.99,
-              "hi": 1225,
-              "newest": "2026-07-21",
-              "truncated": false
+              "hi": 1275,
+              "newest": "2026-08-04"
             },
             {
               "months": 3,
               "n": 90,
-              "nEbay": 69,
-              "medAll": 1100,
+              "nEbay": 70,
+              "sampled": 90,
+              "medAll": 1077.5,
               "auction": {
-                "n": 35,
-                "med": 1075
+                "n": 40,
+                "med": 1054
               },
               "fixed": {
-                "n": 17,
-                "med": 1138.62
+                "n": 16,
+                "med": 1121.97
               },
               "bestOffer": {
-                "n": 17,
-                "med": 1080
+                "n": 14,
+                "med": 1040.96
               },
               "lo": 499.99,
-              "hi": 1293.95,
-              "newest": "2026-07-21",
-              "truncated": false
+              "hi": 1280.62,
+              "newest": "2026-08-04"
             },
             {
               "months": 6,
-              "n": 161,
-              "nEbay": 77,
-              "medAll": 1100,
+              "n": 172,
+              "nEbay": 78,
+              "sampled": 100,
+              "medAll": 1083.25,
               "auction": {
-                "n": 41,
-                "med": 1087.51
+                "n": 40,
+                "med": 1054
               },
               "fixed": {
-                "n": 17,
-                "med": 1138.62
+                "n": 19,
+                "med": 1125
               },
               "bestOffer": {
                 "n": 19,
@@ -71797,21 +72274,21 @@ const TRECA_DATA = {
               },
               "lo": 499.99,
               "hi": 1293.95,
-              "newest": "2026-07-21",
-              "truncated": true
+              "newest": "2026-08-04"
             },
             {
               "months": 12,
-              "n": 399,
-              "nEbay": 77,
-              "medAll": 1100,
+              "n": 400,
+              "nEbay": 78,
+              "sampled": 100,
+              "medAll": 1083.25,
               "auction": {
-                "n": 41,
-                "med": 1087.51
+                "n": 40,
+                "med": 1054
               },
               "fixed": {
-                "n": 17,
-                "med": 1138.62
+                "n": 19,
+                "med": 1125
               },
               "bestOffer": {
                 "n": 19,
@@ -71819,11 +72296,10 @@ const TRECA_DATA = {
               },
               "lo": 499.99,
               "hi": 1293.95,
-              "newest": "2026-07-21",
-              "truncated": true
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec2854344) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec2854344) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -72469,94 +72945,118 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 49,
           "rawAn": 13
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 152999,
+          "p9": 38000,
+          "rawA": 44000,
+          "rawB": 35000,
+          "pop10": 2455,
+          "popTotal": 5336,
+          "rate10": 46.01,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 46.01% (g10=2455/total=5336・spec14158477) / 価格は直近値を据え置き(再取得せず) / 旧46.5% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 49,
+          "rawAn": 13
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 16,
-          "soldMedianUSD": 828.5,
-          "medianBasis": "eBay全込み(n12)",
+          "n": 11,
+          "soldMedianUSD": 630,
+          "medianBasis": "eBay全込み(n9)",
           "trend": {
             "m1": {
-              "n": 3,
-              "med": 540,
+              "n": 2,
+              "med": 607.51,
               "truncated": false
             },
             "m3": {
-              "n": 12,
-              "med": 828.5,
+              "n": 9,
+              "med": 630,
               "truncated": false
             },
             "m6": {
-              "n": 41,
-              "med": 611,
+              "n": 40,
+              "med": 617.5,
               "truncated": false
             },
             "m12": {
-              "n": 83,
+              "n": 84,
               "med": 599,
               "truncated": false
             },
-            "ratio": 0.9,
-            "basis": "1M/12M",
-            "verdict": "下落"
+            "ratio": 1.05,
+            "basis": "3M/12M",
+            "verdict": "横ばい",
+            "spot1M": {
+              "n": 2,
+              "med": 607.51,
+              "lo": 600.01,
+              "hi": 615,
+              "reliable": false
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 3,
-              "nEbay": 3,
-              "medAll": 540,
+              "n": 2,
+              "nEbay": 2,
+              "sampled": 2,
+              "medAll": 607.51,
               "auction": {
-                "n": 3,
-                "med": 540
+                "n": 1,
+                "med": 600.01
               },
               "fixed": {
                 "n": 0,
                 "med": null
-              },
-              "bestOffer": {
-                "n": 0,
-                "med": null
-              },
-              "lo": 511,
-              "hi": 600.01,
-              "newest": "2026-07-19",
-              "truncated": false
-            },
-            {
-              "months": 3,
-              "n": 16,
-              "nEbay": 12,
-              "medAll": 828.5,
-              "auction": {
-                "n": 9,
-                "med": 820
-              },
-              "fixed": {
-                "n": 2,
-                "med": 950
               },
               "bestOffer": {
                 "n": 1,
-                "med": 825
+                "med": 615
+              },
+              "lo": 600.01,
+              "hi": 615,
+              "newest": "2026-08-02"
+            },
+            {
+              "months": 3,
+              "n": 11,
+              "nEbay": 9,
+              "sampled": 11,
+              "medAll": 630,
+              "auction": {
+                "n": 8,
+                "med": 725
+              },
+              "fixed": {
+                "n": 0,
+                "med": null
+              },
+              "bestOffer": {
+                "n": 1,
+                "med": 615
               },
               "lo": 511,
-              "hi": 999.99,
-              "newest": "2026-07-19",
-              "truncated": false
+              "hi": 864.37,
+              "newest": "2026-08-02"
             },
             {
               "months": 6,
-              "n": 49,
-              "nEbay": 41,
-              "medAll": 611,
+              "n": 46,
+              "nEbay": 40,
+              "sampled": 46,
+              "medAll": 617.5,
               "auction": {
-                "n": 16,
-                "med": 609.5
+                "n": 15,
+                "med": 611
               },
               "fixed": {
                 "n": 7,
@@ -72564,17 +73064,17 @@ const TRECA_DATA = {
               },
               "bestOffer": {
                 "n": 18,
-                "med": 609
+                "med": 617.5
               },
               "lo": 372.77,
               "hi": 999.99,
-              "newest": "2026-07-19",
-              "truncated": false
+              "newest": "2026-08-02"
             },
             {
               "months": 12,
-              "n": 91,
-              "nEbay": 83,
+              "n": 92,
+              "nEbay": 84,
+              "sampled": 92,
               "medAll": 599,
               "auction": {
                 "n": 46,
@@ -72585,16 +73085,15 @@ const TRECA_DATA = {
                 "med": 610
               },
               "bestOffer": {
-                "n": 27,
+                "n": 28,
                 "med": 600
               },
               "lo": 372.77,
               "hi": 1400,
-              "newest": "2026-07-19",
-              "truncated": false
+              "newest": "2026-08-02"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec14158477) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec14158477) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -73240,16 +73739,32 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 54,
           "rawAn": 31
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 120000,
+          "p9": 37000,
+          "rawA": 49800,
+          "rawB": 23350,
+          "pop10": 417,
+          "popTotal": 493,
+          "rate10": 84.58,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 84.58% (g10=417/total=493・spec15499942) / 価格は直近値を据え置き(再取得せず) / 旧85.52% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 54,
+          "rawAn": 31
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 31,
+          "n": 39,
           "soldMedianUSD": 720,
-          "medianBasis": "eBay全込み(n31)",
+          "medianBasis": "eBay全込み(n39)",
           "trend": {
             "m1": {
               "n": 13,
@@ -73257,115 +73772,122 @@ const TRECA_DATA = {
               "truncated": false
             },
             "m3": {
-              "n": 31,
+              "n": 39,
               "med": 720,
               "truncated": false
             },
             "m6": {
-              "n": 31,
+              "n": 39,
               "med": 720,
               "truncated": false
             },
             "m12": {
-              "n": 31,
+              "n": 39,
               "med": 720,
               "truncated": false
             },
             "ratio": 0.99,
             "basis": "1M/12M",
-            "verdict": "横ばい"
+            "verdict": "横ばい",
+            "spot1M": {
+              "n": 13,
+              "med": 710,
+              "lo": 536,
+              "hi": 1000,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
               "n": 13,
               "nEbay": 13,
+              "sampled": 13,
               "medAll": 710,
               "auction": {
-                "n": 9,
+                "n": 12,
                 "med": 710
               },
               "fixed": {
                 "n": 1,
-                "med": 855
+                "med": 739.15
               },
               "bestOffer": {
-                "n": 3,
-                "med": 680
+                "n": 0,
+                "med": null
               },
-              "lo": 660,
-              "hi": 1050,
-              "newest": "2026-07-19",
-              "truncated": false
+              "lo": 536,
+              "hi": 1000,
+              "newest": "2026-08-03"
             },
             {
               "months": 3,
-              "n": 31,
-              "nEbay": 31,
+              "n": 39,
+              "nEbay": 39,
+              "sampled": 39,
               "medAll": 720,
               "auction": {
-                "n": 18,
+                "n": 25,
                 "med": 710
               },
               "fixed": {
-                "n": 3,
-                "med": 850
+                "n": 4,
+                "med": 794.58
               },
               "bestOffer": {
                 "n": 10,
                 "med": 739.6
               },
-              "lo": 540,
+              "lo": 536,
               "hi": 1200,
-              "newest": "2026-07-19",
-              "truncated": false
+              "newest": "2026-08-03"
             },
             {
               "months": 6,
-              "n": 31,
-              "nEbay": 31,
+              "n": 39,
+              "nEbay": 39,
+              "sampled": 39,
               "medAll": 720,
               "auction": {
-                "n": 18,
+                "n": 25,
                 "med": 710
               },
               "fixed": {
-                "n": 3,
-                "med": 850
+                "n": 4,
+                "med": 794.58
               },
               "bestOffer": {
                 "n": 10,
                 "med": 739.6
               },
-              "lo": 540,
+              "lo": 536,
               "hi": 1200,
-              "newest": "2026-07-19",
-              "truncated": false
+              "newest": "2026-08-03"
             },
             {
               "months": 12,
-              "n": 31,
-              "nEbay": 31,
+              "n": 39,
+              "nEbay": 39,
+              "sampled": 39,
               "medAll": 720,
               "auction": {
-                "n": 18,
+                "n": 25,
                 "med": 710
               },
               "fixed": {
-                "n": 3,
-                "med": 850
+                "n": 4,
+                "med": 794.58
               },
               "bestOffer": {
                 "n": 10,
                 "med": 739.6
               },
-              "lo": 540,
+              "lo": 536,
               "hi": 1200,
-              "newest": "2026-07-19",
-              "truncated": false
+              "newest": "2026-08-03"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec15499942) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec15499942) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -74011,132 +74533,155 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 36,
           "rawAn": 17
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 112000,
+          "p9": null,
+          "rawA": 59800,
+          "rawB": 44800,
+          "pop10": 484,
+          "popTotal": 637,
+          "rate10": 75.98,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 75.98% (g10=484/total=637・spec16192488) / 価格は直近値を据え置き(再取得せず) / 旧78% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 36,
+          "rawAn": 17
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 12,
-          "soldMedianUSD": 1267.5,
-          "medianBasis": "eBay全込み(n12)",
+          "n": 18,
+          "soldMedianUSD": 1100,
+          "medianBasis": "eBay全込み(n18)",
           "trend": {
             "m1": {
-              "n": 8,
-              "med": 1162.5,
+              "n": 13,
+              "med": 960,
               "truncated": false
             },
             "m3": {
-              "n": 12,
-              "med": 1267.5,
+              "n": 18,
+              "med": 1100,
               "truncated": false
             },
             "m6": {
-              "n": 12,
-              "med": 1267.5,
+              "n": 18,
+              "med": 1100,
               "truncated": false
             },
             "m12": {
-              "n": 12,
-              "med": 1267.5,
+              "n": 18,
+              "med": 1100,
               "truncated": false
             },
-            "ratio": 0.92,
+            "ratio": 0.87,
             "basis": "1M/12M",
-            "verdict": "横ばい"
+            "verdict": "下落",
+            "spot1M": {
+              "n": 13,
+              "med": 960,
+              "lo": 31.13,
+              "hi": 1550,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 8,
-              "nEbay": 8,
-              "medAll": 1162.5,
+              "n": 13,
+              "nEbay": 13,
+              "sampled": 13,
+              "medAll": 960,
               "auction": {
-                "n": 5,
-                "med": 1225
+                "n": 8,
+                "med": 950
               },
               "fixed": {
                 "n": 0,
                 "med": null
               },
               "bestOffer": {
-                "n": 3,
-                "med": 1100
+                "n": 5,
+                "med": 1000
               },
-              "lo": 840,
-              "hi": 1850,
-              "newest": "2026-07-22",
-              "truncated": false
+              "lo": 31.13,
+              "hi": 1550,
+              "newest": "2026-08-01"
             },
             {
               "months": 3,
-              "n": 12,
-              "nEbay": 12,
-              "medAll": 1267.5,
+              "n": 18,
+              "nEbay": 18,
+              "sampled": 18,
+              "medAll": 1100,
               "auction": {
-                "n": 8,
-                "med": 1267.5
+                "n": 11,
+                "med": 1225
               },
               "fixed": {
                 "n": 1,
                 "med": 1999.99
               },
               "bestOffer": {
-                "n": 3,
-                "med": 1100
+                "n": 6,
+                "med": 1050
               },
-              "lo": 840,
+              "lo": 31.13,
               "hi": 1999.99,
-              "newest": "2026-07-22",
-              "truncated": false
+              "newest": "2026-08-01"
             },
             {
               "months": 6,
-              "n": 12,
-              "nEbay": 12,
-              "medAll": 1267.5,
+              "n": 18,
+              "nEbay": 18,
+              "sampled": 18,
+              "medAll": 1100,
               "auction": {
-                "n": 8,
-                "med": 1267.5
+                "n": 11,
+                "med": 1225
               },
               "fixed": {
                 "n": 1,
                 "med": 1999.99
               },
               "bestOffer": {
-                "n": 3,
-                "med": 1100
+                "n": 6,
+                "med": 1050
               },
-              "lo": 840,
+              "lo": 31.13,
               "hi": 1999.99,
-              "newest": "2026-07-22",
-              "truncated": false
+              "newest": "2026-08-01"
             },
             {
               "months": 12,
-              "n": 12,
-              "nEbay": 12,
-              "medAll": 1267.5,
+              "n": 18,
+              "nEbay": 18,
+              "sampled": 18,
+              "medAll": 1100,
               "auction": {
-                "n": 8,
-                "med": 1267.5
+                "n": 11,
+                "med": 1225
               },
               "fixed": {
                 "n": 1,
                 "med": 1999.99
               },
               "bestOffer": {
-                "n": 3,
-                "med": 1100
+                "n": 6,
+                "med": 1050
               },
-              "lo": 840,
+              "lo": 31.13,
               "hi": 1999.99,
-              "newest": "2026-07-22",
-              "truncated": false
+              "newest": "2026-08-01"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec16192488) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec16192488) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -74766,74 +75311,79 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 57,
           "rawAn": 4
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 117980,
+          "p9": 47000,
+          "rawA": 62000,
+          "rawB": 45000,
+          "pop10": 26414,
+          "popTotal": 31012,
+          "rate10": 85.16,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 85.16% (g10=26414/total=31012・spec5955510) / 価格は直近値を据え置き(再取得せず) / 旧85.24% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 57,
+          "rawAn": 4
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 85,
-          "soldMedianUSD": 816.01,
-          "medianBasis": "eBay全込み(n76)",
+          "n": 100,
+          "soldMedianUSD": 716.81,
+          "medianBasis": "eBay全込み(n83)",
           "trend": {
             "m1": {
-              "n": 22,
-              "med": 646.38,
+              "n": 31,
+              "med": 631.88,
               "truncated": false
             },
             "m3": {
-              "n": 76,
-              "med": 816.01,
+              "n": 83,
+              "med": 716.81,
               "truncated": false
             },
             "m6": {
-              "n": 88,
-              "med": 823.68,
+              "n": 83,
+              "med": 716.81,
               "truncated": true
             },
             "m12": {
-              "n": 88,
-              "med": 823.68,
+              "n": 83,
+              "med": 716.81,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 6,
-                "actualMonths": 5.1,
-                "n": 86,
-                "med": 598.04,
-                "range": "2026-01-01〜2026-04-13",
-                "approx": false
-              },
-              {
-                "targetMonths": 12,
-                "actualMonths": 12.2,
-                "n": 95,
-                "med": 341,
-                "range": "2025-05-24〜2025-09-12",
-                "approx": false
-              }
-            ],
-            "ratio": 1.9,
-            "basis": "直近/12.2ヶ月前(履歴)",
-            "verdict": "急騰",
-            "fromHistory": true,
-            "approx": false
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 31,
+              "med": 631.88,
+              "lo": 400,
+              "hi": 905,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 25,
-              "nEbay": 22,
-              "medAll": 646.38,
+              "n": 41,
+              "nEbay": 31,
+              "sampled": 41,
+              "medAll": 631.88,
               "auction": {
-                "n": 15,
-                "med": 631.88
+                "n": 22,
+                "med": 630
               },
               "fixed": {
-                "n": 3,
-                "med": 699.99
+                "n": 5,
+                "med": 675
               },
               "bestOffer": {
                 "n": 4,
@@ -74841,77 +75391,76 @@ const TRECA_DATA = {
               },
               "lo": 400,
               "hi": 905,
-              "newest": "2026-07-22",
-              "truncated": false
+              "newest": "2026-08-04"
             },
             {
               "months": 3,
-              "n": 85,
-              "nEbay": 76,
-              "medAll": 816.01,
+              "n": 100,
+              "nEbay": 83,
+              "sampled": 100,
+              "medAll": 716.81,
               "auction": {
-                "n": 48,
-                "med": 811.01
+                "n": 54,
+                "med": 692.5
               },
               "fixed": {
-                "n": 15,
-                "med": 865
+                "n": 16,
+                "med": 824.99
               },
               "bestOffer": {
                 "n": 13,
                 "med": 750
               },
               "lo": 49.99,
-              "hi": 1199.99,
-              "newest": "2026-07-22",
-              "truncated": false
+              "hi": 962.28,
+              "newest": "2026-08-04"
             },
             {
               "months": 6,
-              "n": 174,
-              "nEbay": 88,
-              "medAll": 823.68,
+              "n": 190,
+              "nEbay": 83,
+              "sampled": 100,
+              "medAll": 716.81,
               "auction": {
-                "n": 52,
-                "med": 820
+                "n": 54,
+                "med": 692.5
               },
               "fixed": {
-                "n": 22,
-                "med": 870
+                "n": 16,
+                "med": 824.99
               },
               "bestOffer": {
-                "n": 14,
-                "med": 765.78
+                "n": 13,
+                "med": 750
               },
               "lo": 49.99,
-              "hi": 1199.99,
-              "newest": "2026-07-22",
-              "truncated": true
+              "hi": 962.28,
+              "newest": "2026-08-04"
             },
             {
               "months": 12,
-              "n": 346,
-              "nEbay": 88,
-              "medAll": 823.68,
+              "n": 358,
+              "nEbay": 83,
+              "sampled": 100,
+              "medAll": 716.81,
               "auction": {
-                "n": 52,
-                "med": 820
+                "n": 54,
+                "med": 692.5
               },
               "fixed": {
-                "n": 22,
-                "med": 870
+                "n": 16,
+                "med": 824.99
               },
               "bestOffer": {
-                "n": 14,
-                "med": 765.78
+                "n": 13,
+                "med": 750
               },
               "lo": 49.99,
-              "hi": 1199.99,
-              "newest": "2026-07-22",
-              "truncated": true
+              "hi": 962.28,
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec5955510) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec5955510) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -75545,156 +76094,136 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 153,
-          "soldMedianUSD": 560,
-          "medianBasis": "eBay全込み(n90)・直近90件のみ",
+          "n": 133,
+          "soldMedianUSD": 530,
+          "medianBasis": "eBay全込み(n91)",
           "trend": {
             "m1": {
-              "n": 45,
-              "med": 520,
+              "n": 37,
+              "med": 495,
               "truncated": false
             },
             "m3": {
-              "n": 90,
-              "med": 560,
+              "n": 91,
+              "med": 530,
               "truncated": true
             },
             "m6": {
-              "n": 90,
-              "med": 560,
+              "n": 91,
+              "med": 530,
               "truncated": true
             },
             "m12": {
-              "n": 90,
-              "med": 560,
+              "n": 91,
+              "med": 530,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 3,
-                "actualMonths": 2.8,
-                "n": 95,
-                "med": 710,
-                "range": "2026-04-07〜2026-05-22",
-                "approx": false
-              },
-              {
-                "targetMonths": 6,
-                "actualMonths": 6.5,
-                "n": 94,
-                "med": 245,
-                "range": "2025-12-17〜2026-01-28",
-                "approx": false
-              },
-              {
-                "targetMonths": 12,
-                "actualMonths": 12.1,
-                "n": 94,
-                "med": 165,
-                "range": "2025-07-05〜2025-08-09",
-                "approx": false
-              }
-            ],
-            "ratio": 3.15,
-            "basis": "直近/12.1ヶ月前(履歴)",
-            "verdict": "急騰",
-            "fromHistory": true,
-            "approx": false
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 37,
+              "med": 495,
+              "lo": 279,
+              "hi": 901.34,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 51,
-              "nEbay": 45,
-              "medAll": 520,
+              "n": 43,
+              "nEbay": 37,
+              "sampled": 43,
+              "medAll": 495,
               "auction": {
-                "n": 25,
-                "med": 510
+                "n": 17,
+                "med": 475
               },
               "fixed": {
-                "n": 3,
-                "med": 525
+                "n": 4,
+                "med": 512.49
               },
               "bestOffer": {
-                "n": 17,
-                "med": 530
+                "n": 16,
+                "med": 505
               },
-              "lo": 442.98,
+              "lo": 279,
               "hi": 901.34,
-              "newest": "2026-07-22",
-              "truncated": false
+              "newest": "2026-08-04"
             },
             {
               "months": 3,
-              "n": 153,
-              "nEbay": 90,
-              "medAll": 560,
+              "n": 133,
+              "nEbay": 91,
+              "sampled": 100,
+              "medAll": 530,
               "auction": {
                 "n": 53,
-                "med": 560
+                "med": 530
               },
               "fixed": {
                 "n": 12,
-                "med": 610.22
+                "med": 590
               },
               "bestOffer": {
-                "n": 25,
+                "n": 26,
                 "med": 530
               },
               "lo": 230,
               "hi": 901.34,
-              "newest": "2026-07-22",
-              "truncated": true
+              "newest": "2026-08-04"
             },
             {
               "months": 6,
-              "n": 407,
-              "nEbay": 90,
-              "medAll": 560,
+              "n": 392,
+              "nEbay": 91,
+              "sampled": 100,
+              "medAll": 530,
               "auction": {
                 "n": 53,
-                "med": 560
+                "med": 530
               },
               "fixed": {
                 "n": 12,
-                "med": 610.22
+                "med": 590
               },
               "bestOffer": {
-                "n": 25,
+                "n": 26,
                 "med": 530
               },
               "lo": 230,
               "hi": 901.34,
-              "newest": "2026-07-22",
-              "truncated": true
+              "newest": "2026-08-04"
             },
             {
               "months": 12,
-              "n": 851,
-              "nEbay": 90,
-              "medAll": 560,
+              "n": 818,
+              "nEbay": 91,
+              "sampled": 100,
+              "medAll": 530,
               "auction": {
                 "n": 53,
-                "med": 560
+                "med": 530
               },
               "fixed": {
                 "n": 12,
-                "med": 610.22
+                "med": 590
               },
               "bestOffer": {
-                "n": 25,
+                "n": 26,
                 "med": 530
               },
               "lo": 230,
               "hi": 901.34,
-              "newest": "2026-07-22",
-              "truncated": true
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec8971859) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec8971859) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -76324,16 +76853,32 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 63,
           "rawAn": 12
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 124900,
+          "p9": null,
+          "rawA": 76000,
+          "rawB": null,
+          "pop10": 723,
+          "popTotal": 738,
+          "rate10": 97.97,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 97.97% (g10=723/total=738・spec15022368) / 価格は直近値を据え置き(再取得せず) / 旧98.2% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 63,
+          "rawAn": 12
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 6,
-          "soldMedianUSD": 424,
-          "medianBasis": "eBay全込み(n6)",
+          "n": 1,
+          "soldMedianUSD": 360,
+          "medianBasis": "eBay全込み(n1)・薄商い",
           "trend": {
             "m1": {
               "n": 1,
@@ -76341,8 +76886,8 @@ const TRECA_DATA = {
               "truncated": false
             },
             "m3": {
-              "n": 6,
-              "med": 424,
+              "n": 1,
+              "med": 360,
               "truncated": false
             },
             "m6": {
@@ -76355,15 +76900,23 @@ const TRECA_DATA = {
               "med": 424,
               "truncated": false
             },
-            "ratio": 1,
-            "basis": "3M/12M",
-            "verdict": "横ばい"
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(実売が薄い)",
+            "spot1M": {
+              "n": 1,
+              "med": 360,
+              "lo": 360,
+              "hi": 360,
+              "reliable": false
+            }
           },
           "points": [
             {
               "months": 1,
               "n": 1,
               "nEbay": 1,
+              "sampled": 1,
               "medAll": 360,
               "auction": {
                 "n": 1,
@@ -76379,17 +76932,17 @@ const TRECA_DATA = {
               },
               "lo": 360,
               "hi": 360,
-              "newest": "2026-07-20",
-              "truncated": false
+              "newest": "2026-07-20"
             },
             {
               "months": 3,
-              "n": 6,
-              "nEbay": 6,
-              "medAll": 424,
+              "n": 1,
+              "nEbay": 1,
+              "sampled": 1,
+              "medAll": 360,
               "auction": {
-                "n": 6,
-                "med": 424
+                "n": 1,
+                "med": 360
               },
               "fixed": {
                 "n": 0,
@@ -76400,14 +76953,14 @@ const TRECA_DATA = {
                 "med": null
               },
               "lo": 360,
-              "hi": 455,
-              "newest": "2026-07-20",
-              "truncated": false
+              "hi": 360,
+              "newest": "2026-07-20"
             },
             {
               "months": 6,
               "n": 6,
               "nEbay": 6,
+              "sampled": 6,
               "medAll": 424,
               "auction": {
                 "n": 6,
@@ -76423,13 +76976,13 @@ const TRECA_DATA = {
               },
               "lo": 360,
               "hi": 455,
-              "newest": "2026-07-20",
-              "truncated": false
+              "newest": "2026-07-20"
             },
             {
               "months": 12,
               "n": 6,
               "nEbay": 6,
+              "sampled": 6,
               "medAll": 424,
               "auction": {
                 "n": 6,
@@ -76445,11 +76998,10 @@ const TRECA_DATA = {
               },
               "lo": 360,
               "hi": 455,
-              "newest": "2026-07-20",
-              "truncated": false
+              "newest": "2026-07-20"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec15022368) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec15022368) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -77079,25 +77631,41 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 44,
           "rawAn": 12
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 38000,
+          "p9": 25000,
+          "rawA": 18900,
+          "rawB": null,
+          "pop10": 1308,
+          "popTotal": 1414,
+          "rate10": 92.5,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 92.5% (g10=1308/total=1414・spec12591332) / 価格は直近値を据え置き(再取得せず) / 旧92.37% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 44,
+          "rawAn": 12
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 36,
-          "soldMedianUSD": 244.95,
-          "medianBasis": "eBay全込み(n33)",
+          "n": 32,
+          "soldMedianUSD": 250,
+          "medianBasis": "eBay全込み(n29)",
           "trend": {
             "m1": {
-              "n": 7,
-              "med": 255,
+              "n": 6,
+              "med": 232.5,
               "truncated": false
             },
             "m3": {
-              "n": 33,
-              "med": 244.95,
+              "n": 29,
+              "med": 250,
               "truncated": false
             },
             "m6": {
@@ -77110,19 +77678,27 @@ const TRECA_DATA = {
               "med": 220,
               "truncated": false
             },
-            "ratio": 1.16,
+            "ratio": 1.06,
             "basis": "1M/12M",
-            "verdict": "上昇"
+            "verdict": "横ばい",
+            "spot1M": {
+              "n": 6,
+              "med": 232.5,
+              "lo": 124,
+              "hi": 265,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 8,
-              "nEbay": 7,
-              "medAll": 255,
+              "n": 7,
+              "nEbay": 6,
+              "sampled": 7,
+              "medAll": 232.5,
               "auction": {
-                "n": 5,
-                "med": 255
+                "n": 4,
+                "med": 243.75
               },
               "fixed": {
                 "n": 0,
@@ -77130,39 +77706,39 @@ const TRECA_DATA = {
               },
               "bestOffer": {
                 "n": 2,
-                "med": 267.5
+                "med": 172
               },
-              "lo": 220,
-              "hi": 314.99,
-              "newest": "2026-07-20",
-              "truncated": false
+              "lo": 124,
+              "hi": 265,
+              "newest": "2026-08-04"
             },
             {
               "months": 3,
-              "n": 36,
-              "nEbay": 33,
-              "medAll": 244.95,
+              "n": 32,
+              "nEbay": 29,
+              "sampled": 32,
+              "medAll": 250,
               "auction": {
-                "n": 15,
-                "med": 255
+                "n": 12,
+                "med": 262.5
               },
               "fixed": {
                 "n": 8,
                 "med": 239.97
               },
               "bestOffer": {
-                "n": 10,
-                "med": 241.3
+                "n": 9,
+                "med": 250
               },
-              "lo": 144.5,
+              "lo": 124,
               "hi": 402,
-              "newest": "2026-07-20",
-              "truncated": false
+              "newest": "2026-08-04"
             },
             {
               "months": 6,
               "n": 43,
               "nEbay": 39,
+              "sampled": 43,
               "medAll": 232.5,
               "auction": {
                 "n": 18,
@@ -77176,35 +77752,34 @@ const TRECA_DATA = {
                 "n": 12,
                 "med": 226.3
               },
-              "lo": 140.5,
+              "lo": 124,
               "hi": 402,
-              "newest": "2026-07-20",
-              "truncated": false
+              "newest": "2026-08-04"
             },
             {
               "months": 12,
               "n": 52,
               "nEbay": 48,
+              "sampled": 52,
               "medAll": 220,
               "auction": {
                 "n": 19,
                 "med": 232.5
               },
               "fixed": {
-                "n": 13,
-                "med": 219.99
+                "n": 12,
+                "med": 220
               },
               "bestOffer": {
-                "n": 16,
+                "n": 17,
                 "med": 220
               },
               "lo": 55,
               "hi": 402,
-              "newest": "2026-07-20",
-              "truncated": false
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec12591332) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec12591332) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -77704,18 +78279,155 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 17,
           "rawAn": 23
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 130000,
+          "p9": 44000,
+          "rawA": 50000,
+          "rawB": 44444,
+          "pop10": 1306,
+          "popTotal": 3226,
+          "rate10": 40.48,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 40.48% (g10=1306/total=3226・spec2056132) / 価格は直近値を据え置き(再取得せず) / 旧41.26% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 17,
+          "rawAn": 23
         }
       ],
       "signals": {
         "ebay": {
-          "soldMedianUSD": 1439,
-          "soldMedianJPY": 215850,
-          "n": 5,
-          "days": 12,
-          "at": "2026-07-13",
-          "src": "PSA cert公開の類似PSA10直近sold(eBay Auction)中央値・$1263〜1706(06/28〜07/07)",
-          "stale": true,
-          "staleNote": "spec URL未設定でPSA未取得。この値は2026-07-13時点で古い(2026-07-24確認)"
+          "asOf": "2026-08-06",
+          "grade": 10,
+          "currency": "USD",
+          "n": 52,
+          "soldMedianUSD": 1668.83,
+          "medianBasis": "eBay全込み(n42)",
+          "trend": {
+            "m1": {
+              "n": 16,
+              "med": 1472.5,
+              "truncated": false
+            },
+            "m3": {
+              "n": 42,
+              "med": 1668.83,
+              "truncated": false
+            },
+            "m6": {
+              "n": 72,
+              "med": 1470,
+              "truncated": false
+            },
+            "m12": {
+              "n": 81,
+              "med": 1323,
+              "truncated": true
+            },
+            "ratio": 1,
+            "basis": "1M/12M",
+            "verdict": "横ばい",
+            "spot1M": {
+              "n": 16,
+              "med": 1472.5,
+              "lo": 1048,
+              "hi": 1706,
+              "reliable": true
+            }
+          },
+          "points": [
+            {
+              "months": 1,
+              "n": 20,
+              "nEbay": 16,
+              "sampled": 20,
+              "medAll": 1472.5,
+              "auction": {
+                "n": 16,
+                "med": 1472.5
+              },
+              "fixed": {
+                "n": 0,
+                "med": null
+              },
+              "bestOffer": {
+                "n": 0,
+                "med": null
+              },
+              "lo": 1048,
+              "hi": 1706,
+              "newest": "2026-08-04"
+            },
+            {
+              "months": 3,
+              "n": 52,
+              "nEbay": 42,
+              "sampled": 52,
+              "medAll": 1668.83,
+              "auction": {
+                "n": 36,
+                "med": 1605.5
+              },
+              "fixed": {
+                "n": 3,
+                "med": 1900
+              },
+              "bestOffer": {
+                "n": 3,
+                "med": 1800
+              },
+              "lo": 1048,
+              "hi": 2125,
+              "newest": "2026-08-04"
+            },
+            {
+              "months": 6,
+              "n": 91,
+              "nEbay": 72,
+              "sampled": 91,
+              "medAll": 1470,
+              "auction": {
+                "n": 46,
+                "med": 1535
+              },
+              "fixed": {
+                "n": 14,
+                "med": 1093.97
+              },
+              "bestOffer": {
+                "n": 12,
+                "med": 779.05
+              },
+              "lo": 455,
+              "hi": 2125,
+              "newest": "2026-08-04"
+            },
+            {
+              "months": 12,
+              "n": 152,
+              "nEbay": 81,
+              "sampled": 100,
+              "medAll": 1323,
+              "auction": {
+                "n": 46,
+                "med": 1535
+              },
+              "fixed": {
+                "n": 18,
+                "med": 975
+              },
+              "bestOffer": {
+                "n": 17,
+                "med": 747
+              },
+              "lo": 299.98,
+              "hi": 2125,
+              "newest": "2026-08-04"
+            }
+          ],
+          "src": "PSA getSalesBySpecId(spec2056132) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -78215,11 +78927,27 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 46,
           "rawAn": 22
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 50000,
+          "p9": 22000,
+          "rawA": 24500,
+          "rawB": 11999,
+          "pop10": 276,
+          "popTotal": 337,
+          "rate10": 81.9,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 81.9% (g10=276/total=337・spec12153807) / 価格は直近値を据え置き(再取得せず) / 旧82.19% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 46,
+          "rawAn": 22
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
           "n": 3,
@@ -78248,13 +78976,21 @@ const TRECA_DATA = {
             },
             "ratio": null,
             "basis": null,
-            "verdict": "判定不能(実売が薄い)"
+            "verdict": "判定不能(実売が薄い)",
+            "spot1M": {
+              "n": 0,
+              "med": null,
+              "lo": null,
+              "hi": null,
+              "reliable": false
+            }
           },
           "points": [
             {
               "months": 1,
               "n": 0,
               "nEbay": 0,
+              "sampled": 0,
               "medAll": null,
               "auction": {
                 "n": 0,
@@ -78270,13 +79006,13 @@ const TRECA_DATA = {
               },
               "lo": null,
               "hi": null,
-              "newest": null,
-              "truncated": false
+              "newest": null
             },
             {
               "months": 3,
               "n": 3,
               "nEbay": 2,
+              "sampled": 3,
               "medAll": 195,
               "auction": {
                 "n": 0,
@@ -78292,13 +79028,13 @@ const TRECA_DATA = {
               },
               "lo": 140,
               "hi": 250,
-              "newest": "2026-06-07",
-              "truncated": false
+              "newest": "2026-06-07"
             },
             {
               "months": 6,
               "n": 3,
               "nEbay": 2,
+              "sampled": 3,
               "medAll": 195,
               "auction": {
                 "n": 0,
@@ -78314,13 +79050,13 @@ const TRECA_DATA = {
               },
               "lo": 140,
               "hi": 250,
-              "newest": "2026-06-07",
-              "truncated": false
+              "newest": "2026-06-07"
             },
             {
               "months": 12,
               "n": 4,
               "nEbay": 3,
+              "sampled": 4,
               "medAll": 140,
               "auction": {
                 "n": 0,
@@ -78336,11 +79072,10 @@ const TRECA_DATA = {
               },
               "lo": 50,
               "hi": 250,
-              "newest": "2026-06-07",
-              "truncated": false
+              "newest": "2026-06-07"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec12153807) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec12153807) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -78856,132 +79591,156 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 24,
           "rawAn": 41
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 72100,
+          "p9": 28717,
+          "rawA": 34000,
+          "rawB": 19900,
+          "pop10": 1854,
+          "popTotal": 2064,
+          "rate10": 89.83,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 89.83% (g10=1854/total=2064・spec9678067) / 価格は直近値を据え置き(再取得せず) / 旧89.77% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 24,
+          "rawAn": 41
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 59,
-          "soldMedianUSD": 300,
-          "medianBasis": "eBay全込み(n55)",
+          "n": 56,
+          "soldMedianUSD": 450,
+          "medianBasis": "eBay全込み(n52)",
           "trend": {
             "m1": {
-              "n": 13,
-              "med": 565,
+              "n": 17,
+              "med": 559.99,
               "truncated": false
             },
             "m3": {
-              "n": 55,
-              "med": 300,
+              "n": 52,
+              "med": 450,
               "truncated": false
             },
             "m6": {
-              "n": 86,
-              "med": 200,
-              "truncated": false
+              "n": 94,
+              "med": 250,
+              "truncated": true
             },
             "m12": {
               "n": 94,
-              "med": 200,
+              "med": 250,
               "truncated": true
             },
-            "ratio": 2.83,
-            "basis": "1M/6M",
-            "verdict": "急騰"
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 17,
+              "med": 559.99,
+              "lo": 348.62,
+              "hi": 670,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 13,
-              "nEbay": 13,
-              "medAll": 565,
+              "n": 17,
+              "nEbay": 17,
+              "sampled": 17,
+              "medAll": 559.99,
               "auction": {
-                "n": 9,
-                "med": 565
+                "n": 11,
+                "med": 510
               },
               "fixed": {
                 "n": 2,
-                "med": 647.49
+                "med": 619.99
               },
               "bestOffer": {
-                "n": 2,
-                "med": 615
+                "n": 4,
+                "med": 530
               },
-              "lo": 480,
-              "hi": 694.99,
-              "newest": "2026-07-19",
-              "truncated": false
+              "lo": 348.62,
+              "hi": 670,
+              "newest": "2026-08-03"
             },
             {
               "months": 3,
-              "n": 59,
-              "nEbay": 55,
-              "medAll": 300,
+              "n": 56,
+              "nEbay": 52,
+              "sampled": 56,
+              "medAll": 450,
               "auction": {
-                "n": 20,
-                "med": 425
+                "n": 22,
+                "med": 505
               },
               "fixed": {
-                "n": 14,
-                "med": 189.99
+                "n": 8,
+                "med": 354.75
               },
               "bestOffer": {
-                "n": 21,
-                "med": 320
+                "n": 22,
+                "med": 360
               },
               "lo": 163.94,
               "hi": 710,
-              "newest": "2026-07-19",
-              "truncated": false
+              "newest": "2026-08-03"
             },
             {
               "months": 6,
-              "n": 92,
-              "nEbay": 86,
-              "medAll": 200,
+              "n": 101,
+              "nEbay": 94,
+              "sampled": 100,
+              "medAll": 250,
               "auction": {
-                "n": 35,
-                "med": 194.5
+                "n": 43,
+                "med": 202.56
               },
               "fixed": {
-                "n": 21,
+                "n": 22,
                 "med": 189.99
               },
               "bestOffer": {
-                "n": 30,
-                "med": 282
+                "n": 29,
+                "med": 300
               },
               "lo": 76.99,
               "hi": 710,
-              "newest": "2026-07-19",
-              "truncated": false
+              "newest": "2026-08-03"
             },
             {
               "months": 12,
-              "n": 120,
+              "n": 129,
               "nEbay": 94,
-              "medAll": 200,
+              "sampled": 100,
+              "medAll": 250,
               "auction": {
-                "n": 41,
-                "med": 195
+                "n": 43,
+                "med": 202.56
               },
               "fixed": {
-                "n": 21,
+                "n": 22,
                 "med": 189.99
               },
               "bestOffer": {
-                "n": 32,
-                "med": 264.46
+                "n": 29,
+                "med": 300
               },
               "lo": 76.99,
               "hi": 710,
-              "newest": "2026-07-19",
-              "truncated": true
+              "newest": "2026-08-03"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec9678067) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec9678067) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -79485,128 +80244,135 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 44,
-          "soldMedianUSD": 207.19,
+          "n": 45,
+          "soldMedianUSD": 214,
           "medianBasis": "eBay全込み(n40)",
           "trend": {
             "m1": {
-              "n": 3,
-              "med": 280,
+              "n": 11,
+              "med": 170.5,
               "truncated": false
             },
             "m3": {
               "n": 40,
-              "med": 207.19,
+              "med": 214,
               "truncated": false
             },
             "m6": {
-              "n": 51,
-              "med": 201.5,
+              "n": 57,
+              "med": 199.99,
               "truncated": false
             },
             "m12": {
-              "n": 69,
-              "med": 173.5,
+              "n": 76,
+              "med": 171.61,
               "truncated": false
             },
-            "ratio": 1.61,
+            "ratio": 0.99,
             "basis": "1M/12M",
-            "verdict": "急騰"
+            "verdict": "横ばい",
+            "spot1M": {
+              "n": 11,
+              "med": 170.5,
+              "lo": 157.41,
+              "hi": 310,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 5,
-              "nEbay": 3,
-              "medAll": 280,
+              "n": 14,
+              "nEbay": 11,
+              "sampled": 14,
+              "medAll": 170.5,
               "auction": {
-                "n": 2,
-                "med": 295
+                "n": 8,
+                "med": 168.25
               },
               "fixed": {
-                "n": 1,
-                "med": 280
+                "n": 2,
+                "med": 218.71
               },
               "bestOffer": {
-                "n": 0,
-                "med": null
+                "n": 1,
+                "med": 267.49
               },
-              "lo": 280,
+              "lo": 157.41,
               "hi": 310,
-              "newest": "2026-07-20",
-              "truncated": false
+              "newest": "2026-08-02"
             },
             {
               "months": 3,
-              "n": 44,
+              "n": 45,
               "nEbay": 40,
-              "medAll": 207.19,
+              "sampled": 45,
+              "medAll": 214,
               "auction": {
-                "n": 12,
-                "med": 187.5
-              },
-              "fixed": {
                 "n": 13,
                 "med": 175
+              },
+              "fixed": {
+                "n": 12,
+                "med": 182.5
               },
               "bestOffer": {
                 "n": 15,
                 "med": 250
               },
-              "lo": 107.5,
+              "lo": 157.41,
               "hi": 492,
-              "newest": "2026-07-20",
-              "truncated": false
+              "newest": "2026-08-02"
             },
             {
               "months": 6,
-              "n": 57,
-              "nEbay": 51,
-              "medAll": 201.5,
+              "n": 64,
+              "nEbay": 57,
+              "sampled": 64,
+              "medAll": 199.99,
               "auction": {
-                "n": 16,
-                "med": 173.11
+                "n": 21,
+                "med": 166
               },
               "fixed": {
-                "n": 15,
-                "med": 169.99
+                "n": 16,
+                "med": 169.5
               },
               "bestOffer": {
                 "n": 20,
-                "med": 235.47
+                "med": 242.86
               },
               "lo": 102.5,
               "hi": 492,
-              "newest": "2026-07-20",
-              "truncated": false
+              "newest": "2026-08-02"
             },
             {
               "months": 12,
-              "n": 76,
-              "nEbay": 69,
-              "medAll": 173.5,
+              "n": 84,
+              "nEbay": 76,
+              "sampled": 84,
+              "medAll": 171.61,
               "auction": {
-                "n": 20,
-                "med": 154.75
+                "n": 26,
+                "med": 160.26
               },
               "fixed": {
-                "n": 23,
+                "n": 24,
                 "med": 159.99
               },
               "bestOffer": {
                 "n": 26,
-                "med": 225
+                "med": 232.5
               },
               "lo": 37.9,
               "hi": 492,
-              "newest": "2026-07-20",
-              "truncated": false
+              "newest": "2026-08-02"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec7392713) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec7392713) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -80106,152 +80872,156 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 63,
           "rawAn": 2
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 120500,
+          "p9": 59000,
+          "rawA": 72250,
+          "rawB": 50000,
+          "pop10": 12986,
+          "popTotal": 16228,
+          "rate10": 80.02,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 80.02% (g10=12986/total=16228・spec13676714) / 価格は直近値を据え置き(再取得せず) / 旧80.12% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 63,
+          "rawAn": 2
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
           "n": 84,
-          "soldMedianUSD": 750,
-          "medianBasis": "eBay全込み(n79)",
+          "soldMedianUSD": 700,
+          "medianBasis": "eBay全込み(n80)",
           "trend": {
             "m1": {
-              "n": 31,
-              "med": 700,
+              "n": 30,
+              "med": 625,
               "truncated": false
             },
             "m3": {
-              "n": 79,
-              "med": 750,
+              "n": 80,
+              "med": 700,
               "truncated": false
             },
             "m6": {
-              "n": 92,
-              "med": 750,
+              "n": 94,
+              "med": 727.5,
               "truncated": true
             },
             "m12": {
-              "n": 92,
-              "med": 750,
+              "n": 94,
+              "med": 727.5,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 6,
-                "actualMonths": 6.3,
-                "n": 92,
-                "med": 416.5,
-                "range": "2025-12-13〜2026-02-14",
-                "approx": false
-              },
-              {
-                "targetMonths": 12,
-                "actualMonths": 10.9,
-                "n": 100,
-                "med": 470,
-                "range": "2025-07-23〜2025-10-02",
-                "approx": true
-              }
-            ],
-            "ratio": 1.49,
-            "basis": "直近/10.9ヶ月前(履歴)",
-            "verdict": "急騰",
-            "fromHistory": true,
-            "approx": true
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 30,
+              "med": 625,
+              "lo": 419.99,
+              "hi": 780,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 34,
-              "nEbay": 31,
-              "medAll": 700,
+              "n": 33,
+              "nEbay": 30,
+              "sampled": 33,
+              "medAll": 625,
               "auction": {
-                "n": 17,
-                "med": 680
+                "n": 20,
+                "med": 622.5
               },
               "fixed": {
-                "n": 4,
-                "med": 695
+                "n": 2,
+                "med": 560
               },
               "bestOffer": {
-                "n": 10,
-                "med": 730
+                "n": 8,
+                "med": 665
               },
               "lo": 419.99,
-              "hi": 995,
-              "newest": "2026-07-20",
-              "truncated": false
+              "hi": 780,
+              "newest": "2026-08-04"
             },
             {
               "months": 3,
               "n": 84,
-              "nEbay": 79,
-              "medAll": 750,
+              "nEbay": 80,
+              "sampled": 84,
+              "medAll": 700,
               "auction": {
-                "n": 37,
+                "n": 42,
+                "med": 675.94
+              },
+              "fixed": {
+                "n": 7,
                 "med": 700
+              },
+              "bestOffer": {
+                "n": 31,
+                "med": 750
+              },
+              "lo": 365,
+              "hi": 1064.86,
+              "newest": "2026-08-04"
+            },
+            {
+              "months": 6,
+              "n": 231,
+              "nEbay": 94,
+              "sampled": 100,
+              "medAll": 727.5,
+              "auction": {
+                "n": 47,
+                "med": 684
               },
               "fixed": {
                 "n": 13,
                 "med": 780
               },
               "bestOffer": {
-                "n": 29,
+                "n": 34,
                 "med": 750
               },
               "lo": 365,
               "hi": 1064.86,
-              "newest": "2026-07-20",
-              "truncated": false
-            },
-            {
-              "months": 6,
-              "n": 232,
-              "nEbay": 92,
-              "medAll": 750,
-              "auction": {
-                "n": 43,
-                "med": 720
-              },
-              "fixed": {
-                "n": 14,
-                "med": 777.5
-              },
-              "bestOffer": {
-                "n": 35,
-                "med": 760
-              },
-              "lo": 365,
-              "hi": 1064.86,
-              "newest": "2026-07-20",
-              "truncated": true
+              "newest": "2026-08-04"
             },
             {
               "months": 12,
-              "n": 495,
-              "nEbay": 92,
-              "medAll": 750,
+              "n": 486,
+              "nEbay": 94,
+              "sampled": 100,
+              "medAll": 727.5,
               "auction": {
-                "n": 43,
-                "med": 720
+                "n": 47,
+                "med": 684
               },
               "fixed": {
-                "n": 14,
-                "med": 777.5
+                "n": 13,
+                "med": 780
               },
               "bestOffer": {
-                "n": 35,
-                "med": 760
+                "n": 34,
+                "med": 750
               },
               "lo": 365,
               "hi": 1064.86,
-              "newest": "2026-07-20",
-              "truncated": true
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec13676714) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec13676714) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -80751,152 +81521,156 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 59,
           "rawAn": 4
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 138000,
+          "p9": 61000,
+          "rawA": 73500,
+          "rawB": 57400,
+          "pop10": 12935,
+          "popTotal": 15717,
+          "rate10": 82.29,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 82.29% (g10=12935/total=15717・spec13676896) / 価格は直近値を据え置き(再取得せず) / 旧82.43% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 59,
+          "rawAn": 4
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 93,
-          "soldMedianUSD": 691,
-          "medianBasis": "eBay全込み(n85)",
+          "n": 100,
+          "soldMedianUSD": 655,
+          "medianBasis": "eBay全込み(n90)",
           "trend": {
             "m1": {
-              "n": 26,
-              "med": 615,
+              "n": 36,
+              "med": 610.5,
               "truncated": false
             },
             "m3": {
-              "n": 85,
-              "med": 691,
+              "n": 90,
+              "med": 655,
               "truncated": false
             },
             "m6": {
-              "n": 92,
-              "med": 699,
+              "n": 90,
+              "med": 655,
               "truncated": true
             },
             "m12": {
-              "n": 92,
-              "med": 699,
+              "n": 90,
+              "med": 655,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 6,
-                "actualMonths": 7,
-                "n": 93,
-                "med": 399.99,
-                "range": "2025-11-18〜2026-01-29",
-                "approx": false
-              },
-              {
-                "targetMonths": 12,
-                "actualMonths": 11.9,
-                "n": 80,
-                "med": 500.75,
-                "range": "2025-06-21〜2025-09-05",
-                "approx": false
-              }
-            ],
-            "ratio": 1.23,
-            "basis": "直近/11.9ヶ月前(履歴)",
-            "verdict": "上昇",
-            "fromHistory": true,
-            "approx": false
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 36,
+              "med": 610.5,
+              "lo": 480,
+              "hi": 860,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 30,
-              "nEbay": 26,
-              "medAll": 615,
+              "n": 41,
+              "nEbay": 36,
+              "sampled": 41,
+              "medAll": 610.5,
               "auction": {
-                "n": 10,
-                "med": 599
+                "n": 18,
+                "med": 590
               },
               "fixed": {
                 "n": 5,
-                "med": 650
+                "med": 649.99
               },
               "bestOffer": {
-                "n": 11,
-                "med": 620
+                "n": 13,
+                "med": 630
               },
-              "lo": 552,
-              "hi": 679,
-              "newest": "2026-07-22",
-              "truncated": false
+              "lo": 480,
+              "hi": 860,
+              "newest": "2026-08-04"
             },
             {
               "months": 3,
-              "n": 93,
-              "nEbay": 85,
-              "medAll": 691,
+              "n": 100,
+              "nEbay": 90,
+              "sampled": 100,
+              "medAll": 655,
               "auction": {
-                "n": 47,
-                "med": 696
+                "n": 52,
+                "med": 660.5
               },
               "fixed": {
                 "n": 11,
-                "med": 679
+                "med": 675
               },
               "bestOffer": {
                 "n": 27,
-                "med": 700
+                "med": 643
               },
-              "lo": 550,
+              "lo": 480,
               "hi": 9999,
-              "newest": "2026-07-22",
-              "truncated": false
+              "newest": "2026-08-04"
             },
             {
               "months": 6,
-              "n": 210,
-              "nEbay": 92,
-              "medAll": 699,
+              "n": 213,
+              "nEbay": 90,
+              "sampled": 100,
+              "medAll": 655,
               "auction": {
-                "n": 50,
-                "med": 697
+                "n": 52,
+                "med": 660.5
               },
               "fixed": {
                 "n": 11,
-                "med": 679
+                "med": 675
               },
               "bestOffer": {
-                "n": 31,
-                "med": 712.5
+                "n": 27,
+                "med": 643
               },
-              "lo": 550,
+              "lo": 480,
               "hi": 9999,
-              "newest": "2026-07-22",
-              "truncated": true
+              "newest": "2026-08-04"
             },
             {
               "months": 12,
-              "n": 455,
-              "nEbay": 92,
-              "medAll": 699,
+              "n": 451,
+              "nEbay": 90,
+              "sampled": 100,
+              "medAll": 655,
               "auction": {
-                "n": 50,
-                "med": 697
+                "n": 52,
+                "med": 660.5
               },
               "fixed": {
                 "n": 11,
-                "med": 679
+                "med": 675
               },
               "bestOffer": {
-                "n": 31,
-                "med": 712.5
+                "n": 27,
+                "med": 643
               },
-              "lo": 550,
+              "lo": 480,
               "hi": 9999,
-              "newest": "2026-07-22",
-              "truncated": true
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec13676896) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec13676896) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -81400,156 +82174,136 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 558,
-          "soldMedianUSD": 329.99,
-          "medianBasis": "eBay全込み(n90)・直近90件のみ",
+          "n": 539,
+          "soldMedianUSD": 305,
+          "medianBasis": "eBay全込み(n93)",
           "trend": {
             "m1": {
-              "n": 90,
-              "med": 329.99,
+              "n": 93,
+              "med": 305,
               "truncated": true
             },
             "m3": {
-              "n": 90,
-              "med": 329.99,
+              "n": 93,
+              "med": 305,
               "truncated": true
             },
             "m6": {
-              "n": 90,
-              "med": 329.99,
+              "n": 93,
+              "med": 305,
               "truncated": true
             },
             "m12": {
-              "n": 90,
-              "med": 329.99,
+              "n": 93,
+              "med": 305,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 3,
-                "actualMonths": 3,
-                "n": 94,
-                "med": 293.25,
-                "range": "2026-04-19〜2026-04-29",
-                "approx": false
-              },
-              {
-                "targetMonths": 6,
-                "actualMonths": 5.9,
-                "n": 98,
-                "med": 199.99,
-                "range": "2026-01-19〜2026-02-01",
-                "approx": false
-              },
-              {
-                "targetMonths": 12,
-                "actualMonths": 12,
-                "n": 95,
-                "med": 142.99,
-                "range": "2025-07-19〜2025-08-03",
-                "approx": false
-              }
-            ],
-            "ratio": 2.31,
-            "basis": "直近/12ヶ月前(履歴)",
-            "verdict": "急騰",
-            "fromHistory": true,
-            "approx": false
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 93,
+              "med": 305,
+              "lo": 50,
+              "hi": 460.36,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 138,
-              "nEbay": 90,
-              "medAll": 329.99,
+              "n": 152,
+              "nEbay": 93,
+              "sampled": 100,
+              "medAll": 305,
               "auction": {
-                "n": 46,
-                "med": 320
+                "n": 50,
+                "med": 300.5
               },
               "fixed": {
-                "n": 17,
-                "med": 350
+                "n": 22,
+                "med": 321.5
               },
               "bestOffer": {
-                "n": 27,
-                "med": 330
+                "n": 21,
+                "med": 309.99
               },
-              "lo": 169.99,
-              "hi": 600,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 50,
+              "hi": 460.36,
+              "newest": "2026-08-04"
             },
             {
               "months": 3,
-              "n": 558,
-              "nEbay": 90,
-              "medAll": 329.99,
+              "n": 539,
+              "nEbay": 93,
+              "sampled": 100,
+              "medAll": 305,
               "auction": {
-                "n": 46,
-                "med": 320
+                "n": 50,
+                "med": 300.5
               },
               "fixed": {
-                "n": 17,
-                "med": 350
+                "n": 22,
+                "med": 321.5
               },
               "bestOffer": {
-                "n": 27,
-                "med": 330
+                "n": 21,
+                "med": 309.99
               },
-              "lo": 169.99,
-              "hi": 600,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 50,
+              "hi": 460.36,
+              "newest": "2026-08-04"
             },
             {
               "months": 6,
-              "n": 1362,
-              "nEbay": 90,
-              "medAll": 329.99,
+              "n": 1342,
+              "nEbay": 93,
+              "sampled": 100,
+              "medAll": 305,
               "auction": {
-                "n": 46,
-                "med": 320
+                "n": 50,
+                "med": 300.5
               },
               "fixed": {
-                "n": 17,
-                "med": 350
+                "n": 22,
+                "med": 321.5
               },
               "bestOffer": {
-                "n": 27,
-                "med": 330
+                "n": 21,
+                "med": 309.99
               },
-              "lo": 169.99,
-              "hi": 600,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 50,
+              "hi": 460.36,
+              "newest": "2026-08-04"
             },
             {
               "months": 12,
-              "n": 2681,
-              "nEbay": 90,
-              "medAll": 329.99,
+              "n": 2644,
+              "nEbay": 93,
+              "sampled": 100,
+              "medAll": 305,
               "auction": {
-                "n": 46,
-                "med": 320
+                "n": 50,
+                "med": 300.5
               },
               "fixed": {
-                "n": 17,
-                "med": 350
+                "n": 22,
+                "med": 321.5
               },
               "bestOffer": {
-                "n": 27,
-                "med": 330
+                "n": 21,
+                "med": 309.99
               },
-              "lo": 169.99,
-              "hi": 600,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 50,
+              "hi": 460.36,
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec8422222) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec8422222) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -81857,119 +82611,143 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 42,
           "rawAn": 16
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 43000,
+          "p9": 14000,
+          "rawA": 16880,
+          "rawB": 7500,
+          "pop10": 682,
+          "popTotal": 908,
+          "rate10": 75.11,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 75.11% (g10=682/total=908・spec14595416) / 価格は直近値を据え置き(再取得せず) / 旧75.45% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 42,
+          "rawAn": 16
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 17,
+          "n": 19,
           "soldMedianUSD": 265,
-          "medianBasis": "eBay全込み(n15)",
+          "medianBasis": "eBay全込み(n17)",
           "trend": {
             "m1": {
-              "n": 3,
-              "med": 275,
+              "n": 5,
+              "med": 243.5,
               "truncated": false
             },
             "m3": {
-              "n": 15,
+              "n": 17,
               "med": 265,
               "truncated": false
             },
             "m6": {
-              "n": 17,
-              "med": 265,
+              "n": 19,
+              "med": 255,
               "truncated": false
             },
             "m12": {
-              "n": 17,
-              "med": 265,
+              "n": 20,
+              "med": 260,
               "truncated": false
             },
-            "ratio": 1.04,
+            "ratio": 0.94,
             "basis": "1M/12M",
-            "verdict": "横ばい"
+            "verdict": "横ばい",
+            "spot1M": {
+              "n": 5,
+              "med": 243.5,
+              "lo": 174,
+              "hi": 299.99,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 3,
-              "nEbay": 3,
-              "medAll": 275,
+              "n": 5,
+              "nEbay": 5,
+              "sampled": 5,
+              "medAll": 243.5,
               "auction": {
-                "n": 1,
-                "med": 243.5
+                "n": 3,
+                "med": 200
               },
               "fixed": {
                 "n": 1,
-                "med": 275
+                "med": 299.99
               },
               "bestOffer": {
                 "n": 1,
                 "med": 280
               },
-              "lo": 243.5,
-              "hi": 280,
-              "newest": "2026-07-11",
-              "truncated": false
+              "lo": 174,
+              "hi": 299.99,
+              "newest": "2026-07-29"
             },
             {
               "months": 3,
-              "n": 17,
-              "nEbay": 15,
+              "n": 19,
+              "nEbay": 17,
+              "sampled": 19,
               "medAll": 265,
               "auction": {
-                "n": 3,
-                "med": 243.5
+                "n": 4,
+                "med": 221.75
               },
               "fixed": {
-                "n": 5,
+                "n": 6,
                 "med": 265
               },
               "bestOffer": {
                 "n": 7,
                 "med": 300
               },
-              "lo": 137.5,
+              "lo": 174,
               "hi": 352.2,
-              "newest": "2026-07-11",
-              "truncated": false
+              "newest": "2026-07-29"
             },
             {
               "months": 6,
-              "n": 19,
-              "nEbay": 17,
-              "medAll": 265,
+              "n": 21,
+              "nEbay": 19,
+              "sampled": 21,
+              "medAll": 255,
               "auction": {
-                "n": 3,
-                "med": 243.5
+                "n": 5,
+                "med": 200
               },
               "fixed": {
-                "n": 5,
+                "n": 6,
                 "med": 265
               },
               "bestOffer": {
-                "n": 9,
-                "med": 300
+                "n": 8,
+                "med": 290
               },
               "lo": 137.5,
               "hi": 352.2,
-              "newest": "2026-07-11",
-              "truncated": false
+              "newest": "2026-07-29"
             },
             {
               "months": 12,
-              "n": 19,
-              "nEbay": 17,
-              "medAll": 265,
+              "n": 22,
+              "nEbay": 20,
+              "sampled": 22,
+              "medAll": 260,
               "auction": {
-                "n": 3,
-                "med": 243.5
+                "n": 5,
+                "med": 200
               },
               "fixed": {
-                "n": 5,
+                "n": 6,
                 "med": 265
               },
               "bestOffer": {
@@ -81978,11 +82756,10 @@ const TRECA_DATA = {
               },
               "lo": 137.5,
               "hi": 352.2,
-              "newest": "2026-07-11",
-              "truncated": false
+              "newest": "2026-07-29"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec14595416) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec14595416) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -82278,156 +83055,136 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 259,
-          "soldMedianUSD": 354.5,
-          "medianBasis": "eBay全込み(n98)・直近98件のみ",
+          "n": 282,
+          "soldMedianUSD": 337.5,
+          "medianBasis": "eBay全込み(n98)",
           "trend": {
             "m1": {
-              "n": 89,
-              "med": 350,
-              "truncated": false
+              "n": 98,
+              "med": 337.5,
+              "truncated": true
             },
             "m3": {
               "n": 98,
-              "med": 354.5,
+              "med": 337.5,
               "truncated": true
             },
             "m6": {
               "n": 98,
-              "med": 354.5,
+              "med": 337.5,
               "truncated": true
             },
             "m12": {
               "n": 98,
-              "med": 354.5,
+              "med": 337.5,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 3,
-                "actualMonths": 2.8,
-                "n": 94,
-                "med": 299.99,
-                "range": "2026-04-11〜2026-05-14",
-                "approx": false
-              },
-              {
-                "targetMonths": 6,
-                "actualMonths": 5.3,
-                "n": 98,
-                "med": 210.25,
-                "range": "2026-01-23〜2026-03-08",
-                "approx": false
-              },
-              {
-                "targetMonths": 12,
-                "actualMonths": 12,
-                "n": 100,
-                "med": 240,
-                "range": "2025-06-30〜2025-08-17",
-                "approx": false
-              }
-            ],
-            "ratio": 1.46,
-            "basis": "直近/12ヶ月前(履歴)",
-            "verdict": "急騰",
-            "fromHistory": true,
-            "approx": false
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 98,
+              "med": 337.5,
+              "lo": 276,
+              "hi": 562.59,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 91,
-              "nEbay": 89,
-              "medAll": 350,
+              "n": 108,
+              "nEbay": 98,
+              "sampled": 100,
+              "medAll": 337.5,
               "auction": {
-                "n": 58,
-                "med": 345
+                "n": 67,
+                "med": 330
               },
               "fixed": {
-                "n": 17,
-                "med": 399.99
+                "n": 18,
+                "med": 359.65
               },
               "bestOffer": {
-                "n": 14,
-                "med": 364.5
+                "n": 13,
+                "med": 347.99
               },
-              "lo": 215.6,
+              "lo": 276,
               "hi": 562.59,
-              "newest": "2026-07-22",
-              "truncated": false
+              "newest": "2026-08-03"
             },
             {
               "months": 3,
-              "n": 259,
+              "n": 282,
               "nEbay": 98,
-              "medAll": 354.5,
+              "sampled": 100,
+              "medAll": 337.5,
               "auction": {
-                "n": 62,
-                "med": 346
+                "n": 67,
+                "med": 330
               },
               "fixed": {
-                "n": 21,
-                "med": 399.99
+                "n": 18,
+                "med": 359.65
               },
               "bestOffer": {
-                "n": 15,
-                "med": 370
+                "n": 13,
+                "med": 347.99
               },
-              "lo": 215.6,
+              "lo": 276,
               "hi": 562.59,
-              "newest": "2026-07-22",
-              "truncated": true
+              "newest": "2026-08-03"
             },
             {
               "months": 6,
-              "n": 497,
+              "n": 533,
               "nEbay": 98,
-              "medAll": 354.5,
+              "sampled": 100,
+              "medAll": 337.5,
               "auction": {
-                "n": 62,
-                "med": 346
+                "n": 67,
+                "med": 330
               },
               "fixed": {
-                "n": 21,
-                "med": 399.99
+                "n": 18,
+                "med": 359.65
               },
               "bestOffer": {
-                "n": 15,
-                "med": 370
+                "n": 13,
+                "med": 347.99
               },
-              "lo": 215.6,
+              "lo": 276,
               "hi": 562.59,
-              "newest": "2026-07-22",
-              "truncated": true
+              "newest": "2026-08-03"
             },
             {
               "months": 12,
-              "n": 957,
+              "n": 976,
               "nEbay": 98,
-              "medAll": 354.5,
+              "sampled": 100,
+              "medAll": 337.5,
               "auction": {
-                "n": 62,
-                "med": 346
+                "n": 67,
+                "med": 330
               },
               "fixed": {
-                "n": 21,
-                "med": 399.99
+                "n": 18,
+                "med": 359.65
               },
               "bestOffer": {
-                "n": 15,
-                "med": 370
+                "n": 13,
+                "med": 347.99
               },
-              "lo": 215.6,
+              "lo": 276,
               "hi": 562.59,
-              "newest": "2026-07-22",
-              "truncated": true
+              "newest": "2026-08-03"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec2691315) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec2691315) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -82719,152 +83476,156 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 66,
           "rawAn": 3
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 129999,
+          "p9": null,
+          "rawA": 72000,
+          "rawB": 55000,
+          "pop10": 12509,
+          "popTotal": 15064,
+          "rate10": 83.04,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 83.04% (g10=12509/total=15064・spec8972128) / 価格は直近値を据え置き(再取得せず) / 旧83.13% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 66,
+          "rawAn": 3
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 70,
-          "soldMedianUSD": 718.52,
+          "n": 71,
+          "soldMedianUSD": 700,
           "medianBasis": "eBay全込み(n63)",
           "trend": {
             "m1": {
-              "n": 15,
-              "med": 632,
+              "n": 18,
+              "med": 615.59,
               "truncated": false
             },
             "m3": {
               "n": 63,
-              "med": 718.52,
+              "med": 700,
               "truncated": false
             },
             "m6": {
-              "n": 91,
-              "med": 759,
+              "n": 90,
+              "med": 738.02,
               "truncated": true
             },
             "m12": {
-              "n": 91,
-              "med": 759,
+              "n": 90,
+              "med": 738.02,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 6,
-                "actualMonths": 7,
-                "n": 96,
-                "med": 360,
-                "range": "2025-11-02〜2026-02-15",
-                "approx": false
-              },
-              {
-                "targetMonths": 12,
-                "actualMonths": 12.4,
-                "n": 100,
-                "med": 323.97,
-                "range": "2025-06-08〜2025-08-18",
-                "approx": false
-              }
-            ],
-            "ratio": 1.95,
-            "basis": "直近/12.4ヶ月前(履歴)",
-            "verdict": "急騰",
-            "fromHistory": true,
-            "approx": false
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 18,
+              "med": 615.59,
+              "lo": 400,
+              "hi": 707.91,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 20,
-              "nEbay": 15,
-              "medAll": 632,
+              "n": 21,
+              "nEbay": 18,
+              "sampled": 21,
+              "medAll": 615.59,
               "auction": {
                 "n": 9,
-                "med": 621.17
+                "med": 608.3
               },
               "fixed": {
-                "n": 2,
-                "med": 703.96
+                "n": 5,
+                "med": 635
               },
               "bestOffer": {
                 "n": 4,
-                "med": 694.03
+                "med": 617.5
               },
-              "lo": 455,
-              "hi": 739.57,
-              "newest": "2026-07-21",
-              "truncated": false
+              "lo": 400,
+              "hi": 707.91,
+              "newest": "2026-08-03"
             },
             {
               "months": 3,
-              "n": 70,
+              "n": 71,
               "nEbay": 63,
-              "medAll": 718.52,
+              "sampled": 71,
+              "medAll": 700,
               "auction": {
-                "n": 39,
-                "med": 716
+                "n": 36,
+                "med": 665.51
               },
               "fixed": {
-                "n": 6,
-                "med": 750
+                "n": 9,
+                "med": 707.91
               },
               "bestOffer": {
                 "n": 18,
-                "med": 712.26
+                "med": 703
               },
-              "lo": 455,
+              "lo": 400,
               "hi": 1000,
-              "newest": "2026-07-21",
-              "truncated": false
+              "newest": "2026-08-03"
             },
             {
               "months": 6,
-              "n": 214,
-              "nEbay": 91,
-              "medAll": 759,
+              "n": 218,
+              "nEbay": 90,
+              "sampled": 100,
+              "medAll": 738.02,
               "auction": {
                 "n": 48,
-                "med": 746
+                "med": 723.5
               },
               "fixed": {
                 "n": 17,
-                "med": 899.99
+                "med": 844.78
               },
               "bestOffer": {
-                "n": 26,
-                "med": 757.5
+                "n": 25,
+                "med": 718.52
               },
               "lo": 329,
               "hi": 1100,
-              "newest": "2026-07-21",
-              "truncated": true
+              "newest": "2026-08-03"
             },
             {
               "months": 12,
-              "n": 424,
-              "nEbay": 91,
-              "medAll": 759,
+              "n": 420,
+              "nEbay": 90,
+              "sampled": 100,
+              "medAll": 738.02,
               "auction": {
                 "n": 48,
-                "med": 746
+                "med": 723.5
               },
               "fixed": {
                 "n": 17,
-                "med": 899.99
+                "med": 844.78
               },
               "bestOffer": {
-                "n": 26,
-                "med": 757.5
+                "n": 25,
+                "med": 718.52
               },
               "lo": 329,
               "hi": 1100,
-              "newest": "2026-07-21",
-              "truncated": true
+              "newest": "2026-08-03"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec8972128) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec8972128) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -83172,93 +83933,95 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 54,
           "rawAn": 9
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 46000,
+          "p9": 25000,
+          "rawA": 22980,
+          "rawB": 18500,
+          "pop10": 926,
+          "popTotal": 994,
+          "rate10": 93.16,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 93.16% (g10=926/total=994・spec14595407) / 価格は直近値を据え置き(再取得せず) / 旧92.96% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 54,
+          "rawAn": 9
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 10,
-          "soldMedianUSD": 244,
-          "medianBasis": "eBay全込み(n10)",
+          "n": 14,
+          "soldMedianUSD": 230.25,
+          "medianBasis": "eBay全込み(n14)",
           "trend": {
             "m1": {
-              "n": 3,
-              "med": 252,
+              "n": 6,
+              "med": 215.75,
               "truncated": false
             },
             "m3": {
-              "n": 10,
-              "med": 244,
-              "truncated": false
-            },
-            "m6": {
-              "n": 12,
+              "n": 14,
               "med": 230.25,
               "truncated": false
             },
-            "m12": {
-              "n": 13,
-              "med": 222.5,
+            "m6": {
+              "n": 16,
+              "med": 219.5,
               "truncated": false
             },
-            "ratio": 1.13,
+            "m12": {
+              "n": 17,
+              "med": 216.5,
+              "truncated": false
+            },
+            "ratio": 1,
             "basis": "1M/12M",
-            "verdict": "上昇"
+            "verdict": "横ばい",
+            "spot1M": {
+              "n": 6,
+              "med": 215.75,
+              "lo": 187.5,
+              "hi": 260,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 3,
-              "nEbay": 3,
-              "medAll": 252,
+              "n": 6,
+              "nEbay": 6,
+              "sampled": 6,
+              "medAll": 215.75,
               "auction": {
-                "n": 2,
-                "med": 234.25
+                "n": 4,
+                "med": 212
               },
               "fixed": {
                 "n": 0,
                 "med": null
               },
               "bestOffer": {
-                "n": 1,
-                "med": 260
+                "n": 2,
+                "med": 237.5
               },
-              "lo": 216.5,
+              "lo": 187.5,
               "hi": 260,
-              "newest": "2026-07-20",
-              "truncated": false
+              "newest": "2026-07-31"
             },
             {
               "months": 3,
-              "n": 10,
-              "nEbay": 10,
-              "medAll": 244,
-              "auction": {
-                "n": 4,
-                "med": 219.5
-              },
-              "fixed": {
-                "n": 2,
-                "med": 280
-              },
-              "bestOffer": {
-                "n": 4,
-                "med": 255
-              },
-              "lo": 146.5,
-              "hi": 399.99,
-              "newest": "2026-07-20",
-              "truncated": false
-            },
-            {
-              "months": 6,
-              "n": 12,
-              "nEbay": 12,
+              "n": 14,
+              "nEbay": 14,
+              "sampled": 14,
               "medAll": 230.25,
               "auction": {
-                "n": 5,
+                "n": 7,
                 "med": 216.5
               },
               "fixed": {
@@ -83269,35 +84032,56 @@ const TRECA_DATA = {
                 "n": 5,
                 "med": 250
               },
-              "lo": 144,
+              "lo": 146.5,
               "hi": 399.99,
-              "newest": "2026-07-20",
-              "truncated": false
+              "newest": "2026-07-31"
             },
             {
-              "months": 12,
-              "n": 13,
-              "nEbay": 13,
-              "medAll": 222.5,
+              "months": 6,
+              "n": 16,
+              "nEbay": 16,
+              "sampled": 16,
+              "medAll": 219.5,
               "auction": {
-                "n": 6,
-                "med": 181.5
+                "n": 8,
+                "med": 212
               },
               "fixed": {
                 "n": 2,
                 "med": 280
               },
               "bestOffer": {
-                "n": 5,
-                "med": 250
+                "n": 6,
+                "med": 244
+              },
+              "lo": 144,
+              "hi": 399.99,
+              "newest": "2026-07-31"
+            },
+            {
+              "months": 12,
+              "n": 17,
+              "nEbay": 17,
+              "sampled": 17,
+              "medAll": 216.5,
+              "auction": {
+                "n": 9,
+                "med": 207.5
+              },
+              "fixed": {
+                "n": 2,
+                "med": 280
+              },
+              "bestOffer": {
+                "n": 6,
+                "med": 244
               },
               "lo": 128.5,
               "hi": 399.99,
-              "newest": "2026-07-20",
-              "truncated": false
+              "newest": "2026-07-31"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec14595407) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec14595407) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -83593,12 +84377,12 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 10,
-          "soldMedianUSD": 535,
-          "medianBasis": "eBay全込み(n10)",
+          "n": 7,
+          "soldMedianUSD": 590.58,
+          "medianBasis": "eBay全込み(n7)",
           "trend": {
             "m1": {
               "n": 5,
@@ -83606,13 +84390,13 @@ const TRECA_DATA = {
               "truncated": false
             },
             "m3": {
-              "n": 10,
-              "med": 535,
+              "n": 7,
+              "med": 590.58,
               "truncated": false
             },
             "m6": {
-              "n": 14,
-              "med": 359,
+              "n": 13,
+              "med": 398,
               "truncated": false
             },
             "m12": {
@@ -83622,13 +84406,21 @@ const TRECA_DATA = {
             },
             "ratio": 2.4,
             "basis": "1M/12M",
-            "verdict": "急騰"
+            "verdict": "急騰",
+            "spot1M": {
+              "n": 5,
+              "med": 629,
+              "lo": 570,
+              "hi": 640,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
               "n": 5,
               "nEbay": 5,
+              "sampled": 5,
               "medAll": 629,
               "auction": {
                 "n": 5,
@@ -83644,17 +84436,17 @@ const TRECA_DATA = {
               },
               "lo": 570,
               "hi": 640,
-              "newest": "2026-07-13",
-              "truncated": false
+              "newest": "2026-07-13"
             },
             {
               "months": 3,
-              "n": 10,
-              "nEbay": 10,
-              "medAll": 535,
+              "n": 7,
+              "nEbay": 7,
+              "sampled": 7,
+              "medAll": 590.58,
               "auction": {
-                "n": 9,
-                "med": 570
+                "n": 6,
+                "med": 609.79
               },
               "fixed": {
                 "n": 0,
@@ -83664,16 +84456,16 @@ const TRECA_DATA = {
                 "n": 1,
                 "med": 398
               },
-              "lo": 250,
+              "lo": 398,
               "hi": 640,
-              "newest": "2026-07-13",
-              "truncated": false
+              "newest": "2026-07-13"
             },
             {
               "months": 6,
-              "n": 14,
-              "nEbay": 14,
-              "medAll": 359,
+              "n": 13,
+              "nEbay": 13,
+              "sampled": 13,
+              "medAll": 398,
               "auction": {
                 "n": 10,
                 "med": 535
@@ -83683,18 +84475,18 @@ const TRECA_DATA = {
                 "med": 320
               },
               "bestOffer": {
-                "n": 3,
-                "med": 152
+                "n": 2,
+                "med": 275
               },
-              "lo": 150,
+              "lo": 152,
               "hi": 640,
-              "newest": "2026-07-13",
-              "truncated": false
+              "newest": "2026-07-13"
             },
             {
               "months": 12,
               "n": 18,
               "nEbay": 18,
+              "sampled": 18,
               "medAll": 262.5,
               "auction": {
                 "n": 14,
@@ -83710,11 +84502,10 @@ const TRECA_DATA = {
               },
               "lo": 61,
               "hi": 640,
-              "newest": "2026-07-13",
-              "truncated": false
+              "newest": "2026-07-13"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec13786510) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec13786510) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -84010,156 +84801,136 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 145,
-          "soldMedianUSD": 368.31,
-          "medianBasis": "eBay全込み(n92)・直近92件のみ",
+          "n": 150,
+          "soldMedianUSD": 357,
+          "medianBasis": "eBay全込み(n96)",
           "trend": {
             "m1": {
-              "n": 41,
-              "med": 365,
+              "n": 46,
+              "med": 346.73,
               "truncated": false
             },
             "m3": {
-              "n": 92,
-              "med": 368.31,
+              "n": 96,
+              "med": 357,
               "truncated": true
             },
             "m6": {
-              "n": 92,
-              "med": 368.31,
+              "n": 96,
+              "med": 357,
               "truncated": true
             },
             "m12": {
-              "n": 92,
-              "med": 368.31,
+              "n": 96,
+              "med": 357,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 3,
-                "actualMonths": 2.8,
-                "n": 89,
-                "med": 310,
-                "range": "2026-04-05〜2026-05-23",
-                "approx": false
-              },
-              {
-                "targetMonths": 6,
-                "actualMonths": 5.5,
-                "n": 97,
-                "med": 220,
-                "range": "2026-01-20〜2026-02-26",
-                "approx": false
-              },
-              {
-                "targetMonths": 12,
-                "actualMonths": 11.4,
-                "n": 91,
-                "med": 170.5,
-                "range": "2025-07-21〜2025-09-04",
-                "approx": false
-              }
-            ],
-            "ratio": 2.14,
-            "basis": "直近/11.4ヶ月前(履歴)",
-            "verdict": "急騰",
-            "fromHistory": true,
-            "approx": false
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 46,
+              "med": 346.73,
+              "lo": 240.5,
+              "hi": 2627.18,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 44,
-              "nEbay": 41,
-              "medAll": 365,
+              "n": 49,
+              "nEbay": 46,
+              "sampled": 49,
+              "medAll": 346.73,
               "auction": {
-                "n": 20,
-                "med": 360
+                "n": 24,
+                "med": 323
               },
               "fixed": {
                 "n": 10,
-                "med": 379.71
+                "med": 369.5
               },
               "bestOffer": {
-                "n": 11,
-                "med": 365
+                "n": 12,
+                "med": 349
               },
-              "lo": 225,
+              "lo": 240.5,
               "hi": 2627.18,
-              "newest": "2026-07-22",
-              "truncated": false
+              "newest": "2026-08-04"
             },
             {
               "months": 3,
-              "n": 145,
-              "nEbay": 92,
-              "medAll": 368.31,
+              "n": 150,
+              "nEbay": 96,
+              "sampled": 100,
+              "medAll": 357,
               "auction": {
-                "n": 51,
-                "med": 365
+                "n": 54,
+                "med": 355
               },
               "fixed": {
-                "n": 21,
-                "med": 400
+                "n": 20,
+                "med": 375
               },
               "bestOffer": {
-                "n": 20,
-                "med": 365.57
+                "n": 22,
+                "med": 357.5
               },
-              "lo": 225,
+              "lo": 198,
               "hi": 2627.18,
-              "newest": "2026-07-22",
-              "truncated": true
+              "newest": "2026-08-04"
             },
             {
               "months": 6,
-              "n": 390,
-              "nEbay": 92,
-              "medAll": 368.31,
+              "n": 379,
+              "nEbay": 96,
+              "sampled": 100,
+              "medAll": 357,
               "auction": {
-                "n": 51,
-                "med": 365
+                "n": 54,
+                "med": 355
               },
               "fixed": {
-                "n": 21,
-                "med": 400
+                "n": 20,
+                "med": 375
               },
               "bestOffer": {
-                "n": 20,
-                "med": 365.57
+                "n": 22,
+                "med": 357.5
               },
-              "lo": 225,
+              "lo": 198,
               "hi": 2627.18,
-              "newest": "2026-07-22",
-              "truncated": true
+              "newest": "2026-08-04"
             },
             {
               "months": 12,
-              "n": 794,
-              "nEbay": 92,
-              "medAll": 368.31,
+              "n": 796,
+              "nEbay": 96,
+              "sampled": 100,
+              "medAll": 357,
               "auction": {
-                "n": 51,
-                "med": 365
+                "n": 54,
+                "med": 355
               },
               "fixed": {
-                "n": 21,
-                "med": 400
+                "n": 20,
+                "med": 375
               },
               "bestOffer": {
-                "n": 20,
-                "med": 365.57
+                "n": 22,
+                "med": 357.5
               },
-              "lo": 225,
+              "lo": 198,
               "hi": 2627.18,
-              "newest": "2026-07-22",
-              "truncated": true
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec8880222) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec8880222) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -84455,156 +85226,136 @@ const TRECA_DATA = {
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 530,
-          "soldMedianUSD": 520,
-          "medianBasis": "eBay全込み(n95)・直近95件のみ",
+          "n": 552,
+          "soldMedianUSD": 485,
+          "medianBasis": "eBay全込み(n97)",
           "trend": {
             "m1": {
-              "n": 95,
-              "med": 520,
+              "n": 97,
+              "med": 485,
               "truncated": true
             },
             "m3": {
-              "n": 95,
-              "med": 520,
+              "n": 97,
+              "med": 485,
               "truncated": true
             },
             "m6": {
-              "n": 95,
-              "med": 520,
+              "n": 97,
+              "med": 485,
               "truncated": true
             },
             "m12": {
-              "n": 95,
-              "med": 520,
+              "n": 97,
+              "med": 485,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 3,
-                "actualMonths": 3.1,
-                "n": 94,
-                "med": 490,
-                "range": "2026-04-15〜2026-04-29",
-                "approx": false
-              },
-              {
-                "targetMonths": 6,
-                "actualMonths": 6.1,
-                "n": 90,
-                "med": 257.5,
-                "range": "2026-01-15〜2026-01-26",
-                "approx": false
-              },
-              {
-                "targetMonths": 12,
-                "actualMonths": 12.2,
-                "n": 96,
-                "med": 265,
-                "range": "2025-07-12〜2025-07-27",
-                "approx": false
-              }
-            ],
-            "ratio": 1.96,
-            "basis": "直近/12.2ヶ月前(履歴)",
-            "verdict": "急騰",
-            "fromHistory": true,
-            "approx": false
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 97,
+              "med": 485,
+              "lo": 249.95,
+              "hi": 535,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 235,
-              "nEbay": 95,
-              "medAll": 520,
+              "n": 275,
+              "nEbay": 97,
+              "sampled": 100,
+              "medAll": 485,
               "auction": {
-                "n": 41,
-                "med": 505
+                "n": 42,
+                "med": 480
               },
               "fixed": {
-                "n": 29,
-                "med": 533.33
+                "n": 35,
+                "med": 494.99
               },
               "bestOffer": {
-                "n": 25,
-                "med": 535
+                "n": 20,
+                "med": 472.5
               },
-              "lo": 440,
-              "hi": 655,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 249.95,
+              "hi": 535,
+              "newest": "2026-08-04"
             },
             {
               "months": 3,
-              "n": 530,
-              "nEbay": 95,
-              "medAll": 520,
+              "n": 552,
+              "nEbay": 97,
+              "sampled": 100,
+              "medAll": 485,
               "auction": {
-                "n": 41,
-                "med": 505
+                "n": 42,
+                "med": 480
               },
               "fixed": {
-                "n": 29,
-                "med": 533.33
+                "n": 35,
+                "med": 494.99
               },
               "bestOffer": {
-                "n": 25,
-                "med": 535
+                "n": 20,
+                "med": 472.5
               },
-              "lo": 440,
-              "hi": 655,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 249.95,
+              "hi": 535,
+              "newest": "2026-08-04"
             },
             {
               "months": 6,
-              "n": 1233,
-              "nEbay": 95,
-              "medAll": 520,
+              "n": 1218,
+              "nEbay": 97,
+              "sampled": 100,
+              "medAll": 485,
               "auction": {
-                "n": 41,
-                "med": 505
+                "n": 42,
+                "med": 480
               },
               "fixed": {
-                "n": 29,
-                "med": 533.33
+                "n": 35,
+                "med": 494.99
               },
               "bestOffer": {
-                "n": 25,
-                "med": 535
+                "n": 20,
+                "med": 472.5
               },
-              "lo": 440,
-              "hi": 655,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 249.95,
+              "hi": 535,
+              "newest": "2026-08-04"
             },
             {
               "months": 12,
-              "n": 3116,
-              "nEbay": 95,
-              "medAll": 520,
+              "n": 3102,
+              "nEbay": 97,
+              "sampled": 100,
+              "medAll": 485,
               "auction": {
-                "n": 41,
-                "med": 505
+                "n": 42,
+                "med": 480
               },
               "fixed": {
-                "n": 29,
-                "med": 533.33
+                "n": 35,
+                "med": 494.99
               },
               "bestOffer": {
-                "n": 25,
-                "med": 535
+                "n": 20,
+                "med": 472.5
               },
-              "lo": 440,
-              "hi": 655,
-              "newest": "2026-07-22",
-              "truncated": true
+              "lo": 249.95,
+              "hi": 535,
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec9724035) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec9724035) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     },
@@ -84896,160 +85647,156 @@ const TRECA_DATA = {
           "alert": null,
           "p10n": 61,
           "rawAn": 2
+        },
+        {
+          "at": "2026-08-06T12:09:49.888+09:00",
+          "p10": 57000,
+          "p9": 26300,
+          "rawA": 34500,
+          "rawB": null,
+          "pop10": 27824,
+          "popTotal": 31171,
+          "rate10": 89.26,
+          "currency": "JPY",
+          "src": "rate10=PSA公式GEM RATE 89.26% (g10=27824/total=31171・spec5955515) / 価格は直近値を据え置き(再取得せず) / 旧89.33% (psa_refresh 2026-08-06)",
+          "stale": false,
+          "alert": null,
+          "p10n": 61,
+          "rawAn": 2
         }
       ],
       "signals": {
         "ebay": {
-          "asOf": "2026-07-24",
+          "asOf": "2026-08-06",
           "grade": 10,
           "currency": "USD",
-          "n": 137,
-          "soldMedianUSD": 490,
-          "medianBasis": "eBay全込み(n96)・直近96件のみ",
+          "n": 148,
+          "soldMedianUSD": 417,
+          "medianBasis": "eBay全込み(n97)",
           "trend": {
             "m1": {
-              "n": 52,
-              "med": 400,
+              "n": 68,
+              "med": 390.5,
               "truncated": false
             },
             "m3": {
-              "n": 96,
-              "med": 490,
+              "n": 97,
+              "med": 417,
               "truncated": true
             },
             "m6": {
-              "n": 96,
-              "med": 490,
+              "n": 97,
+              "med": 417,
               "truncated": true
             },
             "m12": {
-              "n": 96,
-              "med": 490,
+              "n": 97,
+              "med": 417,
               "truncated": true
             },
-            "history": [
-              {
-                "targetMonths": 3,
-                "actualMonths": 3.1,
-                "n": 87,
-                "med": 455,
-                "range": "2026-03-23〜2026-05-22",
-                "approx": false
-              },
-              {
-                "targetMonths": 6,
-                "actualMonths": 5.6,
-                "n": 92,
-                "med": 300,
-                "range": "2025-12-20〜2026-03-23",
-                "approx": false
-              },
-              {
-                "targetMonths": 12,
-                "actualMonths": 11.1,
-                "n": 96,
-                "med": 250,
-                "range": "2025-07-24〜2025-09-21",
-                "approx": false
-              }
-            ],
-            "ratio": 1.6,
-            "basis": "直近/11.1ヶ月前(履歴)",
-            "verdict": "急騰",
-            "fromHistory": true,
-            "approx": false
+            "ratio": null,
+            "basis": null,
+            "verdict": "判定不能(高回転で直近100件しか取得できず期間比較不可)",
+            "truncated": true,
+            "spot1M": {
+              "n": 68,
+              "med": 390.5,
+              "lo": 245,
+              "hi": 565.98,
+              "reliable": true
+            }
           },
           "points": [
             {
               "months": 1,
-              "n": 53,
-              "nEbay": 52,
-              "medAll": 400,
+              "n": 70,
+              "nEbay": 68,
+              "sampled": 70,
+              "medAll": 390.5,
               "auction": {
-                "n": 33,
-                "med": 395
+                "n": 43,
+                "med": 381.54
               },
               "fixed": {
-                "n": 12,
-                "med": 425
+                "n": 16,
+                "med": 422.5
               },
               "bestOffer": {
-                "n": 7,
-                "med": 450
+                "n": 9,
+                "med": 420
               },
-              "lo": 114.08,
-              "hi": 560.09,
-              "newest": "2026-07-22",
-              "truncated": false
+              "lo": 245,
+              "hi": 565.98,
+              "newest": "2026-08-04"
             },
             {
               "months": 3,
-              "n": 137,
-              "nEbay": 96,
-              "medAll": 490,
+              "n": 148,
+              "nEbay": 97,
+              "sampled": 100,
+              "medAll": 417,
               "auction": {
-                "n": 51,
-                "med": 455
+                "n": 58,
+                "med": 405.5
               },
               "fixed": {
-                "n": 24,
-                "med": 547.85
+                "n": 19,
+                "med": 440
               },
               "bestOffer": {
-                "n": 21,
-                "med": 520.16
+                "n": 20,
+                "med": 478.94
               },
               "lo": 114.08,
-              "hi": 639.93,
-              "newest": "2026-07-22",
-              "truncated": true
+              "hi": 584.18,
+              "newest": "2026-08-04"
             },
             {
               "months": 6,
-              "n": 264,
-              "nEbay": 96,
-              "medAll": 490,
+              "n": 281,
+              "nEbay": 97,
+              "sampled": 100,
+              "medAll": 417,
               "auction": {
-                "n": 51,
-                "med": 455
+                "n": 58,
+                "med": 405.5
               },
               "fixed": {
-                "n": 24,
-                "med": 547.85
+                "n": 19,
+                "med": 440
               },
               "bestOffer": {
-                "n": 21,
-                "med": 520.16
+                "n": 20,
+                "med": 478.94
               },
               "lo": 114.08,
-              "hi": 639.93,
-              "newest": "2026-07-22",
-              "truncated": true
+              "hi": 584.18,
+              "newest": "2026-08-04"
             },
             {
               "months": 12,
-              "n": 500,
-              "nEbay": 96,
-              "medAll": 490,
+              "n": 510,
+              "nEbay": 97,
+              "sampled": 100,
+              "medAll": 417,
               "auction": {
-                "n": 51,
-                "med": 455
+                "n": 58,
+                "med": 405.5
               },
               "fixed": {
-                "n": 24,
-                "med": 547.85
+                "n": 19,
+                "med": 440
               },
               "bestOffer": {
-                "n": 21,
-                "med": 520.16
+                "n": 20,
+                "med": 478.94
               },
               "lo": 114.08,
-              "hi": 639.93,
-              "newest": "2026-07-22",
-              "truncated": true
+              "hi": 584.18,
+              "newest": "2026-08-04"
             }
           ],
-          "src": "PSA getSalesBySpecId(spec5955515) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3M)・trendはtruncated(n>100)とn<3を除外して判定・USD保存(円換算は表示時)"
+          "src": "PSA getSalesBySpecId(spec5955515) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
         }
       }
     }

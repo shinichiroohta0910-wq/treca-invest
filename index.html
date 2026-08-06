@@ -914,11 +914,14 @@ function renderScout(){
     if(r.confirm) flags.push(`<span class="stag" style="background:rgba(255,180,84,.18);color:var(--warn)">要確認</span>`);
     else if(r.tier==="caution" && r.n!=null && r.n<=4) flags.push(`<span class="stag" style="background:rgba(255,180,84,.18);color:var(--warn)">薄商い</span>`);
     if(r.tier==="skip") flags.push(`<span class="stag" style="background:rgba(154,163,171,.18);color:var(--muted)">素体で売れ</span>`);
-    // ⚠買値乖離: 表示EVの素体は約定中央値。最安出品がそれを2割以上超える札は「その値段では買えない」＝EVが甘い
+    // ⚠買値乖離: 表示EVの素体は約定中央値。最安出品がそれを2割以上超える札は「その値段では買えない」＝EVが甘い。
+    // ⚠ .sname は幅超過で省略されるので、このタグは必ず .ssub（床バッジと同じ行）に出す（2026-08-06）
+    let agTag = "";
     if(r.e.askGap!=null && r.e.askGap>=0.20){
       const pct=Math.round(r.e.askGap*100);
       const evReal=Math.round(r.e.netGrade - r.e.askA);
-      flags.push(`<span class="stag" style="background:${hexA(pct>=50?"#ff6b6b":"#ffb454",.18)};color:${pct>=50?"#ff6b6b":"var(--warn)"}" title="${escAttr(`約定中央値 ${yen(r.e.rawA)} では買えない。最安出品 ${yen(r.e.askA)}（+${pct}%）で引き直すとEV ${signYen(evReal)}`)}">⚠買値+${pct}%</span>`);
+      const col=pct>=50?"#ff6b6b":"#ffb454";
+      agTag=`<span class="stag" style="background:${hexA(col,.18)};color:${col}" title="${escAttr(`約定中央値 ${yen(r.e.rawA)} では買えない。現在の最安出品 ${yen(r.e.askA)}（+${pct}%）で引き直すとEV ${signYen(evReal)}`)}">⚠買値+${pct}%</span>`;
     }
     const bb = (r.e.floor10!=null) ? `<span class="stag" style="background:rgba(57,217,138,.16);color:var(--accent)">床${yen(r.e.floor10)}</span>` : "";
     // n はスニダン(国内)のPSA10約定件数。ウォッチの🌐バッジ=eBay(海外)実売件数とは別物なので
@@ -936,7 +939,7 @@ function renderScout(){
         ${thumbHTML(r.c,false)}
         <div class="smain">
           <div class="sname"><span class="tdot" style="background:${col}" title="${SCOUT_LABEL[r.tier]}"></span>${escHtml(r.c.name)} <span style="font-size:.62rem;color:var(--muted);font-weight:400">${escHtml(gameById(r.c.game).name)}</span>${flags.join("")}</div>
-          <div class="ssub" title="国内n=スニダンPSA10約定件数（流動性）／🌐=eBay実売件数(3ヶ月・海外需要)。母集団が別なので数値は一致しません">素体${yen(r.e.rawA)}→${yen(r.e.p10)}・率${r.e.rate.toFixed(0)}%${nlbl}${eblbl}・耐${r.beDecay}% ${bb}</div>
+          <div class="ssub" title="国内n=スニダンPSA10約定件数（流動性）／🌐=eBay実売件数(3ヶ月・海外需要)。母集団が別なので数値は一致しません">素体${yen(r.e.rawA)}→${yen(r.e.p10)}・率${r.e.rate.toFixed(0)}%${nlbl}${eblbl}・耐${r.beDecay}% ${bb}${agTag}</div>
         </div>
         <div class="sright">
           <div class="sev" style="color:${r.buyEV>=0?"var(--accent)":"var(--bad)"}">EV${signYen(r.buyEV)}</div>

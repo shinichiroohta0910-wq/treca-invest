@@ -680,8 +680,12 @@ function evalCard(card, d, feePctOverride, gradeCostOverride){
   const floor10 = (sig.buyback && sig.buyback.p10JPY!=null) ? num(sig.buyback.p10JPY) : null;
   const floorNet = (floor10!=null) ? (r*floor10*dec - gradeCost) : null;
   const buybackPct = (floor10!=null && p10>0) ? floor10/p10 : null; // 買取率: ショップが相場の何%で買うか
+  // 素体Aの現在最安出品(ask)。⚠EVには入れない（価格の正本は約定・askは使わない）。
+  // 「約定中央値では買えない札」= askGap が大きい札を警告するためだけに持つ。
+  const askA = (snap.askA!=null) ? num(snap.askA) : null;
+  const askGap = (askA!=null && rawA>0) ? (askA/rawA - 1) : null;  // +0.20 なら実際は2割高く買うことになる
   return {hasData:true, netGrade, netRaw, route, best:Math.max(netGrade,netRaw),
-          rate:num(snap.rate10), p10, p9, rawA, rawB, gradeCost, snap, floor10, floorNet, buybackPct};
+          rate:num(snap.rate10), p10, p9, rawA, rawB, askA, askGap, gradeCost, snap, floor10, floorNet, buybackPct};
 }
 // 損益分岐反落率（純額がゼロを下回る最小の反落・1%刻み）
 function breakEvenDecay(card){
@@ -807,6 +811,16 @@ function renderWatch(){
       }
     }
     if(sg.oripa && sg.oripa.seen) sigBadges.push(`<span class="bdg" style="background:rgba(180,120,255,.18);color:#b478ff" title="オリパ景品採用（回転の証拠）">🎰</span>`);
+    // ⚠買値乖離: EVの素体は「A約定の中央値」だが、実際に払うのは「今の最安出品」。
+    // 薄商いの札はここが2割以上開き、その分EVが甘く出る（実勢では買えない値段で計算されている）。
+    if(e.askGap!=null && e.askGap>=0.20){
+      const pct=Math.round(e.askGap*100);
+      const evReal=Math.round(e.netGrade - e.askA);   // 実際に買える値段で引き直したEV
+      const col = pct>=50 ? "#ff6b6b" : "#ffb454";
+      const tip = `買値乖離 +${pct}%：EVの素体は約定中央値 ${yen(e.rawA)} だが、現在の最安出品は ${yen(e.askA)}（出品${e.snap.askAn||0}件）。`
+                + `実際に買える値段で引き直すと 鑑定EV ${signYen(evReal)}（表示は ${signYen(Math.round(e.netGrade-e.rawA))}）。薄商いで約定中央値が実勢から離れている状態。`;
+      sigBadges.push(`<span class="bdg" style="background:${hexA(col,.16)};color:${col}" title="${escAttr(tip)}">⚠買値+${pct}%</span>`);
+    }
     // スカウトのプロット（ティア色＋拾EV）。色は🎯スカウトタブの凡例と共通。
     const sc = scoutEval(c, d);
     const scoutBadge = sc ? `<span class="bdg" style="background:${hexA(SCOUT_HEX[sc.tier],.18)};color:${SCOUT_HEX[sc.tier]}" title="スカウト判定：${SCOUT_LABEL[sc.tier]}（素体買→PSA10鑑定の期待値 ${signYen(sc.buyEV)}・ROI${Math.round(sc.roi*100)}%）。緑=本命/青=妙味/橙=注意/灰=素体で売れ">●${SCOUT_LABEL[sc.tier]} 拾${signYen(sc.buyEV)}</span>` : "";
@@ -900,6 +914,12 @@ function renderScout(){
     if(r.confirm) flags.push(`<span class="stag" style="background:rgba(255,180,84,.18);color:var(--warn)">要確認</span>`);
     else if(r.tier==="caution" && r.n!=null && r.n<=4) flags.push(`<span class="stag" style="background:rgba(255,180,84,.18);color:var(--warn)">薄商い</span>`);
     if(r.tier==="skip") flags.push(`<span class="stag" style="background:rgba(154,163,171,.18);color:var(--muted)">素体で売れ</span>`);
+    // ⚠買値乖離: 表示EVの素体は約定中央値。最安出品がそれを2割以上超える札は「その値段では買えない」＝EVが甘い
+    if(r.e.askGap!=null && r.e.askGap>=0.20){
+      const pct=Math.round(r.e.askGap*100);
+      const evReal=Math.round(r.e.netGrade - r.e.askA);
+      flags.push(`<span class="stag" style="background:${hexA(pct>=50?"#ff6b6b":"#ffb454",.18)};color:${pct>=50?"#ff6b6b":"var(--warn)"}" title="${escAttr(`約定中央値 ${yen(r.e.rawA)} では買えない。最安出品 ${yen(r.e.askA)}（+${pct}%）で引き直すとEV ${signYen(evReal)}`)}">⚠買値+${pct}%</span>`);
+    }
     const bb = (r.e.floor10!=null) ? `<span class="stag" style="background:rgba(57,217,138,.16);color:var(--accent)">床${yen(r.e.floor10)}</span>` : "";
     // n はスニダン(国内)のPSA10約定件数。ウォッチの🌐バッジ=eBay(海外)実売件数とは別物なので
     // 「国内」と明示する（同じ"n"に見えて混同するため・2026-07-24）

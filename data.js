@@ -4,8 +4,8 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床{店舗名・買取価格}/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-06T14:29:25.097+09:00",
-  "updatedBy": "force_price_override 2026-08-06: db-dbsc-tcg-fb01-139-190309 p10 ¥69696→¥29900(ガード手動解除)",
+  "updatedAt": "2026-08-06T14:42:04.126+09:00",
+  "updatedBy": "askA backfill 2026-08-06: 素体A最安出品を80枚に付与(買値乖離バッジ用・EV計算には不使用)",
   "games": [
     {
       "id": "onepiece",
@@ -1141,7 +1141,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 17,
-          "rawAn": 42
+          "rawAn": 42,
+          "askA": 54980,
+          "askAn": 14
         }
       ],
       "signals": {
@@ -2369,7 +2371,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 12,
-          "rawAn": 46
+          "rawAn": 46,
+          "askA": 15999,
+          "askAn": 18
         }
       ],
       "signals": {
@@ -3629,7 +3633,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 25,
-          "rawAn": 37
+          "rawAn": 37,
+          "askA": 3800,
+          "askAn": 24
         }
       ],
       "signals": {
@@ -4841,7 +4847,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 33,
-          "rawAn": 25
+          "rawAn": 25,
+          "askA": 2380,
+          "askAn": 21
         }
       ],
       "signals": {
@@ -6041,7 +6049,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 84,
-          "rawAn": 0
+          "rawAn": 0,
+          "askA": null,
+          "askAn": 0
         }
       ],
       "signals": {
@@ -7263,7 +7273,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 76,
-          "rawAn": 1
+          "rawAn": 1,
+          "askA": 11800,
+          "askAn": 4
         }
       ],
       "signals": {
@@ -8464,7 +8476,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 34,
-          "rawAn": 9
+          "rawAn": 9,
+          "askA": 27000,
+          "askAn": 6
         }
       ],
       "signals": {
@@ -9671,7 +9685,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 29,
-          "rawAn": 5
+          "rawAn": 5,
+          "askA": 23999,
+          "askAn": 8
         }
       ],
       "signals": {
@@ -10856,7 +10872,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 37,
-          "rawAn": 5
+          "rawAn": 5,
+          "askA": 16000,
+          "askAn": 11
         }
       ],
       "signals": {
@@ -12079,7 +12097,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 59,
-          "rawAn": 4
+          "rawAn": 4,
+          "askA": 6500,
+          "askAn": 11
         }
       ],
       "signals": {
@@ -13264,7 +13284,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 53,
-          "rawAn": 2
+          "rawAn": 2,
+          "askA": 9000,
+          "askAn": 4
         }
       ],
       "signals": {
@@ -14471,7 +14493,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 49,
-          "rawAn": 4
+          "rawAn": 4,
+          "askA": 3500,
+          "askAn": 9
         }
       ],
       "signals": {
@@ -15671,7 +15695,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 58,
-          "rawAn": 4
+          "rawAn": 4,
+          "askA": 50000,
+          "askAn": 3
         }
       ],
       "signals": {
@@ -16878,7 +16904,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 68,
-          "rawAn": 5
+          "rawAn": 5,
+          "askA": 89500,
+          "askAn": 2
         }
       ],
       "signals": {
@@ -18085,7 +18113,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 31,
-          "rawAn": 2
+          "rawAn": 2,
+          "askA": 1150,
+          "askAn": 5
         }
       ],
       "signals": {
@@ -19286,7 +19316,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 53,
-          "rawAn": 0
+          "rawAn": 0,
+          "askA": 1800,
+          "askAn": 1
         }
       ],
       "signals": {
@@ -20487,7 +20519,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 78,
-          "rawAn": 0
+          "rawAn": 0,
+          "askA": 1000,
+          "askAn": 7
         }
       ],
       "signals": {
@@ -21688,7 +21722,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 60,
-          "rawAn": 9
+          "rawAn": 9,
+          "askA": 3980,
+          "askAn": 9
         }
       ],
       "signals": {
@@ -22873,7 +22909,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 58,
-          "rawAn": 0
+          "rawAn": 0,
+          "askA": 3980,
+          "askAn": 1
         }
       ],
       "signals": {
@@ -24058,7 +24096,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 61,
-          "rawAn": 0
+          "rawAn": 0,
+          "askA": null,
+          "askAn": 0
         }
       ],
       "signals": {
@@ -25275,7 +25315,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 45,
-          "rawAn": 11
+          "rawAn": 11,
+          "askA": 20500,
+          "askAn": 4
         }
       ],
       "signals": {
@@ -26491,7 +26533,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 13,
-          "rawAn": 52
+          "rawAn": 52,
+          "askA": 7777,
+          "askAn": 19
         }
       ],
       "signals": {
@@ -27691,7 +27735,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 48,
-          "rawAn": 4
+          "rawAn": 4,
+          "askA": 11000,
+          "askAn": 13
         }
       ],
       "signals": {
@@ -28847,7 +28893,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 2,
-          "rawAn": 49
+          "rawAn": 49,
+          "askA": 5888,
+          "askAn": 33
         }
       ],
       "signals": {
@@ -30031,7 +30079,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 31,
-          "rawAn": 16
+          "rawAn": 16,
+          "askA": 10000,
+          "askAn": 13
         }
       ],
       "signals": {
@@ -31199,7 +31249,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 0,
-          "rawAn": 3
+          "rawAn": 3,
+          "askA": 2800,
+          "askAn": 2
         }
       ],
       "signals": {
@@ -32262,7 +32314,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 23,
-          "rawAn": 33
+          "rawAn": 33,
+          "askA": 15000,
+          "askAn": 20
         }
       ],
       "signals": {
@@ -33462,7 +33516,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 35,
-          "rawAn": 6
+          "rawAn": 6,
+          "askA": 13750,
+          "askAn": 2
         }
       ],
       "signals": {
@@ -34663,7 +34719,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 65,
-          "rawAn": 18
+          "rawAn": 18,
+          "askA": 20000,
+          "askAn": 1
         }
       ],
       "signals": {
@@ -35864,7 +35922,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 48,
-          "rawAn": 8
+          "rawAn": 8,
+          "askA": 39000,
+          "askAn": 7
         }
       ],
       "signals": {
@@ -37038,7 +37098,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 33,
-          "rawAn": 14
+          "rawAn": 14,
+          "askA": 33000,
+          "askAn": 11
         }
       ],
       "signals": {
@@ -38211,7 +38273,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 42,
-          "rawAn": 15
+          "rawAn": 15,
+          "askA": 38000,
+          "askAn": 10
         }
       ],
       "signals": {
@@ -39401,7 +39465,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 9,
-          "rawAn": 16
+          "rawAn": 16,
+          "askA": 5000,
+          "askAn": 33
         }
       ],
       "signals": {
@@ -40574,7 +40640,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 16,
-          "rawAn": 28
+          "rawAn": 28,
+          "askA": 3450,
+          "askAn": 15
         }
       ],
       "signals": {
@@ -41747,7 +41815,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 19,
-          "rawAn": 8
+          "rawAn": 8,
+          "askA": 45000,
+          "askAn": 18
         }
       ],
       "signals": {
@@ -42905,7 +42975,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 50,
-          "rawAn": 8
+          "rawAn": 8,
+          "askA": 22222,
+          "askAn": 3
         }
       ],
       "signals": {
@@ -44078,7 +44150,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 46,
-          "rawAn": 1
+          "rawAn": 1,
+          "askA": 35000,
+          "askAn": 1
         }
       ],
       "signals": {
@@ -45252,7 +45326,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 33,
-          "rawAn": 7
+          "rawAn": 7,
+          "askA": 44000,
+          "askAn": 10
         }
       ],
       "signals": {
@@ -46410,7 +46486,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 49,
-          "rawAn": 8
+          "rawAn": 8,
+          "askA": 77000,
+          "askAn": 6
         }
       ],
       "signals": {
@@ -47574,7 +47652,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 36,
-          "rawAn": 11
+          "rawAn": 11,
+          "askA": 40000,
+          "askAn": 8
         }
       ],
       "signals": {
@@ -48779,7 +48859,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 37,
-          "rawAn": 28
+          "rawAn": 28,
+          "askA": 6888,
+          "askAn": 14
         }
       ],
       "signals": {
@@ -49952,7 +50034,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 43,
-          "rawAn": 9
+          "rawAn": 9,
+          "askA": 28000,
+          "askAn": 10
         }
       ],
       "signals": {
@@ -51126,7 +51210,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 23,
-          "rawAn": 6
+          "rawAn": 6,
+          "askA": null,
+          "askAn": 0
         }
       ],
       "signals": {
@@ -52299,7 +52385,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 26,
-          "rawAn": 22
+          "rawAn": 22,
+          "askA": 6300,
+          "askAn": 27
         }
       ],
       "signals": {
@@ -53488,7 +53576,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 23,
-          "rawAn": 26
+          "rawAn": 26,
+          "askA": 40000,
+          "askAn": 7
         }
       ],
       "signals": {
@@ -54661,7 +54751,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 39,
-          "rawAn": 28
+          "rawAn": 28,
+          "askA": 55000,
+          "askAn": 5
         }
       ],
       "signals": {
@@ -55850,7 +55942,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 5,
-          "rawAn": 47
+          "rawAn": 47,
+          "askA": 15000,
+          "askAn": 34
         }
       ],
       "signals": {
@@ -57026,7 +57120,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 14,
-          "rawAn": 50
+          "rawAn": 50,
+          "askA": 26900,
+          "askAn": 15
         }
       ],
       "signals": {
@@ -58170,7 +58266,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 53,
-          "rawAn": 11
+          "rawAn": 11,
+          "askA": 23000,
+          "askAn": 11
         }
       ],
       "signals": {
@@ -59331,7 +59429,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 17,
-          "rawAn": 32
+          "rawAn": 32,
+          "askA": 30000,
+          "askAn": 4
         }
       ],
       "signals": {
@@ -60459,7 +60559,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 31,
-          "rawAn": 6
+          "rawAn": 6,
+          "askA": 184800,
+          "askAn": 18
         }
       ],
       "signals": {
@@ -61604,7 +61706,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 32,
-          "rawAn": 6
+          "rawAn": 6,
+          "askA": 35000,
+          "askAn": 7
         }
       ],
       "signals": {
@@ -62669,7 +62773,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 31,
-          "rawAn": 20
+          "rawAn": 20,
+          "askA": 31000,
+          "askAn": 26
         }
       ],
       "signals": {
@@ -63688,7 +63794,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 26,
-          "rawAn": 43
+          "rawAn": 43,
+          "askA": 53500,
+          "askAn": 6
         }
       ],
       "signals": {
@@ -64706,7 +64814,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 22,
-          "rawAn": 63
+          "rawAn": 63,
+          "askA": 30000,
+          "askAn": 2
         }
       ],
       "signals": {
@@ -65740,7 +65850,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 50,
-          "rawAn": 5
+          "rawAn": 5,
+          "askA": 62000,
+          "askAn": 6
         }
       ],
       "signals": {
@@ -66692,7 +66804,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 15,
-          "rawAn": 34
+          "rawAn": 34,
+          "askA": 37500,
+          "askAn": 15
         }
       ],
       "signals": {
@@ -67660,7 +67774,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 49,
-          "rawAn": 8
+          "rawAn": 8,
+          "askA": 29999,
+          "askAn": 5
         }
       ],
       "signals": {
@@ -68628,7 +68744,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 41,
-          "rawAn": 16
+          "rawAn": 16,
+          "askA": 23999,
+          "askAn": 6
         }
       ],
       "signals": {
@@ -69597,7 +69715,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 24,
-          "rawAn": 8
+          "rawAn": 8,
+          "askA": 75000,
+          "askAn": 13
         }
       ],
       "signals": {
@@ -70453,7 +70573,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 34,
-          "rawAn": 27
+          "rawAn": 27,
+          "askA": 31000,
+          "askAn": 5
         }
       ],
       "signals": {
@@ -71325,7 +71447,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 13,
-          "rawAn": 59
+          "rawAn": 59,
+          "askA": 38000,
+          "askAn": 16
         }
       ],
       "signals": {
@@ -72181,7 +72305,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 47,
-          "rawAn": 1
+          "rawAn": 1,
+          "askA": null,
+          "askAn": 0
         }
       ],
       "signals": {
@@ -72976,7 +73102,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 49,
-          "rawAn": 13
+          "rawAn": 13,
+          "askA": null,
+          "askAn": 0
         }
       ],
       "signals": {
@@ -73770,7 +73898,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 54,
-          "rawAn": 31
+          "rawAn": 31,
+          "askA": 70000,
+          "askAn": 1
         }
       ],
       "signals": {
@@ -74564,7 +74694,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 36,
-          "rawAn": 17
+          "rawAn": 17,
+          "askA": 54000,
+          "askAn": 17
         }
       ],
       "signals": {
@@ -75342,7 +75474,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 57,
-          "rawAn": 4
+          "rawAn": 4,
+          "askA": 59999,
+          "askAn": 1
         }
       ],
       "signals": {
@@ -76105,7 +76239,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 51,
-          "rawAn": 4
+          "rawAn": 4,
+          "askA": 50000,
+          "askAn": 6
         }
       ],
       "signals": {
@@ -76884,7 +77020,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 63,
-          "rawAn": 12
+          "rawAn": 12,
+          "askA": 76000,
+          "askAn": 4
         }
       ],
       "signals": {
@@ -77662,7 +77800,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 44,
-          "rawAn": 12
+          "rawAn": 12,
+          "askA": 20000,
+          "askAn": 9
         }
       ],
       "signals": {
@@ -78310,7 +78450,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 17,
-          "rawAn": 23
+          "rawAn": 23,
+          "askA": 50000,
+          "askAn": 8
         }
       ],
       "signals": {
@@ -78958,7 +79100,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 46,
-          "rawAn": 22
+          "rawAn": 22,
+          "askA": 26999,
+          "askAn": 7
         }
       ],
       "signals": {
@@ -79622,7 +79766,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 24,
-          "rawAn": 41
+          "rawAn": 41,
+          "askA": 31000,
+          "askAn": 5
         }
       ],
       "signals": {
@@ -80255,7 +80401,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 46,
-          "rawAn": 5
+          "rawAn": 5,
+          "askA": 11300,
+          "askAn": 8
         }
       ],
       "signals": {
@@ -80903,7 +81051,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 63,
-          "rawAn": 2
+          "rawAn": 2,
+          "askA": 69800,
+          "askAn": 3
         }
       ],
       "signals": {
@@ -81552,7 +81702,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 59,
-          "rawAn": 4
+          "rawAn": 4,
+          "askA": 71111,
+          "askAn": 2
         }
       ],
       "signals": {
@@ -82185,7 +82337,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 42,
-          "rawAn": 3
+          "rawAn": 3,
+          "askA": 23000,
+          "askAn": 5
         }
       ],
       "signals": {
@@ -82642,7 +82796,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 42,
-          "rawAn": 16
+          "rawAn": 16,
+          "askA": 19999,
+          "askAn": 5
         }
       ],
       "signals": {
@@ -83066,7 +83222,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 45,
-          "rawAn": 9
+          "rawAn": 9,
+          "askA": 22000,
+          "askAn": 4
         }
       ],
       "signals": {
@@ -83507,7 +83665,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 66,
-          "rawAn": 3
+          "rawAn": 3,
+          "askA": 71000,
+          "askAn": 4
         }
       ],
       "signals": {
@@ -83964,7 +84124,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 54,
-          "rawAn": 9
+          "rawAn": 9,
+          "askA": 29999,
+          "askAn": 4
         }
       ],
       "signals": {
@@ -84388,7 +84550,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 54,
-          "rawAn": 14
+          "rawAn": 14,
+          "askA": 79999,
+          "askAn": 8
         }
       ],
       "signals": {
@@ -84812,7 +84976,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 64,
-          "rawAn": 3
+          "rawAn": 3,
+          "askA": 25000,
+          "askAn": 3
         }
       ],
       "signals": {
@@ -85237,7 +85403,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 17,
-          "rawAn": 20
+          "rawAn": 20,
+          "askA": 35000,
+          "askAn": 29
         }
       ],
       "signals": {
@@ -85678,7 +85846,9 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 61,
-          "rawAn": 2
+          "rawAn": 2,
+          "askA": 34300,
+          "askAn": 6
         }
       ],
       "signals": {

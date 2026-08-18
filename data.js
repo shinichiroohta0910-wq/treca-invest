@@ -7176,9 +7176,18 @@ const TRECA_DATA = {
         },
         "buyback": {
           "shop": "トレカバンク",
-          "p10JPY": 197000,
-          "at": "2026-06-04",
-          "src": "トレカバンク店頭買取表(store.torecabank.com/kaitori_list) 2026-06-04時点・型番完全一致／2026-06-20取得"
+          "p10JPY": 244000,
+          "at": "2026-08-18",
+          "trend": {
+            "m1Med": 214000,
+            "m3Med": 197000,
+            "hi": 278000,
+            "lo": 117000,
+            "n": 115,
+            "verdict": "上昇"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -8618,6 +8627,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec14269733) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 38000,
+          "at": "2026-08-03",
+          "trend": {
+            "m1Med": 43750,
+            "m3Med": 60000,
+            "hi": 82000,
+            "lo": 38000,
+            "n": 98,
+            "verdict": "下落"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -10044,9 +10068,18 @@ const TRECA_DATA = {
         },
         "buyback": {
           "shop": "トレカバンク",
-          "p10JPY": 74500,
-          "at": "2026-06-04",
-          "src": "トレカバンク店頭買取表(store.torecabank.com/kaitori_list) 2026-06-04時点・型番完全一致／2026-06-20取得"
+          "p10JPY": 72000,
+          "at": "2026-08-17",
+          "trend": {
+            "m1Med": 72500,
+            "m3Med": 74500,
+            "hi": 105000,
+            "lo": 66000,
+            "n": 137,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -11470,6 +11503,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec14955493) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 48000,
+          "at": "2026-08-08",
+          "trend": {
+            "m1Med": 52500,
+            "m3Med": 60000,
+            "hi": 90000,
+            "lo": 46500,
+            "n": 105,
+            "verdict": "下落"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -12880,9 +12928,18 @@ const TRECA_DATA = {
         },
         "buyback": {
           "shop": "トレカバンク",
-          "p10JPY": 35000,
-          "at": "2026-06-04",
-          "src": "トレカバンク店頭買取表(store.torecabank.com/kaitori_list) 2026-06-04時点・型番完全一致／2026-06-20取得"
+          "p10JPY": 32000,
+          "at": "2026-08-18",
+          "trend": {
+            "m1Med": 33000,
+            "m3Med": 34000,
+            "hi": 45000,
+            "lo": 25000,
+            "n": 143,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -14322,6 +14379,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec14955489) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 14500,
+          "at": "2026-08-09",
+          "trend": {
+            "m1Med": 15000,
+            "m3Med": 16000,
+            "hi": 33000,
+            "lo": 13500,
+            "n": 72,
+            "verdict": "下落"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -15732,9 +15804,18 @@ const TRECA_DATA = {
         },
         "buyback": {
           "shop": "トレカバンク",
-          "p10JPY": 22000,
-          "at": "2026-06-04",
-          "src": "トレカバンク店頭買取表(store.torecabank.com/kaitori_list) 2026-06-04時点・型番完全一致／2026-06-20取得"
+          "p10JPY": 24000,
+          "at": "2026-08-17",
+          "trend": {
+            "m1Med": 24000,
+            "m3Med": 23000,
+            "hi": 28000,
+            "lo": 14000,
+            "n": 147,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -17157,6 +17238,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec14955495) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 11000,
+          "at": "2026-08-18",
+          "trend": {
+            "m1Med": 14000,
+            "m3Med": 14500,
+            "hi": 38500,
+            "lo": 11000,
+            "n": 129,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -18583,9 +18679,18 @@ const TRECA_DATA = {
         },
         "buyback": {
           "shop": "トレカバンク",
-          "p10JPY": 96000,
-          "at": "2026-06-04",
-          "src": "トレカバンク店頭買取表(store.torecabank.com/kaitori_list) 2026-06-04時点・型番完全一致／2026-06-20取得"
+          "p10JPY": 89000,
+          "at": "2026-08-18",
+          "trend": {
+            "m1Med": 95000,
+            "m3Med": 95000,
+            "hi": 137000,
+            "lo": 64500,
+            "n": 152,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -20012,9 +20117,18 @@ const TRECA_DATA = {
         },
         "buyback": {
           "shop": "トレカバンク",
-          "p10JPY": 136000,
-          "at": "2026-06-04",
-          "src": "トレカバンク店頭買取表(store.torecabank.com/kaitori_list) 2026-06-04時点・型番完全一致／2026-06-20取得"
+          "p10JPY": 155000,
+          "at": "2026-08-17",
+          "trend": {
+            "m1Med": 146000,
+            "m3Med": 143000,
+            "hi": 162000,
+            "lo": 95500,
+            "n": 136,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -21438,6 +21552,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec14955405) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 9500,
+          "at": "2026-07-22",
+          "trend": {
+            "m1Med": 9550,
+            "m3Med": 10000,
+            "hi": 13000,
+            "lo": 7600,
+            "n": 54,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -22861,6 +22990,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec14955403) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 5800,
+          "at": "2026-08-01",
+          "trend": {
+            "m1Med": 5800,
+            "m3Med": 6000,
+            "hi": 10500,
+            "lo": 5300,
+            "n": 49,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -24284,6 +24428,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec14955401) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 5200,
+          "at": "2026-07-26",
+          "trend": {
+            "m1Med": 6000,
+            "m3Med": 6000,
+            "hi": 9000,
+            "lo": 4500,
+            "n": 29,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -25707,6 +25866,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec6984646) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 17500,
+          "at": "2026-08-02",
+          "trend": {
+            "m1Med": 16000,
+            "m3Med": 15500,
+            "hi": 18000,
+            "lo": 9600,
+            "n": 71,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -27114,6 +27288,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec14234253) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 12000,
+          "at": "2026-08-17",
+          "trend": {
+            "m1Med": 12000,
+            "m3Med": 13000,
+            "hi": 18000,
+            "lo": 7900,
+            "n": 121,
+            "verdict": "下落"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -28521,6 +28710,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec14234346) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 6000,
+          "at": "2026-07-19",
+          "trend": {
+            "m1Med": 6000,
+            "m3Med": 6000,
+            "hi": 6000,
+            "lo": 4200,
+            "n": 28,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -29959,6 +30163,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec2768280) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 46000,
+          "at": "2026-08-18",
+          "trend": {
+            "m1Med": 47500,
+            "m3Med": 47500,
+            "hi": 47500,
+            "lo": 46000,
+            "n": 12,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -35617,6 +35836,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec9454301) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 18500,
+          "at": "2026-04-29",
+          "trend": {
+            "m1Med": 18500,
+            "m3Med": 18500,
+            "hi": 19000,
+            "lo": 14000,
+            "n": 20,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -39715,6 +39949,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec14570448) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 35000,
+          "at": "2026-08-07",
+          "trend": {
+            "m1Med": 41250,
+            "m3Med": 49750,
+            "hi": 73000,
+            "lo": 35000,
+            "n": 99,
+            "verdict": "下落"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -42561,6 +42810,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec13329447) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 37000,
+          "at": "2026-05-23",
+          "trend": {
+            "m1Med": 38400,
+            "m3Med": 38400,
+            "hi": 41700,
+            "lo": 36100,
+            "n": 42,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -43970,6 +44234,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec13522495) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 73000,
+          "at": "2026-08-18",
+          "trend": {
+            "m1Med": 75000,
+            "m3Med": 75000,
+            "hi": 75000,
+            "lo": 73000,
+            "n": 10,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -49624,6 +49903,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec14955487) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 90000,
+          "at": "2026-08-17",
+          "trend": {
+            "m1Med": 90000,
+            "m3Med": 92000,
+            "hi": 145000,
+            "lo": 77500,
+            "n": 96,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -51017,6 +51311,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec10561339) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 37500,
+          "at": "2026-08-17",
+          "trend": {
+            "m1Med": 38500,
+            "m3Med": 38500,
+            "hi": 38500,
+            "lo": 37500,
+            "n": 9,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -53837,6 +54146,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec14955481) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 76000,
+          "at": "2026-08-17",
+          "trend": {
+            "m1Med": 75250,
+            "m3Med": 81500,
+            "hi": 150000,
+            "lo": 68500,
+            "n": 99,
+            "verdict": "下落"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -55234,9 +55558,18 @@ const TRECA_DATA = {
         },
         "buyback": {
           "shop": "トレカバンク",
-          "p10JPY": 107000,
-          "at": "2026-06-04",
-          "src": "トレカバンク店頭買取表(store.torecabank.com/kaitori_list) 2026-06-04時点・型番完全一致／2026-06-20取得"
+          "p10JPY": 100000,
+          "at": "2026-08-18",
+          "trend": {
+            "m1Med": 112000,
+            "m3Med": 112000,
+            "hi": 126000,
+            "lo": 100000,
+            "n": 49,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -58071,6 +58404,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec10460982) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 170000,
+          "at": "2026-08-18",
+          "trend": {
+            "m1Med": 178000,
+            "m3Med": 178000,
+            "hi": 178000,
+            "lo": 168000,
+            "n": 10,
+            "verdict": "横ばい"
+          },
+          "verify": true,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -59481,6 +59829,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec15588519) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 42000,
+          "at": "2026-08-10",
+          "trend": {
+            "m1Med": 48500,
+            "m3Med": 56000,
+            "hi": 81500,
+            "lo": 42000,
+            "n": 13,
+            "verdict": "下落"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -60890,6 +61253,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec12937958) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 1010000,
+          "at": "2026-07-26",
+          "trend": {
+            "m1Med": 1010000,
+            "m3Med": 570000,
+            "hi": 1010000,
+            "lo": 19000,
+            "n": 67,
+            "verdict": "上昇"
+          },
+          "verify": true,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -65133,6 +65511,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec10405764) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 68400,
+          "at": "2026-05-23",
+          "trend": {
+            "m1Med": 68400,
+            "m3Med": 61700,
+            "hi": 68400,
+            "lo": 57000,
+            "n": 62,
+            "verdict": "上昇"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -66558,6 +66951,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec14676298) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 33200,
+          "at": "2026-07-27",
+          "trend": {
+            "m1Med": 33200,
+            "m3Med": 23450,
+            "hi": 42700,
+            "lo": 13300,
+            "n": 78,
+            "verdict": "上昇"
+          },
+          "verify": true,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -67970,6 +68378,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec14676566) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 14200,
+          "at": "2026-05-27",
+          "trend": {
+            "m1Med": 14200,
+            "m3Med": 9500,
+            "hi": 14200,
+            "lo": 8500,
+            "n": 80,
+            "verdict": "上昇"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -69351,6 +69774,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec12029715) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 57000,
+          "at": "2026-07-05",
+          "trend": {
+            "m1Med": 58250,
+            "m3Med": 62000,
+            "hi": 71000,
+            "lo": 34500,
+            "n": 100,
+            "verdict": "下落"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -72112,6 +72550,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec9656727) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 505000,
+          "at": "2026-08-18",
+          "trend": {
+            "m1Med": 525000,
+            "m3Med": 514000,
+            "hi": 590000,
+            "lo": 360000,
+            "n": 153,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -73493,6 +73946,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec14955497) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 84500,
+          "at": "2026-08-17",
+          "trend": {
+            "m1Med": 85000,
+            "m3Med": 87500,
+            "hi": 198000,
+            "lo": 75500,
+            "n": 111,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -74794,6 +75262,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec16192454) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 100000,
+          "at": "2026-07-20",
+          "trend": {
+            "m1Med": 105000,
+            "m3Med": 105000,
+            "hi": 120000,
+            "lo": 100000,
+            "n": 4,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -76048,6 +76531,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec11477762) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 52000,
+          "at": "2026-08-17",
+          "trend": {
+            "m1Med": 52000,
+            "m3Med": 52000,
+            "hi": 52000,
+            "lo": 48000,
+            "n": 8,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -78572,6 +79070,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec14158347) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 130000,
+          "at": "2026-08-18",
+          "trend": {
+            "m1Med": 134000,
+            "m3Med": 136000,
+            "hi": 185000,
+            "lo": 89500,
+            "n": 128,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -79760,6 +80273,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec12637347) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 31500,
+          "at": "2026-07-26",
+          "trend": {
+            "m1Med": 31500,
+            "m3Med": 17500,
+            "hi": 31500,
+            "lo": 12600,
+            "n": 64,
+            "verdict": "上昇"
+          },
+          "verify": true,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -83373,6 +83901,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec15588516) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 166000,
+          "at": "2026-08-18",
+          "trend": {
+            "m1Med": 175500,
+            "m3Med": 185000,
+            "hi": 380000,
+            "lo": 161000,
+            "n": 82,
+            "verdict": "下落"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -84465,6 +85008,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec14676310) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 60500,
+          "at": "2026-07-30",
+          "trend": {
+            "m1Med": 60500,
+            "m3Med": 60500,
+            "hi": 60500,
+            "lo": 60500,
+            "n": 2,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -85573,6 +86131,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec10006984) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 58900,
+          "at": "2026-04-05",
+          "trend": {
+            "m1Med": 52200,
+            "m3Med": 52200,
+            "hi": 58900,
+            "lo": 47500,
+            "n": 9,
+            "verdict": "横ばい"
+          },
+          "verify": true,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -86666,6 +87239,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec2854344) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 185000,
+          "at": "2026-08-17",
+          "trend": {
+            "m1Med": 166500,
+            "m3Med": 145000,
+            "hi": 192000,
+            "lo": 83500,
+            "n": 130,
+            "verdict": "上昇"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -87696,6 +88284,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec14158477) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 159000,
+          "at": "2026-08-18",
+          "trend": {
+            "m1Med": 135000,
+            "m3Med": 135000,
+            "hi": 185000,
+            "lo": 86000,
+            "n": 128,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -89756,6 +90359,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec16192488) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 125000,
+          "at": "2026-08-13",
+          "trend": {
+            "m1Med": 125000,
+            "m3Med": 230000,
+            "hi": 240000,
+            "lo": 125000,
+            "n": 3,
+            "verdict": "下落"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -90771,6 +91389,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec5955510) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 109000,
+          "at": "2026-08-09",
+          "trend": {
+            "m1Med": 111500,
+            "m3Med": 124000,
+            "hi": 168000,
+            "lo": 76500,
+            "n": 107,
+            "verdict": "下落"
+          },
+          "verify": true,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -91770,6 +92403,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec8971859) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 95000,
+          "at": "2026-08-17",
+          "trend": {
+            "m1Med": 93000,
+            "m3Med": 97000,
+            "hi": 114000,
+            "lo": 84000,
+            "n": 72,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -93798,6 +94446,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec12591332) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 280000,
+          "at": "2026-07-18",
+          "trend": {
+            "m1Med": 280000,
+            "m3Med": 189000,
+            "hi": 280000,
+            "lo": 148000,
+            "n": 37,
+            "verdict": "上昇"
+          },
+          "verify": true,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -94682,6 +95345,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec2056132) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 162000,
+          "at": "2026-04-20",
+          "trend": {
+            "m1Med": 162000,
+            "m3Med": 162000,
+            "hi": 162000,
+            "lo": 162000,
+            "n": 1,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -97335,6 +98013,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec7392713) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 19000,
+          "at": "2026-05-27",
+          "trend": {
+            "m1Med": 19000,
+            "m3Med": 19000,
+            "hi": 19000,
+            "lo": 19000,
+            "n": 32,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -98220,6 +98913,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec13676714) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 119000,
+          "at": "2026-08-18",
+          "trend": {
+            "m1Med": 119000,
+            "m3Med": 116000,
+            "hi": 156000,
+            "lo": 85500,
+            "n": 149,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -99105,6 +99813,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec13676896) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 122000,
+          "at": "2026-08-18",
+          "trend": {
+            "m1Med": 131000,
+            "m3Med": 120000,
+            "hi": 142000,
+            "lo": 84000,
+            "n": 140,
+            "verdict": "上昇"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -99974,6 +100697,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec8422222) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 45000,
+          "at": "2026-08-17",
+          "trend": {
+            "m1Med": 45000,
+            "m3Med": 47000,
+            "hi": 63000,
+            "lo": 23000,
+            "n": 140,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -101327,6 +102065,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec2691315) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 52500,
+          "at": "2026-08-17",
+          "trend": {
+            "m1Med": 53500,
+            "m3Med": 52500,
+            "hi": 63500,
+            "lo": 42500,
+            "n": 42,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -102004,6 +102757,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec8972128) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 122000,
+          "at": "2026-08-18",
+          "trend": {
+            "m1Med": 122000,
+            "m3Med": 128000,
+            "hi": 161000,
+            "lo": 85500,
+            "n": 127,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -104017,6 +104785,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec8880222) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 41000,
+          "at": "2026-08-18",
+          "trend": {
+            "m1Med": 43500,
+            "m3Med": 46000,
+            "hi": 51000,
+            "lo": 29000,
+            "n": 153,
+            "verdict": "下落"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -104678,6 +105461,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec9724035) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 68000,
+          "at": "2026-08-17",
+          "trend": {
+            "m1Med": 66000,
+            "m3Med": 68000,
+            "hi": 86000,
+            "lo": 40500,
+            "n": 152,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     },
@@ -105355,6 +106153,21 @@ const TRECA_DATA = {
             }
           ],
           "src": "PSA getSalesBySpecId(spec5955515) grade10・timeRange 1/3/6/12ヶ月・n=PSA totalCount・主値=eBay全saleType込み中央値(3ヶ月)・saleType別に割るとnが痩せAuctionは高値/Fixedは安値に偏るため内訳は保存のみ・trendはn≥3の期間だけで判定・USD保存(円換算は表示時)"
+        },
+        "buyback": {
+          "shop": "トレカバンク",
+          "p10JPY": 58000,
+          "at": "2026-08-17",
+          "trend": {
+            "m1Med": 58000,
+            "m3Med": 61000,
+            "hi": 86000,
+            "lo": 41500,
+            "n": 145,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
         }
       }
     }
@@ -105906,7 +106719,24 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "buyback": {
+          "shop": "トレカバンク",
+          "boxJPY": 13000,
+          "at": "2026-08-18",
+          "trend": {
+            "m1Med": 13250,
+            "m3Med": 14400,
+            "hi": 17000,
+            "lo": 9400,
+            "n": 52,
+            "verdict": "下落"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
+        }
+      }
     },
     {
       "id": "box-pk-battlecollection",
@@ -106454,7 +107284,24 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "buyback": {
+          "shop": "トレカバンク",
+          "boxJPY": 1000,
+          "at": "2026-08-18",
+          "trend": {
+            "m1Med": 1150,
+            "m3Med": 1950,
+            "hi": 42000,
+            "lo": 1000,
+            "n": 73,
+            "verdict": "下落"
+          },
+          "verify": true,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
+        }
+      }
     },
     {
       "id": "box-pk-battle-corochao",
@@ -107550,7 +108397,24 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "buyback": {
+          "shop": "トレカバンク",
+          "boxJPY": 21500,
+          "at": "2026-08-18",
+          "trend": {
+            "m1Med": 21500,
+            "m3Med": 22500,
+            "hi": 26000,
+            "lo": 17000,
+            "n": 41,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
+        }
+      }
     },
     {
       "id": "box-pk-ninja-spinner",
@@ -108098,7 +108962,24 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "buyback": {
+          "shop": "トレカバンク",
+          "boxJPY": 10000,
+          "at": "2026-08-16",
+          "trend": {
+            "m1Med": 11500,
+            "m3Med": 11500,
+            "hi": 14000,
+            "lo": 10000,
+            "n": 48,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
+        }
+      }
     },
     {
       "id": "box-pk-abyss-eye",
@@ -108647,7 +109528,24 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "buyback": {
+          "shop": "トレカバンク",
+          "boxJPY": 8600,
+          "at": "2026-08-04",
+          "trend": {
+            "m1Med": 10500,
+            "m3Med": 11000,
+            "hi": 16500,
+            "lo": 8100,
+            "n": 57,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
+        }
+      }
     },
     {
       "id": "box-pk-sp-tohoku",
@@ -109196,7 +110094,24 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "buyback": {
+          "shop": "トレカバンク",
+          "boxJPY": 16000,
+          "at": "2026-08-15",
+          "trend": {
+            "m1Med": 14000,
+            "m3Med": 15500,
+            "hi": 23000,
+            "lo": 13000,
+            "n": 20,
+            "verdict": "下落"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
+        }
+      }
     },
     {
       "id": "box-pk-sp-fukuoka",
@@ -109745,7 +110660,24 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "buyback": {
+          "shop": "トレカバンク",
+          "boxJPY": 16000,
+          "at": "2026-07-19",
+          "trend": {
+            "m1Med": 17000,
+            "m3Med": 17000,
+            "hi": 29000,
+            "lo": 16000,
+            "n": 19,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
+        }
+      }
     },
     {
       "id": "box-op-3rd-anniv",
@@ -111392,7 +112324,24 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null
         }
-      ]
+      ],
+      "signals": {
+        "buyback": {
+          "shop": "トレカバンク",
+          "boxJPY": 16000,
+          "at": "2026-07-22",
+          "trend": {
+            "m1Med": 15400,
+            "m3Med": 15400,
+            "hi": 16000,
+            "lo": 15000,
+            "n": 4,
+            "verdict": "横ばい"
+          },
+          "verify": false,
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-18取得"
+        }
+      }
     },
     {
       "id": "box-yg-sangenshin-stainless",

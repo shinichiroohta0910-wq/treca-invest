@@ -4,8 +4,8 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床{店舗名・買取価格}/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-29T07:39:15.472+09:00",
-  "updatedBy": "daily_market_refresh 2026-08-29: cards71枚(OK 71/stale 0) + boxes13件(OK 13/stale 0) 価格実約定更新(alert 1). rate10は前回cert値継承.",
+  "updatedAt": "2026-08-30T08:51:47.669+09:00",
+  "updatedBy": "treca-market-update v1.0 (GUARD解消・手動)",
   "games": [
     {
       "id": "onepiece",
@@ -1345,6 +1345,24 @@ const TRECA_DATA = {
           "rate10": 83.67,
           "currency": "JPY",
           "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-08-29・PSA10約定n28/proxy率87.5%・rate10は前回cert継承・rawB±>50%保留(新¥23000/旧¥52000)",
+          "stale": false,
+          "alert": null,
+          "p10n": 28,
+          "rawAn": 28,
+          "askA": 39999,
+          "askAn": 12
+        },
+        {
+          "at": "2026-08-30T08:51:47.669+09:00",
+          "p10": 59999,
+          "p9": 40000,
+          "rawA": 39999,
+          "rawB": 23000,
+          "pop10": 999,
+          "popTotal": 1194,
+          "rate10": 83.67,
+          "currency": "JPY",
+          "src": "treca-market-update手動確認2026-08-30: 素体B直近3約定(7/29¥23000,7/29¥23000,7/27¥21800)中央値=23000。旧¥52000は7月以前の古い成約由来で固着・直近1ヶ月は19555-23000のレンジで一貫",
           "stale": false,
           "alert": null,
           "p10n": 28,
@@ -2782,6 +2800,24 @@ const TRECA_DATA = {
           "rate10": 96.14,
           "currency": "JPY",
           "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-08-29・PSA10約定n14/proxy率100%・rate10は前回cert継承・p10±>50%保留(新¥23000/旧¥48000)",
+          "stale": false,
+          "alert": null,
+          "p10n": 14,
+          "rawAn": 42,
+          "askA": 16000,
+          "askAn": 13
+        },
+        {
+          "at": "2026-08-30T08:51:47.669+09:00",
+          "p10": 23000,
+          "p9": null,
+          "rawA": 18000,
+          "rawB": 14000,
+          "pop10": 1394,
+          "popTotal": 1450,
+          "rate10": 96.14,
+          "currency": "JPY",
+          "src": "treca-market-update手動確認2026-08-30(Shin承認済): PSA10が8/29に独立3出品すべて¥23000で成約(8/26は¥40000)。ロット汚染ではなく実際の急落と判断",
           "stale": false,
           "alert": null,
           "p10n": 14,
@@ -23090,6 +23126,24 @@ const TRECA_DATA = {
           "rate10": 92.2,
           "currency": "JPY",
           "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-08-29・PSA10約定n46/proxy率100%・rate10は前回cert継承・rawA±>50%保留(新¥1780/旧¥1000)",
+          "stale": false,
+          "alert": null,
+          "p10n": 46,
+          "rawAn": 1,
+          "askA": 1000,
+          "askAn": 6
+        },
+        {
+          "at": "2026-08-30T08:51:47.669+09:00",
+          "p10": 4399,
+          "p9": 3683,
+          "rawA": 1780,
+          "rawB": 1000,
+          "pop10": 12540,
+          "popTotal": 13601,
+          "rate10": 92.2,
+          "currency": "JPY",
+          "src": "treca-market-update手動確認2026-08-30: 素体A約定1件(8/29¥1780)採用・薄商い(n=1)につき次回以降も要確認。旧¥1000から小額の実勢差",
           "stale": false,
           "alert": null,
           "p10n": 46,
@@ -67824,6 +67878,24 @@ const TRECA_DATA = {
           "rawAn": 34,
           "askA": 34800,
           "askAn": 14
+        },
+        {
+          "at": "2026-08-30T08:51:47.669+09:00",
+          "p10": 110000,
+          "p9": 58000,
+          "rawA": 53000,
+          "rawB": 19000,
+          "pop10": 248,
+          "popTotal": 313,
+          "rate10": 79.23,
+          "currency": "JPY",
+          "src": "treca-market-update手動確認2026-08-30: 素体A直近3約定(7/20¥51000,7/15¥55000,7/13¥53000)中央値=53000。旧¥32500は固着値・n=34件で一貫した価格帯を確認",
+          "stale": false,
+          "alert": null,
+          "p10n": 14,
+          "rawAn": 34,
+          "askA": 34800,
+          "askAn": 14
         }
       ],
       "signals": {
@@ -103780,5 +103852,6 @@ const TRECA_DATA = {
     }
   ]
 };
+
 if (typeof window !== "undefined") window.TRECA_DATA = TRECA_DATA;
 if (typeof module !== "undefined") module.exports = TRECA_DATA;

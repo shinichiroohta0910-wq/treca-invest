@@ -4,8 +4,8 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床{店舗名・買取価格}/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-30T08:57:03.020+09:00",
-  "updatedBy": "daily_market_refresh 2026-08-30: cards71枚(OK 71/stale 0) + boxes13件(OK 13/stale 0) 価格実約定更新(alert 1). rate10は前回cert値継承.",
+  "updatedAt": "2026-08-31T07:46:26.901+09:00",
+  "updatedBy": "daily_market_refresh 2026-08-30: cards71枚(OK 71/stale 0) + boxes13件(OK 13/stale 0) 価格実約定更新(alert 1). rate10は前回cert値継承. ／ torekabank買取床 再適用 2026-08-31: QCAC-JP019 ブラマジガールの版違い誤マッチ修正(3膝折/帽子抑え行を除外)＋シート行内5×中央値ガード追加(桁ミス2件除去)",
   "games": [
     {
       "id": "onepiece",
@@ -7308,7 +7308,7 @@ const TRECA_DATA = {
             "verdict": "上昇"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -8779,7 +8779,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -10234,7 +10234,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -11689,7 +11689,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -13128,7 +13128,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -14599,7 +14599,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -16038,7 +16038,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -17492,7 +17492,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -18947,7 +18947,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -20402,7 +20402,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -21857,7 +21857,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -23330,7 +23330,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -24785,7 +24785,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -26240,7 +26240,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -27679,7 +27679,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -29118,7 +29118,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -30588,7 +30588,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -36344,7 +36344,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -40508,7 +40508,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -43403,7 +43403,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -46299,7 +46299,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -47738,7 +47738,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -49194,7 +49194,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -50650,7 +50650,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -52094,18 +52094,18 @@ const TRECA_DATA = {
         },
         "buyback": {
           "shop": "トレカバンク",
-          "p10JPY": 1010000,
-          "at": "2026-07-26",
+          "p10JPY": 19000,
+          "at": "2026-05-23",
           "trend": {
-            "m1Med": 1010000,
-            "m3Med": 570000,
-            "hi": 1010000,
+            "m1Med": 19000,
+            "m3Med": 19000,
+            "hi": 19400,
             "lo": 19000,
-            "n": 67,
-            "verdict": "上昇"
+            "n": 70,
+            "verdict": "横ばい"
           },
           "verify": true,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -53560,7 +53560,7 @@ const TRECA_DATA = {
             "verdict": "上昇"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -55031,7 +55031,7 @@ const TRECA_DATA = {
             "verdict": "上昇"
           },
           "verify": true,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -56471,7 +56471,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -59367,7 +59367,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -60839,7 +60839,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -62311,7 +62311,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -63767,7 +63767,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -66680,7 +66680,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -68153,7 +68153,7 @@ const TRECA_DATA = {
             "verdict": "上昇"
           },
           "verify": true,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -71081,7 +71081,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -72440,7 +72440,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -73815,7 +73815,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": true,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -75175,7 +75175,7 @@ const TRECA_DATA = {
             "verdict": "上昇"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -76472,7 +76472,7 @@ const TRECA_DATA = {
             "verdict": "上昇"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -79051,7 +79051,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -80333,7 +80333,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": true,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -81599,7 +81599,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -84016,7 +84016,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -87457,7 +87457,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -88609,7 +88609,7 @@ const TRECA_DATA = {
             "verdict": "上昇"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -89745,7 +89745,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -91617,7 +91617,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -92561,7 +92561,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -94401,7 +94401,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -95329,7 +95329,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -96273,7 +96273,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     }
@@ -96905,7 +96905,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -97529,13 +97529,13 @@ const TRECA_DATA = {
           "trend": {
             "m1Med": 1100,
             "m3Med": 1800,
-            "hi": 42000,
+            "hi": 5000,
             "lo": 1000,
-            "n": 79,
+            "n": 78,
             "verdict": "下落"
           },
           "verify": true,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -98778,7 +98778,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -99408,7 +99408,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -100039,7 +100039,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -100670,7 +100670,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -101301,7 +101301,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },
@@ -103160,7 +103160,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-30取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-08-31取得"
         }
       }
     },

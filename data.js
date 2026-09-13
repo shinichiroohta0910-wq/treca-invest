@@ -5,7 +5,7 @@
 const TRECA_DATA = {
   "schemaVersion": 1,
   "updatedAt": "2026-09-13T09:03:21.212+09:00",
-  "updatedBy": "daily_market_refresh 2026-09-13: cards50枚(OK 50/stale 0) + boxes13件(OK 13/stale 0) 価格実約定更新(alert 2). rate10は前回cert値継承.",
+  "updatedBy": "psa_service_level_update 2026-09-13: ゴッホ展ピカチュウの鑑定費12,770→45,770(スーパー・エクスプレス帯)・他49枚据置 ／ daily_market_refresh 2026-09-13: cards50枚(OK 50/stale 0) + boxes13件(OK 13/stale 0) 価格実約定更新(alert 2). rate10は前回cert値継承.",
   "games": [
     {
       "id": "onepiece",
@@ -46317,7 +46317,8 @@ const TRECA_DATA = {
         "psaPopNote": "ルース085 Pikachu With Grey Felt Hat のPOPを使用(Shin保有=開封済みPSA9)。cert 122462895はcello pack(別物・参照のみ)"
       },
       "watch": true,
-      "gradingCostDefault": 12770,
+      "gradingCostDefault": 45770,
+      "gradingCostNote": "PSA 2026-09-10改定: p10約¥45万=申告¥400k超→スーパー・エクスプレス¥44,980+保険料等¥790(仮置き・次回請求で実測)。正本=claude-csuite/00_Claude/Knowledge/psa_service_levels_20260910.md",
       "snapshots": [
         {
           "at": "2026-06-30T09:11:52.896+09:00",

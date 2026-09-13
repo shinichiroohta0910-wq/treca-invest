@@ -304,7 +304,7 @@
       </ul>
       <p class="shh">予算バスケットの数字</p>
       <ul>
-        <li><b>¥◯◯ ／ ¥200,000</b>＝左は「バスケットのカードを<b>素体で買って全部鑑定に出す</b>のに要る現金合計（<b>素体実売価格＋鑑定費¥11,980/枚</b>）」、右は<b>月間仕入予算</b>（設定で変更可）。<b style="color:#ff6b6b">予算超過でバー赤</b></li>
+        <li><b>¥◯◯ ／ ¥200,000</b>＝左は「バスケットのカードを<b>素体で買って全部鑑定に出す</b>のに要る現金合計（<b>素体実売価格＋鑑定費¥12,770/枚〔PSAプライオリティ実額・p10¥25万超は上位便〕</b>）」、右は<b>月間仕入予算</b>（設定で変更可）。<b style="color:#ff6b6b">予算超過でバー赤</b></li>
         <li><b>期待EV合計</b>＝バスケットを全部買って鑑定したときの<b>見込み純利益の合計</b>（手数料8%・鑑定費控除後）　<b>想定ROI</b>＝期待EV合計÷バスケット総額</li>
         <li>※これは「<b>これから買う計画</b>」＝毎回フル予算で最適バスケットを提案（実支出は引かない）。<b>今月いくら使ったか</b>は台帳タブの「当月 仕入予算」バー（buyDate実績）で別管理</li>
       </ul>
@@ -405,6 +405,7 @@
   </div>
   <div class="card panel">
     <h3>鑑定費プラン（円/枚）</h3>
+    <div class="sub">先頭のプランが既定の鑑定費（床）。金額はPSA本体＋保険料等¥790の実額。PSA改定（2026-09-10発表・9/15適用）: 旧レギュラー→プライオリティ（¥11,980据置・納期60→80営業日）／新設スタンダード¥9,980・100営業日（申告≤¥15万）／エクスプレス¥22,980→¥29,980。p10が¥25万を超える札は上位便の費用で自動評価。</div>
     <div id="gradingSettings"></div>
     <button onclick="addGradingPlan()" style="margin-top:8px">＋プラン追加</button>
   </div>
@@ -575,7 +576,15 @@ function defaultStore(){
         {id:"mercari",  name:"メルカリ",  feePct:10.0},
         {id:"psavault", name:"PSA Vault", feePct:12.0, note:"要実費確認"}
       ],
-      gradingPlans: [ {id:"psa-regular", name:"PSAレギュラー", costPerCard:11990} ],
+      // PSAサービスレベル改定(2026-09-10発表・9/15適用)。costPerCard=PSA本体＋保険料等¥790の実額。
+      // [0]が既定（=床¥12,770プライオリティ）。p10が¥250kを超える札は cardGradeCost が申告価格帯で上位便へ自動切替。
+      gradingPlans: [
+        {id:"psa-priority",     name:"PSAプライオリティ（旧レギュラー・申告≤¥25万・80営業日）", costPerCard:12770, maxDeclared:250000},
+        {id:"psa-standard",     name:"PSAスタンダード（申告≤¥15万・100営業日）",             costPerCard:10770, maxDeclared:150000},
+        {id:"psa-express",      name:"PSAエクスプレス（申告≤¥40万・25営業日）",              costPerCard:30770, maxDeclared:400000},
+        {id:"psa-super-express",name:"PSAスーパー・エクスプレス（申告≤¥75万・25営業日）",    costPerCard:45770, maxDeclared:750000},
+        {id:"psa-premier",      name:"PSAプレミア（旧ウォーク・スルー・申告≤¥150万・25営業日）", costPerCard:90770, maxDeclared:1500000}
+      ],
       monthlyBudget: 200000,
       defaultChannel: "snkrdunk",
       decayDefault: 0
@@ -599,6 +608,14 @@ function migrate(s){
   s.settings = Object.assign({}, d.settings, s.settings||{});
   if(!Array.isArray(s.settings.channels) || !s.settings.channels.length) s.settings.channels = d.settings.channels;
   if(!Array.isArray(s.settings.gradingPlans) || !s.settings.gradingPlans.length) s.settings.gradingPlans = d.settings.gradingPlans;
+  // 2026-09-13: PSA改定への移行。旧既定(psa-regular「PSAレギュラー」11,990/12,770)だけの設定なら新既定5本へ置換。
+  // Shinが手で足した/変えたプランがあれば消さず、旧レギュラーの名前だけ改定後名称に直す。
+  {
+    const g = s.settings.gradingPlans;
+    const onlyOldDefault = g.length===1 && g[0].id==="psa-regular" && [11990,12770].includes(num(g[0].costPerCard));
+    if(onlyOldDefault){ s.settings.gradingPlans = d.settings.gradingPlans.map(p=>Object.assign({},p)); }
+    else g.forEach(p=>{ if(p.id==="psa-regular" && p.name==="PSAレギュラー") p.name="PSAプライオリティ（旧レギュラー・申告≤¥25万・80営業日）"; });
+  }
   if(!Array.isArray(s.positions)) s.positions = [];
   if(!Array.isArray(s.boxHoldings)) s.boxHoldings = [];
   return s;
@@ -654,9 +671,24 @@ function decay(){ return (parseFloat($("decay").value)||0)/100; }
    手数料は settings.defaultChannel の feePct。
    ===================================================================== */
 // 鑑定費の優先順位: 明示override > カード固有 gradingCostDefault(data.js) > settings.gradingPlans[0]
+// p10(=申告価格)が既定プランの上限(maxDeclared)を超える札は、申告価格帯で強制される上位便の費用に自動切替
+// （PSA改定 2026-09-10: >¥25万=エクスプレス¥30,770 / >¥40万=スーパー・エクスプレス¥45,770 / >¥75万=プレミア¥90,770）。
+const PSA_TIERS = [[250000,12770],[400000,30770],[750000,45770],[1500000,90770]];
+function tierGradeCost(p10){
+  const plans = settings().gradingPlans||[];
+  const base = plans[0];
+  if(!base || !(p10>0)) return defaultGradeCost();
+  const cap = num(base.maxDeclared) || 250000;
+  if(p10<=cap) return num(base.costPerCard);
+  for(const [max,cost] of PSA_TIERS){
+    if(p10<=max){ const pl = plans.find(q=>num(q.maxDeclared)===max); return pl ? num(pl.costPerCard) : cost; }
+  }
+  return PSA_TIERS[PSA_TIERS.length-1][1];
+}
 function cardGradeCost(card){
   if(card && card.gradingCostDefault!=null && !isNaN(card.gradingCostDefault)) return num(card.gradingCostDefault);
-  return defaultGradeCost();
+  const snap = card ? latestSnap(card) : null;
+  return tierGradeCost(snap ? num(snap.p10) : 0);
 }
 function evalCard(card, d, feePctOverride, gradeCostOverride){
   const snap = latestSnap(card);
@@ -1567,7 +1599,7 @@ function addChannel(){ const id="ch"+Date.now().toString(36); channels().push({i
 function updateGradingName(i,v){ settings().gradingPlans[i].name=v; persist(); }
 function updateGradingCost(i,v){ settings().gradingPlans[i].costPerCard=parseFloat(v)||0; persist(); refreshAll(); }
 function removeGradingPlan(i){ const g=settings().gradingPlans; if(g.length<=1){toast("最後の1プランは消せません");return;} g.splice(i,1); persist(); renderSettings(); refreshAll(); }
-function addGradingPlan(){ settings().gradingPlans.push({id:"gp"+Date.now().toString(36), name:"新プラン", costPerCard:11990}); persist(); renderSettings(); }
+function addGradingPlan(){ settings().gradingPlans.push({id:"gp"+Date.now().toString(36), name:"新プラン", costPerCard:12770}); persist(); renderSettings(); }
 
 /* =====================================================================
    🩺 戦略タブ（ポートフォリオ・ドクター）

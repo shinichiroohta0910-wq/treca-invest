@@ -45434,7 +45434,8 @@ const TRECA_DATA = {
         "psaPopNote": "ルース085 Pikachu With Grey Felt Hat のPOPを使用(Shin保有=開封済みPSA9)。cert 122462895はcello pack(別物・参照のみ)"
       },
       "watch": true,
-      "gradingCostDefault": 12770,
+      "gradingCostDefault": 45770,
+      "gradingCostNote": "PSA 2026-09-10改定: p10約¥45万=申告¥400k超→スーパー・エクスプレス¥44,980+保険料等¥790(仮置き・次回請求で実測)。正本=claude-csuite/00_Claude/Knowledge/psa_service_levels_20260910.md",
       "snapshots": [
         {
           "at": "2026-06-30T09:11:52.896+09:00",

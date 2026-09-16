@@ -4,8 +4,8 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床{店舗名・買取価格}/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-17T08:35:44.355+09:00",
-  "updatedBy": "prune_negative_ev 2026-09-17: 非保有EVマイナス7枚削除(yg-loch-jp012-769229, pk-m2a-250-mega-kairyu-mur, pk-m5-114-mega-darkrai-sar, pk-m5-118-mega-darkrai-mur-826556, pk-sv2a-025-mb-128147, pk-svp-067-122059, pk-s8ap-012-91160). 47→40枚.",
+  "updatedAt": "2026-09-17T08:54:38.699+09:00",
+  "updatedBy": "treca-market-update 2026-09-17: 新弾30th CELEBRATION(M6a)の当たり8枚をウォッチ追加(invest:false・PSA未流通でrate10未実測)＋BOX 1件追加.",
   "games": [
     {
       "id": "onepiece",
@@ -58347,6 +58347,310 @@ const TRECA_DATA = {
           "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-09-16取得"
         }
       }
+    },
+    {
+      "id": "pk-m6a-135-mew-ex-fur",
+      "game": "pokemon",
+      "name": "ミュウex FUR",
+      "number": "M6a 135/103",
+      "variant": "拡張パック「30th CELEBRATION」(FUR)",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/4bfe7bdb-4f7e-4398-9689-334e15831532.webp",
+      "imageNote": "スニダン商品画像（新弾のため画像API未収録）",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/881429",
+        "psaPop": null
+      },
+      "watch": true,
+      "invest": false,
+      "certPending": true,
+      "gradingCostDefault": 12770,
+      "snapshots": [
+        {
+          "at": "2026-09-17T08:54:38.699+09:00",
+          "p10": null,
+          "p9": null,
+          "rawA": 16600,
+          "rawB": 13000,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": null,
+          "currency": "JPY",
+          "src": "treca-market-update 初回取得 2026-09-17（新弾・2026-09-16発売）スニダン直近3約定中央値・実売/ask不使用・素体A約定n40(直近100件中)・PSA10約定n0＝PSA未流通のためp10/p9/rate10は未取得(null)。rate10はPSA10流通後にcert実測",
+          "stale": false,
+          "alert": null,
+          "p10n": 0,
+          "rawAn": 40,
+          "askA": 16800,
+          "askAn": 41
+        }
+      ]
+    },
+    {
+      "id": "pk-m6a-134-mewtwo-ex-fur",
+      "game": "pokemon",
+      "name": "ミュウツーex FUR",
+      "number": "M6a 134/103",
+      "variant": "拡張パック「30th CELEBRATION」(FUR)",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/433c88d9-e3d7-47c1-a98e-b25b81ec698d.webp",
+      "imageNote": "スニダン商品画像（新弾のため画像API未収録）",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/881428",
+        "psaPop": null
+      },
+      "watch": true,
+      "invest": false,
+      "certPending": true,
+      "gradingCostDefault": 12770,
+      "snapshots": [
+        {
+          "at": "2026-09-17T08:54:38.699+09:00",
+          "p10": null,
+          "p9": null,
+          "rawA": 11500,
+          "rawB": 9000,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": null,
+          "currency": "JPY",
+          "src": "treca-market-update 初回取得 2026-09-17（新弾・2026-09-16発売）スニダン直近3約定中央値・実売/ask不使用・素体A約定n62(直近100件中)・PSA10約定n0＝PSA未流通のためp10/p9/rate10は未取得(null)。rate10はPSA10流通後にcert実測",
+          "stale": false,
+          "alert": null,
+          "p10n": 0,
+          "rawAn": 62,
+          "askA": 11999,
+          "askAn": 23
+        }
+      ]
+    },
+    {
+      "id": "pk-m6a-142-lugia",
+      "game": "pokemon",
+      "name": "ルギア",
+      "number": "M6a 142/103",
+      "variant": "拡張パック「30th CELEBRATION」(30周年特別仕様の再録)",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/ac7d4dc8-b640-45ad-ac37-55a86496fce9.webp",
+      "imageNote": "スニダン商品画像（新弾のため画像API未収録）",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/886017",
+        "psaPop": null
+      },
+      "watch": true,
+      "invest": false,
+      "certPending": true,
+      "gradingCostDefault": 12770,
+      "snapshots": [
+        {
+          "at": "2026-09-17T08:54:38.699+09:00",
+          "p10": null,
+          "p9": null,
+          "rawA": 16000,
+          "rawB": 10500,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": null,
+          "currency": "JPY",
+          "src": "treca-market-update 初回取得 2026-09-17（新弾・2026-09-16発売）スニダン直近3約定中央値・実売/ask不使用・素体A約定n81(直近100件中)・PSA10約定n0＝PSA未流通のためp10/p9/rate10は未取得(null)。rate10はPSA10流通後にcert実測",
+          "stale": false,
+          "alert": null,
+          "p10n": 0,
+          "rawAn": 81,
+          "askA": 16000,
+          "askAn": 7
+        }
+      ]
+    },
+    {
+      "id": "pk-m6a-137-charizard",
+      "game": "pokemon",
+      "name": "リザードン",
+      "number": "M6a 137/103",
+      "variant": "拡張パック「30th CELEBRATION」(30周年特別仕様の再録)",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/109801d8-35b0-43b3-80e9-805201c63e52.webp",
+      "imageNote": "スニダン商品画像（新弾のため画像API未収録）",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/882281",
+        "psaPop": null
+      },
+      "watch": true,
+      "invest": false,
+      "certPending": true,
+      "gradingCostDefault": 12770,
+      "snapshots": [
+        {
+          "at": "2026-09-17T08:54:38.699+09:00",
+          "p10": null,
+          "p9": null,
+          "rawA": 13000,
+          "rawB": 9500,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": null,
+          "currency": "JPY",
+          "src": "treca-market-update 初回取得 2026-09-17（新弾・2026-09-16発売）スニダン直近3約定中央値・実売/ask不使用・素体A約定n81(直近100件中)・PSA10約定n0＝PSA未流通のためp10/p9/rate10は未取得(null)。rate10はPSA10流通後にcert実測",
+          "stale": false,
+          "alert": null,
+          "p10n": 0,
+          "rawAn": 81,
+          "askA": 13333,
+          "askAn": 9
+        }
+      ]
+    },
+    {
+      "id": "pk-m6a-127-pikachu-ex-sar-night",
+      "game": "pokemon",
+      "name": "ピカチュウex SAR(夜)",
+      "number": "M6a 127/103",
+      "variant": "拡張パック「30th CELEBRATION」(SAR)",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/a0163a22-6e45-41dc-8203-a5dd647af7ef.webp",
+      "imageNote": "スニダン商品画像（新弾のため画像API未収録）",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/882280",
+        "psaPop": null
+      },
+      "watch": true,
+      "invest": false,
+      "certPending": true,
+      "gradingCostDefault": 12770,
+      "snapshots": [
+        {
+          "at": "2026-09-17T08:54:38.699+09:00",
+          "p10": null,
+          "p9": null,
+          "rawA": 11500,
+          "rawB": 10000,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": null,
+          "currency": "JPY",
+          "src": "treca-market-update 初回取得 2026-09-17（新弾・2026-09-16発売）スニダン直近3約定中央値・実売/ask不使用・素体A約定n58(直近100件中)・PSA10約定n0＝PSA未流通のためp10/p9/rate10は未取得(null)。rate10はPSA10流通後にcert実測",
+          "stale": false,
+          "alert": null,
+          "p10n": 0,
+          "rawAn": 58,
+          "askA": 10999,
+          "askAn": 32
+        }
+      ]
+    },
+    {
+      "id": "pk-m6a-126-pikachu-ex-sar-day",
+      "game": "pokemon",
+      "name": "ピカチュウex SAR(昼)",
+      "number": "M6a 126/103",
+      "variant": "拡張パック「30th CELEBRATION」(SAR)",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/6cce5089-c05a-47ab-8da2-02d22ab98861.webp",
+      "imageNote": "スニダン商品画像（新弾のため画像API未収録）",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/882279",
+        "psaPop": null
+      },
+      "watch": true,
+      "invest": false,
+      "certPending": true,
+      "gradingCostDefault": 12770,
+      "snapshots": [
+        {
+          "at": "2026-09-17T08:54:38.699+09:00",
+          "p10": null,
+          "p9": null,
+          "rawA": 9490,
+          "rawB": 8200,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": null,
+          "currency": "JPY",
+          "src": "treca-market-update 初回取得 2026-09-17（新弾・2026-09-16発売）スニダン直近3約定中央値・実売/ask不使用・素体A約定n53(直近100件中)・PSA10約定n0＝PSA未流通のためp10/p9/rate10は未取得(null)。rate10はPSA10流通後にcert実測",
+          "stale": false,
+          "alert": null,
+          "p10n": 0,
+          "rawAn": 53,
+          "askA": 9000,
+          "askAn": 31
+        }
+      ]
+    },
+    {
+      "id": "pk-m6a-129-mew-ex-sar",
+      "game": "pokemon",
+      "name": "ミュウex SAR",
+      "number": "M6a 129/103",
+      "variant": "拡張パック「30th CELEBRATION」(SAR)",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/1be22cfc-b301-4083-971d-06fc5878c844.webp",
+      "imageNote": "スニダン商品画像（新弾のため画像API未収録）",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/896991",
+        "psaPop": null
+      },
+      "watch": true,
+      "invest": false,
+      "certPending": true,
+      "gradingCostDefault": 12770,
+      "snapshots": [
+        {
+          "at": "2026-09-17T08:54:38.699+09:00",
+          "p10": null,
+          "p9": null,
+          "rawA": 8300,
+          "rawB": 6999,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": null,
+          "currency": "JPY",
+          "src": "treca-market-update 初回取得 2026-09-17（新弾・2026-09-16発売）スニダン直近3約定中央値・実売/ask不使用・素体A約定n64(直近100件中)・PSA10約定n0＝PSA未流通のためp10/p9/rate10は未取得(null)。rate10はPSA10流通後にcert実測",
+          "stale": false,
+          "alert": null,
+          "p10n": 0,
+          "rawAn": 64,
+          "askA": 8499,
+          "askAn": 29
+        }
+      ]
+    },
+    {
+      "id": "pk-mf-044-umbreon-ex-sar",
+      "game": "pokemon",
+      "name": "ブラッキーex SAR仕様",
+      "number": "MF 044/040",
+      "variant": "構築デッキ「30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー」(確定封入)",
+      "lang": "ja",
+      "image": "https://cdn.snkrdunk.com/upload_bg_removed/f078d5c7-085f-4e12-bfc0-144b3e61cb9d.webp",
+      "imageNote": "スニダン商品画像（新弾のため画像API未収録）",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/apparels/881431",
+        "psaPop": null
+      },
+      "watch": true,
+      "invest": false,
+      "certPending": true,
+      "gradingCostDefault": 12770,
+      "snapshots": [
+        {
+          "at": "2026-09-17T08:54:38.699+09:00",
+          "p10": null,
+          "p9": null,
+          "rawA": 12800,
+          "rawB": 10900,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": null,
+          "currency": "JPY",
+          "src": "treca-market-update 初回取得 2026-09-17（新弾・2026-09-16発売）スニダン直近3約定中央値・実売/ask不使用・素体A約定n53(直近100件中)・PSA10約定n0＝PSA未流通のためp10/p9/rate10は未取得(null)。rate10はPSA10流通後にcert実測",
+          "stale": false,
+          "alert": null,
+          "p10n": 0,
+          "rawAn": 53,
+          "askA": 12400,
+          "askAn": 38
+        }
+      ]
     }
   ],
   "boxes": [
@@ -66146,6 +66450,28 @@ const TRECA_DATA = {
           "box": 6000,
           "n": 3,
           "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-09-17・約定20行",
+          "stale": false,
+          "alert": null
+        }
+      ]
+    },
+    {
+      "id": "box-pk-30th-celebration",
+      "game": "pokemon",
+      "name": "30th CELEBRATION BOX",
+      "kind": "拡張BOX(M6a)",
+      "msrp": 7200,
+      "status": "reprint",
+      "note": "2026-09-16発売・定価¥7,200(20パック)・シュリンク付き約定（シュリンクなしは別SKU apparel 881427）。status=reprintは現行弾の既定値（2026-09-17時点で再販の発表は未確認）",
+      "links": {
+        "snkrdunk": "https://snkrdunk.com/trading-cards/apparels/881421"
+      },
+      "snapshots": [
+        {
+          "at": "2026-09-17T08:54:38.699+09:00",
+          "box": 18300,
+          "n": 3,
+          "src": "treca-market-update 初回取得 2026-09-17（スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用）・約定20行中 単箱14件・単箱の最大/最小=1.01",
           "stale": false,
           "alert": null
         }

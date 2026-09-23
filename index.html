@@ -578,13 +578,13 @@ function defaultStore(){
       ],
       // PSAサービスレベル改定(2026-09-10発表・9/15適用)。costPerCard=PSA本体＋保険料等¥790の実額。
       // [0]が既定（=床¥12,770プライオリティ）。p10が¥250kを超える札は cardGradeCost が申告価格帯で上位便へ自動切替。
-      // leadDays=鑑定パイプラインの返却予定日の暦日（営業日×7/5）。納期未確認のプランは持たない＝112日で試算（2026-09-23）。
+      // leadDays=鑑定パイプラインの返却予定日の暦日（営業日×7/5）。納期はPSA公式の改定表で確認（2026-09-23）。leadDaysが無いプランは112日で試算。
       gradingPlans: [
         {id:"psa-priority",     name:"PSAプライオリティ（旧レギュラー・申告≤¥25万・80営業日）", costPerCard:12770, maxDeclared:250000, leadDays:112},
         {id:"psa-standard",     name:"PSAスタンダード（申告≤¥15万・100営業日）",             costPerCard:10770, maxDeclared:150000, leadDays:140},
-        {id:"psa-express",      name:"PSAエクスプレス（申告≤¥40万・25営業日）",              costPerCard:30770, maxDeclared:400000},
-        {id:"psa-super-express",name:"PSAスーパー・エクスプレス（申告≤¥75万・25営業日）",    costPerCard:45770, maxDeclared:750000},
-        {id:"psa-premier",      name:"PSAプレミア（旧ウォーク・スルー・申告≤¥150万・25営業日）", costPerCard:90770, maxDeclared:1500000}
+        {id:"psa-express",      name:"PSAエクスプレス（申告≤¥40万・25営業日）",              costPerCard:30770, maxDeclared:400000, leadDays:35},
+        {id:"psa-super-express",name:"PSAスーパー・エクスプレス（申告≤¥75万・25営業日）",    costPerCard:45770, maxDeclared:750000, leadDays:35},
+        {id:"psa-premier",      name:"PSAプレミア（旧ウォーク・スルー・申告≤¥150万・25営業日）", costPerCard:90770, maxDeclared:1500000, leadDays:35}
       ],
       monthlyBudget: 200000,
       defaultChannel: "snkrdunk",
@@ -617,7 +617,7 @@ function migrate(s){
     if(onlyOldDefault){ s.settings.gradingPlans = d.settings.gradingPlans.map(p=>Object.assign({},p)); }
     else g.forEach(p=>{ if(p.id==="psa-regular" && p.name==="PSAレギュラー") p.name="PSAプライオリティ（旧レギュラー・申告≤¥25万・80営業日）"; });
     // 2026-09-23: 保存済みプランに返却予定日の暦日(leadDays)が無ければidで補う。Shinが入れた値は触らない。
-    const LEAD_BY_ID = {"psa-priority":112, "psa-regular":112, "psa-standard":140};
+    const LEAD_BY_ID = {"psa-priority":112, "psa-regular":112, "psa-standard":140, "psa-express":35, "psa-super-express":35, "psa-premier":35};
     s.settings.gradingPlans.forEach(p=>{ if(p.leadDays==null && LEAD_BY_ID[p.id]) p.leadDays = LEAD_BY_ID[p.id]; });
   }
   if(!Array.isArray(s.positions)) s.positions = [];

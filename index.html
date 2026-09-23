@@ -578,9 +578,10 @@ function defaultStore(){
       ],
       // PSAサービスレベル改定(2026-09-10発表・9/15適用)。costPerCard=PSA本体＋保険料等¥790の実額。
       // [0]が既定（=床¥12,770プライオリティ）。p10が¥250kを超える札は cardGradeCost が申告価格帯で上位便へ自動切替。
+      // leadDays=鑑定パイプラインの返却予定日の暦日（営業日×7/5）。納期未確認のプランは持たない＝112日で試算（2026-09-23）。
       gradingPlans: [
-        {id:"psa-priority",     name:"PSAプライオリティ（旧レギュラー・申告≤¥25万・80営業日）", costPerCard:12770, maxDeclared:250000},
-        {id:"psa-standard",     name:"PSAスタンダード（申告≤¥15万・100営業日）",             costPerCard:10770, maxDeclared:150000},
+        {id:"psa-priority",     name:"PSAプライオリティ（旧レギュラー・申告≤¥25万・80営業日）", costPerCard:12770, maxDeclared:250000, leadDays:112},
+        {id:"psa-standard",     name:"PSAスタンダード（申告≤¥15万・100営業日）",             costPerCard:10770, maxDeclared:150000, leadDays:140},
         {id:"psa-express",      name:"PSAエクスプレス（申告≤¥40万・25営業日）",              costPerCard:30770, maxDeclared:400000},
         {id:"psa-super-express",name:"PSAスーパー・エクスプレス（申告≤¥75万・25営業日）",    costPerCard:45770, maxDeclared:750000},
         {id:"psa-premier",      name:"PSAプレミア（旧ウォーク・スルー・申告≤¥150万・25営業日）", costPerCard:90770, maxDeclared:1500000}
@@ -615,6 +616,9 @@ function migrate(s){
     const onlyOldDefault = g.length===1 && g[0].id==="psa-regular" && [11990,12770].includes(num(g[0].costPerCard));
     if(onlyOldDefault){ s.settings.gradingPlans = d.settings.gradingPlans.map(p=>Object.assign({},p)); }
     else g.forEach(p=>{ if(p.id==="psa-regular" && p.name==="PSAレギュラー") p.name="PSAプライオリティ（旧レギュラー・申告≤¥25万・80営業日）"; });
+    // 2026-09-23: 保存済みプランに返却予定日の暦日(leadDays)が無ければidで補う。Shinが入れた値は触らない。
+    const LEAD_BY_ID = {"psa-priority":112, "psa-regular":112, "psa-standard":140};
+    s.settings.gradingPlans.forEach(p=>{ if(p.leadDays==null && LEAD_BY_ID[p.id]) p.leadDays = LEAD_BY_ID[p.id]; });
   }
   if(!Array.isArray(s.positions)) s.positions = [];
   if(!Array.isArray(s.boxHoldings)) s.boxHoldings = [];
@@ -1743,7 +1747,15 @@ function renderStrategy(){
       : `<div class="empty">いま緊急の一手はなし。${unrealKnown?"":"（相場データがないため含み損益の検出はスキップ）"}保有を温存しつつ、下のモメンタムで地合いを確認。</div>`}`;
 
   /* ---------- 鑑定パイプライン（タイムライン） ---------- */
-  const LEAD_GRADING_DAYS=60;   // PSAバリュー目安（必要なら調整）
+  // 返却予定日の日数は提出ロットごと（PSA改定 2026-09-10）。9/15より前の申込＝旧レギュラー60営業日≒84日。
+  // 以後＝ロットの鑑定費と同額のプランの leadDays（額が混ざるロットは長い方）。見つからない/未設定＝プライオリティ80営業日≒112日。
+  const PSA_REVISION_DATE=new Date(2026,8,15), LEAD_BEFORE_REVISION=84, LEAD_FALLBACK=112;
+  const lotLeadDays=(submit, costs)=>{
+    if(submit < PSA_REVISION_DATE) return LEAD_BEFORE_REVISION;
+    const plans=settings().gradingPlans||[];
+    const days=[...costs].map(c=>{ const pl=plans.find(q=>num(q.costPerCard)===c); return (pl && num(pl.leadDays)>0) ? num(pl.leadDays) : LEAD_FALLBACK; });
+    return days.length ? Math.max(...days) : LEAD_FALLBACK;
+  };
   const gradingPs=active.filter(p=>p.status==="grading");
   let timelineHTML="";
   if(gradingPs.length){
@@ -1751,15 +1763,16 @@ function renderStrategy(){
     gradingPs.forEach(p=>{
       const sd=parseSubmitDate(p.note);
       const key=sd? (sd.getMonth()+1)+"/"+sd.getDate()+" 提出" : "提出日不明";
-      if(!lots[key]) lots[key]={count:0, invest:0, submit:sd};
+      if(!lots[key]) lots[key]={count:0, invest:0, submit:sd, costs:new Set()};
       lots[key].count+=num(p.qty)||1; lots[key].invest+=posInvested(p);
+      lots[key].costs.add((p.gradeCost!=null)? num(p.gradeCost) : defaultGradeCost());
     });
     const fmtMD=dt=> dt? (dt.getMonth()+1)+"/"+dt.getDate() : "—";
     const rows=Object.entries(lots).sort((a,b)=>{
       const ta=a[1].submit?a[1].submit.getTime():Infinity, tb=b[1].submit?b[1].submit.getTime():Infinity; return ta-tb;
     }).map(([key,v])=>{
       let eta="—", sell="—";
-      if(v.submit){ const r=new Date(v.submit.getTime()+LEAD_GRADING_DAYS*864e5); const s=new Date(r.getTime()+14*864e5); eta=fmtMD(r); sell=fmtMD(s); }
+      if(v.submit){ const r=new Date(v.submit.getTime()+lotLeadDays(v.submit, v.costs)*864e5); const s=new Date(r.getTime()+14*864e5); eta=fmtMD(r); sell=fmtMD(s); }
       return `<div class="tl-row"><span class="tl-d">${escHtml(key)}</span><span>${v.count}枚・投下${yen(v.invest)}<br><span class="sub">結果見込み ${eta} → 売却見込み ${sell}頃</span></span></div>`;
     }).join("");
     const totalGradingInvest=gradingPs.reduce((s,p)=>s+posInvested(p),0);
@@ -1768,7 +1781,7 @@ function renderStrategy(){
       <div class="card panel" style="margin-top:16px">
         <h3>鑑定パイプライン（${totalGradingQty}枚・結果待ち）</h3>
         ${rows}
-        <div class="hint">投下 ${yen(totalGradingInvest)} が鑑定中。リードタイムは目安${LEAD_GRADING_DAYS}日＋売却2週で試算（グレード未確定＝金額は結果後に確定）。独立月(9月)の運転資金タイミングの目安に。</div>
+        <div class="hint">投下 ${yen(totalGradingInvest)} が鑑定中。リードタイムはプラン別の目安（プライオリティ約112日・9/15より前の申込は約84日）＋売却2週で試算（グレード未確定＝金額は結果後に確定）。</div>
       </div>`;
   }
 

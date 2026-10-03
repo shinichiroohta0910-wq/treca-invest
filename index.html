@@ -305,7 +305,7 @@
       <p class="shh">予算バスケットの数字</p>
       <ul>
         <li><b>¥◯◯ ／ ¥200,000</b>＝左は「バスケットのカードを<b>素体で買って全部鑑定に出す</b>のに要る現金合計（<b>素体実売価格＋鑑定費¥12,770/枚〔PSAプライオリティ実額・p10¥25万超は上位便〕</b>）」、右は<b>月間仕入予算</b>（設定で変更可）。<b style="color:#ff6b6b">予算超過でバー赤</b></li>
-        <li><b>期待EV合計</b>＝バスケットを全部買って鑑定したときの<b>見込み純利益の合計</b>（手数料8%・鑑定費控除後）　<b>想定ROI</b>＝期待EV合計÷バスケット総額</li>
+        <li><b>期待EV合計</b>＝バスケットを全部買って鑑定したときの<b>見込み純利益の合計</b>（手数料9.5%・鑑定費控除後）　<b>想定ROI</b>＝期待EV合計÷バスケット総額</li>
         <li>※これは「<b>これから買う計画</b>」＝毎回フル予算で最適バスケットを提案（実支出は引かない）。<b>今月いくら使ったか</b>は台帳タブの「当月 仕入予算」バー（buyDate実績）で別管理</li>
       </ul>
       <p class="shh">使い方</p>
@@ -571,7 +571,7 @@ function defaultStore(){
     schemaVersion: 1,
     settings: {
       channels: [
-        {id:"snkrdunk", name:"スニダン", feePct:8.0},
+        {id:"snkrdunk", name:"スニダン", feePct:9.5},
         {id:"ebay",     name:"eBay",     feePct:15.4},
         {id:"mercari",  name:"メルカリ",  feePct:10.0},
         {id:"psavault", name:"PSA Vault", feePct:12.0, note:"要実費確認"}
@@ -619,6 +619,13 @@ function migrate(s){
     // 2026-09-23: 保存済みプランに返却予定日の暦日(leadDays)が無ければidで補う。Shinが入れた値は触らない。
     const LEAD_BY_ID = {"psa-priority":112, "psa-regular":112, "psa-standard":140, "psa-express":35, "psa-super-express":35, "psa-premier":35};
     s.settings.gradingPlans.forEach(p=>{ if(p.leadDays==null && LEAD_BY_ID[p.id]) p.leadDays = LEAD_BY_ID[p.id]; });
+  }
+  // 2026-10-03: スニダン販売手数料の既定を 8% → 9.5% に変更。
+  // 保存済み設定が旧既定の8%のままなら一度だけ9.5%へ。設定タブで手入力した値（8以外）には触らない。
+  if(!s.settings.snkFee95Applied){
+    const snk = s.settings.channels.find(c=>c && c.id==="snkrdunk");
+    if(snk && num(snk.feePct)===8) snk.feePct = 9.5;
+    s.settings.snkFee95Applied = true;
   }
   if(!Array.isArray(s.positions)) s.positions = [];
   if(!Array.isArray(s.boxHoldings)) s.boxHoldings = [];
@@ -2022,7 +2029,7 @@ function resetData(){
    カードと評価軸が違う（PSA10率・素体なし）ため専用ロジック。鑑定エンジンは不使用。
    含み損益 = 箱相場 ×(1−手数料) − 取得（定価）。出口は 再販/絶版 × 損益 で判定。
    ===================================================================== */
-function boxFeePct(){ const ch=channelById("snkrdunk"); return ch?num(ch.feePct):8; }
+function boxFeePct(){ const ch=channelById("snkrdunk"); return ch?num(ch.feePct):9.5; }
 function boxLatest(b){ return (b&&Array.isArray(b.snapshots)&&b.snapshots.length)?b.snapshots[b.snapshots.length-1]:null; }
 function boxHoldingOf(id){ return (store.boxHoldings||[]).find(h=>h&&h.boxId===id)||null; }
 const BOX_EXIT = {

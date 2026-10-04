@@ -4,8 +4,8 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床{店舗名・買取価格}/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-04T16:38:04.520+09:00",
-  "updatedBy": "force_price_override 2026-10-04: pk-m6a-137-charizard rawA ¥13000→¥22000(ガード手動解除)",
+  "updatedAt": "2026-10-04T16:38:07.508+09:00",
+  "updatedBy": "force_price_override 2026-10-04: pk-m6a-137-charizard rawB ¥9500→¥17500(ガード手動解除)",
   "games": [
     {
       "id": "onepiece",
@@ -55262,6 +55262,22 @@ const TRECA_DATA = {
           "rate10": null,
           "currency": "JPY",
           "src": "rawA=スニダン実約定 直近3中央値 ¥22000（±50%ガードを手動解除・旧¥13000・直近3約定中3件が同方向で継続的変動と確認 2026-10-04） / 他の価格とrate10は据え置き",
+          "stale": false,
+          "alert": null,
+          "p10n": 0,
+          "rawAn": 21
+        },
+        {
+          "at": "2026-10-04T16:38:07.508+09:00",
+          "p10": null,
+          "p9": null,
+          "rawA": 22000,
+          "rawB": 17500,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": null,
+          "currency": "JPY",
+          "src": "rawB=スニダン実約定 直近3中央値 ¥17500（±50%ガードを手動解除・旧¥9500・直近3約定中3件が同方向で継続的変動と確認 2026-10-04） / 他の価格とrate10は据え置き",
           "stale": false,
           "alert": null,
           "p10n": 0,

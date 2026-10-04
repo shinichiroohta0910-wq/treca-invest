@@ -4,8 +4,8 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床{店舗名・買取価格}/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-04T16:37:33.353+09:00",
-  "updatedBy": "force_price_override 2026-10-04: op-st01-013-zoro p10 ¥32800→¥10000(ガード手動解除)",
+  "updatedAt": "2026-10-04T16:37:36.667+09:00",
+  "updatedBy": "force_price_override 2026-10-04: op-st09-012-yamato p10 ¥12000→¥8500(ガード手動解除)",
   "games": [
     {
       "id": "onepiece",
@@ -5458,6 +5458,22 @@ const TRECA_DATA = {
           "rawAn": 29,
           "askA": 1750,
           "askAn": 9
+        },
+        {
+          "at": "2026-10-04T16:37:36.667+09:00",
+          "p10": 8500,
+          "p9": 11000,
+          "rawA": 1750,
+          "rawB": 1000,
+          "pop10": 990,
+          "popTotal": 1019,
+          "rate10": 97.15,
+          "currency": "JPY",
+          "src": "p10=スニダン実約定 直近3中央値 ¥8500（±50%ガードを手動解除・旧¥12000・直近3約定中3件が同方向で継続的変動と確認 2026-10-04） / 他の価格とrate10は据え置き",
+          "stale": false,
+          "alert": null,
+          "p10n": 26,
+          "rawAn": 29
         }
       ],
       "signals": {

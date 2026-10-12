@@ -4,8 +4,8 @@
 // signals: 出口需要シグナル（buyback=ショップ買取床{店舗名・買取価格}/ebay=海外sold/oripa=オリパ採用）。価格の正本はsnapshots(スニダン約定)で不変。
 const TRECA_DATA = {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-12T12:27:49.093+09:00",
-  "updatedBy": "daily_market_refresh 2026-10-12: cards44枚(OK 44/stale 0) + boxes14件(OK 14/stale 0) 価格実約定更新(alert 12). rate10は前回cert値継承.",
+  "updatedAt": "2026-10-13T07:35:27.895+09:00",
+  "updatedBy": "daily_market_refresh 2026-10-13: cards44枚(OK 44/stale 0) + boxes14件(OK 14/stale 0) 価格実約定更新(alert 0). rate10は前回cert値継承.",
   "games": [
     {
       "id": "onepiece",
@@ -1123,6 +1123,24 @@ const TRECA_DATA = {
           "rawAn": 7,
           "askA": 27000,
           "askAn": 3
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 60000,
+          "p9": 19800,
+          "rawA": 23000,
+          "rawB": 23000,
+          "pop10": 1300,
+          "popTotal": 1606,
+          "rate10": 80.95,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n42/proxy率87.5%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 42,
+          "rawAn": 7,
+          "askA": 27000,
+          "askAn": 7
         }
       ],
       "signals": {
@@ -2348,6 +2366,24 @@ const TRECA_DATA = {
           "rawAn": 1,
           "askA": 12000,
           "askAn": 2
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 20000,
+          "p9": null,
+          "rawA": 10000,
+          "rawB": 14500,
+          "pop10": 1775,
+          "popTotal": 1844,
+          "rate10": 96.26,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n52/proxy率100%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 52,
+          "rawAn": 1,
+          "askA": 12000,
+          "askAn": 2
         }
       ],
       "signals": {
@@ -3567,6 +3603,24 @@ const TRECA_DATA = {
           "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-12・PSA10約定n32/proxy率100%・rate10は前回cert継承",
           "stale": false,
           "alert": "急騰 +20%",
+          "p10n": 32,
+          "rawAn": 33,
+          "askA": 3200,
+          "askAn": 14
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 12000,
+          "p9": null,
+          "rawA": 3800,
+          "rawB": 2800,
+          "pop10": 703,
+          "popTotal": 854,
+          "rate10": 82.32,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n32/proxy率100%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
           "p10n": 32,
           "rawAn": 33,
           "askA": 3200,
@@ -4794,6 +4848,24 @@ const TRECA_DATA = {
           "rawAn": 27,
           "askA": 1750,
           "askAn": 8
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 8000,
+          "p9": null,
+          "rawA": 1750,
+          "rawB": 1000,
+          "pop10": 990,
+          "popTotal": 1019,
+          "rate10": 97.15,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n25/proxy率96.2%・rate10は前回cert継承・p10<p9逆転・PSA9薄商い(約定n1/最終2026-07-22)→p9=null(p10¥8000/p9¥11000)",
+          "stale": false,
+          "alert": null,
+          "p10n": 25,
+          "rawAn": 27,
+          "askA": 1750,
+          "askAn": 8
         }
       ],
       "signals": {
@@ -6001,6 +6073,24 @@ const TRECA_DATA = {
           "rawAn": 0,
           "askA": null,
           "askAn": 0
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 164000,
+          "p9": 72000,
+          "rawA": 80000,
+          "rawB": 40000,
+          "pop10": 2055,
+          "popTotal": 2943,
+          "rate10": 69.83,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n74/proxy率96.1%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 74,
+          "rawAn": 0,
+          "askA": null,
+          "askAn": 0
         }
       ],
       "signals": {
@@ -6148,7 +6238,7 @@ const TRECA_DATA = {
             "verdict": "上昇"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-12取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-13取得"
         }
       }
     },
@@ -7223,6 +7313,24 @@ const TRECA_DATA = {
           "rawAn": 3,
           "askA": 10900,
           "askAn": 5
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 28999,
+          "p9": 9500,
+          "rawA": 11944,
+          "rawB": 10666,
+          "pop10": 28126,
+          "popTotal": 45922,
+          "rate10": 61.25,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n39/proxy率84.8%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 39,
+          "rawAn": 2,
+          "askA": 10900,
+          "askAn": 5
         }
       ],
       "signals": {
@@ -7370,7 +7478,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-12取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-13取得"
         }
       }
     },
@@ -8445,6 +8553,24 @@ const TRECA_DATA = {
           "rawAn": 5,
           "askA": 17000,
           "askAn": 11
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 60300,
+          "p9": 13500,
+          "rawA": 17999,
+          "rawB": 14000,
+          "pop10": 21362,
+          "popTotal": 42324,
+          "rate10": 50.47,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n19/proxy率79.2%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 19,
+          "rawAn": 6,
+          "askA": 16700,
+          "askAn": 11
         }
       ],
       "signals": {
@@ -8592,7 +8718,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-12取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-13取得"
         }
       }
     },
@@ -9667,6 +9793,24 @@ const TRECA_DATA = {
           "rawAn": 5,
           "askA": 18999,
           "askAn": 6
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 34100,
+          "p9": 18500,
+          "rawA": 18500,
+          "rawB": 15900,
+          "pop10": 29773,
+          "popTotal": 32749,
+          "rate10": 90.91,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n46/proxy率97.9%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 46,
+          "rawAn": 4,
+          "askA": 17000,
+          "askAn": 7
         }
       ],
       "signals": {
@@ -9814,7 +9958,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-12取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-13取得"
         }
       }
     },
@@ -10873,6 +11017,24 @@ const TRECA_DATA = {
           "rawAn": 7,
           "askA": 14300,
           "askAn": 3
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 29800,
+          "p9": 12000,
+          "rawA": 13000,
+          "rawB": 11000,
+          "pop10": 49755,
+          "popTotal": 55695,
+          "rate10": 89.33,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n69/proxy率98.6%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 69,
+          "rawAn": 7,
+          "askA": 14300,
+          "askAn": 3
         }
       ],
       "signals": {
@@ -11020,7 +11182,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-12取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-13取得"
         }
       }
     },
@@ -12095,6 +12257,24 @@ const TRECA_DATA = {
           "rawAn": 3,
           "askA": 5900,
           "askAn": 2
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 11000,
+          "p9": 6740,
+          "rawA": 5300,
+          "rawB": 4000,
+          "pop10": 11478,
+          "popTotal": 12739,
+          "rate10": 90.1,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n62/proxy率96.9%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 62,
+          "rawAn": 5,
+          "askA": 5900,
+          "askAn": 2
         }
       ],
       "signals": {
@@ -12242,7 +12422,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-12取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-13取得"
         }
       }
     },
@@ -13317,6 +13497,24 @@ const TRECA_DATA = {
           "rawAn": 5,
           "askA": 6999,
           "askAn": 6
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 19000,
+          "p9": 6800,
+          "rawA": 6990,
+          "rawB": 5555,
+          "pop10": 41151,
+          "popTotal": 47067,
+          "rate10": 87.43,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n62/proxy率96.9%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 62,
+          "rawAn": 4,
+          "askA": 6199,
+          "askAn": 6
         }
       ],
       "signals": {
@@ -13464,7 +13662,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-12取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-13取得"
         }
       }
     },
@@ -14539,6 +14737,24 @@ const TRECA_DATA = {
           "rawAn": 8,
           "askA": 3200,
           "askAn": 2
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 8400,
+          "p9": 2590,
+          "rawA": 2500,
+          "rawB": 2445,
+          "pop10": 5554,
+          "popTotal": 8885,
+          "rate10": 62.51,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n50/proxy率84.7%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 50,
+          "rawAn": 7,
+          "askA": 3000,
+          "askAn": 3
         }
       ],
       "signals": {
@@ -14686,7 +14902,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-12取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-13取得"
         }
       }
     },
@@ -15761,6 +15977,24 @@ const TRECA_DATA = {
           "rawAn": 2,
           "askA": 40000,
           "askAn": 3
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 76999,
+          "p9": 26250,
+          "rawA": 37500,
+          "rawB": 25000,
+          "pop10": 18023,
+          "popTotal": 21520,
+          "rate10": 83.75,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n76/proxy率97.4%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 76,
+          "rawAn": 3,
+          "askA": null,
+          "askAn": 0
         }
       ],
       "signals": {
@@ -15908,7 +16142,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-12取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-13取得"
         }
       }
     },
@@ -16983,6 +17217,24 @@ const TRECA_DATA = {
           "rawAn": 7,
           "askA": 76000,
           "askAn": 2
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 132000,
+          "p9": 59500,
+          "rawA": 66666,
+          "rawB": 54500,
+          "pop10": 26786,
+          "popTotal": 31843,
+          "rate10": 84.12,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n48/proxy率98%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 48,
+          "rawAn": 10,
+          "askA": null,
+          "askAn": 0
         }
       ],
       "signals": {
@@ -17130,7 +17382,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-12取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-13取得"
         }
       }
     },
@@ -18205,6 +18457,24 @@ const TRECA_DATA = {
           "rawAn": 0,
           "askA": 1000,
           "askAn": 3
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 4380,
+          "p9": 3100,
+          "rawA": 1000,
+          "rawB": 1000,
+          "pop10": 17529,
+          "popTotal": 18896,
+          "rate10": 92.77,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n49/proxy率98%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 49,
+          "rawAn": 0,
+          "askA": 1000,
+          "askAn": 3
         }
       ],
       "signals": {
@@ -18352,7 +18622,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-12取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-13取得"
         }
       }
     },
@@ -19445,6 +19715,24 @@ const TRECA_DATA = {
           "rawAn": 2,
           "askA": 1000,
           "askAn": 4
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 4400,
+          "p9": 2250,
+          "rawA": 1000,
+          "rawB": 1000,
+          "pop10": 15311,
+          "popTotal": 16574,
+          "rate10": 92.38,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n63/proxy率92.6%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 63,
+          "rawAn": 2,
+          "askA": 1000,
+          "askAn": 4
         }
       ],
       "signals": {
@@ -19592,7 +19880,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-12取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-13取得"
         }
       }
     },
@@ -20667,6 +20955,24 @@ const TRECA_DATA = {
           "rawAn": 3,
           "askA": 1000,
           "askAn": 9
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 4790,
+          "p9": 2666,
+          "rawA": 1000,
+          "rawB": 2000,
+          "pop10": 12416,
+          "popTotal": 13453,
+          "rate10": 92.29,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n69/proxy率100%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 69,
+          "rawAn": 3,
+          "askA": 1000,
+          "askAn": 9
         }
       ],
       "signals": {
@@ -20814,7 +21120,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-12取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-13取得"
         }
       }
     },
@@ -21889,6 +22195,24 @@ const TRECA_DATA = {
           "rawAn": 1,
           "askA": 3800,
           "askAn": 6
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 13000,
+          "p9": 6550,
+          "rawA": 3000,
+          "rawB": 1200,
+          "pop10": 14240,
+          "popTotal": 17751,
+          "rate10": 80.22,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n71/proxy率93.4%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 71,
+          "rawAn": 1,
+          "askA": 3800,
+          "askAn": 6
         }
       ],
       "signals": {
@@ -22036,7 +22360,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-12取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-13取得"
         }
       }
     },
@@ -23095,6 +23419,24 @@ const TRECA_DATA = {
           "rawAn": 2,
           "askA": 33000,
           "askAn": 1
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 10600,
+          "p9": 4400,
+          "rawA": 2850,
+          "rawB": 2000,
+          "pop10": 279187,
+          "popTotal": 318867,
+          "rate10": 87.55,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n34/proxy率75.6%・rate10は前回cert継承・rawA±>50%保留(新¥6100/旧¥2850)",
+          "stale": false,
+          "alert": null,
+          "p10n": 34,
+          "rawAn": 1,
+          "askA": 3100,
+          "askAn": 7
         }
       ],
       "signals": {
@@ -23242,7 +23584,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-12取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-13取得"
         }
       }
     },
@@ -24317,6 +24659,24 @@ const TRECA_DATA = {
           "rawAn": 1,
           "askA": null,
           "askAn": 0
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 4999,
+          "p9": 2750,
+          "rawA": 1000,
+          "rawB": null,
+          "pop10": 8764,
+          "popTotal": 10118,
+          "rate10": 86.62,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n84/proxy率94.4%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 84,
+          "rawAn": 1,
+          "askA": null,
+          "askAn": 0
         }
       ],
       "signals": {
@@ -24464,7 +24824,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-12取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-13取得"
         }
       }
     },
@@ -25523,6 +25883,24 @@ const TRECA_DATA = {
           "rawAn": 10,
           "askA": 13800,
           "askAn": 3
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 47500,
+          "p9": 11800,
+          "rawA": 13000,
+          "rawB": 8499,
+          "pop10": 515,
+          "popTotal": 1084,
+          "rate10": 47.51,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n47/proxy率70.1%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 47,
+          "rawAn": 9,
+          "askA": 13800,
+          "askAn": 3
         }
       ],
       "signals": {
@@ -25670,7 +26048,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-12取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-13取得"
         }
       }
     },
@@ -26759,6 +27137,24 @@ const TRECA_DATA = {
           "alert": "急騰 +39%",
           "p10n": 43,
           "rawAn": 5,
+          "askA": 3777,
+          "askAn": 10
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 13800,
+          "p9": null,
+          "rawA": 4999,
+          "rawB": 3000,
+          "pop10": 604,
+          "popTotal": 673,
+          "rate10": 89.75,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n42/proxy率100%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 42,
+          "rawAn": 4,
           "askA": 3777,
           "askAn": 10
         }
@@ -27965,6 +28361,24 @@ const TRECA_DATA = {
           "stale": false,
           "alert": null,
           "p10n": 55,
+          "rawAn": 1,
+          "askA": null,
+          "askAn": 0
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 19480,
+          "p9": 6500,
+          "rawA": 7900,
+          "rawB": 4000,
+          "pop10": 16184,
+          "popTotal": 19063,
+          "rate10": 84.9,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n57/proxy率95%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 57,
           "rawAn": 1,
           "askA": null,
           "askAn": 0
@@ -29191,6 +29605,24 @@ const TRECA_DATA = {
           "rawAn": 12,
           "askA": 4280,
           "askAn": 9
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 12300,
+          "p9": 4000,
+          "rawA": 4000,
+          "rawB": 4000,
+          "pop10": 185,
+          "popTotal": 198,
+          "rate10": 93.43,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n43/proxy率93.5%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 43,
+          "rawAn": 12,
+          "askA": 4280,
+          "askAn": 8
         }
       ],
       "signals": {
@@ -30398,6 +30830,24 @@ const TRECA_DATA = {
           "rawAn": 1,
           "askA": 7888,
           "askAn": 4
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 16799,
+          "p9": 7800,
+          "rawA": 8800,
+          "rawB": 4500,
+          "pop10": 2699,
+          "popTotal": 3087,
+          "rate10": 87.43,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n70/proxy率100%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 70,
+          "rawAn": 1,
+          "askA": 7888,
+          "askAn": 4
         }
       ],
       "signals": {
@@ -30545,7 +30995,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-12取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-13取得"
         }
       }
     },
@@ -31598,6 +32048,24 @@ const TRECA_DATA = {
           "rate10": null,
           "currency": "JPY",
           "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-12・PSA10約定n0/proxy率-%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 0,
+          "rawAn": 3,
+          "askA": 2800,
+          "askAn": 1
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": null,
+          "p9": null,
+          "rawA": 1000,
+          "rawB": null,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": null,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n0/proxy率-%・rate10は前回cert継承",
           "stale": false,
           "alert": null,
           "p10n": 0,
@@ -32690,6 +33158,24 @@ const TRECA_DATA = {
           "rawAn": 12,
           "askA": 15000,
           "askAn": 6
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 18500,
+          "p9": 15000,
+          "rawA": 15000,
+          "rawB": 17000,
+          "pop10": 1384,
+          "popTotal": 1411,
+          "rate10": 98.09,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n57/proxy率98.3%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 57,
+          "rawAn": 12,
+          "askA": 15000,
+          "askAn": 5
         }
       ],
       "signals": {
@@ -33898,6 +34384,24 @@ const TRECA_DATA = {
           "rawAn": 6,
           "askA": 21000,
           "askAn": 1
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 43000,
+          "p9": 9999,
+          "rawA": 10500,
+          "rawB": 7000,
+          "pop10": 598,
+          "popTotal": 689,
+          "rate10": 86.79,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n24/proxy率88.9%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 24,
+          "rawAn": 6,
+          "askA": 21000,
+          "askAn": 1
         }
       ],
       "signals": {
@@ -34045,7 +34549,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": true,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-12取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-13取得"
         }
       }
     },
@@ -35122,6 +35626,24 @@ const TRECA_DATA = {
           "rawAn": 7,
           "askA": 159999,
           "askAn": 6
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 520000,
+          "p9": 130000,
+          "rawA": 145000,
+          "rawB": 138000,
+          "pop10": 50067,
+          "popTotal": 117438,
+          "rate10": 42.63,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n35/proxy率74.5%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 35,
+          "rawAn": 6,
+          "askA": 159999,
+          "askAn": 7
         }
       ],
       "signals": {
@@ -35269,7 +35791,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-12取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-13取得"
         }
       }
     },
@@ -36346,6 +36868,24 @@ const TRECA_DATA = {
           "rawAn": 12,
           "askA": 37000,
           "askAn": 6
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 70000,
+          "p9": 40000,
+          "rawA": 36500,
+          "rawB": 25000,
+          "pop10": 1660,
+          "popTotal": 1787,
+          "rate10": 92.84,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n64/proxy率100%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 64,
+          "rawAn": 12,
+          "askA": 37000,
+          "askAn": 6
         }
       ],
       "signals": {
@@ -36493,7 +37033,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-12取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-13取得"
         }
       }
     },
@@ -37570,6 +38110,24 @@ const TRECA_DATA = {
           "rawAn": 20,
           "askA": 34000,
           "askAn": 3
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 119999,
+          "p9": 32000,
+          "rawA": 38000,
+          "rawB": 30000,
+          "pop10": 3735,
+          "popTotal": 7171,
+          "rate10": 52.08,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n37/proxy率75.5%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 37,
+          "rawAn": 20,
+          "askA": 39000,
+          "askAn": 2
         }
       ],
       "signals": {
@@ -37717,7 +38275,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-12取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-13取得"
         }
       }
     },
@@ -38777,6 +39335,24 @@ const TRECA_DATA = {
           "rawAn": 6,
           "askA": null,
           "askAn": 0
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 146000,
+          "p9": 46400,
+          "rawA": 75000,
+          "rawB": 30000,
+          "pop10": 7459,
+          "popTotal": 12825,
+          "rate10": 58.15,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n46/proxy率70.8%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 46,
+          "rawAn": 7,
+          "askA": null,
+          "askAn": 0
         }
       ],
       "signals": {
@@ -38924,7 +39500,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-12取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-13取得"
         }
       }
     },
@@ -39984,6 +40560,24 @@ const TRECA_DATA = {
           "rawAn": 25,
           "askA": 40000,
           "askAn": 13
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 142000,
+          "p9": 30500,
+          "rawA": 43000,
+          "rawB": 23000,
+          "pop10": 2571,
+          "popTotal": 5676,
+          "rate10": 45.3,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n32/proxy率78%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 32,
+          "rawAn": 26,
+          "askA": 40000,
+          "askAn": 12
         }
       ],
       "signals": {
@@ -40131,7 +40725,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-12取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-13取得"
         }
       }
     },
@@ -41191,6 +41785,24 @@ const TRECA_DATA = {
           "rawAn": 11,
           "askA": 40000,
           "askAn": 11
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 134800,
+          "p9": 44000,
+          "rawA": 40000,
+          "rawB": 22000,
+          "pop10": 1354,
+          "popTotal": 3400,
+          "rate10": 39.82,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n27/proxy率62.8%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 27,
+          "rawAn": 11,
+          "askA": 40000,
+          "askAn": 11
         }
       ],
       "signals": {
@@ -41338,7 +41950,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-12取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-13取得"
         }
       }
     },
@@ -42398,6 +43010,24 @@ const TRECA_DATA = {
           "rawAn": 5,
           "askA": 59900,
           "askAn": 5
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 116500,
+          "p9": 48000,
+          "rawA": 60999,
+          "rawB": 43000,
+          "pop10": 13526,
+          "popTotal": 16927,
+          "rate10": 79.9,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n55/proxy率98.2%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 55,
+          "rawAn": 5,
+          "askA": 59000,
+          "askAn": 5
         }
       ],
       "signals": {
@@ -42545,7 +43175,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-12取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-13取得"
         }
       }
     },
@@ -43605,6 +44235,24 @@ const TRECA_DATA = {
           "rawAn": 13,
           "askA": 68000,
           "askAn": 4
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 122000,
+          "p9": 54999,
+          "rawA": 77000,
+          "rawB": 57700,
+          "pop10": 13447,
+          "popTotal": 16367,
+          "rate10": 82.15,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n51/proxy率94.4%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 51,
+          "rawAn": 12,
+          "askA": 60000,
+          "askAn": 5
         }
       ],
       "signals": {
@@ -43752,7 +44400,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-12取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-13取得"
         }
       }
     },
@@ -44043,6 +44691,24 @@ const TRECA_DATA = {
           "rawAn": 53,
           "askA": 8100,
           "askAn": 27
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 20000,
+          "p9": null,
+          "rawA": 8400,
+          "rawB": 6555,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": null,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n0/proxy率-%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 0,
+          "rawAn": 45,
+          "askA": 8050,
+          "askAn": 33
         }
       ]
     },
@@ -44333,6 +44999,24 @@ const TRECA_DATA = {
           "rawAn": 54,
           "askA": 5991,
           "askAn": 26
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": null,
+          "p9": null,
+          "rawA": 6600,
+          "rawB": 4900,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": null,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n0/proxy率-%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 0,
+          "rawAn": 54,
+          "askA": 6500,
+          "askAn": 34
         }
       ]
     },
@@ -44639,6 +45323,24 @@ const TRECA_DATA = {
           "rawAn": 45,
           "askA": 20900,
           "askAn": 42
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 21000,
+          "p9": null,
+          "rawA": 21320,
+          "rawB": 17999,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": null,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n0/proxy率-%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 0,
+          "rawAn": 49,
+          "askA": 21600,
+          "askAn": 36
         }
       ]
     },
@@ -44961,6 +45663,24 @@ const TRECA_DATA = {
           "rawAn": 24,
           "askA": 20666,
           "askAn": 58
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": null,
+          "p9": null,
+          "rawA": 22000,
+          "rawB": 22900,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": null,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n0/proxy率-%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 0,
+          "rawAn": 33,
+          "askA": 19999,
+          "askAn": 47
         }
       ]
     },
@@ -45251,6 +45971,24 @@ const TRECA_DATA = {
           "rawAn": 50,
           "askA": 9200,
           "askAn": 31
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 10500,
+          "p9": null,
+          "rawA": 9999,
+          "rawB": 7300,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": null,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n0/proxy率-%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 0,
+          "rawAn": 37,
+          "askA": 8999,
+          "askAn": 42
         }
       ]
     },
@@ -45541,6 +46279,24 @@ const TRECA_DATA = {
           "rawAn": 42,
           "askA": 6999,
           "askAn": 42
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 11000,
+          "p9": null,
+          "rawA": 7500,
+          "rawB": 5555,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": null,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n0/proxy率-%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 0,
+          "rawAn": 49,
+          "askA": 7000,
+          "askAn": 38
         }
       ]
     },
@@ -45831,6 +46587,24 @@ const TRECA_DATA = {
           "rawAn": 32,
           "askA": 7883,
           "askAn": 48
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 8500,
+          "p9": null,
+          "rawA": 8000,
+          "rawB": 6700,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": null,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n0/proxy率-%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 0,
+          "rawAn": 35,
+          "askA": 7500,
+          "askAn": 47
         }
       ]
     },
@@ -46120,6 +46894,24 @@ const TRECA_DATA = {
           "p10n": 1,
           "rawAn": 55,
           "askA": 14000,
+          "askAn": 25
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "p10": 85000,
+          "p9": null,
+          "rawA": 14000,
+          "rawB": 10480,
+          "pop10": null,
+          "popTotal": null,
+          "rate10": null,
+          "currency": "JPY",
+          "src": "daily auto価格更新(スニダン直近3約定中央値・実売/ask不使用) 2026-10-13・PSA10約定n0/proxy率-%・rate10は前回cert継承",
+          "stale": false,
+          "alert": null,
+          "p10n": 0,
+          "rawAn": 55,
+          "askA": 12999,
           "askAn": 25
         }
       ]
@@ -46600,6 +47392,14 @@ const TRECA_DATA = {
           "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-10-12・約定20行",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "box": 12999,
+          "n": 3,
+          "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-10-13・約定20行",
+          "stale": false,
+          "alert": null
         }
       ],
       "signals": {
@@ -46616,7 +47416,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-12取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-13取得"
         }
       }
     },
@@ -47094,6 +47894,14 @@ const TRECA_DATA = {
           "src": "daily auto価格更新(スニダンsales-history・単箱1個・n1中央値・実売/ask不使用) 2026-10-12・約定20行",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "box": 1100,
+          "n": 1,
+          "src": "daily auto価格更新(スニダンsales-history・単箱1個・n1中央値・実売/ask不使用) 2026-10-13・約定20行",
+          "stale": false,
+          "alert": null
         }
       ],
       "signals": {
@@ -47110,7 +47918,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": true,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-12取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-13取得"
         }
       }
     },
@@ -47586,6 +48394,14 @@ const TRECA_DATA = {
           "box": 1092,
           "n": 3,
           "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-10-12・約定20行",
+          "stale": false,
+          "alert": null
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "box": 1092,
+          "n": 3,
+          "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-10-13・約定20行",
           "stale": false,
           "alert": null
         }
@@ -48065,6 +48881,14 @@ const TRECA_DATA = {
           "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-10-12・約定20行",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "box": 17899,
+          "n": 3,
+          "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-10-13・約定20行",
+          "stale": false,
+          "alert": null
         }
       ],
       "signals": {
@@ -48081,7 +48905,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-12取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-13取得"
         }
       }
     },
@@ -48559,6 +49383,14 @@ const TRECA_DATA = {
           "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-10-12・約定20行",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "box": 9400,
+          "n": 3,
+          "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-10-13・約定20行",
+          "stale": false,
+          "alert": null
         }
       ],
       "signals": {
@@ -48575,7 +49407,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-12取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-13取得"
         }
       }
     },
@@ -49054,6 +49886,14 @@ const TRECA_DATA = {
           "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-10-12・約定20行",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "box": 8375,
+          "n": 2,
+          "src": "daily auto価格更新(スニダンsales-history・単箱1個・n2中央値・実売/ask不使用) 2026-10-13・約定20行",
+          "stale": false,
+          "alert": null
         }
       ],
       "signals": {
@@ -49070,7 +49910,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-12取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-13取得"
         }
       }
     },
@@ -49549,6 +50389,14 @@ const TRECA_DATA = {
           "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-10-12・約定20行",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "box": 12000,
+          "n": 3,
+          "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-10-13・約定20行",
+          "stale": false,
+          "alert": null
         }
       ],
       "signals": {
@@ -49565,7 +50413,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-12取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-13取得"
         }
       }
     },
@@ -50044,6 +50892,14 @@ const TRECA_DATA = {
           "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-10-12・約定20行",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "box": 13999,
+          "n": 3,
+          "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-10-13・約定20行",
+          "stale": false,
+          "alert": null
         }
       ],
       "signals": {
@@ -50060,7 +50916,7 @@ const TRECA_DATA = {
             "verdict": "下落"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-12取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-13取得"
         }
       }
     },
@@ -50537,6 +51393,14 @@ const TRECA_DATA = {
           "box": 65000,
           "n": 3,
           "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-10-12・約定20行",
+          "stale": false,
+          "alert": null
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "box": 65000,
+          "n": 3,
+          "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-10-13・約定20行",
           "stale": false,
           "alert": null
         }
@@ -51017,6 +51881,14 @@ const TRECA_DATA = {
           "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-10-12・約定20行",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "box": 56000,
+          "n": 3,
+          "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-10-13・約定20行",
+          "stale": false,
+          "alert": null
         }
       ]
     },
@@ -51495,6 +52367,14 @@ const TRECA_DATA = {
           "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-10-12・約定20行",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "box": 8990,
+          "n": 3,
+          "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-10-13・約定20行",
+          "stale": false,
+          "alert": null
         }
       ],
       "signals": {
@@ -51511,7 +52391,7 @@ const TRECA_DATA = {
             "verdict": "横ばい"
           },
           "verify": false,
-          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-12取得"
+          "src": "トレカバンク買取シート(Sheets:ポケカ買取価格表一覧)・マッピング正本torekabank_mapping.json／2026-10-13取得"
         }
       }
     },
@@ -51988,6 +52868,14 @@ const TRECA_DATA = {
           "box": 55000,
           "n": 3,
           "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-10-12・約定20行",
+          "stale": false,
+          "alert": null
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "box": 55000,
+          "n": 3,
+          "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-10-13・約定20行",
           "stale": false,
           "alert": null
         }
@@ -52468,6 +53356,14 @@ const TRECA_DATA = {
           "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-10-12・約定20行",
           "stale": false,
           "alert": null
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "box": 5450,
+          "n": 3,
+          "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-10-13・約定20行",
+          "stale": false,
+          "alert": null
         }
       ]
     },
@@ -52600,6 +53496,14 @@ const TRECA_DATA = {
           "box": 25750,
           "n": 3,
           "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-10-12・約定20行",
+          "stale": false,
+          "alert": null
+        },
+        {
+          "at": "2026-10-13T07:35:27.895+09:00",
+          "box": 25700,
+          "n": 3,
+          "src": "daily auto価格更新(スニダンsales-history・単箱1個・直近3中央値・実売/ask不使用) 2026-10-13・約定20行",
           "stale": false,
           "alert": null
         }

@@ -35810,7 +35810,7 @@ const TRECA_DATA = {
         "psaPop": "https://www.psacard.com/spec/psa/2854344"
       },
       "watch": true,
-      "invest": true,
+      "invest": false,
       "gradingCostDefault": 12770,
       "snapshots": [
         {
@@ -39485,7 +39485,7 @@ const TRECA_DATA = {
         "psaPop": "https://www.psacard.com/spec/psa/13676714"
       },
       "watch": true,
-      "invest": true,
+      "invest": false,
       "gradingCostDefault": 12770,
       "snapshots": [
         {
